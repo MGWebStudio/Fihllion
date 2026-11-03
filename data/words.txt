@@ -91,7 +91,7 @@
 85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous
 100: Xenoglossy :: The supposed ability to speak a language you've never learned.
 
-? Name a word that ends in -ough
+? Name a word that ends in "ough"
 ~exact
 10: Though, Through, Tough, Rough, Enough, Cough, Dough
 15: Hiccough

@@ -86,7 +86,7 @@
 85: Benitoite, Grandidierite, Taaffeite, Musgravite, Red beryl|Bixbite, Poudretteite, Serendibite, Jeremejevite, Larimar, Charoite, Sugilite, Chrysoprase, Sodalite, Ammolite, Demantoid, Tsavorite, Kyanite, Zoisite, Sphene|Titanite, Moldavite, Rhodochrosite, Apatite, Fluorite, Sardonyx, Hiddenite, Heliodor, Padparadscha, Scapolite
 100: Painite :: For decades it held the record as the world's rarest mineral, with only a few known crystals.
 
-? Name a field of study ending in -ology
+? Name a field of study ending in "ology"
 10: Biology, Psychology, Geology, Zoology, Sociology
 15: Scientology, Mixology
 30: Astrology, Archaeology|Archeology, Anthropology, Technology, Cardiology, Neurology, Ecology, Theology, Mythology, Meteorology, Criminology, Dermatology, Oncology, Radiology, Microbiology, Entomology, Paleontology, Cosmology, Pathology, Physiology, Musicology, Etymology

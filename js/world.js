@@ -794,7 +794,7 @@ export class World {
   layoutCaptions(ctx) {
     const { W, dpr } = this;
     const maxWidth = Math.min(W * 0.62, 340 * dpr);
-    ctx.font = `${Math.round(10 * dpr)}px Silkscreen, monospace`;
+    ctx.font = `${Math.round(11 * dpr)}px Silkscreen, monospace`;
     this.captionLayout = CAPTIONS.map((caption) => {
       const words = caption.text.split(' ');
       const lines = [];
@@ -830,11 +830,11 @@ export class World {
       const margin = Math.max(W * 0.05, this.wallWidth(caption.m, 0, 3) + 14 * dpr);
       ctx.globalAlpha = this.rulerAlpha * (caption.big ? 0.92 : 0.72);
       ctx.fillStyle = caption.big ? '#fff1d0' : '#d5ebf4';
-      ctx.font = caption.big ? `700 ${Math.round(13 * dpr)}px Silkscreen, monospace` : `${Math.round(10 * dpr)}px Silkscreen, monospace`;
+      ctx.font = caption.big ? `700 ${Math.round(13 * dpr)}px Silkscreen, monospace` : `${Math.round(11 * dpr)}px Silkscreen, monospace`;
       ctx.textBaseline = 'middle';
       ctx.textAlign = caption.big ? 'center' : onLeft ? 'left' : 'right';
       const x = caption.big ? W / 2 : onLeft ? margin : W - margin - 46 * dpr;
-      caption.lines.forEach((line, n) => ctx.fillText(line, x, y + n * 13 * dpr));
+      caption.lines.forEach((line, n) => ctx.fillText(line, x, y + n * 15 * dpr));
     });
     ctx.globalAlpha = 1;
   }
@@ -844,7 +844,7 @@ export class World {
     const { W, H, dpr, P } = this;
     const step = 50;
     const first = Math.ceil(this.y2m(0) / step) * step;
-    ctx.font = `${Math.round(9 * dpr)}px Silkscreen, monospace`;
+    ctx.font = `${Math.round(11 * dpr)}px Silkscreen, monospace`;
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
     ctx.globalAlpha = this.rulerAlpha * 0.65;
@@ -878,7 +878,7 @@ export class World {
       ctx.globalAlpha = bright;
       ctx.fillStyle = tier.color;
       for (let x = x0; x < x1; x += P * 5) ctx.fillRect(Math.round(x / P) * P, y, P * 3, line.resting ? P * 2 : P);
-      ctx.font = `${Math.round(10 * dpr)}px Silkscreen, monospace`;
+      ctx.font = `${Math.round(11 * dpr)}px Silkscreen, monospace`;
       ctx.textAlign = 'right';
       ctx.textBaseline = 'top';
       const label = `${tier.name} · ${tier.pts}`;
@@ -1014,7 +1014,7 @@ export class World {
     const f = this.fish;
     if (!f.say || this.time > f.sayUntil) return;
     const { P, dpr, W } = this;
-    ctx.font = `${Math.round(10 * dpr)}px Silkscreen, monospace`;
+    ctx.font = `${Math.round(11 * dpr)}px Silkscreen, monospace`;
     const tw = ctx.measureText(f.say).width;
     const w = Math.ceil((tw + 14 * dpr) / P) * P;
     const h = 8 * P + 4 * dpr;
