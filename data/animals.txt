@@ -1,0 +1,140 @@
+? Name a bird
+10: Eagle, Robin, Pigeon, Owl, Penguin, Chicken, Parrot, Seagull|Gull, Crow, Duck
+15: Dodo, Puffin, Kiwi
+30: Sparrow, Hawk, Flamingo, Swan, Goose, Turkey, Blue jay|Jay, Cardinal, Ostrich, Emu, Peacock, Hummingbird, Woodpecker, Falcon, Raven, Toucan, Pelican, Canary, Finch, Stork, Vulture, Heron, Albatross, Crane, Bald eagle, Dove, Magpie, Starling, Macaw, Cockatoo, Parakeet, Quail, Pheasant, Roadrunner, Osprey, Condor, Mockingbird, Bluebird, Oriole
+60: Kingfisher, Nightingale, Wren, Chickadee, Sandpiper, Cormorant, Kookaburra, Cassowary, Rhea, Lark|Meadowlark, Swallow, Goldfinch, Warbler, Thrush, Ibis, Egret, Kestrel, Harrier, Partridge, Grouse, Guinea fowl, Loon, Lovebird, Cuckoo, Blackbird, Grackle, Nuthatch, Titmouse, Cockatiel, Tern, Mallard, Whippoorwill, Merlin, Spoonbill, Snowy owl, Barn owl, Budgie|Budgerigar, Frigatebird, Bowerbird, Lyrebird, Shoebill, Gannet, Hoopoe, Hornbill, Tanager, Vireo, Waxwing, Nene, Blue-footed booby|Booby
+85: Kakapo, Oilbird, Hoatzin, Bee-eater, Secretary bird, Kea, Takahe, Kittiwake, Razorbill, Guillemot, Shearwater, Petrel, Skua, Bittern, Dunnock, Nightjar, Avocet, Curlew, Godwit, Plover, Dunlin, Sanderling, Turnstone, Phalarope, Jacana, Anhinga, Limpkin, Sora, Rail, Coot, Gallinule, Bobolink, Dickcissel, Phoebe, Junco, Towhee, Siskin, Crossbill, Grosbeak, Bunting, Linnet, Yellowhammer, Capercaillie, Ptarmigan, Prairie chicken, Tinamou, Quetzal, Trogon, Motmot, Jabiru, Marabou stork|Marabou, Lammergeier|Bearded vulture, Caracara, Kite, Goshawk, Sparrowhawk, Gyrfalcon, Peregrine falcon|Peregrine, Wattlebird, Fairywren, Tui, Cock-of-the-rock, Treecreeper, Nutcracker, Dipper, Pipit, Wagtail, Chough, Jackdaw, Rook
+100: Potoo :: By day it passes for a broken branch. At night it opens huge cartoon eyes.
+
+? Name a dog breed
+10: Labrador|Lab|Labrador retriever, Golden retriever|Golden, German shepherd, Poodle, Bulldog, Beagle, Chihuahua, Pug
+15: Corgi, Shiba Inu|Shiba
+30: Rottweiler, Boxer, Husky|Siberian husky, Dachshund|Wiener dog, Great Dane, Doberman|Dobermann, Yorkie|Yorkshire terrier, Shih Tzu, Border collie, Australian shepherd|Aussie, Pit bull|Pitbull|American pit bull terrier, Cocker spaniel, Collie, French bulldog|Frenchie, Saint Bernard|St. Bernard, Greyhound, Maltese, Pomeranian, Bichon Frise|Bichon, Dalmatian, Labradoodle, Goldendoodle, Mastiff, Bloodhound, Basset hound, Akita, Malamute|Alaskan malamute, Schnauzer, Bernese mountain dog|Bernese, Jack Russell|Jack Russell terrier, Newfoundland|Newfie, Cavalier King Charles spaniel|King Charles spaniel, Boston terrier, Pekingese, Papillon, Samoyed, Cockapoo, Chow chow|Chow
+60: Weimaraner, Vizsla, Rhodesian ridgeback, Whippet, Irish setter, English setter, Pointer|German shorthaired pointer, Basenji, Shar-Pei|Shar Pei, Scottish terrier|Scottie, West Highland terrier|Westie, Cairn terrier, Bull terrier, Staffordshire terrier|Staffy, Airedale, Afghan hound, Borzoi, Irish wolfhound, Great Pyrenees, Leonberger, Havanese, Lhasa Apso, Cane Corso, Belgian Malinois|Malinois, Australian cattle dog|Blue heeler|Heeler, Springer spaniel, Brittany, Coonhound, Italian greyhound, Miniature pinscher|Min pin, Keeshond, Puggle, Tibetan mastiff, Chinese crested, Schnoodle, Maltipoo, Dogue de Bordeaux, Old English sheepdog, Shetland sheepdog|Sheltie, Anatolian shepherd, Puli, Portuguese water dog, Catahoula
+85: Xoloitzcuintli|Xolo, Bergamasco, Otterhound, Lagotto Romagnolo, Affenpinscher, Brussels griffon, Norwegian elkhound, Lundehund, Saluki, Sloughi, Azawakh, Pharaoh hound, Ibizan hound, Kuvasz, Beauceron, Briard, Bouvier des Flandres, Schipperke, Tibetan spaniel, Japanese chin, Coton de Tulear, Clumber spaniel, Sussex spaniel, Curly-coated retriever, Flat-coated retriever, Nova Scotia duck tolling retriever|Toller, Chesapeake Bay retriever, Spinone Italiano, Wirehaired pointing griffon, Kooikerhondje, Sealyham terrier, Dandie Dinmont terrier, Glen of Imaal terrier, Skye terrier, Bedlington terrier, Norfolk terrier, Norwich terrier, Lakeland terrier, Manchester terrier, Rat terrier, Treeing walker coonhound, Redbone coonhound, Plott hound, Black Russian terrier, Caucasian shepherd, Boerboel, Tosa, Thai ridgeback, Kai Ken, Kishu Ken, Hokkaido, Finnish spitz, Swedish vallhund, Pumi, Mudi, Cesky terrier, Entlebucher, Greater Swiss Mountain dog
+100: Komondor :: Hungary's sheep guardian, covered head to tail in cords that make it look like a walking mop.
+
+? Name a cat breed
+10: Siamese, Persian, Maine Coon, Tabby
+15: Sphynx|Sphinx
+30: Ragdoll, Bengal, British Shorthair, Russian Blue, Scottish Fold, Abyssinian, American Shorthair, Calico, Domestic shorthair, Himalayan, Burmese, Birman, Manx, Savannah, Norwegian Forest|Norwegian Forest Cat, Tortoiseshell|Tortie, Exotic Shorthair
+60: Devon Rex, Cornish Rex, Munchkin, Oriental Shorthair, Turkish Angora|Angora, Turkish Van, Bombay, Tonkinese, Balinese, Ocicat, Siberian, Chartreux, Egyptian Mau, American Curl, Japanese Bobtail, Somali, Havana Brown, Snowshoe, Korat, Selkirk Rex, American Bobtail, LaPerm, Peterbald, Toyger
+85: Pixie-bob, Chausie, Nebelung, Kurilian Bobtail, Burmilla, Singapura, Serengeti, Minskin, Bambino, Donskoy, Ojos Azules, Sokoke, Khao Manee, Thai, Ragamuffin, Tiffanie, Chantilly, York Chocolate, Cymric, Australian Mist, German Rex, Aegean, Arabian Mau, Colorpoint Shorthair, Highlander, Kinkalow, Minuet|Napoleon, Dragon Li
+100: Lykoi :: A patchy-furred breed from a natural mutation, nicknamed the werewolf cat.
+
+? Name a dinosaur
+10: T. rex|Tyrannosaurus|Tyrannosaurus rex|T-rex|Trex, Triceratops, Velociraptor|Raptor, Stegosaurus, Brontosaurus
+15: Pterodactyl|Pteranodon, Plesiosaurus|Plesiosaur, Mosasaurus
+30: Brachiosaurus, Ankylosaurus, Diplodocus, Allosaurus, Spinosaurus, Apatosaurus, Parasaurolophus, Pachycephalosaurus, Iguanodon, Compsognathus, Dilophosaurus, Gallimimus, Megalosaurus, Utahraptor, Deinonychus
+60: Archaeopteryx, Carnotaurus, Giganotosaurus, Protoceratops, Oviraptor, Styracosaurus, Titanosaurus, Argentinosaurus, Hadrosaurus, Maiasaura, Coelophysis, Plateosaurus, Therizinosaurus, Microraptor, Troodon, Ceratosaurus, Corythosaurus, Edmontosaurus, Pachyrhinosaurus, Sauropelta, Kentrosaurus, Baryonyx, Albertosaurus, Camarasaurus, Dreadnoughtus, Tarbosaurus, Minmi, Psittacosaurus, Suchomimus, Sinosauropteryx, Yutyrannus, Nodosaurus, Euoplocephalus
+85: Amargasaurus, Micropachycephalosaurus, Ouranosaurus, Stygimoloch, Dracorex, Masiakasaurus, Mamenchisaurus, Nigersaurus, Epidexipteryx, Deinocheirus, Kosmoceratops, Sinornithosaurus, Rugops, Herrerasaurus, Eoraptor, Lesothosaurus, Hypsilophodon, Muttaburrasaurus, Leaellynasaura, Qantassaurus, Australovenator, Majungasaurus, Saltasaurus, Sauroposeidon, Supersaurus, Patagotitan, Tsintaosaurus, Zuniceratops, Achelousaurus, Chasmosaurus, Centrosaurus, Pentaceratops, Torosaurus, Olorotitan, Lambeosaurus, Gigantoraptor, Mei long, Mononykus, Tawa, Incisivosaurus, Scutellosaurus, Scelidosaurus, Gastonia, Hesperosaurus, Tuojiangosaurus, Huayangosaurus, Wuerhosaurus, Dacentrurus, Cryolophosaurus, Monolophosaurus, Sinraptor, Acrocanthosaurus, Carcharodontosaurus, Mapusaurus, Concavenator
+100: Irritator :: Named for how irritated scientists were to find dealers had doctored its fossil with car filler.
+
+? Name a kind of fish
+10: Salmon, Tuna, Goldfish, Trout, Bass, Cod
+15: Clownfish|Nemo, Pufferfish|Blowfish, Swordfish
+30: Shark, Catfish, Tilapia, Halibut, Mackerel, Sardine, Anchovy, Perch, Carp, Koi, Pike, Mahi-mahi|Mahi mahi, Snapper|Red snapper, Flounder, Herring, Walleye, Barracuda, Eel, Betta|Siamese fighting fish, Angelfish, Piranha, Seahorse, Stingray, Bluegill, Haddock, Sea bass, Sturgeon, Marlin, Tetra|Neon tetra, Guppy, Anglerfish, Sole, Manta ray, Crappie
+60: Grouper, Pollock|Pollack, Monkfish, Sunfish|Mola mola|Ocean sunfish, Lionfish, Tang|Blue tang|Dory, Parrotfish, Minnow, Gar, Smelt, Bream, Whitefish, Turbot, Sailfish, Wahoo, Yellowtail, Swai, Hammerhead, Molly, Platy, Discus, Oscar, Arowana, Coelacanth, Lamprey, Remora, Hagfish, Tarpon, Bonefish, Muskie|Muskellunge, Zander, Arctic char|Char, Shad, Lingcod, Rockfish, Triggerfish, Butterflyfish, Damselfish, Hake, Plaice, Skate, Steelhead, Mullet, Drum, Amberjack
+85: Oarfish, Wrasse, Blobfish, Goby, Blenny, Stonefish, Frogfish, Hatchetfish, Lanternfish, Viperfish, Gulper eel, Fangtooth, Barreleye, Moray|Moray eel, Snakehead, Paddlefish, Bowfin, Sculpin, Sheepshead, Cobia, Pompano, Snook, Tautog, Porgy|Scup, John Dory, Opah|Moonfish, Escolar, Barramundi, Arapaima, Pacu, Tigerfish, Mudskipper, Archerfish, Sawfish, Guitarfish, Wobbegong, Burbot, Ide, Tench, Roach, Rudd, Dace, Chub, Gudgeon, Bitterling, Loach, Pleco|Plecostomus, Cichlid, Gourami, Danio|Zebrafish, Barb, Rasbora, Shubunkin, Snailfish, Handfish, Tilefish, Hoki, Orange roughy, Ribbonfish
+100: Sarcastic fringehead :: A real fish. Rival males settle disputes by pressing their giant open mouths together.
+
+? Name an insect or bug
+10: Ant, Bee|Honeybee|Bumblebee, Butterfly, Fly|Housefly, Mosquito, Ladybug|Ladybird, Beetle, Grasshopper, Cockroach|Roach
+15: Spider, Praying mantis|Mantis
+30: Dragonfly, Moth, Cricket, Wasp, Hornet, Termite, Flea, Firefly|Lightning bug, Caterpillar, Tick, Stink bug, Bed bug, Centipede, Millipede, Gnat, Earwig, Cicada, Katydid, Walking stick|Stick insect, Yellow jacket, Monarch butterfly|Monarch, Aphid, Louse|Lice, Locust, Horsefly, Silverfish, Pill bug|Roly poly|Woodlouse, Dung beetle, Fruit fly, Water strider, June bug
+60: Weevil, Damselfly, Lacewing, Leafhopper, Mayfly, Scarab, Stag beetle, Hercules beetle, Rhinoceros beetle, Assassin bug, Thrips, Mealybug, Whitefly, Sawfly, Botfly, Tsetse fly|Tsetse, Antlion, Giant water bug, Deer fly, Crane fly|Daddy longlegs, Hoverfly, Stonefly, Caddisfly, Fire ant, Leafcutter ant, Carpenter ant, Carpenter bee, Spittlebug, Leaf insect, Mole cricket, Luna moth, Atlas moth, Bullet ant, Tarantula hawk, Blister beetle, Kissing bug, Click beetle, Deathwatch beetle
+85: Treehopper, Velvet ant, Thorn bug, Snakefly, Alderfly, Dobsonfly, Springtail, Goliath beetle, Titan beetle, Jewel beetle, Longhorn beetle, Tiger beetle, Rove beetle, Darkling beetle, Mealworm, Harlequin bug, Shield bug, Backswimmer, Water boatman, Whirligig beetle, Froghopper, Planthopper, Spotted lanternfly|Lanternfly, Emerald ash borer, Gall wasp, Fig wasp, Ichneumon wasp, Mud dauber, Hawk moth|Sphinx moth, Hummingbird moth, Rosy maple moth, Silkworm, Orchid mantis, Ghost mantis, Barklouse, Booklouse, Cochineal, Weta
+100: Bombardier beetle :: When threatened, it fires a jet of boiling chemicals out of its rear.
+
+? Name a tree
+~drop tree,trees
+10: Oak, Pine, Maple, Palm, Apple, Christmas
+15: Baobab, Bonsai
+30: Birch, Willow|Weeping willow, Redwood, Sequoia|Giant sequoia, Spruce, Cedar, Fir|Douglas fir, Elm, Ash, Aspen, Cherry, Cherry blossom, Magnolia, Dogwood, Hickory, Walnut, Beech, Sycamore, Poplar, Cottonwood, Holly, Hemlock, Mahogany, Olive, Peach, Pear, Orange, Lemon, Coconut, Cypress, Juniper, Yew, Eucalyptus, Chestnut, Teak, Joshua
+60: Larch, Alder, Hazel, Hawthorn, Rowan|Mountain ash, Linden|Basswood, Tulip|Tulip poplar, Sweetgum|Sweet gum, Ginkgo, Mesquite, Bald cypress, Pecan, Almond, Fig, Balsa, Ebony, Rosewood, Acacia, Mangrove, Jacaranda, Hornbeam, Sassafras, Black locust|Locust, Catalpa, Crepe myrtle, Monkey puzzle, Banyan, Rubber, Cork oak, Tamarack, Sumac, Mimosa, Palo verde, Horse chestnut|Buckeye, Box elder, Serviceberry, Sandalwood, Frankincense, Myrrh, Neem
+85: Kapok, Dragon blood|Dragon's blood, Bristlecone pine|Bristlecone, Wollemi pine, Sweetbay, Osage orange|Hedge apple, Pawpaw, Persimmon, Sourwood, Tupelo, Yellowwood, Hackberry, Paulownia|Empress, Kauri, Jarrah, Karri, Ironwood, Lignum vitae, Ohia, Koa, Rimu, Totara, Mopane, Marula, Moringa, Cacao, Quaking aspen, Ponderosa|Ponderosa pine, Lodgepole pine|Lodgepole, Sitka spruce, Western red cedar, Smoke, Redbud, Witch hazel, Wych elm, Medlar, Service, Spindle, Tree of heaven, Sal, Bodhi|Peepal, Mulberry, Bottlebrush
+100: Manchineel :: Stand under it in the rain and the runoff can blister your skin. Don't eat the fruit either.
+
+? Name a flower
+10: Rose, Tulip, Sunflower, Daisy, Lily, Orchid
+15: Lotus
+30: Dandelion, Carnation, Daffodil, Lavender, Poppy, Peony, Violet, Hydrangea, Marigold, Chrysanthemum|Mum, Pansy, Iris, Petunia, Geranium, Jasmine, Zinnia, Lilac, Begonia, Azalea, Hibiscus, Snapdragon, Gardenia, Baby's breath, Bluebell, Magnolia, Dahlia, Forget-me-not, Buttercup, Crocus, Aster, Cherry blossom
+60: Foxglove, Lupine|Lupin, Camellia, Ranunculus, Anemone, Cosmos, Hyacinth, Primrose, Rhododendron, Snowdrop, Sweet pea, Morning glory, Honeysuckle, Wisteria, Black-eyed Susan, Amaryllis, Gladiolus, Freesia, Bird of paradise, Bougainvillea, Impatiens, Nasturtium, Lily of the valley, Verbena, Yarrow, Heather, Edelweiss, Oleander, Clematis, Delphinium, Hollyhock, Indian paintbrush|Paintbrush, Bleeding heart, Phlox, Periwinkle, Salvia, Stock, Thistle, Trillium, Water lily, Poinsettia, Alstroemeria, Gerbera, Calla lily, Tiger lily, Easter lily, Corpse flower|Rafflesia|Titan arum
+85: Protea, Hellebore, Aconite|Wolfsbane|Monkshood, Agapanthus, Allium, Angelonia, Astilbe, Bergamot, Borage, Calendula, Campanula, Celosia, Columbine, Coneflower|Echinacea, Coreopsis, Cyclamen, Dianthus, Fuchsia, Gaillardia, Hosta, Lantana, Lisianthus, Lobelia, Love-in-a-mist|Nigella, Mandevilla, Plumeria|Frangipani, Scabiosa, Sweet William, Tuberose, Waratah, Yucca, Ageratum, Alyssum, Bachelor's button|Cornflower, Cockscomb, Dusty miller, Foamflower, Ixora, Queen Anne's lace, Ghost orchid, Moonflower, Passionflower, Jack-in-the-pulpit, Lady's slipper, Bloodroot, Flannel flower, Kangaroo paw, Hepatica, Tansy, Vinca, Stargazer
+100: Chocolate cosmos :: It really does smell like chocolate. It's also extinct in the wild.
+
+? Name a snake
+~drop snake
+10: Cobra|King cobra, Rattlesnake|Rattler, Python, Anaconda, Boa constrictor|Boa
+15: Black mamba|Mamba
+30: Garter, Viper, Coral, Copperhead, Cottonmouth|Water moccasin|Moccasin, Corn, Sidewinder, King|Kingsnake, Milk, Ball python, Burmese python, Diamondback, Adder, Rat, Reticulated python, Bull, Asp, Green mamba, Grass, Sea, Black racer|Racer, Gopher, Hognose, Krait, Taipan, Puff adder
+60: Gaboon viper, Pit viper, Bushmaster, Fer-de-lance, Tiger, Brown|Eastern brown, Boomslang, Russell's viper, Green tree python, Emerald tree boa, Rainbow boa, Sand boa, Horned viper, Saw-scaled viper, Death adder, Mojave rattlesnake|Mojave, Timber rattlesnake, Pine, Indigo, Inland taipan, Flying, Vine, Whip, Habu, Mangrove, Water, Blind|Worm
+85: Mulga, Ribbon, Ringneck, Mud, Rubber boa, Dumeril's boa, Bismarck ringed python, Carpet python, Children's python, Blood python, Rosy boa, Twig, Egg-eating, Sunbeam, File|Wart, Black-headed python, Rinkhals, Cape cobra, Coachwhip, Lancehead, Terciopelo, Cantil, Massasauga, Urutu, Jararaca, Kukri, Paradise tree
+100: Tentacled :: An aquatic snake with two little tentacles on its snout for feeling out fish.
+
+? Name a wild cat
+10: Lion, Tiger, Leopard, Cheetah, Jaguar, Panther|Black panther
+15: Snow leopard, Liger
+30: Cougar|Puma|Mountain lion, Lynx, Bobcat, Ocelot, Clouded leopard, Serval, Caracal
+60: Margay, Sand cat, Jaguarundi, Bengal tiger, Siberian tiger|Amur tiger, Amur leopard, Canada lynx, Iberian lynx, Pallas's cat|Manul, African golden cat, Black-footed cat, Wildcat|European wildcat, Jungle cat, Tigon, Bay cat, Marbled cat, Rusty-spotted cat, Oncilla|Tigrina
+85: Geoffroy's cat, Kodkod|Guiña, Pampas cat|Colocolo, Andean mountain cat|Andean cat, Flat-headed cat, Asian golden cat, Leopard cat, Chinese mountain cat, Sumatran tiger, Malayan tiger, Barbary lion, Asiatic lion, Florida panther, Saber-toothed cat|Sabertooth|Smilodon, Cave lion, Sunda clouded leopard, Eurasian lynx
+100: Fishing cat :: It dives into water after fish. The goldfish would like a word.
+
+? Name a sea creature that isn't a fish
+10: Whale, Dolphin, Octopus, Jellyfish, Crab, Lobster, Shrimp|Prawn, Seal, Starfish|Sea star, Sea turtle|Turtle
+15: Narwhal
+30: Squid, Sea lion, Walrus, Manatee|Sea cow, Oyster, Clam, Mussel, Sea otter|Otter, Orca|Killer whale, Coral, Sea urchin|Urchin, Blue whale, Humpback whale|Humpback, Beluga, Sponge, Scallop, Sea anemone|Anemone, Barnacle, Hermit crab, Nautilus, Cuttlefish, Penguin, Sperm whale, Porpoise, Dugong, Sea cucumber, Plankton, Elephant seal
+60: Mantis shrimp, Horseshoe crab, Conch, Abalone, Sea slug|Nudibranch, Portuguese man o' war|Man o' war, Sea snake, Limpet, Periwinkle, Whelk, Giant squid, Vampire squid, Dumbo octopus, Blue-ringed octopus, Box jellyfish, Moon jelly, Bowhead whale, Right whale, Gray whale, Minke whale, Fin whale, Spider crab, King crab, Fiddler crab, Sea spider, Tube worm, Sea pen, Sea lily, Sand dollar, Copepod, Amphipod, Isopod|Giant isopod, Marine iguana, Leatherback, Loggerhead, Coconut crab
+85: Comb jelly, Tardigrade, Sea angel, Sea butterfly, Salp, Pteropod, Goose barnacle, Chiton, Cone snail, Geoduck, Yeti crab, Pompeii worm, Bobbit worm, Christmas tree worm, Feather star, Brittle star, Basket star, Crown-of-thorns starfish, Sea hare, Sea squirt|Tunicate, Bryozoan, Brachiopod|Lamp shell, Beaked whale|Cuvier's beaked whale, Vaquita, Steller's sea cow, Hawksbill, Olive ridley, Pistol shrimp, Cleaner shrimp, Decorator crab, Pea crab, Sponge crab, Colossal squid, Bobtail squid, Firefly squid, Mimic octopus, Argonaut, Flamingo tongue snail, Sea pig
+100: Krill :: Somewhere, a game about krill is very proud of you.
+
+? Name a word for a baby animal
+~drop baby
+10: Puppy|Pup, Kitten, Cub, Calf, Chick
+15: Joey
+30: Foal, Lamb, Piglet, Duckling, Fawn, Kid, Tadpole|Polliwog, Colt, Filly, Gosling, Owlet, Eaglet, Bunny, Hatchling, Cygnet, Larva, Leveret
+60: Kit, Poult, Squab, Eyas, Fry, Elver, Smolt, Nymph, Grub, Whelp, Yearling, Cria, Froglet, Fingerling, Pullet, Heifer, Cockerel, Hoglet, Spat, Squeaker, Nestling, Fledgling
+85: Parr, Alevin, Wriggler, Keet, Porcupette, Pinkie|Pinky, Weaner, Farrow, Spiderling, Ephyra, Neonate, Leptocephalus, Chickling, Shoat|Shote, Gilt, Sprat, Pupa
+100: Puggle :: A baby echidna. It hatches from an egg and grows up in its mother's pouch.
+
+? Name a word for a group of animals
+10: Herd, Flock, Pack, School, Swarm
+15: Murder
+30: Pride, Gaggle, Pod, Colony, Litter, Hive, Troop, Brood, Nest, Shoal, Den, Drove
+60: Parliament, Clowder, Crash, Tower, Mischief, Flamboyance, Bevy, Covey, Skein, Bloat, Dazzle, Charm, Army, Raft, Mob, Rookery, Waddle, Huddle, Murmuration, Unkindness, Exaltation, Smack, Sleuth|Sloth, Ambush, Romp, Leap
+85: Business, Knot, Zeal, Prickle, Kindle, Kettle, Wake, Cast, Rabble, Cauldron, Stand, Sounder, Cete, Skulk, Bask, Float, Bale, Intrusion, Plague, Grist, Scourge, Shrewdness, Barrel, Conspiracy, Pandemonium, Descent, Convocation, Fluther, Bloom, Kaleidoscope, Harem, Gam, Bed, Run, Nide, Sord
+100: Implausibility :: A group of wildebeest can be called an implausibility of gnus. Yes, really.
+
+? Name an animal with horns or antlers
+~drop horned
+10: Deer, Bull, Moose, Goat, Rhino|Rhinoceros, Reindeer
+15: Unicorn, Narwhal
+30: Elk, Ram|Bighorn sheep|Sheep, Buffalo|Bison, Antelope, Giraffe, Ox, Caribou, Cow, Gazelle, Yak, Water buffalo, Longhorn|Texas longhorn, Impala, Wildebeest|Gnu, Ibex, Highland cow
+60: Oryx, Kudu, Eland, Springbok, Pronghorn, Markhor, Mountain goat, Musk ox|Muskox, Dall sheep, Mouflon, Sable antelope, Hartebeest, Bongo, Nyala, Waterbuck, Gemsbok, Blackbuck, Red deer, Fallow deer, White-tailed deer|Whitetail, Mule deer, Jackalope, Lizard|Horned toad|Thorny devil, Triceratops, Stag beetle, Rhinoceros beetle, Dik-dik, Steenbok, Topi, Zebu, Watusi|Ankole
+85: Takin, Gaur, Banteng, Anoa, Serow, Chamois, Goral, Tahr, Barasingha, Sika deer, Muntjac, Roe deer, Père David's deer|Pere David's deer, Okapi, Lechwe, Gerenuk, Klipspringer, Duiker, Bontebok, Sitatunga, Bushbuck, Tur, Saiga, Aurochs, Irish elk, Chinkara, Nilgai, Viper, Frog
+100: Saola :: The "Asian unicorn." Scientists only described it in 1992 and have almost never seen one since.
+
+? Name a horse breed
+~drop horse
+10: Clydesdale, Mustang, Arabian, Thoroughbred, Quarter|American Quarter, Shetland|Shetland pony
+15: Palomino, Appaloosa
+30: Paint|American Paint, Morgan, Friesian, Pinto, Percheron, Shire, Lipizzaner|Lipizzan, Belgian|Belgian draft, Tennessee Walker|Tennessee Walking, Andalusian, Standardbred, Welsh pony, Miniature|Mini, Hanoverian
+60: Haflinger, Fjord|Norwegian Fjord, Icelandic, Paso Fino, Peruvian Paso, Trakehner, Oldenburg, Holsteiner, Connemara, Suffolk Punch, Missouri Fox Trotter, Rocky Mountain, Saddlebred|American Saddlebred, Lusitano, Gypsy Vanner|Vanner, Hackney, Dartmoor, Exmoor, Falabella, Przewalski's|Przewalski, Brumby, Cleveland Bay, Warmblood, Barb, Chincoteague|Chincoteague pony, Dutch Warmblood, Ardennes
+85: Boulonnais, Breton, Knabstrupper, Marwari, Kathiawari, Caspian, Bashkir Curly|Curly, Nokota, Kiger Mustang, Mangalarga Marchador, Criollo, Azteca, Shagya, Tersk, Orlov Trotter, Budyonny, Mongolian, Yakut, Basuto, Waler, Camargue, Selle Français|Selle Francais, Welsh Cob|Cob, Dales, Fell, Highland, Eriskay, Kerry Bog, Hucul, Konik, Sorraia, Tarpan, Noriker, Jutland, Poitevin, American Cream Draft, Spanish Mustang
+100: Akhal-Teke :: Turkmenistan's "golden horse," with a coat that gleams like polished metal.
+
+? Name an animal that starts with P
+10: Pig, Penguin, Panda, Parrot, Polar bear
+15: Platypus, Pangolin
+30: Panther, Puma, Pelican, Peacock, Pigeon, Porcupine, Python, Poodle, Piranha, Possum, Pony, Prairie dog, Puffin, Pug, Parakeet, Pufferfish, Praying mantis, Pheasant, Partridge, Perch, Pike, Piglet, Porpoise, Prawn, Pit bull, Pomeranian
+60: Peregrine falcon, Pine marten, Pika, Pronghorn, Proboscis monkey, Plover, Polecat, Parrotfish, Pilot whale, Pygmy goat, Puff adder, Pipefish, Pollock, Poison dart frog, Portuguese man o' war, Ptarmigan, Pterodactyl, Pit viper, Pekingese, Papillon, Peccary, Pacu, Paca
+85: Pademelon, Pacarana, Potoroo, Potto, Pygmy marmoset, Phalanger, Pipistrelle, Pipit, Puku, Peafowl, Pekin duck, Pumpkinseed, Pond skater, Pill bug, Pachycephalosaurus, Parasaurolophus, Plesiosaur, Pallas's cat, Pine siskin, Purple martin, Pharaoh hound, Plott hound, Pleco|Plecostomus, Poorwill, Parrotlet, Paddlefish, Przewalski's horse
+100: Pudu :: One of the world's smallest deer, barely knee high. Fawns are not much bigger than a kitten.
+
+? Name an Australian animal
+10: Kangaroo, Koala, Platypus, Emu, Wallaby
+15: Tasmanian devil|Tassie devil
+30: Wombat, Dingo, Kookaburra, Echidna, Crocodile|Saltwater crocodile|Saltie, Cockatoo, Redback|Redback spider, Funnel-web|Funnel-web spider, Box jellyfish, Taipan, Frilled lizard|Frill-necked lizard, Sugar glider, Quokka, Cassowary, Goanna, Brown snake
+60: Thorny devil, Tasmanian tiger|Thylacine, Numbat, Bilby, Quoll, Bandicoot, Wedge-tailed eagle, Lyrebird, Galah, Rainbow lorikeet|Lorikeet, Budgie|Budgerigar, Tiger snake, Blue-tongued skink|Bluetongue|Blue-tongue lizard, Cane toad, Bogong moth, Huntsman|Huntsman spider, Pademelon, Potoroo, Red-bellied black snake, Stonefish, Blue-ringed octopus, Sea dragon|Weedy sea dragon|Leafy sea dragon, Magpie, Black swan, Flying fox, Dugong
+85: Bettong, Kowari, Antechinus, Dunnart, Tree kangaroo, Yabby, Barramundi, Tawny frogmouth|Frogmouth, Currawong, Brolga, Bowerbird, Gang-gang cockatoo, Corroboree frog, Perentie, Inland taipan, Death adder, Mulga, Irukandji, Ghost bat, Honey possum, Ringtail possum, Brushtail possum, Greater glider, Rock-wallaby, Wallaroo, Euro, Spotted quoll, Mountain pygmy possum, Pig-nosed turtle, Murray cod, Witchetty grub, Ulysses butterfly, Emu-wren
+100: Drop bear :: A made-up carnivorous koala Australians use to scare tourists. Keep an eye on the treetops.

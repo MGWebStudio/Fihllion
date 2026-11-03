@@ -1,0 +1,134 @@
+? Name a famous painter
+~last
+10: Vincent van Gogh|Van Gogh, Pablo Picasso, Leonardo da Vinci|Da Vinci|Leonardo, Claude Monet, Michelangelo, Andy Warhol
+15: Bob Ross, Banksy
+30: Salvador Dalí|Salvador Dali, Rembrandt, Frida Kahlo, Georgia O'Keeffe, Jackson Pollock, Henri Matisse, Edgar Degas, Pierre-Auguste Renoir, Paul Cézanne|Paul Cezanne, Raphael, Johannes Vermeer, Edvard Munch, Gustav Klimt, Keith Haring, Jean-Michel Basquiat, Norman Rockwell, Roy Lichtenstein, Mark Rothko, Paul Gauguin, Édouard Manet|Edouard Manet, Thomas Kinkade, Grant Wood, James McNeill Whistler, Caravaggio, Sandro Botticelli, Titian, Francisco Goya, René Magritte|Rene Magritte, Peter Paul Rubens, David Hockney
+60: Jan van Eyck|Van Eyck, Hieronymus Bosch, Pieter Bruegel, Diego Velázquez|Diego Velazquez, El Greco, Albrecht Dürer|Albrecht Durer, J.M.W. Turner|JMW Turner, John Constable, Georges Seurat, Henri de Toulouse-Lautrec|Toulouse-Lautrec, Camille Pissarro, Mary Cassatt, Berthe Morisot, Joan Miró|Joan Miro, Wassily Kandinsky, Piet Mondrian, Marc Chagall, Edward Hopper, Winslow Homer, John Singer Sargent, Andrew Wyeth, Willem de Kooning|De Kooning, Francis Bacon, Lucian Freud, Diego Rivera, Yayoi Kusama, Damien Hirst, Jeff Koons, Gerhard Richter, Cy Twombly, Katsushika Hokusai|Hokusai, Tintoretto, Giotto, Artemisia Gentileschi, Eugène Delacroix|Eugene Delacroix, Jacques-Louis David, Paul Klee, Amedeo Modigliani, Egon Schiele, LeRoy Neiman, Peter Max
+85: Hilma af Klint, Kazimir Malevich, Georges Braque, Fernand Léger|Fernand Leger, Max Ernst, Yves Tanguy, Giorgio de Chirico, Francis Picabia, Hans Holbein, Lucas Cranach, Matthias Grünewald|Matthias Grunewald, Frans Hals, Jan Steen, Gerard ter Borch, Anthony van Dyck, Nicolas Poussin, Claude Lorrain, Jean-Honoré Fragonard|Jean-Honore Fragonard, François Boucher|Francois Boucher, Antoine Watteau, Thomas Gainsborough, Joshua Reynolds, William Blake, Caspar David Friedrich, Gustave Courbet, Jean-François Millet|Jean-Francois Millet, Dante Gabriel Rossetti, John Everett Millais, Alphonse Mucha, Henri Rousseau, Odilon Redon, Tamara de Lempicka, Alice Neel, Helen Frankenthaler, Lee Krasner, Agnes Martin, Joan Mitchell, Franz Kline, Robert Motherwell, Clyfford Still, Barnett Newman, Jasper Johns, Robert Rauschenberg, Ed Ruscha, Alex Katz, Wayne Thiebaud, Kehinde Wiley, Kara Walker, Utagawa Hiroshige|Hiroshige, Albert Bierstadt, Thomas Moran, Charles M. Russell, Frederic Remington
+100: Giuseppe Arcimboldo|Arcimboldo :: He painted portraits of faces made entirely of fruit, vegetables and, in one case, fish.
+
+? Name an art movement
+~drop art,movement
+10: Impressionism, Renaissance, Cubism, Surrealism, Pop, Abstract
+15: Dada|Dadaism, Minimalism
+30: Expressionism, Abstract Expressionism, Baroque, Realism, Romanticism, Post-Impressionism, Modernism, Deco, Nouveau, Futurism, Graffiti|Street, Gothic, Pointillism, Neoclassicism, Rococo
+60: Fauvism, Bauhaus, De Stijl, Constructivism, Suprematism, Mannerism, Symbolism, Op, Arts and Crafts, Pre-Raphaelite|Pre-Raphaelites, Hudson River School, Ukiyo-e, Harlem Renaissance, Conceptual, Photorealism, Cloisonnism, Vorticism, Tonalism, Ashcan School, Color Field, Folk|Outsider, Social realism, Socialist realism, Performance, Land, Neo-expressionism, Naturalism, Precisionism
+85: Orphism, Der Blaue Reiter, Die Brücke|Die Brucke, Les Nabis|Nabis, Synthetism, Divisionism, Luminism, Superflat, Arte Povera, Fluxus, New Objectivity|Neue Sachlichkeit, Regionalism, Mono-ha, Gutai, Lyrical abstraction, Tachisme, Art Brut|Brut, CoBrA, Young British Artists|YBA, Kitsch, Lowbrow, Massurrealism, Bay Area Figurative, Intimism, Purism, Rayonism, Zero
+100: Stuckism :: Founded in 1999 to fight conceptual art, after one artist was told their work was "stuck."
+
+? Name a holiday
+10: Christmas, Halloween, Thanksgiving, Easter, New Year's|New Year's Day|New Year's Eve, Valentine's Day, Fourth of July|July 4th|Independence Day
+15: Festivus, Talk Like a Pirate Day
+30: Hanukkah|Chanukah, St. Patrick's Day|Saint Patrick's Day, Labor Day, Memorial Day, Mother's Day, Father's Day, Martin Luther King Jr. Day|MLK Day, Veterans Day, Presidents' Day|Presidents Day, Earth Day, Kwanzaa, Cinco de Mayo, Diwali, Ramadan|Eid, Passover, Yom Kippur, Rosh Hashanah, Mardi Gras, Groundhog Day, April Fools' Day|April Fools, Columbus Day, Black Friday, Juneteenth, Boxing Day, Lunar New Year|Chinese New Year, Day of the Dead|Día de los Muertos|Dia de los Muertos, Arbor Day, Good Friday, Flag Day, Indigenous Peoples' Day
+60: Purim, Sukkot, Eid al-Fitr, Eid al-Adha, Holi, Vesak, Nowruz, Oktoberfest, Bastille Day, Canada Day, Australia Day, Guy Fawkes Night|Bonfire Night, Anzac Day, Remembrance Day, Victoria Day, Epiphany|Three Kings Day, Ash Wednesday, Palm Sunday, Lent, Pentecost, All Saints' Day, St. Nicholas Day, Hogmanay, Waitangi Day, Golden Week, Tet, Songkran, Obon, Mid-Autumn Festival, Dragon Boat Festival, Carnival, Pi Day, May Day, Grandparents Day, Election Day, Cyber Monday, Sweetest Day, Boss's Day, Patriots' Day, Pioneer Day, Kamehameha Day, Star Wars Day|May the Fourth, Hanami
+85: Shavuot, Simchat Torah, Tu BiShvat, Lag BaOmer, Tisha B'Av, Losar, Onam, Pongal, Navratri, Dussehra, Raksha Bandhan, Beltane, Samhain, Yule, Imbolc, Lughnasadh, Walpurgis Night, Midsummer|Midsommar, Krampusnacht, Saint Lucia Day, Twelfth Night, Michaelmas, Whitsun, Shrove Tuesday|Pancake Day, Burns Night, St. Andrew's Day, St. David's Day, St. George's Day, Twelfth of July, Seward's Day, Cesar Chavez Day, Casimir Pulaski Day, Evacuation Day, Towel Day, Bloomsday, Nyepi, Naadam, Inti Raymi, Hari Raya, Vappu, Up Helly Aa, Mischief Night, Lupercalia, Saturnalia
+100: Poisson d'avril|April Fish :: France's April Fools' Day, celebrated by taping paper fish to people's backs. The goldfish approves.
+
+? Name a color
+10: Red, Blue, Green, Yellow, Purple, Orange, Pink, Black, White, Brown
+15: Burnt sienna, Chartreuse, Puce
+30: Teal, Turquoise, Magenta, Maroon, Beige, Gray|Grey, Navy, Gold, Silver, Lavender, Violet, Indigo, Cyan, Tan, Peach, Olive, Coral, Crimson, Salmon, Lime, Aqua, Ivory, Mauve, Burgundy, Cream, Scarlet, Fuchsia, Periwinkle, Mint, Hot pink, Sky blue, Rose, Cerulean, Khaki, Tangerine, Amber, Emerald, Ruby, Sapphire, Plum, Rust, Charcoal
+60: Vermilion|Vermillion, Ochre, Taupe, Sepia, Ultramarine, Cobalt, Mustard, Mahogany, Umber, Ecru, Cerise, Lilac, Sienna, Aquamarine, Azure, Eggplant|Aubergine, Seafoam, Apricot, Sage, Cinnamon, Oxblood, Wine, Bronze, Copper, Pewter, Slate, Ebony, Jet, Onyx, Pearl, Champagne, Goldenrod, Marigold, Saffron, Canary, Lemon, Forest green, Kelly green, Hunter green, Royal blue, Baby blue, Powder blue, Midnight blue, Prussian blue, Carmine, Magnolia, Bisque, Heliotrope, Cornflower, Mulberry, Tomato, Raspberry, Pistachio
+85: Gamboge, Cochineal, Alizarin, Viridian, Phthalo blue|Phthalo, Zaffre, Smaragdine, Glaucous, Falu red, Coquelicot, Wenge, Feldgrau, Drab, Isabelline, Sarcoline, Xanadu, Amaranth, Byzantium, Celadon, Razzmatazz, Wisteria, Thistle, Tuscan, Tyrian purple, Lapis, Mikado, Nacarat, Eburnean, Incarnadine, Bistre, Citrine, Fallow, Gainsboro, Vantablack, International Klein Blue|Klein blue, YInMn blue, Baker-Miller pink, Cosmic latte, Eigengrau, Bleu de France, Paris green, Scheele's green, Verdigris, Hooker's green, Caput mortuum, Titian, Liver
+100: Mummy brown :: A paint pigment made from actual ground-up Egyptian mummies, until they ran out of mummies.
+
+? Name a shade of blue
+~drop blue
+10: Navy, Sky, Baby, Royal, Teal, Turquoise
+15: Cerulean, Periwinkle
+30: Aqua, Cobalt, Indigo, Sapphire, Midnight, Powder, Denim, Ocean, Electric, Azure, Cyan, Carolina|Tar Heel, Steel, Ice, Light, Dark, Robin's egg
+60: Ultramarine, Prussian, Cornflower, Slate, Peacock, Tiffany, Capri, Dodger, Federal, Oxford, Yale, Air Force, Aquamarine, Lapis lazuli|Lapis, Cadet, Alice, French, Persian, Egyptian, Columbia, Duck egg, Wedgwood
+85: Phthalo, Klein|International Klein, Zaffre, Glaucous, Bleu de France, Maya, Majorelle, Cambridge, Delft, Smalt, Han, Savoy, Tufts, Trypan, Moonstone, Celeste, Mediterranean, Classic, Spanish, Picotee, Liberty, Sèvres|Sevres, Marian, Resolution, Honolulu
+100: YInMn :: Discovered by accident in a lab in 2009. It was the first new blue pigment in about 200 years.
+
+? Name a style of dance
+~drop dance,dancing
+10: Ballet, Tap, Hip hop|Hip-hop, Salsa, Waltz, Tango, Swing, Ballroom
+15: Macarena, The Robot|Robot
+30: Jazz, Contemporary, Modern, Breakdancing|Breaking, Line, Square, Foxtrot, Cha-cha|Cha cha, Rumba, Samba, Flamenco, Polka, Belly, Irish step|Irish|Riverdance, Conga, Disco, Twist, Moonwalk, Electric Slide, Bachata, Merengue, Lindy Hop, Charleston, Hula, Two-step|Texas two-step, Clogging, Can-can|Cancan, Krumping, The Floss|Floss, Dab
+60: Jitterbug, Mambo, Bolero, Paso doble, Quickstep, Viennese waltz, Jive, Bollywood, Bhangra, Kathak, Bharatanatyam, Kizomba, Zumba, Voguing|Vogue, Popping, Locking, The Hustle|Hustle, Mashed Potato, Cupid Shuffle, Cha Cha Slide, Harlem Shake, Dougie, Nae Nae|Whip, Gangnam Style, Thriller, Chicken, Hokey Pokey, YMCA, Stanky Leg, Crip Walk, Melbourne Shuffle|Shuffle, Haka, Maypole, Morris, Highland fling|Scottish Highland, Sword, Ceilidh, Bunny Hop, Limbo, Tarantella, Butoh
+85: Bossa nova, Forró|Forro, Lambada, Zouk, Kuduro, Semba, Gumboot, Pantsula, Sabar, Hopak, Kolo, Sirtaki|Syrtos, Hora, Dabke, Odissi, Kuchipudi, Mohiniyattam, Kabuki, Noh, Kecak, Legong, Tinikling, Siva, Tamure, Fandango, Jota, Sardana, Mazurka, Polonaise, Gavotte, Minuet, Pavane, Galliard, Quadrille, Cotillion, Reel, Jig, Turkey Trot, Black Bottom, Shimmy, Cakewalk, Soft shoe, Time Warp
+100: Hornpipe :: The sailor's dance. Handy, since it needs no partner and very little deck.
+
+? Name a hairstyle
+~drop haircut,cut,hair,hairstyle
+10: Bob, Mohawk, Ponytail, Pixie, Braids|Braid, Bun, Mullet, Buzz
+15: The Rachel|Rachel, Bowl
+30: Afro, Bangs|Fringe, Crew, Fade, Pompadour, Dreadlocks|Dreads|Locs, Cornrows, Pigtails, Perm, Undercut, Beehive, Comb-over|Combover, Man bun, Shag, French braid, Fishtail braid|Fishtail, Updo, Layers, Flat top, Bald|Shaved head, Highlights, Curtains, Messy bun, Box braids, Waves, Side part, Slicked back, Jheri curl, Caesar, Space buns
+60: Mop top, Ducktail|DA, Quiff, Hi-top fade|High top fade, Bantu knots, Feathered|Farrah Fawcett, Wolf, Lob, Butterfly, Shullet, Chignon, Crown braid, Dutch braid, Waterfall braid, Twist out, Faux hawk|Fauxhawk, Rattail, Taper, Temple fade, Burst fade, Liberty spikes, Bouffant, Finger waves, Pageboy, Asymmetric, Ringlets, Victory rolls, Odango, Frosted tips, Emo fringe, Skullet, Pin curls, Sisterlocks, Blowout, Hime
+85: Marcel waves, Eton crop, Tonsure, Cadogan, Queue, Chonmage, Mizura, Shimada, Sakayaki, Mutton chops, Apollo knot, Gibson girl, Psyche knot, Peek-a-boo bob, Mushroom, Psychobilly wedge, Devilock, Boxed fade|Flattop with fenders, Induction, Butch
+100: Fontange :: A towering 1680s hairdo on a wire frame, supposedly started by a mistress of Louis XIV tying up her hair during a hunt.
+
+? Name a famous person named Michael
+10: Michael Jordan, Michael Jackson, Michael Scott, Michael Phelps, Michael B. Jordan
+15: Michael Myers, Michael Bolton
+30: Michael Bublé|Michael Buble, Michael J. Fox, Michael Caine, Michael Keaton, Michael Douglas, Michael Cera, Michael Moore, Michael Bay, Michael Corleone, Michael Kors, Michael Vick, Michael Strahan, Michael Buffer, Mike Tyson, Mike Myers, Michael Schumacher, Michael Fassbender, Michael Stipe, Michael Crichton, Michael Bloomberg, Michael Gambon, Michael Richards, Michael Rapaport, Michael Cohen, Michael Dell, Michael Landon, Michael Flatley, Michael Imperioli, Mike Pence, Mike Wazowski, Michael Kelso, Michael Bluth, Michael Knight, Michael Faraday, Mikhail Gorbachev, Michael Clarke Duncan, Michael Shannon
+60: Michael Palin, Michael McDonald, Michael Irvin, Michael Johnson, Michael Chang, Michael Owen, Michael Ballack, Michael Collins, Michael Nesmith, Michael Hutchence, Michael Franti, Michael Stuhlbarg, Michael Sheen, Michael Peña|Michael Pena, Michael Mann, Michael Curtiz, Michael Cimino, Michael Haneke, Michael Moorcock, Michael Chabon, Michael Lewis, Michael Pollan, Michael Ondaatje, Michael Eisner, Michael Milken, Michael Dukakis, Michael Bennet, Michael Steele, Michael Flynn, Michael Cole, Michael Waltrip, Michael Andretti, Michael Vartan, Michael Weatherly, Michael Emerson, Michael Scofield, Michael Burnham, Michael Darling, Michael Banks, Michael Afton, Michael De Santa, Saint Michael|St. Michael|Archangel Michael|Michael the Archangel
+85: Michael Nyman, Michael Tippett, Michael Praetorius, Michael Kiske, Michael Schenker, Michael Monroe, Michael Spinks, Michael Moorer, Michael Bisping, Michael Chandler, Michael Carrick, Michael Essien, Michael Laudrup, Michael Beasley, Michael Redd, Michael Finley, Michael Cooper, Michael Thompson, Michael Oher, Michael Crabtree, Michael Thomas, Michael Young, Michael Cuddyer, Michael Sam, Michael Madsen, Michael Biehn, Michael Ironside, Michael Rooker, Michael Pitt, Michael Ealy, Michael Dorn, Michael York, Michael Gross, Michael Hordern, Michael Jeter, Michael Ian Black, Michael Showalter, Michael Che, Michael Kosta, Michael Mando, Michael Cudlitz
+100: Michael Winslow :: The Man of 10,000 Sound Effects from Police Academy. He does all those noises with his mouth.
+
+? Name a famous person named Chris
+10: Chris Hemsworth, Chris Evans, Chris Pratt, Chris Pine, Chris Rock
+15: Chris Griffin, Kris Kringle
+30: Chris Brown, Chris Martin, Chris Farley, Chris Tucker, Chris Paul, Christopher Nolan, Christopher Columbus, Christopher Reeve, Christopher Walken, Christopher Lloyd, Christopher Lee, Chris Cornell, Chris Stapleton, Chris Kyle, Christian Bale, Kris Jenner, Chris Christie, Christopher Robin, Chris Kattan, Chris O'Donnell, Chris Noth, Chris Redfield, Chris Cooper, Chris Evert, Kris Kristofferson, Chris Harrison, Chris Hansen, Christopher Plummer, Christopher Meloni, Christopher Mintz-Plasse, Chris Bosh, Chris Webber, Cristiano Ronaldo, Chris Isaak, Chris Rea
+60: Chris Messina, Chris Klein, Chris Elliott, Chris Parnell, Chris Penn, Chris Columbus, Chris Sarandon, Chris Colfer, Chris Lowell, Chris Hadfield, Chris Froome, Chris Hoy, Chris Mullin, Chris Carter, Chris Berman, Chris Collinsworth, Chris Matthews, Chris Cuomo, Chris Hayes, Chris Wallace, Chris Daughtry, Chris Squire, Chris Robinson, Krist Novoselic, Chris Lighty, Chris Ware, Christopher Marlowe, Christopher Wren, Christopher Hitchens, Christopher Paolini, Christopher Moore, Christopher Eccleston, Christopher Guest, Christopher McDonald, Christopher Abbott, Christopher Cross, Christoph Waltz, Christopher Wallace, Christopher Moltisanti, Chris Turk, Chris Traeger, Chris Partlow, Christopher Pike
+85: Chris de Burgh, Chris Barber, Chris Tomlin, Chris Young, Chris Janson, Chris Thile, Chris Spedding, Chris Frantz, Chris Stein, Chris Difford, Chris Bell, Chris Claremont, Chris Kluwe, Chris Boardman, Chris Waddle, Chris Sutton, Chris Smalling, Chris Wondolowski, Chris Sale, Chris Davis, Chris Bryant, Chris Chelios, Chris Pronger, Chris Benoit, Chris Jericho, Chris Eubank, Chris Weidman, Chris Bumstead, Chris Kirkpatrick, Chris Gethard, Chris D'Elia, Christopher Titus
+100: Chris LeDoux :: A world champion rodeo rider from Wyoming who became a country singer. Garth Brooks name-checks him in "Much Too Young."
+
+? Name a zodiac sign, Western or Chinese
+10: Leo, Scorpio, Taurus, Virgo, Gemini, Aries
+15: Ophiuchus
+30: Cancer, Libra, Sagittarius, Capricorn, Aquarius, Pisces
+60: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat|Sheep, Monkey, Rooster, Dog, Pig
+85: Water buffalo, Bird, Boar, Ram, Bull, Twins, Crab, Lion, Maiden, Scales, Scorpion, Archer, Sea goat, Water bearer, Fish
+100: Cat :: Vietnam's zodiac has a cat where China's has a rabbit. In legend, the rat tricked the cat out of the race.
+
+? Name a famous painting
+10: Mona Lisa, The Starry Night|Starry Night, The Last Supper, The Scream, American Gothic
+15: Dogs Playing Poker, Whistler's Mother
+30: The Persistence of Memory|Melting Clocks, Girl with a Pearl Earring, The Birth of Venus, The Creation of Adam|Sistine Chapel, Guernica, Water Lilies, The Night Watch, Campbell's Soup Cans|Soup Cans, The Kiss, Nighthawks, The Great Wave off Kanagawa|The Great Wave, A Sunday Afternoon on the Island of La Grande Jatte|Sunday Afternoon|La Grande Jatte, Las Meninas, Washington Crossing the Delaware, Liberty Leading the People, The Son of Man, Christina's World, The School of Athens, Sunflowers, Marilyn Diptych, Café Terrace at Night|Cafe Terrace at Night
+60: The Garden of Earthly Delights, Les Demoiselles d'Avignon, Impression\, Sunrise|Impression Sunrise, The Raft of the Medusa, The Arnolfini Portrait, Olympia, Luncheon on the Grass|Le Déjeuner sur l'herbe, The Treachery of Images|This Is Not a Pipe|Ceci n'est pas une pipe, The Hay Wain, The Fighting Temeraire, Whaam!|Whaam, Bal du moulin de la Galette, A Bar at the Folies-Bergère, The Ambassadors, Salvator Mundi, Napoleon Crossing the Alps, The Third of May 1808, Saturn Devouring His Son, Wanderer above the Sea of Fog, Ophelia, The Sleeping Gypsy, Composition VIII, Broadway Boogie Woogie, The Two Fridas, Portrait of Adele Bloch-Bauer I, No. 5\, 1948, Black Square, Girl with Balloon, The Blue Boy|Blue Boy, Pinkie, The Potato Eaters, The Bedroom|Bedroom in Arles, The Card Players
+85: The Swing, The Tower of Babel, Hunters in the Snow, Ghent Altarpiece, Isenheim Altarpiece, Primavera, The Anatomy Lesson, The Lacemaker, The Milkmaid, View of Delft, Luncheon of the Boating Party, Nude Descending a Staircase, I and the Village, The Dance, The Sick Child, The Gross Clinic, The Nude Maja, The Death of Marat, Oath of the Horatii, The Gleaners, The Angelus, Ecce Homo, Beata Beatrix, The Lady of Shalott, Flaming June, Mr and Mrs Andrews, Rain\, Steam and Speed, Ivan the Terrible and His Son, Barge Haulers on the Volga
+100: Goldfish|The Goldfish :: Henri Matisse painted it in 1912. The goldfish has it as a desktop background.
+
+? Name a traditional wedding anniversary gift
+10: Paper, Silver, Gold, Diamond, Cotton
+15: Divorce
+30: Wood, Leather, Pearl, Ruby, Tin, Silk, Crystal, China, Platinum
+60: Sapphire, Emerald, Coral, Lace, Iron, Steel, Wool, Copper, Bronze, Flowers|Fruit, Pottery, Linen, Aluminum
+85: Willow, Ivory, Sugar, Clocks|Clock, Silverware, Desk set, Appliances, Watches|Watch
+100: Candy :: The official sixth-anniversary gift. The other option is iron, so choose wisely.
+
+? Name a ride at a Disney park
+10: Space Mountain, Splash Mountain, It's a Small World|Small World, Pirates of the Caribbean, Haunted Mansion, Big Thunder Mountain|Big Thunder Mountain Railroad
+15: Carousel of Progress, Hall of Presidents
+30: Dumbo the Flying Elephant|Dumbo, Peter Pan's Flight, Mad Tea Party|Teacups|Tea Cups, Tower of Terror, Expedition Everest, Matterhorn Bobsleds|Matterhorn, Jungle Cruise, Toy Story Mania, Star Tours, Soarin'|Soarin, Test Track, Rock 'n' Roller Coaster|Rock n Roller Coaster, Smugglers Run|Millennium Falcon: Smugglers Run, Rise of the Resistance, Tiana's Bayou Adventure, Seven Dwarfs Mine Train, TRON Lightcycle Run|Tron, Kilimanjaro Safaris, Guardians of the Galaxy: Cosmic Rewind|Cosmic Rewind, Incredicoaster, Radiator Springs Racers, Buzz Lightyear|Buzz Lightyear's Space Ranger Spin, Autopia, Monorail, Enchanted Tiki Room|Tiki Room
+60: The Many Adventures of Winnie the Pooh|Winnie the Pooh, Indiana Jones Adventure|Indiana Jones, Mr. Toad's Wild Ride, Alice in Wonderland, Snow White's Scary Adventures, Pinocchio's Daring Journey, Casey Jr., Storybook Land, Mickey's Runaway Railway, Remy's Ratatouille Adventure, Frozen Ever After, Spaceship Earth, Living with the Land, Maelstrom, Dinosaur, Kali River Rapids, Na'vi River Journey, Avatar Flight of Passage, Slinky Dog Dash, Alien Swirling Saucers, Muppet*Vision 3D|MuppetVision, Country Bear Jamboree, PeopleMover, Astro Orbiter, The Barnstormer|Goofy's Barnstormer, Ariel's Undersea Adventure, Turtle Talk with Crush, Finding Nemo Submarine Voyage, The Seas with Nemo & Friends
+85: Horizons, World of Motion, Journey Into Imagination|Figment, Body Wars, Cranium Command, Mission to Mars, Adventure Thru Inner Space, America Sings, Skyway, Rocket Rods, If You Had Wings, Delta Dreamflight, Stitch's Great Escape, Superstar Limo, Mystic Manor, Pooh's Hunny Hunt, Crush's Coaster, Journey to the Center of the Earth, Phantom Manor, Big Grizzly Mountain, Primeval Whirl
+100: 20\,000 Leagues Under the Sea|20000 Leagues Under the Sea :: Disney World once had real submarines full of mechanical fish and a giant squid. It closed in 1994.
+
+? Name a university
+~drop university,of,the
+10: Harvard, Yale, Stanford, MIT, Princeton, Oxford
+15: Hogwarts, Monsters University|Monsters
+30: Cambridge, Columbia, Penn|Pennsylvania|UPenn, Cornell, Duke, Brown, Dartmouth|Dartmouth College, NYU|New York, UCLA, USC|Southern California, UC Berkeley|Berkeley|Cal, Georgetown, Notre Dame, Michigan, Ohio State, Penn State, Texas|UT Austin, Florida|UF, Alabama, Georgia Tech, Caltech, Northwestern, Chicago|UChicago, Johns Hopkins, Howard, Vanderbilt, Boston University|BU, Boston College|BC, Rice, West Point, Naval Academy|Annapolis, Liberty, BYU|Brigham Young
+60: Wyoming, Emory, Tufts, Carnegie Mellon, Purdue, Wisconsin, Indiana, Virginia|UVA, UNC|North Carolina|UNC Chapel Hill, Michigan State, Texas A&M, LSU, Auburn, Clemson, Oregon, Washington|UW, Arizona State|ASU, Arizona, Colorado, Rutgers, Syracuse, Baylor, TCU, Tulane, Wake Forest, Villanova, Gonzaga, Spelman, Morehouse, Hampton, Oberlin|Oberlin College, Swarthmore|Swarthmore College, Williams|Williams College, Amherst|Amherst College, Wellesley|Wellesley College, Vassar|Vassar College, Barnard|Barnard College, Smith|Smith College, Bryn Mawr|Bryn Mawr College, Mount Holyoke|Mount Holyoke College, Sorbonne, Trinity College Dublin|Trinity, St Andrews, Edinburgh, Imperial College London|Imperial, LSE|London School of Economics, Heidelberg, McGill, Toronto, Tsinghua, Peking, Tokyo, National University of Singapore|NUS, Melbourne, Sydney
+85: Al-Qarawiyyin, Al-Azhar, Salamanca, Uppsala, Coimbra, Leiden, Padua, Deep Springs|Deep Springs College, St. John's, Reed|Reed College, Bowdoin|Bowdoin College, Bates|Bates College, Colby|Colby College, Middlebury|Middlebury College, Grinnell|Grinnell College, Kenyon|Kenyon College, Carleton|Carleton College, Pomona|Pomona College, Harvey Mudd|Harvey Mudd College, Claremont McKenna, Davidson|Davidson College, Furman, Sewanee, Gallaudet, Cooper Union, Juilliard, Berklee, RISD, SCAD, Le Cordon Bleu, Bob Jones, Hillsdale, Trump, Faber, Greendale, Hillman, Miskatonic, Starfleet Academy, Wossamotta U
+100: Bologna :: The world's oldest university, founded in 1088. It's been handing back papers for over 900 years.
+
+? Name a TV network or channel
+~drop channel,network,the
+10: ABC, NBC, CBS, Fox, CNN, ESPN, HBO
+15: C-SPAN, Weather
+30: MTV, VH1, Disney, Nickelodeon|Nick, Cartoon, TNT, TBS, USA, AMC, FX, Bravo, E!, Comedy Central, Discovery, History, National Geographic|Nat Geo, Animal Planet, Food, HGTV, TLC, Lifetime, Hallmark, PBS, Fox News, MSNBC, Showtime, Starz, Telemundo, Univision, CW, BET, Syfy|Sci-Fi, BBC, Adult Swim, Golf, NFL, QVC, HSN
+60: TCM|Turner Classic Movies, IFC, Sundance|Sundance TV, Oxygen, Freeform|ABC Family, TV Land, Travel, A&E, Paramount|Spike, Logo, Ovation, Cinemax, MGM+|Epix, Encore, Nick at Nite, Nick Jr., Boomerang, Disney XD, Toon Disney, TeenNick, G4, Fuse, CMT, GSN|Game Show, Investigation Discovery|ID, OWN, WE tv, Bloomberg, CNBC, Fox Business, Newsmax, Al Jazeera, ITV, Channel 4, Sky, CBC, NHK, Hub, Discovery Kids, Science, Tennis, MLB, NBA TV, ACC, SEC, ESPN2
+85: ESPN 8: The Ocho|The Ocho|Ocho, DuMont, Ion|Pax, The WB|WB, UPN, TechTV, ZDTV, Court TV, Current TV, Esquire, Chiller, Cloo, Reelz, Pop, INSP, RFD-TV, Cowboy, Outdoor, Sportsman, MTV2, Soapnet, Noggin, Z Channel, The Box, Trio, Playhouse Disney, Qubo, Kabillion, Vme, Galavisión|Galavision, Azteca, RT, Dave, Channel 5, Yesterday, S4C, RTÉ|RTE, ZDF
+100: World Fishing|World Fishing Network :: Round-the-clock shows about catching fish. The goldfish files this under horror.
+
+? Name something with wings
+10: Bird, Airplane|Plane, Butterfly, Bat, Angel, Bee
+15: Red Bull, Buffalo
+30: Chicken, Dragon, Fairy, Pegasus, Dragonfly, Mosquito, Fly, Moth, Cupid, Hospital, Museum, Mansion, White House, Theater|Theatre, Eagle, Duck, Penguin, Ostrich, Wasp, Ladybug, Tinker Bell|Tinkerbell, Glider, Jet, Detroit Red Wings|Red Wings, Beetle, Grasshopper
+60: Paul McCartney, Hedwig, Maleficent, Harpy, Gargoyle, Phoenix, Griffin, Flying monkeys|Winged monkeys, Nike, Icarus, Mothra, Pidgey, Pterodactyl, Political party, Stage, Air Force, Hockey team, Airport, Seraphim, Cherub, Stork, Wingnut|Wing nut, Wingtips|Wingtip shoes, Castiel, Hawkgirl, Archangel, Falcon, Vulture, Aston Martin, Bentley, Mini Cooper, Harley-Davidson
+85: Winged sandals|Talaria, Hermes|Mercury, Winged Victory of Samothrace|Nike of Samothrace, Lamassu, Sphinx, Hippogriff, Thunderbird, Quetzalcoatl, Mothman, Jersey Devil, Stymphalian birds, Alicorn, Archaeopteryx, Microraptor, Albatross, Frigatebird, SR-71 Blackbird, Spruce Goose, Wright Flyer, Concorde, Ornithopter, West Wing
+100: Flying fish :: They can glide for hundreds of metres on wing-like fins. The goldfish is extremely jealous.

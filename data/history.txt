@@ -1,0 +1,135 @@
+? Name a US president
+~last
+~drop president
+10: George Washington, Abraham Lincoln|Abe Lincoln, Barack Obama, Donald Trump, Joe Biden, John F. Kennedy|JFK, Thomas Jefferson
+15: Millard Fillmore, Chester A. Arthur|Chester Arthur
+30: Ronald Reagan, Bill Clinton, George W. Bush|George Bush|Bush, Theodore Roosevelt|Teddy Roosevelt|Roosevelt, Franklin D. Roosevelt|FDR|Franklin Roosevelt, Richard Nixon, Jimmy Carter, Ulysses S. Grant|Ulysses Grant, Dwight D. Eisenhower|Dwight Eisenhower|Ike, Harry S. Truman|Harry Truman, Gerald Ford, John Adams, Andrew Jackson, James Madison, George H. W. Bush|George HW Bush, Lyndon B. Johnson|LBJ|Lyndon Johnson, Woodrow Wilson
+60: James Monroe, John Quincy Adams, Herbert Hoover, Calvin Coolidge, William Howard Taft, William McKinley, James K. Polk|James Polk, Andrew Johnson, Warren G. Harding|Warren Harding, Grover Cleveland, James A. Garfield|James Garfield, Zachary Taylor, Martin Van Buren|Van Buren
+85: Rutherford B. Hayes|Rutherford Hayes, John Tyler, Franklin Pierce, James Buchanan, Benjamin Harrison
+100: William Henry Harrison :: Gave the longest inaugural address ever, then served the shortest presidency: 31 days.
+
+? Name a Roman emperor
+~drop emperor
+10: Augustus, Nero, Caligula, Marcus Aurelius, Constantine
+15: Julius Caesar|Caesar
+30: Hadrian, Trajan, Tiberius, Claudius, Commodus, Vespasian, Titus, Justinian
+60: Domitian, Diocletian, Theodosius, Septimius Severus|Severus, Caracalla, Antoninus Pius, Nerva, Elagabalus, Aurelian, Julian|Julian the Apostate, Valerian, Honorius, Romulus Augustulus, Otho, Galba, Vitellius, Geta, Philip the Arab, Valens
+85: Pertinax, Macrinus, Severus Alexander, Maximinus Thrax, Gordian, Decius, Gallienus, Claudius Gothicus, Probus, Carus, Carinus, Numerian, Maximian, Galerius, Constantius, Licinius, Gratian, Valentinian, Arcadius, Avitus, Majorian, Zeno, Anastasius, Pupienus, Balbinus, Tacitus, Quintillus, Florian, Constans, Jovian, Maxentius, Aemilian, Trebonianus Gallus, Hostilian, Volusianus
+100: Didius Julianus :: He bought the empire at an auction in 193 AD. It lasted 66 days.
+
+? Name a famous explorer
+~last
+10: Christopher Columbus, Marco Polo, Ferdinand Magellan, Lewis and Clark
+15: Dora the Explorer|Dora
+30: Vasco da Gama|Da Gama, Leif Erikson|Leif Eriksson, Amerigo Vespucci, Hernán Cortés|Hernan Cortes|Cortez, Francisco Pizarro, Juan Ponce de León|Ponce de Leon, Francis Drake|Sir Francis Drake, James Cook|Captain Cook, Sacagawea, Ernest Shackleton, Roald Amundsen, Edmund Hillary, John Cabot, Henry Hudson, Jacques Cousteau, Robert Falcon Scott|Robert Scott, Amelia Earhart, Walter Raleigh, Meriwether Lewis, William Clark, David Livingstone, Neil Armstrong
+60: Hernando de Soto|De Soto, Vasco Núñez de Balboa|Balboa, Samuel de Champlain, Jacques Cartier, Robert Peary, Tenzing Norgay, Ibn Battuta, Zheng He, Bartolomeu Dias, Erik the Red, George Mallory, Henry Morton Stanley, John Smith, Daniel Boone, Francisco de Coronado|Coronado, Matthew Henson, Thor Heyerdahl, La Salle, Vitus Bering, Abel Tasman, Yuri Gagarin, Alexander von Humboldt|Humboldt, Jacques Marquette, Louis Jolliet, Zebulon Pike, John Franklin
+85: Fridtjof Nansen, Douglas Mawson, Richard Burton, John Hanning Speke, Mungo Park, Burke and Wills, Matthew Flinders, Pedro Álvares Cabral|Cabral, Juan Sebastián Elcano|Elcano, Álvar Núñez Cabeza de Vaca|Cabeza de Vaca, Giovanni da Verrazzano|Verrazano, Gertrude Bell, Isabella Bird, Freya Stark, Mary Kingsley, Nellie Bly, Xuanzang, Piri Reis, Willem Barentsz, Hubert Wilkins, Richard Byrd, Apsley Cherry-Garrard, Tom Crean, Aimé Bonpland, John Wesley Powell, Jedediah Smith
+100: John Colter :: He described Yellowstone's geysers around 1808. People assumed he made it up and mocked it as "Colter's Hell."
+
+? Name a war
+~drop war,wars,the,of
+10: World War II|WW2|WWII|World War 2|World War Two|Second World War, World War I|WW1|WWI|World War 1|World War One|First World War|Great War, Vietnam, American Civil War|Civil, Revolutionary|American Revolution, Korean|Korea
+15: Cold, Star Wars
+30: Iraq, Gulf|Persian Gulf, 1812, Afghanistan, Spanish-American, Trojan, Roses, Crusades, Hundred Years|Hundred Years', Napoleonic, Mexican-American, French Revolution, Falklands, Peloponnesian, Punic, Crimean
+60: Boer, Thirty Years|Thirty Years', Seven Years|Seven Years', French and Indian, Opium, Russo-Japanese, Spanish Civil, Six-Day|Six Day, Yom Kippur, Iran-Iraq, Bosnian, Russian Civil, Franco-Prussian, Winter, Texas Revolution, Cod, Spanish Succession, Irish Independence, Nigerian Civil, Greco-Persian|Persian, Gallic, Anglo-Zulu|Zulu
+85: Football|Soccer, Jenkins' Ear, Pastry, Pig, Bucket, Kalmar, Anglo-Zanzibar, Whiskey Rebellion, Toledo, Aroostook, Honey, Chaco, Thousand Days, Paraguayan, Taiping Rebellion, Boxer Rebellion, Peasants', Hussite, Scottish Independence, Seminole, Sino-Japanese, Balkan
+100: Emu :: In 1932 the Australian military went after emus with machine guns. The emus won.
+
+? Name an ancient civilization
+~drop ancient,the,civilization
+10: Egyptians|Egypt|Egyptian, Romans|Rome|Roman, Greeks|Greece|Greek, Aztecs|Aztec, Mayans|Maya|Mayan
+15: Atlantis
+30: Incas|Inca, Persians|Persia|Persian, Mesopotamia|Mesopotamian, Babylonians|Babylon|Babylonian, Sumerians|Sumer|Sumerian, Phoenicians|Phoenicia, Assyrians|Assyria, China|Chinese|Han dynasty, Indus Valley, Olmecs|Olmec, Carthage|Carthaginians, Celts, Hittites, Spartans|Sparta, Etruscans, Vikings
+60: Minoans|Minoan, Mycenaeans|Mycenae, Akkadians|Akkad, Nubians|Nubia|Kush, Khmer, Harappan, Zapotec, Toltec, Moche, Nazca|Nasca, Scythians, Parthians, Hebrews, Aksum|Axum, Anasazi|Ancestral Puebloans, Mississippian, Shang dynasty|Shang, Zhou dynasty|Zhou, Qin dynasty|Qin, Elamites, Gauls
+85: Hurrians, Urartu, Lydians, Kassites, Chaldeans, Medes, Nabataeans, Sabaeans|Sheba, Dilmun, Mixtec, Chavín|Chavin, Wari, Tiwanaku, Chimú|Chimu, Caral, Norte Chico, Jomon, Kushan, Maurya, Gupta, Thracians, Dacians, Illyrians, Philistines, Garamantes, Hyksos, Ebla, Mitanni, Amorites, Hopewell, Cahokia, Teotihuacan
+100: Sea Peoples :: Mysterious raiders who helped wreck Bronze Age empires around 1200 BC. Nobody knows who they were.
+
+? Name a king or queen from history
+~drop king,queen
+10: Elizabeth I|Queen Elizabeth|Elizabeth|Elizabeth II, Henry VIII|Henry the Eighth, Cleopatra, Marie Antoinette, George III|King George, Victoria
+15: Arthur, Elvis|Elvis Presley
+30: Tutankhamun|King Tut|Tut, Louis XIV|Sun King|Louis the Fourteenth, Charlemagne, Alexander the Great, William the Conqueror, Richard the Lionheart|Richard I, Mary Queen of Scots, Mary I|Bloody Mary, Catherine the Great, Nefertiti, Charles III|Charles, Ramses II|Ramses|Ramesses, Solomon, David, Herod, Louis XVI, Hatshepsut, Isabella, Ferdinand, Peter the Great, James I|James, Anne Boleyn
+60: Alfred the Great, Eleanor of Aquitaine, Boudicca, Frederick the Great, Genghis Khan, Kublai Khan, Nicholas II, Philip II, Richard III, Edward VIII, John, Charles I, Henry V, Anne, Liliuokalani, Kamehameha, Moctezuma|Montezuma, Ivan the Terrible, Haile Selassie, Akhenaten, Cyrus the Great, Xerxes, Darius, Leonidas, Hammurabi, Nebuchadnezzar, Macbeth, Canute|Cnut, Wenceslas, Shaka|Shaka Zulu, Ashoka
+85: Æthelred the Unready|Aethelred, Wu Zetian|Empress Wu, Zenobia, Seondeok, Njinga, Ranavalona, Tamar of Georgia, Christina of Sweden, Gustavus Adolphus, Harald Hardrada, Pepin the Short, Charles the Bald, Louis the Pious, Ludwig II, Lady Jane Grey, Sejong, Thutmose, Khufu, Piye, Theodora, Ahmose, Menelik II, Olaf, Brian Boru, Llywelyn, Robert the Bruce, Kenneth MacAlpin, Puyi, Cixi|Empress Dowager Cixi
+100: Mansa Musa :: Maybe the richest person in history. His 1324 pilgrimage handed out so much gold it crashed Cairo's market.
+
+? Name a Founding Father
+~last
+10: George Washington, Thomas Jefferson, Benjamin Franklin|Ben Franklin, Alexander Hamilton, John Adams
+15: Aaron Burr
+30: James Madison, John Hancock, Samuel Adams|Sam Adams, Patrick Henry, Paul Revere, John Jay, James Monroe, Thomas Paine|Tom Paine
+60: Gouverneur Morris, Roger Sherman, Robert Morris, George Mason, Benjamin Rush, Richard Henry Lee, Charles Carroll, John Marshall, Marquis de Lafayette|Lafayette, Abigail Adams, Elbridge Gerry, John Dickinson, Caesar Rodney, George Wythe, Rufus King
+85: Francis Hopkinson, Stephen Hopkins, Lyman Hall, George Walton, Thomas McKean, George Read, William Paca, Samuel Chase, Thomas Stone, Carter Braxton, Thomas Nelson Jr.|Thomas Nelson, Benjamin Harrison V|Benjamin Harrison, Francis Lightfoot Lee, Thomas Heyward, Edward Rutledge, Arthur Middleton, Thomas Lynch, William Hooper, Joseph Hewes, John Penn, John Witherspoon, Francis Lewis, Philip Livingston, Lewis Morris, William Floyd, Josiah Bartlett, William Whipple, Matthew Thornton, Oliver Wolcott, Samuel Huntington, William Williams, Robert Treat Paine, Charles Pinckney, William Paterson, Jonathan Dayton, James Wilson, Haym Salomon
+100: Button Gwinnett :: He died in a duel within a year of signing. His signature is now among the most valuable in America.
+
+? Name a US First Lady
+~last
+10: Michelle Obama, Jackie Kennedy|Jacqueline Kennedy|Jackie O, Hillary Clinton, Eleanor Roosevelt, Melania Trump, Jill Biden
+15: Martha Washington, Abigail Adams
+30: Nancy Reagan, Barbara Bush, Laura Bush, Dolley Madison, Mary Todd Lincoln, Lady Bird Johnson, Betty Ford, Rosalynn Carter, Mamie Eisenhower, Pat Nixon
+60: Bess Truman, Lou Henry Hoover, Grace Coolidge, Edith Roosevelt, Edith Wilson, Florence Harding, Julia Grant, Helen Taft, Ida McKinley, Frances Cleveland, Louisa Adams, Elizabeth Monroe, Sarah Polk
+85: Rachel Jackson, Hannah Van Buren, Anna Harrison, Letitia Tyler, Julia Tyler, Margaret Taylor, Abigail Fillmore, Jane Pierce, Eliza Johnson, Lucy Hayes|Lemonade Lucy, Lucretia Garfield, Ellen Arthur, Caroline Harrison, Ellen Wilson, Martha Jefferson
+100: Harriet Lane :: President Buchanan never married, so his niece stepped in as First Lady.
+
+? Name a philosopher
+~last
+10: Socrates, Plato, Aristotle, Confucius, Friedrich Nietzsche
+15: René Descartes|Rene Descartes
+30: Immanuel Kant, Karl Marx, John Locke, Thomas Hobbes, Jean-Paul Sartre, Lao Tzu|Laozi, Sun Tzu, Marcus Aurelius, Epicurus, Seneca, Voltaire, Jean-Jacques Rousseau, Niccolò Machiavelli|Niccolo Machiavelli, Pythagoras, Buddha, Ayn Rand, Simone de Beauvoir|De Beauvoir, David Hume, John Stuart Mill, Thomas Aquinas, Albert Camus, Søren Kierkegaard|Soren Kierkegaard
+60: Zeno, Epictetus, Heraclitus, Thales, Georg Hegel|Hegel, Arthur Schopenhauer, Ludwig Wittgenstein, Baruch Spinoza, Francis Bacon, Bertrand Russell, Michel Foucault, Martin Heidegger, Augustine|St. Augustine, Mencius, Zhuangzi, Hannah Arendt, Noam Chomsky, Slavoj Žižek|Slavoj Zizek, Jacques Derrida, Jeremy Bentham, Edmund Burke, Henry David Thoreau, Ralph Waldo Emerson, Gottfried Leibniz, Blaise Pascal, Michel de Montaigne, Parmenides, Democritus, Alan Watts, Averroes|Ibn Rushd, Avicenna|Ibn Sina
+85: Anaximander, Empedocles, Protagoras, Plotinus, Boethius, Hypatia, William of Ockham|Occam, Duns Scotus, George Berkeley, Thomas Reid, Johann Fichte, Friedrich Schelling, Edmund Husserl, Maurice Merleau-Ponty, Karl Popper, Thomas Kuhn, W.V.O. Quine|Quine, John Rawls, Robert Nozick, Peter Singer, Derek Parfit, Judith Butler, Mary Wollstonecraft, Zhu Xi, Mozi, Nagarjuna, Shankara, Al-Ghazali, Maimonides, Hildegard of Bingen, Anselm, William James, John Dewey, Charles Peirce, Antisthenes, Pyrrho
+100: Diogenes :: He lived in a large jar and reportedly told Alexander the Great to get out of his sunlight.
+
+? Name a pirate, real or fictional
+~drop captain,the
+10: Blackbeard, Hook|Captain Hook, Jack Sparrow, Kidd|William Kidd
+15: Long John Silver, Dread Pirate Roberts
+30: Henry Morgan|Morgan, Anne Bonny, Mary Read, Calico Jack|Jack Rackham, Barbossa|Hector Barbossa|Barbarossa, Bartholomew Roberts|Black Bart, Jean Lafitte, Davy Jones, Francis Drake, Monkey D. Luffy|Luffy, One-Eyed Willy
+60: Henry Every|Long Ben, Charles Vane, Benjamin Hornigold, Edward Low, Ching Shih|Zheng Yi Sao, Grace O'Malley, Walter Raleigh, Thomas Tew, Sam Bellamy|Black Sam Bellamy, Flint, Will Turner, Elizabeth Swann, Smee, Guybrush Threepwood, Redbeard, Haddock, Roronoa Zoro|Zoro, Nami, Pugwash, Olivier Levasseur, William Dampier, Patchy
+85: François l'Olonnais|L'Olonnais, Black Caesar, Rachel Wall, Jacquotte Delahaye, Sayyida al-Hurra, Anne Dieu-le-Veut, Israel Hands, Howell Davis, Thomas Cavendish, Peter Easton, Jan Janszoon, Piet Hein, Klaus Störtebeker, Koxinga|Zheng Zhilong, Dragut, Roche Braziliano, Ned England, Henry Jennings, Samuel Burgess
+100: Stede Bonnet :: A rich plantation owner with no sailing experience who simply bought a ship and became "the gentleman pirate."
+
+? Name a figure from the Wild West
+~last
+10: Billy the Kid, Wyatt Earp, Jesse James, Buffalo Bill|Buffalo Bill Cody|William Cody, Annie Oakley, Wild Bill Hickok|Wild Bill
+15: John Wayne, Clint Eastwood
+30: Doc Holliday, Butch Cassidy, Sundance Kid|The Sundance Kid, Calamity Jane, Davy Crockett, Geronimo, Sitting Bull, Crazy Horse, George Custer|General Custer, Pat Garrett, Bat Masterson, Belle Starr, Kit Carson, Daniel Boone
+60: Black Bart, Cole Younger, John Wesley Hardin, Sam Bass, Judge Roy Bean|Roy Bean, Pearl Hart, Tom Horn, Chief Joseph, Red Cloud, Cochise, Ike Clanton, Johnny Ringo, Stagecoach Mary|Mary Fields, Levi Strauss, Pawnee Bill, Kid Curry|Harvey Logan, Etta Place, Charles Goodnight, Emmett Dalton, Virgil Earp, Morgan Earp, Seth Bullock, Al Swearengen
+85: Cattle Annie, Little Britches, Rose Dunn, Laura Bullion, Elfego Baca, Commodore Perry Owens, Heck Thomas, Bill Tilghman, Chris Madsen, Nat Love|Deadwood Dick, Bill Pickett, Black Jack Ketchum|Tom Ketchum, Clay Allison, Ben Thompson, Luke Short, Dallas Stoudenmire, Temple Houston, Isaac Parker|Hanging Judge, Cattle Kate|Ella Watson, Liver-Eating Johnson|Jeremiah Johnson, Washakie
+100: Bass Reeves :: Born enslaved, he became one of the first Black deputy US marshals. He may have inspired the Lone Ranger.
+
+? Name a Nobel Peace Prize winner
+~last
+10: Barack Obama, Martin Luther King Jr.|MLK|Martin Luther King, Nelson Mandela, Mother Teresa, Malala Yousafzai|Malala
+15: Al Gore
+30: Jimmy Carter, Dalai Lama|The Dalai Lama, Desmond Tutu, Mikhail Gorbachev, Theodore Roosevelt|Teddy Roosevelt, Woodrow Wilson, Henry Kissinger, Aung San Suu Kyi, Kofi Annan, Albert Schweitzer, Elie Wiesel, United Nations|UN, Red Cross
+60: Yasser Arafat, Shimon Peres, Yitzhak Rabin, F.W. de Klerk|De Klerk, Lech Wałęsa|Lech Walesa, Anwar Sadat, Menachem Begin, Wangari Maathai, Muhammad Yunus, Liu Xiaobo, Juan Manuel Santos, Abiy Ahmed, Doctors Without Borders|Médecins Sans Frontières|MSF, World Food Programme, Rigoberta Menchú|Rigoberta Menchu, George Marshall, Willy Brandt, Ellen Johnson Sirleaf, Leymah Gbowee, Tawakkol Karman, Shirin Ebadi, John Hume, David Trimble, European Union|EU, Amnesty International, Narges Mohammadi, Maria Ressa, Dmitry Muratov, Kailash Satyarthi, Nadia Murad, Denis Mukwege
+85: Jane Addams, Emily Balch, Cordell Hull, Linus Pauling, Ralph Bunche, Lester Pearson, Dag Hammarskjöld|Dag Hammarskjold, René Cassin|Rene Cassin, Norman Borlaug, Andrei Sakharov, Seán MacBride|Sean MacBride, Betty Williams, Mairead Corrigan, Alfonso García Robles, Alva Myrdal, Óscar Arias|Oscar Arias, Jody Williams, José Ramos-Horta|Jose Ramos-Horta, Carlos Belo, Bertha von Suttner, Aristide Briand, Frank Kellogg, Elihu Root, Henri Dunant, Frédéric Passy|Frederic Passy, Albert Lutuli|Albert Luthuli, Mohamed ElBaradei, Martti Ahtisaari, OPCW, Ales Bialiatski, Memorial, Nihon Hidankyo, ICAN, Pugwash
+100: Lê Đức Thọ|Le Duc Tho :: The only person ever to turn down the Nobel Peace Prize, in 1973.
+
+? Name a civil rights leader or activist
+~last
+10: Martin Luther King Jr.|MLK|Martin Luther King, Rosa Parks, Malcolm X, Harriet Tubman, Mahatma Gandhi
+15: Nelson Mandela, Greta Thunberg
+30: Frederick Douglass, Susan B. Anthony, Cesar Chavez, Sojourner Truth, John Lewis, Medgar Evers, W.E.B. Du Bois|Du Bois, Booker T. Washington, Gloria Steinem, Harvey Milk, Ruby Bridges, Elizabeth Cady Stanton, Angela Davis, Emmeline Pankhurst, Jesse Jackson, Thurgood Marshall, Ida B. Wells, Al Sharpton, Malala Yousafzai|Malala, Erin Brockovich, Ralph Nader
+60: Fannie Lou Hamer, Stokely Carmichael, Huey Newton, Bobby Seale, Bayard Rustin, Dorothy Height, Ella Baker, Coretta Scott King, Dolores Huerta, Lucretia Mott, Alice Paul, Betty Friedan, Marsha P. Johnson, Sylvia Rivera, Steve Biko, Desmond Tutu, Emma Goldman, William Lloyd Garrison, Nat Turner, John Brown, James Farmer, A. Philip Randolph, Ralph Abernathy, Joan Baez, Jane Addams, Ruth Bader Ginsburg, Russell Means, Wilma Mankiller, Yuri Kochiyama, Mother Jones, Dorothy Day
+85: Diane Nash, Septima Clark, Whitney Young, Roy Wilkins, Fred Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo, Constance Baker Motley, Pauli Murray, Mary Church Terrell, Carrie Chapman Catt, Inez Milholland, Lucy Stone, Vine Deloria Jr.|Vine Deloria, Dennis Banks, Larry Itliong, Philip Vera Cruz, Fred Korematsu, Mary McLeod Bethune, Barbara Gittings, Frank Kameny, Mamie Till-Mobley|Mamie Till, E.D. Nixon, Homer Plessy, Thich Nhat Hanh, Bella Abzug, Shirley Chisholm
+100: Claudette Colvin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.
+
+? Name a famous battle
+~drop battle,of,the
+10: Gettysburg, Waterloo, D-Day|Normandy, Pearl Harbor, Bunker Hill
+15: Helm's Deep, Hoth
+30: Hastings, Alamo, Bulge, Midway, Stalingrad, Little Bighorn|Little Big Horn, Thermopylae, Antietam, Yorktown, Iwo Jima, Lexington|Lexington and Concord, Agincourt, Trafalgar, Bull Run|Manassas, Verdun, Somme, Britain, Saratoga, Marathon, Okinawa, New Orleans, Fort Sumter, Dunkirk, Guadalcanal, Gallipoli, Shiloh
+60: Vicksburg, Fredericksburg, Chancellorsville, Appomattox, Trenton, Cannae, Actium, Salamis, Bosworth|Bosworth Field, Tours, Austerlitz, Balaclava, Ypres, Khe Sanh, Dien Bien Phu, Hamburger Hill, Inchon, Chosin Reservoir|Chosin, Leyte Gulf, Coral Sea, El Alamein, Kursk, Berlin, Monte Cassino, Tannenberg, Jutland, Passchendaele, Culloden, Bannockburn, Stirling Bridge, Isandlwana, Rorke's Drift, Zama, Gaugamela, Issus, Lepanto, Vienna, Sekigahara, Plassey, Wounded Knee, Mogadishu, San Juan Hill, Fallujah, Tora Bora, Chickamauga, Cowpens, Fort McHenry, Lake Erie, Tippecanoe
+85: Teutoburg Forest, Carrhae, Adrianople, Hattin, Crécy|Crecy, Poitiers, Tsushima, Leuctra, Pharsalus, Philippi, Alesia, Stamford Bridge, Towton, Naseby, Blenheim, Poltava, Sedan, Mukden, Cambrai, Caporetto, Arnhem, Anzio, Imphal, Kohima, Hürtgen Forest|Hurtgen Forest, Ia Drang, Pork Chop Hill, Talavera, Borodino, Leipzig, Jena, Marengo, Nile, Copenhagen, Cape St. Vincent, Manzikert, Kadesh, Megiddo, Ain Jalut, Talas, Red Cliffs, Fei River, Kalinga, Panipat, Little Round Top
+100: Karánsebes|Karansebes :: The Austrian army reportedly attacked itself by mistake in 1788, though historians doubt the story.
+
+? Name a famous ship
+~drop hms,rms,uss,ss,css,the,ship
+10: Titanic, Mayflower, Santa Maria, Noah's Ark|Ark
+15: Black Pearl, Flying Dutchman, Minnow
+30: Lusitania, Bismarck, Arizona, Queen Mary, Niña|Nina, Pinta, Beagle, Edmund Fitzgerald, Constitution|Old Ironsides, Queen Elizabeth 2|QE2, Exxon Valdez, Poseidon, Mary Rose, Yamato, Enterprise, Andrea Doria, Britannic, Monitor, Merrimack|Virginia, Maine, Endurance, Cutty Sark
+60: Bounty, Victory, Golden Hind, Pequod, Nautilus, Calypso, Mary Celeste, Hispaniola, Argo, Carpathia, Californian, Olympic, Vasa, Amistad, Missouri, Indianapolis, Graf Spee, Tirpitz, General Belgrano, Queen Anne's Revenge, Rainbow Warrior, Costa Concordia, Ever Given, Dawn Treader, Orca, Kon-Tiki, Mauretania, Hood, H.L. Hunley|Hunley, Whydah, Nimitz, Akagi, Sea Shepherd
+85: Erebus, Terror, Fram, Discovery, Nimrod, Terra Nova, Belgica, Aurora, Resolute, Cospatrick, Dunbar, Arbella, Speedwell, Susan Constant, Godspeed, Clotilda, Flor de la Mar, Nuestra Señora de Atocha|Atocha, Batavia, Medusa|Méduse, Zong, Empress of Ireland, Sultana, Eastland, Vestris, Wilhelm Gustloff, Doña Paz, Sewol, Great Eastern, Savannah, Turtle, Thresher, Scorpion, Kursk, Liberty, Pueblo, Mayaguez, Cole, Bluenose, America, Intrepid
+100: Essex :: A sperm whale rammed and sank this whaleship in 1820, which inspired Moby-Dick.

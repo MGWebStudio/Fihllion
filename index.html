@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7cd0ee">
+<title>Fihllion | A daily deep-sea trivia dive</title>
+<meta name="description" content="Name things nobody else would. Seven prompts a day, 25 seconds each, and the rarer your answer, the deeper your goldfish sinks.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fihllion">
+<meta property="og:description" content="Seven prompts a day. The rarer your answer, the deeper your goldfish sinks.">
+<meta property="og:image" content="https://mgwebstudio.github.io/Fihllion/assets/og.png">
+<meta property="og:url" content="https://mgwebstudio.github.io/Fihllion/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="loading">
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+
+<div id="app">
+  <button id="btnMenu" class="icon-btn" type="button" aria-label="Open menu">
+    <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 2h10v2H1zM1 5h10v2H1zM1 8h10v2H1z"/></svg>
+  </button>
+  <button id="btnSound" class="icon-btn" type="button" aria-label="Sound" aria-pressed="true">
+    <svg class="sound-on" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h2v4H1zM3 4h1V3h1V2h1v8H5V9H4V8H3zM8 4h1v4H8zM10 3h1v6h-1z"/></svg>
+    <svg class="sound-off" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h2v4H1zM3 4h1V3h1V2h1v8H5V9H4V8H3zM8 4h1v1h1V4h1v1h-1v1h1v2h-1V7H9v1H8V7h1V6H8z"/></svg>
+  </button>
+
+  <div id="hud" hidden>
+    <div class="meter">
+      <span class="label">Depth</span>
+      <span id="hudDepth" class="meter-value">0 m</span>
+    </div>
+    <div class="pips-wrap">
+      <div id="pips" class="pips" aria-hidden="true"></div>
+    </div>
+    <div class="meter meter-score">
+      <span class="label">Score</span>
+      <span id="hudScore" class="meter-value">0</span>
+    </div>
+  </div>
+
+  <p id="bootMessage" class="boot-message" role="status">Filling the bowl…</p>
+
+  <section id="title" class="screen" hidden>
+    <div class="title-sky">
+      <h1 class="logo-wrap"><canvas id="logo" role="img" aria-label="Fihllion"></canvas></h1>
+      <p class="tagline">Seven prompts. Twenty-five seconds each.<br>Say what nobody else would.</p>
+    </div>
+    <div class="title-sea">
+      <button id="btnBegin" class="btn btn-primary btn-big" type="button">Dive in <span aria-hidden="true">▼</span></button>
+      <p id="diveLabel" class="label dive-label"></p>
+      <nav class="title-links" aria-label="More ways to play">
+        <button id="btnHow" class="btn btn-quiet" type="button">How to play</button>
+        <button id="btnEndless" class="btn btn-quiet" type="button">Endless</button>
+        <button id="btnArchive" class="btn btn-quiet" type="button">Archive</button>
+        <button id="btnStats" class="btn btn-quiet" type="button">My stats</button>
+      </nav>
+      <p class="credit">Inspired by <a href="https://krillion.io" target="_blank" rel="noopener">Krillion</a></p>
+    </div>
+  </section>
+
+  <section id="play" class="screen" hidden>
+    <div id="promptCard" class="panel">
+      <p id="promptNum" class="label label-accent">Prompt 1 of 7</p>
+      <h2 id="promptText" aria-live="polite"></h2>
+      <p class="prompt-hint">Rare answers pull you down.</p>
+    </div>
+    <div id="dock">
+      <p id="feedback" role="status" aria-live="polite"></p>
+      <form id="answerForm" autocomplete="off" novalidate>
+        <div id="clock" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle class="clock-track" cx="24" cy="24" r="20"/><circle id="clockRing" class="clock-ring" cx="24" cy="24" r="20"/></svg>
+          <span id="clockNum">25</span>
+        </div>
+        <label class="sr-only" for="answer">Your answer</label>
+        <input id="answer" type="text" name="fihllion-answer" placeholder="Type one answer" maxlength="60"
+          autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" data-1p-ignore data-lpignore="true">
+        <button id="btnDrop" class="btn btn-primary" type="submit">Drop</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="reveal" class="screen" hidden>
+    <div id="revealCard" class="panel" role="status">
+      <canvas id="revealIcon" class="pixel" width="9" height="9" aria-hidden="true"></canvas>
+      <h2 id="revealTier"></h2>
+      <p id="revealAnswer"></p>
+      <p id="revealPts" class="label"></p>
+      <p id="revealLine"></p>
+    </div>
+    <button id="btnNext" class="btn btn-primary btn-big" type="button">Keep sinking <span aria-hidden="true">▼</span></button>
+  </section>
+
+  <section id="results" class="screen" hidden tabindex="-1"></section>
+</div>
+
+<dialog id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-head">
+    <h2 id="sheetTitle"></h2>
+    <button id="sheetClose" class="btn btn-quiet" type="button">Close</button>
+  </div>
+  <div id="sheetBody"></div>
+</dialog>
+
+<noscript><p class="boot-message">Fihllion needs JavaScript to run.</p></noscript>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

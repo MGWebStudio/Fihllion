@@ -1,0 +1,129 @@
+? Name a chemical element
+10: Oxygen, Hydrogen, Carbon, Gold, Iron, Helium
+15: Plutonium, Uranium
+30: Nitrogen, Silver, Copper, Sodium, Calcium, Neon, Lead, Aluminum|Aluminium, Mercury, Zinc, Nickel, Tin, Titanium, Platinum, Potassium, Silicon, Chlorine, Sulfur|Sulphur, Magnesium, Lithium, Argon, Fluorine, Iodine, Radium, Cobalt
+60: Boron, Beryllium, Phosphorus, Chromium, Manganese, Krypton, Xenon, Radon, Tungsten, Bromine, Barium, Arsenic, Cesium|Caesium, Palladium, Cadmium, Antimony, Bismuth, Polonium, Einsteinium, Curium, Californium, Americium, Germanium, Selenium, Strontium, Vanadium, Iridium, Neptunium
+85: Scandium, Rubidium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Indium, Tellurium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Rhenium, Osmium, Thallium, Astatine, Francium, Actinium, Thorium, Protactinium, Berkelium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson
+100: Gallium :: A metal that melts in your hand. A spoon made of it dissolves in hot tea.
+
+? Name a bone in the human body
+~drop bone,bones
+10: Femur, Skull, Rib, Spine, Humerus|Funny
+15: Stapes|Stirrup
+30: Tibia, Fibula, Clavicle|Collarbone|Collar, Patella|Kneecap, Radius, Ulna, Pelvis|Hip, Sternum|Breastbone, Jaw|Mandible|Jawbone, Vertebra|Vertebrae, Scapula|Shoulder blade, Cranium, Sacrum, Coccyx|Tailbone|Tail, Ankle, Toe, Finger|Phalanges|Phalanx
+60: Metacarpal, Metatarsal, Tarsal, Carpal, Maxilla, Talus, Calcaneus|Heel, Atlas, Axis, Incus|Anvil, Malleus|Hammer, Ilium, Ischium, Pubis, Temporal, Occipital, Parietal, Frontal, Zygomatic|Cheekbone|Cheek
+85: Scaphoid, Lunate, Triquetral|Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate, Navicular, Cuboid, Cuneiform, Sphenoid, Ethmoid, Vomer, Lacrimal, Nasal, Palatine, Sesamoid
+100: Hyoid :: The one bone in your body that doesn't touch another bone. It sits in your throat.
+
+? Name a planet or moon
+~drop planet,moon,the
+10: Earth, Mars, Jupiter, Saturn, Venus, Mercury, Neptune, Uranus, Luna
+15: Pluto, Tatooine, Krypton
+30: Titan, Europa, Io, Ganymede, Callisto, Enceladus, Phobos, Deimos, Charon, Triton
+60: Miranda, Titania, Oberon, Ariel, Umbriel, Ceres, Eris, Haumea, Makemake, Rhea, Dione, Tethys, Iapetus, Hyperion, Proteus, Nereid, Phoebe, Sedna
+85: Amalthea, Himalia, Metis, Adrastea, Thebe, Puck, Cordelia, Ophelia, Pan, Atlas, Prometheus, Pandora, Janus, Epimetheus, Helene, Calypso, Telesto, Larissa, Despina, Galatea, Thalassa, Naiad, Hydra, Nix, Kerberos, Styx, Dysnomia, Gonggong, Quaoar, Orcus, Salacia, Belinda, Bianca, Cressida, Desdemona, Juliet, Portia, Rosalind, Sycorax, Caliban, Prospero, Setebos, Arrokoth, Kepler-22b, Proxima b, TRAPPIST-1e
+100: Mimas :: A giant crater makes this moon of Saturn look exactly like the Death Star.
+
+? Name a constellation
+10: Orion, Big Dipper, Ursa Major, Little Dipper, Ursa Minor
+15: Southern Cross|Crux
+30: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpius|Scorpio, Sagittarius, Capricornus|Capricorn, Aquarius, Pisces, Cassiopeia, Andromeda, Perseus, Pegasus, Hercules, Cygnus, Draco, Lyra
+60: Aquila, Boötes|Bootes, Canis Major, Canis Minor, Auriga, Cepheus, Corona Borealis, Delphinus, Hydra, Lupus, Ophiuchus, Phoenix, Centaurus, Cetus, Eridanus, Corvus, Crater, Lepus, Serpens
+85: Antlia, Apus, Ara, Caelum, Camelopardalis, Canes Venatici, Carina, Chamaeleon, Circinus, Columba, Coma Berenices, Corona Australis, Dorado, Equuleus, Fornax, Grus, Horologium, Hydrus, Indus, Lacerta, Leo Minor, Lynx, Mensa, Microscopium, Monoceros, Musca, Norma, Octans, Pavo, Pictor, Puppis, Pyxis, Reticulum, Sagitta, Sculptor, Scutum, Sextans, Telescopium, Triangulum, Triangulum Australe, Tucana, Vela, Volans, Vulpecula
+100: Piscis Austrinus :: The Southern Fish. The goldfish has been telling everyone it's named after them.
+
+? Name an organ in the human body
+~drop the
+10: Heart, Brain, Lung, Liver, Stomach, Kidney
+15: Skin, Appendix
+30: Pancreas, Spleen, Intestine|Small intestine|Large intestine|Bowel, Gallbladder, Bladder, Esophagus, Colon, Uterus|Womb, Trachea|Windpipe, Thyroid, Tongue, Eye, Ovary, Prostate
+60: Larynx|Voice box, Pharynx, Duodenum, Thymus, Adrenal gland|Adrenal, Pituitary gland|Pituitary, Diaphragm, Rectum, Testes|Testicle, Placenta, Cerebellum, Hypothalamus, Pineal gland|Pineal, Parathyroid, Salivary gland, Lymph node, Tonsil, Cochlea
+85: Jejunum, Ileum, Cecum|Caecum, Fallopian tube, Urethra, Ureter, Epiglottis, Hippocampus, Amygdala, Medulla, Pons, Bone marrow|Marrow, Vas deferens, Interstitium, Vomeronasal organ, Bile duct, Omentum, Seminal vesicle
+100: Mesentery :: You've always had one, but doctors only argued it should count as an organ in the 2010s.
+
+? Name a unit of measurement
+~drop unit
+10: Inch, Foot|Feet, Mile, Meter|Metre, Pound, Gallon, Kilometer|Kilometre
+15: Furlong, Light-year|Lightyear
+30: Yard, Centimeter|Centimetre, Millimeter|Millimetre, Ounce, Liter|Litre, Cup, Pint, Quart, Gram, Kilogram|Kilo, Ton, Tablespoon, Teaspoon, Acre, Degree, Second, Minute, Hour, Watt, Volt, Amp|Ampere, Hertz, Calorie, Byte, Horsepower, Miles per hour|MPH, Decibel, Stone, Bushel, Hectare, Knot, Fathom
+60: Newton, Joule, Pascal, Kelvin, Celsius, Fahrenheit, Ohm, Mole, Candela, Lumen, Parsec, Nautical mile, League, Carat|Karat, Peck, Gill, Cubit, Dram, Hand, Chain, Rod, Micron, Nanometer, Angstrom, Astronomical unit|AU, Tesla, Coulomb, Farad, Bar, Barrel, Cord, Troy ounce, Kilowatt, Megabyte, Gigabyte, BTU|British thermal unit, Scoville, Richter
+85: Sievert, Becquerel, Henry, Weber, Siemens, Lux, Gray, Rad, Rem, Erg, Dyne, Slug, Poise, Stokes, Gauss, Oersted, Mach, Firkin, Hogshead, Tun, Minim, Scruple, Pennyweight, Grain, Perch, Ell, Span, Pica, Point, Em, Jigger, Dash, Pinch, Barn, Shake, Jiffy, Sverdrup, Beaufort, Fortnight, Tog, Dol, Sone
+100: Smoot :: In 1958, MIT students measured a bridge using a classmate's body. It's 364.4 smoots long.
+
+? Name a famous scientist
+~last
+10: Albert Einstein, Isaac Newton, Marie Curie, Charles Darwin, Stephen Hawking, Galileo Galilei|Galileo
+15: Nikola Tesla, Bill Nye
+30: Thomas Edison, Louis Pasteur, Neil deGrasse Tyson, Carl Sagan, Gregor Mendel, Rosalind Franklin, Nicolaus Copernicus|Copernicus, Aristotle, Archimedes, Benjamin Franklin, J. Robert Oppenheimer|Robert Oppenheimer, Jane Goodall, Alexander Fleming, Michael Faraday, Johannes Kepler, Niels Bohr, Alan Turing, Edwin Hubble, Dmitri Mendeleev, Max Planck, Erwin Schrödinger|Erwin Schrodinger|Schrodinger, Francis Crick, James Watson
+60: Richard Feynman, Robert Hooke, Ernest Rutherford, Enrico Fermi, Werner Heisenberg, Antoine Lavoisier, James Clerk Maxwell, Tycho Brahe, Louis Leakey, Edward Jenner, Jonas Salk, Rachel Carson, George Washington Carver, Alfred Nobel, Carl Linnaeus, Robert Boyle, Joseph Priestley, Lise Meitner, Ada Lovelace, Alessandro Volta, André-Marie Ampère|Andre Ampere|Ampere, Georg Ohm, Katherine Johnson, Dorothy Hodgkin, Barbara McClintock, Linus Pauling, Hans Geiger, Gottfried Leibniz, Blaise Pascal, Leonardo da Vinci|Da Vinci, Anders Celsius, Daniel Fahrenheit, Ibn al-Haytham
+85: Jocelyn Bell Burnell, Emmy Noether, Chien-Shiung Wu, Vera Rubin, Henrietta Leavitt, Cecilia Payne, Dian Fossey, Alfred Wegener, Paul Dirac, Wolfgang Pauli, Subrahmanyan Chandrasekhar, Srinivasa Ramanujan, Antonie van Leeuwenhoek|Leeuwenhoek, Alfred Russel Wallace, Mary Anning, William Harvey, Humphry Davy, Ignaz Semmelweis, Robert Koch, Joseph Lister, Nettie Stevens, Tu Youyou, Marie Tharp, Caroline Herschel, William Herschel, Rudolf Virchow, Fritz Haber, Hermann von Helmholtz|Helmholtz, Ludwig Boltzmann, Heinrich Hertz, Guglielmo Marconi, James Chadwick, J.J. Thomson, Luis Alvarez, Erasmus Darwin, Eratosthenes, Hippocrates
+100: Hedy Lamarr :: The Hollywood star co-invented a frequency-hopping system that helped pave the way for Wi-Fi.
+
+? Name a kind of weather
+~drop weather
+10: Rain|Rainy, Snow|Snowy, Sunny|Sunshine|Sun, Wind|Windy, Hurricane, Tornado, Thunderstorm|Storm, Fog|Foggy, Cloudy|Clouds, Hail
+15: Sharknado, Monsoon
+30: Sleet, Blizzard, Lightning, Thunder, Drizzle, Mist, Typhoon, Cyclone, Flood, Heat wave, Drought, Frost, Ice storm, Breeze, Overcast, Humid|Humidity, Dust storm, Rainbow, Freezing rain, Snowstorm
+60: Derecho, Haboob, Nor'easter, El Niño|El Nino, La Niña|La Nina, Polar vortex, Whiteout, Graupel, Squall, Gale, Waterspout, Dust devil, Heat lightning, Smog, Haze, Flurries, Virga, Bomb cyclone, Microburst, Black ice, Dew, Thundersnow, Sandstorm, Hoarfrost, Cold snap, Indian summer, Chinook, Santa Ana winds|Santa Ana, Atmospheric river|Pineapple Express, Mistral, Sirocco, Zephyr
+85: Foehn|Föhn, Bora, Harmattan, Khamsin, Simoom, Levanter, Meltemi, Williwaw, Diamond dust, Ball lightning, Sun shower|Sunshower, Sun dog|Sundog, Fire whirl|Firenado, Steam devil, Pogonip, Rime, Mammatus, Lake-effect snow|Lake effect, Scud, Supercell, Mesocyclone, Downburst, Wall cloud, Arcus, Noctilucent clouds, Gustnado, Landspout, Tule fog, Morning glory cloud, Sprite, St. Elmo's fire, Ice pellets, Mackerel sky
+100: Snow roller :: Wind can roll snow into hollow logs, as if invisible kids were building snowmen.
+
+? Name a rock or mineral
+~drop rock,stone
+10: Granite, Diamond, Quartz, Marble, Limestone
+15: Obsidian, Kryptonite
+30: Sandstone, Slate, Basalt, Shale, Coal, Salt|Halite, Flint, Pumice, Talc, Gypsum, Mica, Feldspar, Amethyst, Jade, Hematite, Graphite, Turquoise, Opal, Geode, Chalk, Pyrite|Fool's gold, Schist
+60: Malachite, Calcite, Fluorite, Azurite, Galena, Magnetite, Bauxite, Olivine, Dolomite, Travertine, Soapstone, Onyx, Agate, Tourmaline, Topaz, Garnet, Jasper, Serpentine, Rhyolite, Andesite, Conglomerate, Lodestone, Quartzite, Tuff, Peridot, Corundum, Cinnabar
+85: Kimberlite, Peridotite, Gabbro, Diorite, Breccia, Phyllite, Migmatite, Eclogite, Komatiite, Dacite, Anthracite, Sphalerite, Chalcopyrite, Cassiterite, Barite, Apatite, Beryl, Zircon, Hornblende, Augite, Kaolinite, Orthoclase, Plagioclase, Muscovite, Biotite, Stibnite, Realgar, Orpiment, Rhodochrosite, Labradorite, Lapis lazuli, Selenite, Sodalite, Coquina, Marl, Chert, Novaculite, Pegmatite, Scoria
+100: Gneiss :: Pronounced "nice." Geologists have been making that joke for about 200 years.
+
+? Name a gemstone
+~drop stone,gem
+10: Diamond, Ruby, Emerald, Sapphire, Pearl
+15: Opal, Infinity
+30: Amethyst, Topaz, Jade, Garnet, Turquoise, Aquamarine, Peridot, Onyx, Amber, Tourmaline, Citrine, Moonstone, Quartz|Rose quartz, Lapis lazuli|Lapis
+60: Alexandrite, Tanzanite, Zircon|Cubic zirconia, Morganite, Spinel, Kunzite, Jasper, Agate, Carnelian, Obsidian, Bloodstone, Malachite, Sunstone, Tiger's eye|Tigers eye, Hematite, Beryl, Coral, Jet, Rhodonite, Labradorite, Chrysoberyl, Iolite
+85: Benitoite, Grandidierite, Taaffeite, Musgravite, Red beryl|Bixbite, Poudretteite, Serendibite, Jeremejevite, Larimar, Charoite, Sugilite, Chrysoprase, Sodalite, Ammolite, Demantoid, Tsavorite, Kyanite, Zoisite, Sphene|Titanite, Moldavite, Rhodochrosite, Apatite, Fluorite, Sardonyx, Hiddenite, Heliodor, Padparadscha, Scapolite
+100: Painite :: For decades it held the record as the world's rarest mineral, with only a few known crystals.
+
+? Name a field of study ending in -ology
+10: Biology, Psychology, Geology, Zoology, Sociology
+15: Scientology, Mixology
+30: Astrology, Archaeology|Archeology, Anthropology, Technology, Cardiology, Neurology, Ecology, Theology, Mythology, Meteorology, Criminology, Dermatology, Oncology, Radiology, Microbiology, Entomology, Paleontology, Cosmology, Pathology, Physiology, Musicology, Etymology
+60: Ornithology, Herpetology, Pharmacology, Immunology, Hematology, Urology, Gastroenterology, Gynecology, Ophthalmology, Toxicology, Epidemiology, Virology, Bacteriology, Seismology, Volcanology|Vulcanology, Oceanology, Mycology, Horology, Graphology, Climatology, Endocrinology, Rheumatology, Kinesiology, Phrenology, Numerology, Terminology, Methodology, Ideology, Chronology, Hydrology, Audiology, Pulmonology, Anesthesiology, Cryptozoology
+85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
+100: Ichthyology :: The study of fish. The goldfish insists you take notes.
+
+? Name a phobia
+10: Arachnophobia|Fear of spiders, Claustrophobia|Fear of small spaces|Fear of tight spaces, Agoraphobia, Acrophobia|Fear of heights
+15: Triskaidekaphobia|Fear of 13|Fear of the number 13, Hippopotomonstrosesquipedaliophobia|Fear of long words
+30: Germophobia|Mysophobia|Fear of germs, Ophidiophobia|Fear of snakes, Aerophobia|Fear of flying, Coulrophobia|Fear of clowns, Trypophobia|Fear of holes, Hydrophobia, Nyctophobia|Fear of the dark, Technophobia, Thanatophobia|Fear of death, Hemophobia|Hematophobia|Fear of blood, Cynophobia|Fear of dogs, Pyrophobia|Fear of fire, Xenophobia, Anglophobia, Francophobia
+60: Aquaphobia|Fear of water, Ailurophobia|Fear of cats, Entomophobia|Fear of insects|Fear of bugs, Glossophobia|Fear of public speaking, Zoophobia, Astraphobia|Fear of thunder, Emetophobia|Fear of vomiting, Trichophobia, Ornithophobia|Fear of birds, Dentophobia|Fear of dentists, Necrophobia, Pogonophobia|Fear of beards, Nomophobia|Fear of no phone, Bibliophobia|Fear of books, Automatonophobia, Ichthyophobia|Fear of fish, Chronophobia, Gamophobia|Fear of marriage, Philophobia|Fear of love, Podophobia|Fear of feet, Haphephobia|Fear of touch, Androphobia, Gynophobia, Pediophobia|Fear of dolls, Thalassophobia|Fear of the ocean, Megalophobia, Submechanophobia, Ombrophobia
+85: Nomatophobia, Phobophobia|Fear of fear, Pteronophobia|Fear of feathers, Ergophobia|Fear of work, Chiroptophobia|Fear of bats, Alektorophobia|Fear of chickens, Lepidopterophobia|Fear of butterflies, Melissophobia|Apiphobia|Fear of bees, Musophobia|Fear of mice, Equinophobia|Hippophobia|Fear of horses, Ranidaphobia|Fear of frogs, Turophobia|Fear of cheese, Spectrophobia, Somniphobia|Fear of sleep, Dendrophobia|Fear of trees, Anthophobia|Fear of flowers, Xanthophobia|Fear of yellow, Chromophobia, Heliophobia|Fear of the sun, Nephophobia|Fear of clouds, Koumpounophobia|Fear of buttons, Geniophobia|Fear of chins, Omphalophobia|Fear of belly buttons, Genuphobia|Fear of knees, Cibophobia|Fear of food, Hodophobia, Decidophobia, Sesquipedalophobia, Ablutophobia|Fear of bathing, Atychiphobia|Fear of failure, Eisoptrophobia|Fear of mirrors, Hylophobia
+100: Arachibutyrophobia|Fear of peanut butter :: The fear of peanut butter sticking to the roof of your mouth.
+
+? Name a muscle
+~drop muscle
+10: Bicep|Biceps, Tricep|Triceps, Quad|Quadriceps, Hamstring, Abs|Abdominals, Pec|Pecs|Pectoral|Pectoralis, Glute|Gluteus|Gluteus maximus, Calf|Calves
+15: Heart, Tongue
+30: Deltoid|Delt, Trapezius|Trap, Lat|Latissimus dorsi, Oblique, Rhomboid, Rotator cuff, Soleus, Gastrocnemius, Forearm, Hip flexor, Diaphragm, Core, Groin|Adductor
+60: Sartorius, Masseter, Serratus|Serratus anterior, Brachioradialis, Psoas, Piriformis, Rectus abdominis, Gracilis, Tibialis|Tibialis anterior, Infraspinatus, Supraspinatus, Teres major, Teres minor, Subscapularis, Vastus lateralis, Vastus medialis, Erector spinae, Biceps femoris, Semitendinosus, Semimembranosus, Gluteus medius, Gluteus minimus, Transverse abdominis, Iliopsoas, Brachialis, Pronator teres, Levator scapulae, Sternocleidomastoid, Orbicularis oculi, Zygomaticus
+85: Risorius, Platysma, Buccinator, Temporalis, Pterygoid, Digastric, Scalene, Splenius, Multifidus, Quadratus lumborum, Pectineus, Tensor fasciae latae, Popliteus, Peroneus|Fibularis, Flexor carpi radialis, Extensor digitorum, Anconeus, Coracobrachialis, Rectus femoris, Vastus intermedius, Obturator, Gemellus, Plantaris, Procerus, Corrugator, Nasalis, Mentalis, Arrector pili, Cremaster, Levator labii superioris alaeque nasi
+100: Stapedius :: The smallest skeletal muscle in your body, about a millimetre long, inside your middle ear.
+
+? Name an invention
+10: Telephone|Phone, Light bulb|Lightbulb, Airplane|Plane, Car|Automobile, Computer, Internet, Wheel
+15: Sliced bread, Fire
+30: Television|TV, Printing press, Radio, Steam engine, Camera, Microwave, Refrigerator|Fridge, Telegraph, Penicillin, Gunpowder, Compass, Paper, Bicycle|Bike, Typewriter, Smartphone|iPhone, Washing machine, Vacuum|Vacuum cleaner, Battery, Clock, Microscope, Telescope, Plastic, Dynamite, Zipper, Velcro, Post-it note|Post-it|Sticky note, Air conditioning|AC, GPS, Elevator, Glasses|Eyeglasses
+60: Cotton gin, Assembly line, Phonograph, Sewing machine, Barbed wire, Transistor, Laser, Escalator, Ballpoint pen|Pen, Safety pin, Paper clip, Can opener, Lawn mower, Dishwasher, Traffic light, Windshield wiper, Seat belt, Parachute, Submarine, Helicopter, Hot air balloon, Pacemaker, X-ray, Vaccine, Anesthesia, Super Glue, Scotch tape|Duct tape, Teflon, Kevlar, Nylon, Frisbee, Slinky, Etch A Sketch, Rubik's Cube, Crayon, Remote control, World Wide Web, Email, Thermometer, Pencil, Eraser, Stapler, Aqualung|Scuba gear, Polaroid
+85: Spinning jenny, Flying shuttle, Seed drill, Abacus, Astrolabe, Sextant, Cash register, Zamboni, Jacuzzi, Segway, Tupperware, Aerosol can, Wite-Out|Liquid Paper, Pull tab, Hula hoop, Ferris wheel, Stirrup, Water wheel, Aqueduct, Archimedes screw, Cotton candy, Ice cream cone, Tea bag, Bottle cap, Shopping cart, Parking meter, Snowmobile, Tesla coil, Geiger counter, Seismograph, Barometer, Slide rule, Bunsen burner, Jet engine, Turing machine, Difference engine, Analytical Engine, Mason jar, Dewey Decimal System
+100: Bubble wrap :: It was invented in 1957 as textured wallpaper. Nobody wanted the wallpaper.
+
+? Name a spacecraft
+~drop the,spacecraft
+10: Apollo 11|Apollo, Hubble|Hubble Space Telescope, International Space Station|ISS|Space Station, Voyager|Voyager 1|Voyager 2, Space Shuttle|Shuttle
+15: Millennium Falcon, USS Enterprise|Enterprise
+30: Challenger, Columbia, Discovery, Atlantis, Endeavour|Endeavor, Sputnik, Curiosity, Perseverance, James Webb|James Webb Space Telescope|Webb|JWST, Apollo 13, Falcon 9|Falcon, Crew Dragon|Dragon, Mir, Skylab, Starship, New Horizons, Cassini, Saturn V, Eagle, Opportunity, Spirit, Viking, Pioneer
+60: Gemini, Mercury, Vostok, Soyuz, Juno, Galileo, Ingenuity, Sojourner, Pathfinder, Artemis, Orion, New Shepard|Blue Origin, Luna, Sputnik 2, Freedom 7, Friendship 7, Rosetta, Philae, Parker Solar Probe|Parker, Kepler, Chandrayaan, Chang'e, Tiangong, SpaceShipOne, Spitzer, Buran, Odyssey, Dawn, Deep Impact, Messenger, DART, Lucy, Psyche, InSight, Mariner, Phoenix, Stardust, OSIRIS-REx|Osiris Rex
+85: Venera, Vega, Zond, Salyut, Giotto, Hayabusa, Akatsuki, Ranger, Surveyor, Lunokhod, Explorer 1, Vanguard, Telstar, Landsat, Magellan, Huygens, Maven, Mangalyaan, Tianwen, Zhurong, Yutu, Hakuto, Vikram, Kvant, Aryabhata, Genesis, Gaia, Planck, Herschel, Chandra, Compton, Spektr-R, Kosmos, Polyot, Liberty Bell 7
+100: Beresheet :: Israel's moon lander crashed in 2019 carrying thousands of dormant tardigrades. They may still be there.

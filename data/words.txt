@@ -1,0 +1,143 @@
+? Name a word that rhymes with blue
+~exact
+10: Shoe, True, Glue, Clue, New, Two, Too, You, Zoo, Who, Do
+15: Kangaroo
+30: Flew, Grew, Knew, Threw, Through, Few, Crew, Drew, View, Chew, Stew, Moo, Boo, Goo, Dew|Due, Sue, Cue|Queue, Hue, Pew, Screw, Tattoo, Igloo, Bamboo, Shampoo, Taboo, Review, Renew, Canoe, Undo, Cashew, Cuckoo, Achoo, Voodoo, Yahoo, Hullabaloo, Caribou, Barbecue|BBQ, Avenue, Residue, Rescue, Statue, Value, Virtue, Issue, Tissue, Menu, Venue, Nephew, Adieu, Ewe, Yew, Gnu, Emu, Kazoo
+60: Construe, Accrue, Imbue, Pursue, Ensue, Subdue, Interview, Overdue, Revenue, Continue, Peekaboo, Honeydew, Mildew, Curlew, Sinew, Skew, Spew, Slew, Brew, Strew, Shrew, Bayou, Tutu, Guru, Haiku, Snafu, Tofu, Kung fu, Ragu, Sudoku, Thank you, Déjà vu|Deja vu, Cock-a-doodle-doo, Wahoo, Woohoo, Boohoo, Hairdo, Yoo-hoo, Whoo, Rue, Loo, Coo, Woo, Shoo, Poo, Ado, Askew, Anew, Eschew, Bijou, Milieu, Debut, Ragout
+85: Ingenue, Parvenu, Impromptu, Tiramisu, Retinue, Rendezvous, Marabou, Wallaroo, Ballyhoo, Buckaroo, Switcheroo, Skidoo, Jackaroo, Sou, Thew, Mew, Lieu, Purlieu, Bellevue, Curfew, Corkscrew, Vindaloo, Waterloo, Timbuktu, Kathmandu|Katmandu, Peru, Nehru, Xanadu, Malibu, Kalamazoo
+100: Didgeridoo :: The Aboriginal Australian wind instrument, played for well over a thousand years.
+
+? Name a word that rhymes with cat
+~exact
+10: Hat, Bat, Rat, Mat, Sat, Fat, Pat, That, Chat, Flat
+15: Diplomat, Acrobat
+30: Brat, Gnat, Splat, Spat, Slat, Scat, Vat, Tat, Lat, Format, Combat, Doormat, Bobcat, Wombat, Habitat, Democrat, Aristocrat, Thermostat, Baseball bat, Nonfat, Copycat, Laundromat, Pussycat, Tomcat, Hazmat, Welcome mat
+60: Cravat, Caveat, Muskrat, Meerkat, Ziggurat, Autocrat, Bureaucrat, Technocrat, Plutocrat, Rheostat, Photostat, Kitty cat, Sprat, Drat, Stat, Frat, Thereat, Whereat, Hepcat, Polecat, Wildcat, Fruit bat, Vampire bat, Top hat, Hard hat, Sun hat, Cowboy hat, Yoga mat, Mouse mat, Placemat, Dingbat, Brickbat, Numbat, Fiat, Tit for tat
+85: Rat-a-tat|Ratatat, Concordat, Coup d'état|Coup d'etat, Entrechat, Commissariat, Proletariat, Secretariat, Salariat, Lariat, Aerostat, Heliostat, Hydrostat, Gyrostat, Dandiprat, Marat, Arafat, Ararat, Landsat
+100: Jehoshaphat :: A king of Judah, and the star of the old exclamation "Jumpin' Jehoshaphat!"
+
+? Name a word that rhymes with light
+~exact
+10: Night, Right, Kite, Bite, Fight, White, Sight, Might, Tight, Write
+15: Dynamite, Satellite
+30: Bright, Flight, Height, Fright, Knight, Slight, Site, Quite, Polite, Invite, Excite, Delight, Tonight, Midnight, Daylight, Goodnight, Ignite, Recite, Unite, Spite, Plight, Blight, Alright, Appetite, Kryptonite, Termite, Parasite, Meteorite, Socialite, Graphite, Insight, Highlight, Spotlight, Sunlight, Moonlight, Flashlight, Headlight, Streetlight, Stoplight, Twilight, Fortnight, Overnight, Copyright, Upright, Outright, Downright, Birthright, Contrite, Rite, Wright, Trite, Sprite, Byte, Mite
+60: Stalactite, Stalagmite, Anthracite, Lignite, Acolyte, Neophyte, Erudite, Expedite, Reunite, Extradite, Indict, Incite, Despite, Rewrite, Ghostwrite, Underwrite, Nitrite, Sulfite, Israelite, Luddite, Vegemite, Marmite, Cellulite, Bullfight, Gunfight, Dogfight, Prizefight, Frostbite, Snakebite, Soundbite, Playwright, Shipwright, Wheelwright, Hindsight, Foresight, Eyesight, Campsite, Website, Starlight, Lamplight, Limelight, Skylight, Searchlight, Candlelight, Firelight, Nightlight, Featherlight, Airtight, Watertight, Uptight, Black and white, Snow White, Mr. Right, Sleight
+85: Malachite, Hematite, Magnetite, Dolomite, Bakelite, Ammonite, Muscovite, Trilobite, Proselyte, Anchorite, Eremite, Vulcanite, Lucite, Nephrite, Cordite, Shiite, Jacobite, Mennonite, Moabite, Hittite, Levite, Sybarite, Bedight, Alight, Affright, Aright, Benight, Requite, Smite, Bight, Tripartite, Bipartite, Dendrite, Electrolyte, Cosmopolite, Ebonite, Pyrite
+100: Troglodyte :: A cave dweller. It comes from the Greek for "one who creeps into holes."
+
+? Name a palindrome
+~exact
+10: Racecar|Race car, Level, Mom, Dad, Kayak, Bob, Anna, Noon, Wow, Madam
+15: Taco cat|Tacocat, A man a plan a canal Panama|A man, a plan, a canal: Panama, Hannah
+30: Civic, Radar, Refer, Rotor, Peep, Eye, Pop, Deed, Sis, Tot, Nun, Pup, Did, Ewe, Otto, Eve, Ada, Elle, Stats, Solos, Minim, Tenet, Redder, Rotator, Reviver, Sagas, Toot, Poop, Gag, Bib, Tut, Aha, Ava, Nan, Pip, Dud, Mum, Pap, Sees, Kook, Boob, Abba, Repaper
+60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
+85: Kinnikinnik, Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo
+100: Tattarrattat :: James Joyce's word for a knock on the door in Ulysses, and the longest palindrome in the Oxford English Dictionary.
+
+? Name another word for happy
+10: Joyful, Glad, Cheerful, Excited, Content, Elated
+15: Jubilant, Euphoric
+30: Ecstatic, Delighted, Merry, Jolly, Pleased, Thrilled, Overjoyed, Blissful, Upbeat, Sunny, Joyous, Satisfied, Giddy, Gleeful, Peppy, Chipper, Smiling, Lighthearted, Contented, Positive, Grinning, Stoked, Psyched, Pumped, Cheery
+60: Jovial, Mirthful, Radiant, Buoyant, Exuberant, Over the moon, On cloud nine|Cloud nine, Tickled pink|Tickled, Walking on air, Beaming, Sanguine, Perky, Bubbly, Chuffed, Rapturous, Exultant, Gay, Bright, Sparkling, Hopeful, Carefree, Breezy, Laughing, In high spirits, Zippy, Lively, Vivacious, Sprightly, Starry-eyed
+85: Felicitous, Beatific, Blithe, Halcyon, Elysian, Eudaemonic, Rhapsodic, Convivial, Winsome, Riant, Gladsome, Blissed out, Jocund, Jocose, Jocular, Mirthsome, Sunshiny, Paradisiacal, Cock-a-hoop, Happy as a clam, Rosy, Pollyannaish, Transported
+100: Gruntled :: The opposite of disgruntled. Yes, it's a real word, and it's in the dictionary.
+
+? Name another word for big
+10: Large, Huge, Giant, Enormous, Massive, Gigantic
+15: Humongous|Humungous
+30: Tremendous, Colossal, Immense, Vast, Great, Mammoth, Jumbo, Monster|Monstrous, Titanic, Gargantuan, Hefty, Bulky, Whopping, Substantial, Sizable, Mega, King-size|King size, Oversized, Grand, Extra-large|XL, Ginormous, Towering, Heavy, Super-size|Supersize, Monumental, Epic
+60: Behemoth, Elephantine, Hulking, Whopper, Astronomical, Galactic, Cosmic, Prodigious, Stupendous, Considerable, Extensive, Voluminous, Capacious, Spacious, Burly, Strapping, Portly, Goliath, Herculean, Cyclopean, Ample, Mountainous, Walloping, Thumping, Honking, Planetary, Gross, Tall, Wide, Sprawling, Bumper, Almighty
+85: Leviathan, Pantagruelian, Titanesque, Gigantesque, Mastodonic, Cyclopic, Immeasurable, Bloated, Thundering, Whacking, Ponderous, Magnum, Massy, Bulbous, Kingly, Lofty, Commodious, Gigantean, Jovian, Olympian, Vasty, Stonking
+100: Brobdingnagian :: From the land of giants in Gulliver's Travels. It's a real word, and fun to attempt.
+
+? Name a slang word for money
+10: Cash, Dough, Bucks, Bread, Moolah|Moola, Green
+15: Benjamins, Cheddar
+30: Dollars, Cheese, Paper, Bacon, Clams, Scratch, Loot, Stacks, C-note, Coin, Funds, Dinero, Bills, Smackers, Bank, Lettuce, Racks, Bands, Greenbacks, Change, Sawbuck, Grand
+60: Lolly, Quid, Wad, Cabbage, Kale, Simoleons, Spondulicks|Spondulix, Lucre, Wampum, Bones, Skrilla|Scrilla, Fetti, Guap, Mula, Tender, Currency, Rocks, Frogskins, Pesos, Gravy, Long green, Dead presidents, Ducats, Doubloons, Bling, Stash, Sugar, Jack, Cream, Beans, Peanuts, Tenners, Fivers, Pieces of eight, Hundies, Big bucks, Pony, Monkey
+85: Ackers, Dosh, Readies, Wonga, Bob, Brass, Mazuma, Gelt, Shekels, Geetus, Rhino, Boodle, Blunt, Tin, Scrip, Yard, Score, Deuce, Fin, Nuggets, Two bits, Sheets, Feria, Plata
+100: Oof :: Victorian slang for money, possibly from the Yiddish for "on the table."
+
+? Name a word that means crazy
+10: Insane, Nuts, Mad, Bananas, Bonkers, Loco
+15: Cuckoo
+30: Wacko|Whacko, Looney|Loony, Crackers, Deranged, Psycho, Mental, Wild, Cray cray|Cray, Unhinged, Lunatic, Wacky, Nutty, Kooky, Off your rocker|Off one's rocker|Off his rocker, Out of your mind, Batty, Bats, Demented, Berserk, Maniac, Zany, Daft, Barking mad|Barking, Mad as a hatter, Coo-coo|Koo-koo, Looney Tunes, Sick, Gaga, Haywire, Nutso, Screwy
+60: Unglued, Round the bend, Off the wall, Off the rails, Not all there, Touched, Unstable, Delirious, Certifiable, Stark raving mad, Raving, Out to lunch, Meshuggah|Meshuga, Dotty, Potty, Barmy, Doolally, Loopy, Squirrelly, Whacked, Wigged out, Tetched, Crazed, Frenzied, Manic, Fruity, Fruitcake, Nutcase, Nutjob, Nutter, Basket case, Cracked, Lost your marbles, Rabid
+85: Non compos mentis, Moonstruck, Bedlamite, Crackpot, Bughouse, Buggy, Cockamamie, Dippy, Gonzo, Harebrained, Wonky, Balmy, Scatty, Spare, Yampy, Pixilated, Starkers, Unbalanced, Hatstand, Box of frogs|Mad as a box of frogs, Sandwich short of a picnic|A few sandwiches short of a picnic, Bats in the belfry, Stir-crazy, Cabin fever, Dingbats, Daffy
+100: Troppo :: Australian slang. Stay in the tropical heat too long and you've "gone troppo."
+
+? Name a language
+~drop language
+10: English, Spanish, French, German, Chinese|Mandarin, Italian
+15: Klingon, Latin, Pig Latin
+30: Japanese, Russian, Arabic, Portuguese, Hindi, Korean, Greek, Hebrew, Cantonese, Dutch, Swedish, Turkish, Vietnamese, Polish, Thai, American Sign|ASL|Sign, Swahili, Urdu, Navajo
+60: Gaelic|Irish|Scottish Gaelic, Norwegian, Danish, Finnish, Tagalog|Filipino, Bengali, Punjabi, Persian|Farsi, Czech, Hungarian, Romanian, Ukrainian, Welsh, Icelandic, Yiddish, Sanskrit, Esperanto, Elvish|Sindarin|Quenya, Indonesian, Malay, Tamil, Telugu, Zulu, Afrikaans, Hawaiian, Cherokee, Mongolian, Tibetan, Basque, Catalan, Haitian Creole|Creole, Amharic, Serbian, Croatian, Bulgarian, Dothraki, Na'vi
+85: Quechua, Nahuatl, Guarani, Māori|Maori, Xhosa, Yoruba, Igbo, Hausa, Somali, Wolof, Shona, Kurdish, Pashto, Armenian, Georgian, Lao, Khmer, Burmese, Nepali, Sinhala, Malayalam, Kannada, Marathi, Gujarati, Albanian, Lithuanian, Latvian, Estonian, Slovak, Slovene|Slovenian, Macedonian, Breton, Maltese, Luxembourgish, Faroese, Inuktitut, Ojibwe, Lakota, Hmong, Samoan, Tongan, Aramaic, Coptic, Ainu, Cornish, Manx, Romansh, Frisian, Sami, Tok Pisin, Rapa Nui, Uzbek, Kazakh, Tatar
+100: Silbo Gomero|Silbo :: A language made entirely of whistles, used to talk across the valleys of La Gomera in the Canary Islands.
+
+? Name a Greek letter
+10: Alpha, Beta, Gamma, Delta, Omega, Pi
+15: Omicron, Sigma
+30: Epsilon, Theta, Lambda, Mu, Tau, Phi, Psi, Chi, Kappa, Rho, Zeta
+60: Eta, Iota, Nu, Xi, Upsilon
+85: San, Koppa, Sampi, Stigma, Heta
+100: Digamma :: A letter the Greeks dropped before their classical age. It looked like an F, and sounded like W.
+
+? Name a word that starts with X
+10: Xylophone, X-ray|Xray
+15: Xerox, Xbox
+30: Xenophobia, Xenon, Xanadu, Xavier, Xena, Xylem, Xmas, Xanax, X-Men, Xenophobe
+60: Xenomorph, Xylitol, Xanthan gum|Xanthan, Xerxes, Xiphoid, Xeriscape, Xenial, Xenolith, Xebec, Xerography, Xylography, Xenogenesis, Xylophonist, XOXO, Xennial, Xhosa, Xi Jinping, Xi'an|Xian, X-axis, X-factor
+85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous
+100: Xenoglossy :: The supposed ability to speak a language you've never learned.
+
+? Name a word that ends in -ough
+~exact
+10: Though, Through, Tough, Rough, Enough, Cough, Dough
+15: Hiccough
+30: Although, Thorough, Bough, Plough, Trough, Borough
+60: Slough, Breakthrough, Furlough, Sourdough, Walkthrough, Drive-through|Drivethrough, Playdough|Play-Doh, Cookie dough, Pizza dough, Pass-through, See-through, Follow-through, Run-through, Whooping cough
+85: Chough, Lough, Clough, Hough, Brough, Scarborough, Loughborough, Peterborough, Marlborough, Attenborough, Gainsborough, Roxborough, Knaresborough, Greenough, McCullough, Yarborough, Cut-through, Rough-and-tough
+100: Sough :: It means a soft rustling sound, like wind in trees. Even the dictionary can't settle how to say it.
+
+? Name a word or phrase that starts with fire
+10: Firefighter|Fireman, Fireworks|Firework, Firefly, Fireplace, Firetruck|Fire truck, Fire
+15: Firefox, Firestarter
+30: Fire alarm, Fire hydrant, Firewood, Firewall, Fire drill, Fire escape, Fire extinguisher, Firecracker, Fire pit|Firepit, Fireproof, Fire ant, Fire station|Firehouse, Fire department, Fireball, Firearm, Fire exit, Fired, Fire engine, Firestone, Fire Island
+60: Firebrand, Firebird, Firestorm, Firelight, Fireside, Firepower, Firebomb, Fire breather|Fire-breathing, Fire eater|Fire-eater, Fire sale, Firenze, Fire hose, Fire marshal, Fire hazard, Fire opal, Fireweed, Firewater, Fire TV, Fire Stick|Firestick, Fire lane, Fire door, Fire code, Fire and Ice, Fire and Rain, Firehawk, Firebolt, Firenado, Fire Nation, Fire Walk with Me, Firewalk|Firewalking
+85: Firebreak, Fireclay, Firedog, Fireguard, Firelock, Firetrap, Fireboat, Firebox, Fire-and-forget, Firebug, Firefight, Firehall, Fire-rated, Fire retardant, Firewoman, Fire salamander, Firemouth, Firethorn, Fire-roasted, Firesign, Fire coral, Fire-bellied toad
+100: Firedamp :: The explosive methane gas that made old coal mines so dangerous.
+
+? Name a word with no A, E, I, O or U
+~exact
+10: Sky, Fly, Try, Why, My, By, Cry, Dry, Shy, Gym, Spy, Fry, Sly, Pry
+15: Rhythm
+30: Myth, Lynx, Hymn, Crypt, Pygmy, Nymph, Sync, Wry, Ply, Thy, Psych, Cyst, Tryst, Spry, Shyly, Slyly, Dryly, Wryly, Hmm, Shh, Brr|Brrr, Psst, Tsk, Zzz, Nth, Flyby, Sylph, Glyph, Lymph, Pyx
+60: Rhythms, Myths, Hymns, Lynch, Synth, Pfft, Hm, Mm, Grr, Spryly, Tsktsk, Sphynx, Styx, Wych, Drys
+85: Crwth, Cwm, Cwtch, Phpht, Pht, Ssh, Sh, Zzzs, Xylyl, Flysch, Wynd, Hwyl, Ghyll, Rynd, Scry, Stymy, Thymy, Typy, Gyp, Hyp
+100: Syzygy :: When three celestial bodies line up. Also a brutal word to play in Scrabble.
+
+? Name a punctuation mark
+~drop mark,sign
+10: Period|Full stop, Comma, Question, Exclamation point|Exclamation, Apostrophe, Quotation|Quotation marks|Quotes
+15: Interrobang, Semicolon
+30: Colon, Hyphen, Dash, Parentheses|Parenthesis, Ellipsis|Dot dot dot, Slash|Forward slash, Brackets|Bracket, Asterisk, Ampersand|And, At
+60: Em dash, En dash, Backslash, Braces|Curly braces|Curly brackets, Hashtag|Pound|Number, Bullet point|Bullet, Tilde, Underscore, Caret, Pilcrow, Percent, Guillemets|Guillemet, Inverted question, Angle brackets, Prime, Pipe, Dollar
+85: Obelus, Dagger|Obelisk, Double dagger, Section, Manicule, Asterism, Diaeresis|Umlaut, Cedilla, Circumflex, Acute accent, Grave accent, Virgule, Solidus, Lozenge, Reference, Sarcasm, Percontation point, Snark, Tittle
+100: Octothorpe :: The official-sounding name for the # symbol, supposedly coined at Bell Labs.
+
+? Name a French word or phrase used in English
+10: Déjà vu|Deja vu, Cliché|Cliche, Bon appétit|Bon appetit, Café|Cafe, Ballet, Fiancé|Fiance, Rendezvous
+15: Je ne sais quoi, C'est la vie, Faux pas
+30: Entrepreneur, Bouquet, Souvenir, Restaurant, Chic, Encore, Bizarre, Genre, Résumé|Resume, Boutique, Cuisine, Buffet, Chauffeur, Brunette, Blonde, Silhouette, Sabotage, Menu, Mirage, Massage, Façade|Facade, Hors d'oeuvre|Hors d'oeuvres, Crème de la crème|Creme de la creme, Voilà|Voila, Touché|Touche, Bourgeois, RSVP, À la carte|A la carte, Au revoir, Bon voyage, Mardi Gras, Protégé|Protege, Petite, Liaison, Risqué|Risque, Sauté|Saute, Entrée|Entree, Beret, Lingerie, Matinée|Matinee, Debut, Décor|Decor, Naïve|Naive, Tête-à-tête|Tete a tete, Coup
+60: Coup d'état|Coup d'etat, Laissez-faire, Nouveau riche, Avant-garde, Carte blanche, Vis-à-vis|Vis a vis, Sang-froid, Savoir faire, Raison d'être|Raison d'etre, Joie de vivre, Esprit de corps, Fait accompli, Double entendre, Femme fatale, Enfant terrible, Tour de force, Cul-de-sac, Bête noire|Bete noire, Mêlée|Melee, Ménage à trois|Menage a trois, Noblesse oblige, Papier-mâché|Paper mache, Pièce de résistance|Piece de resistance, Prêt-à-porter|Pret a porter, Art deco, Art nouveau, Attaché|Attache, Apéritif|Aperitif, Sommelier, Concierge, Connoisseur, Reconnaissance, Chaise longue|Chaise lounge, Chiffon, Château|Chateau, Milieu, Nom de plume, Panache, Penchant, Soirée|Soiree, Malaise, Élan|Elan, Ennui, Gauche, Gaffe, Aplomb, Blasé|Blase, Cachet, Détente|Detente, Dossier, Exposé|Expose, Forte, Impasse, Insouciance, Par excellence, Passé|Passe, Sobriquet, Visage, Tout de suite, Mon dieu, Merci, Sacré bleu|Sacre bleu, Zut alors
+85: Agent provocateur, Amour propre, Bon mot, Bon vivant, Cause célèbre|Cause celebre, Cri de coeur, Dernier cri, Éminence grise|Eminence grise, Haute couture, Idée fixe|Idee fixe, Jeu d'esprit, Mot juste, Objet d'art, Pied-à-terre|Pied a terre, Trompe-l'œil|Trompe l'oeil, Succès de scandale, Roman à clef, Nostalgie de la boue, Mise en scène|Mise en scene, Mise en place, Flâneur|Flaneur, Soupçon|Soupcon, Bric-à-brac|Bric a brac, Démodé|Demode, Arrière-pensée, Sans souci, Vignette, De rigueur, Plus ça change, Tant pis, Au courant, Au fait, Au contraire, Au naturel, Belle époque|Belle epoque, Beau monde, Billet-doux|Billet doux, Cordon bleu, Fin de siècle|Fin de siecle, Nouvelle vague
+100: L'esprit de l'escalier|Esprit de l'escalier|Staircase wit :: "Staircase wit." The perfect comeback you only think of after you've left.
+
+? Name a way to walk
+10: Stroll, Jog, March, Run, Skip, Hike
+15: Moonwalk, Sashay
+30: Amble, Saunter, Strut, Stride, Wander, Limp, Shuffle, Tiptoe, Stomp, Trudge, Waddle, Pace, Plod, Stumble, Hobble, Sneak, Creep, Swagger, Meander, Ramble, Tread, Trek, Stagger, Mosey, Prance, Lumber, Trot, Tramp, Roam, Power walk
+60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Sleepwalk, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
+85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk
+100: Galumph :: Lewis Carroll made it up for "Jabberwocky." It means to bound along clumsily and in triumph.

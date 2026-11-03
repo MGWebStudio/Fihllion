@@ -1,0 +1,148 @@
+? Name a car brand
+10: Ford, Toyota, Honda, Chevrolet|Chevy, BMW, Tesla, Mercedes|Mercedes-Benz
+15: DeLorean, Yugo
+30: Nissan, Jeep, Dodge, Hyundai, Kia, Volkswagen|VW, Audi, Subaru, Mazda, Lexus, Cadillac, GMC, Ram, Buick, Chrysler, Porsche, Ferrari, Lamborghini, Volvo, Acura, Infiniti, Lincoln, Mitsubishi, Land Rover, Jaguar, Mini|Mini Cooper, Bentley, Rolls-Royce, Maserati, Aston Martin, Fiat, Bugatti, Pontiac, Saturn, Oldsmobile, Hummer
+60: McLaren, Alfa Romeo, Genesis, Rivian, Lucid, Polestar, Peugeot, Renault, Citroën|Citroen, Saab, Suzuki, Scion, Mercury, Plymouth, Isuzu, Smart, Koenigsegg, Pagani, Lotus, Studebaker, Hudson, Packard, Geo, Daewoo, Opel, Vauxhall, Škoda|Skoda, SEAT, Dacia, Tata, BYD, Geely, Mahindra, AMC, Eagle, Duesenberg, Tucker, Edsel, Maybach, Morgan, Triumph, MG
+85: Hispano-Suiza, Auburn, Cord, Nash, Kaiser, Willys, Stutz, Pierce-Arrow, Bricklin, Fisker, Saleen, Shelby, Hennessey, Rimac, Zenvo, Spyker, Noble, TVR, Caterham, Ariel, Austin, Morris, Rover, Trabant, Lada, Zastava, Moskvitch, Holden, Proton, Perodua, Daihatsu, Hongqi, Chery, Great Wall, NIO, Xpeng, Lancia, De Tomaso, Abarth, Karma, Faraday Future, VinFast, Checker, Crosley
+100: Reliant :: Maker of the Reliant Robin, the British three-wheeler famous for tipping over.
+
+? Name a fast food chain
+10: McDonald's|McDonalds, Burger King, Wendy's, KFC|Kentucky Fried Chicken, Taco Bell, Subway, Chick-fil-A|Chick Fil A
+15: Krusty Krab, Good Burger
+30: Arby's, Popeyes, Dairy Queen|DQ, Sonic, Jack in the Box, Five Guys, In-N-Out|In N Out, Domino's, Pizza Hut, Papa John's, Little Caesars, Chipotle, Panera|Panera Bread, Panda Express, Whataburger, Hardee's, Carl's Jr., Starbucks, Dunkin'|Dunkin Donuts, Shake Shack, White Castle, Long John Silver's, Culver's, Wingstop, Zaxby's, Raising Cane's|Canes, Qdoba, Del Taco, Jimmy John's, Jersey Mike's, Firehouse Subs, Quiznos, Tim Hortons, Steak 'n Shake, Bojangles
+60: Church's|Church's Chicken, El Pollo Loco, Krystal, Checkers|Rally's, A&W, Auntie Anne's, Cinnabon, Sbarro, Nathan's Famous|Nathan's, Moe's, Baja Fresh, Rubio's, Noodles & Company, Wienerschnitzel, Dutch Bros, Krispy Kreme, Hungry Howie's, Papa Murphy's, Marco's Pizza, Cook Out, Portillo's, Smashburger, Freddy's, Blaze Pizza, MOD Pizza, Jollibee, Nando's, Greggs, Pret a Manger|Pret, Wimpy, Hungry Jack's, Tropical Smoothie, Smoothie King, Jamba Juice|Jamba, Pollo Tropical, Taco John's, Captain D's
+85: Burger Chef, Roy Rogers, Howard Johnson's, Hot 'n Now, Boston Market, Kenny Rogers Roasters, Taco Time, Taco Cabana, Taco Bueno, Back Yard Burgers, BurgerFi, Jack's, Milo's, Hot Dog on a Stick, Swensen's, Wayback Burgers, Mr. Hero, Penn Station, Potbelly, McAlister's, Schlotzsky's, Which Wich, Blimpie, Charleys, Tastee-Freez, Orange Julius, Karmelkorn, Dippin' Dots, Lee's Famous Recipe, Maid-Rite, Lotteria, MOS Burger, CoCo Ichibanya, Yoshinoya, Max Burgers, Harvey's, Mary Brown's, Pollo Campero, Supermac's, Steers, Galito's, Chowking
+100: Arthur Treacher's :: A fish-and-chips chain named after an English actor famous for playing butlers. Only a few remain.
+
+? Name a soda
+~drop soda,pop
+10: Coca-Cola|Coke, Pepsi, Sprite, Dr Pepper|Dr. Pepper, Mountain Dew|Mtn Dew, Fanta
+15: Surge, Crystal Pepsi, New Coke
+30: 7 Up|7Up|Seven Up, Root beer, A&W, Mug|Mug Root Beer, Barq's, Ginger ale, Canada Dry, Schweppes, Sierra Mist|Starry, Diet Coke, Coke Zero, Diet Pepsi, Cherry Coke, Orange Crush|Crush, Sunkist, RC Cola|Royal Crown, Mello Yello, Tab, Pibb Xtra|Mr. Pibb, Squirt, Fresca, Jolt Cola|Jolt, Vernors, Olipop, Poppi, Cream, Pepsi Max, Baja Blast, Slice
+60: Moxie, Big Red, Cheerwine, Sun Drop, Dad's Root Beer|Dad's, IBC Root Beer|IBC, Jones, Faygo, Shasta, Stewart's, Hires, Ale-8-One, Inca Kola, Irn-Bru, Ribena, Lucozade, Tango, Vimto, San Pellegrino, La Croix|LaCroix, Bubly, Spindrift, Code Red, Pepsi Free, Josta, Blue Sky, Reed's, Bundaberg, Fever-Tree, Jarritos, Sidral Mundet, Topo Chico, Ramune, Calpico, Yoo-hoo, Nehi, Grapette, NuGrape, Dr. Brown's, Polar, Tizer, Kinnie, Julmust
+85: Bubble Up, Frostie Root Beer, Kickapoo Joy Juice, OK Soda, Pepsi Blue, Coke II, Tab Clear, Mr. Fizz, Aspen, Storm, Dr. Thunder, Dr. Perky, Mountain Lightning, Afri-Cola, Club-Mate, Almdudler, Bionade, Fritz-Kola, Thums Up, Limca, Guaraná Antarctica|Guarana Antarctica, Malta Goya, Materva, Cockta, Kvass, Solo, Pop Shoppe, Cott, Apple Beer, Sioux City, Virgil's, Boylan, Zevia, Bawls, Sprecher, Manzanita Sol, Mirinda
+100: Cel-Ray|Dr. Brown's Cel-Ray :: Celery-flavored soda, made since the 1860s and still a New York deli staple.
+
+? Name a clothing brand
+10: Nike, Adidas, Gap, Levi's|Levis, Old Navy, H&M, Zara, Ralph Lauren|Polo
+15: Supreme, Von Dutch
+30: Gucci, Louis Vuitton|LV, Prada, Chanel, Versace, Calvin Klein|CK, Tommy Hilfiger|Tommy, Hollister, Abercrombie & Fitch|Abercrombie|Abercrombie and Fitch, American Eagle, Under Armour, Puma, Reebok, Lululemon, Patagonia, The North Face, Columbia, Carhartt, Banana Republic, J.Crew|J Crew, Forever 21, Uniqlo, Lacoste, Burberry, Guess, Diesel, Wrangler, Hanes, Fruit of the Loom, Fila, Champion, Vans, Converse, Dockers, Express, Hot Topic, Victoria's Secret, Skims, Fashion Nova, Dior, Hermès|Hermes, Giorgio Armani|Armani, Balenciaga, Michael Kors, Coach, Kate Spade
+60: Yeezy, Off-White, Stüssy|Stussy, Bape|A Bathing Ape, Kith, Fear of God, Aritzia, Anthropologie, Free People, Urban Outfitters, Madewell, Everlane, Allbirds, Bonobos, Brooks Brothers, Eddie Bauer, L.L.Bean|LL Bean, Lands' End, Timberland, Dickies, Ben Sherman, Fred Perry, Barbour, Moncler, Canada Goose, Arc'teryx|Arcteryx, Burton, Quiksilver, Billabong, O'Neill, Hurley, Roxy, Rip Curl, Volcom, Tommy Bahama, Vineyard Vines, Southern Tide, Lilly Pulitzer, Juicy Couture, Ed Hardy, Affliction, True Religion, FUBU, Rocawear, Sean John, Phat Farm, Baby Phat, Ecko|Ecko Unltd, Givenchy, Valentino, Fendi, Dolce & Gabbana|D&G|Dolce and Gabbana, Saint Laurent|YSL, Balmain, Bottega Veneta, Loewe, Miu Miu, Marc Jacobs, Tory Burch, Vera Wang, Oscar de la Renta, Alexander McQueen, Stella McCartney, Hugo Boss|Boss, Theory, Vince
+85: Jordache, Z. Cavaricci, Cross Colours, Karl Kani, Starter, Members Only, Gloria Vanderbilt, Sergio Valente, Bugle Boy, Mossimo, No Fear, Big Johnson, Delia's, Rampage, Limited Too, Gadzooks, Pelle Pelle, Akademiks, Enyce, Apple Bottoms, Avirex, Cavalli, Kenzo, Maison Margiela, Comme des Garçons|Comme des Garcons, Issey Miyake, Yohji Yamamoto, Rick Owens, Acne Studios, A.P.C., Thom Browne, Dries Van Noten, Lanvin, Etro, Missoni, Pucci, Brunello Cucinelli, Loro Piana, Kiton, Aimé Leon Dore|Aime Leon Dore, Noah, Palace, Filson, Pendleton, Woolrich, Duluth Trading, Ariat, Stetson, Cinch, Kimes Ranch
+100: Hypercolor|Generra Hypercolor :: 1991's heat-sensitive T-shirts changed color wherever you got warm. Yes, including there.
+
+? Name a tech company
+10: Apple, Google, Microsoft, Amazon, Facebook|Meta, Samsung
+15: Pied Piper, Hooli
+30: Intel, IBM, Dell, HP|Hewlett-Packard, Sony, Netflix, Tesla, Nvidia, Oracle, Cisco, Adobe, Uber, Twitter|X, Salesforce, OpenAI, Anthropic, Lenovo, Spotify, PayPal, eBay, Yahoo, AOL, Zoom, Slack, Snapchat|Snap, TikTok|ByteDance, AMD, Qualcomm, LG, Toshiba, Panasonic, Xerox, Motorola, Nokia, BlackBerry, Huawei, Xiaomi, Asus, Acer, Airbnb, Lyft, Reddit, Pinterest, LinkedIn, Dropbox, Shopify, Square|Block, Stripe, Palantir, SpaceX, xAI
+60: Compaq, Gateway, Commodore, Atari, Sun Microsystems, Silicon Graphics|SGI, Palm, Netscape, MySpace, Digg, Vine, Friendster, Napster, LimeWire, Tandy, Texas Instruments, Micron, Western Digital, Seagate, SanDisk, Logitech, Corsair, Razer, VMware, Red Hat, GitHub, GitLab, Atlassian, Twilio, Cloudflare, Vercel, Snowflake, Databricks, Workday, ServiceNow, Intuit, Autodesk, Epic Games, Valve, Nintendo, Zillow, DoorDash, Instacart, Robinhood, Coinbase, Waymo, Cruise, Rivian, DeepMind, Alibaba, Tencent, Baidu, TSMC, ASML, Arm, Foxconn, Theranos
+85: Bell Labs, Xerox PARC, Digital Equipment Corporation|DEC, Wang Laboratories|Wang, Control Data, Cray, Novell, Lotus, WordPerfect, Borland, Ask Jeeves, AltaVista, Lycos, Excite, GeoCities, Pets.com, Webvan, Quibi, Magic Leap, Cuil, Clubhouse, Yik Yak, Color Labs, Jawbone, Pebble, Fitbit, Nest, Ring, Anki, Kodak, Polaroid, Kozmo, WeWork, Mistral, Perplexity, Cohere, Hugging Face, Scale AI, Evernote, Skype, ICQ
+100: Juicero :: Raised $120 million to sell a Wi-Fi juicer. Then people learned you could squeeze the bags by hand.
+
+? Name an airline
+10: Delta, American Airlines|American, United, Southwest, JetBlue, Spirit
+15: Oceanic Airlines|Oceanic, Pan Am
+30: Alaska Airlines|Alaska, Frontier, British Airways, Air Canada, Lufthansa, Emirates, Air France, KLM, Qantas, Hawaiian Airlines|Hawaiian, Ryanair, EasyJet, Virgin Atlantic|Virgin, Allegiant, Singapore Airlines, Qatar Airways|Qatar, Japan Airlines|JAL, WestJet, Aer Lingus, Turkish Airlines, Cathay Pacific
+60: TWA|Trans World Airlines, Continental, Northwest, US Airways|USAir, America West, AirTran, ANA|All Nippon Airways, Korean Air, Etihad, Swissair|Swiss, SAS|Scandinavian Airlines, Finnair, Iberia, Alitalia, ITA Airways, TAP|TAP Portugal, Icelandair, WOW Air, Norwegian, Air New Zealand, Aeromexico, Avianca, LATAM, Copa, Volaris, Air India, IndiGo, China Southern, China Eastern, Air China, Thai Airways, Vietnam Airlines, Malaysia Airlines, AirAsia, Philippine Airlines, Garuda Indonesia, El Al, Saudia, Ethiopian Airlines, South African Airways, Kenya Airways, Breeze, Avelo, Sun Country
+85: Braniff, Eastern, Piedmont, PSA, Ted, Song, Western Airlines, Reno Air, Midway, ValuJet, Tower Air, Ozark, Republic, Hughes Airwest, Laker Airways, Monarch, Flybe, Thomas Cook, BOAC, Sabena, Ansett, Kingfisher, Aeroflot, LOT, Aegean, Wizz Air, Jet2, Vueling, Transavia, Pegasus, Scoot, Cebu Pacific, Air Tahiti Nui, Fiji Airways, Aloha Airlines, Cape Air, Mokulele, Silver Airways, Contour
+100: Air Koryo :: North Korea's state airline, long the only one rated just one star by airline reviewers Skytrax.
+
+? Name a kitchen utensil
+10: Fork, Knife, Spoon, Spatula, Whisk, Tongs
+15: Spork, Melon baller
+30: Ladle, Peeler, Can opener, Grater, Rolling pin, Colander|Strainer, Measuring cup, Cutting board, Chef's knife, Wooden spoon, Pizza cutter, Bottle opener, Corkscrew, Mixing bowl, Pan, Pot, Skillet, Turkey baster|Baster, Ice cream scoop, Chopsticks, Butter knife, Steak knife, Bread knife, Garlic press, Slotted spoon, Thermometer, Oven mitt, Timer, Sieve, Funnel, Blender
+60: Mandoline, Mortar and pestle|Mortar|Pestle, Microplane|Zester, Potato masher|Masher, Pastry brush, Pastry cutter, Cookie cutter, Cheese grater, Meat tenderizer|Meat mallet, Ricer, Salad spinner, Skimmer|Spider, Dutch oven, Wok, Paring knife, Cleaver, Sifter, Nutcracker, Egg slicer, Apple corer, Juicer|Lemon squeezer, Pepper mill, Salt shaker, Kitchen shears, Rubber scraper, Bench scraper, Honing steel|Knife sharpener, Trivet, Tea strainer, Reamer|Citrus reamer, Cake tester, Piping bag, Baking sheet|Cookie sheet, Cooling rack, Ramekin, Immersion blender, Kitchen torch|Torch
+85: Chinois, Tamis, Mezzaluna, Santoku, Nakiri, Boning knife, Fillet knife, Oyster knife, Lobster pick, Lobster cracker, Fish spatula, Fish bone tweezers, Grapefruit spoon, Butter curler, Egg coddler, Egg topper, Comal, Tagine, Molcajete, Suribachi, Tortilla press, Pasta fork, Pasta roller, Spaetzle maker, Strawberry huller, Banana slicer, Avocado slicer, Pie bird, Dough whisk, Docker, Bamboo steamer, Spiralizer|Zoodler, Cherry pitter, Olive pitter, Poultry shears, Trussing needle, Larding needle, Flat whisk, Ball whisk
+100: Spurtle :: A Scottish stick for stirring porridge. The World Porridge Making Championship's trophy is the Golden Spurtle.
+
+? Name a hand tool
+10: Hammer, Screwdriver, Wrench, Saw, Pliers, Drill
+15: Sonic screwdriver, Swiss Army knife
+30: Tape measure, Level, Allen wrench|Hex key, Socket wrench|Ratchet|Socket, Utility knife|Box cutter, Crowbar, Chisel, Axe, Clamp, Mallet, Hacksaw, Staple gun, Nail gun, Pry bar, Shovel, Rake, File, Sander, Stud finder, Vise, Jigsaw, Circular saw, Hatchet, Wire cutters, Flashlight, Caulk gun, Paintbrush, Putty knife, Pickaxe|Pick, Sledgehammer, Tin snips
+60: Awl, Plane|Hand plane, Rasp, Bolt cutters, Channel locks, Needle-nose pliers, Vise grips|Locking pliers, Speed square, Square, Soldering iron, Multimeter, Spade, Mattock, Adze, Trowel, Hoe, Drywall saw, Coping saw, Band saw, Bench grinder, Router, Lathe, Impact driver, Phillips head, Flathead, Torque wrench, Pipe wrench, Monkey wrench, Crescent wrench|Adjustable wrench, Claw hammer, Ball-peen hammer|Ball peen, Rubber mallet, Chalk line, Plumb bob, Drill press, Dremel, Heat gun, Wire stripper, Cold chisel, Nail set, Hole saw, Miter saw, Table saw, Reciprocating saw|Sawzall, Bit brace
+85: Spokeshave, Froe, Drawknife, Sliding bevel|Bevel, Marking gauge, Try square, Dovetail saw, Tenon saw, Fret saw, Scraper, Burnisher, Scribe, Gimlet, Auger, Cant hook, Peavey, Maul, Drift punch, Center punch, Tap and die, Feeler gauge, Caliper, Micrometer, Wonder bar, Basin wrench, Strap wrench, Tongue and groove pliers, Lineman's pliers, Bradawl, Rabbet plane, Shoulder plane, Block plane, Jack plane, Mortise chisel, Slick, Japanese pull saw|Ryoba, Hoof pick
+100: Pulaski :: Half axe, half hoe, named for forest ranger Ed Pulaski, a hero of the Great Fire of 1910. Wildland crews still use it.
+
+? Name a kind of hat
+~drop hat
+10: Baseball cap|Ball cap, Beanie, Cowboy|Stetson, Top, Sombrero, Fedora
+15: Fez, Tinfoil, Dunce cap, Propeller|Propeller beanie
+30: Beret, Bucket, Sun, Visor, Hard, Party, Witch's, Chef's|Toque, Bowler|Derby, Trucker, Snapback, Mortarboard|Graduation cap, Panama, Newsboy cap|Newsie, Flat cap, Crown, Helmet, Turban, Yarmulke|Kippah, Santa, Sailor, Pirate|Tricorn, Pork pie|Porkpie, Balaclava, Fisherman's, Ushanka|Russian, Tiara, Headband, Bandana, Bonnet|Sunbonnet
+60: Bearskin, Pith helmet, Deerstalker, Trilby, Homburg, Boater|Straw boater, Cloche, Fascinator, Pillbox, Stovepipe, Ten-gallon, Kepi, Shako, Garrison cap, Campaign, Conical|Rice, Hijab, Mitre|Bishop's mitre, Papal tiara, Bicorne, Akubra, Gaucho, Zucchetto, Coonskin cap, Jester, Nurse's cap, Sailor cap, Aviator, Stocking cap, Tam|Tam o' shanter, Kufi, Taqiyah, Durag|Do-rag
+85: Balmoral, Glengarry, Busby, Cavalier, Gat, Kokoshnik, Phrygian cap, Hennin, Wimple, Snood, Sugegasa, Papakha, Karakul, Keffiyeh|Ghutrah, Shtreimel, Spodik, Biretta, Galero, Capotain, Breton, Slouch, Vaquero, Montera, Chullo, Nón lá|Non la, Pussyhat, Ascot cap, Gatsby, Boonie
+100: Sou'wester|Southwester :: The fisherman's waterproof hat, with a long brim down the back to keep the sea off your neck.
+
+? Name a kind of shoe
+~drop shoe,shoes
+10: Sneakers|Tennis, Boots, Sandals, Heels|High heels, Flip-flops|Flip flops, Loafers, Slippers, Crocs
+15: Heelys, Moon boots, Uggs|Ugg boots
+30: Cowboy boots, Flats|Ballet flats, Clogs, Oxfords, Moccasins, Wedges, Pumps, Stilettos, Platforms, Birkenstocks, Converse, Rain boots|Galoshes|Wellingtons|Wellies, Hiking boots, Cleats, Slides, Dress, Boat|Docksiders, Mary Janes, Combat boots, Work boots, Snow boots, Ballet|Pointe, Tap, Running, Golf, Bowling, Water, Ice skates, Roller skates, Doc Martens|Docs
+60: Espadrilles, Derby, Brogues, Chelsea boots, Chukka boots|Chukkas, Desert boots, Monk straps, Penny loafers, Huaraches, Mules, Peep toes, Kitten heels, Slingbacks, Ankle boots|Booties, Knee-high boots, Thigh-high boots, Gladiator sandals, Jellies|Jelly, Keds, Vans, Wingtips, Creepers, Clodhoppers, Waders, Sabots, Tevas, Hush Puppies, Toms, Zoris, Geta, Tabi, Dr. Scholl's, Air Jordans|Jordans, Yeezys, Toe|Five Finger|Vibram, Mukluks, Stompers, Gumboots, Lace-ups, Sperry|Sperrys
+85: Winklepickers, Spectators, Balmorals, Bluchers, Ghillies, Chopines, Pattens, Brothel creepers, Cothurnus, Caligae, Kolhapuri, Mojari|Jutti, Lotus, Okobo, Wooden|Klompen, Barefoot, Ropers, Harness boots, Jodhpurs, Paddock boots, Hessian boots, Nurse's, Orthopedic, Gaiters, Spats, Sock boots, Nike Mags, Reebok Pumps
+100: Poulaines|Crakows :: Medieval shoes with toes so long England passed a law limiting their length.
+
+? Name a fabric
+~drop fabric
+10: Cotton, Silk, Denim, Wool, Polyester, Leather
+15: Spandex, Gore-Tex
+30: Linen, Nylon, Velvet, Satin, Flannel, Fleece, Corduroy, Cashmere, Lace, Suede, Burlap, Canvas, Tweed, Rayon, Chiffon, Lycra, Terry cloth|Terrycloth, Felt, Jersey, Khaki, Microfiber, Acrylic, Mesh, Tulle, Vinyl, Hemp, Organza
+60: Gingham, Seersucker, Chambray, Taffeta, Muslin, Cheesecloth, Damask, Brocade, Poplin, Twill, Oxford, Georgette, Crepe, Angora, Mohair, Alpaca, Merino, Chenille, Pashmina, Tartan, Paisley, Neoprene, Polar fleece, Bamboo, Modal, Viscose, Lamé|Lame, Sateen, Batiste, Voile, Gabardine, Herringbone, Houndstooth, Madras, Calico, Oilcloth, Toile, Kevlar, Patent leather, Ultrasuede, Sequin, Moleskin, Sharkskin
+85: Bombazine, Dimity, Cambric, Charmeuse, Shantung, Dupioni, Crinoline, Jacquard, Matelassé|Matelasse, Ottoman, Pongee, Organdy, Melton, Worsted, Serge, Loden, Nankeen, Sailcloth, Duck, Dungaree, Drill, Ticking, Broadcloth, Barathea, Cheviot, Harris Tweed, Shetland, Vicuña|Vicuna, Qiviut, Piña|Pina, Ikat, Batik, Kente, Mudcloth, Chintz, Cretonne, Lurex, Tencel, Lyocell, Microsuede, Gossamer, Samite, Baize, Mousseline
+100: Sea silk|Byssus :: Woven from the hair-like threads of a giant Mediterranean clam. Hardly anyone alive still knows how.
+
+? Name a currency
+10: Dollar, Euro, Pound, Yen, Peso
+15: Bitcoin, Schrute Bucks
+30: Rupee, Franc|Swiss franc, Ruble|Rouble, Yuan|Renminbi, Won, Real, Krona|Krone, Shekel, Lira, Rand, Dinar, Baht, Deutsche Mark|Mark, Drachma, Canadian dollar|Loonie, Australian dollar, Zloty, Dogecoin
+60: Forint, Dirham, Riyal, Ringgit, Rupiah, Dong, Koruna, Hryvnia, Kuna, Leu, Lev, Naira, Cedi, Shilling, Birr, Kwacha, Pula, Peseta, Escudo, Guilder, Sol, Bolívar|Bolivar, Quetzal, Colón|Colon, Lempira, Córdoba|Cordoba, Guarani, Tugrik, Kyat, Taka, Kip, Riel, Afghani, Tenge, Manat, Doubloon, Ducat, Denarius
+85: Balboa, Gourde, Ngultrum, Pa'anga, Vatu, Kina, Tala, Rufiyaa, Som, Somoni, Lari, Dram, Ouguiya, Lilangeni, Loti, Dalasi, Leone, Kwanza, Metical, Ariary, Nakfa, Pataca, Florin, Sovereign, Farthing, Groat, Guinea, Thaler, Solidus, Obol, Talent, Cowrie, Zimbabwean dollar, Reichsmark, Sucre, Inti, Austral
+100: Rai stones|Rai :: Giant limestone discs used as money on the island of Yap. Too heavy to move, so people just agree who owns them.
+
+? Name a social media app
+10: Facebook, Instagram, TikTok, YouTube, Twitter|X, Snapchat
+15: MySpace, Vine
+30: Reddit, LinkedIn, Pinterest, WhatsApp, Discord, Tumblr, Twitch, BeReal, Bluesky, Threads, Telegram, WeChat, Nextdoor, Clubhouse, Yelp, Meetup, Mastodon, Substack, Messenger, Strava, Goodreads, Letterboxd, Flickr
+60: Friendster, Orkut, Bebo, Periscope, Yik Yak, Google+|Google Plus, AIM|AOL Instant Messenger, MSN Messenger, Xanga, LiveJournal, DeviantArt, Digg, StumbleUpon, Foursquare, Path, Ello, Parler, Truth Social, Gab, Patreon, Kik, Whisper, Yubo, Line, KakaoTalk, VK, Weibo, Douyin, Kuaishou, Quora, Imgur, 4chan, Neopets, Club Penguin, Habbo Hotel, Second Life, Classmates.com, Ning, Plurk, Tagged, Hi5, MeWe, Steam
+85: SixDegrees|Six Degrees, GeoCities, Angelfire, Tripod, Usenet, Google Buzz, Google Wave, Meerkat, Peach, Vero, Cohost, Lemon8, RedNote|Xiaohongshu, Pownce, Jaiku, Brightkite, Dodgeball, Formspring, Ask.fm, Chatroulette, Omegle, Secret, Sarahah, NGL, Gas, Poparazzi, Dispo, TBH, QQ, Renren, Mixi, Cyworld, Nexopia, Piczo, Faceparty, Friends Reunited, MiGente, BlackPlanet, AsianAvenue
+100: Yo :: An app that could only send one word: "Yo." It raised over a million dollars anyway.
+
+? Name a household appliance
+10: Refrigerator|Fridge, Microwave, Oven|Stove, Dishwasher, Washing machine|Washer, Dryer, Toaster
+15: Roomba, Air fryer
+30: Blender, Vacuum|Vacuum cleaner, Coffee maker|Coffee machine, Stand mixer|Mixer|KitchenAid, Freezer, Iron, Hair dryer|Blow dryer, Water heater, Furnace, Air conditioner|AC, Space heater, Humidifier, Dehumidifier, Slow cooker|Crock-Pot, Instant Pot|Pressure cooker, Toaster oven, Garbage disposal, Food processor, Electric kettle, Range, Ceiling fan|Fan, Keurig, Trash compactor, Waffle iron, Rice cooker, Juicer, Can opener, Range hood
+60: Bread maker|Breadmaker, Sous vide, Deep fryer, Ice maker, Wine cooler|Wine fridge, Garment steamer|Clothes steamer, Sewing machine, Air purifier, Hot plate, Griddle, George Foreman Grill, Popcorn maker, Espresso machine, Nespresso, Dehydrator, Chest freezer, Mini fridge, Thermostat, Boiler, Water softener, Sump pump, Smoke detector, Carpet cleaner, Steam mop, Electric blanket, Panini press, SodaStream, Nutribullet|Vitamix, Electric grill, Hand mixer, Electric toothbrush
+85: Salad Shooter, Egg cooker, Yogurt maker, Milk frother, Sandwich maker, Quesadilla maker, Hot dog roller, Soft serve machine, Ice cream maker, Fondue pot, Cotton candy machine, Snow cone maker, Trouser press, Clothes wringer, Bidet, Warming drawer, Induction cooktop, Thermomix, Aga, Rice dispenser, Kimchi fridge, Water cooler, Towel warmer, Bottle warmer, Diaper Genie, Butter churn, Foot spa, Ultrasonic cleaner
+100: Mangle :: Hand-cranked rollers for squeezing water out of laundry, and a real menace to fingers.
+
+? Name a store you'd find in the US
+10: Walmart, Target, Costco, Home Depot|The Home Depot, Best Buy
+15: Blockbuster, Toys "R" Us|Toys R Us
+30: Lowe's|Lowes, Macy's, Kohl's, T.J. Maxx|TJ Maxx, Marshalls, Ross, Nordstrom, JCPenney|JC Penney, Dollar Tree, Dollar General, Family Dollar, CVS, Walgreens, Rite Aid, Trader Joe's, Whole Foods, Kroger, Safeway, Publix, Aldi, Sam's Club, IKEA, Bed Bath & Beyond|Bed Bath and Beyond, Barnes & Noble|Barnes and Noble, GameStop, Hobby Lobby, Michaels, Foot Locker, Dick's Sporting Goods|Dick's, Petco, PetSmart, Ulta, Sephora, Bath & Body Works|Bath and Body Works, Victoria's Secret, Gap, Old Navy, Apple Store, Staples, Office Depot, AutoZone, Burlington, HomeGoods, Sears, Kmart, RadioShack, Circuit City, Borders
+60: H-E-B|HEB, Wegmans, Albertsons, Meijer, Winn-Dixie, Food Lion, Harris Teeter, Stop & Shop, Giant, Sprouts, WinCo, Hy-Vee, Menards, Ace Hardware, Tractor Supply, Bass Pro Shops|Bass Pro, Cabela's, REI, Academy Sports, Big 5, Big Lots, Five Below, Spencer's, Hot Topic, Claire's, Build-A-Bear Workshop|Build-A-Bear, Party City, Joann|Jo-Ann, Pier 1, Crate & Barrel|Crate and Barrel, Williams-Sonoma, Pottery Barn, West Elm, Container Store, World Market|Cost Plus World Market, Dillard's, Saks Fifth Avenue|Saks, Neiman Marcus, Bloomingdale's, Belk, Sharper Image, Brookstone, KB Toys, FAO Schwarz, Tower Records, Sam Goody, Waldenbooks, Suncoast, Hollywood Video, Mervyn's, Montgomery Ward, Woolworth|Woolworth's, Aeropostale
+85: Caldor, Ames, Zayre, Bradlees, Hills, Service Merchandise, CompUSA, Babbage's, Electronics Boutique, Software Etc., Wherehouse, Musicland, Camelot Music, Coconuts, Hechinger, Builders Square, A&P, Pathmark, Jewel-Osco, Ralphs, Vons, Smith's, King Soopers, Fred Meyer, Fry's, Ingles, Stater Bros., Schnucks, Wawa, Buc-ee's, Duluth Trading Co., Orvis, Scheels, Fleet Farm, Blain's Farm & Fleet, Runnings, Murdoch's, Ridley's, Gander Mountain, Sportsman's Warehouse, Spirit Halloween, Lids, Things Remembered, Yankee Candle, Hickory Farms
+100: Piggly Wiggly :: The first self-service grocery store, opened in 1916. Before that, a clerk fetched everything for you.
+
+? Name a kind of boat
+~drop boat,ship
+10: Sailboat|Sail, Canoe, Kayak, Yacht, Cruise, Speedboat|Speed, Rowboat|Row
+15: Banana, Gondola, Submarine|U-boat
+30: Tugboat|Tug, Ferry, Fishing, Raft, Pontoon, Jet ski, Catamaran, Houseboat|House, Steamboat|Steam, Aircraft carrier, Battleship, Dinghy, Paddleboat|Paddle, Lifeboat|Life, Barge, Galleon, Pirate, Destroyer, Cargo|Container, Schooner, Dory, Motorboat|Motor, Oil tanker|Tanker, Ark, Longship|Viking, Hovercraft, Airboat, Inflatable
+60: Frigate, Cutter, Sloop, Ketch, Yawl, Trawler, Clipper, Junk, Sampan, Dhow, Trireme, Icebreaker, Corvette, Cruiser, Dreadnought, Bass, Skiff, Punt, Whaleboat|Whaler, Hydrofoil, Riverboat|River, Showboat|Show, Ocean liner|Liner, Paddle steamer, Pedalo|Pedal, Outrigger, Narrowboat|Narrow, Felucca, Man-of-war|Man o' war, Brigantine, Minesweeper, PT, Tall, Shrimper|Shrimp, Pram
+85: Caravel, Carrack, Xebec, Brig, Barque|Bark, Cog, Knarr, Drakkar, Galley, Birlinn, Umiak, Baidarka, Pirogue, Bateau, Bumboat, Lighter, Vaporetto, Wherry, Gig, Jolly, Tender, Smack, Lugger, Dromon, Quinquereme, Monitor, Ironclad, Bireme, Ro-ro, Bulk carrier, Panamax, Dragon, Reed, Currach, Longtail, Proa, Cigarette
+100: Coracle :: A small round boat shaped like a bowl, light enough to carry on your back. The goldfish feels seen.
+
+? Name a job
+10: Doctor, Teacher, Nurse, Lawyer, Firefighter|Fireman, Police officer|Cop|Policeman, Chef|Cook
+15: Influencer, Astronaut
+30: Plumber, Electrician, Accountant, Dentist, Engineer, Pilot, Carpenter, Mechanic, Farmer, Barber, Hairdresser|Hairstylist, Waiter|Waitress|Server, Bartender, Janitor|Custodian, Cashier, Mail carrier|Mailman|Postman, Truck driver|Trucker, Veterinarian|Vet, Pharmacist, Architect, Scientist, Programmer|Software engineer|Software developer|Coder, Banker, Real estate agent|Realtor, Soldier, Photographer, Journalist|Reporter, Actor, Librarian, Secretary, Construction worker, Flight attendant, Paramedic|EMT, Therapist, Judge, Professor, Artist, Musician, Writer|Author, Salesperson|Salesman, Driver, Baker, Butcher, Receptionist, Sailor, Fisherman, Lifeguard, Coach, Security guard, Tailor, Uber driver
+60: Actuary, Welder, Roofer, Locksmith, Zookeeper, Mortician|Undertaker, Surveyor, Paralegal, Stenographer, Translator, Cartographer, Geologist, Marine biologist, Meteorologist, Optometrist, Chiropractor, Dermatologist, Anesthesiologist, Orthodontist, Social worker, Dispatcher, Longshoreman, Lumberjack|Logger, Miner, Rancher|Cowboy, Beekeeper, Florist, Interior designer, Fashion designer, Personal trainer, Dog walker, Nanny|Babysitter, Maid, Bouncer, Stunt double, Sommelier, Barista, Tattoo artist, Lobbyist, Diplomat, Senator, Mayor, Park ranger, Game warden, Bail bondsman, Repo man, Exterminator|Pest control, Chimney sweep, Window washer, Piano tuner, Blacksmith, Cobbler, Glassblower, Taxidermist, Auctioneer, Referee|Umpire, Data analyst, Product manager, UX designer, Web designer
+85: Foley artist, Best boy, Gaffer, Key grip|Grip, Dolly grip, Script supervisor, Cooper, Fletcher, Farrier, Milliner, Haberdasher, Wainwright, Chandler, Luthier, Ombudsman, Bailiff, Coroner, Court jester, Town crier, Lamplighter, Ice cutter, Whaler, Tallyman, Ichthyologist, Aquarist, Oceanographer, Hydrologist, Ornithologist, Entomologist, Perfumer, Water sommelier, Golf ball diver, Professional mourner, Dog food taster, Ethical hacker, Snake milker, Pet detective, Odor judge, Bike messenger, Steeplejack, Cheesemonger, Fishmonger, Ostler, Scrivener
+100: Knocker-up :: Before alarm clocks, you paid someone to tap on your window with a long pole every morning.
+
+? Name a piece of furniture
+10: Couch|Sofa, Chair, Table, Bed, Desk, Dresser
+15: Murphy bed, Futon
+30: Bookshelf|Bookcase, Nightstand, Coffee table, Recliner|La-Z-Boy, Ottoman, Armchair, Stool|Bar stool, Bench, Cabinet, Wardrobe|Armoire, Love seat|Loveseat, Rocking chair, Dining table, Crib, Bunk bed, TV stand, End table, Sectional, Hutch, Chest of drawers, Vanity, Filing cabinet, Bean bag|Bean bag chair, Hammock, Office chair, Shelf, Mattress, Kitchen island, Cot, Lounge chair
+60: Chaise longue|Chaise lounge|Chaise, Credenza, Chiffonier, Sideboard|Buffet, Daybed, Divan, Settee, Tallboy|Highboy, Lowboy, Bureau, Secretary desk, Rolltop desk, China cabinet, Trundle bed, Canopy bed, Four-poster bed, Sleigh bed, Wingback chair, Adirondack chair, Eames chair|Eames lounge chair, Papasan, Tuffet, Footstool, Hope chest, Console table, Nesting tables, Drop-leaf table, Pouf, Vitrine, Étagère|Etagere, Coat rack, Hat stand, High chair|Highchair, Magazine rack, Bassinet, Changing table, Morris chair, Windsor chair, Chesterfield
+85: Tête-à-tête|Tete-a-tete, Récamier|Recamier, Davenport, Escritoire, Commode, Cheval mirror|Cheval glass, Whatnot, Canterbury, Pembroke table, Gateleg table, Tansu, Kotatsu, Zaisu, Bergère|Bergere, Fauteuil, Klismos, Savonarola chair, Barcelona chair, Panton chair, Egg chair, Wassily chair, Ming chair, Tambour, Cassone, Bombé chest|Bombe chest, Knole, Ladderback, Sgabello
+100: Fainting couch :: A Victorian sofa with one raised end. Legend says it was for swooning in tight corsets.

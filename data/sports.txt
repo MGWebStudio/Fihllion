@@ -1,0 +1,128 @@
+? Name an Olympic sport
+10: Swimming, Gymnastics, Track and field|Athletics|Track, Basketball, Soccer|Football
+15: Curling, Breakdancing|Breaking
+30: Figure skating, Ice hockey|Hockey, Skiing, Snowboarding, Volleyball, Beach volleyball, Tennis, Boxing, Wrestling, Diving, Fencing, Archery, Rowing, Cycling, Bobsled|Bobsleigh, Luge, Skateboarding, Surfing, Golf, Baseball, Softball, Judo, Taekwondo, Weightlifting, Water polo, Sailing, Table tennis|Ping pong, Badminton, Rugby, Speed skating, Equestrian|Dressage, Ski jumping, Triathlon, Marathon, Decathlon, Rhythmic gymnastics, Field hockey
+60: Modern pentathlon|Pentathlon, Biathlon, Skeleton, Canoeing|Kayaking|Canoe, Handball, Shooting, Artistic swimming|Synchronized swimming, Karate, Sport climbing|Climbing, Trampoline, Nordic combined, Cross-country skiing, Mogul skiing|Moguls, Freestyle skiing, Short track, Alpine skiing, Slalom, Steeplechase, Hammer throw, Javelin, Discus, Shot put, Pole vault, Long jump, High jump, Triple jump, Hurdles, Heptathlon, BMX, Mountain biking, Open water swimming, Lacrosse, Cricket, Squash
+85: Tug of war, Live pigeon shooting, Solo synchronized swimming, Rope climbing, Croquet, Polo, Roque, Motorboating, Jeu de paume, Pelota, Dueling pistols, Club swinging, Cannon shooting, Obstacle swimming, Underwater swimming, Standing long jump, Art competitions, Kitesurfing|Kiteboarding, Flag football, Ski mountaineering, Racquets
+100: Plunge for distance :: A 1904 Olympic event. You dive in and float as far as you can without moving a muscle.
+
+? Name an NFL team, past or present
+~drop the
+10: Dallas Cowboys|Cowboys, New England Patriots|Patriots, Green Bay Packers|Packers, Kansas City Chiefs|Chiefs, Pittsburgh Steelers|Steelers
+15: Cleveland Browns|Browns
+30: San Francisco 49ers|49ers|Niners, Philadelphia Eagles|Eagles, New York Giants|Giants, Chicago Bears|Bears, Denver Broncos|Broncos, Miami Dolphins|Dolphins, Seattle Seahawks|Seahawks, Buffalo Bills|Bills, Baltimore Ravens|Ravens, New York Jets|Jets, Las Vegas Raiders|Raiders|Oakland Raiders, Detroit Lions|Lions, Minnesota Vikings|Vikings, New Orleans Saints|Saints, Los Angeles Rams|Rams, Washington Commanders|Commanders, Indianapolis Colts|Colts
+60: Cincinnati Bengals|Bengals, Tampa Bay Buccaneers|Buccaneers|Bucs, Tennessee Titans|Titans, Carolina Panthers|Panthers, Los Angeles Chargers|Chargers, Atlanta Falcons|Falcons, Houston Texans|Texans, Arizona Cardinals|Cardinals
+85: Jacksonville Jaguars|Jaguars, Houston Oilers|Oilers, Duluth Eskimos, Pottsville Maroons, Canton Bulldogs, Frankford Yellow Jackets, Providence Steam Roller, Akron Pros, Portsmouth Spartans, Boston Yanks, Dallas Texans
+100: Decatur Staleys|Staleys :: The Chicago Bears' original name, after a company that made corn starch.
+
+? Name an NBA team, past or present
+~drop the
+10: Los Angeles Lakers|Lakers, Chicago Bulls|Bulls, Boston Celtics|Celtics, Golden State Warriors|Warriors, Miami Heat|Heat
+15: Harlem Globetrotters|Globetrotters
+30: New York Knicks|Knicks, San Antonio Spurs|Spurs, Cleveland Cavaliers|Cavaliers|Cavs, Philadelphia 76ers|76ers|Sixers, Houston Rockets|Rockets, Brooklyn Nets|Nets, Dallas Mavericks|Mavericks|Mavs, Detroit Pistons|Pistons, Phoenix Suns|Suns, Milwaukee Bucks|Bucks, Toronto Raptors|Raptors, Denver Nuggets|Nuggets, Oklahoma City Thunder|Thunder|OKC, Los Angeles Clippers|Clippers
+60: Atlanta Hawks|Hawks, Orlando Magic|Magic, Indiana Pacers|Pacers, Portland Trail Blazers|Trail Blazers|Blazers, Utah Jazz|Jazz, Sacramento Kings|Kings, Memphis Grizzlies|Grizzlies, Minnesota Timberwolves|Timberwolves|Wolves, New Orleans Pelicans|Pelicans, Washington Wizards|Wizards, Charlotte Hornets|Hornets
+85: Seattle SuperSonics|SuperSonics|Sonics, Vancouver Grizzlies, New Jersey Nets, Washington Bullets|Bullets, Buffalo Braves, Kansas City Kings, Rochester Royals, Minneapolis Lakers, Cincinnati Royals, San Diego Clippers, New Orleans Jazz, Charlotte Bobcats|Bobcats, St. Louis Hawks, Syracuse Nationals, Fort Wayne Pistons, San Diego Rockets
+100: Toronto Huskies|Huskies :: They played in the league's very first game, in 1946, and folded after one season.
+
+? Name an MLB team, past or present
+~drop the
+10: New York Yankees|Yankees, Boston Red Sox|Red Sox, Los Angeles Dodgers|Dodgers, Chicago Cubs|Cubs, St. Louis Cardinals|Cardinals
+15: Toledo Mud Hens|Mud Hens, Durham Bulls
+30: San Francisco Giants|Giants, New York Mets|Mets, Atlanta Braves|Braves, Chicago White Sox|White Sox, Philadelphia Phillies|Phillies, Houston Astros|Astros, Detroit Tigers|Tigers, Seattle Mariners|Mariners, Texas Rangers|Rangers, Cleveland Guardians|Guardians, Cincinnati Reds|Reds, Pittsburgh Pirates|Pirates, Toronto Blue Jays|Blue Jays, Baltimore Orioles|Orioles, San Diego Padres|Padres
+60: Oakland Athletics|Athletics|A's|Oakland A's, Kansas City Royals|Royals, Milwaukee Brewers|Brewers, Minnesota Twins|Twins, Colorado Rockies|Rockies, Arizona Diamondbacks|Diamondbacks|D-backs, Tampa Bay Rays|Rays, Miami Marlins|Marlins|Florida Marlins, Washington Nationals|Nationals|Nats, Los Angeles Angels|Angels
+85: Montreal Expos|Expos, Brooklyn Dodgers, Washington Senators|Senators, St. Louis Browns, Boston Braves, Milwaukee Braves, Kansas City Athletics, New York Giants, New York Highlanders|Highlanders, Houston Colt .45s|Colt 45s, Philadelphia Athletics, Tampa Bay Devil Rays|Devil Rays, Anaheim Angels, California Angels, Brooklyn Superbas
+100: Seattle Pilots|Pilots :: They lasted one season, 1969, before moving and becoming the Milwaukee Brewers.
+
+? Name a soccer club
+~drop fc,cf,afc
+10: Manchester United|Man U|Man United, Real Madrid, Barcelona|Barca, Liverpool, Arsenal, Chelsea, Inter Miami
+15: Richmond, Wrexham
+30: Manchester City|Man City, Bayern Munich, Juventus, AC Milan|Milan, Inter Milan|Inter, Paris Saint-Germain|PSG, Tottenham Hotspur|Tottenham|Spurs, Atlético Madrid|Atletico Madrid, Borussia Dortmund|Dortmund, Ajax, LA Galaxy|Galaxy, Newcastle United|Newcastle, Everton, Aston Villa, West Ham United|West Ham, Celtic, Rangers, Leeds United|Leeds, Benfica, Porto, Napoli, Roma|AS Roma, Boca Juniors, River Plate, Santos, Flamengo, Seattle Sounders|Sounders, Atlanta United, LAFC
+60: Sevilla, Valencia, Villarreal, Athletic Bilbao|Bilbao, Real Sociedad, Lazio, Fiorentina, Atalanta, Marseille, Lyon, Monaco, Lille, RB Leipzig|Leipzig, Bayer Leverkusen|Leverkusen, Schalke|Schalke 04, PSV Eindhoven|PSV, Feyenoord, Sporting CP|Sporting Lisbon, Galatasaray, Fenerbahçe|Fenerbahce, Besiktas, Al Nassr, Al Hilal, Zenit, Shakhtar Donetsk, Dynamo Kyiv, Red Star Belgrade, Olympiacos, Panathinaikos, Club América|Club America, Chivas, Corinthians, Palmeiras, São Paulo|Sao Paulo, Leicester City|Leicester, Southampton, Brighton, Crystal Palace, Fulham, Wolves|Wolverhampton, Nottingham Forest, Sheffield United, Sunderland, Portland Timbers|Timbers, Toronto, New York Red Bulls|Red Bulls, NYCFC, Orlando City, Sporting Kansas City, D.C. United|DC United, Columbus Crew, Angel City
+85: Accrington Stanley, Forest Green Rovers, Plymouth Argyle, Ipswich Town, Norwich City, Stoke City, Burnley, Blackburn Rovers, Bolton Wanderers, Hull City, Queens Park Rangers|QPR, Charlton Athletic, Millwall, Portsmouth, Swansea City, Cardiff City, Hearts|Heart of Midlothian, Hibernian, Aberdeen, St. Pauli, Union Berlin, Hamburg, Werder Bremen, Hertha Berlin, Sampdoria, Genoa, Torino, Parma, Hellas Verona, Getafe, Celta Vigo, Deportivo La Coruña|Deportivo, Real Betis, Espanyol, Rayo Vallecano, Anderlecht, Club Brugge, Young Boys, Basel, Red Bull Salzburg, Slavia Prague, Legia Warsaw, Ferencváros|Ferencvaros, Dinamo Zagreb, Steaua Bucharest, Kaizer Chiefs, Orlando Pirates, Al Ahly, Urawa Reds, Melbourne Victory, Mamelodi Sundowns, Vasco da Gama, Cruzeiro, Grêmio|Gremio, Internacional, Peñarol|Penarol, Nacional, Colo-Colo, Necaxa
+100: Grimsby Town :: Fans of this English port-town club have brought giant inflatable fish to matches. They're nicknamed the Mariners.
+
+? Name a golf term
+10: Birdie, Bogey, Par, Eagle, Hole in one|Ace, Tee, Putt
+15: Albatross, Mulligan
+30: Driver, Iron, Wedge, Putter, Fairway, Green, Bunker|Sand trap, Rough, Caddie|Caddy, Slice, Hook, Fore, Handicap, Chip, Drive, Double bogey, Divot, Water hazard|Hazard, Clubhouse, Links, Scramble, Pitch, Wood, Sand wedge, Back nine, Front nine, Shank, Dogleg, Masters, Green jacket, Gimme
+60: Bump and run, Fade, Draw, Lay up, Pin|Flagstick, Yips, Stimpmeter, Approach shot, Apron, Foursome, Double eagle, Skins, Match play, Stroke play, Stableford, Best ball, Sandbagger, Whiff, Topped shot, Sweet spot, Long iron, Hybrid, Mashie, Niblick, Cart, Clubface, Backswing, Follow through, Grip, Tee box, Ryder Cup, Worm burner, Break, Cup, Lie, Flop shot, Stinger, 19th hole|Nineteenth hole, Snowman, Frog hair, Ball marker
+85: Spoon, Brassie, Cleek, Jigger, Baffy, Featherie, Gutta-percha, Dormie, Kick, Pull, Push, Thin, Fat, Sclaff, Duff, Hosel, Loft, Bounce, Shaft, Nassau, Wolf, Bingo Bango Bongo, Fried egg, Texas wedge, Provisional, Casual water, Ground under repair, Out of bounds|OB, Turkey, Barkie, Sandy, Greenie, Chili dip, Yardage book, Lag putt, Gross score
+100: Condor :: Four under par on a single hole. It's only ever been recorded a handful of times.
+
+? Name a tennis player
+~last
+10: Serena Williams, Roger Federer, Rafael Nadal|Rafa, Novak Djokovic, Venus Williams
+15: Anna Kournikova
+30: Andre Agassi, Pete Sampras, John McEnroe, Björn Borg|Bjorn Borg, Steffi Graf, Martina Navratilova, Billie Jean King, Maria Sharapova, Andy Murray, Naomi Osaka, Carlos Alcaraz, Jimmy Connors, Chris Evert, Coco Gauff, Arthur Ashe, Monica Seles, Andy Roddick, Boris Becker, Jannik Sinner, Emma Raducanu, Iga Świątek|Iga Swiatek, Aryna Sabalenka
+60: Stefan Edberg, Ivan Lendl, Mats Wilander, Rod Laver, Margaret Court, Evonne Goolagong, Bobby Riggs, Lleyton Hewitt, Kim Clijsters, Justine Henin, Martina Hingis, Lindsay Davenport, Ashleigh Barty, Ana Ivanovic, Caroline Wozniacki, Stan Wawrinka, Daniil Medvedev, Alexander Zverev, Stefanos Tsitsipas, Nick Kyrgios, Frances Tiafoe, Taylor Fritz, Juan Martín del Potro|Juan Martin del Potro|Del Potro, Marat Safin, Goran Ivanišević|Goran Ivanisevic, Michael Chang, Jim Courier, Pat Rafter, Yannick Noah, Ilie Nastase, Althea Gibson, Arantxa Sánchez Vicario|Arantxa Sanchez Vicario, Gabriela Sabatini, Jennifer Capriati, Elena Rybakina
+85: Ken Rosewall, Roy Emerson, John Newcombe, Don Budge, Fred Perry, Bill Tilden, René Lacoste|Rene Lacoste, Suzanne Lenglen, Helen Wills Moody, Maureen Connolly, Guillermo Vilas, Manuel Santana, Vitas Gerulaitis, Thomas Muster, Yevgeny Kafelnikov, Gustavo Kuerten, Carlos Moyá|Carlos Moya, Tim Henman, Greg Rusedski, Tomas Berdych, Jo-Wilfried Tsonga, David Ferrer, Kei Nishikori, Marin Čilić|Marin Cilic, Dominic Thiem, Casper Ruud, Ben Shelton, Tommy Paul, Jessica Pegula, Ons Jabeur, Simona Halep, Li Na, Petra Kvitova, Angelique Kerber, Sloane Stephens, Madison Keys, Danielle Collins, John Isner, Kevin Anderson
+100: Nicolas Mahut :: He lost the longest match in tennis history: 11 hours and 5 minutes, over three days at Wimbledon.
+
+? Name a basketball player
+~last
+10: Michael Jordan, LeBron James, Kobe Bryant, Stephen Curry|Steph Curry, Shaquille O'Neal|Shaq
+15: Muggsy Bogues, Manute Bol
+30: Magic Johnson, Larry Bird, Kareem Abdul-Jabbar|Kareem, Wilt Chamberlain, Bill Russell, Tim Duncan, Kevin Durant, Allen Iverson, Dirk Nowitzki, Giannis Antetokounmpo|Giannis, Dwyane Wade, James Harden, Carmelo Anthony, Yao Ming, Charles Barkley, Dennis Rodman, Scottie Pippen, Kevin Garnett, Hakeem Olajuwon, Nikola Jokić|Nikola Jokic, Luka Dončić|Luka Doncic, Russell Westbrook, Kyrie Irving, Anthony Davis, Kawhi Leonard, Jayson Tatum, Caitlin Clark, Victor Wembanyama|Wemby, Patrick Ewing, Julius Erving|Dr. J, Karl Malone, John Stockton, Reggie Miller, Vince Carter, Tracy McGrady, Paul Pierce, Ray Allen, Steve Nash, Jason Kidd, Chris Paul, Derrick Rose, Dwight Howard, Blake Griffin
+60: Oscar Robertson, Jerry West, Bob Cousy, Elgin Baylor, Moses Malone, David Robinson, Isiah Thomas, Clyde Drexler, Dominique Wilkins, Pete Maravich|Pistol Pete, Bill Walton, Larry Johnson, Shawn Kemp, Gary Payton, Alonzo Mourning, Grant Hill, Chris Webber, Penny Hardaway, Manu Ginóbili|Manu Ginobili, Tony Parker, Pau Gasol, Klay Thompson, Draymond Green, Damian Lillard, Devin Booker, Joel Embiid, Zion Williamson, Ja Morant, Anthony Edwards, Shai Gilgeous-Alexander, Jimmy Butler, Paul George, Lisa Leslie, Sue Bird, Diana Taurasi, Candace Parker, Sheryl Swoopes, Maya Moore, A'ja Wilson, Breanna Stewart, Angel Reese, Jeremy Lin, Spud Webb, Nate Robinson, Robert Horry, Steve Kerr, Phil Jackson, Bill Laimbeer, Rick Barry, George Gervin, Walt Frazier, Earl Monroe, Kevin McHale, Robert Parish, James Worthy, Tiny Archibald, Dave Cowens
+85: George Mikan, Bob Pettit, Dolph Schayes, Nate Thurmond, Willis Reed, Wes Unseld, Elvin Hayes, Dave DeBusschere, Connie Hawkins, Artis Gilmore, Alex English, Adrian Dantley, Bernard King, Sidney Moncrief, Dennis Johnson, Joe Dumars, Tim Hardaway, Mitch Richmond, Chris Mullin, Detlef Schrempf, Arvydas Sabonis, Dražen Petrović|Drazen Petrovic, Toni Kukoč|Toni Kukoc, Vlade Divac, Gheorghe Mureșan|Gheorghe Muresan, Shawn Bradley, Earl Boykins, Bol Bol, Boban Marjanović|Boban Marjanovic, Metta World Peace|Ron Artest, Nick Young, JaVale McGee, Kwame Brown, Greg Oden, Anthony Bennett, Harrison Barnes, Alex Caruso, Walker Kessler, Nikola Vučević|Nikola Vucevic, Tacko Fall
+100: Darryl Dawkins :: "Chocolate Thunder" shattered two backboards in 1979 and claimed he came from the planet Lovetron.
+
+? Name a soccer player
+~last
+10: Lionel Messi, Cristiano Ronaldo, Pelé|Pele, Diego Maradona, David Beckham, Neymar
+15: Ted Lasso, Roy Kent
+30: Kylian Mbappé|Kylian Mbappe, Zinedine Zidane, Ronaldinho, Mia Hamm, Wayne Rooney, Erling Haaland, Thierry Henry, Mohamed Salah, Megan Rapinoe, Alex Morgan, Harry Kane, Johan Cruyff, Luka Modrić|Luka Modric, Robert Lewandowski, Zlatan Ibrahimović|Zlatan Ibrahimovic|Zlatan, Steven Gerrard, Landon Donovan, Kevin De Bruyne|De Bruyne, Lamine Yamal, Jude Bellingham, Ronaldo Nazário|Ronaldo Nazario, Clint Dempsey, Christian Pulisic, Abby Wambach, Sergio Agüero|Sergio Aguero, Luis Suárez|Luis Suarez, Virgil van Dijk|Van Dijk, Paul Pogba, Gareth Bale, Eden Hazard
+60: Franz Beckenbauer, Paolo Maldini, Andrea Pirlo, Xavi, Andrés Iniesta|Andres Iniesta, Sergio Ramos, Gerard Piqué|Gerard Pique, Kaká|Kaka, Rivaldo, Romário|Romario, Roberto Carlos, Ruud Gullit, Marco van Basten|Van Basten, Dennis Bergkamp, George Best, Bobby Charlton, Gary Lineker, Alan Shearer, Frank Lampard, Ryan Giggs, Paul Scholes, Eric Cantona, Roy Keane, Michael Owen, Gianluigi Buffon, Manuel Neuer, Oliver Kahn, Iker Casillas, Karim Benzema, Antoine Griezmann, Vinícius Júnior|Vinicius Junior, Son Heung-min, Didier Drogba, Samuel Eto'o, Hope Solo, Carli Lloyd, Sam Kerr, Marta, Alexia Putellas, Tim Howard, Freddy Adu, Bukayo Saka, Phil Foden
+85: Lev Yashin, Alfredo Di Stéfano|Alfredo Di Stefano|Di Stefano, Ferenc Puskás|Ferenc Puskas, Eusébio|Eusebio, Garrincha, Gerd Müller|Gerd Muller, Michel Platini, Sócrates|Socrates, Zico, Lothar Matthäus|Lothar Matthaus, Hristo Stoichkov, Roberto Baggio, Gabriel Batistuta, Davor Šuker|Davor Suker, Carles Puyol, Xabi Alonso, Cafu, Nicolas Anelka, Mesut Özil|Mesut Ozil, Cesc Fàbregas|Cesc Fabregas, Juan Román Riquelme|Juan Roman Riquelme, Carlos Valderrama, Jorge Campos, Kristine Lilly, Michelle Akers, Briana Scurry, Brandi Chastain, Birgit Prinz, Nadine Angerer, Aitana Bonmatí|Aitana Bonmati, Lauren James, Cobi Jones, Alexi Lalas, Brian McBride, Stanley Matthews, Dixie Dean, Bobby Moore, Geoff Hurst, Gordon Banks, Peter Shilton, Paul Gascoigne|Gazza, Vinnie Jones
+100: René Higuita|Rene Higuita :: The Colombian goalkeeper who cleared a shot at Wembley in 1995 with a diving "scorpion kick" behind his head.
+
+? Name a martial art
+10: Karate, Judo, Taekwondo|Tae Kwon Do, Kung fu, Jiu-jitsu|Brazilian jiu-jitsu|BJJ|Jujitsu
+15: Cobra Kai
+30: Muay Thai, Boxing, Wrestling, Krav Maga, Aikido, Tai chi, MMA|Mixed martial arts, Kickboxing, Capoeira, Sumo, Wing Chun, Kendo, Ninjutsu, Hapkido, Sambo
+60: Jeet Kune Do, Kali|Eskrima|Arnis, Silat|Pencak silat, Savate, Systema, Shaolin, Kenjutsu, Iaido, Kyudo, Krabi-krabong, Lethwei, Vale tudo, Kajukenbo, Tang Soo Do, Shotokan, Kyokushin, Goju-ryu, Sanda|Sanshou, Wushu, Bagua|Baguazhang, Xing Yi|Xingyiquan, Hung Gar, Choy Li Fut, Kempo|Kenpo
+85: Bokator, Kalaripayattu|Kalari, Kushti, Pehlwani, Shuai jiao, Glima, Pankration, Catch wrestling, Dambe, Lua, Haidong Gumdo, Subak, Taekkyon, Gatka, Thang-ta, Musti-yuddha, Naginatajutsu, Bojutsu, Sojutsu, Kobudo, Uechi-ryu, Wado-ryu, Shito-ryu, Bajiquan, Drunken boxing|Zui Quan, Praying mantis|Mantis kung fu, Snake style, Tiger style, Monkey style, Crane style, Zen Do Kai, Hwa Rang Do, Kuk Sool Won, Sikaran, Dumog, Yaw-Yan, Laamb
+100: Bartitsu|Baritsu :: A Victorian self-defense style using walking sticks. Sherlock Holmes claims to know it.
+
+? Name a sport played with a ball
+10: Soccer|Football, Basketball, Baseball, Tennis, Golf, Volleyball
+15: Quidditch, Bowling
+30: Rugby, Cricket, Softball, Lacrosse, Field hockey, Dodgeball, Kickball, Pickleball, Ping pong|Table tennis, Handball, Water polo, Racquetball, Squash, Polo, Croquet, Billiards|Pool|Snooker, Tetherball, Four square, Beach volleyball, Wiffle ball, Bocce, American football, Footvolley, Foosball
+60: Jai alai, Sepak takraw, Gaelic football, Hurling, Australian rules football|Aussie rules|AFL, Netball, Korfball, Padel, Futsal, Stickball, Rounders, Pétanque|Petanque, Lawn bowls|Bowls, Kin-Ball, Teqball, Hacky sack|Footbag, Goalball, Paddle tennis, Pelota, Whirlyball, Canadian football, Camogie, Shinty, Medicine ball, Bossaball, Spikeball|Roundnet, Bubble soccer, Slamball, Cuju
+85: Calcio storico, Tchoukball, Fistball, Speedball, Pesäpallo|Pesapallo, Oină|Oina, Lapta, Tamburello, Chinlone, Cycle ball|Radball, Elephant polo, Segway polo, Canoe polo, Horseball, Sipa, Trugo, Wall ball, Wallyball, Eton wall game, Shrovetide football, Underwater rugby, Rollball, Gaga|Ga-ga
+100: Ulama :: A Mesoamerican game about 3,500 years old, still played today. You hit a heavy rubber ball with your hips.
+
+? Name a sport played on ice or snow
+10: Hockey|Ice hockey, Skiing, Snowboarding, Figure skating, Curling
+15: Skeleton, Broomball
+30: Bobsled|Bobsleigh, Luge, Speed skating, Ski jumping, Biathlon, Cross-country skiing, Snowmobiling|Snowmobile racing, Sledding|Tobogganing, Dog sledding|Mushing, Moguls|Mogul skiing, Slalom|Giant slalom, Downhill skiing, Ice climbing, Ice fishing
+60: Nordic combined, Short track, Freestyle skiing, Snowboard cross|Boardercross, Halfpipe, Ski cross, Aerials, Slopestyle, Big air, Monobob, Bandy, Ice dancing|Ice dance, Ringette, Snowshoeing, Ski mountaineering|Skimo, Ski orienteering, Telemark skiing, Heli-skiing, Snowkiting, Sled hockey|Para ice hockey, Pond hockey, Crokicurl, Crashed Ice|Ice cross, Skijoring, Ice yachting|Iceboating, Ice stock|Eisstock, Snow volleyball, Speed skiing
+85: Snow rugby, Ice speedway, Ice racing, Ski ballet, Kicksledding, Naturbahn luge, Fat biking, Winter triathlon, Snow polo, Military patrol, Ski flying, Skibob, Skwal, Snowscoot, Snow golf, Ice golf, Underwater ice hockey
+100: Yukigassen :: Competitive snowball fighting from Japan, with helmets, teams and official rules.
+
+? Name an NHL team, past or present
+~drop the
+10: Boston Bruins|Bruins, Chicago Blackhawks|Blackhawks, New York Rangers|Rangers, Detroit Red Wings|Red Wings, Toronto Maple Leafs|Maple Leafs|Leafs, Montreal Canadiens|Canadiens|Habs, Pittsburgh Penguins|Penguins|Pens
+15: Mighty Ducks|Anaheim Mighty Ducks, Hartford Whalers|Whalers
+30: Philadelphia Flyers|Flyers, Edmonton Oilers|Oilers, Colorado Avalanche|Avalanche|Avs, Tampa Bay Lightning|Lightning, Vegas Golden Knights|Golden Knights, Washington Capitals|Capitals|Caps, St. Louis Blues|Blues, Los Angeles Kings|Kings, Florida Panthers|Panthers, New Jersey Devils|Devils, Dallas Stars|Stars, Minnesota Wild|Wild, New York Islanders|Islanders, Vancouver Canucks|Canucks, Calgary Flames|Flames, San Jose Sharks|Sharks, Anaheim Ducks|Ducks
+60: Buffalo Sabres|Sabres, Ottawa Senators|Senators, Nashville Predators|Predators|Preds, Seattle Kraken|Kraken, Carolina Hurricanes|Hurricanes|Canes, Columbus Blue Jackets|Blue Jackets, Winnipeg Jets|Jets, Utah Mammoth|Mammoth|Utah Hockey Club
+85: Arizona Coyotes|Coyotes|Phoenix Coyotes, Atlanta Thrashers|Thrashers, Quebec Nordiques|Nordiques, Minnesota North Stars|North Stars, Atlanta Flames, Colorado Rockies, Oakland Seals, Kansas City Scouts, Cleveland Barons, St. Louis Eagles, Philadelphia Quakers, Pittsburgh Pirates, Montreal Maroons, Montreal Wanderers, Hamilton Tigers, Brooklyn Americans, New York Americans, Toronto Arenas, Toronto St. Patricks, Detroit Cougars, Detroit Falcons, Quebec Bulldogs
+100: California Golden Seals|Golden Seals :: Their owner made them skate in white boots in the 1970s. The team moved away in 1976.
+
+? Name a position in any sport
+10: Quarterback, Goalie|Goalkeeper, Pitcher, Catcher, Point guard
+15: Seeker
+30: Shortstop, Center, Wide receiver, Linebacker, Running back, Defender, Striker, Midfielder, Forward, Shooting guard, Power forward, Small forward, First baseman|First base, Second baseman|Second base, Third baseman|Third base, Outfielder, Left field|Right field|Center field, Designated hitter|DH, Tight end, Cornerback, Safety, Kicker, Punter, Offensive lineman|Lineman, Defensive end, Winger|Wing, Setter, Libero, Relief pitcher, Closer
+60: Nose tackle, Fullback, Halfback, Long snapper, Holder, Center back|Centre back, Sweeper, Attacking midfielder, Right back, Left back, Prop, Hooker, Fly-half, Scrum-half, Flanker, Number eight, Lock, Wicketkeeper, Bowler, Batsman, Slip, Silly point, Attacker, Outside hitter, Middle blocker, Opposite hitter, Coxswain|Cox, Stroke, Jammer, Blocker, Pivot, Goal attack, Wing attack, Goal shooter, Chaser, Beater, Keeper, Enforcer, Tailback, Slot receiver, Swingman, Sixth man, Utility player, Pinch hitter
+85: Deep backward square leg, Gully, Third man, Long-on, Nightwatchman, Mid-wicket, Extra cover, Regista, Trequartista, False nine, Inverted winger, Wing-back, Stopper, Tighthead prop, Loosehead prop, Blindside flanker, Inside centre, Wing defense, Goal defense, Rover, Ruckman, Full-forward, Half-forward, Back pocket, Nickelback, Dime back, Gunner, H-back, Monster back, Mike linebacker, Sam linebacker, Will linebacker
+100: Silly mid-off :: A real fielding position in cricket. Its neighbors include silly point and cow corner.
+
+? Name a yoga pose
+~drop pose
+10: Downward dog|Downward-facing dog, Tree, Child's, Warrior|Warrior I, Cobra, Lotus
+15: Happy baby, Savasana|Corpse
+30: Mountain, Cat|Cat-cow|Cow, Bridge, Plank, Pigeon, Triangle, Chair, Upward dog|Upward-facing dog, Warrior II, Warrior III, Boat, Crow, Camel, Headstand, Shoulder stand, Sun salutation
+60: Eagle, Dolphin, Locust, Plow, Bow, Half moon, Wheel, Cow face, Butterfly|Bound angle, Lizard, Frog, Seated forward bend, Standing forward bend, Extended side angle, Reclined twist, Legs up the wall, Staff, Easy, Hero, Thread the needle, Puppy, Sphinx, Garland|Malasana, Firefly, Side plank, Dancer|Lord of the dance|King dancer, Gate, Goddess, Sage, Reverse warrior, Tadasana, Balasana, Adho mukha svanasana, Bhujangasana, Vrikshasana, Virabhadrasana, Padmasana, Sukhasana
+85: Scorpion, Peacock, Eight-angle, Flying pigeon, Compass, Bird of paradise, Side crow, Rabbit, Tortoise, Monkey|Hanuman, Fallen star, Wild thing, Humble warrior, Revolved triangle, Revolved chair, Yogi squat, Noose, Heron, Shoelace, Dragon, Toe stand, Embryo, Matsyendrasana, Garudasana, Natarajasana, Bakasana, Kapotasana, Ustrasana, Dhanurasana, Halasana, Sirsasana, Salamba sarvangasana, Trikonasana
+100: Fish|Matsyasana :: Matsyasana. The goldfish has been doing this one for years.

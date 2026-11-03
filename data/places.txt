@@ -1,0 +1,143 @@
+? Name a US state capital
+10: Austin, Boston, Denver, Atlanta, Phoenix, Honolulu
+15: Sacramento, Albany, Tallahassee
+30: Nashville, Columbus, Indianapolis, Salt Lake City, Oklahoma City, Richmond, Raleigh, St. Paul|Saint Paul, Madison, Little Rock, Baton Rouge, Harrisburg, Annapolis, Juneau, Santa Fe, Springfield, Lansing, Hartford, Providence, Trenton
+60: Montgomery, Jackson, Columbia, Charleston, Topeka, Lincoln, Des Moines, Carson City, Boise, Bismarck, Olympia, Cheyenne, Helena, Salem
+85: Pierre, Frankfort, Jefferson City, Dover, Concord, Augusta
+100: Montpelier :: The smallest state capital in the US, and famously the only one without a McDonald's.
+
+? Name a European capital
+~drop city
+10: Paris, London, Rome, Berlin, Madrid
+15: Reykjavik
+30: Athens, Dublin, Vienna, Amsterdam, Lisbon, Moscow, Prague, Brussels, Stockholm, Oslo, Copenhagen, Warsaw, Budapest, Helsinki, Kyiv|Kiev
+60: Bern, Bucharest, Belgrade, Sofia, Zagreb, Minsk, Monaco, Luxembourg, Bratislava, Vilnius, Riga, Tallinn, Ljubljana, Sarajevo, Valletta, Nicosia, Vatican, San Marino
+85: Andorra la Vella, Podgorica, Chisinau|Chișinău, Pristina, Skopje, Tirana
+100: Vaduz :: Liechtenstein's capital has about 5,000 people and a prince living in the castle on the hill.
+
+? Name a river
+~drop river,rio
+10: Nile, Amazon, Mississippi, Thames, Colorado
+15: Styx
+30: Ganges, Seine, Rhine, Danube, Hudson, Missouri, Yangtze, Ohio, Volga, Rio Grande|Grande, Potomac, Tigris, Euphrates, Mekong, Jordan, Tiber, Congo, Delaware, Columbia, Yellow|Huang He, Arkansas, Snake, Susquehanna, East, Charles, Tennessee
+60: Indus, Loire, Niger, Zambezi, Yukon, Mackenzie, Orinoco, Rhône|Rhone, Elbe, Po, Murray, Darling, Shannon, Severn, Brahmaputra, Irrawaddy, Lena, Ob, Yenisei, Amur, Dnieper, Don, Vistula, Oder, Salmon, Sacramento, Platte, Red, Kansas, Allegheny, Monongahela, de la Plata|Plate, Cumberland, Savannah, St. Lawrence|Saint Lawrence, Klondike, Suwannee|Swanee, Mersey, Tyne, Clyde, Avon, Arno, Ebro, Tagus, Douro
+85: Okavango, Limpopo, Orange, Senegal, Volta, Paraná|Parana, Uruguay, Paraguay, Madeira, Purus, Xingu, Tocantins, Negro, Magdalena, Fraser, Churchill, Athabasca, Peace, Nelson, Kootenay, Rogue, Willamette, Gila, Pecos, Brazos, Trinity, Sabine, Wabash, Shenandoah, Rappahannock, James, Connecticut, Penobscot, Salween, Chao Phraya, Pearl, Kaveri, Godavari, Yamuna, Narmada, Ural, Kama, Pechora, Neva, Daugava, Drina, Sava, Inn, Main, Moselle, Meuse, Scheldt, Garonne, Dordogne, Liffey, Trent, Cam, Kwai, Kolyma, Indigirka
+100: Caño Cristales|Cano Cristales :: Colombia's "river of five colors." Plants on its bed turn it red, yellow, green, blue and black.
+
+? Name a mountain
+~drop mount,mountain,mt,peak
+10: Everest, Fuji, Kilimanjaro, K2, Rushmore
+15: Doom, Olympus
+30: Denali|McKinley, Matterhorn, Mont Blanc, St. Helens|Saint Helens, Rainier, Etna, Vesuvius, Whitney, Elbrus, Aconcagua, Krakatoa, Pinatubo, Sinai, Ararat, Hood, Shasta, Kosciuszko, Annapurna, Kangchenjunga
+60: Pikes|Pike's, Mauna Kea, Mauna Loa, Kilauea, Eiger, Jungfrau, Ben Nevis, Snowdon, Zugspitze, Table, Lhotse, Makalu, Cho Oyu, Nanga Parbat, Dhaulagiri, Cotopaxi, Chimborazo, Popocatépetl|Popocatepetl, Washington, Mitchell, Grand Teton|Teton, Half Dome, El Capitan, Longs, Sugarloaf, Logan, Vinson, Erebus, Kenya, Cook|Aoraki, Tambora, Stromboli, Hekla, Eyjafjallajökull|Eyjafjallajokull
+85: Manaslu, Gasherbrum, Broad, Shishapangma, Huascarán|Huascaran, Ojos del Salado, Illimani, Puncak Jaya|Carstensz Pyramid, Ras Dashen, Ventoux, Monte Rosa, Dufourspitze, Grossglockner, Triglav, Musala, Mulhacén|Mulhacen, Teide, Damavand, Haleakala, Borah, Katahdin, Monadnock, Greylock, Mansfield, Cadillac, Gannett, Elbert, Massive, Harvard, Maroon Bells, Capitol, Cloud, Kings, Humphreys, Wheeler, Guadalupe, Black Elk
+100: Thor :: Canada's Mount Thor has the world's greatest sheer vertical drop, about 1,250 metres straight down.
+
+? Name an island
+~drop island,isle,islands
+10: Hawaii, Manhattan, Madagascar, Puerto Rico, Greenland, Cuba, Ireland
+15: Easter, Alcatraz
+30: Bali, Sicily, Jamaica, Iceland, Long, Maui, Oahu, Kauai, Tahiti, Bora Bora, Fiji, Sri Lanka, Great Britain, Taiwan, Borneo, Sumatra, Java, Crete, Corfu, Santorini, Mykonos, Ibiza, Malta, Cyprus, Tasmania, Nantucket, Martha's Vineyard, Aruba, Bermuda, Barbados, Hispaniola|Haiti, Galápagos|Galapagos, Staten, Ellis, Sardinia, Corsica, Capri, Phuket, Maldives
+60: Newfoundland, Vancouver, Baffin, Honshu, Hokkaido, Okinawa, Kyushu, Shikoku, Luzon, Mindanao, New Guinea, Sulawesi, Zanzibar, Mauritius, Seychelles, St. Lucia|Saint Lucia, Trinidad, Tobago, Curaçao|Curacao, Grenada, Antigua, St. Kitts|Saint Kitts, Guam, Tonga, Samoa, Molokai, Lanai, Rhodes, Lesbos, Kos, Skye, Man, Jersey, Guernsey, Wight, Mallorca|Majorca, Tenerife, Elba, Roatan, Cozumel, Key West, Prince Edward|PEI, Coney, Roosevelt, Rikers, Hilton Head, Christmas, Robben, St. Helena|Saint Helena, Bikini Atoll|Bikini, Lord Howe, Komodo, Ascension
+85: Ellesmere, Victoria, Banks, Devon, Axel Heiberg, Spitsbergen|Svalbard, Novaya Zemlya, Sakhalin, Hainan, Socotra, Tristan da Cunha, Pitcairn, Kiribati, Kerguelen, Diego Garcia, Réunion|Reunion, Lombok, Flores, Timor, Palawan, Cebu, Bohol, Orkney, Shetland, Lewis, Iona, Lindisfarne, Gotland, Öland|Oland, Faroe, Aran, Achill, Mackinac, Kodiak, Sanibel, Tangier, Block, Catalina, Attu, Midway, Wake, Nauru, Tuvalu, Palau, Vanuatu, Bougainville, Guadalcanal, Iwo Jima, Tinian, Saipan, Lampedusa, Ischia, Murano, Burano, Naxos, Paros, Ithaca, Delos, Kefalonia
+100: Bouvet :: The most remote island on Earth. The nearest land is uninhabited Antarctica.
+
+? Name an African country
+10: Egypt, South Africa, Nigeria, Kenya, Morocco
+15: Madagascar, Wakanda
+30: Ethiopia, Ghana, Tanzania, Uganda, Algeria, Libya, Sudan, Somalia, Zimbabwe, Rwanda, Tunisia, Congo|Democratic Republic of the Congo|DRC|DR Congo|Republic of the Congo, Cameroon, Senegal, Mali, Angola, Namibia, Botswana, Zambia, Ivory Coast|Côte d'Ivoire|Cote d'Ivoire
+60: Mozambique, Malawi, Niger, Chad, Liberia, Sierra Leone, Guinea, Gambia|The Gambia, Burkina Faso, Benin, Togo, Gabon, Eritrea, South Sudan, Mauritania, Lesotho, Burundi, Central African Republic|CAR, Djibouti
+85: Equatorial Guinea, Guinea-Bissau, Cape Verde|Cabo Verde, São Tomé and Príncipe|Sao Tome and Principe|Sao Tome, Comoros, Seychelles, Mauritius
+100: Eswatini|Swaziland :: Its king renamed the country from Swaziland in 2018, at a party for his own 50th birthday.
+
+? Name an Asian country
+10: China, Japan, India, South Korea|Korea, Thailand, Vietnam
+15: Bhutan
+30: North Korea, Indonesia, Philippines|The Philippines, Malaysia, Singapore, Pakistan, Bangladesh, Nepal, Iran, Iraq, Israel, Saudi Arabia, Afghanistan, Turkey|Türkiye, Mongolia, Cambodia, Laos, Myanmar|Burma, Taiwan, Sri Lanka, Lebanon, Syria, Jordan, Yemen, Qatar, Kuwait, United Arab Emirates|UAE, Oman, Russia
+60: Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Georgia, Bahrain, Palestine, Cyprus
+85: Turkmenistan, Kyrgyzstan, Tajikistan, Maldives, Timor-Leste|East Timor
+100: Brunei :: Its sultan's palace has about 1,800 rooms, more than most hotels.
+
+? Name a country that starts with S
+10: Spain, Sweden, Switzerland, South Africa, South Korea, Saudi Arabia
+15: Scotland
+30: Singapore, Syria, Sudan, Somalia, Serbia, Senegal, Sri Lanka
+60: Slovakia, Slovenia, Sierra Leone, South Sudan, Samoa, San Marino, Seychelles, St. Lucia|Saint Lucia
+85: Solomon Islands, St. Kitts and Nevis|Saint Kitts and Nevis, St. Vincent and the Grenadines|Saint Vincent and the Grenadines, São Tomé and Príncipe|Sao Tome and Principe|Sao Tome
+100: Suriname :: The only country in South America where Dutch is the official language.
+
+? Name a US national park
+~drop national,park,np
+10: Yellowstone, Yosemite, Grand Canyon, Zion
+15: Arches
+30: Glacier, Grand Teton|Teton|Tetons, Rocky Mountain|Rocky Mountains, Great Smoky Mountains|Great Smoky|Smoky Mountains|Smokies, Acadia, Bryce Canyon|Bryce, Olympic, Everglades, Joshua Tree, Death Valley, Shenandoah, Redwood, Sequoia, Denali, Badlands, Mount Rainier|Rainier
+60: Hot Springs, Crater Lake, Canyonlands, Capitol Reef, Big Bend, Mesa Verde, Saguaro, Kings Canyon, Haleakalā|Haleakala, Hawaii Volcanoes, Carlsbad Caverns, Mammoth Cave, Wind Cave, Great Sand Dunes, White Sands, Theodore Roosevelt, Cuyahoga Valley, Indiana Dunes, Biscayne, New River Gorge, Glacier Bay, Katmai, Kenai Fjords, Lassen Volcanic|Lassen, Channel Islands, North Cascades, Voyageurs
+85: Isle Royale, Gates of the Arctic, Kobuk Valley, Lake Clark, Wrangell-St. Elias|Wrangell, Congaree, Dry Tortugas, Guadalupe Mountains, Great Basin, Petrified Forest, Pinnacles, Black Canyon of the Gunnison|Black Canyon, American Samoa, Virgin Islands
+100: Gateway Arch :: The smallest national park in the US is basically one giant arch in St. Louis.
+
+? Name a lake
+~drop lake
+10: Superior, Michigan, Erie, Tahoe, Ontario, Huron
+15: Loch Ness|Ness, Titicaca
+30: Victoria, Placid, Great Salt|Salt, Baikal, Geneva, Como, Tanganyika, Powell, Mead, Okeechobee, Champlain, Crater, Caspian Sea|Caspian, Dead Sea, Swan, George, Minnetonka, Winnipeg, Great Bear, Walden Pond|Walden
+60: Malawi, Great Slave, Garda, Maggiore, Lucerne, Bled, Constance|Bodensee, Volta, Chad, Balaton, Windermere, Lomond|Loch Lomond, Aral Sea|Aral, Nicaragua, Athabasca, Louise, Moraine, Flathead, Yellowstone, Pontchartrain, Lanier, Havasu, Ladoga, Onega, Van, Toba, Sea of Galilee|Galilee|Tiberias, Turkana, Albert, Kivu, Taupo, Eyre, Salton Sea|Salton, Winnebago, Seneca, Cayuga, Okoboji, Coeur d'Alene, Pend Oreille
+85: Vostok, Natron, Peyto, Ohrid, Titisee, Annecy, Hillier, Retba, Maracaibo, Poopó|Poopo, Tonlé Sap|Tonle Sap, Dongting, Poyang, Qinghai, Issyk-Kul, Balkhash, Urmia, Vänern|Vanern, Mälaren|Malaren, Inari, Saimaa, Lough Neagh|Neagh, Wakatipu, Tekapo, Manapouri, Burley Griffin, Mono, Chelan, Sakakawea, Oahe, Fort Peck, Lake of the Woods, Nipigon, Reindeer, Pichola, Dal, Wular
+100: Webster|Chargoggagoggmanchauggagoggchaubunagungamaugg :: Its full Massachusetts name is 45 letters long: Chargoggagoggmanchauggagoggchaubunagungamaugg.
+
+? Name a US state
+10: California, Texas, Florida, New York, Hawaii, Alaska
+15: Delaware, Rhode Island
+30: Ohio, Washington, Colorado, Michigan, Arizona, Georgia, Illinois, Nevada, Oregon, Pennsylvania, Virginia, New Jersey, Tennessee, North Carolina, Massachusetts, Utah, Montana, Louisiana, Minnesota, Wisconsin, Kentucky
+60: Alabama, Mississippi, Maine, Vermont, Idaho, Iowa, Kansas, Missouri, Oklahoma, Indiana, Maryland, Connecticut, South Carolina, New Mexico, Arkansas, Nebraska, New Hampshire
+85: North Dakota, South Dakota, West Virginia
+100: Wyoming :: The least populated state, and the first place in the US to give women the vote, in 1869.
+
+? Name a city in Italy
+10: Rome, Venice, Florence, Milan, Naples
+15: Pisa, Pompeii
+30: Turin, Verona, Bologna, Genoa, Palermo, Siena, Sorrento, Assisi, Amalfi, Positano, Bari, Parma, Perugia, Modena, Trieste, Como, Lucca, Catania, Ravenna, Padua
+60: Bergamo, Cagliari, Messina, Brescia, Vicenza, Cremona, Rimini, Ferrara, Mantua, Taormina, Salerno, Matera, Lecce, Orvieto, San Gimignano, Trento, Bolzano, Ancona, Pescara, Treviso, Syracuse|Siracusa, Portofino, Alberobello, Sanremo|San Remo, Aosta
+85: Reggio Calabria, Reggio Emilia, Piacenza, Pavia, Novara, Foggia, Taranto, Brindisi, Arezzo, Cortona, Montepulciano, Pienza, Urbino, Spoleto, Gubbio, L'Aquila, Sulmona, Caserta, Benevento, Tropea, Agrigento, Trapani, Ragusa, Noto, Sassari, Alghero, Olbia, Udine, Merano, Monza, Lodi, Imola, Maranello, Carrara, Livorno, Prato, Pistoia, Vinci, Cefalù|Cefalu
+100: Corleone :: A real town in Sicily. The Godfather's Vito Andolini took its name when he reached America.
+
+? Name a desert
+~drop desert
+10: Sahara, Mojave, Gobi, Arabian
+15: Antarctica|Antarctic
+30: Kalahari, Sonoran, Atacama, Namib, Great Basin, Painted, Chihuahuan, Outback|Australian Outback, Thar, Death Valley
+60: Taklamakan, Great Victoria, Simpson, Gibson, Patagonian, Negev, Syrian, Karakum, Kyzylkum, Black Rock, Empty Quarter|Rub' al Khali, Sinai, Tanami, Great Sandy, Colorado, Red, Arctic, Libyan, Nubian
+85: Danakil, Dasht-e Kavir|Kavir, Dasht-e Lut|Lut, Ordos, Tengger, Badain Jaran, Karoo, Sechura, Monte, Strzelecki, Sturt Stony, Little Sandy, Owyhee, Alvord, Vizcaino, Wadi Rum, Ténéré|Tenere, Ogaden, Chalbi, Thal, Cholistan, Registan
+100: Carcross :: Often billed as the world's smallest desert. It's a patch of sand dunes in Canada's Yukon.
+
+? Name a city that has hosted the Summer Olympics
+10: Paris, London, Los Angeles|LA, Tokyo, Beijing
+15: Athens, Rio de Janeiro|Rio
+30: Barcelona, Atlanta, Sydney, Seoul, Berlin, Moscow
+60: Munich, Montreal, Mexico City, Rome
+85: Melbourne, Helsinki, Stockholm, Amsterdam, Antwerp
+100: St. Louis|Saint Louis :: At the 1904 Games, the marathon's first finisher had ridden part of the way in a car.
+
+? Name a famous bridge
+10: Golden Gate|Golden Gate Bridge, Brooklyn Bridge|Brooklyn, London Bridge|London, Tower Bridge|Tower
+15: Bridge to Terabithia|Terabithia, Rialto|Rialto Bridge, Bridge of Sighs|Sighs
+30: Sydney Harbour Bridge|Sydney Harbor Bridge|Harbour Bridge|Sydney Harbour, Ponte Vecchio, Bay Bridge, Manhattan Bridge|Manhattan, George Washington Bridge|George Washington, Verrazzano|Verrazano|Verrazzano-Narrows, Mackinac Bridge|Mackinac, Chesapeake Bay Bridge, Charles Bridge, Akashi Kaikyo, Millau Viaduct|Millau, Tacoma Narrows, Seven Mile Bridge|Seven Mile, Bridge on the River Kwai|River Kwai, Rainbow Bridge, Bifrost
+60: Royal Gorge, Queensboro|59th Street Bridge, Williamsburg Bridge, Stari Most|Mostar, Pont Neuf, Pont du Gard, Chain Bridge, Chapel Bridge|Kapellbrücke, Forth Bridge, Humber Bridge, Clifton Suspension Bridge|Clifton, Iron Bridge|Ironbridge, Si-o-se-pol, Sunshine Skyway, Confederation Bridge, New River Gorge, Ambassador Bridge, Arthur Ravenel, Hell Gate, Zakim, Øresund|Oresund, Great Belt, Galata, Bosphorus, Tsing Ma, Vasco da Gama, 25 de Abril, Pont Alexandre III, Helix Bridge, Langkawi Sky Bridge, Glienicke|Bridge of Spies, Edmund Pettus
+85: Capilano, Carrick-a-Rede, Danyang–Kunshan, Lake Pontchartrain Causeway, Hangzhou Bay, Chengyang, Puente de la Mujer, Ponte Sant'Angelo, Millennium Bridge, Rakotz, Cooper River, Vizcaya, Kintai, Banpo, Sheikh Zayed, Dragon Bridge, Bixby Creek|Bixby, Deception Pass, Astoria–Megler, Lion Bridge, Natural Bridge
+100: Golden Bridge|Cầu Vàng|Cau Vang :: A Vietnamese footbridge held up by two giant stone hands.
+
+? Name a famous tower or monument
+~drop the
+10: Eiffel Tower, Statue of Liberty, Washington Monument, Big Ben, Leaning Tower of Pisa|Tower of Pisa, Mount Rushmore|Rushmore
+15: Stonehenge
+30: Lincoln Memorial, Arc de Triomphe, Colosseum, Sphinx|Great Sphinx, Empire State Building, CN Tower, Space Needle, Burj Khalifa, Christ the Redeemer, Gateway Arch, Great Pyramid|Pyramids, Willis Tower|Sears Tower, Parthenon, Tower of London, Taj Mahal, Brandenburg Gate, Trevi Fountain, Angkor Wat
+60: Moai|Easter Island heads, Little Mermaid, Atomium, Tokyo Tower, Tokyo Skytree|Skytree, Oriental Pearl, Nelson's Column, Vietnam Veterans Memorial|Vietnam Memorial, Jefferson Memorial, Crazy Horse Memorial|Crazy Horse, Devils Tower, Hollywood Sign, Cloud Gate|The Bean, Sagrada Familia, St. Basil's, Petronas Towers, Gateway of India, Merlion, Victory Column, Fernsehturm|Berlin TV Tower, Hagia Sophia, Alamo, Petra, Cologne Cathedral, Acropolis, Blarney Stone, Rock of Gibraltar, Spanish Steps
+85: Qutb Minar|Qutub Minar, Giralda, Campanile, Galata Tower, Belém Tower|Belem Tower, Tower of Hercules, Spasskaya Tower, Ostankino, Sky Tower, Milad Tower, Azadi Tower, Motherland Calls, Spring Temple Buddha, Statue of Unity, African Renaissance Monument, Bunker Hill Monument, San Jacinto Monument, Perry's Monument, Coit Tower, Reunion Tower, Stratosphere|Strat, Wallace Monument, Scott Monument, Angel of the North, Kelpies
+100: Manneken Pis :: A tiny statue of a boy peeing. Brussels has given it more than 1,000 costumes.
+
+? Name a landlocked country
+10: Switzerland, Austria, Bolivia, Mongolia, Afghanistan, Nepal
+15: Vatican City|Vatican, Liechtenstein
+30: Hungary, Czech Republic|Czechia, Paraguay, Luxembourg, Ethiopia, Uganda, Zimbabwe, Kazakhstan, Chad, Belarus, Serbia, Slovakia, Rwanda, Laos
+60: Andorra, San Marino, Bhutan, Botswana, Mali, Niger, Zambia, Malawi, Moldova, North Macedonia|Macedonia, Armenia, Azerbaijan, Kosovo, South Sudan, Burkina Faso, Burundi, Central African Republic|CAR, Lesotho
+85: Turkmenistan, Tajikistan, Kyrgyzstan, Eswatini|Swaziland
+100: Uzbekistan :: One of only two doubly landlocked countries. You'd have to cross two borders to reach the sea.
