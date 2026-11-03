@@ -179,6 +179,12 @@ export class World {
 
   // Camera ---------------------------------------------------------------------------
   titleCam() { return -TITLE_SURFACE * this.H / this.ppm; }
+  // Where the title screen's text has to stop, in CSS pixels, to stay clear of the water and the bowl.
+  titleTextLimit() {
+    const surface = TITLE_SURFACE * this.H;
+    const rim = art.BOAT.waterline - art.BOAT.bowl.y + art.BOAT.bowl.r - 3;
+    return (this.boatX > this.W * 0.6 ? surface : surface - rim * this.P) / this.dpr;
+  }
   snapToTitle() { this.cam = this.camTarget = this.titleCam(); }
   m2y(m) { return (m - this.cam) * this.ppm; }
   y2m(y) { return y / this.ppm + this.cam; }

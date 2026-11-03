@@ -56,6 +56,7 @@ function setScreen(name) {
   for (const screen of SCREENS) el[screen].hidden = screen !== name;
   el.hud.hidden = !['play', 'sink', 'reveal'].includes(name);
   el.bootMessage.hidden = true;
+  if (name === 'title') fitTitleLogo();
 }
 
 function replay(node) {
@@ -64,9 +65,9 @@ function replay(node) {
   node.style.animation = '';
 }
 
-function fitLogo(canvas, maxWidth, fishShift = 0) {
-  const { artW, artH } = drawLogo(canvas, fishShift);
-  const scale = Math.max(2, Math.floor(maxWidth / artW));
+function fitLogo(canvas, maxWidth, maxHeight = Infinity) {
+  const { artW, artH } = drawLogo(canvas);
+  const scale = Math.max(2, Math.floor(Math.min(maxWidth / artW, maxHeight / artH)));
   canvas.style.width = `${artW * scale}px`;
   canvas.style.height = `${artH * scale}px`;
 }
@@ -769,8 +770,20 @@ function wire() {
   });
 }
 
+// Tries the full layout, then a compact one, then drops the tagline, so nothing lands on the bowl.
 function fitTitleLogo() {
-  fitLogo(el.logo, Math.min(innerWidth - 32, 620));
+  if (el.title.hidden) return;
+  const sky = el.title.querySelector('.title-sky');
+  const tagline = el.title.querySelector('.tagline');
+  const limit = world.titleTextLimit();
+  const clashes = () => tagline.getBoundingClientRect().bottom > limit;
+  sky.classList.remove('is-compact');
+  tagline.hidden = false;
+  fitLogo(el.logo, Math.min(innerWidth - 32, 620), innerHeight * 0.24);
+  if (!clashes()) return;
+  sky.classList.add('is-compact');
+  fitLogo(el.logo, Math.min(innerWidth - 120, 620), innerHeight * 0.2);
+  if (clashes()) tagline.hidden = true;
 }
 
 async function boot() {
@@ -788,7 +801,6 @@ async function boot() {
   }
   G.today = content.calendar.dayNumber(currentDate());
   wire();
-  fitTitleLogo();
   let shift = 0;
   setInterval(() => {
     if (document.body.dataset.screen !== 'title') return;

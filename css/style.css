@@ -192,6 +192,7 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   display: flex; flex-direction: column; align-items: center;
   padding: max(58px, 9vh) 16px 0;
 }
+.title-sky.is-compact { padding-top: 10px; }
 .logo-wrap { margin: 0; line-height: 0; }
 #logo { image-rendering: pixelated; display: block; }
 .tagline {
@@ -222,6 +223,14 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   text-shadow: 0 1px 0 rgba(0, 25, 45, .9);
 }
 .credit a { pointer-events: auto; }
+@media (max-height: 480px) {
+  .title-sea { padding-top: 10px; }
+  #title .btn-big { padding: 8px 26px; min-height: 44px; font-size: 15px; }
+  .dive-label { margin-top: 8px; }
+  .title-links { display: flex; width: auto; max-width: none; margin-top: 8px; gap: 8px; }
+  .title-links .btn { min-height: 32px; padding: 4px 9px; }
+  .credit { padding-top: 4px; font-size: 16px; }
+}
 
 /* Prompt */
 #play {
