@@ -1,0 +1,35 @@
+? Name a pasta shape
+~drop pasta,noodles,noodle
+10: Spaghetti, Penne, Macaroni|Mac, Lasagna|Lasagne, Fettuccine|Fettucine, Ravioli, Linguine|Linguini
+15: Orzo, Gnocchi, Orecchiette
+30: Rigatoni, Fusilli, Farfalle|Bow tie|Bowtie|Bow ties, Tortellini, Angel hair|Capellini, Rotini, Ziti, Vermicelli, Shells|Conchiglie, Cannelloni, Manicotti
+60: Bucatini, Pappardelle, Tagliatelle, Ditalini, Tortelloni, Cavatappi, Radiatori, Campanelle, Gemelli, Rotelle|Wagon wheel|Wagon wheels, Stelline, Cavatelli, Agnolotti, Tortiglioni, Paccheri, Mezzi rigatoni
+85: Gigli, Calamarata, Trofie, Casarecce, Maltagliati, Garganelli, Pici, Corzetti, Trenette, Bigoli, Fregola, Sagne, Mafalda|Mafaldine, Lumache, Ditali, Acini di pepe, Anelli, Tagliolini, Sorprese, Sedani, Scialatielli, Mostaccioli, Perciatelli, Spaghettini, Fideo, Cappelletti, Culurgiones, Pizzoccheri, Spaccatelle
+100: Strozzapreti :: The name means "priest strangler," and nobody fully agrees why.
+
+? Name a vegetable
+~drop vegetable
+10: Carrot, Broccoli, Potato, Corn, Lettuce, Onion, Tomato, Cucumber, Green bean|String bean, Pea
+15: Kale, Artichoke, Brussels sprout|Brussel sprout|Sprout
+30: Spinach, Cauliflower, Celery, Zucchini|Courgette, Asparagus, Cabbage, Bell pepper|Pepper, Mushroom, Sweet potato, Beet|Beetroot, Eggplant|Aubergine, Radish, Squash, Garlic, Leek, Turnip, Pumpkin, Green onion|Scallion|Spring onion, Yam, Parsnip
+60: Bok choy|Pak choi, Okra, Rutabaga|Swede, Arugula|Rocket, Butternut squash, Collard greens|Collards, Fennel, Shallot, Swiss chard|Chard, Watercress, Jicama, Endive, Radicchio, Kohlrabi, Daikon, Edamame, Snap pea|Sugar snap, Snow pea, Acorn squash, Spaghetti squash, Mustard greens, Lima bean, Horseradish, Taro, Cassava|Yuca, Celeriac|Celery root, Ginger
+85: Salsify, Sunchoke|Jerusalem artichoke, Mizuna, Tatsoi, Burdock, Lotus root, Chayote, Nopales|Cactus paddle, Samphire|Sea beans, Fiddlehead|Fiddlehead fern, Oca, Malanga, Ramps, Cardoon, Sorrel, Broccolini, Broccoli rabe|Rapini, Gai lan|Chinese broccoli|Kai lan, Napa cabbage, Tomatillo, Bitter melon|Bitter gourd, Winged bean, Yardlong bean, Purslane, Dandelion greens, Water spinach|Morning glory, Skirret, Mashua, Ulluco, Hubbard squash, Delicata squash, Pattypan squash, Kabocha
+100: Romanesco :: Each spiral bud is made of smaller spiral buds. It's a natural fractal you can eat.
+
+? Name a dessert
+~drop dessert
+10: Ice cream, Cake, Cookie, Brownie, Pie, Cheesecake
+15: Tiramisu, Crème brûlée|Creme brulee
+30: Apple pie, Chocolate cake, Donut|Doughnut, Cupcake, Pudding, Banana split, Sundae, Milkshake, Churro, Fudge, Gelato, Panna cotta, Key lime pie, Pumpkin pie, Flan, Cannoli, Macaron|Macaroon, Mousse|Chocolate mousse, Carrot cake, Red velvet cake|Red velvet, Éclair|Eclair, Popsicle, Strawberry shortcake|Shortcake, Cobbler|Peach cobbler, Jell-O|Jello|Gelatin, Rice pudding, Bread pudding, Baklava, S'mores|Smores, Sorbet, Funnel cake
+60: Trifle, Pavlova, Sticky toffee pudding, Profiterole, Cream puff, Beignet, Tres leches, Baked Alaska, Bananas Foster, Black Forest cake, Lemon bar, Blondie, Angel food cake, Pound cake, Eton mess, Crumble|Apple crumble, Zabaglione, Strudel|Apple strudel, Napoleon|Mille-feuille, Madeleine, Semifreddo, Mochi, Gulab jamun, Tarte Tatin, Soufflé|Souffle, Whoopie pie, Boston cream pie, Sfogliatella, Dutch baby, Affogato, Bombe, Peach Melba, Cherries jubilee, Crêpes Suzette|Crepes Suzette, Banoffee pie|Banoffee
+85: Clafoutis, Kheer, Knickerbocker glory, Spotted dick, Bakewell tart, Lamington, Nanaimo bar, Pastel de nata, Kulfi, Halo-halo, Bingsu, Rasmalai, Jalebi, Basbousa, Kunafa|Knafeh, Alfajor, Brigadeiro, Sachertorte, Linzer torte, Dobos torte, Malva pudding, Cranachan, Pandowdy, Syllabub, Charlotte, Opera cake, Paris-Brest, Panforte, Zeppole, Stroopwafel, Tapioca pudding|Tapioca, Bread and butter pudding, Posset, Junket, Blancmange, Figgy pudding, Arctic roll, Treacle tart, Frangipane
+100: Croquembouche :: French for "crunch in the mouth." It's a tower of cream puffs glued together with caramel.
+
+? Name a candy or chocolate bar
+~drop candy,bar
+10: Snickers, M&M's|M&Ms|M and Ms|Peanut M&Ms, Reese's|Reeses|Peanut butter cup|Reese's Peanut Butter Cups, Skittles, Kit Kat|KitKat, Hershey's|Hershey|Hersheys
+15: Whatchamacallit, Bit-O-Honey
+30: Twix, Milky Way, Butterfinger, 3 Musketeers|Three Musketeers, Starburst, Sour Patch Kids, Swedish Fish, Gummy bears|Gummy Bear|Gummies, Twizzlers, Nerds, Jolly Rancher, Tootsie Roll, Almond Joy, Mounds, Baby Ruth, Hot Tamales, Mike and Ike, Lemonheads, Junior Mints, Milk Duds, York Peppermint Patty|York|Peppermint Patty, PayDay, Candy corn, Airheads, Laffy Taffy, Pop Rocks, Smarties, Peeps, Dum Dums, Werther's, Toblerone, Ferrero Rocher, Tic Tac, Rolo, Crunch|Nestlé Crunch, Hershey's Kisses|Kisses, Blow Pop, Ring Pop, Warheads, Trolli, Haribo, Lindt
+60: Heath, Zagnut, Clark, Zero, 100 Grand, Mr. Goodbar, Krackel, Skor, Oh Henry!, Necco Wafers|Necco, Good & Plenty, Dots, Raisinets, Goobers, Sno-Caps, Charleston Chew, Razzles, Fun Dip, Pixy Stix, Sixlets, Runts, Big League Chew, Cadbury Creme Egg|Cadbury, Wonka|Wonka Bar, Sugar Daddy, Now and Later, Atomic Fireball|Fireball, Gobstopper|Everlasting Gobstopper, Ghirardelli, Aero, Crunchie, Flake, Mars, Bounty, Maltesers, Wispa, Lion, Caramello, Whoppers, Turkish delight, Pez, Cow Tales, Mary Jane, Life Savers|Lifesavers, Mentos, Altoids, Tootsie Pop, Sweethearts, Chiclets, Boston Baked Beans, Dubble Bubble, Bazooka
+85: Chick-O-Stick, Idaho Spud, Valomilk, Abba-Zaba, Big Hunk, Look!, U-No, Sky Bar, Cherry Mash, 5th Avenue, Reggie!, Kinder Bueno|Bueno, Ritter Sport, Milka, Curly Wurly, Double Decker, Picnic, Fry's Chocolate Cream, Yorkie, Toffee Crisp, Salmiak|Salted licorice, Zotz, Bottle Caps, Wax bottles|Nik-L-Nip, Candy Buttons, Candy cigarettes, Chuckles, Mallo Cup, Squirrel Nut Zippers, Mamba, Hi-Chew, Pocky, White Rabbit, Botan Rice Candy
+100: Goo Goo Cluster :: Made in Nashville since 1912 and billed as the first candy bar to combine several fillings.

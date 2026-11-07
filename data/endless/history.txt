@@ -1,0 +1,26 @@
+? Name an ancient civilization
+~drop ancient,the,civilization
+10: Egyptians|Egypt|Egyptian, Romans|Rome|Roman, Greeks|Greece|Greek, Aztecs|Aztec, Mayans|Maya|Mayan
+15: Atlantis
+30: Incas|Inca, Persians|Persia|Persian, Mesopotamia|Mesopotamian, Babylonians|Babylon|Babylonian, Sumerians|Sumer|Sumerian, Phoenicians|Phoenicia, Assyrians|Assyria, China|Chinese|Han dynasty, Indus Valley, Olmecs|Olmec, Carthage|Carthaginians, Celts, Hittites, Spartans|Sparta, Etruscans, Vikings
+60: Minoans|Minoan, Mycenaeans|Mycenae, Akkadians|Akkad, Nubians|Nubia|Kush, Khmer, Harappan, Zapotec, Toltec, Moche, Nazca|Nasca, Scythians, Parthians, Hebrews, Aksum|Axum, Anasazi|Ancestral Puebloans, Mississippian, Shang dynasty|Shang, Zhou dynasty|Zhou, Qin dynasty|Qin, Elamites, Gauls
+85: Hurrians, Urartu, Lydians, Kassites, Chaldeans, Medes, Nabataeans, Sabaeans|Sheba, Dilmun, Mixtec, Chavín|Chavin, Wari, Tiwanaku, Chimú|Chimu, Caral, Norte Chico, Jomon, Kushan, Maurya, Gupta, Thracians, Dacians, Illyrians, Philistines, Garamantes, Hyksos, Ebla, Mitanni, Amorites, Hopewell, Cahokia, Teotihuacan
+100: Sea Peoples :: Mysterious raiders who helped wreck Bronze Age empires around 1200 BC. Nobody knows who they were.
+
+? Name a US First Lady
+~last
+10: Michelle Obama, Jackie Kennedy|Jacqueline Kennedy|Jackie O, Hillary Clinton, Eleanor Roosevelt, Melania Trump, Jill Biden
+15: Martha Washington, Abigail Adams
+30: Nancy Reagan, Barbara Bush, Laura Bush, Dolley Madison, Mary Todd Lincoln, Lady Bird Johnson, Betty Ford, Rosalynn Carter, Mamie Eisenhower, Pat Nixon
+60: Bess Truman, Lou Henry Hoover, Grace Coolidge, Edith Roosevelt, Edith Wilson, Florence Harding, Julia Grant, Helen Taft, Ida McKinley, Frances Cleveland, Louisa Adams, Elizabeth Monroe, Sarah Polk
+85: Rachel Jackson, Hannah Van Buren, Anna Harrison, Letitia Tyler, Julia Tyler, Margaret Taylor, Abigail Fillmore, Jane Pierce, Eliza Johnson, Lucy Hayes|Lemonade Lucy, Lucretia Garfield, Ellen Arthur, Caroline Harrison, Ellen Wilson, Martha Jefferson
+100: Harriet Lane :: President Buchanan never married, so his niece stepped in as First Lady.
+
+? Name a famous battle
+~drop battle,of,the
+10: Gettysburg, Waterloo, D-Day|Normandy, Pearl Harbor, Bunker Hill
+15: Helm's Deep, Hoth
+30: Hastings, Alamo, Bulge, Midway, Stalingrad, Little Bighorn|Little Big Horn, Thermopylae, Antietam, Yorktown, Iwo Jima, Lexington|Lexington and Concord, Agincourt, Trafalgar, Bull Run|Manassas, Verdun, Somme, Britain, Saratoga, Marathon, Okinawa, New Orleans, Fort Sumter, Dunkirk, Guadalcanal, Gallipoli, Shiloh
+60: Vicksburg, Fredericksburg, Chancellorsville, Appomattox, Trenton, Cannae, Actium, Salamis, Bosworth|Bosworth Field, Tours, Austerlitz, Balaclava, Ypres, Khe Sanh, Dien Bien Phu, Hamburger Hill, Inchon, Chosin Reservoir|Chosin, Leyte Gulf, Coral Sea, El Alamein, Kursk, Berlin, Monte Cassino, Tannenberg, Jutland, Passchendaele, Culloden, Bannockburn, Stirling Bridge, Isandlwana, Rorke's Drift, Zama, Gaugamela, Issus, Lepanto, Vienna, Sekigahara, Plassey, Wounded Knee, Mogadishu, San Juan Hill, Fallujah, Tora Bora, Chickamauga, Cowpens, Fort McHenry, Lake Erie, Tippecanoe
+85: Teutoburg Forest, Carrhae, Adrianople, Hattin, Crécy|Crecy, Poitiers, Tsushima, Leuctra, Pharsalus, Philippi, Alesia, Stamford Bridge, Towton, Naseby, Blenheim, Poltava, Sedan, Mukden, Cambrai, Caporetto, Arnhem, Anzio, Imphal, Kohima, Hürtgen Forest|Hurtgen Forest, Ia Drang, Pork Chop Hill, Talavera, Borodino, Leipzig, Jena, Marengo, Nile, Copenhagen, Cape St. Vincent, Manzikert, Kadesh, Megiddo, Ain Jalut, Talas, Red Cliffs, Fei River, Kalinga, Panipat, Little Round Top
+100: Karánsebes|Karansebes :: The Austrian army reportedly attacked itself by mistake in 1788, though historians doubt the story.

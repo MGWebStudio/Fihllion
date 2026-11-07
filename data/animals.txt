@@ -1,11 +1,3 @@
-? Name a bird
-10: Eagle, Robin, Pigeon, Owl, Penguin, Chicken, Parrot, Seagull|Gull, Crow, Duck
-15: Dodo, Puffin, Kiwi
-30: Sparrow, Hawk, Flamingo, Swan, Goose, Turkey, Blue jay|Jay, Cardinal, Ostrich, Emu, Peacock, Hummingbird, Woodpecker, Falcon, Raven, Toucan, Pelican, Canary, Finch, Stork, Vulture, Heron, Albatross, Crane, Bald eagle, Dove, Magpie, Starling, Macaw, Cockatoo, Parakeet, Quail, Pheasant, Roadrunner, Osprey, Condor, Mockingbird, Bluebird, Oriole
-60: Kingfisher, Nightingale, Wren, Chickadee, Sandpiper, Cormorant, Kookaburra, Cassowary, Rhea, Lark|Meadowlark, Swallow, Goldfinch, Warbler, Thrush, Ibis, Egret, Kestrel, Harrier, Partridge, Grouse, Guinea fowl, Loon, Lovebird, Cuckoo, Blackbird, Grackle, Nuthatch, Titmouse, Cockatiel, Tern, Mallard, Whippoorwill, Merlin, Spoonbill, Snowy owl, Barn owl, Budgie|Budgerigar, Frigatebird, Bowerbird, Lyrebird, Shoebill, Gannet, Hoopoe, Hornbill, Tanager, Vireo, Waxwing, Nene, Blue-footed booby|Booby
-85: Kakapo, Oilbird, Hoatzin, Bee-eater, Secretary bird, Kea, Takahe, Kittiwake, Razorbill, Guillemot, Shearwater, Petrel, Skua, Bittern, Dunnock, Nightjar, Avocet, Curlew, Godwit, Plover, Dunlin, Sanderling, Turnstone, Phalarope, Jacana, Anhinga, Limpkin, Sora, Rail, Coot, Gallinule, Bobolink, Dickcissel, Phoebe, Junco, Towhee, Siskin, Crossbill, Grosbeak, Bunting, Linnet, Yellowhammer, Capercaillie, Ptarmigan, Prairie chicken, Tinamou, Quetzal, Trogon, Motmot, Jabiru, Marabou stork|Marabou, Lammergeier|Bearded vulture, Caracara, Kite, Goshawk, Sparrowhawk, Gyrfalcon, Peregrine falcon|Peregrine, Wattlebird, Fairywren, Tui, Cock-of-the-rock, Treecreeper, Nutcracker, Dipper, Pipit, Wagtail, Chough, Jackdaw, Rook
-100: Potoo :: By day it passes for a broken branch. At night it opens huge cartoon eyes.
-
 ? Name a dog breed
 10: Labrador|Lab|Labrador retriever, Golden retriever|Golden, German shepherd, Poodle, Bulldog, Beagle, Chihuahua, Pug
 15: Corgi, Shiba Inu|Shiba
@@ -13,22 +5,6 @@
 60: Weimaraner, Vizsla, Rhodesian ridgeback, Whippet, Irish setter, English setter, Pointer|German shorthaired pointer, Basenji, Shar-Pei|Shar Pei, Scottish terrier|Scottie, West Highland terrier|Westie, Cairn terrier, Bull terrier, Staffordshire terrier|Staffy, Airedale, Afghan hound, Borzoi, Irish wolfhound, Great Pyrenees, Leonberger, Havanese, Lhasa Apso, Cane Corso, Belgian Malinois|Malinois, Australian cattle dog|Blue heeler|Heeler, Springer spaniel, Brittany, Coonhound, Italian greyhound, Miniature pinscher|Min pin, Keeshond, Puggle, Tibetan mastiff, Chinese crested, Schnoodle, Maltipoo, Dogue de Bordeaux, Old English sheepdog, Shetland sheepdog|Sheltie, Anatolian shepherd, Puli, Portuguese water dog, Catahoula
 85: Xoloitzcuintli|Xolo, Bergamasco, Otterhound, Lagotto Romagnolo, Affenpinscher, Brussels griffon, Norwegian elkhound, Lundehund, Saluki, Sloughi, Azawakh, Pharaoh hound, Ibizan hound, Kuvasz, Beauceron, Briard, Bouvier des Flandres, Schipperke, Tibetan spaniel, Japanese chin, Coton de Tulear, Clumber spaniel, Sussex spaniel, Curly-coated retriever, Flat-coated retriever, Nova Scotia duck tolling retriever|Toller, Chesapeake Bay retriever, Spinone Italiano, Wirehaired pointing griffon, Kooikerhondje, Sealyham terrier, Dandie Dinmont terrier, Glen of Imaal terrier, Skye terrier, Bedlington terrier, Norfolk terrier, Norwich terrier, Lakeland terrier, Manchester terrier, Rat terrier, Treeing walker coonhound, Redbone coonhound, Plott hound, Black Russian terrier, Caucasian shepherd, Boerboel, Tosa, Thai ridgeback, Kai Ken, Kishu Ken, Hokkaido, Finnish spitz, Swedish vallhund, Pumi, Mudi, Cesky terrier, Entlebucher, Greater Swiss Mountain dog
 100: Komondor :: Hungary's sheep guardian, covered head to tail in cords that make it look like a walking mop.
-
-? Name a cat breed
-10: Siamese, Persian, Maine Coon, Tabby
-15: Sphynx|Sphinx
-30: Ragdoll, Bengal, British Shorthair, Russian Blue, Scottish Fold, Abyssinian, American Shorthair, Calico, Domestic shorthair, Himalayan, Burmese, Birman, Manx, Savannah, Norwegian Forest|Norwegian Forest Cat, Tortoiseshell|Tortie, Exotic Shorthair
-60: Devon Rex, Cornish Rex, Munchkin, Oriental Shorthair, Turkish Angora|Angora, Turkish Van, Bombay, Tonkinese, Balinese, Ocicat, Siberian, Chartreux, Egyptian Mau, American Curl, Japanese Bobtail, Somali, Havana Brown, Snowshoe, Korat, Selkirk Rex, American Bobtail, LaPerm, Peterbald, Toyger
-85: Pixie-bob, Chausie, Nebelung, Kurilian Bobtail, Burmilla, Singapura, Serengeti, Minskin, Bambino, Donskoy, Ojos Azules, Sokoke, Khao Manee, Thai, Ragamuffin, Tiffanie, Chantilly, York Chocolate, Cymric, Australian Mist, German Rex, Aegean, Arabian Mau, Colorpoint Shorthair, Highlander, Kinkalow, Minuet|Napoleon, Dragon Li
-100: Lykoi :: A patchy-furred breed from a natural mutation, nicknamed the werewolf cat.
-
-? Name a dinosaur
-10: T. rex|Tyrannosaurus|Tyrannosaurus rex|T-rex|Trex, Triceratops, Velociraptor|Raptor, Stegosaurus, Brontosaurus
-15: Pterodactyl|Pteranodon, Plesiosaurus|Plesiosaur, Mosasaurus
-30: Brachiosaurus, Ankylosaurus, Diplodocus, Allosaurus, Spinosaurus, Apatosaurus, Parasaurolophus, Pachycephalosaurus, Iguanodon, Compsognathus, Dilophosaurus, Gallimimus, Megalosaurus, Utahraptor, Deinonychus
-60: Archaeopteryx, Carnotaurus, Giganotosaurus, Protoceratops, Oviraptor, Styracosaurus, Titanosaurus, Argentinosaurus, Hadrosaurus, Maiasaura, Coelophysis, Plateosaurus, Therizinosaurus, Microraptor, Troodon, Ceratosaurus, Corythosaurus, Edmontosaurus, Pachyrhinosaurus, Sauropelta, Kentrosaurus, Baryonyx, Albertosaurus, Camarasaurus, Dreadnoughtus, Tarbosaurus, Minmi, Psittacosaurus, Suchomimus, Sinosauropteryx, Yutyrannus, Nodosaurus, Euoplocephalus
-85: Amargasaurus, Micropachycephalosaurus, Ouranosaurus, Stygimoloch, Dracorex, Masiakasaurus, Mamenchisaurus, Nigersaurus, Epidexipteryx, Deinocheirus, Kosmoceratops, Sinornithosaurus, Rugops, Herrerasaurus, Eoraptor, Lesothosaurus, Hypsilophodon, Muttaburrasaurus, Leaellynasaura, Qantassaurus, Australovenator, Majungasaurus, Saltasaurus, Sauroposeidon, Supersaurus, Patagotitan, Tsintaosaurus, Zuniceratops, Achelousaurus, Chasmosaurus, Centrosaurus, Pentaceratops, Torosaurus, Olorotitan, Lambeosaurus, Gigantoraptor, Mei long, Mononykus, Tawa, Incisivosaurus, Scutellosaurus, Scelidosaurus, Gastonia, Hesperosaurus, Tuojiangosaurus, Huayangosaurus, Wuerhosaurus, Dacentrurus, Cryolophosaurus, Monolophosaurus, Sinraptor, Acrocanthosaurus, Carcharodontosaurus, Mapusaurus, Concavenator
-100: Irritator :: Named for how irritated scientists were to find dealers had doctored its fossil with car filler.
 
 ? Name a kind of fish
 10: Salmon, Tuna, Goldfish, Trout, Bass, Cod
@@ -114,15 +90,6 @@
 85: Takin, Gaur, Banteng, Anoa, Serow, Chamois, Goral, Tahr, Barasingha, Sika deer, Muntjac, Roe deer, Père David's deer|Pere David's deer, Okapi, Lechwe, Gerenuk, Klipspringer, Duiker, Bontebok, Sitatunga, Bushbuck, Tur, Saiga, Aurochs, Irish elk, Chinkara, Nilgai, Viper, Frog
 100: Saola :: The "Asian unicorn." Scientists only described it in 1992 and have almost never seen one since.
 
-? Name a horse breed
-~drop horse
-10: Clydesdale, Mustang, Arabian, Thoroughbred, Quarter|American Quarter, Shetland|Shetland pony
-15: Palomino, Appaloosa
-30: Paint|American Paint, Morgan, Friesian, Pinto, Percheron, Shire, Lipizzaner|Lipizzan, Belgian|Belgian draft, Tennessee Walker|Tennessee Walking, Andalusian, Standardbred, Welsh pony, Miniature|Mini, Hanoverian
-60: Haflinger, Fjord|Norwegian Fjord, Icelandic, Paso Fino, Peruvian Paso, Trakehner, Oldenburg, Holsteiner, Connemara, Suffolk Punch, Missouri Fox Trotter, Rocky Mountain, Saddlebred|American Saddlebred, Lusitano, Gypsy Vanner|Vanner, Hackney, Dartmoor, Exmoor, Falabella, Przewalski's|Przewalski, Brumby, Cleveland Bay, Warmblood, Barb, Chincoteague|Chincoteague pony, Dutch Warmblood, Ardennes
-85: Boulonnais, Breton, Knabstrupper, Marwari, Kathiawari, Caspian, Bashkir Curly|Curly, Nokota, Kiger Mustang, Mangalarga Marchador, Criollo, Azteca, Shagya, Tersk, Orlov Trotter, Budyonny, Mongolian, Yakut, Basuto, Waler, Camargue, Selle Français|Selle Francais, Welsh Cob|Cob, Dales, Fell, Highland, Eriskay, Kerry Bog, Hucul, Konik, Sorraia, Tarpan, Noriker, Jutland, Poitevin, American Cream Draft, Spanish Mustang
-100: Akhal-Teke :: Turkmenistan's "golden horse," with a coat that gleams like polished metal.
-
 ? Name an animal that starts with P
 10: Pig, Penguin, Panda, Parrot, Polar bear
 15: Platypus, Pangolin
@@ -138,3 +105,39 @@
 60: Thorny devil, Tasmanian tiger|Thylacine, Numbat, Bilby, Quoll, Bandicoot, Wedge-tailed eagle, Lyrebird, Galah, Rainbow lorikeet|Lorikeet, Budgie|Budgerigar, Tiger snake, Blue-tongued skink|Bluetongue|Blue-tongue lizard, Cane toad, Bogong moth, Huntsman|Huntsman spider, Pademelon, Potoroo, Red-bellied black snake, Stonefish, Blue-ringed octopus, Sea dragon|Weedy sea dragon|Leafy sea dragon, Magpie, Black swan, Flying fox, Dugong
 85: Bettong, Kowari, Antechinus, Dunnart, Tree kangaroo, Yabby, Barramundi, Tawny frogmouth|Frogmouth, Currawong, Brolga, Bowerbird, Gang-gang cockatoo, Corroboree frog, Perentie, Inland taipan, Death adder, Mulga, Irukandji, Ghost bat, Honey possum, Ringtail possum, Brushtail possum, Greater glider, Rock-wallaby, Wallaroo, Euro, Spotted quoll, Mountain pygmy possum, Pig-nosed turtle, Murray cod, Witchetty grub, Ulysses butterfly, Emu-wren
 100: Drop bear :: A made-up carnivorous koala Australians use to scare tourists. Keep an eye on the treetops.
+
+? Name a type of shark
+~drop shark,sharks
+10: Great white|White, Hammerhead, Tiger, Whale shark|Whale, Bull
+15: Megalodon
+30: Mako|Shortfin mako, Nurse, Blue, Lemon, Basking, Thresher, Blacktip|Blacktip reef, Goblin, Greenland, Whitetip reef|Reef, Sand tiger|Ragged-tooth, Leopard, Oceanic whitetip|Whitetip, Dogfish|Spiny dogfish, Angel, Cookiecutter, Bamboo
+60: Frilled, Megamouth, Wobbegong, Sixgill|Bluntnose sixgill, Port Jackson, Zebra, Horn, Silky, Dusky, Sandbar, Bonnethead, Blacknose, Spinner, Porbeagle, Salmon, Great hammerhead, Epaulette, Lanternshark|Lantern, Bronze whaler|Copper, Caribbean reef, Galapagos, Sleeper|Pacific sleeper, Swell, Catshark, Sawshark|Saw, Gulper, Sevengill|Broadnose sevengill, Tope|School, Gummy
+85: Pocket, Viper dogfish|Viper, Crocodile, Bramble, Kitefin, Pyjama|Pajama, Borneo, Ganges, Speartooth, Pondicherry, Daggernose, Prickly, Velvet belly, Dwarf lanternshark, Pygmy, Smalltooth sand tiger, Soupfin, Blind, Draughtsboard, Smooth-hound|Hound
+100: Ninja lanternshark|Ninja :: Found in 2015. A researcher's young cousins helped name it, and its scientific name honors the author of Jaws.
+
+? Name a breed of cattle
+~drop cattle,cow,cows,breed,bull
+10: Holstein|Holstein Friesian|Friesian, Angus|Aberdeen Angus|Black Angus, Hereford, Jersey, Texas Longhorn|Longhorn
+15: Wagyu|Kobe
+30: Highland|Scottish Highland|Hairy coo, Brahman, Charolais, Guernsey, Limousin, Simmental, Shorthorn, Brown Swiss, Ayrshire, Red Angus, Belted Galloway|Beltie, Galloway, Dexter, Zebu
+60: Gelbvieh, Santa Gertrudis, Beefmaster, Brangus, Chianina, Piedmontese|Piemontese, Ankole-Watusi|Watusi|Ankole, Devon|Red Devon, Normande, Montbéliarde|Montbeliarde, Murray Grey, Blonde d'Aquitaine, Salers, Maine-Anjou, Tarentaise, Red Poll, Lincoln Red, Welsh Black, Pinzgauer, Braunvieh, Senepol, Corriente, Gir|Gyr, Nelore, Sahiwal, Red Sindhi, Kerry, Milking Shorthorn, Dutch Belted|Lakenvelder, Randall|Randall Lineback, Florida Cracker|Cracker, Pineywoods, Lowline, Aubrac, Belgian Blue, White Park, Heck
+85: Ongole, Kankrej, Hariana, Tharparkar, Hallikar, Amrit Mahal, Kangayam, Sanga, Boran, Tuli, Mashona, Nguni, Afrikaner, Bonsmara, Drakensberger, Mishima, Kuchinoshima, Hanwoo, Yakutian|Yakut, Kalmyk, Busha, Podolica, Maremmana, Romagnola, Marchigiana, Cachena, Barrosã|Barrosa, Mirandesa, Maronesa, Tudanca, Betizu, Pajuna, Sayaguesa, Hérens|Herens, Vosgienne, Bretonne Pie Noir|Pie Noir, Parthenais, Gascon, Bazadaise, Swedish Mountain|Fjäll|Fjall, Telemark, Icelandic, Shetland, Vaynol, Chillingham, Gloucester, Irish Moiled|Moiled, Luing
+100: Vechur :: A tiny breed from Kerala that nearly died out in the 1980s. Some of the cows stand about 3 feet tall at the shoulder.
+
+? Name a primate
+~drop monkey,monkeys,ape,apes
+10: Gorilla, Chimpanzee|Chimp, Orangutan, Baboon, Ring-tailed lemur|Lemur
+15: Human|Humans|Homo sapiens|People|Person
+30: Bonobo, Gibbon, Mandrill, Capuchin, Howler, Spider monkey|Spider, Macaque, Squirrel monkey|Squirrel, Marmoset, Tamarin, Proboscis, Japanese macaque|Snow monkey, Rhesus|Rhesus macaque, Colobus, Tarsier, Aye-aye, Slow loris|Loris, Vervet, Langur, Gelada, Siamang, Sifaka, Golden lion tamarin, Bushbaby|Galago
+60: Uakari, Saki, Titi, Douc, Drill, Mangabey, Guenon, Patas, Gray langur|Hanuman langur, Golden snub-nosed|Snub-nosed, Indri, Potto, Night monkey|Owl monkey|Douroucouli, Woolly monkey|Woolly, Muriqui, Hamadryas, Barbary macaque|Barbary ape, Crab-eating macaque, Pygmy marmoset, Cotton-top tamarin, Emperor tamarin, Mountain gorilla, Hoolock, Mouse lemur, Bamboo lemur, Ruffed lemur
+85: Kipunji, Talapoin, Allen's swamp monkey|Swamp monkey, De Brazza's monkey|De Brazza, Roloway, Diana monkey|Diana, Mona monkey|Mona, Angwantibo, Sportive lemur|Lepilemur, Fork-marked lemur, Avahi|Woolly lemur, Lion-tailed macaque, Toque macaque, Celebes crested macaque|Crested black macaque, Tibetan macaque, Pig-tailed macaque, Bearded saki, Tapanuli orangutan, Cross River gorilla, Slender loris
+100: Skywalker gibbon|Skywalker hoolock gibbon|Skywalker hoolock :: Described in 2017. Its Chinese name means "heaven's movement," and its English one comes from scientists who are Star Wars fans.
+
+? Name a rodent
+~drop rodent,rodents
+10: Mouse|Mice, Rat, Squirrel, Hamster, Guinea pig|Cuy, Beaver
+15: Capybara
+30: Chipmunk, Gerbil, Porcupine, Chinchilla, Groundhog|Woodchuck, Prairie dog, Gopher, Vole, Lemming, Muskrat, Naked mole-rat|Mole rat|Naked mole rat, Dormouse, Flying squirrel, Marmot, Degu, Jerboa, Nutria|Coypu, Pack rat|Woodrat
+60: Agouti, Paca, Mara|Patagonian mara, Kangaroo rat, Pocket gopher, Pocket mouse, Gundi, Springhare|Springhaas, Spiny mouse, Cane rat, Bamboo rat, Hutia, Viscacha, Tuco-tuco, Jird, Fat sand rat|Sand rat, Deer mouse, Harvest mouse, Water vole, Wood mouse|Field mouse, Ground squirrel, Gray squirrel|Grey squirrel, Fox squirrel, Brown rat|Norway rat, Black rat, Kangaroo mouse, Spiny rat, Acouchi, Mountain beaver
+85: Pacarana, Dassie rat, Blesmol, Coruro, Hopping mouse, Rakali|Water rat, Cloud rat, Giant pouched rat|Gambian pouched rat, Zokor, Anomalure|Scaly-tailed squirrel, Long-eared jerboa, Plains viscacha, Red squirrel, Edible dormouse|Fat dormouse, Hazel dormouse
+100: Crested rat|Maned rat :: An African rat that chews poisonous bark and smears the toxin into its fur, so a predator that bites it can die.

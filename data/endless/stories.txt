@@ -1,0 +1,33 @@
+? Name a Greek god or goddess
+10: Zeus, Poseidon, Hades, Athena, Apollo, Aphrodite, Ares
+15: Kratos, Hercules|Heracles
+30: Hera, Hermes, Artemis, Dionysus, Demeter, Hephaestus, Persephone, Eros, Hestia, Pan, Cronus|Kronos, Nike, Gaia
+60: Rhea, Uranus, Atlas, Prometheus, Iris, Nemesis, Hecate, Hebe, Helios, Selene, Eos, Morpheus, Thanatos, Hypnos, Tyche, Asclepius, Aeolus, Triton, Nyx, Erebus, Oceanus, Themis, Eris, Harmonia, Hygieia, Amphitrite, Proteus, Nereus, Metis, Leto, Mnemosyne, Calliope, Clio, Thalia, Terpsichore, Erato, Euterpe, Melpomene, Polyhymnia, Urania
+85: Tethys, Hyperion, Coeus, Phoebe, Crius, Iapetus, Theia, Dione, Maia, Ganymede, Deimos, Phobos, Achlys, Aether, Hemera, Tartarus, Chaos, Ananke, Chronos, Geras, Oizys, Moros, Apate, Dolos, Philotes, Zelus, Bia, Boreas, Zephyrus, Notus, Eurus, Pontus, Styx, Clotho, Lachesis, Atropos, Priapus, Silenus, Aristaeus
+100: Momus :: The god of mockery, thrown off Olympus for criticizing the other gods one time too many.
+
+? Name a Charles Dickens character
+~last
+10: Ebenezer Scrooge, Oliver Twist|Oliver, Tiny Tim, Pip, Bob Cratchit
+15: Jacob Marley
+30: Fagin, Miss Havisham, The Artful Dodger|Artful Dodger|Dodger, David Copperfield, Bill Sikes, Nancy, Estella, Uriah Heep, Mr. Bumble, Sydney Carton, Nicholas Nickleby, Abel Magwitch, Joe Gargery, Ghost of Christmas Past, Ghost of Christmas Present, Ghost of Christmas Yet to Come, Wilkins Micawber|Mr. Micawber, Fezziwig
+60: Samuel Pickwick|Mr. Pickwick, Madame Defarge, Charles Darnay, Lucie Manette, Betsey Trotwood, Little Nell, Little Dorrit|Amy Dorrit, Barnaby Rudge, Martin Chuzzlewit, Edwin Drood, Dora Spenlow, Agnes Wickfield, Steerforth, Mr. Bounderby, Thomas Gradgrind, Wackford Squeers, Jaggers, Herbert Pocket, Bentley Drummle, Wemmick, Belle, Noah Claypole, Mr. Brownlow, Esther Summerson, Sam Weller, Seth Pecksniff, Mrs. Gamp, Daniel Quilp, Mr. Dick
+85: Smike, Vincent Crummles, Newman Noggs, Ralph Nickleby, Harold Skimpole, Lady Dedlock, Mr. Tulkinghorn, Mr. Krook, Inspector Bucket, Mrs. Jellyby, Bradley Headstone, Noddy Boffin, Silas Wegg, Lizzie Hexam, Eugene Wrayburn, John Jasper, Rosa Bud, Sissy Jupe, Stephen Blackpool, Paul Dombey, Captain Cuttle, Toots, Arthur Clennam, Mr. Merdle, Flora Finching, Dolly Varden, Sim Tappertit, Mr. Turveydrop, Mr. Bagnet, Tackleton, Trotty Veck, Caleb Plummer, Rogue Riderhood, Mr. Venus, Mrs. Sparsit
+100: Grip :: Barnaby Rudge's talking raven, based on Dickens's own pet. It helped inspire Poe's "The Raven."
+
+? Name a figure from Norse mythology
+10: Thor, Odin, Loki, Freya|Freyja
+15: Valkyrie, Fenrir
+30: Baldur|Balder|Baldr, Heimdall, Frigg|Frigga, Hel|Hela, Tyr, Sif, Freyr|Frey, Ymir, Jörmungandr|Jormungandr|Midgard Serpent, Sleipnir, Surtr|Surtur, Mimir, Njord
+60: Bragi, Idun|Iðunn|Idunn, Vidar, Vali, Hodr|Hod, Aegir, Ran, Skadi, Ullr|Ull, Nidhogg, Huginn, Muninn, Geri, Freki, Gerd, Sigyn, Angrboda, Forseti, Hoenir, Magni, Modi, Norns, Urd, Verdandi, Skuld, Sigurd|Siegfried, Fafnir, Brynhildr|Brunhilde, Audhumla
+85: Thrud, Ask, Embla, Bestla, Bor, Buri, Thrym, Utgard-Loki, Skrymir, Hrungnir, Gullveig, Kvasir, Hati, Skoll, Garmr, Sindri, Brokkr, Dvalin, Regin, Hreidmar, Otr, Andvari, Lif, Lifthrasir, Nanna, Hermod, Eir, Sjofn, Lofn, Vor, Syn, Hlin, Gna, Snotra, Saga, Mani, Sol, Dagr, Nott
+100: Ratatoskr :: A squirrel who runs up and down the world tree, carrying insults between an eagle and a serpent.
+
+? Name a famous author
+~last
+10: William Shakespeare, J.K. Rowling|JK Rowling, Stephen King, Jane Austen, Mark Twain, Charles Dickens
+15: James Joyce, Dr. Seuss
+30: Ernest Hemingway, F. Scott Fitzgerald, George Orwell, J.R.R. Tolkien|JRR Tolkien, Harper Lee, Agatha Christie, Edgar Allan Poe, Leo Tolstoy, John Steinbeck, Roald Dahl, Maya Angelou, Toni Morrison, Virginia Woolf, Oscar Wilde, C.S. Lewis|CS Lewis, Dan Brown, John Grisham, James Patterson, Danielle Steel, Nora Roberts, George R.R. Martin|George RR Martin, Suzanne Collins, Stephenie Meyer, Rick Riordan, Kurt Vonnegut, Homer, Dante Alighieri|Dante, Herman Melville, Mary Shelley, Bram Stoker, Charlotte Brontë|Charlotte Bronte, Emily Brontë|Emily Bronte, Lewis Carroll, Jules Verne, H.G. Wells|HG Wells, Ray Bradbury, Isaac Asimov, Aldous Huxley, J.D. Salinger|JD Salinger, William Faulkner, Fyodor Dostoevsky, Shel Silverstein, Beverly Cleary, E.B. White|EB White, Judy Blume, R.L. Stine|RL Stine, Colleen Hoover, Michael Crichton, Tom Clancy, Neil Gaiman
+60: Gabriel García Márquez|Gabriel Garcia Marquez, Cormac McCarthy, Thomas Pynchon, Don DeLillo, Philip Roth, John Updike, Margaret Atwood, Ursula K. Le Guin|Le Guin, Philip K. Dick, Frank Herbert, Arthur C. Clarke, Terry Pratchett, Douglas Adams, Haruki Murakami, Salman Rushdie, Kazuo Ishiguro, Ian McEwan, Zadie Smith, Chinua Achebe, Franz Kafka, Albert Camus, Victor Hugo, Alexandre Dumas, Gustave Flaubert, Marcel Proust, Miguel de Cervantes|Cervantes, Geoffrey Chaucer, John Milton, Jonathan Swift, Daniel Defoe, Thomas Hardy, George Eliot, Henry James, Edith Wharton, Nathaniel Hawthorne, Louisa May Alcott, Jack London, Sylvia Plath, Zora Neale Hurston, James Baldwin, Ralph Ellison, Langston Hughes, Truman Capote, Jack Kerouac, Joseph Heller, Vladimir Nabokov, David Foster Wallace, Jonathan Franzen, Donna Tartt, Gillian Flynn, Sally Rooney, Anne Rice, Dean Koontz, Lee Child, Sarah J. Maas, Brandon Sanderson, Lemony Snicket|Daniel Handler
+85: Italo Calvino, Jorge Luis Borges, Julio Cortázar|Julio Cortazar, Roberto Bolaño|Roberto Bolano, Clarice Lispector, Thomas Mann, Hermann Hesse, Günter Grass|Gunter Grass, W.G. Sebald, Elena Ferrante, Umberto Eco, Stendhal, Émile Zola|Emile Zola, Honoré de Balzac|Honore de Balzac, Nikolai Gogol, Ivan Turgenev, Anton Chekhov, Mikhail Bulgakov, Boris Pasternak, Aleksandr Solzhenitsyn, Yukio Mishima, Kenzaburo Oe, Murasaki Shikibu, Lu Xun, Naguib Mahfouz, Wole Soyinka, J.M. Coetzee, Nadine Gordimer, Michael Ondaatje, Alice Munro, Annie Proulx, Marilynne Robinson, William Gaddis, Flann O'Brien, Samuel Beckett, Laurence Sterne, Henry Fielding, Samuel Richardson, Anthony Trollope, Wilkie Collins, Elizabeth Gaskell, Evelyn Waugh, Muriel Spark, Iris Murdoch, Doris Lessing, Olga Tokarczuk, Annie Ernaux, Jon Fosse, Han Kang
+100: Anonymous :: The most prolific author in history, and impossible to book for a signing.

@@ -6,31 +6,6 @@
 85: Twilight Imperium, Brass: Birmingham|Brass, Through the Ages, Twilight Struggle, Le Havre, Caylus, Castles of Burgundy, Great Western Trail, Viticulture, Concordia, Orléans|Orleans, A Feast for Odin, Mage Knight, Dune: Imperium, Senet, Hnefatafl, Tafl, Pachisi, Chaturanga, Gomoku, Abalone, Quoridor, Pente, Onitama, Tak, Kamisado, Tsuro, Carrom, Crokinole, Tiddlywinks, Subbuteo, Escape from Colditz, Kingmaker
 100: Royal Game of Ur|Game of Ur :: About 4,500 years old. We still know the rules, thanks to a clay tablet.
 
-? Name a card game
-~drop cards
-10: Poker, Blackjack, Solitaire, Go Fish, Uno, Rummy, War
-15: Cards Against Humanity, Magic: The Gathering|Magic
-30: Hearts, Spades, Crazy Eights|Crazy 8s, Old Maid, Bridge, Gin Rummy|Gin, Euchre, Texas Hold'em|Hold'em, Baccarat, Canasta, Pinochle, Cribbage, Exploding Kittens, Skip-Bo|Skip Bo, Slapjack, Speed, Spit, Pokémon|Pokemon, Yu-Gi-Oh!|Yu-Gi-Oh, Apples to Apples, Phase 10, Snap, BS|Cheat, President, Egyptian Ratscrew|Egyptian Rat Screw, Kings|Kings Cup, Rook, Dutch Blitz, Sushi Go!, Fluxx, Munchkin
-60: Whist, Mille Bornes, Spider Solitaire, FreeCell, Klondike, Pyramid, Seven-card stud, Omaha, Five-card draw, Three-card monte, Pai gow, Hand and Foot, Sheepshead, Pitch, Oh Hell, Rummy 500, Bezique, Belote, Durak, Piquet, Tichu, Wizard, Love Letter, Hanabi, The Mind, Star Realms, Gwent, Hearthstone, Balatro, Five Crowns, Golf, Nertz, Palace, Beggar My Neighbor|Beggar-my-neighbour, Fan Tan|Sevens, Authors, Quiddler, Monopoly Deal, Coup, Bang!, Citadels, Bohnanza, 6 Nimmt!|Take 5
-85: Skat, Schafkopf, Tarock, Jass, Scopa, Briscola, Tute, Mus, Truco, Hanafuda, Koi-Koi, Tien Len, Big Two, Dou Dizhu, Teen Patti, Canfield, Faro, Ombre, Cassino, Écarté|Ecarte, Vingt-et-un, Pontoon, Chemin de fer, Red Dog, Let It Ride, Caribbean Stud, Ninety-nine, Set, Spite and Malice, Kalooki, Contract Rummy, Bid Whist, Tonk, Thirty-one, Nines, Snip Snap Snorem, Pig, Spoons
-100: Mao :: A game where you get penalized for breaking rules nobody is allowed to explain.
-
-? Name a video game console
-10: PlayStation|PS1, Xbox, Nintendo Switch|Switch, Wii|Nintendo Wii, Game Boy|Gameboy
-15: Virtual Boy, Steam Deck
-30: Nintendo 64|N64, Super Nintendo|SNES, NES|Nintendo Entertainment System, GameCube, PlayStation 2|PS2, Xbox 360, Sega Genesis|Genesis, Dreamcast, Atari 2600|Atari, Nintendo DS|DS, PSP|PlayStation Portable, Xbox One, PlayStation 3|PS3, PlayStation 4|PS4, PlayStation 5|PS5, Wii U, Game Boy Advance|GBA, Game Boy Color, 3DS|Nintendo 3DS, Sega Saturn|Saturn, Game Gear|Sega Game Gear, Meta Quest|Oculus Quest, Xbox Series X
-60: PS Vita|PlayStation Vita, Neo Geo, TurboGrafx-16|TurboGrafx, ColecoVision, Intellivision, Atari Jaguar|Jaguar, Atari Lynx|Lynx, Atari 5200, Atari 7800, Sega CD, Sega 32X|32X, Sega Master System|Master System, Magnavox Odyssey|Odyssey, Ouya, Vectrex, 3DO, Steam Machine, Nvidia Shield, ROG Ally|Asus ROG Ally, Commodore 64, Nintendo Switch 2|Switch 2, Analogue Pocket, Playdate, Game.com, N-Gage|Nokia N-Gage, Fairchild Channel F, WonderSwan
-85: Philips CD-i|CD-i, Bally Astrocade, Odyssey 2, Neo Geo Pocket, Nintendo 64DD|64DD, PC Engine, Amiga CD32, FM Towns Marty, Zeebo, Gizmondo, Tapwave Zodiac, Color TV-Game, Game & Watch|Game and Watch, Super Game Boy, Pokémon Mini, View-Master Interactive Vision, Sega Nomad, Sega Pico, Action Max, RDI Halcyon, VTech Socrates, Arcadia 2001, Sufami Turbo
-100: Apple Pippin|Pippin :: Yes, Apple made a game console, in 1996. It sold about 42,000 units.
-
-? Name a Mario character
-10: Mario, Luigi, Princess Peach|Peach, Bowser, Toad, Yoshi
-15: Waluigi
-30: Wario, Princess Daisy|Daisy, Donkey Kong|DK, Diddy Kong|Diddy, Rosalina, Toadette, Bowser Jr., Koopa Troopa|Koopa, Goomba, Shy Guy, Boo, Birdo, Dry Bones, King Boo, Piranha Plant, Chain Chomp, Cheep Cheep, Lakitu, Hammer Bro|Hammer Bros, Bob-omb, Bullet Bill, Pauline, Nabbit, Funky Kong
-60: Toadsworth, Professor E. Gadd|E. Gadd, Petey Piranha, Kamek, Magikoopa, Blooper, Spike, Wiggler, Pokey, Thwomp, Whomp, Monty Mole, Rex, Baby Mario, Baby Luigi, Baby Peach, Cranky Kong, Dixie Kong, Tiny Kong, King K. Rool, Captain Toad, Cappy, Mallow, Geno, Paper Mario, Kammy Koopa, Lubba, Polari, Luma, Larry Koopa, Morton Koopa, Wendy O. Koopa|Wendy Koopa, Iggy Koopa, Roy Koopa, Lemmy Koopa, Ludwig von Koopa, Honey Queen, King Bob-omb, Buzzy Beetle
-85: Tatanga, Foreman Spike, Stanley the Bugman, Bandit, Ninji, Mouser, Wart, Clawgrip, Phanto, Tryclyde, Fry Guy, Snifit, Hoopster, Flurry, Fawful, Cackletta, Dimentio, Count Bleck, Vivian, Goombella, Koops, Bombette, Parakarry, Starlow, Bowletta, Madame Broode, Topper, Hariet, Spewart, Rango, Undodog, Sprixie Princess, Poochy, Baby Bowser, Chargin' Chuck, Mega Mole, Urchin, Porcupuffer
-100: Boss Bass|Big Bertha :: The huge red fish from Super Mario Bros. 3 that leaps up and swallows you whole. Respect.
-
 ? Name an original 151 Pokémon
 ~drop pokemon,pokémon
 10: Pikachu, Charizard, Bulbasaur, Squirtle, Charmander, Mewtwo, Mew, Jigglypuff, Snorlax, Meowth, Psyduck
@@ -63,14 +38,6 @@
 60: Zugzwang, Fool's Mate, Ruy Lopez, French Defense, Caro-Kann, King's Indian, Nimzo-Indian, London System, Italian Game, English Opening, Zwischenzug, Fianchetto, Discovered attack, Discovered check, Double check, Back rank mate, Smothered mate, Sacrifice, Elo|Elo rating, Tempo, Passed pawn, Battery, Underpromotion, Threefold repetition, Perpetual check, Fifty-move rule, Blitz, Bullet, Time control, Middlegame, Opposition, Isolated pawn, Doubled pawns, Pawn structure, Kingside, Queenside, Minor piece, Major piece, Exchange, Deflection, Decoy, Clearance
 85: Zeitnot, Windmill, Desperado, Prophylaxis, Luft, Outpost, Hanging piece, Interference, X-ray, Intermezzo, Lucena position, Philidor position, Immortal Game, Evergreen Game, Opera Game, Réti Opening|Reti Opening, Grünfeld Defense|Grunfeld, Pirc Defense, Alekhine's Defense, Scandinavian Defense, Benoni, Dutch Defense, Vienna Game, Bird's Opening, Grob's Attack|Grob, Fried Liver Attack|Fried Liver, Stafford Gambit, Englund Gambit, Traxler, Elephant Gambit, Latvian Gambit, Evans Gambit, Wayward Queen, Patzer, Kibitzer|Kibitz, Woodpusher, Swindle, Tabia, Novelty, Adjournment, Sealed move, FIDE, Armageddon
 100: Orangutan|Sokolsky|Polish Opening :: A real opening (1. b4), named after a grandmaster visited the zoo during a 1924 tournament and asked an orangutan for advice.
-
-? Name a playground game
-10: Tag, Hide and seek|Hide and go seek, Hopscotch, Red Rover, Kickball, Four square|Foursquare, Dodgeball, Jump rope
-15: The Floor Is Lava|Floor is lava, Squid Game
-30: Duck Duck Goose, Red Light Green Light, Simon Says, Freeze Tag, Capture the Flag, Tetherball, Marbles, Mother May I?|Mother May I, Sardines, Musical Chairs, Hot Potato, London Bridge, Ring Around the Rosie, Tug of War, Leapfrog, Cat's Cradle, Patty Cake, Follow the Leader, Monkey in the Middle|Keep Away, Kick the Can, Blind Man's Bluff, Sharks and Minnows, Wall ball, Wiffle ball, Pickle, Cops and Robbers, Rock Paper Scissors, Spud, Pogs, Jacks, Double Dutch, Telephone
-60: Ghost in the Graveyard, Manhunt, Flashlight tag, What Time Is It Mr. Fox?, Fruit Basket Turnover, Heads Up Seven Up|Seven Up, Steal the Bacon, Crack the Whip, Stuck in the Mud, British Bulldog|Bulldog, Mumblety-peg, Conkers, Ringolevio, Hot Lava Monster|Lava Monster, Skully, Stoopball, Gaga ball, Mafia, Slaps, Thumb war, Bloody Knuckles, Chinese jump rope, Zip Zap Zop, Cooties, Cootie catcher
-85: Kabaddi, Pitching pennies, Tip-cat, Hoop rolling, Pickup sticks, Oonch Neech, Kho kho, Gilli danda, Pilolo, Queenie I-O, Blob Tag, Everybody's It, TV Tag, Elbow Tag, Hospital Tag, Butts Up, German Spotlight
-100: Knucklebones :: The ancient Greek and Roman ancestor of jacks, played with actual animal ankle bones.
 
 ? Name a classic toy
 ~drop toy
@@ -120,3 +87,28 @@
 60: Ghost, Salad Bowl, Psychiatrist, Contact, Celebrity|Monikers, The Resistance, Spyfall, One Night Ultimate Werewolf, Wavelength, Telestrations, Reverse Charades, Dixit, Exploding Kittens, Dirty Minds, Sussed, Ouija, Light as a Feather Stiff as a Board, Bloody Mary, Murder in the Dark, Wink Murder, Ring of Fire, Quarters, Hot Seat, Paranoia, Botticelli, Consequences, Exquisite Corpse, 20 Questions|Twenty Questions|21 Questions, I Spy, Who Am I?, Pass the Parcel, Egg Toss, Three-Legged Race, Sack Race
 85: Zip Zap Zop, Thumper, Cardinal Puff, Beirut, Power Hour, Edward Fortyhands, Slap Cup, Rage Cage, Stack Cup, Viking, Snaps, Sculptionary, Cranium, Hullabaloo, Bunco, Dictionary, Hoodwinked, Pass the Slipper, Hunt the Thimble, Sleeping Lions, Squeak Piggy Squeak, Spoons, Tap, Crambo, Fictionary, Reverse Hide and Seek, Human Knot, Bigger and Better, Assassin
 100: Fishbowl :: A mash-up of Taboo and Charades with every clue drawn from a bowl. The goldfish would like its home back.
+
+? Name a video game character
+10: Mario, Luigi, Pikachu, Sonic|Sonic the Hedgehog, Link, Pac-Man|Pacman, Princess Peach|Peach
+15: Zelda|Princess Zelda
+30: Donkey Kong, Bowser, Yoshi, Kirby, Master Chief, Lara Croft, Samus|Samus Aran, Kratos, Steve, Wario, Toad, Crash Bandicoot|Crash, Spyro, Mega Man|Megaman, Solid Snake|Snake, Cloud|Cloud Strife, Sephiroth, Ganondorf|Ganon, Tails, Knuckles, Dr. Eggman|Eggman|Dr. Robotnik|Robotnik, Ryu, Chun-Li, Sub-Zero, Scorpion, Diddy Kong, Princess Daisy|Daisy, Waluigi, Rosalina, Fox McCloud|Fox, Ness, Captain Falcon, Isabelle, Tom Nook, Nathan Drake, Ellie, Joel, Arthur Morgan, Geralt|Geralt of Rivia, Ezio|Ezio Auditore, Doomguy|Doom Slayer, Gordon Freeman, Shadow|Shadow the Hedgehog, Bayonetta, Dante, Leon Kennedy|Leon S. Kennedy, Jill Valentine, Mewtwo
+60: Jigglypuff, Marth, Villager, Inkling, Agent 47, CJ|Carl Johnson, Niko Bellic, Trevor Philips, John Marston, Altaïr|Altair, Amy Rose, Banjo, Kazooie, Rayman, Sackboy, Ratchet, Clank, Jak, Daxter, Sly Cooper, Q*bert|Qbert, Frogger, Dig Dug, Simon Belmont, Alucard, Pit, Olimar, Lucario, Pyramid Head, Nemesis, Chris Redfield, Earthworm Jim, Duke Nukem, GLaDOS, Chell, Wheatley, Claptrap, Alyx Vance, Cuphead, Sans, Hornet, Falco, King K. Rool|K. Rool, Shy Guy, Boo, Goomba, Koopa Troopa, Captain Toad, Midna, Navi, Epona, Skull Kid, Lakitu, Kamek, Professor Oak, Ash Ketchum|Ash, Red, Isaac Clarke, Marcus Fenix, Commander Shepard|Shepard, Garrus, The Knight, Madeline
+85: ToeJam, Bubsy, Gex, Croc, Glover, Conker, Vectorman, Commander Keen, B.J. Blazkowicz|BJ Blazkowicz, Manny Calavera, Leisure Suit Larry|Larry Laffer, Roger Wilco, King Graham, Handsome Jack, Shovel Knight, Frisk, Isaac, Ori, Hat Kid, Klonoa, Tingle, Slippy Toad|Slippy, Peppy Hare|Peppy, Dixie Kong, Funky Kong, Cranky Kong, Birdo, Chain Chomp, Bob-omb, Petey Piranha, Toadsworth, Professor E. Gadd|E. Gadd, Pauline, Tetra, Impa, Saria, Beedle, Fi, Ulala, Parappa|PaRappa
+100: Guybrush Threepwood :: The "mighty pirate" of Monkey Island. His first name comes from the file his sprite was saved in, "guy brush."
+
+? Name a video game company
+~drop company,games,studios,studio,entertainment,interactive,software
+10: Nintendo, Sony|PlayStation, Microsoft|Xbox, EA|Electronic Arts, Sega, Activision
+15: Atari
+30: Ubisoft, Rockstar, Epic Games|Epic, Blizzard, Valve, Bethesda, Square Enix, Capcom, Konami, Bandai Namco|Namco, Mojang, Riot Games|Riot, 2K, Naughty Dog, Bungie, Treyarch, Infinity Ward, Insomniac, Game Freak, Rare, Take-Two|Take Two, CD Projekt|CD Projekt Red, BioWare, id Software|id, FromSoftware|From Software, Tencent, Roblox, Supercell, King, Zynga, Sierra|Sierra On-Line, LucasArts, Midway, Taito, SNK, Hudson Soft|Hudson, Koei Tecmo|Koei|Tecmo, Square, Enix
+60: Level-5, HAL Laboratory|HAL, Intelligent Systems, Retro Studios|Retro, Sucker Punch, Santa Monica Studio|Santa Monica, Guerrilla Games|Guerrilla, Media Molecule, Bluepoint, Respawn, DICE, Criterion, Maxis, Westwood, Firaxis, Gearbox, Obsidian, Double Fine, Telltale, Remedy, PlatinumGames|Platinum Games|Platinum, Team Ninja, Atlus, Arc System Works, NetherRealm, 343 Industries|343, Psyonix, Arkane, MachineGames, Ensemble, Relic, Paradox, Creative Assembly, Frontier, Codemasters, Rocksteady, Avalanche, IO Interactive|IO, Crytek, Housemarque, thatgamecompany|That Game Company, Team Cherry, Supergiant, Innersloth, ConcernedApe, Nexon, NCSoft, Netmarble, Krafton, miHoYo|HoYoverse, NetEase, Coleco, Magnavox, Commodore, Acclaim, THQ, Eidos, Interplay, Infogrames, Accolade, Brøderbund|Broderbund, MicroProse, Origin Systems|Origin, Psygnosis, Ocean, Data East, Irem, Treasure, Williams
+85: Looking Glass, Ion Storm, Spectrum HoloByte, Jaleco, Technōs|Technos, Tengen, Sunsoft, Cave, Compile, Toaplan, Nihon Falcom|Falcom, Chunsoft, Kemco, Gottlieb, Cinematronics, Exidy, Stern, Mattel Electronics|Mattel, Vectrex, Gremlin, Sirius, Synapse, Infocom, Epyx, Cinemaware, Bullfrog, Lionhead, Sensible Software|Sensible, DMA Design, Team17, Bitmap Brothers, Core Design, Argonaut, Rareware, Factor 5, Clover Studio|Clover, Grasshopper Manufacture|Grasshopper, Vanillaware, Spike Chunsoft, Nippon Ichi, Gust, Marvelous
+100: Ultimate Play the Game|Ultimate :: The British studio behind Jetpac and Knight Lore. Its founders, the Stamper brothers, went on to run Rare.
+
+? Name a dice game
+~drop dice,game
+10: Yahtzee, Craps, Farkle|Zilch|Zonk|Hot Dice|Greed|Ten Thousand|10000, Bunco|Bunko, Liar's dice|Liars dice|Perudo|Dudo|Bluff
+30: Backgammon, Left Right Center|LCR|Left Center Right, Shut the Box, Ship Captain Crew|Ship Captain and Crew, Pig, Mexico|Mexicali, Cee-lo|See-lo|Celo, Poker dice
+60: Yatzy, Yacht, Generala, Kismet, Balut, Chicago, Sic bo|Dai siu|Big and small, Chuck-a-luck|Birdcage, Crown and Anchor, Beetle|Cootie, Drop Dead, Going to Boston|Boston, Fill or Bust, Mia|Mäxchen|Maxchen, Chō-han|Cho-han|Chohan, Can't Stop|Cant Stop, Sagrada, King of Tokyo, Tenzi, Qwixx, Zombie Dice, Boggle, Pass the Pigs|Pig Mania
+85: Martinetti, Help Your Neighbour|Help Your Neighbor, Hooligan, Cheerio, Roll Through the Ages, Elder Sign, Thirty-Six|36, Barbudi|Barbooth, Over-Under Seven|Under and Over Seven|7 Up 7 Down, Aces in the Pot, Cameroon|Double Cameroon, Knucklebones|Tali, Toss Up!|Toss Up, Dice Forge, Las Vegas, Bang! The Dice Game, Roll Player, Dungeon Roll
+100: Hazard :: A medieval English dice game that grew into craps. Chaucer mentions it in The Canterbury Tales.

@@ -1,5 +1,6 @@
 // Shared by the scripts in this folder: finds every prompt file under data/ and reads it.
 // A file's category is its name minus any batch number, so pool/food-0002.txt is "food".
+// Prompts under data/endless/ only appear in Endless and are never put on the daily schedule.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parsePrompts } from '../js/content.js';
@@ -11,7 +12,7 @@ export function readPrompts(dataDir) {
     .sort()
     .map((path) => ({ path, category: path.split('/').pop().replace(/(-\d+)?\.txt$/, '') }));
   const prompts = files.flatMap((file, i) => parsePrompts(readFileSync(join(dataDir, file.path), 'utf8'), file.category)
-    .map((prompt) => Object.assign(prompt, { file: i })));
+    .map((prompt) => Object.assign(prompt, { file: i, endlessOnly: file.path.startsWith('endless/') })));
   return { files, prompts };
 }
 

@@ -1,12 +1,3 @@
-? Name a pasta shape
-~drop pasta,noodles,noodle
-10: Spaghetti, Penne, Macaroni|Mac, Lasagna|Lasagne, Fettuccine|Fettucine, Ravioli, Linguine|Linguini
-15: Orzo, Gnocchi, Orecchiette
-30: Rigatoni, Fusilli, Farfalle|Bow tie|Bowtie|Bow ties, Tortellini, Angel hair|Capellini, Rotini, Ziti, Vermicelli, Shells|Conchiglie, Cannelloni, Manicotti
-60: Bucatini, Pappardelle, Tagliatelle, Ditalini, Tortelloni, Cavatappi, Radiatori, Campanelle, Gemelli, Rotelle|Wagon wheel|Wagon wheels, Stelline, Cavatelli, Agnolotti, Tortiglioni, Paccheri, Mezzi rigatoni
-85: Gigli, Calamarata, Trofie, Casarecce, Maltagliati, Garganelli, Pici, Corzetti, Trenette, Bigoli, Fregola, Sagne, Mafalda|Mafaldine, Lumache, Ditali, Acini di pepe, Anelli, Tagliolini, Sorprese, Sedani, Scialatielli, Mostaccioli, Perciatelli, Spaghettini, Fideo, Cappelletti, Culurgiones, Pizzoccheri, Spaccatelle
-100: Strozzapreti :: The name means "priest strangler," and nobody fully agrees why.
-
 ? Name a cheese
 ~drop cheese
 10: Cheddar, Mozzarella, Swiss, Parmesan|Parmigiano|Parmigiano-Reggiano, American
@@ -24,15 +15,6 @@
 60: Passion fruit|Passionfruit, Guava, Persimmon, Lychee|Litchi, Kumquat, Quince, Mandarin, Date, Currant|Blackcurrant|Black currant|Red currant, Gooseberry, Elderberry, Boysenberry, Mulberry, Plantain, Jackfruit, Tamarind, Prune, Olive, Rhubarb, Acai|Açaí, Satsuma, Huckleberry, Loganberry, Pomelo, Feijoa, Yuzu, Blood orange
 85: Rambutan, Mangosteen, Salak|Snake fruit, Longan, Loquat, Medlar, Soursop|Guanabana, Sapodilla, Breadfruit, Ackee, Kiwano|Horned melon, Cloudberry, Lingonberry, Damson, Greengage, Ugli|Ugli fruit, Tayberry, Physalis|Cape gooseberry|Ground cherry, Pawpaw, Bael, Jabuticaba, Marula, Buddha's hand, Bergamot, Citron, Calamansi, Sloe, Serviceberry, Salmonberry, Thimbleberry, Tamarillo, Naranjilla, Cupuacu|Cupuaçu, Santol, Langsat, Wax apple, Sugar apple|Custard apple|Cherimoya, Mamey|Mamey sapote, Black sapote, Pepino, Cempedak, Rose apple, Barberry, Monstera
 100: Miracle fruit|Miracle berry :: Eat one and sour foods taste sweet for about an hour.
-
-? Name a vegetable
-~drop vegetable
-10: Carrot, Broccoli, Potato, Corn, Lettuce, Onion, Tomato, Cucumber, Green bean|String bean, Pea
-15: Kale, Artichoke, Brussels sprout|Brussel sprout|Sprout
-30: Spinach, Cauliflower, Celery, Zucchini|Courgette, Asparagus, Cabbage, Bell pepper|Pepper, Mushroom, Sweet potato, Beet|Beetroot, Eggplant|Aubergine, Radish, Squash, Garlic, Leek, Turnip, Pumpkin, Green onion|Scallion|Spring onion, Yam, Parsnip
-60: Bok choy|Pak choi, Okra, Rutabaga|Swede, Arugula|Rocket, Butternut squash, Collard greens|Collards, Fennel, Shallot, Swiss chard|Chard, Watercress, Jicama, Endive, Radicchio, Kohlrabi, Daikon, Edamame, Snap pea|Sugar snap, Snow pea, Acorn squash, Spaghetti squash, Mustard greens, Lima bean, Horseradish, Taro, Cassava|Yuca, Celeriac|Celery root, Ginger
-85: Salsify, Sunchoke|Jerusalem artichoke, Mizuna, Tatsoi, Burdock, Lotus root, Chayote, Nopales|Cactus paddle, Samphire|Sea beans, Fiddlehead|Fiddlehead fern, Oca, Malanga, Ramps, Cardoon, Sorrel, Broccolini, Broccoli rabe|Rapini, Gai lan|Chinese broccoli|Kai lan, Napa cabbage, Tomatillo, Bitter melon|Bitter gourd, Winged bean, Yardlong bean, Purslane, Dandelion greens, Water spinach|Morning glory, Skirret, Mashua, Ulluco, Hubbard squash, Delicata squash, Pattypan squash, Kabocha
-100: Romanesco :: Each spiral bud is made of smaller spiral buds. It's a natural fractal you can eat.
 
 ? Name a spice or herb
 ~drop spice,herb,seed,seeds,powder,ground
@@ -61,15 +43,6 @@
 85: Fougasse, Pide, Bazlama, Simit, Pão de queijo|Pao de queijo, Anadama, Bannock, Barmbrack, Stollen, Kouign-amann, Pain d'épices, Damper, Boule, Batard, Ficelle, Pugliese, Tiger|Dutch crunch, Farl, Manchet, Vienna, Bolillo, Telera, Kulcha, Puri|Poori, Bhatura, Dosa, Pandesal|Pan de sal, Tsoureki, Lefse, Knäckebröd|Crispbread, Rugbrød|Rugbrod, Bialy, Salt-rising, Sally Lunn, Zopf, Msemen, Sangak, Barbari, Piadina, Grissini, Cozonac
 100: Hardtack|Ship's biscuit :: Sailors' biscuit so hard it earned the nickname "tooth dullers."
 
-? Name a dessert
-~drop dessert
-10: Ice cream, Cake, Cookie, Brownie, Pie, Cheesecake
-15: Tiramisu, Crème brûlée|Creme brulee
-30: Apple pie, Chocolate cake, Donut|Doughnut, Cupcake, Pudding, Banana split, Sundae, Milkshake, Churro, Fudge, Gelato, Panna cotta, Key lime pie, Pumpkin pie, Flan, Cannoli, Macaron|Macaroon, Mousse|Chocolate mousse, Carrot cake, Red velvet cake|Red velvet, Éclair|Eclair, Popsicle, Strawberry shortcake|Shortcake, Cobbler|Peach cobbler, Jell-O|Jello|Gelatin, Rice pudding, Bread pudding, Baklava, S'mores|Smores, Sorbet, Funnel cake
-60: Trifle, Pavlova, Sticky toffee pudding, Profiterole, Cream puff, Beignet, Tres leches, Baked Alaska, Bananas Foster, Black Forest cake, Lemon bar, Blondie, Angel food cake, Pound cake, Eton mess, Crumble|Apple crumble, Zabaglione, Strudel|Apple strudel, Napoleon|Mille-feuille, Madeleine, Semifreddo, Mochi, Gulab jamun, Tarte Tatin, Soufflé|Souffle, Whoopie pie, Boston cream pie, Sfogliatella, Dutch baby, Affogato, Bombe, Peach Melba, Cherries jubilee, Crêpes Suzette|Crepes Suzette, Banoffee pie|Banoffee
-85: Clafoutis, Kheer, Knickerbocker glory, Spotted dick, Bakewell tart, Lamington, Nanaimo bar, Pastel de nata, Kulfi, Halo-halo, Bingsu, Rasmalai, Jalebi, Basbousa, Kunafa|Knafeh, Alfajor, Brigadeiro, Sachertorte, Linzer torte, Dobos torte, Malva pudding, Cranachan, Pandowdy, Syllabub, Charlotte, Opera cake, Paris-Brest, Panforte, Zeppole, Stroopwafel, Tapioca pudding|Tapioca, Bread and butter pudding, Posset, Junket, Blancmange, Figgy pudding, Arctic roll, Treacle tart, Frangipane
-100: Croquembouche :: French for "crunch in the mouth." It's a tower of cream puffs glued together with caramel.
-
 ? Name a sandwich
 ~drop sandwich,sub
 10: Grilled cheese, BLT, Peanut butter and jelly|PB&J|PBJ, Ham and cheese, Club, Hamburger|Burger|Cheeseburger
@@ -87,15 +60,6 @@
 60: Sazerac, Paloma, Gimlet, Bellini, Hurricane, Caipirinha, Pisco sour, Amaretto sour, Singapore sling, Boulevardier, Zombie, Lemon drop, Kir royale|Kir, Irish coffee, Grasshopper, Mudslide, Harvey Wallbanger, Blue Hawaiian, Blue lagoon, Rusty Nail, Vesper, Bee's Knees, Michelada, Americano, Painkiller, Sangria, Godfather, Greyhound, Salty dog, Aviation, French 75, Alabama Slammer, Woo woo
 85: Last Word, Penicillin, Ramos gin fizz, Clover Club, Monkey gland, Mary Pickford, Bijou, Vieux Carré|Vieux Carre, Naked and Famous, Paper Plane, Hanky Panky, Bobby Burns, Blood and Sand, Southside, Tuxedo, White Lady, Stinger, Gibson, Pegu Club, Brandy Alexander, Japanese Slipper, Bamboo, Adonis, Suffering Bastard, Fog Cutter, Scorpion Bowl, Jungle Bird, Trinidad Sour, Tommy's Margarita, Sherry Cobbler, Mamie Taylor, El Presidente, Hemingway Daiquiri, Bahama Mama, Sea Breeze, Bay Breeze, Cape Codder, Planter's Punch, Bloody Caesar|Caesar, Kamikaze
 100: Corpse Reviver :: A 1930 cocktail book warned that four of these in a row would "unrevive the corpse again."
-
-? Name a candy or chocolate bar
-~drop candy,bar
-10: Snickers, M&M's|M&Ms|M and Ms|Peanut M&Ms, Reese's|Reeses|Peanut butter cup|Reese's Peanut Butter Cups, Skittles, Kit Kat|KitKat, Hershey's|Hershey|Hersheys
-15: Whatchamacallit, Bit-O-Honey
-30: Twix, Milky Way, Butterfinger, 3 Musketeers|Three Musketeers, Starburst, Sour Patch Kids, Swedish Fish, Gummy bears|Gummy Bear|Gummies, Twizzlers, Nerds, Jolly Rancher, Tootsie Roll, Almond Joy, Mounds, Baby Ruth, Hot Tamales, Mike and Ike, Lemonheads, Junior Mints, Milk Duds, York Peppermint Patty|York|Peppermint Patty, PayDay, Candy corn, Airheads, Laffy Taffy, Pop Rocks, Smarties, Peeps, Dum Dums, Werther's, Toblerone, Ferrero Rocher, Tic Tac, Rolo, Crunch|Nestlé Crunch, Hershey's Kisses|Kisses, Blow Pop, Ring Pop, Warheads, Trolli, Haribo, Lindt
-60: Heath, Zagnut, Clark, Zero, 100 Grand, Mr. Goodbar, Krackel, Skor, Oh Henry!, Necco Wafers|Necco, Good & Plenty, Dots, Raisinets, Goobers, Sno-Caps, Charleston Chew, Razzles, Fun Dip, Pixy Stix, Sixlets, Runts, Big League Chew, Cadbury Creme Egg|Cadbury, Wonka|Wonka Bar, Sugar Daddy, Now and Later, Atomic Fireball|Fireball, Gobstopper|Everlasting Gobstopper, Ghirardelli, Aero, Crunchie, Flake, Mars, Bounty, Maltesers, Wispa, Lion, Caramello, Whoppers, Turkish delight, Pez, Cow Tales, Mary Jane, Life Savers|Lifesavers, Mentos, Altoids, Tootsie Pop, Sweethearts, Chiclets, Boston Baked Beans, Dubble Bubble, Bazooka
-85: Chick-O-Stick, Idaho Spud, Valomilk, Abba-Zaba, Big Hunk, Look!, U-No, Sky Bar, Cherry Mash, 5th Avenue, Reggie!, Kinder Bueno|Bueno, Ritter Sport, Milka, Curly Wurly, Double Decker, Picnic, Fry's Chocolate Cream, Yorkie, Toffee Crisp, Salmiak|Salted licorice, Zotz, Bottle Caps, Wax bottles|Nik-L-Nip, Candy Buttons, Candy cigarettes, Chuckles, Mallo Cup, Squirrel Nut Zippers, Mamba, Hi-Chew, Pocky, White Rabbit, Botan Rice Candy
-100: Goo Goo Cluster :: Made in Nashville since 1912 and billed as the first candy bar to combine several fillings.
 
 ? Name a breakfast cereal
 ~drop cereal
@@ -149,3 +113,39 @@
 60: Cochinita pibil, Huarache, Tlayuda, Flauta, Mole poblano, Chiles en nogada, Caldo de res, Aguachile, Arroz con leche, Migas, Machaca, Tinga, Pambazo, Mollete, Mixiote, Sincronizada, Capirotada, Champurrado, Cajeta, Concha, Torta ahogada, Alambre, Cabrito, Camarones a la diabla, Carne en su jugo, Nopales, Queso fundido, Tepache, Michelada, Agua fresca
 85: Chapulines, Huitlacoche|Cuitlacoche, Zacahuil, Panucho, Salbute, Papadzules, Poc chuc, Sopa de lima, Tacos de canasta, Tacos gobernador, Cemita, Tetela, Tlacoyo, Memela, Molote, Enfrijoladas, Entomatadas, Enmoladas, Pipián|Pipian, Chileatole, Caldo tlalpeño, Rompope, Jericalla, Cocada, Alegría|Alegria, Buñuelos|Bunuelos, Pescado zarandeado, Sikil pak, Frijoles charros, Frijoles puercos
 100: Escamoles :: Ant larvae harvested from agave roots, sometimes called Mexican caviar.
+
+? Name a kind of nut
+~drop nut,nuts
+10: Peanut, Almond, Cashew, Walnut, Pecan, Pistachio
+15: Hazelnut|Filbert, Macadamia
+30: Brazil nut, Pine nut|Pignoli|Pinon|Piñon, Chestnut, Coconut, Acorn
+60: Hickory, Butternut, Beechnut|Beech, Kola|Cola, Candlenut|Kemiri, Tiger nut|Chufa, Black walnut, Marcona, Water chestnut, Ginkgo, Betel|Areca, Cobnut, Heartnut
+85: Pili, Kukui, Baru, Sacha inchi, Mongongo, Marula, Shea, Sapucaia|Paradise nut, Ogbono, Breadnut, Malabar chestnut, Gevuina|Chilean hazelnut, Hican, Yellowhorn, Pinhão|Pinhao, Tropical almond|Indian almond, Ngali, Kenari|Canarium, Java almond, Monkey puzzle, Buartnut
+100: Bunya :: It grows in cones that can weigh as much as a bowling ball, and they drop from trees up to 45 metres tall.
+
+? Name a flavor of ice cream
+~drop ice,cream,flavor,flavour
+10: Vanilla, Chocolate, Strawberry, Mint chocolate chip|Mint chip|Mint, Cookies and cream|Cookies n cream, Rocky road
+15: Neapolitan
+30: Cookie dough|Chocolate chip cookie dough, Butter pecan, Pistachio, Coffee, Moose tracks, Rum raisin, Coconut, Chocolate chip, Salted caramel, Caramel, Birthday cake|Cake batter, Black cherry, Peanut butter, Mango, Butterscotch, Cherry Garcia, Chunky Monkey, Peach, Banana, French vanilla, Double chocolate, Fudge ripple, Raspberry
+60: Spumoni, Tutti frutti, Pralines and cream, Maple walnut, Black walnut, Cotton candy, Bubblegum, Superman, Matcha|Green tea, Lemon, Cinnamon, Pumpkin, Eggnog, Peppermint, Blueberry, Dulce de leche, Stracciatella, Rainbow sherbet|Sherbet, Mocha, Toffee, Cheesecake, S'mores, Red velvet, Black raspberry, Phish Food, Half Baked, Brownie, Tiramisu, Key lime, Hazelnut, Orange, Cherry vanilla, Ube
+85: Grape-Nuts|Grapenut, Lavender, Black sesame, Taro, Red bean|Azuki, Rose, Cardamom, Saffron, Avocado, Earl Grey, Licorice|Black licorice, Olive oil, Teaberry, Durian, Ginger, Basil, Thai tea, Horchata, Bacon, Sweet corn, Burnt sugar, Brown bread, Malted milk
+100: Blue Moon :: A bright blue Midwest flavor that nobody can agree on. Guesses include raspberry, almond and Froot Loops.
+
+? Name a type of cookie
+~drop cookie,cookies,biscuit,biscuits
+10: Chocolate chip, Oatmeal raisin|Oatmeal, Sugar, Peanut butter, Snickerdoodle, Oreo
+15: Fortune
+30: Shortbread, Gingerbread, Macaron|Macaroon, Biscotti|Cantucci, White chocolate macadamia|Macadamia, Thin Mints, Chips Ahoy, Fig Newton, Molasses, Gingersnap|Ginger snap, Butter, Black and white, Double chocolate, Thumbprint, Animal crackers, Nutter Butter, Samoas|Caramel deLites, M&M, Vanilla wafer|Nilla wafer, Pinwheel, Linzer
+60: Madeleine, Pizzelle, Rugelach, Russian tea cake|Mexican wedding cake|Snowball, Biscoff|Speculoos|Speculaas, Tagalongs|Peanut Butter Patties, Do-si-dos, Trefoil, Crinkle|Chocolate crinkle, Kitchen sink, Anzac, Florentine, Stroopwafel, Hamantaschen, Pfeffernüsse|Pfeffernusse, Ladyfinger, Amaretti, Biscochito|Bizcochito, Polvorón|Polvoron, Alfajor, Monster, Graham cracker, Lebkuchen, Spritz, Sablé|Sable, Tuile, Hobnob|Hobnobs, Digestive, Custard cream, Jammie Dodger, Pecan sandy|Sandies, Milano|Mint Milano, Peanut blossom|Blossom, Tim Tam, Cowboy
+85: Springerle, Kourabiedes, Melomakarona, Ma'amoul|Maamoul, Koulourakia, Pignoli, Ricciarelli, Brutti ma buoni, Rosette, Berger, Kolaczki|Kolacky, Hermit, Garibaldi, Bourbon, Shrewsbury, Empire, Nankhatai, Melting moment, Zimtsterne, Vanillekipferl, Joe Frogger, Ranger, Lengua de gato|Langue de chat, Chinese almond
+100: Krumkake :: A thin Norwegian waffle cookie, rolled into a cone while it's still hot off a special iron.
+
+? Name a kind of pie
+~drop pie,pies
+10: Apple, Pumpkin, Cherry, Pecan, Blueberry, Key lime
+15: Shepherd's|Shepherds|Cottage
+30: Banana cream, Lemon meringue|Lemon, Strawberry rhubarb|Rhubarb, Peach, Coconut cream, Sweet potato, Chocolate cream|Chocolate, Mince|Mincemeat, Chicken pot|Pot|Chicken, Boston cream, Mississippi mud|Mud, French silk, Blackberry, Dutch apple|Apple crumb, Steak and kidney|Steak, Custard, Strawberry, Raspberry, Pizza
+60: Shoofly, Chess, Buttermilk, Grasshopper, Peanut butter, Pork|Melton Mowbray, Fish|Fisherman's, Meat, Tamale, Tourtière|Tourtiere, Banoffee, Gooseberry, Mixed berry|Berry, Marionberry, Huckleberry, Cranberry, Pear, Plum, Apricot, Sugar cream|Hoosier, Derby|Kentucky Derby, Bean, Spinach|Spanakopita, Quiche, Black bottom, Cheese and onion, Mutton|Scotch
+85: Vinegar, Green tomato, Mock apple|Ritz, Sawdust, Transparent, Bob Andy, Funeral|Raisin, Grape|Concord grape, Persimmon, Tarte Tatin|Tatin, Pastilla|Bastilla, Bakewell, Kulebyaka|Coulibiaca, Natchitoches meat|Natchitoches, Frito, Game, Eel, Water, Atlantic Beach, Buko, Woolton, Shaker lemon
+100: Stargazy :: A Cornish fish pie with whole pilchards poking their heads up through the crust, gazing at the sky.

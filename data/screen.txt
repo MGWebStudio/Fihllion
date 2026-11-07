@@ -6,14 +6,6 @@
 85: Elio, Hoppers, Toy Story 5, Luxo Jr., Geri's Game, For the Birds, Bao, Piper, Partly Cloudy, Presto, Lifted
 100: The Good Dinosaur :: Widely reported as Pixar's first box-office flop. Its T. rexes herd cattle like cowboys.
 
-? Name a Disney animated movie
-10: The Lion King, Frozen, Aladdin, The Little Mermaid, Beauty and the Beast, Moana
-15: Fantasia, Treasure Planet
-30: Cinderella, Snow White|Snow White and the Seven Dwarfs, Mulan, Bambi, Dumbo, Pinocchio, Peter Pan, Sleeping Beauty, Tangled, Zootopia, Encanto, Lilo & Stitch|Lilo and Stitch, Tarzan, Pocahontas, Hercules, The Jungle Book, 101 Dalmatians|One Hundred and One Dalmatians, Lady and the Tramp, Robin Hood, The Aristocats, Alice in Wonderland, Big Hero 6, Wreck-It Ralph|Wreck It Ralph, The Princess and the Frog, Frozen 2, The Emperor's New Groove, The Hunchback of Notre Dame, The Fox and the Hound, Atlantis|Atlantis: The Lost Empire, Raya and the Last Dragon|Raya, Bolt, Ralph Breaks the Internet, Wish, Moana 2
-60: Oliver & Company|Oliver and Company, The Rescuers, The Sword in the Stone, The Great Mouse Detective, Brother Bear, Chicken Little, Meet the Robinsons, Home on the Range, Dinosaur, Strange World, The Many Adventures of Winnie the Pooh|Winnie the Pooh, The Rescuers Down Under, Fantasia 2000, Saludos Amigos, Make Mine Music, Fun and Fancy Free, Melody Time, The Three Caballeros, Song of the South, Pete's Dragon, Bedknobs and Broomsticks
-85: The Adventures of Ichabod and Mr. Toad|Ichabod and Mr. Toad, A Goofy Movie, DuckTales the Movie, Return to Never Land|Return to Neverland, Bambi II, Steamboat Willie, The Reluctant Dragon, So Dear to My Heart, Victory Through Air Power
-100: The Black Cauldron :: A flop so grim that Disney kept it off home video for over a decade.
-
 ? Name a Tom Hanks movie
 10: Forrest Gump, Toy Story, Cast Away, Big, Saving Private Ryan, Apollo 13
 15: Joe Versus the Volcano, The Terminal
@@ -21,14 +13,6 @@
 60: The 'Burbs|The Burbs, Bachelor Party, The Money Pit, Inferno, Cloud Atlas, Charlie Wilson's War, The Ladykillers, Larry Crowne, Greyhound, News of the World, Finch, Dragnet, Punchline, That Thing You Do!, The Bonfire of the Vanities, Extremely Loud & Incredibly Close|Extremely Loud and Incredibly Close, A Hologram for the King, The Circle, Pinocchio, Asteroid City, Nothing in Common, Volunteers, The Man with One Red Shoe
 85: Every Time We Say Goodbye, Mazes and Monsters|Mazes & Monsters, Here, Toy Story 2, Toy Story 3, Toy Story 4, The Great Buck Howard, Radio Flyer
 100: He Knows You're Alone :: Tom Hanks's film debut was a small part in this 1980 slasher.
-
-? Name a Best Picture winner
-10: Titanic, The Godfather, Forrest Gump, Gladiator, Casablanca, Rocky
-15: Parasite
-30: Schindler's List, Gone with the Wind, The Silence of the Lambs, Braveheart, Oppenheimer, Everything Everywhere All at Once, The Sound of Music, The Lord of the Rings: The Return of the King|Return of the King|Lord of the Rings, Slumdog Millionaire, The Departed, No Country for Old Men, Birdman, Moonlight, Green Book, Argo, The Godfather Part II|The Godfather Part 2|Godfather 2, A Beautiful Mind, Rain Man, Chicago, American Beauty, Crash, Million Dollar Baby, 12 Years a Slave, The Shape of Water, Spotlight, The King's Speech, The Hurt Locker, CODA, Nomadland, Annie Hall, West Side Story, Ben-Hur|Ben Hur, Lawrence of Arabia, Dances with Wolves, The Artist, Anora, One Battle After Another
-60: One Flew Over the Cuckoo's Nest, Amadeus, Unforgiven, Platoon, Driving Miss Daisy, Shakespeare in Love, The English Patient, The Deer Hunter, The Sting, The French Connection, Patton, Midnight Cowboy, Gandhi, Out of Africa, Terms of Endearment, Chariots of Fire, Kramer vs. Kramer|Kramer vs Kramer, The Last Emperor, Ordinary People, My Fair Lady, The Apartment, On the Waterfront, All About Eve, An American in Paris, It Happened One Night, The Bridge on the River Kwai, From Here to Eternity, In the Heat of the Night, Rebecca, All Quiet on the Western Front
-85: Oliver!|Oliver, A Man for All Seasons, Tom Jones, Gigi, Around the World in 80 Days, Marty, The Greatest Show on Earth, All the King's Men, Hamlet, Gentleman's Agreement, The Best Years of Our Lives, The Lost Weekend, Going My Way, Mrs. Miniver, How Green Was My Valley, You Can't Take It with You, The Life of Emile Zola, The Great Ziegfeld, Mutiny on the Bounty, Cavalcade, Grand Hotel, Cimarron, The Broadway Melody
-100: Wings :: The very first Best Picture winner: a 1927 silent film famous for its aerial dogfights.
 
 ? Name a Star Wars character
 10: Darth Vader|Vader, Luke Skywalker|Luke, Han Solo|Han, Princess Leia|Leia, Yoda, Chewbacca|Chewie
@@ -94,14 +78,6 @@
 85: Never Say Never Again
 100: On Her Majesty's Secret Service :: The only one starring George Lazenby, who quit after a single film.
 
-? Name a horror movie
-10: Halloween, The Exorcist, Scream, Friday the 13th, A Nightmare on Elm Street|Nightmare on Elm Street, The Shining, It
-15: Hereditary, Midsommar
-30: Psycho, Saw, The Conjuring, Get Out, The Texas Chain Saw Massacre|Texas Chainsaw Massacre, The Ring, Alien, Jaws, Poltergeist, Paranormal Activity, The Blair Witch Project|Blair Witch, Insidious, Annabelle, Sinister, A Quiet Place, Us, Nope, Child's Play|Chucky, Carrie, Rosemary's Baby, The Omen, The Thing, Hellraiser, Evil Dead|The Evil Dead, The Birds, Candyman, Pet Sematary, Final Destination, The Babadook, The Grudge, The Purge, M3GAN|Megan, Smile, Five Nights at Freddy's, Terrifier, Sinners, The Nun, The Witch, Barbarian, Talk to Me, Cujo, Misery, Dracula, Frankenstein, Night of the Living Dead, Dawn of the Dead
-60: Suspiria, Audition, Ringu, Let the Right One In, It Follows, The Descent, 28 Days Later, Shaun of the Dead, The Cabin in the Woods, Tucker & Dale vs. Evil|Tucker and Dale vs Evil, Trick 'r Treat, The Wicker Man, The Fly, The Blob, Phantasm, Re-Animator, Creepshow, An American Werewolf in London, The Howling, Tremors, The Lost Boys, Fright Night, Leprechaun, Gremlins, Killer Klowns from Outer Space|Killer Klowns, House of Wax, Eyes Without a Face, Nosferatu, The Cabinet of Dr. Caligari, Creature from the Black Lagoon, The Invisible Man, The Mummy, Bride of Frankenstein, Black Christmas, The Hills Have Eyes, The Last House on the Left, Hostel, High Tension, Martyrs, Oculus, The Others, Drag Me to Hell, The Mist, Train to Busan, The Lighthouse, Pearl, X, Longlegs, Malignant, Annihilation, Piranha
-85: Pontypool, Session 9, May, Ginger Snaps, The Changeling, Don't Look Now, Carnival of Souls, The Haunting, The Innocents, Les Diaboliques|Diabolique, Onibaba, Kwaidan, Possession, Angst, Inferno, Tenebrae, Deep Red, The Beyond, Zombi 2, Cannibal Holocaust, Maniac, Sleepaway Camp, The Burning, My Bloody Valentine, Prom Night, Terror Train, The Prowler, Basket Case, Street Trash, The Stuff, Society, From Beyond, Hellbound, Slither, Dead Alive|Braindead, Bad Taste, A Tale of Two Sisters, Pulse, Noroi, Kill List, Under the Skin, Saint Maud, The Vigil, Skinamarink, Mandy, Lake Mungo, Absentia, Deep Blue Sea, Humanoids from the Deep
-100: Hausu|House :: A 1977 Japanese film in which a haunted house eats schoolgirls. One gets swallowed by a piano.
-
 ? Name a Disney villain
 10: Scar, Ursula, Maleficent, Jafar, Cruella de Vil|Cruella, Captain Hook|Hook, Gaston
 15: Hans
@@ -118,14 +94,6 @@
 85: Amblin', Something Evil, Savage, Escape to Nowhere, Twilight Zone: The Movie|Twilight Zone, Disclosure Day
 100: Firelight :: Spielberg made this sci-fi feature at 17 for about $500, and a local theater screened it.
 
-? Name a Lord of the Rings character
-10: Frodo Baggins|Frodo, Gandalf, Aragorn, Gollum|Smeagol|Sméagol, Legolas, Samwise Gamgee|Sam|Samwise
-15: Tom Bombadil|Bombadil
-30: Gimli, Bilbo Baggins|Bilbo, Sauron, Saruman, Boromir, Merry|Meriadoc Brandybuck, Pippin|Peregrin Took, Arwen, Elrond, Galadriel, Éowyn|Eowyn, Théoden|Theoden, Éomer|Eomer, Faramir, Treebeard, Shelob, Balrog, Gríma Wormtongue|Wormtongue|Grima, Denethor, Smaug, Witch-king of Angmar|Witch King|Witch-king, Shadowfax
-60: Haldir, Celeborn, Lurtz, Gothmog, Radagast, Thorin Oakenshield|Thorin, Beorn, Balin, Dwalin, Fili, Kili, Bard the Bowman|Bard, Thranduil, Tauriel, Azog, Rosie Cotton, Goldberry, Isildur, Elendil, Gil-galad, Mouth of Sauron, Barliman Butterbur|Butterbur, Hama, Gamling, Madril, Grishnákh|Grishnakh, Uglúk|Ugluk, Shagrat, Gorbag, Bolg, Glorfindel, Erestor, Morgoth|Melkor
-85: Quickbeam, Farmer Maggot, Lobelia Sackville-Baggins, Lotho, Déagol|Deagol, Ioreth, Beregond, Bergil, Imrahil, Gwaihir, Fatty Bolger, Gaffer Gamgee|Hamfast, Elladan, Elrohir, Círdan|Cirdan, Anárion, Lúthien|Luthien, Beren, Eärendil, Fëanor|Feanor, Fingolfin, Ungoliant, Túrin, Melian, Thingol, Tom Cotton, Ted Sandyman, Bill Ferny, Elfhelm, Erkenbrand, Ghân-buri-Ghân|Ghan-buri-Ghan, Asfaloth, Brego, Snowmane, Dori, Nori, Ori, Oin, Gloin, Bifur, Bofur, Bombur, Dain Ironfoot
-100: Bill the Pony|Bill :: Sam's beloved pony. He survives the whole story and gets to kick his cruel old owner on the way home.
-
 ? Name a movie with a number in the title
 10: 101 Dalmatians, 12 Angry Men, Ocean's Eleven|Ocean's 11, 13 Going on 30, Seven|Se7en, The Hateful Eight, 300, 21 Jump Street, 10 Things I Hate About You
 15: 8 Mile, The 40-Year-Old Virgin|40 Year Old Virgin, 8½|8 1/2
@@ -141,3 +109,38 @@
 60: Red Planet, Red Riding Hood, Reds, The Scarlet Letter, The White Ribbon, The Great White Hope, White House Down, Black Sheep, The Purple Rose of Cairo, Brown Sugar, Green Zone, Green Room, The Green Knight, Green Card, The Green Berets, How Green Was My Valley, The Big Blue, Blue Is the Warmest Color, Blue Thunder, Pink Flamingos, The Woman in Red, The Woman in Black, White Oleander, Black Rain, Red Heat, Red State, Red Cliff, Crimson Tide, Crimson Peak, Black Beauty, Black Narcissus, The Lady in Red, Blood Red, Orange County, The Man in the White Suit, Gold, Goldfinger, Golden Child|The Golden Child
 85: Scarlet Street, Three Colors: Blue, Three Colors: White, Three Colors: Red, Mood Indigo, Vanilla Sky, Tangerine, Blue Steel, Blue Ruin, Blue Collar, Blue Streak, Blue Chips, White Heat, White Hunter Black Heart, White Palace, White Dog, White Fang, Black Sunday, Black Orpheus, The Black Stallion, The Black Hole, Red River, Red Beard, Red Desert, Red Road, The Red Shoes, The Thin Blue Line, The Yellow Rolls-Royce, She Wore a Yellow Ribbon, Pink Floyd: The Wall, The Pink Cadillac|Pink Cadillac, Pink String and Sealing Wax, Greenfingers, Grey Gardens, Violet & Daisy, Blue Lagoon|The Blue Lagoon, The Blue Max, The Blue Angel
 100: The Red Balloon :: This 1956 French short has almost no dialogue, and it still won the Oscar for Best Screenplay.
+
+? Name a Marvel movie
+~drop movie,marvel
+10: Iron Man, The Avengers|Avengers, Black Panther, Spider-Man|Spiderman, Avengers: Endgame|Endgame, Thor, Guardians of the Galaxy|Guardians, Captain America: The First Avenger|Captain America|The First Avenger
+15: Howard the Duck
+30: Avengers: Infinity War|Infinity War, Captain Marvel, Doctor Strange, Ant-Man|Antman, Black Widow, Thor: Ragnarok|Ragnarok, Captain America: Civil War|Civil War, Iron Man 2, Iron Man 3, Avengers: Age of Ultron|Age of Ultron, Captain America: The Winter Soldier|The Winter Soldier|Winter Soldier, Spider-Man: Homecoming|Homecoming, Spider-Man: No Way Home|No Way Home, Spider-Man: Far From Home|Far From Home, Deadpool, X-Men, Logan, Shang-Chi and the Legend of the Ten Rings|Shang-Chi, Eternals, The Incredible Hulk|Incredible Hulk, Guardians of the Galaxy Vol. 2|Guardians of the Galaxy 2, Black Panther: Wakanda Forever|Wakanda Forever, Thor: Love and Thunder|Love and Thunder, Deadpool & Wolverine|Deadpool and Wolverine, Spider-Man: Into the Spider-Verse|Into the Spider-Verse|Spider-Verse, Venom, Fantastic Four|The Fantastic Four, Blade, Big Hero 6
+60: The Marvels, Ant-Man and the Wasp, Ant-Man and the Wasp: Quantumania|Quantumania, Thor: The Dark World|The Dark World, Doctor Strange in the Multiverse of Madness|Multiverse of Madness, Guardians of the Galaxy Vol. 3|Guardians of the Galaxy 3, Captain America: Brave New World|Brave New World, Thunderbolts|Thunderbolts*, The Fantastic Four: First Steps|First Steps, Deadpool 2, X2|X-Men United, X-Men: The Last Stand|The Last Stand, X-Men: First Class|First Class, X-Men: Days of Future Past|Days of Future Past, X-Men: Apocalypse, Dark Phoenix, X-Men Origins: Wolverine|X-Men Origins, The Wolverine, The New Mutants|New Mutants, Spider-Man 2, Spider-Man 3, The Amazing Spider-Man|Amazing Spider-Man, The Amazing Spider-Man 2, Spider-Man: Across the Spider-Verse|Across the Spider-Verse, Venom: Let There Be Carnage|Let There Be Carnage, Venom: The Last Dance, Morbius, Madame Web, Kraven the Hunter|Kraven, Blade II|Blade 2, Blade: Trinity|Blade Trinity, Daredevil, Elektra, Ghost Rider, Ghost Rider: Spirit of Vengeance|Spirit of Vengeance, Fantastic Four: Rise of the Silver Surfer|Rise of the Silver Surfer, Hulk, The Punisher|Punisher, Punisher: War Zone
+85: Men in Black, Kick-Ass, Nick Fury: Agent of S.H.I.E.L.D.|Nick Fury, Werewolf by Night, The Guardians of the Galaxy Holiday Special|Holiday Special, Ultimate Avengers, Fant4stic, Captain America (1990), Generation X, Iron Man: Rise of Technovore, Planet Hulk, Hulk Vs.|Hulk vs
+100: Man-Thing :: A 2005 swamp-monster movie. In the comics, Man-Thing beat DC's Swamp Thing into print by about two months.
+
+? Name a Friends character
+10: Rachel|Rachel Green, Ross|Ross Geller, Monica|Monica Geller, Chandler|Chandler Bing, Joey|Joey Tribbiani, Phoebe|Phoebe Buffay
+15: Gunther
+30: Janice, Mike|Mike Hannigan, Richard|Richard Burke, Emily|Emily Waltham, Carol|Carol Willick, Susan|Susan Bunch, Ben|Ben Geller, Ursula|Ursula Buffay, Jack Geller|Jack, Judy Geller|Judy, Frank Buffay Jr.|Frank Jr.|Frank Junior, Mr. Heckles|Heckles, Ugly Naked Guy, Paolo, Tag|Tag Jones, Julie, Charlie|Charlie Wheeler, Mona, Kathy, Emma|Emma Geller-Green, Estelle|Estelle Leonard, Janine|Janine Lecroix, Pete|Pete Becker, Barry|Barry Farber, Mindy, Marcel
+60: Eddie|Eddie Menuek, David, Gary, Elizabeth|Elizabeth Stevens, Paul|Paul Stevens, Joshua, Russ, Will|Will Colbert, Erica, Alice|Alice Knight, Gavin, Amy|Amy Green, Jill|Jill Green, Leonard Green|Dr. Green, Sandra Green, Nora Bing, Charles Bing, Dina|Dina Tribbiani, Lowell, Mr. Treeger|Treeger, Roy, Doug, Duncan, Hugsy, The Chick|Chick, The Duck|Duck, Cecilia Monroe|Cecilia, Drake Ramoray|Dr. Drake Ramoray, Regina Phalange, Bonnie, Joanna, Sophie, Mark|Mark Robinson, Chloe, Molly
+85: Steve, Frank Buffay Sr.|Frank Sr., Phoebe Abbott, Lily Buffay|Lily, Frank Jr. Jr., Danny, Roger, Malcolm, Vince, Ronni|Ronni Rapalono, Aurora, Kate|Kate Miller, Ginger, Eric, Rob Donnen|Rob, Larry, Fake Monica|Monana, Chip|Chip Matthews, Amanda|Amanda Buffamonteezi, Tim|Tim Burke
+100: Fun Bobby :: Monica's boyfriend who was the life of every party, until it turned out the fun came from the drinking.
+
+? Name a Disney princess
+~drop princess,disney
+10: Cinderella, Ariel, Belle, Jasmine, Snow White, Aurora|Sleeping Beauty
+15: Merida, Leia|Princess Leia
+30: Mulan, Pocahontas, Tiana, Rapunzel, Moana, Elsa, Anna, Vanellope|Vanellope von Schweetz
+60: Raya, Elena|Elena of Avalor, Sofia|Sofia the First, Kida|Kidagakash, Giselle, Tiger Lily, Atta, Kiara, Nala
+85: Shuri, Amber, Isabel, Anastasia, Melody, Calla, Hildegard
+100: Eilonwy :: The princess from The Black Cauldron, a 1985 flop. She's never been part of the official Disney Princess lineup.
+
+? Name a game show
+~drop show
+10: Jeopardy!|Jeopardy, Wheel of Fortune|Wheel, The Price Is Right|Price Is Right, Family Feud|Feud, Who Wants to Be a Millionaire|Millionaire
+15: Deal or No Deal
+30: Let's Make a Deal|Lets Make a Deal, Password, The Weakest Link|Weakest Link, Match Game, The Newlywed Game|Newlywed Game, Hollywood Squares, Press Your Luck, Are You Smarter Than a 5th Grader?|Are You Smarter Than a Fifth Grader, The $100\,000 Pyramid|Pyramid|$10\,000 Pyramid|$25\,000 Pyramid|100000 Pyramid, Wipeout, Minute to Win It, The Chase, Supermarket Sweep, Double Dare, Card Sharks, Name That Tune, To Tell the Truth, What's My Line?|Whats My Line, The Dating Game|Dating Game, Catchphrase, Countdown, Fear Factor, American Gladiators|Gladiators, Where in the World Is Carmen Sandiego?|Carmen Sandiego
+60: Legends of the Hidden Temple, Guts|GUTS, Figure It Out, Remote Control, Win Ben Stein's Money|Win Ben Steins Money, Lingo, Chain Reaction, Tic-Tac-Dough|Tic Tac Dough, Concentration, Sale of the Century, The Joker's Wild|Jokers Wild, Blockbusters, Shop 'til You Drop|Shop Til You Drop, The Wall, Cash Cab, 1 vs. 100|1 vs 100, Greed, Twenty-One|Twenty One, Dog Eat Dog, Hole in the Wall, The Floor, Beat Shazam, Ellen's Game of Games|Game of Games, Celebrity Name Game, Pointless, Tipping Point, Only Connect, University Challenge, Mastermind, The Crystal Maze|Crystal Maze, Taskmaster, QI, Fort Boyard, Takeshi's Castle|Takeshis Castle, You Bet Your Life, Beat the Clock, The Gong Show|Gong Show, Win\, Lose or Draw|Win Lose or Draw, The Cube, Nick Arcade, Get the Picture, Think Fast, Finders Keepers, Wild & Crazy Kids|Wild and Crazy Kids, Fun House, Masters of the Maze
+85: Whew!|Whew, Trivia Trap, Child's Play|Childs Play, Wheel 2000, The Big Spin|Big Spin, Duel, Downfall, The Million Second Quiz|Million Second Quiz, Russian Roulette, Bumper Stumpers, Bullseye, Going for Gold, 3-2-1, Blankety Blank, Bob's Full House|Bobs Full House, Treasure Hunt, Strike It Rich, Queen for a Day, The $64\,000 Question|64000 Question, Beat the Geeks, Street Smarts, Scrabble, Jep!|Jep
+100: Dotto :: A 1950s quiz show yanked off the air after a contestant found another player's answers in a notebook. It set off the quiz show scandals.

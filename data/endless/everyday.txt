@@ -1,0 +1,41 @@
+? Name a fast food chain
+10: McDonald's|McDonalds, Burger King, Wendy's, KFC|Kentucky Fried Chicken, Taco Bell, Subway, Chick-fil-A|Chick Fil A
+15: Krusty Krab, Good Burger
+30: Arby's, Popeyes, Dairy Queen|DQ, Sonic, Jack in the Box, Five Guys, In-N-Out|In N Out, Domino's, Pizza Hut, Papa John's, Little Caesars, Chipotle, Panera|Panera Bread, Panda Express, Whataburger, Hardee's, Carl's Jr., Starbucks, Dunkin'|Dunkin Donuts, Shake Shack, White Castle, Long John Silver's, Culver's, Wingstop, Zaxby's, Raising Cane's|Canes, Qdoba, Del Taco, Jimmy John's, Jersey Mike's, Firehouse Subs, Quiznos, Tim Hortons, Steak 'n Shake, Bojangles
+60: Church's|Church's Chicken, El Pollo Loco, Krystal, Checkers|Rally's, A&W, Auntie Anne's, Cinnabon, Sbarro, Nathan's Famous|Nathan's, Moe's, Baja Fresh, Rubio's, Noodles & Company, Wienerschnitzel, Dutch Bros, Krispy Kreme, Hungry Howie's, Papa Murphy's, Marco's Pizza, Cook Out, Portillo's, Smashburger, Freddy's, Blaze Pizza, MOD Pizza, Jollibee, Nando's, Greggs, Pret a Manger|Pret, Wimpy, Hungry Jack's, Tropical Smoothie, Smoothie King, Jamba Juice|Jamba, Pollo Tropical, Taco John's, Captain D's
+85: Burger Chef, Roy Rogers, Howard Johnson's, Hot 'n Now, Boston Market, Kenny Rogers Roasters, Taco Time, Taco Cabana, Taco Bueno, Back Yard Burgers, BurgerFi, Jack's, Milo's, Hot Dog on a Stick, Swensen's, Wayback Burgers, Mr. Hero, Penn Station, Potbelly, McAlister's, Schlotzsky's, Which Wich, Blimpie, Charleys, Tastee-Freez, Orange Julius, Karmelkorn, Dippin' Dots, Lee's Famous Recipe, Maid-Rite, Lotteria, MOS Burger, CoCo Ichibanya, Yoshinoya, Max Burgers, Harvey's, Mary Brown's, Pollo Campero, Supermac's, Steers, Galito's, Chowking
+100: Arthur Treacher's :: A fish-and-chips chain named after an English actor famous for playing butlers. Only a few remain.
+
+? Name a tech company
+10: Apple, Google, Microsoft, Amazon, Facebook|Meta, Samsung
+15: Pied Piper, Hooli
+30: Intel, IBM, Dell, HP|Hewlett-Packard, Sony, Netflix, Tesla, Nvidia, Oracle, Cisco, Adobe, Uber, Twitter|X, Salesforce, OpenAI, Anthropic, Lenovo, Spotify, PayPal, eBay, Yahoo, AOL, Zoom, Slack, Snapchat|Snap, TikTok|ByteDance, AMD, Qualcomm, LG, Toshiba, Panasonic, Xerox, Motorola, Nokia, BlackBerry, Huawei, Xiaomi, Asus, Acer, Airbnb, Lyft, Reddit, Pinterest, LinkedIn, Dropbox, Shopify, Square|Block, Stripe, Palantir, SpaceX, xAI
+60: Compaq, Gateway, Commodore, Atari, Sun Microsystems, Silicon Graphics|SGI, Palm, Netscape, MySpace, Digg, Vine, Friendster, Napster, LimeWire, Tandy, Texas Instruments, Micron, Western Digital, Seagate, SanDisk, Logitech, Corsair, Razer, VMware, Red Hat, GitHub, GitLab, Atlassian, Twilio, Cloudflare, Vercel, Snowflake, Databricks, Workday, ServiceNow, Intuit, Autodesk, Epic Games, Valve, Nintendo, Zillow, DoorDash, Instacart, Robinhood, Coinbase, Waymo, Cruise, Rivian, DeepMind, Alibaba, Tencent, Baidu, TSMC, ASML, Arm, Foxconn, Theranos
+85: Bell Labs, Xerox PARC, Digital Equipment Corporation|DEC, Wang Laboratories|Wang, Control Data, Cray, Novell, Lotus, WordPerfect, Borland, Ask Jeeves, AltaVista, Lycos, Excite, GeoCities, Pets.com, Webvan, Quibi, Magic Leap, Cuil, Clubhouse, Yik Yak, Color Labs, Jawbone, Pebble, Fitbit, Nest, Ring, Anki, Kodak, Polaroid, Kozmo, WeWork, Mistral, Perplexity, Cohere, Hugging Face, Scale AI, Evernote, Skype, ICQ
+100: Juicero :: Raised $120 million to sell a Wi-Fi juicer. Then people learned you could squeeze the bags by hand.
+
+? Name an airline
+10: Delta, American Airlines|American, United, Southwest, JetBlue, Spirit
+15: Oceanic Airlines|Oceanic, Pan Am
+30: Alaska Airlines|Alaska, Frontier, British Airways, Air Canada, Lufthansa, Emirates, Air France, KLM, Qantas, Hawaiian Airlines|Hawaiian, Ryanair, EasyJet, Virgin Atlantic|Virgin, Allegiant, Singapore Airlines, Qatar Airways|Qatar, Japan Airlines|JAL, WestJet, Aer Lingus, Turkish Airlines, Cathay Pacific
+60: TWA|Trans World Airlines, Continental, Northwest, US Airways|USAir, America West, AirTran, ANA|All Nippon Airways, Korean Air, Etihad, Swissair|Swiss, SAS|Scandinavian Airlines, Finnair, Iberia, Alitalia, ITA Airways, TAP|TAP Portugal, Icelandair, WOW Air, Norwegian, Air New Zealand, Aeromexico, Avianca, LATAM, Copa, Volaris, Air India, IndiGo, China Southern, China Eastern, Air China, Thai Airways, Vietnam Airlines, Malaysia Airlines, AirAsia, Philippine Airlines, Garuda Indonesia, El Al, Saudia, Ethiopian Airlines, South African Airways, Kenya Airways, Breeze, Avelo, Sun Country
+85: Braniff, Eastern, Piedmont, PSA, Ted, Song, Western Airlines, Reno Air, Midway, ValuJet, Tower Air, Ozark, Republic, Hughes Airwest, Laker Airways, Monarch, Flybe, Thomas Cook, BOAC, Sabena, Ansett, Kingfisher, Aeroflot, LOT, Aegean, Wizz Air, Jet2, Vueling, Transavia, Pegasus, Scoot, Cebu Pacific, Air Tahiti Nui, Fiji Airways, Aloha Airlines, Cape Air, Mokulele, Silver Airways, Contour
+100: Air Koryo :: North Korea's state airline, long the only one rated just one star by airline reviewers Skytrax.
+
+? Name a kind of hat
+~drop hat
+10: Baseball cap|Ball cap, Beanie, Cowboy|Stetson, Top, Sombrero, Fedora
+15: Fez, Tinfoil, Dunce cap, Propeller|Propeller beanie
+30: Beret, Bucket, Sun, Visor, Hard, Party, Witch's, Chef's|Toque, Bowler|Derby, Trucker, Snapback, Mortarboard|Graduation cap, Panama, Newsboy cap|Newsie, Flat cap, Crown, Helmet, Turban, Yarmulke|Kippah, Santa, Sailor, Pirate|Tricorn, Pork pie|Porkpie, Balaclava, Fisherman's, Ushanka|Russian, Tiara, Headband, Bandana, Bonnet|Sunbonnet
+60: Bearskin, Pith helmet, Deerstalker, Trilby, Homburg, Boater|Straw boater, Cloche, Fascinator, Pillbox, Stovepipe, Ten-gallon, Kepi, Shako, Garrison cap, Campaign, Conical|Rice, Hijab, Mitre|Bishop's mitre, Papal tiara, Bicorne, Akubra, Gaucho, Zucchetto, Coonskin cap, Jester, Nurse's cap, Sailor cap, Aviator, Stocking cap, Tam|Tam o' shanter, Kufi, Taqiyah, Durag|Do-rag
+85: Balmoral, Glengarry, Busby, Cavalier, Gat, Kokoshnik, Phrygian cap, Hennin, Wimple, Snood, Sugegasa, Papakha, Karakul, Keffiyeh|Ghutrah, Shtreimel, Spodik, Biretta, Galero, Capotain, Breton, Slouch, Vaquero, Montera, Chullo, Nón lá|Non la, Pussyhat, Ascot cap, Gatsby, Boonie
+100: Sou'wester|Southwester :: The fisherman's waterproof hat, with a long brim down the back to keep the sea off your neck.
+
+? Name a fabric
+~drop fabric
+10: Cotton, Silk, Denim, Wool, Polyester, Leather
+15: Spandex, Gore-Tex
+30: Linen, Nylon, Velvet, Satin, Flannel, Fleece, Corduroy, Cashmere, Lace, Suede, Burlap, Canvas, Tweed, Rayon, Chiffon, Lycra, Terry cloth|Terrycloth, Felt, Jersey, Khaki, Microfiber, Acrylic, Mesh, Tulle, Vinyl, Hemp, Organza
+60: Gingham, Seersucker, Chambray, Taffeta, Muslin, Cheesecloth, Damask, Brocade, Poplin, Twill, Oxford, Georgette, Crepe, Angora, Mohair, Alpaca, Merino, Chenille, Pashmina, Tartan, Paisley, Neoprene, Polar fleece, Bamboo, Modal, Viscose, Lamé|Lame, Sateen, Batiste, Voile, Gabardine, Herringbone, Houndstooth, Madras, Calico, Oilcloth, Toile, Kevlar, Patent leather, Ultrasuede, Sequin, Moleskin, Sharkskin
+85: Bombazine, Dimity, Cambric, Charmeuse, Shantung, Dupioni, Crinoline, Jacquard, Matelassé|Matelasse, Ottoman, Pongee, Organdy, Melton, Worsted, Serge, Loden, Nankeen, Sailcloth, Duck, Dungaree, Drill, Ticking, Broadcloth, Barathea, Cheviot, Harris Tweed, Shetland, Vicuña|Vicuna, Qiviut, Piña|Pina, Ikat, Batik, Kente, Mudcloth, Chintz, Cretonne, Lurex, Tencel, Lyocell, Microsuede, Gossamer, Samite, Baize, Mousseline
+100: Sea silk|Byssus :: Woven from the hair-like threads of a giant Mediterranean clam. Hardly anyone alive still knows how.

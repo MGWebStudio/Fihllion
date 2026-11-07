@@ -1,0 +1,25 @@
+? Name a unit of measurement
+~drop unit
+10: Inch, Foot|Feet, Mile, Meter|Metre, Pound, Gallon, Kilometer|Kilometre
+15: Furlong, Light-year|Lightyear
+30: Yard, Centimeter|Centimetre, Millimeter|Millimetre, Ounce, Liter|Litre, Cup, Pint, Quart, Gram, Kilogram|Kilo, Ton, Tablespoon, Teaspoon, Acre, Degree, Second, Minute, Hour, Watt, Volt, Amp|Ampere, Hertz, Calorie, Byte, Horsepower, Miles per hour|MPH, Decibel, Stone, Bushel, Hectare, Knot, Fathom
+60: Newton, Joule, Pascal, Kelvin, Celsius, Fahrenheit, Ohm, Mole, Candela, Lumen, Parsec, Nautical mile, League, Carat|Karat, Peck, Gill, Cubit, Dram, Hand, Chain, Rod, Micron, Nanometer, Angstrom, Astronomical unit|AU, Tesla, Coulomb, Farad, Bar, Barrel, Cord, Troy ounce, Kilowatt, Megabyte, Gigabyte, BTU|British thermal unit, Scoville, Richter
+85: Sievert, Becquerel, Henry, Weber, Siemens, Lux, Gray, Rad, Rem, Erg, Dyne, Slug, Poise, Stokes, Gauss, Oersted, Mach, Firkin, Hogshead, Tun, Minim, Scruple, Pennyweight, Grain, Perch, Ell, Span, Pica, Point, Em, Jigger, Dash, Pinch, Barn, Shake, Jiffy, Sverdrup, Beaufort, Fortnight, Tog, Dol, Sone
+100: Smoot :: In 1958, MIT students measured a bridge using a classmate's body. It's 364.4 smoots long.
+
+? Name a rock or mineral
+~drop rock,stone
+10: Granite, Diamond, Quartz, Marble, Limestone
+15: Obsidian, Kryptonite
+30: Sandstone, Slate, Basalt, Shale, Coal, Salt|Halite, Flint, Pumice, Talc, Gypsum, Mica, Feldspar, Amethyst, Jade, Hematite, Graphite, Turquoise, Opal, Geode, Chalk, Pyrite|Fool's gold, Schist
+60: Malachite, Calcite, Fluorite, Azurite, Galena, Magnetite, Bauxite, Olivine, Dolomite, Travertine, Soapstone, Onyx, Agate, Tourmaline, Topaz, Garnet, Jasper, Serpentine, Rhyolite, Andesite, Conglomerate, Lodestone, Quartzite, Tuff, Peridot, Corundum, Cinnabar
+85: Kimberlite, Peridotite, Gabbro, Diorite, Breccia, Phyllite, Migmatite, Eclogite, Komatiite, Dacite, Anthracite, Sphalerite, Chalcopyrite, Cassiterite, Barite, Apatite, Beryl, Zircon, Hornblende, Augite, Kaolinite, Orthoclase, Plagioclase, Muscovite, Biotite, Stibnite, Realgar, Orpiment, Rhodochrosite, Labradorite, Lapis lazuli, Selenite, Sodalite, Coquina, Marl, Chert, Novaculite, Pegmatite, Scoria
+100: Gneiss :: Pronounced "nice." Geologists have been making that joke for about 200 years.
+
+? Name a phobia
+10: Arachnophobia|Fear of spiders, Claustrophobia|Fear of small spaces|Fear of tight spaces, Agoraphobia, Acrophobia|Fear of heights
+15: Triskaidekaphobia|Fear of 13|Fear of the number 13, Hippopotomonstrosesquipedaliophobia|Fear of long words
+30: Germophobia|Mysophobia|Fear of germs, Ophidiophobia|Fear of snakes, Aerophobia|Fear of flying, Coulrophobia|Fear of clowns, Trypophobia|Fear of holes, Hydrophobia, Nyctophobia|Fear of the dark, Technophobia, Thanatophobia|Fear of death, Hemophobia|Hematophobia|Fear of blood, Cynophobia|Fear of dogs, Pyrophobia|Fear of fire, Xenophobia, Anglophobia, Francophobia
+60: Aquaphobia|Fear of water, Ailurophobia|Fear of cats, Entomophobia|Fear of insects|Fear of bugs, Glossophobia|Fear of public speaking, Zoophobia, Astraphobia|Fear of thunder, Emetophobia|Fear of vomiting, Trichophobia, Ornithophobia|Fear of birds, Dentophobia|Fear of dentists, Necrophobia, Pogonophobia|Fear of beards, Nomophobia|Fear of no phone, Bibliophobia|Fear of books, Automatonophobia, Ichthyophobia|Fear of fish, Chronophobia, Gamophobia|Fear of marriage, Philophobia|Fear of love, Podophobia|Fear of feet, Haphephobia|Fear of touch, Androphobia, Gynophobia, Pediophobia|Fear of dolls, Thalassophobia|Fear of the ocean, Megalophobia, Submechanophobia, Ombrophobia
+85: Nomatophobia, Phobophobia|Fear of fear, Pteronophobia|Fear of feathers, Ergophobia|Fear of work, Chiroptophobia|Fear of bats, Alektorophobia|Fear of chickens, Lepidopterophobia|Fear of butterflies, Melissophobia|Apiphobia|Fear of bees, Musophobia|Fear of mice, Equinophobia|Hippophobia|Fear of horses, Ranidaphobia|Fear of frogs, Turophobia|Fear of cheese, Spectrophobia, Somniphobia|Fear of sleep, Dendrophobia|Fear of trees, Anthophobia|Fear of flowers, Xanthophobia|Fear of yellow, Chromophobia, Heliophobia|Fear of the sun, Nephophobia|Fear of clouds, Koumpounophobia|Fear of buttons, Geniophobia|Fear of chins, Omphalophobia|Fear of belly buttons, Genuphobia|Fear of knees, Cibophobia|Fear of food, Hodophobia, Decidophobia, Sesquipedalophobia, Ablutophobia|Fear of bathing, Atychiphobia|Fear of failure, Eisoptrophobia|Fear of mirrors, Hylophobia
+100: Arachibutyrophobia|Fear of peanut butter :: The fear of peanut butter sticking to the roof of your mouth.

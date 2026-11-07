@@ -41,15 +41,6 @@
 85: Jejunum, Ileum, Cecum|Caecum, Fallopian tube, Urethra, Ureter, Epiglottis, Hippocampus, Amygdala, Medulla, Pons, Bone marrow|Marrow, Vas deferens, Interstitium, Vomeronasal organ, Bile duct, Omentum, Seminal vesicle
 100: Mesentery :: You've always had one, but doctors only argued it should count as an organ in the 2010s.
 
-? Name a unit of measurement
-~drop unit
-10: Inch, Foot|Feet, Mile, Meter|Metre, Pound, Gallon, Kilometer|Kilometre
-15: Furlong, Light-year|Lightyear
-30: Yard, Centimeter|Centimetre, Millimeter|Millimetre, Ounce, Liter|Litre, Cup, Pint, Quart, Gram, Kilogram|Kilo, Ton, Tablespoon, Teaspoon, Acre, Degree, Second, Minute, Hour, Watt, Volt, Amp|Ampere, Hertz, Calorie, Byte, Horsepower, Miles per hour|MPH, Decibel, Stone, Bushel, Hectare, Knot, Fathom
-60: Newton, Joule, Pascal, Kelvin, Celsius, Fahrenheit, Ohm, Mole, Candela, Lumen, Parsec, Nautical mile, League, Carat|Karat, Peck, Gill, Cubit, Dram, Hand, Chain, Rod, Micron, Nanometer, Angstrom, Astronomical unit|AU, Tesla, Coulomb, Farad, Bar, Barrel, Cord, Troy ounce, Kilowatt, Megabyte, Gigabyte, BTU|British thermal unit, Scoville, Richter
-85: Sievert, Becquerel, Henry, Weber, Siemens, Lux, Gray, Rad, Rem, Erg, Dyne, Slug, Poise, Stokes, Gauss, Oersted, Mach, Firkin, Hogshead, Tun, Minim, Scruple, Pennyweight, Grain, Perch, Ell, Span, Pica, Point, Em, Jigger, Dash, Pinch, Barn, Shake, Jiffy, Sverdrup, Beaufort, Fortnight, Tog, Dol, Sone
-100: Smoot :: In 1958, MIT students measured a bridge using a classmate's body. It's 364.4 smoots long.
-
 ? Name a famous scientist
 ~last
 10: Albert Einstein, Isaac Newton, Marie Curie, Charles Darwin, Stephen Hawking, Galileo Galilei|Galileo
@@ -68,15 +59,6 @@
 85: Foehn|Föhn, Bora, Harmattan, Khamsin, Simoom, Levanter, Meltemi, Williwaw, Diamond dust, Ball lightning, Sun shower|Sunshower, Sun dog|Sundog, Fire whirl|Firenado, Steam devil, Pogonip, Rime, Mammatus, Lake-effect snow|Lake effect, Scud, Supercell, Mesocyclone, Downburst, Wall cloud, Arcus, Noctilucent clouds, Gustnado, Landspout, Tule fog, Morning glory cloud, Sprite, St. Elmo's fire, Ice pellets, Mackerel sky
 100: Snow roller :: Wind can roll snow into hollow logs, as if invisible kids were building snowmen.
 
-? Name a rock or mineral
-~drop rock,stone
-10: Granite, Diamond, Quartz, Marble, Limestone
-15: Obsidian, Kryptonite
-30: Sandstone, Slate, Basalt, Shale, Coal, Salt|Halite, Flint, Pumice, Talc, Gypsum, Mica, Feldspar, Amethyst, Jade, Hematite, Graphite, Turquoise, Opal, Geode, Chalk, Pyrite|Fool's gold, Schist
-60: Malachite, Calcite, Fluorite, Azurite, Galena, Magnetite, Bauxite, Olivine, Dolomite, Travertine, Soapstone, Onyx, Agate, Tourmaline, Topaz, Garnet, Jasper, Serpentine, Rhyolite, Andesite, Conglomerate, Lodestone, Quartzite, Tuff, Peridot, Corundum, Cinnabar
-85: Kimberlite, Peridotite, Gabbro, Diorite, Breccia, Phyllite, Migmatite, Eclogite, Komatiite, Dacite, Anthracite, Sphalerite, Chalcopyrite, Cassiterite, Barite, Apatite, Beryl, Zircon, Hornblende, Augite, Kaolinite, Orthoclase, Plagioclase, Muscovite, Biotite, Stibnite, Realgar, Orpiment, Rhodochrosite, Labradorite, Lapis lazuli, Selenite, Sodalite, Coquina, Marl, Chert, Novaculite, Pegmatite, Scoria
-100: Gneiss :: Pronounced "nice." Geologists have been making that joke for about 200 years.
-
 ? Name a gemstone
 ~drop stone,gem
 10: Diamond, Ruby, Emerald, Sapphire, Pearl
@@ -93,14 +75,6 @@
 60: Ornithology, Herpetology, Pharmacology, Immunology, Hematology, Urology, Gastroenterology, Gynecology, Ophthalmology, Toxicology, Epidemiology, Virology, Bacteriology, Seismology, Volcanology|Vulcanology, Oceanology, Mycology, Horology, Graphology, Climatology, Endocrinology, Rheumatology, Kinesiology, Phrenology, Numerology, Terminology, Methodology, Ideology, Chronology, Hydrology, Audiology, Pulmonology, Anesthesiology, Cryptozoology
 85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
 100: Ichthyology :: The study of fish. The goldfish insists you take notes.
-
-? Name a phobia
-10: Arachnophobia|Fear of spiders, Claustrophobia|Fear of small spaces|Fear of tight spaces, Agoraphobia, Acrophobia|Fear of heights
-15: Triskaidekaphobia|Fear of 13|Fear of the number 13, Hippopotomonstrosesquipedaliophobia|Fear of long words
-30: Germophobia|Mysophobia|Fear of germs, Ophidiophobia|Fear of snakes, Aerophobia|Fear of flying, Coulrophobia|Fear of clowns, Trypophobia|Fear of holes, Hydrophobia, Nyctophobia|Fear of the dark, Technophobia, Thanatophobia|Fear of death, Hemophobia|Hematophobia|Fear of blood, Cynophobia|Fear of dogs, Pyrophobia|Fear of fire, Xenophobia, Anglophobia, Francophobia
-60: Aquaphobia|Fear of water, Ailurophobia|Fear of cats, Entomophobia|Fear of insects|Fear of bugs, Glossophobia|Fear of public speaking, Zoophobia, Astraphobia|Fear of thunder, Emetophobia|Fear of vomiting, Trichophobia, Ornithophobia|Fear of birds, Dentophobia|Fear of dentists, Necrophobia, Pogonophobia|Fear of beards, Nomophobia|Fear of no phone, Bibliophobia|Fear of books, Automatonophobia, Ichthyophobia|Fear of fish, Chronophobia, Gamophobia|Fear of marriage, Philophobia|Fear of love, Podophobia|Fear of feet, Haphephobia|Fear of touch, Androphobia, Gynophobia, Pediophobia|Fear of dolls, Thalassophobia|Fear of the ocean, Megalophobia, Submechanophobia, Ombrophobia
-85: Nomatophobia, Phobophobia|Fear of fear, Pteronophobia|Fear of feathers, Ergophobia|Fear of work, Chiroptophobia|Fear of bats, Alektorophobia|Fear of chickens, Lepidopterophobia|Fear of butterflies, Melissophobia|Apiphobia|Fear of bees, Musophobia|Fear of mice, Equinophobia|Hippophobia|Fear of horses, Ranidaphobia|Fear of frogs, Turophobia|Fear of cheese, Spectrophobia, Somniphobia|Fear of sleep, Dendrophobia|Fear of trees, Anthophobia|Fear of flowers, Xanthophobia|Fear of yellow, Chromophobia, Heliophobia|Fear of the sun, Nephophobia|Fear of clouds, Koumpounophobia|Fear of buttons, Geniophobia|Fear of chins, Omphalophobia|Fear of belly buttons, Genuphobia|Fear of knees, Cibophobia|Fear of food, Hodophobia, Decidophobia, Sesquipedalophobia, Ablutophobia|Fear of bathing, Atychiphobia|Fear of failure, Eisoptrophobia|Fear of mirrors, Hylophobia
-100: Arachibutyrophobia|Fear of peanut butter :: The fear of peanut butter sticking to the roof of your mouth.
 
 ? Name a muscle
 ~drop muscle
@@ -127,3 +101,40 @@
 60: Gemini, Mercury, Vostok, Soyuz, Juno, Galileo, Ingenuity, Sojourner, Pathfinder, Artemis, Orion, New Shepard|Blue Origin, Luna, Sputnik 2, Freedom 7, Friendship 7, Rosetta, Philae, Parker Solar Probe|Parker, Kepler, Chandrayaan, Chang'e, Tiangong, SpaceShipOne, Spitzer, Buran, Odyssey, Dawn, Deep Impact, Messenger, DART, Lucy, Psyche, InSight, Mariner, Phoenix, Stardust, OSIRIS-REx|Osiris Rex
 85: Venera, Vega, Zond, Salyut, Giotto, Hayabusa, Akatsuki, Ranger, Surveyor, Lunokhod, Explorer 1, Vanguard, Telstar, Landsat, Magellan, Huygens, Maven, Mangalyaan, Tianwen, Zhurong, Yutu, Hakuto, Vikram, Kvant, Aryabhata, Genesis, Gaia, Planck, Herschel, Chandra, Compton, Spektr-R, Kosmos, Polyot, Liberty Bell 7
 100: Beresheet :: Israel's moon lander crashed in 2019 carrying thousands of dormant tardigrades. They may still be there.
+
+? Name a famous astronaut
+~last
+~drop astronaut
+10: Neil Armstrong, Buzz Aldrin, Sally Ride, John Glenn, Yuri Gagarin
+15: Michael Collins
+30: Alan Shepard, Chris Hadfield, Mae Jemison, Scott Kelly, Jim Lovell|James Lovell, Valentina Tereshkova, Christa McAuliffe, Gus Grissom|Virgil Grissom, Eileen Collins, Gene Cernan|Eugene Cernan, Ed White, John Young, Alexei Leonov, Tim Peake, Mark Kelly
+60: Peggy Whitson, Pete Conrad|Charles Conrad, Alan Bean, Scott Carpenter, Wally Schirra|Walter Schirra, Gordon Cooper, Deke Slayton, Jack Swigert, Fred Haise, Jim Irwin|James Irwin, David Scott, Edgar Mitchell, Stuart Roosa, Charlie Duke|Charles Duke, Harrison Schmitt, Ron Evans|Ronald Evans, Dick Gordon|Richard Gordon, Rusty Schweickart, Jim McDivitt|James McDivitt, Roger Chaffee, Frank Borman, Bill Anders|William Anders, Tom Stafford|Thomas Stafford, Al Worden|Alfred Worden, Ken Mattingly, Guion Bluford, Ellison Onizuka, Judith Resnik, Ronald McNair, Dick Scobee|Francis Scobee, Kalpana Chawla, Story Musgrave, Bob Behnken|Robert Behnken, Doug Hurley|Douglas Hurley, Christina Koch, Jessica Meir, Sunita Williams|Suni Williams, Butch Wilmore|Barry Wilmore, José Hernández|Jose Hernandez, Ellen Ochoa, Franklin Chang-Díaz|Franklin Chang-Diaz, Shannon Lucid, Mike Massimino|Michael Massimino, Don Pettit|Donald Pettit, Rakesh Sharma, Yang Liwei, Thomas Pesquet, Samantha Cristoforetti, Koichi Wakata, Chiaki Mukai, Ilan Ramon, Laurel Clark, Marc Garneau, Roberta Bondar, Valeri Polyakov, Sergei Krikalev, Victor Glover, Reid Wiseman, Jeremy Hansen, Gherman Titov, Vladimir Komarov, Svetlana Savitskaya, Helen Sharman, Ulf Merbold, William Shatner
+85: Gennady Padalka, Oleg Kononenko, Anatoly Solovyev, Musa Manarov, Arnaldo Tamayo Méndez|Arnaldo Tamayo Mendez, Pham Tuan, Sultan bin Salman, Rodolfo Neri Vela, Marcos Pontes, Jean-Loup Chrétien|Jean-Loup Chretien, Claudie Haigneré|Claudie Haignere, Wubbo Ockels, Dumitru Prunariu, Mirosław Hermaszewski|Miroslaw Hermaszewski, Vladimír Remek|Vladimir Remek, Bertalan Farkas, Muhammed Faris, Toyohiro Akiyama, Michael Foale, Piers Sellers, Joe Engle, Vance Brand, Thomas Reiter, Alexander Gerst, Luca Parmitano, Paolo Nespoli, Andreas Mogensen, Frank De Winne, Christer Fuglesang, Pedro Duque, Akihiko Hoshide, Soichi Noguchi, Liu Yang, Wang Yaping, Zhai Zhigang, Sirisha Bandla, Dennis Tito, Mark Shuttleworth, Anousheh Ansari, Guy Laliberté|Guy Laliberte, Richard Garriott, Jared Isaacman, Hayley Arceneaux, Jerry Linenger, Leroy Chiao, John Herrington
+100: Wally Funk|Mary Wallace Funk :: Passed astronaut tests with the Mercury 13 women in 1961, then finally flew to space in 2021, at 82.
+
+? Name a programming language
+~drop language,programming
+10: Python, Java, JavaScript|JS, C, C plus plus|Cpp, HTML
+15: Scratch
+30: C sharp|Csharp, Ruby, PHP, Swift, SQL, Go|Golang, Rust, Kotlin, TypeScript, R, Perl, BASIC, Visual Basic|VB, Assembly|Assembler, MATLAB, Fortran, COBOL, Pascal, Lisp, Objective-C, CSS, Bash|Shell, Lua, Haskell, Dart, Scala
+60: Delphi, Prolog, Erlang, Elixir, Julia, Clojure, F sharp|Fsharp, OCaml, Groovy, Smalltalk, Ada, Logo, Scheme, Racket, Haxe, Zig, Nim, Crystal, Solidity, Elm, PowerShell, VBScript, ActionScript, ColdFusion, ABAP, Apex, Simula, ALGOL|Algol, PL/I|PL1, APL, BCPL, Forth, Tcl, AWK, Raku, Hack, Mojo
+85: Whitespace, Malbolge, INTERCAL, Befunge, LOLCODE, Shakespeare, Piet, Chef, Modula-2, Oberon, Eiffel, Miranda, Idris, Agda, Coq|Rocq, Lean, Mercury, Ballerina, Chapel, Pony, Rebol, Io, Factor, J, K, Q, JOVIAL, SNOBOL, MUMPS, RPG, Short Code, FLOW-MATIC|Flow-Matic, Autocode, Speedcoding, Squirrel, Wren, Gleam
+100: Plankalkül|Plankalkul :: Konrad Zuse designed it in the 1940s, but it wasn't run on a computer until decades later.
+
+? Name a type of cloud
+~drop cloud,clouds
+10: Cumulus, Cirrus, Stratus, Cumulonimbus|Thunderhead|Thundercloud|Thunder, Nimbus|Rain
+15: Fog
+30: Nimbostratus, Altostratus, Altocumulus, Cirrostratus, Cirrocumulus, Stratocumulus, Mammatus|Mammatocumulus, Lenticular|Lenticularis|UFO, Funnel, Wall, Shelf, Anvil|Incus, Contrail|Vapor trail
+60: Noctilucent, Nacreous|Mother of pearl|Polar stratospheric, Kelvin-Helmholtz|Billow|Fluctus, Pileus|Cap, Arcus, Roll|Volutus, Mackerel sky, Fallstreak|Hole punch|Hole-punch|Punch hole, Pyrocumulus|Fire|Flammagenitus, Pyrocumulonimbus, Banner, Castellanus|Castellatus, Fractus|Scud, Undulatus, Virga, Morning Glory, Orographic, Tuba, Velum, Pannus, Congestus|Cumulus congestus|Towering cumulus, Humilis|Cumulus humilis|Fair weather, Calvus, Capillatus, Uncinus|Mares' tails|Mare's tail, Floccus, Spissatus, Lacunosus, Radiatus, Mediocris, Cauda|Tail
+85: Translucidus, Opacus, Perlucidus, Duplicatus, Intortus, Vertebratus, Praecipitatio, Flumen|Beaver tail, Silvagenitus, Cataractagenitus, Homogenitus, Homomutatus, Cavum, Ice fog, Steam fog|Sea smoke, Ship tracks|Ship track, Horseshoe vortex|Horseshoe, Murus, Altocumulus castellanus, Wave
+100: Asperitas|Asperatus :: Added to the International Cloud Atlas in 2017 after members of the Cloud Appreciation Society pushed for it.
+
+? Name a star other than the Sun
+~drop star
+10: Polaris|North Star|Pole Star, Sirius|Dog Star, Betelgeuse|Beetlejuice, Alpha Centauri, Vega, Rigel
+15: Proxima Centauri|Proxima
+30: Aldebaran, Antares, Arcturus, Canopus, Deneb, Altair, Procyon, Capella, Spica, Pollux, Castor, Regulus, Fomalhaut, Bellatrix
+60: Alcyone, Mira, Algol|Demon Star, Achernar, Hadar|Beta Centauri, Acrux, Mimosa|Becrux, Gacrux, Shaula, Alnilam, Alnitak, Mintaka, Saiph, Mizar, Alcor, Dubhe, Merak, Alioth, Alkaid|Benetnash, Megrez, Phecda, Thuban, Eltanin, Rasalhague, Albireo, Sadr, Denebola, Alphard, Alpheratz, Mirach, Almach, Hamal, Mirfak, Markab, Enif, Kochab, Nunki, Atria, Peacock, Avior, Miaplacidus, Naos, Wezen, Adhara, Elnath, Tau Ceti, Epsilon Eridani, Barnard's Star|Barnards Star, Wolf 359, Eta Carinae, VY Canis Majoris, UY Scuti, Tabby's Star|Tabbys Star, TRAPPIST-1|Trappist 1
+85: Zubenelgenubi, Zubeneschamali, Rotanev, Sadalsuud, Sadalmelik, Skat, Ankaa, Diphda, Ruchbah, Caph, Schedar|Shedar, Errai, Alderamin, Sheratan, Acamar, Unukalhai, Sabik, Kornephoros, Tarazed, Gienah, Algorab, Kraz, Porrima, Vindemiatrix, Zavijava, Muphrid, Izar, Alphecca|Gemma, Graffias|Acrab, Dschubba, Lesath, Sargas, Ascella, Kaus Australis, Rukbat, Nashira, Deneb Algedi, Gomeisa, Wasat, Mebsuta, Alhena, Rasalgethi, Menkar, Algenib, Scheat, Przybylski's Star|Przybylskis Star, Luyten's Star|Luytens Star, Kapteyn's Star|Kapteyns Star, Van Maanen's Star|Van Maanens Star, Groombridge 1830, 61 Cygni, Pistol Star, Methuselah, R136a1, Gliese 581
+100: Sualocin :: It's "Nicolaus" spelled backwards. An observatory assistant in Sicily sneaked his own name onto the star map in 1814.

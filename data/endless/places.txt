@@ -1,0 +1,24 @@
+? Name an African country
+10: Egypt, South Africa, Nigeria, Kenya, Morocco
+15: Madagascar, Wakanda
+30: Ethiopia, Ghana, Tanzania, Uganda, Algeria, Libya, Sudan, Somalia, Zimbabwe, Rwanda, Tunisia, Congo|Democratic Republic of the Congo|DRC|DR Congo|Republic of the Congo, Cameroon, Senegal, Mali, Angola, Namibia, Botswana, Zambia, Ivory Coast|Côte d'Ivoire|Cote d'Ivoire
+60: Mozambique, Malawi, Niger, Chad, Liberia, Sierra Leone, Guinea, Gambia|The Gambia, Burkina Faso, Benin, Togo, Gabon, Eritrea, South Sudan, Mauritania, Lesotho, Burundi, Central African Republic|CAR, Djibouti
+85: Equatorial Guinea, Guinea-Bissau, Cape Verde|Cabo Verde, São Tomé and Príncipe|Sao Tome and Principe|Sao Tome, Comoros, Seychelles, Mauritius
+100: Eswatini|Swaziland :: Its king renamed the country from Swaziland in 2018, at a party for his own 50th birthday.
+
+? Name a US national park
+~drop national,park,np
+10: Yellowstone, Yosemite, Grand Canyon, Zion
+15: Arches
+30: Glacier, Grand Teton|Teton|Tetons, Rocky Mountain|Rocky Mountains, Great Smoky Mountains|Great Smoky|Smoky Mountains|Smokies, Acadia, Bryce Canyon|Bryce, Olympic, Everglades, Joshua Tree, Death Valley, Shenandoah, Redwood, Sequoia, Denali, Badlands, Mount Rainier|Rainier
+60: Hot Springs, Crater Lake, Canyonlands, Capitol Reef, Big Bend, Mesa Verde, Saguaro, Kings Canyon, Haleakalā|Haleakala, Hawaii Volcanoes, Carlsbad Caverns, Mammoth Cave, Wind Cave, Great Sand Dunes, White Sands, Theodore Roosevelt, Cuyahoga Valley, Indiana Dunes, Biscayne, New River Gorge, Glacier Bay, Katmai, Kenai Fjords, Lassen Volcanic|Lassen, Channel Islands, North Cascades, Voyageurs
+85: Isle Royale, Gates of the Arctic, Kobuk Valley, Lake Clark, Wrangell-St. Elias|Wrangell, Congaree, Dry Tortugas, Guadalupe Mountains, Great Basin, Petrified Forest, Pinnacles, Black Canyon of the Gunnison|Black Canyon, American Samoa, Virgin Islands
+100: Gateway Arch :: The smallest national park in the US is basically one giant arch in St. Louis.
+
+? Name a famous bridge
+10: Golden Gate|Golden Gate Bridge, Brooklyn Bridge|Brooklyn, London Bridge|London, Tower Bridge|Tower
+15: Bridge to Terabithia|Terabithia, Rialto|Rialto Bridge, Bridge of Sighs|Sighs
+30: Sydney Harbour Bridge|Sydney Harbor Bridge|Harbour Bridge|Sydney Harbour, Ponte Vecchio, Bay Bridge, Manhattan Bridge|Manhattan, George Washington Bridge|George Washington, Verrazzano|Verrazano|Verrazzano-Narrows, Mackinac Bridge|Mackinac, Chesapeake Bay Bridge, Charles Bridge, Akashi Kaikyo, Millau Viaduct|Millau, Tacoma Narrows, Seven Mile Bridge|Seven Mile, Bridge on the River Kwai|River Kwai, Rainbow Bridge, Bifrost
+60: Royal Gorge, Queensboro|59th Street Bridge, Williamsburg Bridge, Stari Most|Mostar, Pont Neuf, Pont du Gard, Chain Bridge, Chapel Bridge|Kapellbrücke, Forth Bridge, Humber Bridge, Clifton Suspension Bridge|Clifton, Iron Bridge|Ironbridge, Si-o-se-pol, Sunshine Skyway, Confederation Bridge, New River Gorge, Ambassador Bridge, Arthur Ravenel, Hell Gate, Zakim, Øresund|Oresund, Great Belt, Galata, Bosphorus, Tsing Ma, Vasco da Gama, 25 de Abril, Pont Alexandre III, Helix Bridge, Langkawi Sky Bridge, Glienicke|Bridge of Spies, Edmund Pettus
+85: Capilano, Carrick-a-Rede, Danyang–Kunshan, Lake Pontchartrain Causeway, Hangzhou Bay, Chengyang, Puente de la Mujer, Ponte Sant'Angelo, Millennium Bridge, Rakotz, Cooper River, Vizcaya, Kintai, Banpo, Sheikh Zayed, Dragon Bridge, Bixby Creek|Bixby, Deception Pass, Astoria–Megler, Lion Bridge, Natural Bridge
+100: Golden Bridge|Cầu Vàng|Cau Vang :: A Vietnamese footbridge held up by two giant stone hands.

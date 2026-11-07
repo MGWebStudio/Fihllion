@@ -72,7 +72,9 @@ if (existsSync(schedulePath)) {
     }
   });
   const used = new Set(schedule.days.flat());
-  const unused = prompts.filter((p) => !used.has(p.id));
+  const unused = prompts.filter((p) => !used.has(p.id) && !p.endlessOnly);
+  const retired = prompts.filter((p) => p.endlessOnly && used.has(p.id));
+  if (retired.length) problems.push(`prompts in data/endless/ are still scheduled: ${retired.map((p) => p.id).join(', ')}`);
   if (unused.length) warnings.push(`${unused.length} prompts aren't scheduled: ${unused.map((p) => p.id).join(', ')}`);
 } else {
   problems.push('data/schedule.json is missing');

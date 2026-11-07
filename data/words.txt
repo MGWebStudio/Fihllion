@@ -1,12 +1,3 @@
-? Name a word that rhymes with blue
-~exact
-10: Shoe, True, Glue, Clue, New, Two, Too, You, Zoo, Who, Do
-15: Kangaroo
-30: Flew, Grew, Knew, Threw, Through, Few, Crew, Drew, View, Chew, Stew, Moo, Boo, Goo, Dew|Due, Sue, Cue|Queue, Hue, Pew, Screw, Tattoo, Igloo, Bamboo, Shampoo, Taboo, Review, Renew, Canoe, Undo, Cashew, Cuckoo, Achoo, Voodoo, Yahoo, Hullabaloo, Caribou, Barbecue|BBQ, Avenue, Residue, Rescue, Statue, Value, Virtue, Issue, Tissue, Menu, Venue, Nephew, Adieu, Ewe, Yew, Gnu, Emu, Kazoo
-60: Construe, Accrue, Imbue, Pursue, Ensue, Subdue, Interview, Overdue, Revenue, Continue, Peekaboo, Honeydew, Mildew, Curlew, Sinew, Skew, Spew, Slew, Brew, Strew, Shrew, Bayou, Tutu, Guru, Haiku, Snafu, Tofu, Kung fu, Ragu, Sudoku, Thank you, Déjà vu|Deja vu, Cock-a-doodle-doo, Wahoo, Woohoo, Boohoo, Hairdo, Yoo-hoo, Whoo, Rue, Loo, Coo, Woo, Shoo, Poo, Ado, Askew, Anew, Eschew, Bijou, Milieu, Debut, Ragout
-85: Ingenue, Parvenu, Impromptu, Tiramisu, Retinue, Rendezvous, Marabou, Wallaroo, Ballyhoo, Buckaroo, Switcheroo, Skidoo, Jackaroo, Sou, Thew, Mew, Lieu, Purlieu, Bellevue, Curfew, Corkscrew, Vindaloo, Waterloo, Timbuktu, Kathmandu|Katmandu, Peru, Nehru, Xanadu, Malibu, Kalamazoo
-100: Didgeridoo :: The Aboriginal Australian wind instrument, played for well over a thousand years.
-
 ? Name a word that rhymes with cat
 ~exact
 10: Hat, Bat, Rat, Mat, Sat, Fat, Pat, That, Chat, Flat
@@ -24,15 +15,6 @@
 60: Stalactite, Stalagmite, Anthracite, Lignite, Acolyte, Neophyte, Erudite, Expedite, Reunite, Extradite, Indict, Incite, Despite, Rewrite, Ghostwrite, Underwrite, Nitrite, Sulfite, Israelite, Luddite, Vegemite, Marmite, Cellulite, Bullfight, Gunfight, Dogfight, Prizefight, Frostbite, Snakebite, Soundbite, Playwright, Shipwright, Wheelwright, Hindsight, Foresight, Eyesight, Campsite, Website, Starlight, Lamplight, Limelight, Skylight, Searchlight, Candlelight, Firelight, Nightlight, Featherlight, Airtight, Watertight, Uptight, Black and white, Snow White, Mr. Right, Sleight
 85: Malachite, Hematite, Magnetite, Dolomite, Bakelite, Ammonite, Muscovite, Trilobite, Proselyte, Anchorite, Eremite, Vulcanite, Lucite, Nephrite, Cordite, Shiite, Jacobite, Mennonite, Moabite, Hittite, Levite, Sybarite, Bedight, Alight, Affright, Aright, Benight, Requite, Smite, Bight, Tripartite, Bipartite, Dendrite, Electrolyte, Cosmopolite, Ebonite, Pyrite
 100: Troglodyte :: A cave dweller. It comes from the Greek for "one who creeps into holes."
-
-? Name a palindrome
-~exact
-10: Racecar|Race car, Level, Mom, Dad, Kayak, Bob, Anna, Noon, Wow, Madam
-15: Taco cat|Tacocat, A man a plan a canal Panama|A man, a plan, a canal: Panama, Hannah
-30: Civic, Radar, Refer, Rotor, Peep, Eye, Pop, Deed, Sis, Tot, Nun, Pup, Did, Ewe, Otto, Eve, Ada, Elle, Stats, Solos, Minim, Tenet, Redder, Rotator, Reviver, Sagas, Toot, Poop, Gag, Bib, Tut, Aha, Ava, Nan, Pip, Dud, Mum, Pap, Sees, Kook, Boob, Abba, Repaper
-60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
-85: Kinnikinnik, Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo
-100: Tattarrattat :: James Joyce's word for a knock on the door in Ulysses, and the longest palindrome in the Oxford English Dictionary.
 
 ? Name another word for happy
 10: Joyful, Glad, Cheerful, Excited, Content, Elated
@@ -74,14 +56,6 @@
 60: Gaelic|Irish|Scottish Gaelic, Norwegian, Danish, Finnish, Tagalog|Filipino, Bengali, Punjabi, Persian|Farsi, Czech, Hungarian, Romanian, Ukrainian, Welsh, Icelandic, Yiddish, Sanskrit, Esperanto, Elvish|Sindarin|Quenya, Indonesian, Malay, Tamil, Telugu, Zulu, Afrikaans, Hawaiian, Cherokee, Mongolian, Tibetan, Basque, Catalan, Haitian Creole|Creole, Amharic, Serbian, Croatian, Bulgarian, Dothraki, Na'vi
 85: Quechua, Nahuatl, Guarani, Māori|Maori, Xhosa, Yoruba, Igbo, Hausa, Somali, Wolof, Shona, Kurdish, Pashto, Armenian, Georgian, Lao, Khmer, Burmese, Nepali, Sinhala, Malayalam, Kannada, Marathi, Gujarati, Albanian, Lithuanian, Latvian, Estonian, Slovak, Slovene|Slovenian, Macedonian, Breton, Maltese, Luxembourgish, Faroese, Inuktitut, Ojibwe, Lakota, Hmong, Samoan, Tongan, Aramaic, Coptic, Ainu, Cornish, Manx, Romansh, Frisian, Sami, Tok Pisin, Rapa Nui, Uzbek, Kazakh, Tatar
 100: Silbo Gomero|Silbo :: A language made entirely of whistles, used to talk across the valleys of La Gomera in the Canary Islands.
-
-? Name a Greek letter
-10: Alpha, Beta, Gamma, Delta, Omega, Pi
-15: Omicron, Sigma
-30: Epsilon, Theta, Lambda, Mu, Tau, Phi, Psi, Chi, Kappa, Rho, Zeta
-60: Eta, Iota, Nu, Xi, Upsilon
-85: San, Koppa, Sampi, Stigma, Heta
-100: Digamma :: A letter the Greeks dropped before their classical age. It looked like an F, and sounded like W.
 
 ? Name a word that starts with X
 10: Xylophone, X-ray|Xray
@@ -126,14 +100,6 @@
 85: Obelus, Dagger|Obelisk, Double dagger, Section, Manicule, Asterism, Diaeresis|Umlaut, Cedilla, Circumflex, Acute accent, Grave accent, Virgule, Solidus, Lozenge, Reference, Sarcasm, Percontation point, Snark, Tittle
 100: Octothorpe :: The official-sounding name for the # symbol, supposedly coined at Bell Labs.
 
-? Name a French word or phrase used in English
-10: Déjà vu|Deja vu, Cliché|Cliche, Bon appétit|Bon appetit, Café|Cafe, Ballet, Fiancé|Fiance, Rendezvous
-15: Je ne sais quoi, C'est la vie, Faux pas
-30: Entrepreneur, Bouquet, Souvenir, Restaurant, Chic, Encore, Bizarre, Genre, Résumé|Resume, Boutique, Cuisine, Buffet, Chauffeur, Brunette, Blonde, Silhouette, Sabotage, Menu, Mirage, Massage, Façade|Facade, Hors d'oeuvre|Hors d'oeuvres, Crème de la crème|Creme de la creme, Voilà|Voila, Touché|Touche, Bourgeois, RSVP, À la carte|A la carte, Au revoir, Bon voyage, Mardi Gras, Protégé|Protege, Petite, Liaison, Risqué|Risque, Sauté|Saute, Entrée|Entree, Beret, Lingerie, Matinée|Matinee, Debut, Décor|Decor, Naïve|Naive, Tête-à-tête|Tete a tete, Coup
-60: Coup d'état|Coup d'etat, Laissez-faire, Nouveau riche, Avant-garde, Carte blanche, Vis-à-vis|Vis a vis, Sang-froid, Savoir faire, Raison d'être|Raison d'etre, Joie de vivre, Esprit de corps, Fait accompli, Double entendre, Femme fatale, Enfant terrible, Tour de force, Cul-de-sac, Bête noire|Bete noire, Mêlée|Melee, Ménage à trois|Menage a trois, Noblesse oblige, Papier-mâché|Paper mache, Pièce de résistance|Piece de resistance, Prêt-à-porter|Pret a porter, Art deco, Art nouveau, Attaché|Attache, Apéritif|Aperitif, Sommelier, Concierge, Connoisseur, Reconnaissance, Chaise longue|Chaise lounge, Chiffon, Château|Chateau, Milieu, Nom de plume, Panache, Penchant, Soirée|Soiree, Malaise, Élan|Elan, Ennui, Gauche, Gaffe, Aplomb, Blasé|Blase, Cachet, Détente|Detente, Dossier, Exposé|Expose, Forte, Impasse, Insouciance, Par excellence, Passé|Passe, Sobriquet, Visage, Tout de suite, Mon dieu, Merci, Sacré bleu|Sacre bleu, Zut alors
-85: Agent provocateur, Amour propre, Bon mot, Bon vivant, Cause célèbre|Cause celebre, Cri de coeur, Dernier cri, Éminence grise|Eminence grise, Haute couture, Idée fixe|Idee fixe, Jeu d'esprit, Mot juste, Objet d'art, Pied-à-terre|Pied a terre, Trompe-l'œil|Trompe l'oeil, Succès de scandale, Roman à clef, Nostalgie de la boue, Mise en scène|Mise en scene, Mise en place, Flâneur|Flaneur, Soupçon|Soupcon, Bric-à-brac|Bric a brac, Démodé|Demode, Arrière-pensée, Sans souci, Vignette, De rigueur, Plus ça change, Tant pis, Au courant, Au fait, Au contraire, Au naturel, Belle époque|Belle epoque, Beau monde, Billet-doux|Billet doux, Cordon bleu, Fin de siècle|Fin de siecle, Nouvelle vague
-100: L'esprit de l'escalier|Esprit de l'escalier|Staircase wit :: "Staircase wit." The perfect comeback you only think of after you've left.
-
 ? Name a way to walk
 10: Stroll, Jog, March, Run, Skip, Hike
 15: Moonwalk, Sashay
@@ -141,3 +107,30 @@
 60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Sleepwalk, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
 85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk
 100: Galumph :: Lewis Carroll made it up for "Jabberwocky." It means to bound along clumsily and in triumph.
+
+? Name a word that rhymes with day
+~exact
+10: Way, Say, Play, May, Hay, Pay, Stay, Away, Today, Okay|OK
+15: Ballet, Bouquet
+30: Ray, Bay, Gray|Grey, Clay, Pray|Prey, Tray, Spray, Sway, Stray, Neigh, Weigh|Whey, They, Slay|Sleigh, Lay, Jay, Fray, Bray, Delay, Display, Decay, Obey, Convey, Survey, Hooray|Hurray, Betray, Array, Essay, Holiday, Birthday, Monday, Friday, Sunday, Yesterday, Halfway, Highway, Hallway, Doorway, Subway, Runway
+60: Buffet, Cliché|Cliche, Fiancé|Fiance|Fiancee, Valet, Cabaret, Matinee, Résumé|Resume, Beret, Gourmet, Parfait, Sorbet, Soufflé|Souffle, Entrée|Entree, Croquet, Crochet, Duvet, Chalet, Ricochet, Sachet, Fillet|Filet, Melee, Passé|Passe, Touché|Touche, Protégé|Protege, Negligee, Hearsay, Portray, Mislay, Repay, Replay, Relay, Allay, Dismay, Inlay, Outweigh, Waylay, Foray, Astray, Ashtray, Doomsday, Heyday, Payday, Mayday, Workday, Weekday, Midday, Everyday, Someday, Castaway, Getaway, Stowaway, Giveaway, Runaway, Hideaway, Faraway, Takeaway, Throwaway, Disarray, Underway, Stingray, Screenplay, Swordplay, Horseplay, Cabernet, Chardonnay
+85: Beaujolais, Bidet, Cachet, Gilet, Purée|Puree, Flambé|Flambe, Sauté|Saute, Consommé|Consomme, Exposé|Expose, Attaché|Attache, Sashay, Monterey, Santa Fe, Bombay, Norway, Malay, Mandalay, Cathay, Paraguay, Uruguay, Calais, Marseille, Roundelay, Disobey, Overstay, Inveigh, Dossier, Atelier, Croupier, Sommelier, Foyer, Parquet, Toupee, Soirée|Soiree, Lingerie
+100: Popinjay :: An old word for a vain, chattering show-off. It first meant a parrot.
+
+? Name another word for small
+~drop very
+10: Tiny, Little, Mini, Petite, Wee
+15: Minuscule|Miniscule
+30: Teeny|Teeny-weeny, Itty-bitty|Itty bitty, Miniature, Minute, Compact, Short, Slight, Puny, Microscopic, Teensy|Teensy-weensy, Pint-sized|Pint-size|Pint sized, Bite-sized|Bite-size|Bite size, Baby, Pocket-sized|Pocket-size|Pocket size
+60: Diminutive, Infinitesimal, Lilliputian, Undersized, Dinky, Pocket, Toy, Dwarf, Bantam, Tiddly, Measly, Meager|Meagre, Scant, Small-scale, Slender, Limited, Modest, Petty, Trifling, Trivial, Negligible, Insignificant, Minor, Paltry, Narrow, Cramped, Poky|Pokey, Minimal, Nano, Micro, Elfin, Weensy, Teeny-tiny|Teeny tiny, Itsy-bitsy|Itsy bitsy, Snug, Cozy|Cosy, Junior, Stunted, Runty, Knee-high, Smallish, Little-bitty|Little bitty, Thumbnail
+85: Homeopathic, Minikin, Picayune, Inconsequential, Piffling, Footling, Nugatory, Bijou, Titchy, Diddy, Ickle, Atomic, Peewee|Pee-wee, Half-pint|Half pint, Fun-size|Fun size, Travel-size|Travel size, Shrimpy, Weeny
+100: Exiguous :: Means scanty or very small. It comes from the Latin for "weighed out exactly."
+
+? Name a word that starts with Q
+~drop word
+10: Queen, Quick, Quiet, Question, Quiz, Quilt, Quarter
+15: Qi
+30: Quack, Quail, Quake, Quality, Quantity, Quarrel, Quart, Quarry, Queasy, Quest, Queue, Quiche, Quill, Quit, Quite, Quote, Quiver, Quirk|Quirky, Quotient, Quench, Query, Quaint, Quarantine, Quartz, Quasar, Quarterback, Quicksand, Quinoa, Quintet, Quadrant, Quadruple, Qualify, Quota, Quokka
+60: Quixotic, Quagmire, Quandary, Quibble, Quintessential|Quintessence, Quorum, Quell, Quasi, Quaff, Quip, Quatrain, Quaver, Quay, Quetzal, Quince, Quinine, Quiescent, Quietus, Quietude, Quarto, Quidditch, Quisling, Quoth, Quadratic, Quadrilateral, Quadriceps|Quads, Quadrillion, Quantum, Quark, Quartile, Quesadilla, Queso, Quintuplet|Quints, Quarterly, Quarrelsome, Quizzical
+85: Quidnunc, Quotidian, Querulous, Quiddity, Quodlibet, Quillon, Quoin, Quern, Qintar|Qindar, Qanat, QWERTY|Qwerty, Quoll, Quahog, Quagga, Quinquennial, Quinquereme, Quadrivium, Quango, Quaestor, Quatrefoil, Quietism, Quassia, Quebracho, Quillwort, Quinsy, Quipu, Quirt, Quaich, Quair
+100: Quincunx :: The pattern of five dots on a die: one in each corner and one in the middle.

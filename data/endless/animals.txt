@@ -1,0 +1,32 @@
+? Name a bird
+10: Eagle, Robin, Pigeon, Owl, Penguin, Chicken, Parrot, Seagull|Gull, Crow, Duck
+15: Dodo, Puffin, Kiwi
+30: Sparrow, Hawk, Flamingo, Swan, Goose, Turkey, Blue jay|Jay, Cardinal, Ostrich, Emu, Peacock, Hummingbird, Woodpecker, Falcon, Raven, Toucan, Pelican, Canary, Finch, Stork, Vulture, Heron, Albatross, Crane, Bald eagle, Dove, Magpie, Starling, Macaw, Cockatoo, Parakeet, Quail, Pheasant, Roadrunner, Osprey, Condor, Mockingbird, Bluebird, Oriole
+60: Kingfisher, Nightingale, Wren, Chickadee, Sandpiper, Cormorant, Kookaburra, Cassowary, Rhea, Lark|Meadowlark, Swallow, Goldfinch, Warbler, Thrush, Ibis, Egret, Kestrel, Harrier, Partridge, Grouse, Guinea fowl, Loon, Lovebird, Cuckoo, Blackbird, Grackle, Nuthatch, Titmouse, Cockatiel, Tern, Mallard, Whippoorwill, Merlin, Spoonbill, Snowy owl, Barn owl, Budgie|Budgerigar, Frigatebird, Bowerbird, Lyrebird, Shoebill, Gannet, Hoopoe, Hornbill, Tanager, Vireo, Waxwing, Nene, Blue-footed booby|Booby
+85: Kakapo, Oilbird, Hoatzin, Bee-eater, Secretary bird, Kea, Takahe, Kittiwake, Razorbill, Guillemot, Shearwater, Petrel, Skua, Bittern, Dunnock, Nightjar, Avocet, Curlew, Godwit, Plover, Dunlin, Sanderling, Turnstone, Phalarope, Jacana, Anhinga, Limpkin, Sora, Rail, Coot, Gallinule, Bobolink, Dickcissel, Phoebe, Junco, Towhee, Siskin, Crossbill, Grosbeak, Bunting, Linnet, Yellowhammer, Capercaillie, Ptarmigan, Prairie chicken, Tinamou, Quetzal, Trogon, Motmot, Jabiru, Marabou stork|Marabou, Lammergeier|Bearded vulture, Caracara, Kite, Goshawk, Sparrowhawk, Gyrfalcon, Peregrine falcon|Peregrine, Wattlebird, Fairywren, Tui, Cock-of-the-rock, Treecreeper, Nutcracker, Dipper, Pipit, Wagtail, Chough, Jackdaw, Rook
+100: Potoo :: By day it passes for a broken branch. At night it opens huge cartoon eyes.
+
+? Name a cat breed
+10: Siamese, Persian, Maine Coon, Tabby
+15: Sphynx|Sphinx
+30: Ragdoll, Bengal, British Shorthair, Russian Blue, Scottish Fold, Abyssinian, American Shorthair, Calico, Domestic shorthair, Himalayan, Burmese, Birman, Manx, Savannah, Norwegian Forest|Norwegian Forest Cat, Tortoiseshell|Tortie, Exotic Shorthair
+60: Devon Rex, Cornish Rex, Munchkin, Oriental Shorthair, Turkish Angora|Angora, Turkish Van, Bombay, Tonkinese, Balinese, Ocicat, Siberian, Chartreux, Egyptian Mau, American Curl, Japanese Bobtail, Somali, Havana Brown, Snowshoe, Korat, Selkirk Rex, American Bobtail, LaPerm, Peterbald, Toyger
+85: Pixie-bob, Chausie, Nebelung, Kurilian Bobtail, Burmilla, Singapura, Serengeti, Minskin, Bambino, Donskoy, Ojos Azules, Sokoke, Khao Manee, Thai, Ragamuffin, Tiffanie, Chantilly, York Chocolate, Cymric, Australian Mist, German Rex, Aegean, Arabian Mau, Colorpoint Shorthair, Highlander, Kinkalow, Minuet|Napoleon, Dragon Li
+100: Lykoi :: A patchy-furred breed from a natural mutation, nicknamed the werewolf cat.
+
+? Name a dinosaur
+10: T. rex|Tyrannosaurus|Tyrannosaurus rex|T-rex|Trex, Triceratops, Velociraptor|Raptor, Stegosaurus, Brontosaurus
+15: Pterodactyl|Pteranodon, Plesiosaurus|Plesiosaur, Mosasaurus
+30: Brachiosaurus, Ankylosaurus, Diplodocus, Allosaurus, Spinosaurus, Apatosaurus, Parasaurolophus, Pachycephalosaurus, Iguanodon, Compsognathus, Dilophosaurus, Gallimimus, Megalosaurus, Utahraptor, Deinonychus
+60: Archaeopteryx, Carnotaurus, Giganotosaurus, Protoceratops, Oviraptor, Styracosaurus, Titanosaurus, Argentinosaurus, Hadrosaurus, Maiasaura, Coelophysis, Plateosaurus, Therizinosaurus, Microraptor, Troodon, Ceratosaurus, Corythosaurus, Edmontosaurus, Pachyrhinosaurus, Sauropelta, Kentrosaurus, Baryonyx, Albertosaurus, Camarasaurus, Dreadnoughtus, Tarbosaurus, Minmi, Psittacosaurus, Suchomimus, Sinosauropteryx, Yutyrannus, Nodosaurus, Euoplocephalus
+85: Amargasaurus, Micropachycephalosaurus, Ouranosaurus, Stygimoloch, Dracorex, Masiakasaurus, Mamenchisaurus, Nigersaurus, Epidexipteryx, Deinocheirus, Kosmoceratops, Sinornithosaurus, Rugops, Herrerasaurus, Eoraptor, Lesothosaurus, Hypsilophodon, Muttaburrasaurus, Leaellynasaura, Qantassaurus, Australovenator, Majungasaurus, Saltasaurus, Sauroposeidon, Supersaurus, Patagotitan, Tsintaosaurus, Zuniceratops, Achelousaurus, Chasmosaurus, Centrosaurus, Pentaceratops, Torosaurus, Olorotitan, Lambeosaurus, Gigantoraptor, Mei long, Mononykus, Tawa, Incisivosaurus, Scutellosaurus, Scelidosaurus, Gastonia, Hesperosaurus, Tuojiangosaurus, Huayangosaurus, Wuerhosaurus, Dacentrurus, Cryolophosaurus, Monolophosaurus, Sinraptor, Acrocanthosaurus, Carcharodontosaurus, Mapusaurus, Concavenator
+100: Irritator :: Named for how irritated scientists were to find dealers had doctored its fossil with car filler.
+
+? Name a horse breed
+~drop horse
+10: Clydesdale, Mustang, Arabian, Thoroughbred, Quarter|American Quarter, Shetland|Shetland pony
+15: Palomino, Appaloosa
+30: Paint|American Paint, Morgan, Friesian, Pinto, Percheron, Shire, Lipizzaner|Lipizzan, Belgian|Belgian draft, Tennessee Walker|Tennessee Walking, Andalusian, Standardbred, Welsh pony, Miniature|Mini, Hanoverian
+60: Haflinger, Fjord|Norwegian Fjord, Icelandic, Paso Fino, Peruvian Paso, Trakehner, Oldenburg, Holsteiner, Connemara, Suffolk Punch, Missouri Fox Trotter, Rocky Mountain, Saddlebred|American Saddlebred, Lusitano, Gypsy Vanner|Vanner, Hackney, Dartmoor, Exmoor, Falabella, Przewalski's|Przewalski, Brumby, Cleveland Bay, Warmblood, Barb, Chincoteague|Chincoteague pony, Dutch Warmblood, Ardennes
+85: Boulonnais, Breton, Knabstrupper, Marwari, Kathiawari, Caspian, Bashkir Curly|Curly, Nokota, Kiger Mustang, Mangalarga Marchador, Criollo, Azteca, Shagya, Tersk, Orlov Trotter, Budyonny, Mongolian, Yakut, Basuto, Waler, Camargue, Selle Français|Selle Francais, Welsh Cob|Cob, Dales, Fell, Highland, Eriskay, Kerry Bog, Hucul, Konik, Sorraia, Tarpan, Noriker, Jutland, Poitevin, American Cream Draft, Spanish Mustang
+100: Akhal-Teke :: Turkmenistan's "golden horse," with a coat that gleams like polished metal.

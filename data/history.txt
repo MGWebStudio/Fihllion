@@ -35,15 +35,6 @@
 85: Football|Soccer, Jenkins' Ear, Pastry, Pig, Bucket, Kalmar, Anglo-Zanzibar, Whiskey Rebellion, Toledo, Aroostook, Honey, Chaco, Thousand Days, Paraguayan, Taiping Rebellion, Boxer Rebellion, Peasants', Hussite, Scottish Independence, Seminole, Sino-Japanese, Balkan
 100: Emu :: In 1932 the Australian military went after emus with machine guns. The emus won.
 
-? Name an ancient civilization
-~drop ancient,the,civilization
-10: Egyptians|Egypt|Egyptian, Romans|Rome|Roman, Greeks|Greece|Greek, Aztecs|Aztec, Mayans|Maya|Mayan
-15: Atlantis
-30: Incas|Inca, Persians|Persia|Persian, Mesopotamia|Mesopotamian, Babylonians|Babylon|Babylonian, Sumerians|Sumer|Sumerian, Phoenicians|Phoenicia, Assyrians|Assyria, China|Chinese|Han dynasty, Indus Valley, Olmecs|Olmec, Carthage|Carthaginians, Celts, Hittites, Spartans|Sparta, Etruscans, Vikings
-60: Minoans|Minoan, Mycenaeans|Mycenae, Akkadians|Akkad, Nubians|Nubia|Kush, Khmer, Harappan, Zapotec, Toltec, Moche, Nazca|Nasca, Scythians, Parthians, Hebrews, Aksum|Axum, Anasazi|Ancestral Puebloans, Mississippian, Shang dynasty|Shang, Zhou dynasty|Zhou, Qin dynasty|Qin, Elamites, Gauls
-85: Hurrians, Urartu, Lydians, Kassites, Chaldeans, Medes, Nabataeans, Sabaeans|Sheba, Dilmun, Mixtec, Chavín|Chavin, Wari, Tiwanaku, Chimú|Chimu, Caral, Norte Chico, Jomon, Kushan, Maurya, Gupta, Thracians, Dacians, Illyrians, Philistines, Garamantes, Hyksos, Ebla, Mitanni, Amorites, Hopewell, Cahokia, Teotihuacan
-100: Sea Peoples :: Mysterious raiders who helped wreck Bronze Age empires around 1200 BC. Nobody knows who they were.
-
 ? Name a king or queen from history
 ~drop king,queen
 10: Elizabeth I|Queen Elizabeth|Elizabeth|Elizabeth II, Henry VIII|Henry the Eighth, Cleopatra, Marie Antoinette, George III|King George, Victoria
@@ -61,15 +52,6 @@
 60: Gouverneur Morris, Roger Sherman, Robert Morris, George Mason, Benjamin Rush, Richard Henry Lee, Charles Carroll, John Marshall, Marquis de Lafayette|Lafayette, Abigail Adams, Elbridge Gerry, John Dickinson, Caesar Rodney, George Wythe, Rufus King
 85: Francis Hopkinson, Stephen Hopkins, Lyman Hall, George Walton, Thomas McKean, George Read, William Paca, Samuel Chase, Thomas Stone, Carter Braxton, Thomas Nelson Jr.|Thomas Nelson, Benjamin Harrison V|Benjamin Harrison, Francis Lightfoot Lee, Thomas Heyward, Edward Rutledge, Arthur Middleton, Thomas Lynch, William Hooper, Joseph Hewes, John Penn, John Witherspoon, Francis Lewis, Philip Livingston, Lewis Morris, William Floyd, Josiah Bartlett, William Whipple, Matthew Thornton, Oliver Wolcott, Samuel Huntington, William Williams, Robert Treat Paine, Charles Pinckney, William Paterson, Jonathan Dayton, James Wilson, Haym Salomon
 100: Button Gwinnett :: He died in a duel within a year of signing. His signature is now among the most valuable in America.
-
-? Name a US First Lady
-~last
-10: Michelle Obama, Jackie Kennedy|Jacqueline Kennedy|Jackie O, Hillary Clinton, Eleanor Roosevelt, Melania Trump, Jill Biden
-15: Martha Washington, Abigail Adams
-30: Nancy Reagan, Barbara Bush, Laura Bush, Dolley Madison, Mary Todd Lincoln, Lady Bird Johnson, Betty Ford, Rosalynn Carter, Mamie Eisenhower, Pat Nixon
-60: Bess Truman, Lou Henry Hoover, Grace Coolidge, Edith Roosevelt, Edith Wilson, Florence Harding, Julia Grant, Helen Taft, Ida McKinley, Frances Cleveland, Louisa Adams, Elizabeth Monroe, Sarah Polk
-85: Rachel Jackson, Hannah Van Buren, Anna Harrison, Letitia Tyler, Julia Tyler, Margaret Taylor, Abigail Fillmore, Jane Pierce, Eliza Johnson, Lucy Hayes|Lemonade Lucy, Lucretia Garfield, Ellen Arthur, Caroline Harrison, Ellen Wilson, Martha Jefferson
-100: Harriet Lane :: President Buchanan never married, so his niece stepped in as First Lady.
 
 ? Name a philosopher
 ~last
@@ -116,15 +98,6 @@
 85: Diane Nash, Septima Clark, Whitney Young, Roy Wilkins, Fred Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo, Constance Baker Motley, Pauli Murray, Mary Church Terrell, Carrie Chapman Catt, Inez Milholland, Lucy Stone, Vine Deloria Jr.|Vine Deloria, Dennis Banks, Larry Itliong, Philip Vera Cruz, Fred Korematsu, Mary McLeod Bethune, Barbara Gittings, Frank Kameny, Mamie Till-Mobley|Mamie Till, E.D. Nixon, Homer Plessy, Thich Nhat Hanh, Bella Abzug, Shirley Chisholm
 100: Claudette Colvin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.
 
-? Name a famous battle
-~drop battle,of,the
-10: Gettysburg, Waterloo, D-Day|Normandy, Pearl Harbor, Bunker Hill
-15: Helm's Deep, Hoth
-30: Hastings, Alamo, Bulge, Midway, Stalingrad, Little Bighorn|Little Big Horn, Thermopylae, Antietam, Yorktown, Iwo Jima, Lexington|Lexington and Concord, Agincourt, Trafalgar, Bull Run|Manassas, Verdun, Somme, Britain, Saratoga, Marathon, Okinawa, New Orleans, Fort Sumter, Dunkirk, Guadalcanal, Gallipoli, Shiloh
-60: Vicksburg, Fredericksburg, Chancellorsville, Appomattox, Trenton, Cannae, Actium, Salamis, Bosworth|Bosworth Field, Tours, Austerlitz, Balaclava, Ypres, Khe Sanh, Dien Bien Phu, Hamburger Hill, Inchon, Chosin Reservoir|Chosin, Leyte Gulf, Coral Sea, El Alamein, Kursk, Berlin, Monte Cassino, Tannenberg, Jutland, Passchendaele, Culloden, Bannockburn, Stirling Bridge, Isandlwana, Rorke's Drift, Zama, Gaugamela, Issus, Lepanto, Vienna, Sekigahara, Plassey, Wounded Knee, Mogadishu, San Juan Hill, Fallujah, Tora Bora, Chickamauga, Cowpens, Fort McHenry, Lake Erie, Tippecanoe
-85: Teutoburg Forest, Carrhae, Adrianople, Hattin, Crécy|Crecy, Poitiers, Tsushima, Leuctra, Pharsalus, Philippi, Alesia, Stamford Bridge, Towton, Naseby, Blenheim, Poltava, Sedan, Mukden, Cambrai, Caporetto, Arnhem, Anzio, Imphal, Kohima, Hürtgen Forest|Hurtgen Forest, Ia Drang, Pork Chop Hill, Talavera, Borodino, Leipzig, Jena, Marengo, Nile, Copenhagen, Cape St. Vincent, Manzikert, Kadesh, Megiddo, Ain Jalut, Talas, Red Cliffs, Fei River, Kalinga, Panipat, Little Round Top
-100: Karánsebes|Karansebes :: The Austrian army reportedly attacked itself by mistake in 1788, though historians doubt the story.
-
 ? Name a famous ship
 ~drop hms,rms,uss,ss,css,the,ship
 10: Titanic, Mayflower, Santa Maria, Noah's Ark|Ark
@@ -133,3 +106,41 @@
 60: Bounty, Victory, Golden Hind, Pequod, Nautilus, Calypso, Mary Celeste, Hispaniola, Argo, Carpathia, Californian, Olympic, Vasa, Amistad, Missouri, Indianapolis, Graf Spee, Tirpitz, General Belgrano, Queen Anne's Revenge, Rainbow Warrior, Costa Concordia, Ever Given, Dawn Treader, Orca, Kon-Tiki, Mauretania, Hood, H.L. Hunley|Hunley, Whydah, Nimitz, Akagi, Sea Shepherd
 85: Erebus, Terror, Fram, Discovery, Nimrod, Terra Nova, Belgica, Aurora, Resolute, Cospatrick, Dunbar, Arbella, Speedwell, Susan Constant, Godspeed, Clotilda, Flor de la Mar, Nuestra Señora de Atocha|Atocha, Batavia, Medusa|Méduse, Zong, Empress of Ireland, Sultana, Eastland, Vestris, Wilhelm Gustloff, Doña Paz, Sewol, Great Eastern, Savannah, Turtle, Thresher, Scorpion, Kursk, Liberty, Pueblo, Mayaguez, Cole, Bluenose, America, Intrepid
 100: Essex :: A sperm whale rammed and sank this whaleship in 1820, which inspired Moby-Dick.
+
+? Name a US vice president
+~last
+~drop vice,president,vp
+10: Joe Biden, Kamala Harris, Mike Pence, Dick Cheney, Al Gore, JD Vance|J.D. Vance
+15: Dan Quayle
+30: George H. W. Bush|George HW Bush|George Bush, John Adams, Thomas Jefferson, Richard Nixon, Lyndon B. Johnson|Lyndon Johnson|LBJ, Aaron Burr, Walter Mondale, Spiro Agnew, Nelson Rockefeller, Gerald Ford, Harry S. Truman|Harry Truman, Theodore Roosevelt|Teddy Roosevelt, Hubert Humphrey, Calvin Coolidge, Martin Van Buren|Van Buren
+60: John C. Calhoun|John Calhoun, Andrew Johnson, Chester A. Arthur|Chester Arthur, Millard Fillmore, John Tyler, Henry Wallace, Alben Barkley, John Nance Garner, Elbridge Gerry, George Clinton, Hannibal Hamlin, Thomas R. Marshall|Thomas Marshall, Adlai Stevenson I|Adlai Stevenson, Charles G. Dawes|Charles Dawes, Charles Curtis
+85: Daniel D. Tompkins|Daniel Tompkins, Richard Mentor Johnson|Richard M. Johnson, George M. Dallas|George Dallas, John C. Breckinridge|John Breckinridge, Schuyler Colfax, Henry Wilson, William A. Wheeler|William Wheeler, Thomas A. Hendricks|Thomas Hendricks, Levi P. Morton|Levi Morton, Garret Hobart, Charles W. Fairbanks|Charles Fairbanks, James S. Sherman|James Sherman
+100: William R. King|William King|William Rufus King :: Took the oath in Cuba, where he'd gone for his health, and died about six weeks later without ever doing the job.
+
+? Name a British prime minister
+~last
+~drop prime,minister,pm,sir
+10: Winston Churchill, Margaret Thatcher, Tony Blair, Boris Johnson, Theresa May
+15: Liz Truss
+30: Rishi Sunak, Keir Starmer, David Cameron, Gordon Brown, John Major, Neville Chamberlain, Clement Attlee, Harold Wilson, Benjamin Disraeli, William Gladstone, Robert Walpole, Anthony Eden, Harold Macmillan, William Pitt the Younger|Pitt the Younger|William Pitt, Duke of Wellington|Wellington|Arthur Wellesley
+60: Edward Heath|Ted Heath, James Callaghan|Jim Callaghan, Alec Douglas-Home|Alec Douglas Home, Stanley Baldwin, Ramsay MacDonald|Ramsay McDonald, David Lloyd George|Lloyd George, H. H. Asquith|Herbert Asquith|Asquith, Arthur Balfour, Lord Salisbury|Salisbury|Robert Gascoyne-Cecil, Robert Peel, Lord Palmerston|Palmerston, Pitt the Elder|William Pitt the Elder|Earl of Chatham, Lord Melbourne|Melbourne|William Lamb, Earl Grey|Charles Grey, Lord North|Frederick North, Bonar Law|Andrew Bonar Law, George Canning, Henry Campbell-Bannerman|Campbell-Bannerman
+85: Lord Liverpool|Earl of Liverpool|Robert Jenkinson, Lord Aberdeen|Earl of Aberdeen|George Hamilton-Gordon, Lord Derby|Earl of Derby|Edward Smith-Stanley, Lord John Russell|John Russell|Earl Russell, Lord Rosebery|Rosebery|Archibald Primrose, Lord Goderich|Viscount Goderich|Frederick Robinson, Henry Addington|Lord Sidmouth, Lord Grenville|William Grenville, Duke of Portland|William Cavendish-Bentinck, Lord Bute|Earl of Bute|John Stuart, George Grenville, Lord Rockingham|Marquess of Rockingham, Duke of Grafton|Augustus FitzRoy, Duke of Newcastle|Thomas Pelham-Holles, Henry Pelham, Earl of Wilmington|Lord Wilmington|Spencer Compton, Duke of Devonshire|William Cavendish, Earl of Shelburne|Lord Shelburne|William Petty
+100: Spencer Perceval :: The only British prime minister ever assassinated. He was shot in the lobby of the House of Commons in 1812.
+
+? Name an ancient Egyptian pharaoh
+~drop pharaoh,king,queen
+10: Tutankhamun|Tutankhamen|King Tut|Tut, Ramesses II|Ramses II|Ramesses|Ramses|Rameses|Ramses the Great|Ramesses the Great, Cleopatra|Cleopatra VII
+15: Khufu|Cheops
+30: Nefertiti, Hatshepsut, Akhenaten|Akhenaton|Amenhotep IV, Thutmose III|Thutmose|Tuthmosis, Khafre|Chephren, Menkaure|Mycerinus, Djoser|Zoser, Seti I|Seti|Sethos, Amenhotep III|Amenhotep, Narmer|Menes
+60: Sneferu|Snefru, Ramesses III|Ramses III, Thutmose I, Thutmose II, Thutmose IV, Amenhotep I, Amenhotep II, Merneptah, Horemheb, Ay, Smenkhkare, Ahmose I|Ahmose, Mentuhotep II|Mentuhotep, Senusret I|Senusret|Sesostris, Senusret III, Amenemhat I|Amenemhat, Amenemhat III, Unas, Teti, Userkaf, Sahure, Shepseskaf, Djedefre, Nectanebo II|Nectanebo, Psamtik I|Psamtik|Psammetichus, Taharqa, Piye|Piankhi, Shoshenq I|Shoshenq|Shishak, Ptolemy I|Ptolemy|Ptolemy Soter, Ptolemy XIII, Caesarion|Ptolemy XV, Sobekneferu, Seti II, Khasekhemwy, Hor-Aha|Aha, Den, Djer, Scorpion|Scorpion King
+85: Neferirkare, Nyuserre, Menkauhor, Djedkare Isesi|Isesi, Merenre, Nitocris, Intef, Sobekhotep, Khyan, Apepi|Apophis, Seqenenre Tao|Seqenenre, Kamose, Siptah, Twosret|Tausret, Amenmesse, Setnakhte, Psusennes I|Psusennes, Osorkon, Shabaka, Shebitku, Tantamani, Necho II|Necho, Apries, Amasis II|Amasis|Ahmose II, Hakor|Achoris, Nectanebo I, Ptolemy II|Ptolemy Philadelphus, Ptolemy V, Berenice IV, Khaba, Huni, Sekhemkhet, Qa'a|Qaa, Semerkhet, Anedjib, Merneith, Ninetjer, Peribsen, Neferefre|Raneferef
+100: Pepi II :: Ancient sources say he became king at about six and ruled for over 90 years, though historians doubt it.
+
+? Name an empire
+~drop empire
+10: Roman|Rome, British, Ottoman, Mongol, Persian|Achaemenid, Byzantine|Eastern Roman
+15: Galactic Empire|Galactic
+30: Aztec, Inca|Incan, Holy Roman, Russian, Egyptian, Chinese, Mughal|Mogul, Spanish, French|Napoleonic, Japanese|Empire of Japan, Austro-Hungarian|Austria-Hungary|Austrian, German|German Reich, Babylonian, Assyrian, Macedonian, Mali, Carthaginian|Carthage, Portuguese, Ethiopian|Abyssinian
+60: Qing, Han, Ming, Tang, Yuan, Maurya|Mauryan, Gupta, Khmer|Angkor, Songhai, Ghana, Seleucid, Sasanian|Sassanid, Parthian, Hittite, Akkadian, Median|Medes, Carolingian|Frankish, Timurid, Safavid, Seljuk, Abbasid, Umayyad, Fatimid, Kushan, Vijayanagara, Maratha, Sikh, Zulu, Benin, Ashanti|Asante, Kanem-Bornu|Kanem|Bornu, Aksumite|Aksum|Axum, Golden Horde, Brazilian|Empire of Brazil, Mexican, Dutch, Swedish, Bulgarian, Serbian, Latin, Trebizond, Hunnic|Hun, Tibetan
+85: Ayyubid, Almohad, Almoravid, Ghaznavid, Khwarazmian, Oyo, Wassoulou, Sokoto|Sokoto Caliphate, Luba, Lunda, Rozvi, Mutapa|Monomotapa, Chola, Pala, Rashtrakuta, Chalukya, Satavahana, Srivijaya, Majapahit, Pagan|Bagan, Goguryeo, Liao, Jin, Xiongnu, Rouran, Göktürk|Gokturk|Turkic Khaganate, Uyghur|Uyghur Khaganate, Avar|Avar Khaganate, Khazar|Khazar Khaganate, Hephthalite, Elamite|Elam, Mitanni, Urartu, Kushite|Kush, Palmyrene, Durrani, Tu'i Tonga|Tui Tonga, Wari, Tiwanaku, Chimú|Chimu, Tarascan|Purépecha|Purepecha
+100: Gallic Empire|Gallic :: A breakaway piece of the Roman Empire that ran Gaul, Britain and Spain on its own for about 14 years in the 200s.

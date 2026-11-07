@@ -1,0 +1,33 @@
+? Name a word that rhymes with blue
+~exact
+10: Shoe, True, Glue, Clue, New, Two, Too, You, Zoo, Who, Do
+15: Kangaroo
+30: Flew, Grew, Knew, Threw, Through, Few, Crew, Drew, View, Chew, Stew, Moo, Boo, Goo, Dew|Due, Sue, Cue|Queue, Hue, Pew, Screw, Tattoo, Igloo, Bamboo, Shampoo, Taboo, Review, Renew, Canoe, Undo, Cashew, Cuckoo, Achoo, Voodoo, Yahoo, Hullabaloo, Caribou, Barbecue|BBQ, Avenue, Residue, Rescue, Statue, Value, Virtue, Issue, Tissue, Menu, Venue, Nephew, Adieu, Ewe, Yew, Gnu, Emu, Kazoo
+60: Construe, Accrue, Imbue, Pursue, Ensue, Subdue, Interview, Overdue, Revenue, Continue, Peekaboo, Honeydew, Mildew, Curlew, Sinew, Skew, Spew, Slew, Brew, Strew, Shrew, Bayou, Tutu, Guru, Haiku, Snafu, Tofu, Kung fu, Ragu, Sudoku, Thank you, Déjà vu|Deja vu, Cock-a-doodle-doo, Wahoo, Woohoo, Boohoo, Hairdo, Yoo-hoo, Whoo, Rue, Loo, Coo, Woo, Shoo, Poo, Ado, Askew, Anew, Eschew, Bijou, Milieu, Debut, Ragout
+85: Ingenue, Parvenu, Impromptu, Tiramisu, Retinue, Rendezvous, Marabou, Wallaroo, Ballyhoo, Buckaroo, Switcheroo, Skidoo, Jackaroo, Sou, Thew, Mew, Lieu, Purlieu, Bellevue, Curfew, Corkscrew, Vindaloo, Waterloo, Timbuktu, Kathmandu|Katmandu, Peru, Nehru, Xanadu, Malibu, Kalamazoo
+100: Didgeridoo :: The Aboriginal Australian wind instrument, played for well over a thousand years.
+
+? Name a palindrome
+~exact
+10: Racecar|Race car, Level, Mom, Dad, Kayak, Bob, Anna, Noon, Wow, Madam
+15: Taco cat|Tacocat, A man a plan a canal Panama|A man, a plan, a canal: Panama, Hannah
+30: Civic, Radar, Refer, Rotor, Peep, Eye, Pop, Deed, Sis, Tot, Nun, Pup, Did, Ewe, Otto, Eve, Ada, Elle, Stats, Solos, Minim, Tenet, Redder, Rotator, Reviver, Sagas, Toot, Poop, Gag, Bib, Tut, Aha, Ava, Nan, Pip, Dud, Mum, Pap, Sees, Kook, Boob, Abba, Repaper
+60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
+85: Kinnikinnik, Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo
+100: Tattarrattat :: James Joyce's word for a knock on the door in Ulysses, and the longest palindrome in the Oxford English Dictionary.
+
+? Name a Greek letter
+10: Alpha, Beta, Gamma, Delta, Omega, Pi
+15: Omicron, Sigma
+30: Epsilon, Theta, Lambda, Mu, Tau, Phi, Psi, Chi, Kappa, Rho, Zeta
+60: Eta, Iota, Nu, Xi, Upsilon
+85: San, Koppa, Sampi, Stigma, Heta
+100: Digamma :: A letter the Greeks dropped before their classical age. It looked like an F, and sounded like W.
+
+? Name a French word or phrase used in English
+10: Déjà vu|Deja vu, Cliché|Cliche, Bon appétit|Bon appetit, Café|Cafe, Ballet, Fiancé|Fiance, Rendezvous
+15: Je ne sais quoi, C'est la vie, Faux pas
+30: Entrepreneur, Bouquet, Souvenir, Restaurant, Chic, Encore, Bizarre, Genre, Résumé|Resume, Boutique, Cuisine, Buffet, Chauffeur, Brunette, Blonde, Silhouette, Sabotage, Menu, Mirage, Massage, Façade|Facade, Hors d'oeuvre|Hors d'oeuvres, Crème de la crème|Creme de la creme, Voilà|Voila, Touché|Touche, Bourgeois, RSVP, À la carte|A la carte, Au revoir, Bon voyage, Mardi Gras, Protégé|Protege, Petite, Liaison, Risqué|Risque, Sauté|Saute, Entrée|Entree, Beret, Lingerie, Matinée|Matinee, Debut, Décor|Decor, Naïve|Naive, Tête-à-tête|Tete a tete, Coup
+60: Coup d'état|Coup d'etat, Laissez-faire, Nouveau riche, Avant-garde, Carte blanche, Vis-à-vis|Vis a vis, Sang-froid, Savoir faire, Raison d'être|Raison d'etre, Joie de vivre, Esprit de corps, Fait accompli, Double entendre, Femme fatale, Enfant terrible, Tour de force, Cul-de-sac, Bête noire|Bete noire, Mêlée|Melee, Ménage à trois|Menage a trois, Noblesse oblige, Papier-mâché|Paper mache, Pièce de résistance|Piece de resistance, Prêt-à-porter|Pret a porter, Art deco, Art nouveau, Attaché|Attache, Apéritif|Aperitif, Sommelier, Concierge, Connoisseur, Reconnaissance, Chaise longue|Chaise lounge, Chiffon, Château|Chateau, Milieu, Nom de plume, Panache, Penchant, Soirée|Soiree, Malaise, Élan|Elan, Ennui, Gauche, Gaffe, Aplomb, Blasé|Blase, Cachet, Détente|Detente, Dossier, Exposé|Expose, Forte, Impasse, Insouciance, Par excellence, Passé|Passe, Sobriquet, Visage, Tout de suite, Mon dieu, Merci, Sacré bleu|Sacre bleu, Zut alors
+85: Agent provocateur, Amour propre, Bon mot, Bon vivant, Cause célèbre|Cause celebre, Cri de coeur, Dernier cri, Éminence grise|Eminence grise, Haute couture, Idée fixe|Idee fixe, Jeu d'esprit, Mot juste, Objet d'art, Pied-à-terre|Pied a terre, Trompe-l'œil|Trompe l'oeil, Succès de scandale, Roman à clef, Nostalgie de la boue, Mise en scène|Mise en scene, Mise en place, Flâneur|Flaneur, Soupçon|Soupcon, Bric-à-brac|Bric a brac, Démodé|Demode, Arrière-pensée, Sans souci, Vignette, De rigueur, Plus ça change, Tant pis, Au courant, Au fait, Au contraire, Au naturel, Belle époque|Belle epoque, Beau monde, Billet-doux|Billet doux, Cordon bleu, Fin de siècle|Fin de siecle, Nouvelle vague
+100: L'esprit de l'escalier|Esprit de l'escalier|Staircase wit :: "Staircase wit." The perfect comeback you only think of after you've left.

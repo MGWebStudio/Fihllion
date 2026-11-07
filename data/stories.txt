@@ -1,11 +1,3 @@
-? Name a Greek god or goddess
-10: Zeus, Poseidon, Hades, Athena, Apollo, Aphrodite, Ares
-15: Kratos, Hercules|Heracles
-30: Hera, Hermes, Artemis, Dionysus, Demeter, Hephaestus, Persephone, Eros, Hestia, Pan, Cronus|Kronos, Nike, Gaia
-60: Rhea, Uranus, Atlas, Prometheus, Iris, Nemesis, Hecate, Hebe, Helios, Selene, Eos, Morpheus, Thanatos, Hypnos, Tyche, Asclepius, Aeolus, Triton, Nyx, Erebus, Oceanus, Themis, Eris, Harmonia, Hygieia, Amphitrite, Proteus, Nereus, Metis, Leto, Mnemosyne, Calliope, Clio, Thalia, Terpsichore, Erato, Euterpe, Melpomene, Polyhymnia, Urania
-85: Tethys, Hyperion, Coeus, Phoebe, Crius, Iapetus, Theia, Dione, Maia, Ganymede, Deimos, Phobos, Achlys, Aether, Hemera, Tartarus, Chaos, Ananke, Chronos, Geras, Oizys, Moros, Apate, Dolos, Philotes, Zelus, Bia, Boreas, Zephyrus, Notus, Eurus, Pontus, Styx, Clotho, Lachesis, Atropos, Priapus, Silenus, Aristaeus
-100: Momus :: The god of mockery, thrown off Olympus for criticizing the other gods one time too many.
-
 ? Name a Shakespeare play
 10: Romeo and Juliet, Hamlet, Macbeth, Othello, A Midsummer Night's Dream
 15: Titus Andronicus
@@ -38,15 +30,6 @@
 85: Rashin Coatie, Donkeyskin, The Juniper Tree, Fitcher's Bird, Godfather Death, Iron John|Iron Hans, The Robber Bridegroom, The Six Swans, The Seven Ravens, Jorinde and Joringel, The Red Shoes, The Tinderbox, The Swineherd, Ole Lukøje, Tatterhood, Vasilisa the Beautiful, The Firebird, The Little Humpbacked Horse, Urashima Tarō|Urashima Taro, Issun-bōshi, Ye Xian, Tam Lin, Molly Whuppie, The Three Feathers, The King of the Golden River
 100: The Fisherman and His Wife :: A magic fish grants a wife's bigger and bigger wishes until the fish has finally had enough.
 
-? Name a Charles Dickens character
-~last
-10: Ebenezer Scrooge, Oliver Twist|Oliver, Tiny Tim, Pip, Bob Cratchit
-15: Jacob Marley
-30: Fagin, Miss Havisham, The Artful Dodger|Artful Dodger|Dodger, David Copperfield, Bill Sikes, Nancy, Estella, Uriah Heep, Mr. Bumble, Sydney Carton, Nicholas Nickleby, Abel Magwitch, Joe Gargery, Ghost of Christmas Past, Ghost of Christmas Present, Ghost of Christmas Yet to Come, Wilkins Micawber|Mr. Micawber, Fezziwig
-60: Samuel Pickwick|Mr. Pickwick, Madame Defarge, Charles Darnay, Lucie Manette, Betsey Trotwood, Little Nell, Little Dorrit|Amy Dorrit, Barnaby Rudge, Martin Chuzzlewit, Edwin Drood, Dora Spenlow, Agnes Wickfield, Steerforth, Mr. Bounderby, Thomas Gradgrind, Wackford Squeers, Jaggers, Herbert Pocket, Bentley Drummle, Wemmick, Belle, Noah Claypole, Mr. Brownlow, Esther Summerson, Sam Weller, Seth Pecksniff, Mrs. Gamp, Daniel Quilp, Mr. Dick
-85: Smike, Vincent Crummles, Newman Noggs, Ralph Nickleby, Harold Skimpole, Lady Dedlock, Mr. Tulkinghorn, Mr. Krook, Inspector Bucket, Mrs. Jellyby, Bradley Headstone, Noddy Boffin, Silas Wegg, Lizzie Hexam, Eugene Wrayburn, John Jasper, Rosa Bud, Sissy Jupe, Stephen Blackpool, Paul Dombey, Captain Cuttle, Toots, Arthur Clennam, Mr. Merdle, Flora Finching, Dolly Varden, Sim Tappertit, Mr. Turveydrop, Mr. Bagnet, Tackleton, Trotty Veck, Caleb Plummer, Rogue Riderhood, Mr. Venus, Mrs. Sparsit
-100: Grip :: Barnaby Rudge's talking raven, based on Dickens's own pet. It helped inspire Poe's "The Raven."
-
 ? Name a Stephen King book
 10: It, The Shining, Carrie, Misery, Pet Sematary, The Stand, The Green Mile
 15: The Shawshank Redemption|Shawshank|Rita Hayworth and Shawshank Redemption, The Body|Stand by Me
@@ -54,14 +37,6 @@
 60: The Dead Zone, The Tommyknockers, Dolores Claiborne, Insomnia, Rose Madder, Desperation, The Regulators, Bag of Bones, Hearts in Atlantis, Lisey's Story, Duma Key, Cell, The Running Man, The Long Walk, Rage, Roadwork, The Talisman, Black House, The Eyes of the Dragon, The Drawing of the Three, The Waste Lands, Wizard and Glass, Wolves of the Calla, Song of Susannah, Blaze, Joyland, Revival, End of Watch, Finders Keepers, Sleeping Beauties, The Institute, Later, Never Flinch, Cycle of the Werewolf, Skeleton Crew, Night Shift, Different Seasons
 85: The Colorado Kid, From a Buick 8, The Girl Who Loved Tom Gordon, The Plant, Faithful, Everything's Eventual, Just After Sunset, Full Dark\, No Stars, Four Past Midnight, Nightmares & Dreamscapes|Nightmares and Dreamscapes, The Bazaar of Bad Dreams, If It Bleeds, You Like It Darker, Elevation, Gwendy's Button Box, The Wind Through the Keyhole, Danse Macabre, Creepshow, Storm of the Century, Riding the Bullet, UR, In the Tall Grass, Mile 81, N.
 100: On Writing :: His memoir and writing guide, finished after a van nearly killed him in 1999.
-
-? Name a figure from Norse mythology
-10: Thor, Odin, Loki, Freya|Freyja
-15: Valkyrie, Fenrir
-30: Baldur|Balder|Baldr, Heimdall, Frigg|Frigga, Hel|Hela, Tyr, Sif, Freyr|Frey, Ymir, Jörmungandr|Jormungandr|Midgard Serpent, Sleipnir, Surtr|Surtur, Mimir, Njord
-60: Bragi, Idun|Iðunn|Idunn, Vidar, Vali, Hodr|Hod, Aegir, Ran, Skadi, Ullr|Ull, Nidhogg, Huginn, Muninn, Geri, Freki, Gerd, Sigyn, Angrboda, Forseti, Hoenir, Magni, Modi, Norns, Urd, Verdandi, Skuld, Sigurd|Siegfried, Fafnir, Brynhildr|Brunhilde, Audhumla
-85: Thrud, Ask, Embla, Bestla, Bor, Buri, Thrym, Utgard-Loki, Skrymir, Hrungnir, Gullveig, Kvasir, Hati, Skoll, Garmr, Sindri, Brokkr, Dvalin, Regin, Hreidmar, Otr, Andvari, Lif, Lifthrasir, Nanna, Hermod, Eir, Sjofn, Lofn, Vor, Syn, Hlin, Gna, Snotra, Saga, Mani, Sol, Dagr, Nott
-100: Ratatoskr :: A squirrel who runs up and down the world tree, carrying insults between an eagle and a serpent.
 
 ? Name a mythical creature
 10: Unicorn, Dragon, Mermaid, Phoenix, Centaur, Bigfoot|Sasquatch
@@ -78,15 +53,6 @@
 60: The Brothers Karamazov, Madame Bovary, The Stranger, The Trial, Invisible Man, Their Eyes Were Watching God, The Sound and the Fury, As I Lay Dying, East of Eden, On the Road, One Hundred Years of Solitude, Lolita, Mrs. Dalloway, To the Lighthouse, A Clockwork Orange, The Bell Jar, Things Fall Apart, Middlemarch, Tess of the d'Urbervilles, Persuasion, Northanger Abbey, Mansfield Park, Vanity Fair, The Hunchback of Notre-Dame, The Strange Case of Dr. Jekyll and Mr. Hyde|Dr. Jekyll and Mr. Hyde, The Time Machine, The War of the Worlds, Twenty Thousand Leagues Under the Seas|20000 Leagues Under the Sea, Around the World in Eighty Days|Around the World in 80 Days, The Call of the Wild, White Fang, The Jungle, Sister Carrie, The Age of Innocence, Ethan Frome, The House of Mirth, The Awakening, Main Street, Babbitt, A Passage to India, A Room with a View, Howards End, Rebecca, Brideshead Revisited, The Portrait of a Lady, Native Son, Go Tell It on the Mountain
 85: Tristram Shandy, Pamela, Clarissa, Tom Jones, Moll Flanders, Candide, Dead Souls, Fathers and Sons, The Idiot, Demons, Notes from Underground, The Master and Margarita, Doctor Zhivago, The Magic Mountain, Buddenbrooks, Steppenwolf, Siddhartha, The Tin Drum, In Search of Lost Time, Germinal, Nana, The Red and the Black, The Charterhouse of Parma, Dream of the Red Chamber, The Tale of Genji, Journey to the West, Water Margin, Romance of the Three Kingdoms, Nostromo, Lord Jim, Jude the Obscure, Far from the Madding Crowd, The Mayor of Casterbridge, Silas Marner, The Mill on the Floss, Barchester Towers, The Moonstone, The Woman in White, Erewhon, Billy Budd, Absalom\, Absalom!, Light in August, Nightwood, Gravity's Rainbow, Infinite Jest
 100: The Old Man and the Sea :: An old man, a giant marlin and a very bad week. The goldfish considers it a horror story.
-
-? Name a famous author
-~last
-10: William Shakespeare, J.K. Rowling|JK Rowling, Stephen King, Jane Austen, Mark Twain, Charles Dickens
-15: James Joyce, Dr. Seuss
-30: Ernest Hemingway, F. Scott Fitzgerald, George Orwell, J.R.R. Tolkien|JRR Tolkien, Harper Lee, Agatha Christie, Edgar Allan Poe, Leo Tolstoy, John Steinbeck, Roald Dahl, Maya Angelou, Toni Morrison, Virginia Woolf, Oscar Wilde, C.S. Lewis|CS Lewis, Dan Brown, John Grisham, James Patterson, Danielle Steel, Nora Roberts, George R.R. Martin|George RR Martin, Suzanne Collins, Stephenie Meyer, Rick Riordan, Kurt Vonnegut, Homer, Dante Alighieri|Dante, Herman Melville, Mary Shelley, Bram Stoker, Charlotte Brontë|Charlotte Bronte, Emily Brontë|Emily Bronte, Lewis Carroll, Jules Verne, H.G. Wells|HG Wells, Ray Bradbury, Isaac Asimov, Aldous Huxley, J.D. Salinger|JD Salinger, William Faulkner, Fyodor Dostoevsky, Shel Silverstein, Beverly Cleary, E.B. White|EB White, Judy Blume, R.L. Stine|RL Stine, Colleen Hoover, Michael Crichton, Tom Clancy, Neil Gaiman
-60: Gabriel García Márquez|Gabriel Garcia Marquez, Cormac McCarthy, Thomas Pynchon, Don DeLillo, Philip Roth, John Updike, Margaret Atwood, Ursula K. Le Guin|Le Guin, Philip K. Dick, Frank Herbert, Arthur C. Clarke, Terry Pratchett, Douglas Adams, Haruki Murakami, Salman Rushdie, Kazuo Ishiguro, Ian McEwan, Zadie Smith, Chinua Achebe, Franz Kafka, Albert Camus, Victor Hugo, Alexandre Dumas, Gustave Flaubert, Marcel Proust, Miguel de Cervantes|Cervantes, Geoffrey Chaucer, John Milton, Jonathan Swift, Daniel Defoe, Thomas Hardy, George Eliot, Henry James, Edith Wharton, Nathaniel Hawthorne, Louisa May Alcott, Jack London, Sylvia Plath, Zora Neale Hurston, James Baldwin, Ralph Ellison, Langston Hughes, Truman Capote, Jack Kerouac, Joseph Heller, Vladimir Nabokov, David Foster Wallace, Jonathan Franzen, Donna Tartt, Gillian Flynn, Sally Rooney, Anne Rice, Dean Koontz, Lee Child, Sarah J. Maas, Brandon Sanderson, Lemony Snicket|Daniel Handler
-85: Italo Calvino, Jorge Luis Borges, Julio Cortázar|Julio Cortazar, Roberto Bolaño|Roberto Bolano, Clarice Lispector, Thomas Mann, Hermann Hesse, Günter Grass|Gunter Grass, W.G. Sebald, Elena Ferrante, Umberto Eco, Stendhal, Émile Zola|Emile Zola, Honoré de Balzac|Honore de Balzac, Nikolai Gogol, Ivan Turgenev, Anton Chekhov, Mikhail Bulgakov, Boris Pasternak, Aleksandr Solzhenitsyn, Yukio Mishima, Kenzaburo Oe, Murasaki Shikibu, Lu Xun, Naguib Mahfouz, Wole Soyinka, J.M. Coetzee, Nadine Gordimer, Michael Ondaatje, Alice Munro, Annie Proulx, Marilynne Robinson, William Gaddis, Flann O'Brien, Samuel Beckett, Laurence Sterne, Henry Fielding, Samuel Richardson, Anthony Trollope, Wilkie Collins, Elizabeth Gaskell, Evelyn Waugh, Muriel Spark, Iris Murdoch, Doris Lessing, Olga Tokarczuk, Annie Ernaux, Jon Fosse, Han Kang
-100: Anonymous :: The most prolific author in history, and impossible to book for a signing.
 
 ? Name a nursery rhyme
 10: Twinkle\, Twinkle\, Little Star|Twinkle Twinkle Little Star, Mary Had a Little Lamb, Humpty Dumpty, Baa\, Baa\, Black Sheep|Baa Baa Black Sheep, Row\, Row\, Row Your Boat|Row Row Row Your Boat, Itsy Bitsy Spider|Incy Wincy Spider, Jack and Jill
@@ -121,3 +87,38 @@
 60: Nookie, SuperTed, Sooty, Bungle, Aloysius, Little, Cindy, Mr. Bean's Teddy|Teddy, Mishka, Rilakkuma, Monokuma, Grumpy, Funshine, Cheer, Cubbi, Zummi, Tummi, Gruffi, Sunni, Grammi, Beorn, Sugar, Snuggle, Hamm's, Klondike, Coca-Cola Polar
 85: Pooky, Old Ben, Barney, Humphrey, Bobby Bear, Theodore, Duffy, Elinor
 100: Fuzzy Wuzzy :: Fuzzy Wuzzy was a bear. Fuzzy Wuzzy had no hair. So he wasn't fuzzy, was he?
+
+? Name a Roald Dahl book
+10: Charlie and the Chocolate Factory, Matilda, The BFG|BFG, James and the Giant Peach, The Witches|Witches, Fantastic Mr Fox|Fantastic Mr. Fox|Mr Fox
+15: The Twits|Twits
+30: George's Marvellous Medicine|Georges Marvellous Medicine|George's Marvelous Medicine, Charlie and the Great Glass Elevator|Great Glass Elevator, Danny\, the Champion of the World|Danny the Champion of the World, Boy|Boy: Tales of Childhood, The Enormous Crocodile|Enormous Crocodile, Esio Trot, The Giraffe and the Pelly and Me|Giraffe and the Pelly and Me, Revolting Rhymes, Going Solo, The Magic Finger|Magic Finger
+60: Tales of the Unexpected, Kiss Kiss, Someone Like You, The Minpins|Minpins|Billy and the Minpins, Dirty Beasts, Rhyme Stew, The Wonderful Story of Henry Sugar|Henry Sugar, Lamb to the Slaughter, The Vicar of Nibbleswicke|Vicar of Nibbleswicke, My Uncle Oswald|Uncle Oswald, Switch Bitch, Over to You, The Landlady|Landlady, Skin, Royal Jelly, The Man from the South|Man from the South
+85: Sometime Never, The Great Automatic Grammatizator, The Mildenhall Treasure, Memories with Food at Gipsy House, Revolting Recipes, Ah\, Sweet Mystery of Life|Ah Sweet Mystery of Life, The Umbrella Man, My Year, Roald Dahl's Guide to Railway Safety|Guide to Railway Safety, Two Fables, Lucky Break, The Ratcatcher, Parson's Pleasure, Taste, Galloping Foxley, The Hitchhiker|Hitch-Hiker, Genesis and Catastrophe, Pig, Beware of the Dog
+100: The Gremlins|Gremlins :: His first children's book, written for Walt Disney, who planned a movie of it that never got made.
+
+? Name a figure from King Arthur legend
+~drop king,sir,lady,the
+10: King Arthur|Arthur, Merlin|Myrddin, Lancelot|Launcelot, Guinevere|Gwenhwyfar, Mordred|Modred|Medraut, Galahad, Lady of the Lake
+15: Morgan le Fay|Morgana|Morgan le Fey
+30: Gawain|Gwalchmei, Percival|Parsifal|Perceval|Parzival, Tristan|Tristram, Isolde|Iseult|Isolt, Kay|Cai, Bedivere|Bedwyr, Uther Pendragon|Uther, Nimue|Viviane|Vivien, Igraine|Ygraine, Elaine of Astolat|Elaine|Lady of Shalott, Green Knight, Fisher King, Gareth, Bors, Ector, Pellinore
+60: Lamorak, Gaheris, Agravaine, Lot|King Lot, Morgause, Elaine of Corbenic, Pelles, Galehaut|Galahaut, Lionel, Ywain|Owain|Yvain, Dagonet, Dinadan, Palamedes, King Mark|Mark, Brangaine|Brangwen, Gorlois, Vortigern, Ambrosius Aurelianus|Aurelius Ambrosius, Taliesin, Lucan, Bertilak|Bercilak, Accolon, Balin, Balan, Sagramore, Ector de Maris, Lynette, Enid|Enide, Geraint|Erec, Culhwch, Olwen, Dindrane, Blaise, Questing Beast, Black Knight, Red Knight, Dame Ragnelle|Ragnelle|Ragnell
+85: Tor, Bagdemagus, Meliagant|Meleagant|Meliagaunce, Gingalain|Le Bel Inconnu, Hoel, Cador, Constantine, Caradoc, Pelleas, Ettarre, Lionors, Loholt, Llacheu, Twrch Trwyth, Ysbaddaden, Claudas, Leodegrance, King Ban|Ban, Brastias, Ulfius, Baudwin, Griflet|Girflet, Calogrenant, Lyonesse|Dame Lyonesse, Ironside, Llamrei
+100: Cabal|Cavall :: King Arthur's dog. One legend says he left a pawprint in a stone while hunting a giant boar, and the stone always found its way back.
+
+? Name a figure from Egyptian mythology
+~drop god,goddess
+10: Ra|Re, Osiris, Isis, Anubis, Horus, Set|Seth
+15: Bastet|Bast
+30: Thoth, Sekhmet, Hathor, Ptah, Amun|Amon|Amun-Ra|Amon-Ra, Nut, Geb, Shu, Tefnut, Nephthys, Sobek, Khnum, Maat|Ma'at, Atum, Bes, Apep|Apophis, Taweret, Khonsu, Mut, Aten, Ammit|Ammut, Neith, Khepri|Khepera, Hapi
+60: Sphinx, Bennu|Benu, Wadjet, Nekhbet, Montu, Min, Serket|Selket, Imhotep, Heket|Heqet, Meskhenet, Renenutet, Wepwawet|Upuaut, Seshat, Satet|Satis, Anuket|Anukis, Mafdet, Pakhet, Babi|Baba, Aker, Heh|Huh, Nun|Nu, Amunet|Amaunet, Nefertem, Hu, Sia, Apis, Meretseger, Ihy, Iusaaset, Sopdet|Sothis, Sokar
+85: Menhit, Naunet, Kek, Hemsut, Reshep, Qetesh, Astarte, Anat, Bata, Mnevis, Buchis, Hatmehit, Sah, Imsety, Duamutef, Qebehsenuef, Wosret, Kebechet, Tatenen|Ta-tenen, Khentiamentiu, Andjety, Hedetet, Unut, Werethekau|Weret-hekau, Raettawy
+100: Shezmu :: The god of wine and perfume, and also of slaughter. In one ancient text he cooks the other gods for the king to eat.
+
+? Name a famous poem
+~drop poem,the
+10: The Raven, The Road Not Taken, If|If—, Stopping by Woods on a Snowy Evening|Stopping by Woods, 'Twas the Night Before Christmas|Twas the Night Before Christmas|A Visit from St. Nicholas|The Night Before Christmas, Do Not Go Gentle into That Good Night|Do Not Go Gentle
+15: Jabberwocky
+30: Ozymandias, The Waste Land, Annabel Lee, Howl, Paradise Lost, The Odyssey|Odyssey, The Iliad|Iliad, Beowulf, Leaves of Grass, O Captain! My Captain!|O Captain My Captain, I Wandered Lonely as a Cloud|Daffodils, Sonnet 18|Shall I Compare Thee to a Summer's Day, Still I Rise, Phenomenal Woman, Because I could not stop for Death, Hope is the thing with feathers, The Rime of the Ancient Mariner|Rime of the Ancient Mariner|Ancient Mariner, Kubla Khan, Casey at the Bat, Paul Revere's Ride|Paul Reveres Ride, The Charge of the Light Brigade|Charge of the Light Brigade, Invictus, Fire and Ice, Nothing Gold Can Stay, The Love Song of J. Alfred Prufrock|Prufrock, Harlem|A Dream Deferred, The Divine Comedy|Divine Comedy|Inferno|Dante's Inferno, The Canterbury Tales|Canterbury Tales, The Owl and the Pussy-Cat|The Owl and the Pussycat|Owl and the Pussycat, Mending Wall, We Real Cool, Trees, Footprints|Footprints in the Sand, Desiderata, Funeral Blues|Stop All the Clocks
+60: Ode on a Grecian Urn, Ode to a Nightingale, To Autumn, The Tyger|Tyger|Tiger Tiger, Dover Beach, Sailing to Byzantium, The Second Coming, Ulysses, In Flanders Fields, Richard Cory, Tintern Abbey, Ode to the West Wind, She Walks in Beauty, How Do I Love Thee?|Sonnet 43, Remember, Goblin Market, The Highwayman, The Lady of Shalott, Crossing the Bar, Death Be Not Proud, The Flea, To His Coy Mistress, Elegy Written in a Country Churchyard, The Lake Isle of Innisfree|Lake Isle of Innisfree, Dulce et Decorum Est, The Soldier, Daddy, Lady Lazarus, The Red Wheelbarrow|Red Wheelbarrow, This Is Just to Say, Anthem for Doomed Youth, Sea Fever, Jerusalem|And did those feet in ancient time, Song of Myself, I Sing the Body Electric, Wild Geese, The Summer Day, One Art, Musée des Beaux Arts|Musee des Beaux Arts, The Hollow Men, Birches, Acquainted with the Night, Chicago, Fog, I\, Too|I Too, The New Colossus|New Colossus, Concord Hymn, Gunga Din, The Cremation of Sam McGee, The Walrus and the Carpenter|Walrus and the Carpenter, The Song of Hiawatha|Hiawatha, Evangeline, A Psalm of Life, The Village Blacksmith, Christabel, Endymion, Don Juan, Childe Harold's Pilgrimage, The Prelude, The Aeneid|Aeneid, Metamorphoses, The Faerie Queene, Epic of Gilgamesh|Gilgamesh, Mahabharata, Ramayana, Shahnameh, Rubaiyat of Omar Khayyam|Rubaiyat, Sir Gawain and the Green Knight, The Bells, Eldorado, Where the Sidewalk Ends, Caged Bird, On the Pulse of Morning, The Hill We Climb
+85: Lenore, Ulalume, Who Has Seen the Wind?, The Wreck of the Hesperus, Snow-Bound|Snowbound, Thanatopsis, Barbara Frietchie, Old Ironsides, The Chambered Nautilus, The Hound of Heaven, Pied Beauty, The Windhover, God's Grandeur|Gods Grandeur, Spring and Fall, The Darkling Thrush, The Convergence of the Twain, My Last Duchess, Porphyria's Lover|Porphyrias Lover, The Pied Piper of Hamelin|Pied Piper, Locksley Hall, Tithonus, The Kraken, In Memoriam A.H.H.|In Memoriam, Adonais, Mont Blanc, To a Skylark, La Belle Dame sans Merci, The Eve of St. Agnes|Eve of St Agnes, Lamia, Hyperion, The Deserted Village, The Rape of the Lock, An Essay on Man|Essay on Man, The Dunciad, Lycidas, Il Penseroso, L'Allegro, The Collar, Easter Wings, A Valediction: Forbidding Mourning|A Valediction Forbidding Mourning, The Good-Morrow|The Good Morrow, The Passionate Shepherd to His Love, The Seafarer, The Wanderer, The Dream of the Rood, Kaddish, Skunk Hour, Tulips, Morning Song, The Fish, Filling Station, Diving into the Wreck, The Weary Blues, Mother to Son, Theme for English B, The Negro Speaks of Rivers, If We Must Die, Yet Do I Marvel
+100: Jubilate Agno :: Christopher Smart wrote it while confined to an asylum in the 1760s. Its best-known part is a long, loving tribute to his cat, Jeoffry.

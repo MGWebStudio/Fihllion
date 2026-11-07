@@ -1,0 +1,32 @@
+? Name a card game
+~drop cards
+10: Poker, Blackjack, Solitaire, Go Fish, Uno, Rummy, War
+15: Cards Against Humanity, Magic: The Gathering|Magic
+30: Hearts, Spades, Crazy Eights|Crazy 8s, Old Maid, Bridge, Gin Rummy|Gin, Euchre, Texas Hold'em|Hold'em, Baccarat, Canasta, Pinochle, Cribbage, Exploding Kittens, Skip-Bo|Skip Bo, Slapjack, Speed, Spit, Pokémon|Pokemon, Yu-Gi-Oh!|Yu-Gi-Oh, Apples to Apples, Phase 10, Snap, BS|Cheat, President, Egyptian Ratscrew|Egyptian Rat Screw, Kings|Kings Cup, Rook, Dutch Blitz, Sushi Go!, Fluxx, Munchkin
+60: Whist, Mille Bornes, Spider Solitaire, FreeCell, Klondike, Pyramid, Seven-card stud, Omaha, Five-card draw, Three-card monte, Pai gow, Hand and Foot, Sheepshead, Pitch, Oh Hell, Rummy 500, Bezique, Belote, Durak, Piquet, Tichu, Wizard, Love Letter, Hanabi, The Mind, Star Realms, Gwent, Hearthstone, Balatro, Five Crowns, Golf, Nertz, Palace, Beggar My Neighbor|Beggar-my-neighbour, Fan Tan|Sevens, Authors, Quiddler, Monopoly Deal, Coup, Bang!, Citadels, Bohnanza, 6 Nimmt!|Take 5
+85: Skat, Schafkopf, Tarock, Jass, Scopa, Briscola, Tute, Mus, Truco, Hanafuda, Koi-Koi, Tien Len, Big Two, Dou Dizhu, Teen Patti, Canfield, Faro, Ombre, Cassino, Écarté|Ecarte, Vingt-et-un, Pontoon, Chemin de fer, Red Dog, Let It Ride, Caribbean Stud, Ninety-nine, Set, Spite and Malice, Kalooki, Contract Rummy, Bid Whist, Tonk, Thirty-one, Nines, Snip Snap Snorem, Pig, Spoons
+100: Mao :: A game where you get penalized for breaking rules nobody is allowed to explain.
+
+? Name a video game console
+10: PlayStation|PS1, Xbox, Nintendo Switch|Switch, Wii|Nintendo Wii, Game Boy|Gameboy
+15: Virtual Boy, Steam Deck
+30: Nintendo 64|N64, Super Nintendo|SNES, NES|Nintendo Entertainment System, GameCube, PlayStation 2|PS2, Xbox 360, Sega Genesis|Genesis, Dreamcast, Atari 2600|Atari, Nintendo DS|DS, PSP|PlayStation Portable, Xbox One, PlayStation 3|PS3, PlayStation 4|PS4, PlayStation 5|PS5, Wii U, Game Boy Advance|GBA, Game Boy Color, 3DS|Nintendo 3DS, Sega Saturn|Saturn, Game Gear|Sega Game Gear, Meta Quest|Oculus Quest, Xbox Series X
+60: PS Vita|PlayStation Vita, Neo Geo, TurboGrafx-16|TurboGrafx, ColecoVision, Intellivision, Atari Jaguar|Jaguar, Atari Lynx|Lynx, Atari 5200, Atari 7800, Sega CD, Sega 32X|32X, Sega Master System|Master System, Magnavox Odyssey|Odyssey, Ouya, Vectrex, 3DO, Steam Machine, Nvidia Shield, ROG Ally|Asus ROG Ally, Commodore 64, Nintendo Switch 2|Switch 2, Analogue Pocket, Playdate, Game.com, N-Gage|Nokia N-Gage, Fairchild Channel F, WonderSwan
+85: Philips CD-i|CD-i, Bally Astrocade, Odyssey 2, Neo Geo Pocket, Nintendo 64DD|64DD, PC Engine, Amiga CD32, FM Towns Marty, Zeebo, Gizmondo, Tapwave Zodiac, Color TV-Game, Game & Watch|Game and Watch, Super Game Boy, Pokémon Mini, View-Master Interactive Vision, Sega Nomad, Sega Pico, Action Max, RDI Halcyon, VTech Socrates, Arcadia 2001, Sufami Turbo
+100: Apple Pippin|Pippin :: Yes, Apple made a game console, in 1996. It sold about 42,000 units.
+
+? Name a Mario character
+10: Mario, Luigi, Princess Peach|Peach, Bowser, Toad, Yoshi
+15: Waluigi
+30: Wario, Princess Daisy|Daisy, Donkey Kong|DK, Diddy Kong|Diddy, Rosalina, Toadette, Bowser Jr., Koopa Troopa|Koopa, Goomba, Shy Guy, Boo, Birdo, Dry Bones, King Boo, Piranha Plant, Chain Chomp, Cheep Cheep, Lakitu, Hammer Bro|Hammer Bros, Bob-omb, Bullet Bill, Pauline, Nabbit, Funky Kong
+60: Toadsworth, Professor E. Gadd|E. Gadd, Petey Piranha, Kamek, Magikoopa, Blooper, Spike, Wiggler, Pokey, Thwomp, Whomp, Monty Mole, Rex, Baby Mario, Baby Luigi, Baby Peach, Cranky Kong, Dixie Kong, Tiny Kong, King K. Rool, Captain Toad, Cappy, Mallow, Geno, Paper Mario, Kammy Koopa, Lubba, Polari, Luma, Larry Koopa, Morton Koopa, Wendy O. Koopa|Wendy Koopa, Iggy Koopa, Roy Koopa, Lemmy Koopa, Ludwig von Koopa, Honey Queen, King Bob-omb, Buzzy Beetle
+85: Tatanga, Foreman Spike, Stanley the Bugman, Bandit, Ninji, Mouser, Wart, Clawgrip, Phanto, Tryclyde, Fry Guy, Snifit, Hoopster, Flurry, Fawful, Cackletta, Dimentio, Count Bleck, Vivian, Goombella, Koops, Bombette, Parakarry, Starlow, Bowletta, Madame Broode, Topper, Hariet, Spewart, Rango, Undodog, Sprixie Princess, Poochy, Baby Bowser, Chargin' Chuck, Mega Mole, Urchin, Porcupuffer
+100: Boss Bass|Big Bertha :: The huge red fish from Super Mario Bros. 3 that leaps up and swallows you whole. Respect.
+
+? Name a playground game
+10: Tag, Hide and seek|Hide and go seek, Hopscotch, Red Rover, Kickball, Four square|Foursquare, Dodgeball, Jump rope
+15: The Floor Is Lava|Floor is lava, Squid Game
+30: Duck Duck Goose, Red Light Green Light, Simon Says, Freeze Tag, Capture the Flag, Tetherball, Marbles, Mother May I?|Mother May I, Sardines, Musical Chairs, Hot Potato, London Bridge, Ring Around the Rosie, Tug of War, Leapfrog, Cat's Cradle, Patty Cake, Follow the Leader, Monkey in the Middle|Keep Away, Kick the Can, Blind Man's Bluff, Sharks and Minnows, Wall ball, Wiffle ball, Pickle, Cops and Robbers, Rock Paper Scissors, Spud, Pogs, Jacks, Double Dutch, Telephone
+60: Ghost in the Graveyard, Manhunt, Flashlight tag, What Time Is It Mr. Fox?, Fruit Basket Turnover, Heads Up Seven Up|Seven Up, Steal the Bacon, Crack the Whip, Stuck in the Mud, British Bulldog|Bulldog, Mumblety-peg, Conkers, Ringolevio, Hot Lava Monster|Lava Monster, Skully, Stoopball, Gaga ball, Mafia, Slaps, Thumb war, Bloody Knuckles, Chinese jump rope, Zip Zap Zop, Cooties, Cootie catcher
+85: Kabaddi, Pitching pennies, Tip-cat, Hoop rolling, Pickup sticks, Oonch Neech, Kho kho, Gilli danda, Pilolo, Queenie I-O, Blob Tag, Everybody's It, TV Tag, Elbow Tag, Hospital Tag, Butts Up, German Spotlight
+100: Knucklebones :: The ancient Greek and Roman ancestor of jacks, played with actual animal ankle bones.

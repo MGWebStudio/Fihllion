@@ -6,14 +6,6 @@
 85: Hispano-Suiza, Auburn, Cord, Nash, Kaiser, Willys, Stutz, Pierce-Arrow, Bricklin, Fisker, Saleen, Shelby, Hennessey, Rimac, Zenvo, Spyker, Noble, TVR, Caterham, Ariel, Austin, Morris, Rover, Trabant, Lada, Zastava, Moskvitch, Holden, Proton, Perodua, Daihatsu, Hongqi, Chery, Great Wall, NIO, Xpeng, Lancia, De Tomaso, Abarth, Karma, Faraday Future, VinFast, Checker, Crosley
 100: Reliant :: Maker of the Reliant Robin, the British three-wheeler famous for tipping over.
 
-? Name a fast food chain
-10: McDonald's|McDonalds, Burger King, Wendy's, KFC|Kentucky Fried Chicken, Taco Bell, Subway, Chick-fil-A|Chick Fil A
-15: Krusty Krab, Good Burger
-30: Arby's, Popeyes, Dairy Queen|DQ, Sonic, Jack in the Box, Five Guys, In-N-Out|In N Out, Domino's, Pizza Hut, Papa John's, Little Caesars, Chipotle, Panera|Panera Bread, Panda Express, Whataburger, Hardee's, Carl's Jr., Starbucks, Dunkin'|Dunkin Donuts, Shake Shack, White Castle, Long John Silver's, Culver's, Wingstop, Zaxby's, Raising Cane's|Canes, Qdoba, Del Taco, Jimmy John's, Jersey Mike's, Firehouse Subs, Quiznos, Tim Hortons, Steak 'n Shake, Bojangles
-60: Church's|Church's Chicken, El Pollo Loco, Krystal, Checkers|Rally's, A&W, Auntie Anne's, Cinnabon, Sbarro, Nathan's Famous|Nathan's, Moe's, Baja Fresh, Rubio's, Noodles & Company, Wienerschnitzel, Dutch Bros, Krispy Kreme, Hungry Howie's, Papa Murphy's, Marco's Pizza, Cook Out, Portillo's, Smashburger, Freddy's, Blaze Pizza, MOD Pizza, Jollibee, Nando's, Greggs, Pret a Manger|Pret, Wimpy, Hungry Jack's, Tropical Smoothie, Smoothie King, Jamba Juice|Jamba, Pollo Tropical, Taco John's, Captain D's
-85: Burger Chef, Roy Rogers, Howard Johnson's, Hot 'n Now, Boston Market, Kenny Rogers Roasters, Taco Time, Taco Cabana, Taco Bueno, Back Yard Burgers, BurgerFi, Jack's, Milo's, Hot Dog on a Stick, Swensen's, Wayback Burgers, Mr. Hero, Penn Station, Potbelly, McAlister's, Schlotzsky's, Which Wich, Blimpie, Charleys, Tastee-Freez, Orange Julius, Karmelkorn, Dippin' Dots, Lee's Famous Recipe, Maid-Rite, Lotteria, MOS Burger, CoCo Ichibanya, Yoshinoya, Max Burgers, Harvey's, Mary Brown's, Pollo Campero, Supermac's, Steers, Galito's, Chowking
-100: Arthur Treacher's :: A fish-and-chips chain named after an English actor famous for playing butlers. Only a few remain.
-
 ? Name a soda
 ~drop soda,pop
 10: Coca-Cola|Coke, Pepsi, Sprite, Dr Pepper|Dr. Pepper, Mountain Dew|Mtn Dew, Fanta
@@ -31,22 +23,6 @@
 85: Jordache, Z. Cavaricci, Cross Colours, Karl Kani, Starter, Members Only, Gloria Vanderbilt, Sergio Valente, Bugle Boy, Mossimo, No Fear, Big Johnson, Delia's, Rampage, Limited Too, Gadzooks, Pelle Pelle, Akademiks, Enyce, Apple Bottoms, Avirex, Cavalli, Kenzo, Maison Margiela, Comme des Garçons|Comme des Garcons, Issey Miyake, Yohji Yamamoto, Rick Owens, Acne Studios, A.P.C., Thom Browne, Dries Van Noten, Lanvin, Etro, Missoni, Pucci, Brunello Cucinelli, Loro Piana, Kiton, Aimé Leon Dore|Aime Leon Dore, Noah, Palace, Filson, Pendleton, Woolrich, Duluth Trading, Ariat, Stetson, Cinch, Kimes Ranch
 100: Hypercolor|Generra Hypercolor :: 1991's heat-sensitive T-shirts changed color wherever you got warm. Yes, including there.
 
-? Name a tech company
-10: Apple, Google, Microsoft, Amazon, Facebook|Meta, Samsung
-15: Pied Piper, Hooli
-30: Intel, IBM, Dell, HP|Hewlett-Packard, Sony, Netflix, Tesla, Nvidia, Oracle, Cisco, Adobe, Uber, Twitter|X, Salesforce, OpenAI, Anthropic, Lenovo, Spotify, PayPal, eBay, Yahoo, AOL, Zoom, Slack, Snapchat|Snap, TikTok|ByteDance, AMD, Qualcomm, LG, Toshiba, Panasonic, Xerox, Motorola, Nokia, BlackBerry, Huawei, Xiaomi, Asus, Acer, Airbnb, Lyft, Reddit, Pinterest, LinkedIn, Dropbox, Shopify, Square|Block, Stripe, Palantir, SpaceX, xAI
-60: Compaq, Gateway, Commodore, Atari, Sun Microsystems, Silicon Graphics|SGI, Palm, Netscape, MySpace, Digg, Vine, Friendster, Napster, LimeWire, Tandy, Texas Instruments, Micron, Western Digital, Seagate, SanDisk, Logitech, Corsair, Razer, VMware, Red Hat, GitHub, GitLab, Atlassian, Twilio, Cloudflare, Vercel, Snowflake, Databricks, Workday, ServiceNow, Intuit, Autodesk, Epic Games, Valve, Nintendo, Zillow, DoorDash, Instacart, Robinhood, Coinbase, Waymo, Cruise, Rivian, DeepMind, Alibaba, Tencent, Baidu, TSMC, ASML, Arm, Foxconn, Theranos
-85: Bell Labs, Xerox PARC, Digital Equipment Corporation|DEC, Wang Laboratories|Wang, Control Data, Cray, Novell, Lotus, WordPerfect, Borland, Ask Jeeves, AltaVista, Lycos, Excite, GeoCities, Pets.com, Webvan, Quibi, Magic Leap, Cuil, Clubhouse, Yik Yak, Color Labs, Jawbone, Pebble, Fitbit, Nest, Ring, Anki, Kodak, Polaroid, Kozmo, WeWork, Mistral, Perplexity, Cohere, Hugging Face, Scale AI, Evernote, Skype, ICQ
-100: Juicero :: Raised $120 million to sell a Wi-Fi juicer. Then people learned you could squeeze the bags by hand.
-
-? Name an airline
-10: Delta, American Airlines|American, United, Southwest, JetBlue, Spirit
-15: Oceanic Airlines|Oceanic, Pan Am
-30: Alaska Airlines|Alaska, Frontier, British Airways, Air Canada, Lufthansa, Emirates, Air France, KLM, Qantas, Hawaiian Airlines|Hawaiian, Ryanair, EasyJet, Virgin Atlantic|Virgin, Allegiant, Singapore Airlines, Qatar Airways|Qatar, Japan Airlines|JAL, WestJet, Aer Lingus, Turkish Airlines, Cathay Pacific
-60: TWA|Trans World Airlines, Continental, Northwest, US Airways|USAir, America West, AirTran, ANA|All Nippon Airways, Korean Air, Etihad, Swissair|Swiss, SAS|Scandinavian Airlines, Finnair, Iberia, Alitalia, ITA Airways, TAP|TAP Portugal, Icelandair, WOW Air, Norwegian, Air New Zealand, Aeromexico, Avianca, LATAM, Copa, Volaris, Air India, IndiGo, China Southern, China Eastern, Air China, Thai Airways, Vietnam Airlines, Malaysia Airlines, AirAsia, Philippine Airlines, Garuda Indonesia, El Al, Saudia, Ethiopian Airlines, South African Airways, Kenya Airways, Breeze, Avelo, Sun Country
-85: Braniff, Eastern, Piedmont, PSA, Ted, Song, Western Airlines, Reno Air, Midway, ValuJet, Tower Air, Ozark, Republic, Hughes Airwest, Laker Airways, Monarch, Flybe, Thomas Cook, BOAC, Sabena, Ansett, Kingfisher, Aeroflot, LOT, Aegean, Wizz Air, Jet2, Vueling, Transavia, Pegasus, Scoot, Cebu Pacific, Air Tahiti Nui, Fiji Airways, Aloha Airlines, Cape Air, Mokulele, Silver Airways, Contour
-100: Air Koryo :: North Korea's state airline, long the only one rated just one star by airline reviewers Skytrax.
-
 ? Name a kitchen utensil
 10: Fork, Knife, Spoon, Spatula, Whisk, Tongs
 15: Spork, Melon baller
@@ -63,15 +39,6 @@
 85: Spokeshave, Froe, Drawknife, Sliding bevel|Bevel, Marking gauge, Try square, Dovetail saw, Tenon saw, Fret saw, Scraper, Burnisher, Scribe, Gimlet, Auger, Cant hook, Peavey, Maul, Drift punch, Center punch, Tap and die, Feeler gauge, Caliper, Micrometer, Wonder bar, Basin wrench, Strap wrench, Tongue and groove pliers, Lineman's pliers, Bradawl, Rabbet plane, Shoulder plane, Block plane, Jack plane, Mortise chisel, Slick, Japanese pull saw|Ryoba, Hoof pick
 100: Pulaski :: Half axe, half hoe, named for forest ranger Ed Pulaski, a hero of the Great Fire of 1910. Wildland crews still use it.
 
-? Name a kind of hat
-~drop hat
-10: Baseball cap|Ball cap, Beanie, Cowboy|Stetson, Top, Sombrero, Fedora
-15: Fez, Tinfoil, Dunce cap, Propeller|Propeller beanie
-30: Beret, Bucket, Sun, Visor, Hard, Party, Witch's, Chef's|Toque, Bowler|Derby, Trucker, Snapback, Mortarboard|Graduation cap, Panama, Newsboy cap|Newsie, Flat cap, Crown, Helmet, Turban, Yarmulke|Kippah, Santa, Sailor, Pirate|Tricorn, Pork pie|Porkpie, Balaclava, Fisherman's, Ushanka|Russian, Tiara, Headband, Bandana, Bonnet|Sunbonnet
-60: Bearskin, Pith helmet, Deerstalker, Trilby, Homburg, Boater|Straw boater, Cloche, Fascinator, Pillbox, Stovepipe, Ten-gallon, Kepi, Shako, Garrison cap, Campaign, Conical|Rice, Hijab, Mitre|Bishop's mitre, Papal tiara, Bicorne, Akubra, Gaucho, Zucchetto, Coonskin cap, Jester, Nurse's cap, Sailor cap, Aviator, Stocking cap, Tam|Tam o' shanter, Kufi, Taqiyah, Durag|Do-rag
-85: Balmoral, Glengarry, Busby, Cavalier, Gat, Kokoshnik, Phrygian cap, Hennin, Wimple, Snood, Sugegasa, Papakha, Karakul, Keffiyeh|Ghutrah, Shtreimel, Spodik, Biretta, Galero, Capotain, Breton, Slouch, Vaquero, Montera, Chullo, Nón lá|Non la, Pussyhat, Ascot cap, Gatsby, Boonie
-100: Sou'wester|Southwester :: The fisherman's waterproof hat, with a long brim down the back to keep the sea off your neck.
-
 ? Name a kind of shoe
 ~drop shoe,shoes
 10: Sneakers|Tennis, Boots, Sandals, Heels|High heels, Flip-flops|Flip flops, Loafers, Slippers, Crocs
@@ -80,15 +47,6 @@
 60: Espadrilles, Derby, Brogues, Chelsea boots, Chukka boots|Chukkas, Desert boots, Monk straps, Penny loafers, Huaraches, Mules, Peep toes, Kitten heels, Slingbacks, Ankle boots|Booties, Knee-high boots, Thigh-high boots, Gladiator sandals, Jellies|Jelly, Keds, Vans, Wingtips, Creepers, Clodhoppers, Waders, Sabots, Tevas, Hush Puppies, Toms, Zoris, Geta, Tabi, Dr. Scholl's, Air Jordans|Jordans, Yeezys, Toe|Five Finger|Vibram, Mukluks, Stompers, Gumboots, Lace-ups, Sperry|Sperrys
 85: Winklepickers, Spectators, Balmorals, Bluchers, Ghillies, Chopines, Pattens, Brothel creepers, Cothurnus, Caligae, Kolhapuri, Mojari|Jutti, Lotus, Okobo, Wooden|Klompen, Barefoot, Ropers, Harness boots, Jodhpurs, Paddock boots, Hessian boots, Nurse's, Orthopedic, Gaiters, Spats, Sock boots, Nike Mags, Reebok Pumps
 100: Poulaines|Crakows :: Medieval shoes with toes so long England passed a law limiting their length.
-
-? Name a fabric
-~drop fabric
-10: Cotton, Silk, Denim, Wool, Polyester, Leather
-15: Spandex, Gore-Tex
-30: Linen, Nylon, Velvet, Satin, Flannel, Fleece, Corduroy, Cashmere, Lace, Suede, Burlap, Canvas, Tweed, Rayon, Chiffon, Lycra, Terry cloth|Terrycloth, Felt, Jersey, Khaki, Microfiber, Acrylic, Mesh, Tulle, Vinyl, Hemp, Organza
-60: Gingham, Seersucker, Chambray, Taffeta, Muslin, Cheesecloth, Damask, Brocade, Poplin, Twill, Oxford, Georgette, Crepe, Angora, Mohair, Alpaca, Merino, Chenille, Pashmina, Tartan, Paisley, Neoprene, Polar fleece, Bamboo, Modal, Viscose, Lamé|Lame, Sateen, Batiste, Voile, Gabardine, Herringbone, Houndstooth, Madras, Calico, Oilcloth, Toile, Kevlar, Patent leather, Ultrasuede, Sequin, Moleskin, Sharkskin
-85: Bombazine, Dimity, Cambric, Charmeuse, Shantung, Dupioni, Crinoline, Jacquard, Matelassé|Matelasse, Ottoman, Pongee, Organdy, Melton, Worsted, Serge, Loden, Nankeen, Sailcloth, Duck, Dungaree, Drill, Ticking, Broadcloth, Barathea, Cheviot, Harris Tweed, Shetland, Vicuña|Vicuna, Qiviut, Piña|Pina, Ikat, Batik, Kente, Mudcloth, Chintz, Cretonne, Lurex, Tencel, Lyocell, Microsuede, Gossamer, Samite, Baize, Mousseline
-100: Sea silk|Byssus :: Woven from the hair-like threads of a giant Mediterranean clam. Hardly anyone alive still knows how.
 
 ? Name a currency
 10: Dollar, Euro, Pound, Yen, Peso
@@ -146,3 +104,38 @@
 60: Chaise longue|Chaise lounge|Chaise, Credenza, Chiffonier, Sideboard|Buffet, Daybed, Divan, Settee, Tallboy|Highboy, Lowboy, Bureau, Secretary desk, Rolltop desk, China cabinet, Trundle bed, Canopy bed, Four-poster bed, Sleigh bed, Wingback chair, Adirondack chair, Eames chair|Eames lounge chair, Papasan, Tuffet, Footstool, Hope chest, Console table, Nesting tables, Drop-leaf table, Pouf, Vitrine, Étagère|Etagere, Coat rack, Hat stand, High chair|Highchair, Magazine rack, Bassinet, Changing table, Morris chair, Windsor chair, Chesterfield
 85: Tête-à-tête|Tete-a-tete, Récamier|Recamier, Davenport, Escritoire, Commode, Cheval mirror|Cheval glass, Whatnot, Canterbury, Pembroke table, Gateleg table, Tansu, Kotatsu, Zaisu, Bergère|Bergere, Fauteuil, Klismos, Savonarola chair, Barcelona chair, Panton chair, Egg chair, Wassily chair, Ming chair, Tambour, Cassone, Bombé chest|Bombe chest, Knole, Ladderback, Sgabello
 100: Fainting couch :: A Victorian sofa with one raised end. Legend says it was for swooning in tight corsets.
+
+? Name a coffee drink
+~drop coffee
+10: Latte|Caffe latte|Cafe latte, Cappuccino, Espresso, Americano|Caffe Americano, Mocha|Caffe mocha|Mocha latte|Mochaccino, Iced coffee
+15: Frappuccino
+30: Macchiato|Caramel macchiato|Latte macchiato, Flat white, Cold brew, Cortado, Black coffee|Black, Irish coffee|Irish, Café au lait|Cafe au lait, Pumpkin spice latte|PSL|Pumpkin spice, Affogato, Red eye|Shot in the dark, Lungo, Ristretto, Doppio|Double espresso, Frappé|Frappe, Turkish coffee|Turkish, Vietnamese iced coffee|Ca phe sua da, Nitro cold brew|Nitro, Dalgona|Whipped coffee, Breve|Caffe breve, Decaf, Drip coffee|Drip, Pour-over|Pour over, French press
+60: Dirty chai, White mocha, Iced latte, Café con leche|Cafe con leche, Cafecito|Cuban coffee|Cafe Cubano, Café de olla|Cafe de olla, Bulletproof coffee|Bulletproof, Long black, Piccolo|Piccolo latte, Con panna|Espresso con panna, Black eye, Caramel latte, Vanilla latte, Hazelnut latte, Gingerbread latte, Peppermint mocha, Eggnog latte, Iced Americano, Iced mocha
+85: Mazagran, Galão|Galao, Bicerin, Espresso romano|Romano, Café bombón|Cafe bombon, Kopi tubruk, Yuenyeung|Yuanyang, Egg coffee|Ca phe trung, Einspänner|Einspanner, Wiener Melange|Melange, Carajillo, Marocchino, Caffè corretto|Corretto, Caffè shakerato|Shakerato, Freddo espresso|Freddo, Café miel|Cafe miel, Qahwa|Arabic coffee, Dead eye, Café Touba|Cafe Touba, Kopi luwak, Antoccino, Guillermo, Red tux, Zebra mocha
+100: Kaffeost :: Finnish and Swedish coffee poured over cubes of squeaky cheese, which you eat with a spoon at the end.
+
+? Name a room in a house
+~drop room
+10: Kitchen, Bedroom, Bathroom, Living room|Living, Dining room|Dining, Garage
+15: Man cave
+30: Basement, Attic, Laundry room|Laundry|Utility room|Utility, Home office|Office|Study, Family room, Den, Closet|Walk-in closet, Pantry, Hallway|Hall, Guest room|Spare room|Guest bedroom, Nursery, Playroom, Mudroom, Sunroom|Sun room|Conservatory, Game room|Rec room|Recreation room, Master bedroom|Primary bedroom, Powder room|Half bath, Library, Foyer|Entryway|Entry, Porch, Home theater|Media room|Theater room, Cellar|Wine cellar, Home gym|Gym, Loft, Lounge, Parlor|Parlour, Sitting room
+60: Great room, Bonus room, Breakfast nook|Nook, Butler's pantry|Butlers pantry, Scullery, Larder, Vestibule, Solarium, Atrium, Gallery, Ballroom, Drawing room, Billiard room|Pool room, Smoking room, Morning room, Craft room|Sewing room, Music room, Panic room|Safe room, Sauna, Steam room, Boot room, Linen closet, Storeroom|Storage room, Box room, Crawl space, Garret, Sleeping porch, Florida room, Keeping room, Hearth room, Toilet|WC|Water closet|Loo|Restroom, En suite|Ensuite, Jack and Jill bathroom|Jack and Jill, Wet room, In-law suite|Granny flat, Studio, Workshop, Darkroom, Rumpus room, Snug, Cloakroom, Boudoir, Dressing room, Kitchenette, Galley, Prayer room, Cold room, Root cellar, Furnace room|Boiler room|Mechanical room, Lanai, Breezeway, Bunk room, Trophy room, Great hall
+85: Buttery, Stillroom|Still room, Solar, Garderobe, Oriel, Anteroom|Antechamber, Withdrawing room, Gun room, Muniment room, Strong room, Chapel, Orangery, Belvedere, Cupola, Widow's walk|Widows walk, Secret room|Hidden room, Fallout shelter|Bomb shelter, Storm cellar|Tornado shelter, Tack room, Coal cellar, Long gallery, Undercroft, Genkan, Washitsu|Tatami room, Majlis, Inglenook
+100: Priest hole :: A secret hiding spot built into English houses in the 1500s and 1600s, when Catholic priests could be executed if caught.
+
+? Name a piece of jewelry
+10: Ring, Necklace, Bracelet, Earrings|Earring, Watch
+15: Grillz|Grill|Grills
+30: Pendant, Locket, Brooch|Broach|Pin, Choker, Bangle, Anklet, Cufflinks|Cuff links|Cufflink, Charm bracelet|Charm, Tiara, Crown, Engagement ring, Wedding ring|Wedding band, Nose ring|Nose stud, Belly button ring|Belly ring|Navel ring, Toe ring, Chain|Gold chain, Pearl necklace|Pearls|String of pearls, Tennis bracelet, Stud earrings|Studs, Hoop earrings|Hoops, Medallion, Tie clip|Tie bar|Tie pin|Tie tack, Signet ring, Cuff|Cuff bracelet, Friendship bracelet, Class ring, Mood ring
+60: Body chain, Lip ring, Septum ring, Eyebrow ring, Tongue ring, Hair clip|Barrette, Diadem, Lavalier, Torc|Torque, Armlet|Arm band, Circlet, Cameo, Ear cuff, Dog tags, Rosary, Pocket watch, Smartwatch, Mala|Mala beads, Puka shell necklace|Puka shells, Chandelier earrings, Drop earrings|Dangle earrings, Solitaire, Eternity ring|Eternity band, Promise ring, Claddagh ring|Claddagh, Pinky ring, Bolo tie, Lapel pin, Nameplate necklace|Nameplate, Plugs|Gauges, Hand chain
+85: Bindi, Maang tikka, Nath, Payal, Kada, Mangalsutra, Aigrette, Parure, Sautoir, Rivière|Riviere, Fob, Stomacher, Fibula, Gorget, Lunula, Bulla, Ear climber, Labret, Mourning ring, Poesy ring|Posy ring, Gimmel ring, Puzzle ring, Toggle bracelet, Slap bracelet
+100: Chatelaine :: A decorative belt clasp hung with chains for keys, scissors and a watch, worn by housekeepers and fashionable women.
+
+? Name a streaming service
+~drop plus,tv,streaming,app,the
+10: Netflix, Hulu, Disney+|Disney Plus|Disney, Amazon Prime Video|Prime Video|Amazon Prime|Prime|Amazon, HBO Max|Max|HBO, YouTube|YouTube TV
+15: Spotify
+30: Peacock, Paramount+|Paramount Plus|Paramount|CBS All Access, Apple TV+|Apple TV|Apple TV Plus, Sling|Sling TV, Fubo|FuboTV, Crunchyroll, Tubi, Pluto TV|Pluto, ESPN+|ESPN Plus|ESPN, Twitch, Apple Music, Pandora, Starz, Showtime, Discovery+|Discovery Plus, BritBox, Shudder, Philo, Roku Channel|The Roku Channel, Fandango at Home|Vudu, AMC+|AMC Plus, Criterion Channel|Criterion, MUBI|Mubi, Funimation, Kanopy, Hoopla, YouTube Music, Amazon Music, Tidal, SoundCloud, Deezer, SiriusXM|Sirius, Audible
+60: DirecTV Stream, Frndly TV|Frndly, Curiosity Stream|CuriosityStream, Acorn TV|Acorn, Gaia, PBS Passport, BET+|BET Plus, Hallmark+|Hallmark Movies Now|Hallmark, Plex, Kick, Freevee|IMDb TV, Crackle, Xumo, Sky Go, NOW|Now TV, BBC iPlayer|iPlayer, Crave, Dailymotion, Vimeo, Nebula, Dropout, Rumble
+85: ITVX, Channel 4|All 4, Stan, Binge, JioHotstar|Hotstar|Disney+ Hotstar, iQIYI, Rakuten Viki|Viki, Viu, ZEE5|Zee5, SonyLIV|Sony Liv, Globoplay, Viaplay, Canal+|Canal Plus, Joyn, Shahid, Showmax, Rakuten TV, Kocowa, HIDIVE|Hidive, VRV, DAZN, Mixer, Vine
+100: Quibi :: A phone-only service for short shows that launched in April 2020, raised about $1.75 billion and shut down six months later.
