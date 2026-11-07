@@ -22,15 +22,6 @@
 85: Treehopper, Velvet ant, Thorn bug, Snakefly, Alderfly, Dobsonfly, Springtail, Goliath beetle, Titan beetle, Jewel beetle, Longhorn beetle, Tiger beetle, Rove beetle, Darkling beetle, Mealworm, Harlequin bug, Shield bug, Backswimmer, Water boatman, Whirligig beetle, Froghopper, Planthopper, Spotted lanternfly|Lanternfly, Emerald ash borer, Gall wasp, Fig wasp, Ichneumon wasp, Mud dauber, Hawk moth|Sphinx moth, Hummingbird moth, Rosy maple moth, Silkworm, Orchid mantis, Ghost mantis, Barklouse, Booklouse, Cochineal, Weta
 100: Bombardier beetle :: When threatened, it fires a jet of boiling chemicals out of its rear.
 
-? Name a tree
-~drop tree,trees
-10: Oak, Pine, Maple, Palm, Apple, Christmas
-15: Baobab, Bonsai
-30: Birch, Willow|Weeping willow, Redwood, Sequoia|Giant sequoia, Spruce, Cedar, Fir|Douglas fir, Elm, Ash, Aspen, Cherry, Cherry blossom, Magnolia, Dogwood, Hickory, Walnut, Beech, Sycamore, Poplar, Cottonwood, Holly, Hemlock, Mahogany, Olive, Peach, Pear, Orange, Lemon, Coconut, Cypress, Juniper, Yew, Eucalyptus, Chestnut, Teak, Joshua
-60: Larch, Alder, Hazel, Hawthorn, Rowan|Mountain ash, Linden|Basswood, Tulip|Tulip poplar, Sweetgum|Sweet gum, Ginkgo, Mesquite, Bald cypress, Pecan, Almond, Fig, Balsa, Ebony, Rosewood, Acacia, Mangrove, Jacaranda, Hornbeam, Sassafras, Black locust|Locust, Catalpa, Crepe myrtle, Monkey puzzle, Banyan, Rubber, Cork oak, Tamarack, Sumac, Mimosa, Palo verde, Horse chestnut|Buckeye, Box elder, Serviceberry, Sandalwood, Frankincense, Myrrh, Neem
-85: Kapok, Dragon blood|Dragon's blood, Bristlecone pine|Bristlecone, Wollemi pine, Sweetbay, Osage orange|Hedge apple, Pawpaw, Persimmon, Sourwood, Tupelo, Yellowwood, Hackberry, Paulownia|Empress, Kauri, Jarrah, Karri, Ironwood, Lignum vitae, Ohia, Koa, Rimu, Totara, Mopane, Marula, Moringa, Cacao, Quaking aspen, Ponderosa|Ponderosa pine, Lodgepole pine|Lodgepole, Sitka spruce, Western red cedar, Smoke, Redbud, Witch hazel, Wych elm, Medlar, Service, Spindle, Tree of heaven, Sal, Bodhi|Peepal, Mulberry, Bottlebrush
-100: Manchineel :: Stand under it in the rain and the runoff can blister your skin. Don't eat the fruit either.
-
 ? Name a flower
 10: Rose, Tulip, Sunflower, Daisy, Lily, Orchid
 15: Lotus
@@ -81,15 +72,6 @@
 85: Business, Knot, Zeal, Prickle, Kindle, Kettle, Wake, Cast, Rabble, Cauldron, Stand, Sounder, Cete, Skulk, Bask, Float, Bale, Intrusion, Plague, Grist, Scourge, Shrewdness, Barrel, Conspiracy, Pandemonium, Descent, Convocation, Fluther, Bloom, Kaleidoscope, Harem, Gam, Bed, Run, Nide, Sord
 100: Implausibility :: A group of wildebeest can be called an implausibility of gnus. Yes, really.
 
-? Name an animal with horns or antlers
-~drop horned
-10: Deer, Bull, Moose, Goat, Rhino|Rhinoceros, Reindeer
-15: Unicorn, Narwhal
-30: Elk, Ram|Bighorn sheep|Sheep, Buffalo|Bison, Antelope, Giraffe, Ox, Caribou, Cow, Gazelle, Yak, Water buffalo, Longhorn|Texas longhorn, Impala, Wildebeest|Gnu, Ibex, Highland cow
-60: Oryx, Kudu, Eland, Springbok, Pronghorn, Markhor, Mountain goat, Musk ox|Muskox, Dall sheep, Mouflon, Sable antelope, Hartebeest, Bongo, Nyala, Waterbuck, Gemsbok, Blackbuck, Red deer, Fallow deer, White-tailed deer|Whitetail, Mule deer, Jackalope, Lizard|Horned toad|Thorny devil, Triceratops, Stag beetle, Rhinoceros beetle, Dik-dik, Steenbok, Topi, Zebu, Watusi|Ankole
-85: Takin, Gaur, Banteng, Anoa, Serow, Chamois, Goral, Tahr, Barasingha, Sika deer, Muntjac, Roe deer, Père David's deer|Pere David's deer, Okapi, Lechwe, Gerenuk, Klipspringer, Duiker, Bontebok, Sitatunga, Bushbuck, Tur, Saiga, Aurochs, Irish elk, Chinkara, Nilgai, Viper, Frog
-100: Saola :: The "Asian unicorn." Scientists only described it in 1992 and have almost never seen one since.
-
 ? Name an animal that starts with P
 10: Pig, Penguin, Panda, Parrot, Polar bear
 15: Platypus, Pangolin
@@ -97,14 +79,6 @@
 60: Peregrine falcon, Pine marten, Pika, Pronghorn, Proboscis monkey, Plover, Polecat, Parrotfish, Pilot whale, Pygmy goat, Puff adder, Pipefish, Pollock, Poison dart frog, Portuguese man o' war, Ptarmigan, Pterodactyl, Pit viper, Pekingese, Papillon, Peccary, Pacu, Paca
 85: Pademelon, Pacarana, Potoroo, Potto, Pygmy marmoset, Phalanger, Pipistrelle, Pipit, Puku, Peafowl, Pekin duck, Pumpkinseed, Pond skater, Pill bug, Pachycephalosaurus, Parasaurolophus, Plesiosaur, Pallas's cat, Pine siskin, Purple martin, Pharaoh hound, Plott hound, Pleco|Plecostomus, Poorwill, Parrotlet, Paddlefish, Przewalski's horse
 100: Pudu :: One of the world's smallest deer, barely knee high. Fawns are not much bigger than a kitten.
-
-? Name an Australian animal
-10: Kangaroo, Koala, Platypus, Emu, Wallaby
-15: Tasmanian devil|Tassie devil
-30: Wombat, Dingo, Kookaburra, Echidna, Crocodile|Saltwater crocodile|Saltie, Cockatoo, Redback|Redback spider, Funnel-web|Funnel-web spider, Box jellyfish, Taipan, Frilled lizard|Frill-necked lizard, Sugar glider, Quokka, Cassowary, Goanna, Brown snake
-60: Thorny devil, Tasmanian tiger|Thylacine, Numbat, Bilby, Quoll, Bandicoot, Wedge-tailed eagle, Lyrebird, Galah, Rainbow lorikeet|Lorikeet, Budgie|Budgerigar, Tiger snake, Blue-tongued skink|Bluetongue|Blue-tongue lizard, Cane toad, Bogong moth, Huntsman|Huntsman spider, Pademelon, Potoroo, Red-bellied black snake, Stonefish, Blue-ringed octopus, Sea dragon|Weedy sea dragon|Leafy sea dragon, Magpie, Black swan, Flying fox, Dugong
-85: Bettong, Kowari, Antechinus, Dunnart, Tree kangaroo, Yabby, Barramundi, Tawny frogmouth|Frogmouth, Currawong, Brolga, Bowerbird, Gang-gang cockatoo, Corroboree frog, Perentie, Inland taipan, Death adder, Mulga, Irukandji, Ghost bat, Honey possum, Ringtail possum, Brushtail possum, Greater glider, Rock-wallaby, Wallaroo, Euro, Spotted quoll, Mountain pygmy possum, Pig-nosed turtle, Murray cod, Witchetty grub, Ulysses butterfly, Emu-wren
-100: Drop bear :: A made-up carnivorous koala Australians use to scare tourists. Keep an eye on the treetops.
 
 ? Name a type of shark
 ~drop shark,sharks
@@ -141,3 +115,39 @@
 60: Agouti, Paca, Mara|Patagonian mara, Kangaroo rat, Pocket gopher, Pocket mouse, Gundi, Springhare|Springhaas, Spiny mouse, Cane rat, Bamboo rat, Hutia, Viscacha, Tuco-tuco, Jird, Fat sand rat|Sand rat, Deer mouse, Harvest mouse, Water vole, Wood mouse|Field mouse, Ground squirrel, Gray squirrel|Grey squirrel, Fox squirrel, Brown rat|Norway rat, Black rat, Kangaroo mouse, Spiny rat, Acouchi, Mountain beaver
 85: Pacarana, Dassie rat, Blesmol, Coruro, Hopping mouse, Rakali|Water rat, Cloud rat, Giant pouched rat|Gambian pouched rat, Zokor, Anomalure|Scaly-tailed squirrel, Long-eared jerboa, Plains viscacha, Red squirrel, Edible dormouse|Fat dormouse, Hazel dormouse
 100: Crested rat|Maned rat :: An African rat that chews poisonous bark and smears the toxin into its fur, so a predator that bites it can die.
+
+? Name a whale or dolphin
+~drop whale,whales,dolphin,dolphins
+10: Blue, Killer|Orca, Humpback, Beluga, Sperm, Bottlenose
+15: Narwhal
+30: Gray|Grey, Right|North Atlantic right, Bowhead, Fin, Minke, Sei, Pilot, Porpoise, Spinner, Amazon river|Pink|Boto, Risso's|Rissos, Common, Dusky, Hector's|Hectors, Spotted|Atlantic spotted, Pacific white-sided|White-sided, Bryde's|Brydes, Cuvier's beaked|Cuviers beaked|Beaked, False killer, Vaquita, Harbor porpoise|Harbour porpoise, Dall's porpoise|Dalls porpoise, Irrawaddy, Baiji|Yangtze river, Commerson's|Commersons, Southern right
+60: Melon-headed, Pygmy killer, Pygmy sperm, Dwarf sperm, Rough-toothed, Fraser's|Frasers, Clymene, Striped, Hourglass, Peale's|Peales, Chilean|Black, Heaviside's|Heavisides, Indo-Pacific humpback|Chinese white, Australian snubfin|Snubfin, Tucuxi, Guiana, Ganges river|Susu, Indus river|Bhulan, Franciscana|La Plata, Burrunan, Antarctic minke, Omura's|Omuras, Rice's|Rices, Baird's beaked|Bairds beaked, Blainville's beaked|Blainvilles beaked, Northern bottlenose, Sowerby's beaked|Sowerbys beaked, True's beaked|Trues beaked, Gervais' beaked|Gervais beaked, Burmeister's porpoise|Burmeisters porpoise, Spectacled porpoise, Finless porpoise, Pygmy right
+85: Perrin's beaked|Perrins beaked, Deraniyagala's beaked|Deraniyagalas beaked, Hubbs' beaked|Hubbs beaked, Stejneger's beaked|Stejnegers beaked, Andrews' beaked|Andrews beaked, Gray's beaked|Grays beaked, Hector's beaked|Hectors beaked, Strap-toothed, Ginkgo-toothed, Longman's beaked|Longmans beaked|Tropical bottlenose, Arnoux's beaked|Arnoux beaked, Pygmy beaked, Shepherd's beaked|Shepherds beaked, Southern bottlenose, Atlantic white-sided, White-beaked, Tamanend's bottlenose|Tamanends bottlenose, Indo-Pacific bottlenose, Livyatan, Basilosaurus, Ambulocetus
+100: Spade-toothed :: Possibly the rarest whale on Earth. Nobody had seen a whole one until two washed up dead on a New Zealand beach in 2010.
+
+? Name a bird of prey
+~drop bird,birds,of,prey
+10: Bald eagle|Eagle, Hawk, Falcon, Owl, Vulture, Osprey
+15: Condor|California condor
+30: Golden eagle, Red-tailed hawk|Red tail, Peregrine falcon|Peregrine, Kestrel|American kestrel, Harrier|Hen harrier|Northern harrier, Kite, Buzzard, Barn owl, Great horned owl, Snowy owl, Turkey vulture, Harpy eagle|Harpy, Secretarybird|Secretary bird, Merlin, Goshawk, Sparrowhawk|Sparrow hawk, Cooper's hawk|Coopers hawk, Gyrfalcon, Andean condor, Caracara, White-tailed eagle|Sea eagle, African fish eagle|Fish eagle, Steller's sea eagle|Stellers sea eagle
+60: Philippine eagle|Monkey-eating eagle, Crowned eagle, Martial eagle, Bateleur, Tawny eagle, Steppe eagle, Imperial eagle, Bonelli's eagle|Bonellis eagle, Booted eagle, Wedge-tailed eagle, Verreaux's eagle|Verreauxs eagle|Black eagle, Lammergeier|Bearded vulture, Griffon vulture|Griffon, Egyptian vulture, Lappet-faced vulture, King vulture, Black vulture, Cinereous vulture|Monk vulture, Hooded vulture, Palm-nut vulture, Red kite, Black kite, Swallow-tailed kite, Snail kite, Mississippi kite, White-tailed kite|Black-shouldered kite, Brahminy kite, Rough-legged hawk|Rough-legged buzzard, Ferruginous hawk, Swainson's hawk|Swainsons hawk, Red-shouldered hawk, Broad-winged hawk, Harris's hawk|Harris hawk, Honey buzzard, Prairie falcon, Lanner falcon|Lanner, Saker falcon|Saker, Hobby, Aplomado falcon, Barred owl, Eagle-owl|Eurasian eagle-owl, Screech owl, Burrowing owl, Tawny owl, Little owl, Long-eared owl, Short-eared owl, Elf owl, Great grey owl|Great gray owl, Spotted owl, Pygmy owl, Saw-whet owl
+85: Laughing falcon, Bat falcon, Orange-breasted falcon, Pygmy falcon, Red-footed falcon, Eleonora's falcon|Eleonoras falcon, Amur falcon, Sooty falcon, Mauritius kestrel, Seychelles kestrel, Grey falcon, Brown falcon, New Zealand falcon|Karearea, Striated caracara|Johnny rook, Crane hawk, Savanna hawk, Roadside hawk, Galápagos hawk|Galapagos hawk, Hawaiian hawk|Io, Ridgway's hawk|Ridgways hawk, Bat hawk, Lizard buzzard, Augur buzzard, Jackal buzzard, Long-crested eagle, Wahlberg's eagle|Wahlbergs eagle, Ornate hawk-eagle, Crested serpent eagle, Short-toed snake eagle, Madagascar fish eagle, Pallas's fish eagle|Pallas fish eagle, Blakiston's fish owl|Blakistons fish owl, Pel's fishing owl|Pels fishing owl, Spectacled owl, Crested owl, Maned owl, Pharaoh eagle-owl, Laughing owl
+100: Haast's eagle|Haasts eagle :: An extinct New Zealand eagle big enough to hunt moa, flightless birds that weighed many times more than it did.
+
+? Name a spider
+~drop spider,spiders
+10: Black widow|Widow, Tarantula, Brown recluse|Recluse, Wolf, Jumping, Daddy longlegs|Daddy long legs|Cellar
+15: Charlotte
+30: Huntsman, Orb weaver|Orb-weaver|Garden, Funnel-web|Sydney funnel-web, Trapdoor, Hobo, Redback, Crab, House, Brazilian wandering|Wandering|Banana, Goliath birdeater|Goliath, Fishing|Dock, Peacock, Yellow sac|Sac, Grass, Golden orb-weaver|Golden orb, Diving bell|Water, Mouse, Spitting, Bird-eating|Birdeater, Writing spider|Argiope|Yellow garden, Zebra, Six-eyed sand|Sand, Brown widow, Red widow, False widow
+60: Ogre-faced|Net-casting, Bolas, Spiny orb-weaver|Spiny-backed orb-weaver, Money, Green lynx|Lynx, Nursery web, Raft, Purseweb, Mexican redknee|Redknee, Chilean rose|Rose hair, Woodlouse|Woodlouse hunter, Ant-mimic|Ant-mimicking, Assassin|Pelican, Wasp, Cross|European garden|Diadem, Marbled orb-weaver|Pumpkin, Barn, Joro, St Andrew's cross|St Andrews cross, Leaf-curling, Bird-dropping, Mirror|Sequined, Hawaiian happy-face|Happy face
+85: Darwin's bark spider|Darwins bark spider, Trashline, Arrowhead, Scorpion-tailed, Two-tailed, Wrap-around, Pirate, Dewdrop, Wishbone, Ladybird, Portia|Fringed jumping, Ghost, Trogloraptor, Social|Velvet, Hourglass trapdoor|Cyclocosmia, Gooty sapphire|Peacock parachute, Tasmanian cave
+100: Bagheera kiplingi :: The only spider known to eat mostly plants. It's named after the panther in The Jungle Book.
+
+? Name a farm animal
+~drop farm
+10: Cow|Cattle, Pig|Hog, Chicken|Hen, Horse, Sheep, Goat
+15: Llama
+30: Duck, Turkey, Donkey|Ass, Rooster, Goose, Rabbit, Alpaca, Bull, Mule, Ox|Oxen, Lamb, Calf, Piglet, Pony, Cat|Barn cat, Dog|Sheepdog, Bee|Honeybee|Honey bee, Ostrich, Quail, Peacock|Peafowl, Guinea fowl|Guinea hen, Water buffalo|Buffalo, Bison, Yak, Camel, Ram, Ewe, Sow, Boar, Heifer, Steer, Chick, Duckling, Gosling, Foal, Stallion, Mare, Kid
+60: Emu, Pheasant, Pigeon|Dove, Earthworm|Worm|Worms, Silkworm, Mink, Deer|Red deer, Elk|Wapiti, Reindeer|Caribou, Guinea pig|Cuy, Snail|Escargot, Alligator, Crocodile, Cricket|Crickets, Shrimp, Oyster, Mussel, Fish, Capon, Bantam, Drake, Gander, Wether, Gilt, Barrow, Shoat|Shote, Jenny|Jennet, Hinny, Zebu, Mithun|Gayal, Banteng, Dzo|Zo
+85: Musk ox, Vicuña|Vicuna, Guanaco, Rhea, Muscovy duck, Black soldier fly, Mealworm, Chinchilla, Nutria|Coypu, Capybara, Grasscutter|Cane rat, Sea cucumber, Abalone, Geoduck, Eel, Sturgeon, Tilapia, Catfish, Trout, Carp, Koi
+100: Cochineal :: A tiny bug farmed on cactus pads. Crushed, it makes carmine, a red dye used in some candy, yogurt and lipstick.

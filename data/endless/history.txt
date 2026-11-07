@@ -24,3 +24,39 @@
 60: Vicksburg, Fredericksburg, Chancellorsville, Appomattox, Trenton, Cannae, Actium, Salamis, Bosworth|Bosworth Field, Tours, Austerlitz, Balaclava, Ypres, Khe Sanh, Dien Bien Phu, Hamburger Hill, Inchon, Chosin Reservoir|Chosin, Leyte Gulf, Coral Sea, El Alamein, Kursk, Berlin, Monte Cassino, Tannenberg, Jutland, Passchendaele, Culloden, Bannockburn, Stirling Bridge, Isandlwana, Rorke's Drift, Zama, Gaugamela, Issus, Lepanto, Vienna, Sekigahara, Plassey, Wounded Knee, Mogadishu, San Juan Hill, Fallujah, Tora Bora, Chickamauga, Cowpens, Fort McHenry, Lake Erie, Tippecanoe
 85: Teutoburg Forest, Carrhae, Adrianople, Hattin, Crécy|Crecy, Poitiers, Tsushima, Leuctra, Pharsalus, Philippi, Alesia, Stamford Bridge, Towton, Naseby, Blenheim, Poltava, Sedan, Mukden, Cambrai, Caporetto, Arnhem, Anzio, Imphal, Kohima, Hürtgen Forest|Hurtgen Forest, Ia Drang, Pork Chop Hill, Talavera, Borodino, Leipzig, Jena, Marengo, Nile, Copenhagen, Cape St. Vincent, Manzikert, Kadesh, Megiddo, Ain Jalut, Talas, Red Cliffs, Fei River, Kalinga, Panipat, Little Round Top
 100: Karánsebes|Karansebes :: The Austrian army reportedly attacked itself by mistake in 1788, though historians doubt the story.
+
+? Name a war
+~drop war,wars,the,of
+10: World War II|WW2|WWII|World War 2|World War Two|Second World War, World War I|WW1|WWI|World War 1|World War One|First World War|Great War, Vietnam, American Civil War|Civil, Revolutionary|American Revolution, Korean|Korea
+15: Cold, Star Wars
+30: Iraq, Gulf|Persian Gulf, 1812, Afghanistan, Spanish-American, Trojan, Roses, Crusades, Hundred Years|Hundred Years', Napoleonic, Mexican-American, French Revolution, Falklands, Peloponnesian, Punic, Crimean
+60: Boer, Thirty Years|Thirty Years', Seven Years|Seven Years', French and Indian, Opium, Russo-Japanese, Spanish Civil, Six-Day|Six Day, Yom Kippur, Iran-Iraq, Bosnian, Russian Civil, Franco-Prussian, Winter, Texas Revolution, Cod, Spanish Succession, Irish Independence, Nigerian Civil, Greco-Persian|Persian, Gallic, Anglo-Zulu|Zulu
+85: Football|Soccer, Jenkins' Ear, Pastry, Pig, Bucket, Kalmar, Anglo-Zanzibar, Whiskey Rebellion, Toledo, Aroostook, Honey, Chaco, Thousand Days, Paraguayan, Taiping Rebellion, Boxer Rebellion, Peasants', Hussite, Scottish Independence, Seminole, Sino-Japanese, Balkan
+100: Emu :: In 1932 the Australian military went after emus with machine guns. The emus won.
+
+? Name a pirate, real or fictional
+~drop captain,the
+10: Blackbeard, Hook|Captain Hook, Jack Sparrow, Kidd|William Kidd
+15: Long John Silver, Dread Pirate Roberts
+30: Henry Morgan|Morgan, Anne Bonny, Mary Read, Calico Jack|Jack Rackham, Barbossa|Hector Barbossa|Barbarossa, Bartholomew Roberts|Black Bart, Jean Lafitte, Davy Jones, Francis Drake, Monkey D. Luffy|Luffy, One-Eyed Willy
+60: Henry Every|Long Ben, Charles Vane, Benjamin Hornigold, Edward Low, Ching Shih|Zheng Yi Sao, Grace O'Malley, Walter Raleigh, Thomas Tew, Sam Bellamy|Black Sam Bellamy, Flint, Will Turner, Elizabeth Swann, Smee, Guybrush Threepwood, Redbeard, Haddock, Roronoa Zoro|Zoro, Nami, Pugwash, Olivier Levasseur, William Dampier, Patchy
+85: François l'Olonnais|L'Olonnais, Black Caesar, Rachel Wall, Jacquotte Delahaye, Sayyida al-Hurra, Anne Dieu-le-Veut, Israel Hands, Howell Davis, Thomas Cavendish, Peter Easton, Jan Janszoon, Piet Hein, Klaus Störtebeker, Koxinga|Zheng Zhilong, Dragut, Roche Braziliano, Ned England, Henry Jennings, Samuel Burgess
+100: Stede Bonnet :: A rich plantation owner with no sailing experience who simply bought a ship and became "the gentleman pirate."
+
+? Name a figure from the Wild West
+~last
+10: Billy the Kid, Wyatt Earp, Jesse James, Buffalo Bill|Buffalo Bill Cody|William Cody, Annie Oakley, Wild Bill Hickok|Wild Bill
+15: John Wayne, Clint Eastwood
+30: Doc Holliday, Butch Cassidy, Sundance Kid|The Sundance Kid, Calamity Jane, Davy Crockett, Geronimo, Sitting Bull, Crazy Horse, George Custer|General Custer, Pat Garrett, Bat Masterson, Belle Starr, Kit Carson, Daniel Boone
+60: Black Bart, Cole Younger, John Wesley Hardin, Sam Bass, Judge Roy Bean|Roy Bean, Pearl Hart, Tom Horn, Chief Joseph, Red Cloud, Cochise, Ike Clanton, Johnny Ringo, Stagecoach Mary|Mary Fields, Levi Strauss, Pawnee Bill, Kid Curry|Harvey Logan, Etta Place, Charles Goodnight, Emmett Dalton, Virgil Earp, Morgan Earp, Seth Bullock, Al Swearengen
+85: Cattle Annie, Little Britches, Rose Dunn, Laura Bullion, Elfego Baca, Commodore Perry Owens, Heck Thomas, Bill Tilghman, Chris Madsen, Nat Love|Deadwood Dick, Bill Pickett, Black Jack Ketchum|Tom Ketchum, Clay Allison, Ben Thompson, Luke Short, Dallas Stoudenmire, Temple Houston, Isaac Parker|Hanging Judge, Cattle Kate|Ella Watson, Liver-Eating Johnson|Jeremiah Johnson, Washakie
+100: Bass Reeves :: Born enslaved, he became one of the first Black deputy US marshals. He may have inspired the Lone Ranger.
+
+? Name a civil rights leader or activist
+~last
+10: Martin Luther King Jr.|MLK|Martin Luther King, Rosa Parks, Malcolm X, Harriet Tubman, Mahatma Gandhi
+15: Nelson Mandela, Greta Thunberg
+30: Frederick Douglass, Susan B. Anthony, Cesar Chavez, Sojourner Truth, John Lewis, Medgar Evers, W.E.B. Du Bois|Du Bois, Booker T. Washington, Gloria Steinem, Harvey Milk, Ruby Bridges, Elizabeth Cady Stanton, Angela Davis, Emmeline Pankhurst, Jesse Jackson, Thurgood Marshall, Ida B. Wells, Al Sharpton, Malala Yousafzai|Malala, Erin Brockovich, Ralph Nader
+60: Fannie Lou Hamer, Stokely Carmichael, Huey Newton, Bobby Seale, Bayard Rustin, Dorothy Height, Ella Baker, Coretta Scott King, Dolores Huerta, Lucretia Mott, Alice Paul, Betty Friedan, Marsha P. Johnson, Sylvia Rivera, Steve Biko, Desmond Tutu, Emma Goldman, William Lloyd Garrison, Nat Turner, John Brown, James Farmer, A. Philip Randolph, Ralph Abernathy, Joan Baez, Jane Addams, Ruth Bader Ginsburg, Russell Means, Wilma Mankiller, Yuri Kochiyama, Mother Jones, Dorothy Day
+85: Diane Nash, Septima Clark, Whitney Young, Roy Wilkins, Fred Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo, Constance Baker Motley, Pauli Murray, Mary Church Terrell, Carrie Chapman Catt, Inez Milholland, Lucy Stone, Vine Deloria Jr.|Vine Deloria, Dennis Banks, Larry Itliong, Philip Vera Cruz, Fred Korematsu, Mary McLeod Bethune, Barbara Gittings, Frank Kameny, Mamie Till-Mobley|Mamie Till, E.D. Nixon, Homer Plessy, Thich Nhat Hanh, Bella Abzug, Shirley Chisholm
+100: Claudette Colvin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.

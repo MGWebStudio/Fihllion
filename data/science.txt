@@ -6,24 +6,6 @@
 85: Scandium, Rubidium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Indium, Tellurium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Rhenium, Osmium, Thallium, Astatine, Francium, Actinium, Thorium, Protactinium, Berkelium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson
 100: Gallium :: A metal that melts in your hand. A spoon made of it dissolves in hot tea.
 
-? Name a bone in the human body
-~drop bone,bones
-10: Femur, Skull, Rib, Spine, Humerus|Funny
-15: Stapes|Stirrup
-30: Tibia, Fibula, Clavicle|Collarbone|Collar, Patella|Kneecap, Radius, Ulna, Pelvis|Hip, Sternum|Breastbone, Jaw|Mandible|Jawbone, Vertebra|Vertebrae, Scapula|Shoulder blade, Cranium, Sacrum, Coccyx|Tailbone|Tail, Ankle, Toe, Finger|Phalanges|Phalanx
-60: Metacarpal, Metatarsal, Tarsal, Carpal, Maxilla, Talus, Calcaneus|Heel, Atlas, Axis, Incus|Anvil, Malleus|Hammer, Ilium, Ischium, Pubis, Temporal, Occipital, Parietal, Frontal, Zygomatic|Cheekbone|Cheek
-85: Scaphoid, Lunate, Triquetral|Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate, Navicular, Cuboid, Cuneiform, Sphenoid, Ethmoid, Vomer, Lacrimal, Nasal, Palatine, Sesamoid
-100: Hyoid :: The one bone in your body that doesn't touch another bone. It sits in your throat.
-
-? Name a planet or moon
-~drop planet,moon,the
-10: Earth, Mars, Jupiter, Saturn, Venus, Mercury, Neptune, Uranus, Luna
-15: Pluto, Tatooine, Krypton
-30: Titan, Europa, Io, Ganymede, Callisto, Enceladus, Phobos, Deimos, Charon, Triton
-60: Miranda, Titania, Oberon, Ariel, Umbriel, Ceres, Eris, Haumea, Makemake, Rhea, Dione, Tethys, Iapetus, Hyperion, Proteus, Nereid, Phoebe, Sedna
-85: Amalthea, Himalia, Metis, Adrastea, Thebe, Puck, Cordelia, Ophelia, Pan, Atlas, Prometheus, Pandora, Janus, Epimetheus, Helene, Calypso, Telesto, Larissa, Despina, Galatea, Thalassa, Naiad, Hydra, Nix, Kerberos, Styx, Dysnomia, Gonggong, Quaoar, Orcus, Salacia, Belinda, Bianca, Cressida, Desdemona, Juliet, Portia, Rosalind, Sycorax, Caliban, Prospero, Setebos, Arrokoth, Kepler-22b, Proxima b, TRAPPIST-1e
-100: Mimas :: A giant crater makes this moon of Saturn look exactly like the Death Star.
-
 ? Name a constellation
 10: Orion, Big Dipper, Ursa Major, Little Dipper, Ursa Minor
 15: Southern Cross|Crux
@@ -76,23 +58,6 @@
 85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
 100: Ichthyology :: The study of fish. The goldfish insists you take notes.
 
-? Name a muscle
-~drop muscle
-10: Bicep|Biceps, Tricep|Triceps, Quad|Quadriceps, Hamstring, Abs|Abdominals, Pec|Pecs|Pectoral|Pectoralis, Glute|Gluteus|Gluteus maximus, Calf|Calves
-15: Heart, Tongue
-30: Deltoid|Delt, Trapezius|Trap, Lat|Latissimus dorsi, Oblique, Rhomboid, Rotator cuff, Soleus, Gastrocnemius, Forearm, Hip flexor, Diaphragm, Core, Groin|Adductor
-60: Sartorius, Masseter, Serratus|Serratus anterior, Brachioradialis, Psoas, Piriformis, Rectus abdominis, Gracilis, Tibialis|Tibialis anterior, Infraspinatus, Supraspinatus, Teres major, Teres minor, Subscapularis, Vastus lateralis, Vastus medialis, Erector spinae, Biceps femoris, Semitendinosus, Semimembranosus, Gluteus medius, Gluteus minimus, Transverse abdominis, Iliopsoas, Brachialis, Pronator teres, Levator scapulae, Sternocleidomastoid, Orbicularis oculi, Zygomaticus
-85: Risorius, Platysma, Buccinator, Temporalis, Pterygoid, Digastric, Scalene, Splenius, Multifidus, Quadratus lumborum, Pectineus, Tensor fasciae latae, Popliteus, Peroneus|Fibularis, Flexor carpi radialis, Extensor digitorum, Anconeus, Coracobrachialis, Rectus femoris, Vastus intermedius, Obturator, Gemellus, Plantaris, Procerus, Corrugator, Nasalis, Mentalis, Arrector pili, Cremaster, Levator labii superioris alaeque nasi
-100: Stapedius :: The smallest skeletal muscle in your body, about a millimetre long, inside your middle ear.
-
-? Name an invention
-10: Telephone|Phone, Light bulb|Lightbulb, Airplane|Plane, Car|Automobile, Computer, Internet, Wheel
-15: Sliced bread, Fire
-30: Television|TV, Printing press, Radio, Steam engine, Camera, Microwave, Refrigerator|Fridge, Telegraph, Penicillin, Gunpowder, Compass, Paper, Bicycle|Bike, Typewriter, Smartphone|iPhone, Washing machine, Vacuum|Vacuum cleaner, Battery, Clock, Microscope, Telescope, Plastic, Dynamite, Zipper, Velcro, Post-it note|Post-it|Sticky note, Air conditioning|AC, GPS, Elevator, Glasses|Eyeglasses
-60: Cotton gin, Assembly line, Phonograph, Sewing machine, Barbed wire, Transistor, Laser, Escalator, Ballpoint pen|Pen, Safety pin, Paper clip, Can opener, Lawn mower, Dishwasher, Traffic light, Windshield wiper, Seat belt, Parachute, Submarine, Helicopter, Hot air balloon, Pacemaker, X-ray, Vaccine, Anesthesia, Super Glue, Scotch tape|Duct tape, Teflon, Kevlar, Nylon, Frisbee, Slinky, Etch A Sketch, Rubik's Cube, Crayon, Remote control, World Wide Web, Email, Thermometer, Pencil, Eraser, Stapler, Aqualung|Scuba gear, Polaroid
-85: Spinning jenny, Flying shuttle, Seed drill, Abacus, Astrolabe, Sextant, Cash register, Zamboni, Jacuzzi, Segway, Tupperware, Aerosol can, Wite-Out|Liquid Paper, Pull tab, Hula hoop, Ferris wheel, Stirrup, Water wheel, Aqueduct, Archimedes screw, Cotton candy, Ice cream cone, Tea bag, Bottle cap, Shopping cart, Parking meter, Snowmobile, Tesla coil, Geiger counter, Seismograph, Barometer, Slide rule, Bunsen burner, Jet engine, Turing machine, Difference engine, Analytical Engine, Mason jar, Dewey Decimal System
-100: Bubble wrap :: It was invented in 1957 as textured wallpaper. Nobody wanted the wallpaper.
-
 ? Name a spacecraft
 ~drop the,spacecraft
 10: Apollo 11|Apollo, Hubble|Hubble Space Telescope, International Space Station|ISS|Space Station, Voyager|Voyager 1|Voyager 2, Space Shuttle|Shuttle
@@ -138,3 +103,37 @@
 60: Alcyone, Mira, Algol|Demon Star, Achernar, Hadar|Beta Centauri, Acrux, Mimosa|Becrux, Gacrux, Shaula, Alnilam, Alnitak, Mintaka, Saiph, Mizar, Alcor, Dubhe, Merak, Alioth, Alkaid|Benetnash, Megrez, Phecda, Thuban, Eltanin, Rasalhague, Albireo, Sadr, Denebola, Alphard, Alpheratz, Mirach, Almach, Hamal, Mirfak, Markab, Enif, Kochab, Nunki, Atria, Peacock, Avior, Miaplacidus, Naos, Wezen, Adhara, Elnath, Tau Ceti, Epsilon Eridani, Barnard's Star|Barnards Star, Wolf 359, Eta Carinae, VY Canis Majoris, UY Scuti, Tabby's Star|Tabbys Star, TRAPPIST-1|Trappist 1
 85: Zubenelgenubi, Zubeneschamali, Rotanev, Sadalsuud, Sadalmelik, Skat, Ankaa, Diphda, Ruchbah, Caph, Schedar|Shedar, Errai, Alderamin, Sheratan, Acamar, Unukalhai, Sabik, Kornephoros, Tarazed, Gienah, Algorab, Kraz, Porrima, Vindemiatrix, Zavijava, Muphrid, Izar, Alphecca|Gemma, Graffias|Acrab, Dschubba, Lesath, Sargas, Ascella, Kaus Australis, Rukbat, Nashira, Deneb Algedi, Gomeisa, Wasat, Mebsuta, Alhena, Rasalgethi, Menkar, Algenib, Scheat, Przybylski's Star|Przybylskis Star, Luyten's Star|Luytens Star, Kapteyn's Star|Kapteyns Star, Van Maanen's Star|Van Maanens Star, Groombridge 1830, 61 Cygni, Pistol Star, Methuselah, R136a1, Gliese 581
 100: Sualocin :: It's "Nicolaus" spelled backwards. An observatory assistant in Sicily sneaked his own name onto the star map in 1814.
+
+? Name a disease or illness
+~drop disease,syndrome
+10: Cancer, Flu|Influenza, Common cold|Cold, COVID|COVID-19|Coronavirus, Diabetes, Chickenpox|Chicken pox
+15: Scurvy
+30: Measles, Mumps, Malaria, Tuberculosis|TB, Polio, Smallpox, Pneumonia, Asthma, Alzheimer's|Alzheimers, Parkinson's|Parkinsons, HIV|AIDS, Ebola, Strep throat|Strep, Bronchitis, Arthritis, Heart disease, Stroke, Leukemia, Lupus, Multiple sclerosis|MS, Plague|Black Death|Bubonic plague, Cholera, Rabies, Lyme, Shingles, Mono|Mononucleosis, Pink eye|Conjunctivitis, Hepatitis, Rubella|German measles, Whooping cough|Pertussis, Tetanus|Lockjaw, Leprosy, Typhoid, Anemia, Epilepsy, Migraine, Gout, Celiac, Crohn's|Crohns, Norovirus|Stomach flu, Sinusitis|Sinus infection, Hypertension|High blood pressure, Osteoporosis, Cystic fibrosis, Sickle cell, ALS|Lou Gehrig's|Lou Gehrigs, Dengue, Zika, Mad cow|BSE, Swine flu|H1N1, Bird flu|Avian flu, Ringworm, Scabies, Athlete's foot|Athletes foot, Appendicitis, Tonsillitis
+60: Diphtheria, Yellow fever, Typhus, Dysentery, Botulism, Anthrax, Salmonella|Salmonellosis, Listeria|Listeriosis, Legionnaires'|Legionnaires, Meningitis, Encephalitis, Sepsis, Syphilis, Gonorrhea, Chlamydia, Herpes, HPV, Hantavirus, West Nile, Chikungunya, Lassa fever|Lassa, Marburg, Mpox|Monkeypox, SARS, MERS, RSV, Croup, Scarlet fever, Fifth disease, Roseola, Impetigo, Cellulitis, Gangrene, Trench foot, Rickets, Beriberi, Pellagra, Kwashiorkor, Goiter, Hemophilia, Huntington's|Huntingtons, Muscular dystrophy, Tourette's|Tourettes, Narcolepsy, Vertigo, Glaucoma, Cataracts, Psoriasis, Eczema, Rosacea, Gallstones, Kidney stones, Pancreatitis, Cirrhosis, Emphysema, COPD, UTI|Urinary tract infection, Endometriosis, Fibromyalgia, Graves'|Graves, Hashimoto's|Hashimotos, Addison's|Addisons, Bell's palsy|Bells palsy, Sciatica, Carpal tunnel, Gingivitis, Hand\, foot and mouth|Hand foot and mouth
+85: Fatal familial insomnia, Creutzfeldt-Jakob|CJD, Progeria, Elephantiasis|Lymphatic filariasis, River blindness|Onchocerciasis, Guinea worm|Dracunculiasis, Sleeping sickness|African trypanosomiasis, Chagas, Leishmaniasis, Schistosomiasis|Bilharzia, Yaws, Pinta, Bejel, Trachoma, Hookworm, Trichinosis, Toxoplasmosis, Q fever, Tularemia|Rabbit fever, Brucellosis, Glanders, Melioidosis, Psittacosis|Parrot fever, Cat-scratch|Cat scratch fever, Rat-bite fever, Scrub typhus, Rocky Mountain spotted fever, Valley fever|Coccidioidomycosis, Histoplasmosis, Mucormycosis|Black fungus, Nipah, Hendra, Rift Valley fever, Oropouche, Sweating sickness|English sweating sickness, Ergotism|St. Anthony's fire, Milk sickness
+100: Kuru :: A fatal brain disease once found among the Fore people of Papua New Guinea. It spread through funeral rites in which relatives ate the dead.
+
+? Name a part of a cell
+~drop cell
+10: Nucleus, Mitochondria|Mitochondrion|Powerhouse, Cell membrane|Membrane|Plasma membrane, Cytoplasm, Cell wall, Chloroplast|Chloroplasts
+30: Ribosome|Ribosomes, Vacuole, Golgi apparatus|Golgi body|Golgi, Endoplasmic reticulum|ER, Lysosome, DNA, Nucleolus, Chromosome|Chromosomes, Cytoskeleton, Centriole|Centrioles, Rough ER|Rough endoplasmic reticulum, Smooth ER|Smooth endoplasmic reticulum, Vesicle, Flagellum|Flagella, Cilia|Cilium, Nuclear membrane|Nuclear envelope, Peroxisome, RNA, Centrosome, Plastid, Axon, Dendrite
+60: Microtubule|Microtubules, Microfilament|Microfilaments|Actin filaments, Intermediate filaments, Nuclear pore|Nuclear pores, Chromatin, Nucleoplasm, Cytosol, Lipid bilayer|Phospholipid bilayer, Gap junction, Tight junction, Desmosome, Plasmodesmata, Central vacuole, Contractile vacuole, Food vacuole, Amyloplast, Chromoplast, Leucoplast, Thylakoid|Thylakoids, Grana|Granum, Stroma, Cristae, Matrix, Pilus|Pili, Capsule, Nucleoid, Plasmid, Glycocalyx, Endosome, Phagosome, Secretory vesicle, Transport vesicle, Microvilli|Microvillus, Pseudopod|Pseudopodium, Eyespot, Pellicle, Basal body, Kinetochore, Centromere, Telomere|Telomeres, Histone|Histones, Spindle|Spindle fibers, Mitochondrial DNA|mtDNA, Ion channel, Receptor, Synapse, Myelin sheath|Myelin, Proteasome, Spliceosome, Exosome
+85: Hydrogenosome, Mitosome, Kinetoplast, Apicoplast, Glyoxysome, Carboxysome, Magnetosome, Gas vesicle, Chlorosome, Acidocalcisome, Cajal body, Nuclear speckles|Speckles, Paraspeckle, Stress granule, P-body|P body, Lipid droplet, Melanosome, Weibel-Palade body, Lamellar body, Acrosome, Axoneme, Caveola|Caveolae, Coated pit|Clathrin-coated pit, Podosome, Primary cilium, Kinocilium, Stereocilia, Contractile ring, Midbody, Nuclear lamina|Lamina, Nucleomorph, Ejectosome, Trichocyst, Cnidocyst|Nematocyst, Pyrenoid
+100: Vault|Vaults :: Barrel-shaped structures found by the thousands in many of our cells. Scientists found them in the 1980s and still aren't sure what they do.
+
+? Name a type of energy source
+~drop energy,power
+10: Solar|Sun, Wind, Coal, Oil|Petroleum, Nuclear, Natural gas|Gas
+30: Hydroelectric|Hydro|Hydropower|Water, Geothermal, Biomass, Tidal, Wave, Gasoline|Petrol, Diesel, Hydrogen, Battery|Batteries, Electricity, Fusion, Fission, Biofuel|Biofuels, Ethanol, Wood|Firewood, Propane, Kerosene, Uranium, Fossil fuels, Steam, Methane, Biogas, Peat, Charcoal, Shale oil|Oil shale, Tar sands|Oil sands, Plutonium, Thorium
+60: Ocean thermal|OTEC, Osmotic|Blue energy|Salinity gradient, Pumped storage|Pumped hydro, Run-of-the-river, Concentrated solar|CSP|Solar thermal, Photovoltaic|PV, Offshore wind, Space-based solar|Space solar, Algae|Algal biofuel, Biodiesel, Landfill gas, Wood pellets, Bagasse, Jet fuel, Liquefied natural gas|LNG, Coalbed methane, Lignite, Anthracite, Bitumen, Syngas, Synthetic fuel|Synfuel, Ammonia, Methanol, Butane, Animal power|Draft animals, Human power|Muscle, Pedal power, Windmill, Water wheel|Watermill, Flywheel, Fuel cell, Radioisotope|RTG, Antimatter, Lightning, Static electricity, Piezoelectric, Thermoelectric, Kinetic, Gravity|Gravitational, Body heat, Dung|Manure|Cow dung, Whale oil, Tallow
+85: Green hydrogen, Helium-3, Deuterium, Tritium, Muon-catalyzed fusion, Dyson sphere, Black hole|Penrose process, Microbial fuel cell|Bacteria, Seaweed|Kelp, Jatropha, Switchgrass, Miscanthus, Corn stover, Rice husk, Used cooking oil|Cooking oil|Grease, Tire-derived fuel|Tires, Tall oil, Olive pits, Coconut shells
+100: Black liquor :: A sludgy byproduct of papermaking that mills burn for power. In the US it's one of the biggest sources of biomass energy.
+
+? Name a famous mathematician
+~last
+10: Isaac Newton, Pythagoras, Euclid, Archimedes, Albert Einstein, Alan Turing
+15: Fibonacci|Leonardo of Pisa
+30: Carl Friedrich Gauss|Gauss, Leonhard Euler|Euler, René Descartes|Rene Descartes, Blaise Pascal, Pierre de Fermat|Fermat, Gottfried Leibniz|Leibniz, John Nash, Srinivasa Ramanujan|Ramanujan, Ada Lovelace, Bernhard Riemann, Kurt Gödel|Kurt Godel, Georg Cantor, Hypatia, Katherine Johnson, Andrew Wiles, Terence Tao, Paul Erdős|Paul Erdos, John von Neumann, Galileo Galilei|Galileo, Johannes Kepler, Al-Khwarizmi, Omar Khayyam, Pierre-Simon Laplace|Laplace, Joseph-Louis Lagrange|Lagrange, Évariste Galois|Evariste Galois, David Hilbert, Henri Poincaré|Henri Poincare, Emmy Noether, Charles Babbage, George Boole, Grigori Perelman, Benoit Mandelbrot
+60: Thales, Diophantus, Eratosthenes, Apollonius, Ptolemy, Zeno, Brahmagupta, Aryabhata, Bhaskara, Gerolamo Cardano|Cardano, Tartaglia, François Viète|Francois Viete, John Napier, Marin Mersenne, Christiaan Huygens, Jacob Bernoulli, Johann Bernoulli, Daniel Bernoulli, Abraham de Moivre, Thomas Bayes, Joseph Fourier, Augustin-Louis Cauchy|Cauchy, Niels Henrik Abel, Carl Jacobi, Peter Dirichlet, Karl Weierstrass, Richard Dedekind, Sophus Lie, Felix Klein, Arthur Cayley, William Rowan Hamilton, Sofia Kovalevskaya, Sophie Germain, Bertrand Russell, Alfred North Whitehead, G. H. Hardy|G.H. Hardy, John Littlewood, Hermann Weyl, André Weil|Andre Weil, Alexander Grothendieck, Claude Shannon, Norbert Wiener, Stanislaw Ulam, John Horton Conway|John Conway, Maryam Mirzakhani, Edward Witten, Andrey Kolmogorov, Nikolai Lobachevsky, Pafnuty Chebyshev, Andrey Markov, Dorothy Vaughan, Mary Jackson, Stephen Hawking, Martin Gardner, Grace Hopper
+85: Brook Taylor, Colin Maclaurin, Bonaventura Cavalieri, Girard Desargues, Bernard Bolzano, Augustus De Morgan, George Green, Hermann Grassmann, Ernst Kummer, Leopold Kronecker, Gotthold Eisenstein, Camille Jordan, Charles Hermite, Henri Lebesgue, Émile Borel|Emile Borel, Felix Hausdorff, Stefan Banach, Ernst Zermelo, Alonzo Church, Emil Post, Haskell Curry, Alfred Tarski, Paul Cohen, Shiing-Shen Chern, Atle Selberg, Harish-Chandra, Michael Atiyah, John Milnor, Stephen Smale, René Thom|Rene Thom, William Thurston, Shing-Tung Yau, Pierre Deligne, Robert Langlands, Peter Scholze, June Huh, Maryna Viazovska, Karen Uhlenbeck, Ingrid Daubechies, Julia Robinson, Hipparchus, Pappus, Proclus, Madhava of Sangamagrama|Madhava, Zu Chongzhi, Liu Hui, Qin Jiushao, Jamshid al-Kashi|Al-Kashi, Ibn al-Haytham|Alhazen, Al-Biruni, Thabit ibn Qurra
+100: Seki Takakazu|Seki Kowa :: A 17th-century Japanese mathematician who worked out determinants around the same time as Leibniz, entirely on his own.

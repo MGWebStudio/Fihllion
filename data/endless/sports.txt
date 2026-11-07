@@ -32,3 +32,29 @@
 60: Buffalo Sabres|Sabres, Ottawa Senators|Senators, Nashville Predators|Predators|Preds, Seattle Kraken|Kraken, Carolina Hurricanes|Hurricanes|Canes, Columbus Blue Jackets|Blue Jackets, Winnipeg Jets|Jets, Utah Mammoth|Mammoth|Utah Hockey Club
 85: Arizona Coyotes|Coyotes|Phoenix Coyotes, Atlanta Thrashers|Thrashers, Quebec Nordiques|Nordiques, Minnesota North Stars|North Stars, Atlanta Flames, Colorado Rockies, Oakland Seals, Kansas City Scouts, Cleveland Barons, St. Louis Eagles, Philadelphia Quakers, Pittsburgh Pirates, Montreal Maroons, Montreal Wanderers, Hamilton Tigers, Brooklyn Americans, New York Americans, Toronto Arenas, Toronto St. Patricks, Detroit Cougars, Detroit Falcons, Quebec Bulldogs
 100: California Golden Seals|Golden Seals :: Their owner made them skate in white boots in the 1970s. The team moved away in 1976.
+
+? Name a tennis player
+~last
+10: Serena Williams, Roger Federer, Rafael Nadal|Rafa, Novak Djokovic, Venus Williams
+15: Anna Kournikova
+30: Andre Agassi, Pete Sampras, John McEnroe, Björn Borg|Bjorn Borg, Steffi Graf, Martina Navratilova, Billie Jean King, Maria Sharapova, Andy Murray, Naomi Osaka, Carlos Alcaraz, Jimmy Connors, Chris Evert, Coco Gauff, Arthur Ashe, Monica Seles, Andy Roddick, Boris Becker, Jannik Sinner, Emma Raducanu, Iga Świątek|Iga Swiatek, Aryna Sabalenka
+60: Stefan Edberg, Ivan Lendl, Mats Wilander, Rod Laver, Margaret Court, Evonne Goolagong, Bobby Riggs, Lleyton Hewitt, Kim Clijsters, Justine Henin, Martina Hingis, Lindsay Davenport, Ashleigh Barty, Ana Ivanovic, Caroline Wozniacki, Stan Wawrinka, Daniil Medvedev, Alexander Zverev, Stefanos Tsitsipas, Nick Kyrgios, Frances Tiafoe, Taylor Fritz, Juan Martín del Potro|Juan Martin del Potro|Del Potro, Marat Safin, Goran Ivanišević|Goran Ivanisevic, Michael Chang, Jim Courier, Pat Rafter, Yannick Noah, Ilie Nastase, Althea Gibson, Arantxa Sánchez Vicario|Arantxa Sanchez Vicario, Gabriela Sabatini, Jennifer Capriati, Elena Rybakina
+85: Ken Rosewall, Roy Emerson, John Newcombe, Don Budge, Fred Perry, Bill Tilden, René Lacoste|Rene Lacoste, Suzanne Lenglen, Helen Wills Moody, Maureen Connolly, Guillermo Vilas, Manuel Santana, Vitas Gerulaitis, Thomas Muster, Yevgeny Kafelnikov, Gustavo Kuerten, Carlos Moyá|Carlos Moya, Tim Henman, Greg Rusedski, Tomas Berdych, Jo-Wilfried Tsonga, David Ferrer, Kei Nishikori, Marin Čilić|Marin Cilic, Dominic Thiem, Casper Ruud, Ben Shelton, Tommy Paul, Jessica Pegula, Ons Jabeur, Simona Halep, Li Na, Petra Kvitova, Angelique Kerber, Sloane Stephens, Madison Keys, Danielle Collins, John Isner, Kevin Anderson
+100: Nicolas Mahut :: He lost the longest match in tennis history: 11 hours and 5 minutes, over three days at Wimbledon.
+
+? Name a position in any sport
+10: Quarterback, Goalie|Goalkeeper, Pitcher, Catcher, Point guard
+15: Seeker
+30: Shortstop, Center, Wide receiver, Linebacker, Running back, Defender, Striker, Midfielder, Forward, Shooting guard, Power forward, Small forward, First baseman|First base, Second baseman|Second base, Third baseman|Third base, Outfielder, Left field|Right field|Center field, Designated hitter|DH, Tight end, Cornerback, Safety, Kicker, Punter, Offensive lineman|Lineman, Defensive end, Winger|Wing, Setter, Libero, Relief pitcher, Closer
+60: Nose tackle, Fullback, Halfback, Long snapper, Holder, Center back|Centre back, Sweeper, Attacking midfielder, Right back, Left back, Prop, Hooker, Fly-half, Scrum-half, Flanker, Number eight, Lock, Wicketkeeper, Bowler, Batsman, Slip, Silly point, Attacker, Outside hitter, Middle blocker, Opposite hitter, Coxswain|Cox, Stroke, Jammer, Blocker, Pivot, Goal attack, Wing attack, Goal shooter, Chaser, Beater, Keeper, Enforcer, Tailback, Slot receiver, Swingman, Sixth man, Utility player, Pinch hitter
+85: Deep backward square leg, Gully, Third man, Long-on, Nightwatchman, Mid-wicket, Extra cover, Regista, Trequartista, False nine, Inverted winger, Wing-back, Stopper, Tighthead prop, Loosehead prop, Blindside flanker, Inside centre, Wing defense, Goal defense, Rover, Ruckman, Full-forward, Half-forward, Back pocket, Nickelback, Dime back, Gunner, H-back, Monster back, Mike linebacker, Sam linebacker, Will linebacker
+100: Silly mid-off :: A real fielding position in cricket. Its neighbors include silly point and cow corner.
+
+? Name a yoga pose
+~drop pose
+10: Downward dog|Downward-facing dog, Tree, Child's, Warrior|Warrior I, Cobra, Lotus
+15: Happy baby, Savasana|Corpse
+30: Mountain, Cat|Cat-cow|Cow, Bridge, Plank, Pigeon, Triangle, Chair, Upward dog|Upward-facing dog, Warrior II, Warrior III, Boat, Crow, Camel, Headstand, Shoulder stand, Sun salutation
+60: Eagle, Dolphin, Locust, Plow, Bow, Half moon, Wheel, Cow face, Butterfly|Bound angle, Lizard, Frog, Seated forward bend, Standing forward bend, Extended side angle, Reclined twist, Legs up the wall, Staff, Easy, Hero, Thread the needle, Puppy, Sphinx, Garland|Malasana, Firefly, Side plank, Dancer|Lord of the dance|King dancer, Gate, Goddess, Sage, Reverse warrior, Tadasana, Balasana, Adho mukha svanasana, Bhujangasana, Vrikshasana, Virabhadrasana, Padmasana, Sukhasana
+85: Scorpion, Peacock, Eight-angle, Flying pigeon, Compass, Bird of paradise, Side crow, Rabbit, Tortoise, Monkey|Hanuman, Fallen star, Wild thing, Humble warrior, Revolved triangle, Revolved chair, Yogi squat, Noose, Heron, Shoelace, Dragon, Toe stand, Embryo, Matsyendrasana, Garudasana, Natarajasana, Bakasana, Kapotasana, Ustrasana, Dhanurasana, Halasana, Sirsasana, Salamba sarvangasana, Trikonasana
+100: Fish|Matsyasana :: Matsyasana. The goldfish has been doing this one for years.

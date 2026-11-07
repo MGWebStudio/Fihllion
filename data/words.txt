@@ -1,12 +1,3 @@
-? Name a word that rhymes with cat
-~exact
-10: Hat, Bat, Rat, Mat, Sat, Fat, Pat, That, Chat, Flat
-15: Diplomat, Acrobat
-30: Brat, Gnat, Splat, Spat, Slat, Scat, Vat, Tat, Lat, Format, Combat, Doormat, Bobcat, Wombat, Habitat, Democrat, Aristocrat, Thermostat, Baseball bat, Nonfat, Copycat, Laundromat, Pussycat, Tomcat, Hazmat, Welcome mat
-60: Cravat, Caveat, Muskrat, Meerkat, Ziggurat, Autocrat, Bureaucrat, Technocrat, Plutocrat, Rheostat, Photostat, Kitty cat, Sprat, Drat, Stat, Frat, Thereat, Whereat, Hepcat, Polecat, Wildcat, Fruit bat, Vampire bat, Top hat, Hard hat, Sun hat, Cowboy hat, Yoga mat, Mouse mat, Placemat, Dingbat, Brickbat, Numbat, Fiat, Tit for tat
-85: Rat-a-tat|Ratatat, Concordat, Coup d'état|Coup d'etat, Entrechat, Commissariat, Proletariat, Secretariat, Salariat, Lariat, Aerostat, Heliostat, Hydrostat, Gyrostat, Dandiprat, Marat, Arafat, Ararat, Landsat
-100: Jehoshaphat :: A king of Judah, and the star of the old exclamation "Jumpin' Jehoshaphat!"
-
 ? Name a word that rhymes with light
 ~exact
 10: Night, Right, Kite, Bite, Fight, White, Sight, Might, Tight, Write
@@ -23,14 +14,6 @@
 60: Jovial, Mirthful, Radiant, Buoyant, Exuberant, Over the moon, On cloud nine|Cloud nine, Tickled pink|Tickled, Walking on air, Beaming, Sanguine, Perky, Bubbly, Chuffed, Rapturous, Exultant, Gay, Bright, Sparkling, Hopeful, Carefree, Breezy, Laughing, In high spirits, Zippy, Lively, Vivacious, Sprightly, Starry-eyed
 85: Felicitous, Beatific, Blithe, Halcyon, Elysian, Eudaemonic, Rhapsodic, Convivial, Winsome, Riant, Gladsome, Blissed out, Jocund, Jocose, Jocular, Mirthsome, Sunshiny, Paradisiacal, Cock-a-hoop, Happy as a clam, Rosy, Pollyannaish, Transported
 100: Gruntled :: The opposite of disgruntled. Yes, it's a real word, and it's in the dictionary.
-
-? Name another word for big
-10: Large, Huge, Giant, Enormous, Massive, Gigantic
-15: Humongous|Humungous
-30: Tremendous, Colossal, Immense, Vast, Great, Mammoth, Jumbo, Monster|Monstrous, Titanic, Gargantuan, Hefty, Bulky, Whopping, Substantial, Sizable, Mega, King-size|King size, Oversized, Grand, Extra-large|XL, Ginormous, Towering, Heavy, Super-size|Supersize, Monumental, Epic
-60: Behemoth, Elephantine, Hulking, Whopper, Astronomical, Galactic, Cosmic, Prodigious, Stupendous, Considerable, Extensive, Voluminous, Capacious, Spacious, Burly, Strapping, Portly, Goliath, Herculean, Cyclopean, Ample, Mountainous, Walloping, Thumping, Honking, Planetary, Gross, Tall, Wide, Sprawling, Bumper, Almighty
-85: Leviathan, Pantagruelian, Titanesque, Gigantesque, Mastodonic, Cyclopic, Immeasurable, Bloated, Thundering, Whacking, Ponderous, Magnum, Massy, Bulbous, Kingly, Lofty, Commodious, Gigantean, Jovian, Olympian, Vasty, Stonking
-100: Brobdingnagian :: From the land of giants in Gulliver's Travels. It's a real word, and fun to attempt.
 
 ? Name a slang word for money
 10: Cash, Dough, Bucks, Bread, Moolah|Moola, Green
@@ -56,14 +39,6 @@
 60: Gaelic|Irish|Scottish Gaelic, Norwegian, Danish, Finnish, Tagalog|Filipino, Bengali, Punjabi, Persian|Farsi, Czech, Hungarian, Romanian, Ukrainian, Welsh, Icelandic, Yiddish, Sanskrit, Esperanto, Elvish|Sindarin|Quenya, Indonesian, Malay, Tamil, Telugu, Zulu, Afrikaans, Hawaiian, Cherokee, Mongolian, Tibetan, Basque, Catalan, Haitian Creole|Creole, Amharic, Serbian, Croatian, Bulgarian, Dothraki, Na'vi
 85: Quechua, Nahuatl, Guarani, Māori|Maori, Xhosa, Yoruba, Igbo, Hausa, Somali, Wolof, Shona, Kurdish, Pashto, Armenian, Georgian, Lao, Khmer, Burmese, Nepali, Sinhala, Malayalam, Kannada, Marathi, Gujarati, Albanian, Lithuanian, Latvian, Estonian, Slovak, Slovene|Slovenian, Macedonian, Breton, Maltese, Luxembourgish, Faroese, Inuktitut, Ojibwe, Lakota, Hmong, Samoan, Tongan, Aramaic, Coptic, Ainu, Cornish, Manx, Romansh, Frisian, Sami, Tok Pisin, Rapa Nui, Uzbek, Kazakh, Tatar
 100: Silbo Gomero|Silbo :: A language made entirely of whistles, used to talk across the valleys of La Gomera in the Canary Islands.
-
-? Name a word that starts with X
-10: Xylophone, X-ray|Xray
-15: Xerox, Xbox
-30: Xenophobia, Xenon, Xanadu, Xavier, Xena, Xylem, Xmas, Xanax, X-Men, Xenophobe
-60: Xenomorph, Xylitol, Xanthan gum|Xanthan, Xerxes, Xiphoid, Xeriscape, Xenial, Xenolith, Xebec, Xerography, Xylography, Xenogenesis, Xylophonist, XOXO, Xennial, Xhosa, Xi Jinping, Xi'an|Xian, X-axis, X-factor
-85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous
-100: Xenoglossy :: The supposed ability to speak a language you've never learned.
 
 ? Name a word that ends in "ough"
 ~exact
@@ -100,14 +75,6 @@
 85: Obelus, Dagger|Obelisk, Double dagger, Section, Manicule, Asterism, Diaeresis|Umlaut, Cedilla, Circumflex, Acute accent, Grave accent, Virgule, Solidus, Lozenge, Reference, Sarcasm, Percontation point, Snark, Tittle
 100: Octothorpe :: The official-sounding name for the # symbol, supposedly coined at Bell Labs.
 
-? Name a way to walk
-10: Stroll, Jog, March, Run, Skip, Hike
-15: Moonwalk, Sashay
-30: Amble, Saunter, Strut, Stride, Wander, Limp, Shuffle, Tiptoe, Stomp, Trudge, Waddle, Pace, Plod, Stumble, Hobble, Sneak, Creep, Swagger, Meander, Ramble, Tread, Trek, Stagger, Mosey, Prance, Lumber, Trot, Tramp, Roam, Power walk
-60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Sleepwalk, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
-85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk
-100: Galumph :: Lewis Carroll made it up for "Jabberwocky." It means to bound along clumsily and in triumph.
-
 ? Name a word that rhymes with day
 ~exact
 10: Way, Say, Play, May, Hay, Pay, Stay, Away, Today, Okay|OK
@@ -134,3 +101,29 @@
 60: Quixotic, Quagmire, Quandary, Quibble, Quintessential|Quintessence, Quorum, Quell, Quasi, Quaff, Quip, Quatrain, Quaver, Quay, Quetzal, Quince, Quinine, Quiescent, Quietus, Quietude, Quarto, Quidditch, Quisling, Quoth, Quadratic, Quadrilateral, Quadriceps|Quads, Quadrillion, Quantum, Quark, Quartile, Quesadilla, Queso, Quintuplet|Quints, Quarterly, Quarrelsome, Quizzical
 85: Quidnunc, Quotidian, Querulous, Quiddity, Quodlibet, Quillon, Quoin, Quern, Qintar|Qindar, Qanat, QWERTY|Qwerty, Quoll, Quahog, Quagga, Quinquennial, Quinquereme, Quadrivium, Quango, Quaestor, Quatrefoil, Quietism, Quassia, Quebracho, Quillwort, Quinsy, Quipu, Quirt, Quaich, Quair
 100: Quincunx :: The pattern of five dots on a die: one in each corner and one in the middle.
+
+? Name a word that rhymes with ring
+~exact
+10: King, Sing, Thing, Wing, Bring, Spring, Swing, Sting
+15: Bling
+30: Fling, Cling, Sling, String, Ding, Ping, Zing, Wring, Ka-ching|Kaching|Cha-ching, Anything, Everything, Something, Nothing, Offspring, Earring, Wellspring, Mainspring, Plaything, Upswing, Shoestring, Bowstring, Hamstring, Drawstring, G-string|G string
+60: Ming, Beijing, Peking, Unsling, Restring, Unstring, Ding-a-ling|Dingaling, Ting, Bedspring, Hairspring, Downswing, Backswing, Handspring, Heartstring, Underwing, Lacewing, Redwing, Waxwing, Batwing, Bee sting
+85: Bling-bling, Upspring, Ting-a-ling, Hindwing, Forewing, Chungking, Nanking, Kunming, Taiping
+100: Wingding :: Old slang for a big, lively party.
+
+? Name another word for sad
+~drop very
+10: Unhappy, Upset, Depressed, Down, Blue, Gloomy
+15: Melancholy
+30: Miserable, Heartbroken, Sorrowful, Glum, Downcast, Low, Mournful, Crestfallen, Dejected, Despondent, Woeful, Morose, Somber|Sombre, Tearful|Teary, Weepy, Hurt, Grieving|Grief-stricken, Bummed|Bummed out, Down in the dumps|In the dumps, Sorry, Lonely, Forlorn, Wistful, Dismal, Heavy-hearted|Heavyhearted, Disheartened, Discouraged, Disappointed, Distraught, Devastated, Crushed, Brokenhearted|Broken-hearted|Broken, Low-spirited, Downhearted|Down-hearted
+60: Doleful, Lugubrious, Dolorous, Lachrymose, Rueful, Plaintive, Pensive, Pained, Anguished, Desolate, Disconsolate, Inconsolable, Cheerless, Joyless, Dispirited, Dismayed, Wretched, Troubled, Distressed, Grieved, Heartsick, Heartsore, Sick at heart, Long-faced, Mopey|Mopy, Hangdog, Woebegone, Melancholic, Saturnine, Funereal, Elegiac, Bleak, Dreary, In a funk, Out of sorts, Gutted, Torn up, Bereft, Emo, Sad sack|Sad-sack
+85: Dolesome, Atrabilious, Hipped, Chapfallen|Chopfallen, Down in the mouth, Dumpish, Lumpish, Woesome, Dolent, Lorn, Cut up, Comfortless, Unglad
+100: Tristful :: An old, poetic word for sad, related to the French "triste." Shakespeare used it in Hamlet.
+
+? Name a Latin phrase used in English
+10: Et cetera|Etc|Etcetera, Carpe diem, Vice versa, Ad hoc, Per se, E pluribus unum
+15: Veni\, vidi\, vici|Veni vidi vici
+30: Bona fide, Status quo, Quid pro quo, Alma mater, Persona non grata, Ad nauseam, Pro bono, Habeas corpus, Et tu\, Brute|Et tu Brute, In vitro, Per capita, Mea culpa, Alter ego, Ad infinitum, Magnum opus, Modus operandi|MO, Semper fidelis|Semper fi, Tempus fugit, Caveat emptor, De facto, Ipso facto, Non sequitur, Post mortem, Verbatim, Vox populi, In memoriam, Rigor mortis, Terra firma, Tabula rasa, Deus ex machina, Sic, Curriculum vitae|CV, Exempli gratia|E.g.|Eg, Id est|I.e.|Ie, Nota bene|NB, Post scriptum|P.S.|PS, Anno Domini|AD, Cum laude, Summa cum laude, Magna cum laude, Requiescat in pace|RIP, In absentia, Pro rata, Ad lib|Ad libitum, Prima facie, Ergo, Et al.|Et al, Per annum, Per diem, Cogito\, ergo sum|Cogito ergo sum, Memento mori, In situ, Lingua franca, Magna Carta, Quod erat demonstrandum|QED, Ad astra, In vino veritas, Alea iacta est|Alea jacta est
+60: Mens rea, Sine qua non, Annus horribilis, Annus mirabilis, Dulce et decorum est, Pax Romana, In vivo, Ex post facto, Ex officio, Ex libris, Ex nihilo, Nil desperandum, Non compos mentis, Novus ordo seclorum, Annuit coeptis, Quo vadis, Res ipsa loquitur, Sub judice, Sui generis, Ultra vires, Vade mecum, Veritas, Per aspera ad astra|Ad astra per aspera, Sic semper tyrannis, Primus inter pares, Pro forma, Reductio ad absurdum, A priori, A posteriori, A fortiori, Ad hominem, Ad valorem, Amicus curiae, Casus belli, Corpus delicti, Cui bono, De jure, De novo, Dramatis personae, Ecce homo, Ex cathedra, Fiat lux, Habemus papam, Ibidem|Ibid, Imprimatur, In loco parentis, In medias res, In toto, Inter alia, Mutatis mutandis, Ne plus ultra, Nolo contendere, Pari passu, Passim, Rara avis, Senatus Populusque Romanus|SPQR, Sic transit gloria mundi, Sub rosa, Terra incognita, Urbi et orbi, Videlicet|Viz, Festina lente, Si vis pacem\, para bellum|Si vis pacem para bellum, Quis custodiet ipsos custodes, Amor vincit omnia|Omnia vincit amor, Carthago delenda est, Sapere aude, Mens sana in corpore sano, Ars longa\, vita brevis|Ars longa vita brevis
+85: Ipse dixit, Stet, Sensu stricto, Mare nostrum, O tempora\, o mores|O tempora o mores, Panem et circenses, Odi et amo, Dum spiro spero, Deus vult, Errare humanum est, Fortes fortuna adiuvat, Lux et veritas, Nemo dat quod non habet, Lorem ipsum, Ceteris paribus, Obiter dictum, Stare decisis, Pro tempore|Pro tem, Infra dig, Persona grata, Damnatio memoriae, Felix culpa, Horror vacui, Locus amoenus, Nihil obstat
+100: Hic sunt dracones :: "Here be dragons." It's written on only one known old map, a copper globe from about 1510.

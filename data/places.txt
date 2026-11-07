@@ -6,15 +6,6 @@
 85: Pierre, Frankfort, Jefferson City, Dover, Concord, Augusta
 100: Montpelier :: The smallest state capital in the US, and famously the only one without a McDonald's.
 
-? Name a European capital
-~drop city
-10: Paris, London, Rome, Berlin, Madrid
-15: Reykjavik
-30: Athens, Dublin, Vienna, Amsterdam, Lisbon, Moscow, Prague, Brussels, Stockholm, Oslo, Copenhagen, Warsaw, Budapest, Helsinki, Kyiv|Kiev
-60: Bern, Bucharest, Belgrade, Sofia, Zagreb, Minsk, Monaco, Luxembourg, Bratislava, Vilnius, Riga, Tallinn, Ljubljana, Sarajevo, Valletta, Nicosia, Vatican, San Marino
-85: Andorra la Vella, Podgorica, Chisinau|Chișinău, Pristina, Skopje, Tirana
-100: Vaduz :: Liechtenstein's capital has about 5,000 people and a prince living in the castle on the hill.
-
 ? Name a river
 ~drop river,rio
 10: Nile, Amazon, Mississippi, Thames, Colorado
@@ -33,15 +24,6 @@
 85: Manaslu, Gasherbrum, Broad, Shishapangma, Huascarán|Huascaran, Ojos del Salado, Illimani, Puncak Jaya|Carstensz Pyramid, Ras Dashen, Ventoux, Monte Rosa, Dufourspitze, Grossglockner, Triglav, Musala, Mulhacén|Mulhacen, Teide, Damavand, Haleakala, Borah, Katahdin, Monadnock, Greylock, Mansfield, Cadillac, Gannett, Elbert, Massive, Harvard, Maroon Bells, Capitol, Cloud, Kings, Humphreys, Wheeler, Guadalupe, Black Elk
 100: Thor :: Canada's Mount Thor has the world's greatest sheer vertical drop, about 1,250 metres straight down.
 
-? Name an island
-~drop island,isle,islands
-10: Hawaii, Manhattan, Madagascar, Puerto Rico, Greenland, Cuba, Ireland
-15: Easter, Alcatraz
-30: Bali, Sicily, Jamaica, Iceland, Long, Maui, Oahu, Kauai, Tahiti, Bora Bora, Fiji, Sri Lanka, Great Britain, Taiwan, Borneo, Sumatra, Java, Crete, Corfu, Santorini, Mykonos, Ibiza, Malta, Cyprus, Tasmania, Nantucket, Martha's Vineyard, Aruba, Bermuda, Barbados, Hispaniola|Haiti, Galápagos|Galapagos, Staten, Ellis, Sardinia, Corsica, Capri, Phuket, Maldives
-60: Newfoundland, Vancouver, Baffin, Honshu, Hokkaido, Okinawa, Kyushu, Shikoku, Luzon, Mindanao, New Guinea, Sulawesi, Zanzibar, Mauritius, Seychelles, St. Lucia|Saint Lucia, Trinidad, Tobago, Curaçao|Curacao, Grenada, Antigua, St. Kitts|Saint Kitts, Guam, Tonga, Samoa, Molokai, Lanai, Rhodes, Lesbos, Kos, Skye, Man, Jersey, Guernsey, Wight, Mallorca|Majorca, Tenerife, Elba, Roatan, Cozumel, Key West, Prince Edward|PEI, Coney, Roosevelt, Rikers, Hilton Head, Christmas, Robben, St. Helena|Saint Helena, Bikini Atoll|Bikini, Lord Howe, Komodo, Ascension
-85: Ellesmere, Victoria, Banks, Devon, Axel Heiberg, Spitsbergen|Svalbard, Novaya Zemlya, Sakhalin, Hainan, Socotra, Tristan da Cunha, Pitcairn, Kiribati, Kerguelen, Diego Garcia, Réunion|Reunion, Lombok, Flores, Timor, Palawan, Cebu, Bohol, Orkney, Shetland, Lewis, Iona, Lindisfarne, Gotland, Öland|Oland, Faroe, Aran, Achill, Mackinac, Kodiak, Sanibel, Tangier, Block, Catalina, Attu, Midway, Wake, Nauru, Tuvalu, Palau, Vanuatu, Bougainville, Guadalcanal, Iwo Jima, Tinian, Saipan, Lampedusa, Ischia, Murano, Burano, Naxos, Paros, Ithaca, Delos, Kefalonia
-100: Bouvet :: The most remote island on Earth. The nearest land is uninhabited Antarctica.
-
 ? Name an Asian country
 10: China, Japan, India, South Korea|Korea, Thailand, Vietnam
 15: Bhutan
@@ -49,14 +31,6 @@
 60: Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Georgia, Bahrain, Palestine, Cyprus
 85: Turkmenistan, Kyrgyzstan, Tajikistan, Maldives, Timor-Leste|East Timor
 100: Brunei :: Its sultan's palace has about 1,800 rooms, more than most hotels.
-
-? Name a country that starts with S
-10: Spain, Sweden, Switzerland, South Africa, South Korea, Saudi Arabia
-15: Scotland
-30: Singapore, Syria, Sudan, Somalia, Serbia, Senegal, Sri Lanka
-60: Slovakia, Slovenia, Sierra Leone, South Sudan, Samoa, San Marino, Seychelles, St. Lucia|Saint Lucia
-85: Solomon Islands, St. Kitts and Nevis|Saint Kitts and Nevis, St. Vincent and the Grenadines|Saint Vincent and the Grenadines, São Tomé and Príncipe|Sao Tome and Principe|Sao Tome
-100: Suriname :: The only country in South America where Dutch is the official language.
 
 ? Name a lake
 ~drop lake
@@ -99,15 +73,6 @@
 60: Munich, Montreal, Mexico City, Rome
 85: Melbourne, Helsinki, Stockholm, Amsterdam, Antwerp
 100: St. Louis|Saint Louis :: At the 1904 Games, the marathon's first finisher had ridden part of the way in a car.
-
-? Name a famous tower or monument
-~drop the
-10: Eiffel Tower, Statue of Liberty, Washington Monument, Big Ben, Leaning Tower of Pisa|Tower of Pisa, Mount Rushmore|Rushmore
-15: Stonehenge
-30: Lincoln Memorial, Arc de Triomphe, Colosseum, Sphinx|Great Sphinx, Empire State Building, CN Tower, Space Needle, Burj Khalifa, Christ the Redeemer, Gateway Arch, Great Pyramid|Pyramids, Willis Tower|Sears Tower, Parthenon, Tower of London, Taj Mahal, Brandenburg Gate, Trevi Fountain, Angkor Wat
-60: Moai|Easter Island heads, Little Mermaid, Atomium, Tokyo Tower, Tokyo Skytree|Skytree, Oriental Pearl, Nelson's Column, Vietnam Veterans Memorial|Vietnam Memorial, Jefferson Memorial, Crazy Horse Memorial|Crazy Horse, Devils Tower, Hollywood Sign, Cloud Gate|The Bean, Sagrada Familia, St. Basil's, Petronas Towers, Gateway of India, Merlion, Victory Column, Fernsehturm|Berlin TV Tower, Hagia Sophia, Alamo, Petra, Cologne Cathedral, Acropolis, Blarney Stone, Rock of Gibraltar, Spanish Steps
-85: Qutb Minar|Qutub Minar, Giralda, Campanile, Galata Tower, Belém Tower|Belem Tower, Tower of Hercules, Spasskaya Tower, Ostankino, Sky Tower, Milad Tower, Azadi Tower, Motherland Calls, Spring Temple Buddha, Statue of Unity, African Renaissance Monument, Bunker Hill Monument, San Jacinto Monument, Perry's Monument, Coit Tower, Reunion Tower, Stratosphere|Strat, Wallace Monument, Scott Monument, Angel of the North, Kelpies
-100: Manneken Pis :: A tiny statue of a boy peeing. Brussels has given it more than 1,000 costumes.
 
 ? Name a landlocked country
 10: Switzerland, Austria, Bolivia, Mongolia, Afghanistan, Nepal
@@ -152,3 +117,37 @@
 60: Merapi, Sakurajima, Aso, Nyiragongo, Ol Doinyo Lengai, Chimborazo, Ojos del Salado, Villarrica, Osorno, Calbuco, Arenal, Poás|Poas, Irazú|Irazu, Fuego|Volcan de Fuego, Pacaya, Colima, Soufrière Hills|Soufriere Hills|Montserrat, La Soufrière|Soufriere, Teide, Cumbre Vieja, Hunga Tonga|Hunga Tonga-Hunga Ha'apai, Ruapehu, Taranaki|Egmont, Tongariro, Ngauruhoe, Whakaari|White Island, Erta Ale, Elbrus, Ararat, Damavand, Klyuchevskaya Sopka|Klyuchevskoy, Augustine, Redoubt, Katmai, Novarupta, Pavlof, Baker, Adams, Mazama|Crater Lake, Campi Flegrei|Phlegraean Fields, Vulcano, Surtsey, Laki, Grímsvötn|Grimsvotn, Katla, Bárðarbunga|Bardarbunga, Fagradalsfjall, Toba, Kelud, Agung, Rinjani, Bromo, Semeru, Unzen, Ontake, Paektu|Baekdu|Changbai, Hallasan|Halla
 85: Llullaillaco, Sabancaya, Ubinas, El Misti|Misti, Láscar|Lascar, Licancabur, Parinacota, Sangay, Tungurahua, Reventador, Nevado del Ruiz|Ruiz, Galeras, Chaitén|Chaiten, Puyehue, Cerro Hudson|Hudson, Tacaná|Tacana, Masaya, Momotombo, Ilopango, Izalco, Santa Ana, Nyamuragira, Karthala, Piton de la Fournaise, Fogo, Mount Cameroon|Cameroon, Deception Island, Ruang, Sinabung, Lewotobi, Galunggung, Tavurvur, Rabaul, Manam, Lamington, Ambrym, Yasur, Lopevi, Tarawera, Kikai, Miyakejima, Bezymianny, Shiveluch, Tolbachik, Avachinsky, Okmok, Cleveland, Bogoslof, Spurr, Wrangell, Axial Seamount, Lōʻihi|Loihi
 100: Kick 'em Jenny|Kick-'em-Jenny|Kick em Jenny :: An underwater volcano near Grenada. Ships keep clear because escaping gas could thin the water enough to sink them.
+
+? Name a city in California
+~drop city
+10: Los Angeles|LA|L.A., San Francisco|SF|Frisco, San Diego, Sacramento, San Jose, Hollywood
+30: Oakland, Fresno, Long Beach, Anaheim, Santa Barbara, Berkeley, Palo Alto, Santa Monica, Beverly Hills, Pasadena, Irvine, Bakersfield, Riverside, San Bernardino, Santa Cruz, Napa, Monterey, Malibu, Palm Springs, Carmel|Carmel-by-the-Sea, Huntington Beach, Newport Beach, Burbank, Glendale, Stockton, Modesto, Compton, Cupertino
+60: South Lake Tahoe|Lake Tahoe, Chico, Davis, Eureka, Redding, Santa Rosa, Sonoma, Inglewood, Torrance, Laguna Beach, Mountain View, Sunnyvale, Fremont, Hayward, Alameda, Sausalito, San Luis Obispo|SLO, Ventura, Oxnard, Temecula, Ontario, Chula Vista, Escondido, Oceanside, La Jolla, Thousand Oaks, Simi Valley, Lancaster, Palmdale, Santa Clarita, Victorville, Barstow, Needles, Bishop, Mammoth Lakes, Big Bear Lake|Big Bear, Solvang, Paso Robles, Salinas, Gilroy, Watsonville, Half Moon Bay, Petaluma, Vallejo, Richmond, Walnut Creek, Concord, Livermore, Pleasanton, Merced, Visalia, Indio, Coachella, Palm Desert, El Centro, Costa Mesa, Fullerton, Orange, Santa Ana, Garden Grove, Downey, Whittier, Pomona, Claremont, West Hollywood, Culver City, Venice, Manhattan Beach, Hermosa Beach, Redondo Beach, Arcata, Crescent City, Mendocino, Truckee, Folsom, Roseville, Lodi
+85: Weed, Zzyzx, Bodie, Calico, Ridgecrest, Lone Pine, Yreka, Alturas, Susanville, Quincy, Weaverville, Fort Bragg, Healdsburg, Calistoga, St. Helena|St Helena, Yountville, Sebastopol, Bolinas, Pacifica, Vernon, Industry|City of Industry, Irwindale, Commerce, Bell, Cudahy, Signal Hill, Avalon, Ojai, Carpinteria, Lompoc, Coalinga, Delano, Taft, Tehachapi, Boron, Twentynine Palms, Joshua Tree, Blythe, Brawley, Julian, Borrego Springs, Pismo Beach, Morro Bay, Cambria, Atascadero, King City, Hollister, Los Gatos, Saratoga, Atherton
+100: Colma :: A small town near San Francisco where the dead outnumber the living by more than a thousand to one, because it's mostly cemeteries.
+
+? Name a city in Japan
+~drop city
+10: Tokyo, Kyoto, Osaka, Hiroshima, Nagasaki
+15: Kobe
+30: Yokohama, Sapporo, Nagoya, Nara, Fukuoka, Sendai, Okinawa, Kawasaki, Hakone, Nikko|Nikkō, Kamakura, Kanazawa, Takayama, Chiba, Saitama, Shizuoka, Kagoshima, Kumamoto, Matsuyama, Okayama, Himeji, Niigata, Nagano, Hakodate, Otaru
+60: Naha, Yokosuka, Shibuya, Shinjuku, Kitakyushu, Hamamatsu, Sakai, Hachioji, Utsunomiya, Gifu, Wakayama, Toyama, Fukui, Kochi, Tokushima, Takamatsu, Matsue, Tottori, Yamaguchi, Shimonoseki, Oita, Beppu, Miyazaki, Saga, Kurashiki, Fukuyama, Kure, Onomichi, Hagi, Hirosaki, Aomori, Morioka, Akita, Yamagata, Fukushima, Koriyama, Mito, Tsukuba, Maebashi, Takasaki, Kofu, Matsumoto, Karuizawa, Atami, Ise, Otsu, Uji, Toyota, Okazaki, Asahikawa, Kushiro, Obihiro, Abashiri, Wakkanai, Furano, Noboribetsu, Nishinomiya, Amagasaki, Sasebo, Ishigaki, Nago
+85: Tomakomai, Muroran, Nemuro, Hachinohe, Kesennuma, Ishinomaki, Rikuzentakata, Kamaishi, Tono, Hanamaki, Sakata, Tsuruoka, Yonezawa, Aizuwakamatsu, Hitachi, Choshi, Kisarazu, Odawara, Fujisawa, Chigasaki, Numazu, Fujinomiya, Shimoda, Ito, Yaizu, Toyohashi, Seto, Inuyama, Ogaki, Hikone, Nagahama, Iga, Matsusaka, Shingu, Tanabe, Ako, Toyooka, Izumo, Iwakuni, Ube, Imabari, Uwajima, Muroto, Marugame, Nobeoka, Kanoya, Ibusuki, Amami
+100: Naruto :: A city known for the giant whirlpools in its strait. The swirly fish cake in ramen is named after them.
+
+? Name an ocean or sea
+~drop ocean,sea
+10: Pacific, Atlantic, Indian, Arctic, Southern|Antarctic, Mediterranean
+15: Dead Sea|Dead
+30: Caribbean, Red, Black, Caspian, North, Baltic, South China, Arabian, Coral, Bering, Sargasso, Aegean, Adriatic, Tasman, Sea of Japan|Japan|East Sea, Yellow, Irish, Ionian, Tyrrhenian, Philippine, East China, Celebes, Java, Andaman, Weddell, Ross, Barents, Labrador, Sea of Okhotsk|Okhotsk
+60: Salton, Sea of Galilee|Galilee, Aral, Ligurian, Balearic, Alboran, Sea of Marmara|Marmara, Sea of Azov|Azov, Kara, Laptev, East Siberian, Chukchi, Beaufort, Greenland, Norwegian, White, Lincoln, Wandel, Celtic, Wadden, Bismarck, Solomon, Arafura, Timor, Banda, Molucca, Halmahera, Sulu, Flores, Bali, Savu, Seram, Bohol, Sibuyan, Visayan, Inland Sea|Seto Inland Sea, Amundsen, Bellingshausen, Scotia, Lazarev, Cosmonauts, Davis, Mawson
+85: Sea of Crete|Cretan, Libyan, Thracian, Myrtoan, Icarian, Levantine, Cilician, Sea of Sardinia|Sardinian, Sea of Sicily, Sea of the Hebrides|Hebrides, Sea of Chiloé|Chiloe, Argentine, Sea of Grau|Grau, Sea of Cortez|Cortez, Archipelago, Bothnian, Riiser-Larsen, D'Urville|Dumont d'Urville, Somov, Sea of Tranquility|Mare Tranquillitatis, Sea of Serenity|Mare Serenitatis, Sea of Crises|Mare Crisium
+100: Ocean of Storms|Oceanus Procellarum :: The only "ocean" on the Moon, a dark lava plain where Apollo 12 landed.
+
+? Name a waterfall
+~drop falls,fall,waterfall,waterfalls
+10: Niagara, Victoria, Angel, Iguazu|Iguaçu|Iguassu, Yosemite
+30: Bridalveil, Horseshoe, American, Gullfoss, Dettifoss, Seljalandsfoss, Skógafoss|Skogafoss, Multnomah, Havasu, Snoqualmie, Shoshone, Lower Yellowstone|Yellowstone, Kaieteur, Tugela, Rhine, Reichenbach, Plitvice, Ruby, Burney, McWay, Akaka, Twin, Taughannock, Great
+60: Vernal, Nevada, Sutherland, Jog, Dudhsagar, Huangguoshu, Ban Gioc|Detian, Kuang Si, Erawan, Wailua, Rainbow, Ouzoud, Murchison, Blue Nile|Tis Abay, Wallaman, Jim Jim, Cumberland, Amicalola, Tahquamenon, Minnehaha, Palouse, Kaaterskill, Bash Bish, Hopetoun, Augrabies, Howick, Maletsunyane, Sipi, Kjelfossen, Vøringsfossen|Voringsfossen, Staubbach, Trümmelbach|Trummelbach, Giessbach, Krimml|Krimmler, Gavarnie, Marmore|Cascata delle Marmore, Mardalsfossen, Svartifoss, Kirkjufellsfoss, Háifoss|Haifoss, Tamul, Basaseachic, Agua Azul, Gocta, Rio Celeste, Pailón del Diablo|Pailon del Diablo
+85: Mongefossen, Vinnufossen, Langfoss, Låtefossen|Latefossen, Steall, Aira Force, High Force, Pistyll Rhaeadr, Torc, Powerscourt, Glencar, Hengifoss, Aldeyjarfoss, Gljúfrabúi|Gljufrabui, Salto del Laja, Yumbilla, Nauyaca, Hiilawe, Oloupena|Olo'upena, Wairere, Browne, Bowen, Stirling, Purakaunui, McLean, Wentworth, Wollomombi, Ellenborough, Mitchell, Ebor, Fitzroy, Mutarazi, Ruacana, Mac-Mac, Berlin
+100: Hierve el Agua :: Mexican cliffs that look like frozen waterfalls. They're actually rock, built up over thousands of years by mineral-rich spring water.

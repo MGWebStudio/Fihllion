@@ -22,3 +22,38 @@
 60: Royal Gorge, Queensboro|59th Street Bridge, Williamsburg Bridge, Stari Most|Mostar, Pont Neuf, Pont du Gard, Chain Bridge, Chapel Bridge|Kapellbrücke, Forth Bridge, Humber Bridge, Clifton Suspension Bridge|Clifton, Iron Bridge|Ironbridge, Si-o-se-pol, Sunshine Skyway, Confederation Bridge, New River Gorge, Ambassador Bridge, Arthur Ravenel, Hell Gate, Zakim, Øresund|Oresund, Great Belt, Galata, Bosphorus, Tsing Ma, Vasco da Gama, 25 de Abril, Pont Alexandre III, Helix Bridge, Langkawi Sky Bridge, Glienicke|Bridge of Spies, Edmund Pettus
 85: Capilano, Carrick-a-Rede, Danyang–Kunshan, Lake Pontchartrain Causeway, Hangzhou Bay, Chengyang, Puente de la Mujer, Ponte Sant'Angelo, Millennium Bridge, Rakotz, Cooper River, Vizcaya, Kintai, Banpo, Sheikh Zayed, Dragon Bridge, Bixby Creek|Bixby, Deception Pass, Astoria–Megler, Lion Bridge, Natural Bridge
 100: Golden Bridge|Cầu Vàng|Cau Vang :: A Vietnamese footbridge held up by two giant stone hands.
+
+? Name a European capital
+~drop city
+10: Paris, London, Rome, Berlin, Madrid
+15: Reykjavik
+30: Athens, Dublin, Vienna, Amsterdam, Lisbon, Moscow, Prague, Brussels, Stockholm, Oslo, Copenhagen, Warsaw, Budapest, Helsinki, Kyiv|Kiev
+60: Bern, Bucharest, Belgrade, Sofia, Zagreb, Minsk, Monaco, Luxembourg, Bratislava, Vilnius, Riga, Tallinn, Ljubljana, Sarajevo, Valletta, Nicosia, Vatican, San Marino
+85: Andorra la Vella, Podgorica, Chisinau|Chișinău, Pristina, Skopje, Tirana
+100: Vaduz :: Liechtenstein's capital has about 5,000 people and a prince living in the castle on the hill.
+
+? Name an island
+~drop island,isle,islands
+10: Hawaii, Manhattan, Madagascar, Puerto Rico, Greenland, Cuba, Ireland
+15: Easter, Alcatraz
+30: Bali, Sicily, Jamaica, Iceland, Long, Maui, Oahu, Kauai, Tahiti, Bora Bora, Fiji, Sri Lanka, Great Britain, Taiwan, Borneo, Sumatra, Java, Crete, Corfu, Santorini, Mykonos, Ibiza, Malta, Cyprus, Tasmania, Nantucket, Martha's Vineyard, Aruba, Bermuda, Barbados, Hispaniola|Haiti, Galápagos|Galapagos, Staten, Ellis, Sardinia, Corsica, Capri, Phuket, Maldives
+60: Newfoundland, Vancouver, Baffin, Honshu, Hokkaido, Okinawa, Kyushu, Shikoku, Luzon, Mindanao, New Guinea, Sulawesi, Zanzibar, Mauritius, Seychelles, St. Lucia|Saint Lucia, Trinidad, Tobago, Curaçao|Curacao, Grenada, Antigua, St. Kitts|Saint Kitts, Guam, Tonga, Samoa, Molokai, Lanai, Rhodes, Lesbos, Kos, Skye, Man, Jersey, Guernsey, Wight, Mallorca|Majorca, Tenerife, Elba, Roatan, Cozumel, Key West, Prince Edward|PEI, Coney, Roosevelt, Rikers, Hilton Head, Christmas, Robben, St. Helena|Saint Helena, Bikini Atoll|Bikini, Lord Howe, Komodo, Ascension
+85: Ellesmere, Victoria, Banks, Devon, Axel Heiberg, Spitsbergen|Svalbard, Novaya Zemlya, Sakhalin, Hainan, Socotra, Tristan da Cunha, Pitcairn, Kiribati, Kerguelen, Diego Garcia, Réunion|Reunion, Lombok, Flores, Timor, Palawan, Cebu, Bohol, Orkney, Shetland, Lewis, Iona, Lindisfarne, Gotland, Öland|Oland, Faroe, Aran, Achill, Mackinac, Kodiak, Sanibel, Tangier, Block, Catalina, Attu, Midway, Wake, Nauru, Tuvalu, Palau, Vanuatu, Bougainville, Guadalcanal, Iwo Jima, Tinian, Saipan, Lampedusa, Ischia, Murano, Burano, Naxos, Paros, Ithaca, Delos, Kefalonia
+100: Bouvet :: The most remote island on Earth. The nearest land is uninhabited Antarctica.
+
+? Name a country that starts with S
+10: Spain, Sweden, Switzerland, South Africa, South Korea, Saudi Arabia
+15: Scotland
+30: Singapore, Syria, Sudan, Somalia, Serbia, Senegal, Sri Lanka
+60: Slovakia, Slovenia, Sierra Leone, South Sudan, Samoa, San Marino, Seychelles, St. Lucia|Saint Lucia
+85: Solomon Islands, St. Kitts and Nevis|Saint Kitts and Nevis, St. Vincent and the Grenadines|Saint Vincent and the Grenadines, São Tomé and Príncipe|Sao Tome and Principe|Sao Tome
+100: Suriname :: The only country in South America where Dutch is the official language.
+
+? Name a famous tower or monument
+~drop the
+10: Eiffel Tower, Statue of Liberty, Washington Monument, Big Ben, Leaning Tower of Pisa|Tower of Pisa, Mount Rushmore|Rushmore
+15: Stonehenge
+30: Lincoln Memorial, Arc de Triomphe, Colosseum, Sphinx|Great Sphinx, Empire State Building, CN Tower, Space Needle, Burj Khalifa, Christ the Redeemer, Gateway Arch, Great Pyramid|Pyramids, Willis Tower|Sears Tower, Parthenon, Tower of London, Taj Mahal, Brandenburg Gate, Trevi Fountain, Angkor Wat
+60: Moai|Easter Island heads, Little Mermaid, Atomium, Tokyo Tower, Tokyo Skytree|Skytree, Oriental Pearl, Nelson's Column, Vietnam Veterans Memorial|Vietnam Memorial, Jefferson Memorial, Crazy Horse Memorial|Crazy Horse, Devils Tower, Hollywood Sign, Cloud Gate|The Bean, Sagrada Familia, St. Basil's, Petronas Towers, Gateway of India, Merlion, Victory Column, Fernsehturm|Berlin TV Tower, Hagia Sophia, Alamo, Petra, Cologne Cathedral, Acropolis, Blarney Stone, Rock of Gibraltar, Spanish Steps
+85: Qutb Minar|Qutub Minar, Giralda, Campanile, Galata Tower, Belém Tower|Belem Tower, Tower of Hercules, Spasskaya Tower, Ostankino, Sky Tower, Milad Tower, Azadi Tower, Motherland Calls, Spring Temple Buddha, Statue of Unity, African Renaissance Monument, Bunker Hill Monument, San Jacinto Monument, Perry's Monument, Coit Tower, Reunion Tower, Stratosphere|Strat, Wallace Monument, Scott Monument, Angel of the North, Kelpies
+100: Manneken Pis :: A tiny statue of a boy peeing. Brussels has given it more than 1,000 costumes.

@@ -33,3 +33,38 @@
 60: Heath, Zagnut, Clark, Zero, 100 Grand, Mr. Goodbar, Krackel, Skor, Oh Henry!, Necco Wafers|Necco, Good & Plenty, Dots, Raisinets, Goobers, Sno-Caps, Charleston Chew, Razzles, Fun Dip, Pixy Stix, Sixlets, Runts, Big League Chew, Cadbury Creme Egg|Cadbury, Wonka|Wonka Bar, Sugar Daddy, Now and Later, Atomic Fireball|Fireball, Gobstopper|Everlasting Gobstopper, Ghirardelli, Aero, Crunchie, Flake, Mars, Bounty, Maltesers, Wispa, Lion, Caramello, Whoppers, Turkish delight, Pez, Cow Tales, Mary Jane, Life Savers|Lifesavers, Mentos, Altoids, Tootsie Pop, Sweethearts, Chiclets, Boston Baked Beans, Dubble Bubble, Bazooka
 85: Chick-O-Stick, Idaho Spud, Valomilk, Abba-Zaba, Big Hunk, Look!, U-No, Sky Bar, Cherry Mash, 5th Avenue, Reggie!, Kinder Bueno|Bueno, Ritter Sport, Milka, Curly Wurly, Double Decker, Picnic, Fry's Chocolate Cream, Yorkie, Toffee Crisp, Salmiak|Salted licorice, Zotz, Bottle Caps, Wax bottles|Nik-L-Nip, Candy Buttons, Candy cigarettes, Chuckles, Mallo Cup, Squirrel Nut Zippers, Mamba, Hi-Chew, Pocky, White Rabbit, Botan Rice Candy
 100: Goo Goo Cluster :: Made in Nashville since 1912 and billed as the first candy bar to combine several fillings.
+
+? Name a fruit
+~drop fruit
+10: Apple, Banana, Orange, Strawberry, Grape, Watermelon, Pineapple, Mango, Peach
+15: Dragon fruit|Dragonfruit|Pitaya, Durian, Star fruit|Starfruit|Carambola
+30: Pear, Cherry, Kiwi|Kiwifruit, Blueberry, Raspberry, Lemon, Lime, Plum, Grapefruit, Apricot, Coconut, Papaya, Pomegranate, Cantaloupe, Honeydew, Nectarine, Blackberry, Cranberry, Tangerine, Clementine, Fig, Avocado, Tomato, Melon
+60: Passion fruit|Passionfruit, Guava, Persimmon, Lychee|Litchi, Kumquat, Quince, Mandarin, Date, Currant|Blackcurrant|Black currant|Red currant, Gooseberry, Elderberry, Boysenberry, Mulberry, Plantain, Jackfruit, Tamarind, Prune, Olive, Rhubarb, Acai|Açaí, Satsuma, Huckleberry, Loganberry, Pomelo, Feijoa, Yuzu, Blood orange
+85: Rambutan, Mangosteen, Salak|Snake fruit, Longan, Loquat, Medlar, Soursop|Guanabana, Sapodilla, Breadfruit, Ackee, Kiwano|Horned melon, Cloudberry, Lingonberry, Damson, Greengage, Ugli|Ugli fruit, Tayberry, Physalis|Cape gooseberry|Ground cherry, Pawpaw, Bael, Jabuticaba, Marula, Buddha's hand, Bergamot, Citron, Calamansi, Sloe, Serviceberry, Salmonberry, Thimbleberry, Tamarillo, Naranjilla, Cupuacu|Cupuaçu, Santol, Langsat, Wax apple, Sugar apple|Custard apple|Cherimoya, Mamey|Mamey sapote, Black sapote, Pepino, Cempedak, Rose apple, Barberry, Monstera
+100: Miracle fruit|Miracle berry :: Eat one and sour foods taste sweet for about an hour.
+
+? Name a soup or stew
+~drop soup,stew
+10: Chicken noodle, Tomato, Chili, Clam chowder|Chowder, Beef, French onion
+15: Gazpacho, Pho|Phở
+30: Minestrone, Lentil, Split pea|Pea, Vegetable, Broccoli cheddar|Broccoli, Potato, Gumbo, Miso, Ramen, Cream of mushroom|Mushroom, Chicken tortilla|Tortilla, Wonton, Egg drop, Hot and sour, Matzo ball, Bisque|Lobster bisque, Butternut squash, Beef barley, Goulash, Borscht, Italian wedding|Wedding, Black bean, Menudo, Pozole, Irish, Bouillabaisse
+60: Mulligatawny, Vichyssoise, Cioppino, Tom yum, Tom kha, Laksa, Caldo verde, Pasta e fagioli|Pasta fagioli, Ribollita, Avgolemono, Harira, Cock-a-leekie, Cullen skink, Scotch broth, Burgoo, Brunswick, Bouillon, Consommé|Consomme, Oxtail, Coq au vin, Boeuf bourguignon|Beef bourguignon, Cassoulet, Tagine, Chicken and dumplings, Sancocho, Kimchi jjigae|Kimchi, Sundubu|Sundubu-jjigae, Birria, Ajiaco, Feijoada, Zuppa Toscana, Stracciatella, Pepper pot, She-crab, Snapper, Turtle, Bird's nest
+85: Bún bò Huế|Bun bo hue, Solyanka, Okroshka, Shchi, Ukha, Rassolnik, Tarator, Soto|Soto ayam, Sinigang, Tinola, Callaloo, Mohinga, Waterzooi, Bigos, Żurek|Zurek, Ajoblanco|Ajo blanco, Salmorejo, Garbure, Sopa de lima, Fanesca, Locro, Chorba, Bouride, Caldo gallego, Frogmore, Hoosh, Lobscouse, Scouse, Cawl, Fricassee, Kharcho, Fasolada, Hasenpfeffer, Tafelspitz, Tteokguk, Samgyetang, Seolleongtang, Sopa de ajo, Bak kut teh, Kare-kare, Nilaga, Cazuela
+100: Stone :: The folktale soup that starts with a rock and ends with a whole village feeding itself.
+
+? Name a rice dish
+10: Fried rice, Sushi, Risotto, Paella, Rice and beans
+15: Jambalaya, Biryani
+30: Rice pudding, Spanish rice|Mexican rice, Pilaf|Rice pilaf, Dirty rice, Red beans and rice, Bibimbap, Onigiri|Rice ball, Congee, Gallo pinto, Hainanese chicken rice|Chicken rice, Arancini, Donburi, Chicken and rice, Poke bowl|Poke, Coconut rice, Sticky rice|Mango sticky rice, Nasi goreng, Burrito bowl, Rice Krispies treat|Rice Krispie treat, Horchata
+60: Hoppin' John|Hopping John, Kedgeree, Katsudon, Gyudon, Oyakodon, Arroz con pollo, Jollof|Jollof rice, Nasi lemak, Pulao|Pilau, Khichdi|Kitchari, Tahdig, Tteokbokki|Rice cake, Zongzi, Dolma|Dolmades|Stuffed grape leaves, Mujaddara, Omurice, Arroz caldo, Risi e bisi, Spam musubi|Musubi, Loco moco, Khao pad|Thai fried rice, Chirashi, Stuffed peppers
+85: Chelo kebab, Thieboudienne|Ceebu jën, Waakye, Koshari|Kushari, Plov|Osh, Arroz chaufa|Chaufa, Bisi bele bath, Pongal, Puttu, Idli, Sinangag, Cơm tấm|Com tam, Mansaf, Maqluba, Kabsa|Machboos, Supplì|Suppli, Moros y cristianos, Arroz con leche, Arroz con gandules, Riz casimir, Hayashi rice, Nasi kuning, Lontong, Ketupat, Perloo|Purloo, Charleston red rice, Risotto alla milanese, Sartù|Sartu di riso, Tamago kake gohan|Egg on rice
+100: Rijsttafel :: Dutch for "rice table," an Indonesian-inspired feast of dozens of small dishes.
+
+? Name something made from a potato
+~drop potato,potatoes
+10: French fries|Fries, Mashed, Baked, Potato chips|Chips|Crisps, Tater tots|Tots
+15: Gnocchi, Vodka
+30: Hash browns|Hash brown, Salad, Scalloped, Skins, Home fries, Wedges, Au gratin|Gratin, Latke, Curly fries, Waffle fries, Shepherd's pie|Cottage pie, Pierogi|Perogies, Loaded baked, Roasted|Roast, Poutine, Twice-baked, Soup, Knish, Shoestring fries, Steak fries, Crinkle fries|Crinkle cut fries
+60: Duchess, Colcannon, Rösti|Rosti, Aloo gobi, Boxty, Bubble and squeak, Croquette, Samosa, Hasselback, Bangers and mash, Funeral, Patatas bravas|Bravas, Tortilla española|Spanish omelette|Spanish tortilla, Vichyssoise, Lefse, Kugel, Fish and chips, Aligot, Dauphinoise|Gratin dauphinois, Lyonnaise, Pommes Anna, Fondant, Champ, Pringles, Instant|Instant mashed, Aloo tikki|Tikki, Bread, Pancake, Hash|Corned beef hash, Starch
+85: Clapshot, Rumbledethumps, Stovies, Tartiflette, Raclette, Kartoffelpuffer|Reibekuchen, Draniki|Deruny, Kroppkakor, Kumpir, Papa rellena, Causa|Causa limeña, Llapingachos, Salchipapas, Vada pav|Batata vada, Aloo paratha, Dum aloo, Pommes soufflés, Hotdish|Tater Tot hotdish, Cepelinai, Kartoffelsalat, Salt|Syracuse salt, Neeps and tatties|Tatties, Pan haggerty, Cottage fries, Poitín|Poteen, Akvavit, Candy, Mr. Potato Head battery
+100: Chuño|Chuno :: Andean farmers freeze-dry potatoes by leaving them out in the cold and stomping on them.

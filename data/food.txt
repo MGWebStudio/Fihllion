@@ -7,15 +7,6 @@
 85: Taleggio, Comté|Comte, Caerphilly, Red Leicester, Double Gloucester, Cheshire, Époisses|Epoisses, Reblochon, Raclette, Morbier, Tête de Moine, Saint-André, Pont-l'Évêque, Mimolette, Provola, Caciocavallo, Oaxaca, Ricotta salata, Brunost|Gjetost, Lancashire, Cambozola, Kefalotyri, Kasseri, Graviera, Mahón|Mahon, Cabrales, Queso blanco, Tilsit, Butterkäse|Butterkase, Bel Paese, Saint-Nectaire, Cantal, Maroilles, Boursin, Port Salut, Vacherin, Beaufort, Manouri, Akkawi, Nabulsi, Sirene, Quark, Stracchino|Crescenza, Scamorza, Robiola, Ossau-Iraty, Sbrinz, Appenzeller, Tomme
 100: Casu marzu|Casu martzu :: Sardinia's cheese that is deliberately full of live maggots.
 
-? Name a fruit
-~drop fruit
-10: Apple, Banana, Orange, Strawberry, Grape, Watermelon, Pineapple, Mango, Peach
-15: Dragon fruit|Dragonfruit|Pitaya, Durian, Star fruit|Starfruit|Carambola
-30: Pear, Cherry, Kiwi|Kiwifruit, Blueberry, Raspberry, Lemon, Lime, Plum, Grapefruit, Apricot, Coconut, Papaya, Pomegranate, Cantaloupe, Honeydew, Nectarine, Blackberry, Cranberry, Tangerine, Clementine, Fig, Avocado, Tomato, Melon
-60: Passion fruit|Passionfruit, Guava, Persimmon, Lychee|Litchi, Kumquat, Quince, Mandarin, Date, Currant|Blackcurrant|Black currant|Red currant, Gooseberry, Elderberry, Boysenberry, Mulberry, Plantain, Jackfruit, Tamarind, Prune, Olive, Rhubarb, Acai|Açaí, Satsuma, Huckleberry, Loganberry, Pomelo, Feijoa, Yuzu, Blood orange
-85: Rambutan, Mangosteen, Salak|Snake fruit, Longan, Loquat, Medlar, Soursop|Guanabana, Sapodilla, Breadfruit, Ackee, Kiwano|Horned melon, Cloudberry, Lingonberry, Damson, Greengage, Ugli|Ugli fruit, Tayberry, Physalis|Cape gooseberry|Ground cherry, Pawpaw, Bael, Jabuticaba, Marula, Buddha's hand, Bergamot, Citron, Calamansi, Sloe, Serviceberry, Salmonberry, Thimbleberry, Tamarillo, Naranjilla, Cupuacu|Cupuaçu, Santol, Langsat, Wax apple, Sugar apple|Custard apple|Cherimoya, Mamey|Mamey sapote, Black sapote, Pepino, Cempedak, Rose apple, Barberry, Monstera
-100: Miracle fruit|Miracle berry :: Eat one and sour foods taste sweet for about an hour.
-
 ? Name a spice or herb
 ~drop spice,herb,seed,seeds,powder,ground
 10: Pepper|Black pepper, Cinnamon, Basil, Paprika, Oregano
@@ -70,15 +61,6 @@
 85: Fruity Yummy Mummy|Yummy Mummy, King Vitaman, Quisp, Quake, Mr. T, Urkel-Os, Nerds Cereal, C-3PO's, Smurf-Berry Crunch|Smurf Berry Crunch, Freakies, Sir Grapefellow, Baron Von Redberry, Kaboom, Waffelos, Honey Graham Oh's|Oh's, Crispix, Team, Force, Alpen, Ready Brek, Shreddies, Coco Pops, Sugar Puffs, Golden Nuggets, Sultana Bran, Frosties, Puffins
 100: Fruit Brute :: The forgotten werewolf of General Mills' monster cereals, discontinued in the early 1980s.
 
-? Name a soup or stew
-~drop soup,stew
-10: Chicken noodle, Tomato, Chili, Clam chowder|Chowder, Beef, French onion
-15: Gazpacho, Pho|Phở
-30: Minestrone, Lentil, Split pea|Pea, Vegetable, Broccoli cheddar|Broccoli, Potato, Gumbo, Miso, Ramen, Cream of mushroom|Mushroom, Chicken tortilla|Tortilla, Wonton, Egg drop, Hot and sour, Matzo ball, Bisque|Lobster bisque, Butternut squash, Beef barley, Goulash, Borscht, Italian wedding|Wedding, Black bean, Menudo, Pozole, Irish, Bouillabaisse
-60: Mulligatawny, Vichyssoise, Cioppino, Tom yum, Tom kha, Laksa, Caldo verde, Pasta e fagioli|Pasta fagioli, Ribollita, Avgolemono, Harira, Cock-a-leekie, Cullen skink, Scotch broth, Burgoo, Brunswick, Bouillon, Consommé|Consomme, Oxtail, Coq au vin, Boeuf bourguignon|Beef bourguignon, Cassoulet, Tagine, Chicken and dumplings, Sancocho, Kimchi jjigae|Kimchi, Sundubu|Sundubu-jjigae, Birria, Ajiaco, Feijoada, Zuppa Toscana, Stracciatella, Pepper pot, She-crab, Snapper, Turtle, Bird's nest
-85: Bún bò Huế|Bun bo hue, Solyanka, Okroshka, Shchi, Ukha, Rassolnik, Tarator, Soto|Soto ayam, Sinigang, Tinola, Callaloo, Mohinga, Waterzooi, Bigos, Żurek|Zurek, Ajoblanco|Ajo blanco, Salmorejo, Garbure, Sopa de lima, Fanesca, Locro, Chorba, Bouride, Caldo gallego, Frogmore, Hoosh, Lobscouse, Scouse, Cawl, Fricassee, Kharcho, Fasolada, Hasenpfeffer, Tafelspitz, Tteokguk, Samgyetang, Seolleongtang, Sopa de ajo, Bak kut teh, Kare-kare, Nilaga, Cazuela
-100: Stone :: The folktale soup that starts with a rock and ends with a whole village feeding itself.
-
 ? Name a pizza topping
 ~drop pizza,extra
 10: Pepperoni, Cheese, Sausage, Mushroom, Bacon
@@ -87,23 +69,6 @@
 60: Artichoke|Artichoke heart, Sun-dried tomato, Goat cheese, Capicola|Gabagool, Pesto, Roasted red pepper, Hot honey|Honey, Eggplant, Zucchini, Broccoli, Soppressata, Truffle|Truffle oil, Fig, Corn|Sweet corn, Shrimp, Clam|White clam, Egg|Fried egg, Parmesan, Gorgonzola, Kalamata olive, Burrata, 'Nduja|Nduja, Mac and cheese, Steak, Pulled pork, Potato, Caper, Balsamic glaze, Hot pepper|Calabrian chili|Chili flakes|Red pepper flakes, Tuna, Pear
 85: Mashed potato, Rosemary, Kimchi, Kale, Asparagus, Smoked salmon, Caviar, Lobster, Pickle, Banana, Cranberry, Tandoori chicken, Paneer, Mayonnaise|Mayo, Squid, Mussel, Octopus, Bulgogi, Spam, Hot dog, Sardine, Ranch, Brussels sprout, Butternut squash, Cauliflower, Duck, Lamb, Haggis, Gouda, Brie, Sweet potato, Taco meat, Doritos, Speck, Bresaola, Mortadella, Guanciale, Alfredo, Tater tot, Seaweed, Teriyaki chicken, Sauerkraut, Crab
 100: Reindeer :: A Finnish smoked-reindeer pizza won a New York pizza contest in 2008.
-
-? Name a rice dish
-10: Fried rice, Sushi, Risotto, Paella, Rice and beans
-15: Jambalaya, Biryani
-30: Rice pudding, Spanish rice|Mexican rice, Pilaf|Rice pilaf, Dirty rice, Red beans and rice, Bibimbap, Onigiri|Rice ball, Congee, Gallo pinto, Hainanese chicken rice|Chicken rice, Arancini, Donburi, Chicken and rice, Poke bowl|Poke, Coconut rice, Sticky rice|Mango sticky rice, Nasi goreng, Burrito bowl, Rice Krispies treat|Rice Krispie treat, Horchata
-60: Hoppin' John|Hopping John, Kedgeree, Katsudon, Gyudon, Oyakodon, Arroz con pollo, Jollof|Jollof rice, Nasi lemak, Pulao|Pilau, Khichdi|Kitchari, Tahdig, Tteokbokki|Rice cake, Zongzi, Dolma|Dolmades|Stuffed grape leaves, Mujaddara, Omurice, Arroz caldo, Risi e bisi, Spam musubi|Musubi, Loco moco, Khao pad|Thai fried rice, Chirashi, Stuffed peppers
-85: Chelo kebab, Thieboudienne|Ceebu jën, Waakye, Koshari|Kushari, Plov|Osh, Arroz chaufa|Chaufa, Bisi bele bath, Pongal, Puttu, Idli, Sinangag, Cơm tấm|Com tam, Mansaf, Maqluba, Kabsa|Machboos, Supplì|Suppli, Moros y cristianos, Arroz con leche, Arroz con gandules, Riz casimir, Hayashi rice, Nasi kuning, Lontong, Ketupat, Perloo|Purloo, Charleston red rice, Risotto alla milanese, Sartù|Sartu di riso, Tamago kake gohan|Egg on rice
-100: Rijsttafel :: Dutch for "rice table," an Indonesian-inspired feast of dozens of small dishes.
-
-? Name something made from a potato
-~drop potato,potatoes
-10: French fries|Fries, Mashed, Baked, Potato chips|Chips|Crisps, Tater tots|Tots
-15: Gnocchi, Vodka
-30: Hash browns|Hash brown, Salad, Scalloped, Skins, Home fries, Wedges, Au gratin|Gratin, Latke, Curly fries, Waffle fries, Shepherd's pie|Cottage pie, Pierogi|Perogies, Loaded baked, Roasted|Roast, Poutine, Twice-baked, Soup, Knish, Shoestring fries, Steak fries, Crinkle fries|Crinkle cut fries
-60: Duchess, Colcannon, Rösti|Rosti, Aloo gobi, Boxty, Bubble and squeak, Croquette, Samosa, Hasselback, Bangers and mash, Funeral, Patatas bravas|Bravas, Tortilla española|Spanish omelette|Spanish tortilla, Vichyssoise, Lefse, Kugel, Fish and chips, Aligot, Dauphinoise|Gratin dauphinois, Lyonnaise, Pommes Anna, Fondant, Champ, Pringles, Instant|Instant mashed, Aloo tikki|Tikki, Bread, Pancake, Hash|Corned beef hash, Starch
-85: Clapshot, Rumbledethumps, Stovies, Tartiflette, Raclette, Kartoffelpuffer|Reibekuchen, Draniki|Deruny, Kroppkakor, Kumpir, Papa rellena, Causa|Causa limeña, Llapingachos, Salchipapas, Vada pav|Batata vada, Aloo paratha, Dum aloo, Pommes soufflés, Hotdish|Tater Tot hotdish, Cepelinai, Kartoffelsalat, Salt|Syracuse salt, Neeps and tatties|Tatties, Pan haggerty, Cottage fries, Poitín|Poteen, Akvavit, Candy, Mr. Potato Head battery
-100: Chuño|Chuno :: Andean farmers freeze-dry potatoes by leaving them out in the cold and stomping on them.
 
 ? Name a Mexican dish
 ~drop mexican
@@ -149,3 +114,39 @@
 60: Shoofly, Chess, Buttermilk, Grasshopper, Peanut butter, Pork|Melton Mowbray, Fish|Fisherman's, Meat, Tamale, Tourtière|Tourtiere, Banoffee, Gooseberry, Mixed berry|Berry, Marionberry, Huckleberry, Cranberry, Pear, Plum, Apricot, Sugar cream|Hoosier, Derby|Kentucky Derby, Bean, Spinach|Spanakopita, Quiche, Black bottom, Cheese and onion, Mutton|Scotch
 85: Vinegar, Green tomato, Mock apple|Ritz, Sawdust, Transparent, Bob Andy, Funeral|Raisin, Grape|Concord grape, Persimmon, Tarte Tatin|Tatin, Pastilla|Bastilla, Bakewell, Kulebyaka|Coulibiaca, Natchitoches meat|Natchitoches, Frito, Game, Eel, Water, Atlantic Beach, Buko, Woolton, Shaker lemon
 100: Stargazy :: A Cornish fish pie with whole pilchards poking their heads up through the crust, gazing at the sky.
+
+? Name a type of cake
+~drop cake,cakes
+10: Chocolate, Vanilla, Carrot, Red velvet, Cheesecake, Birthday
+15: Pound
+30: Angel food, Devil's food|Devils food, Funfetti|Confetti, Black Forest, German chocolate, Lemon, Coconut, Tres leches, Strawberry shortcake|Shortcake, Pineapple upside-down|Upside-down, Coffee, Ice cream, Bundt, Sponge, Fruitcake, Lava|Molten chocolate|Molten lava, Cupcake, Marble, Banana, Spice, Boston cream pie|Boston cream, Tiramisu, Wedding, Yellow, White, Funnel, Crumb, Layer
+60: Opera, Victoria sponge|Victoria, Battenberg, Dundee, Madeira, Lamington, Pavlova, Sachertorte|Sacher torte|Sacher, Dobos|Dobos torte, Linzer torte, Bienenstich|Bee sting, Baumkuchen, Stollen, Panettone, Pandoro, Génoise|Genoise, Chiffon, Hummingbird, Italian cream, Hot milk, Gooey butter, Kentucky butter, Tunnel of fudge, Texas sheet|Sheet, Mississippi mud, Dump, Poke|Jello poke, Icebox, Rum, King, Yule log|Bûche de Noël|Buche de Noel, Kransekake, Princess|Prinsesstårta|Prinsesstarta, Swiss roll|Jelly roll, Charlotte, Mille-feuille|Napoleon, Babka, Simnel, Parkin, Christmas, Japanese cheesecake|Cotton cheesecake, Castella, Mooncake, Basque cheesecake|Burnt Basque, Doberge, Lady Baltimore, Blackout
+85: Malakoff, Esterházy|Esterhazy, Gugelhupf|Kugelhopf, Kladdkaka, Tosca, Medovik|Honey cake, Bird's milk|Ptichye moloko, Basbousa, Bolo de rolo, Tarta de Santiago, Bebinca, Kue lapis, Bánh bò|Banh bo, Lane, Tomato soup, Mayonnaise, Wacky|Depression, Election, Moravian sugar, Scripture, Stack, Burnt sugar, Applesauce, Tipsy, Sock-it-to-me|Sock it to me, Watergate, Robert Redford, Earthquake
+100: Smith Island :: Maryland's official state dessert: eight or more thin layers of yellow cake stacked with chocolate fudge frosting.
+
+? Name a kind of sausage
+~drop sausage,sausages
+10: Hot dog|Frankfurter|Frank|Wiener, Bratwurst|Brat, Pepperoni, Salami, Chorizo, Italian
+15: Bologna|Baloney
+30: Kielbasa|Polish, Andouille, Breakfast|Breakfast links, Bockwurst, Knackwurst|Knockwurst, Weisswurst|Weißwurst, Blood|Black pudding|Morcilla, Summer, Liverwurst|Braunschweiger, Mortadella, Boudin, Linguiça|Linguica, Merguez, Cumberland, Lincolnshire, Chipolata, Kabanos, Pork, Turkey, Chicken, Vienna, Little smokies|Cocktail|Lil Smokies, Thuringer|Thüringer, Landjäger|Landjager, Sucuk|Sujuk, Lap cheong|Chinese sausage|Lap chong, Longaniza, Boerewors, Sobrasada, Saucisson|Saucisson sec, Toulouse, Cervelat, Currywurst
+60: Nürnberger|Nuremberg|Nurnberger, Mettwurst, Teewurst, Bierwurst, Jagdwurst, Blutwurst, Lebanon bologna, Soppressata, Cotechino, Zampone, 'Nduja|Nduja, Cacciatore, Finocchiona, Luganega, Salsiccia, Butifarra|Botifarra, Fuet, Chistorra, White pudding, Saveloy, Polony, Glamorgan, Square|Lorne, Banger|Bangers, Kishka|Kishke, Krakowska, Kaszanka, Sai ua, Longganisa, Sundae, Lukanka, Kulen, Ćevapi|Cevapi, Mici|Mititei, Loukaniko, Chouriço|Chourico, Alheira, Farinheira, Hot link|Red hot, Half-smoke, Ring bologna, Snag, Andouillette
+85: Boudin blanc, Diot, Morteau, Montbéliard|Montbeliard, Rosette de Lyon, Cervelas, Klobása|Klobasa, Debrecener|Debreziner, Csabai, Gyulai, Carniolan|Kranjska klobasa, Botillo, Morcón|Morcon, Salchichón|Salchichon, Biroldo, Mazzafegati, Salama da sugo, Ciauscolo, Lạp xưởng|Lap xuong, Urutan, Embutido, Droëwors|Droewors, Sai krok Isan
+100: Drisheen :: An Irish blood sausage from Cork, traditionally eaten with tripe.
+
+? Name a type of tea
+~drop tea
+10: Green, Black, Chamomile|Camomile, Earl Grey, Peppermint|Mint, Sweet, Iced
+15: Boba|Bubble|Pearl milk
+30: Chai|Masala chai, Oolong, White, English breakfast|Breakfast, Matcha, Jasmine, Herbal, Rooibos|Red bush|Redbush, Hibiscus, Lemon, Ginger, Darjeeling, Assam, Thai|Thai iced, Milk, Yerba mate|Mate|Maté, Kombucha, Raspberry, Peach, Sun, Lady Grey, Irish breakfast, Pu-erh|Puer|Pu'er, Ceylon, Barley, Rose, Lavender, Echinacea, Dandelion, Nettle, Licorice, Lemongrass, Turmeric, Spearmint
+60: Sencha, Gyokuro, Genmaicha, Hojicha, Bancha, Kukicha, Gunpowder, Lapsang souchong|Lapsang, Keemun, Yunnan, Dragon Well|Longjing, Tieguanyin|Iron Goddess, Da Hong Pao, Silver Needle, White Peony|Bai Mu Dan, Russian Caravan, Nilgiri, Kenyan, Kashmiri chai|Noon chai|Pink, Butter|Po cha, Teh tarik, Hong Kong milk, Yuenyeung|Yuanyang, Arnold Palmer, Honeybush, Moroccan mint|Maghrebi mint, Sage, Thyme, Fennel, Lemon balm, Linden|Lime flower, Elderflower, Rosehip|Rose hip, Butterfly pea|Blue, Guayusa, Yaupon, Blooming|Flowering, Buckwheat|Sobacha, Corn|Oksusu-cha, Yuja|Yuzu|Citron, Ginseng, Kuding, Chrysanthemum, Cascara, Builder's|Builders
+85: Lu'an Melon Seed|Luan Guapian, Huangshan Maofeng, Biluochun, Junshan Yinzhen, Jin Jun Mei, Oriental Beauty|Bai Hao Oolong, Dong Ding, Alishan, Gaba, Kabusecha, Tencha, Dianhong, Liu Bao, Fu Brick|Fu Zhuan, Tuocha, Jun, Labrador, Pine needle, Qishr, Lemon verbena, Greek mountain|Mountain|Sideritis, Sulaimani, Cutting chai, Irani chai
+100: Mamaki|Māmaki :: A Hawaiian herbal tea made from the leaves of a native nettle that doesn't sting.
+
+? Name a Chinese dish
+~drop dish
+10: Fried rice, Lo mein, Chow mein, Orange chicken, General Tso's chicken|General Tsos chicken|General Tso, Dumplings|Jiaozi
+15: Chop suey
+30: Kung Pao chicken|Kung pao, Sweet and sour pork|Sweet and sour, Egg roll, Spring roll, Wonton soup|Wonton|Wontons, Hot and sour soup, Egg drop soup, Peking duck, Mapo tofu, Dim sum, Baozi|Bao|Steamed buns, Sesame chicken, Beef and broccoli|Broccoli beef, Mongolian beef, Crab rangoon, Char siu|BBQ pork, Potstickers|Guotie, Xiaolongbao|Soup dumplings, Hot pot, Congee|Jook, Dan dan noodles|Dan dan, Egg foo young|Egg fu yung|Egg foo yong, Moo shu pork|Moo shu|Mu shu, Lemon chicken, Honey walnut shrimp, Cashew chicken, Szechuan chicken|Sichuan chicken, Beef chow fun|Chow fun, Shumai|Siu mai, Har gow, Scallion pancake, Twice-cooked pork
+60: Zongzi, Wonton noodles, Lanzhou beef noodles|Lanzhou lamian|Hand-pulled noodles, Biang biang noodles|Biangbiang, Zhajiangmian|Zha jiang mian, Hainanese chicken rice, Yangzhou fried rice|Yeung Chow, Fish-fragrant eggplant|Yuxiang eggplant, Dongpo pork, Red braised pork|Hong shao rou, Lion's head meatballs|Lions head, Beggar's chicken|Beggars chicken, Drunken chicken, Salt and pepper shrimp|Salt and pepper squid, West Lake fish, Squirrel fish, Tea egg|Tea eggs, Century egg|Thousand-year egg, Stinky tofu, Jianbing, Roujiamo|Chinese hamburger, Shengjian bao, Cheung fun|Rice noodle roll, Lo mai gai, Turnip cake|Lo bak go, Egg tart|Dan tat, Mooncake, Tangyuan, Nian gao, Sesame balls|Jian dui, Ants climbing a tree, Saliva chicken|Mouthwatering chicken, Chongqing chicken|Laziji, Boiled fish|Shuizhu yu, Cumin lamb, Mala xiang guo|Mala dry pot, Liangpi, Hot dry noodles|Reganmian, Crossing the bridge noodles, Clay pot rice|Bo zai fan, Siu yuk|Crispy pork belly, Roast goose, Buddha's delight|Buddhas delight, Char siu bao
+85: Phoenix claws|Chicken feet, Duck blood soup, Douzhi, Luosifen, Youtiao|Chinese doughnut, Ci fan tuan, Shaobing, Guobaorou, Disanxian|Di san xian, Pickled fish|Suan cai yu, Husband and wife lung slices|Fuqi feipian, Tiger skin peppers, Rabbit heads|Spicy rabbit head, Bird's nest soup|Birds nest soup, Shark fin soup, Chuanr|Lamb skewers, Dapanji|Big plate chicken, Cat ear noodles|Mao erduo, Knife-cut noodles|Daoxiao mian, Oil-splashed noodles|Youpo mian, Yangrou paomo|Pao mo, Guilin rice noodles, Douhua|Tofu pudding, Dragon's beard candy, Tanghulu
+100: Buddha Jumps Over the Wall|Fotiaoqiang :: A Fujian soup so rich, the story goes, that its smell tempted a monk to leap a wall and break his vegetarian vows.

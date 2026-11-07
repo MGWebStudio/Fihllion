@@ -30,3 +30,29 @@
 60: Haflinger, Fjord|Norwegian Fjord, Icelandic, Paso Fino, Peruvian Paso, Trakehner, Oldenburg, Holsteiner, Connemara, Suffolk Punch, Missouri Fox Trotter, Rocky Mountain, Saddlebred|American Saddlebred, Lusitano, Gypsy Vanner|Vanner, Hackney, Dartmoor, Exmoor, Falabella, Przewalski's|Przewalski, Brumby, Cleveland Bay, Warmblood, Barb, Chincoteague|Chincoteague pony, Dutch Warmblood, Ardennes
 85: Boulonnais, Breton, Knabstrupper, Marwari, Kathiawari, Caspian, Bashkir Curly|Curly, Nokota, Kiger Mustang, Mangalarga Marchador, Criollo, Azteca, Shagya, Tersk, Orlov Trotter, Budyonny, Mongolian, Yakut, Basuto, Waler, Camargue, Selle Français|Selle Francais, Welsh Cob|Cob, Dales, Fell, Highland, Eriskay, Kerry Bog, Hucul, Konik, Sorraia, Tarpan, Noriker, Jutland, Poitevin, American Cream Draft, Spanish Mustang
 100: Akhal-Teke :: Turkmenistan's "golden horse," with a coat that gleams like polished metal.
+
+? Name a tree
+~drop tree,trees
+10: Oak, Pine, Maple, Palm, Apple, Christmas
+15: Baobab, Bonsai
+30: Birch, Willow|Weeping willow, Redwood, Sequoia|Giant sequoia, Spruce, Cedar, Fir|Douglas fir, Elm, Ash, Aspen, Cherry, Cherry blossom, Magnolia, Dogwood, Hickory, Walnut, Beech, Sycamore, Poplar, Cottonwood, Holly, Hemlock, Mahogany, Olive, Peach, Pear, Orange, Lemon, Coconut, Cypress, Juniper, Yew, Eucalyptus, Chestnut, Teak, Joshua
+60: Larch, Alder, Hazel, Hawthorn, Rowan|Mountain ash, Linden|Basswood, Tulip|Tulip poplar, Sweetgum|Sweet gum, Ginkgo, Mesquite, Bald cypress, Pecan, Almond, Fig, Balsa, Ebony, Rosewood, Acacia, Mangrove, Jacaranda, Hornbeam, Sassafras, Black locust|Locust, Catalpa, Crepe myrtle, Monkey puzzle, Banyan, Rubber, Cork oak, Tamarack, Sumac, Mimosa, Palo verde, Horse chestnut|Buckeye, Box elder, Serviceberry, Sandalwood, Frankincense, Myrrh, Neem
+85: Kapok, Dragon blood|Dragon's blood, Bristlecone pine|Bristlecone, Wollemi pine, Sweetbay, Osage orange|Hedge apple, Pawpaw, Persimmon, Sourwood, Tupelo, Yellowwood, Hackberry, Paulownia|Empress, Kauri, Jarrah, Karri, Ironwood, Lignum vitae, Ohia, Koa, Rimu, Totara, Mopane, Marula, Moringa, Cacao, Quaking aspen, Ponderosa|Ponderosa pine, Lodgepole pine|Lodgepole, Sitka spruce, Western red cedar, Smoke, Redbud, Witch hazel, Wych elm, Medlar, Service, Spindle, Tree of heaven, Sal, Bodhi|Peepal, Mulberry, Bottlebrush
+100: Manchineel :: Stand under it in the rain and the runoff can blister your skin. Don't eat the fruit either.
+
+? Name an animal with horns or antlers
+~drop horned
+10: Deer, Bull, Moose, Goat, Rhino|Rhinoceros, Reindeer
+15: Unicorn, Narwhal
+30: Elk, Ram|Bighorn sheep|Sheep, Buffalo|Bison, Antelope, Giraffe, Ox, Caribou, Cow, Gazelle, Yak, Water buffalo, Longhorn|Texas longhorn, Impala, Wildebeest|Gnu, Ibex, Highland cow
+60: Oryx, Kudu, Eland, Springbok, Pronghorn, Markhor, Mountain goat, Musk ox|Muskox, Dall sheep, Mouflon, Sable antelope, Hartebeest, Bongo, Nyala, Waterbuck, Gemsbok, Blackbuck, Red deer, Fallow deer, White-tailed deer|Whitetail, Mule deer, Jackalope, Lizard|Horned toad|Thorny devil, Triceratops, Stag beetle, Rhinoceros beetle, Dik-dik, Steenbok, Topi, Zebu, Watusi|Ankole
+85: Takin, Gaur, Banteng, Anoa, Serow, Chamois, Goral, Tahr, Barasingha, Sika deer, Muntjac, Roe deer, Père David's deer|Pere David's deer, Okapi, Lechwe, Gerenuk, Klipspringer, Duiker, Bontebok, Sitatunga, Bushbuck, Tur, Saiga, Aurochs, Irish elk, Chinkara, Nilgai, Viper, Frog
+100: Saola :: The "Asian unicorn." Scientists only described it in 1992 and have almost never seen one since.
+
+? Name an Australian animal
+10: Kangaroo, Koala, Platypus, Emu, Wallaby
+15: Tasmanian devil|Tassie devil
+30: Wombat, Dingo, Kookaburra, Echidna, Crocodile|Saltwater crocodile|Saltie, Cockatoo, Redback|Redback spider, Funnel-web|Funnel-web spider, Box jellyfish, Taipan, Frilled lizard|Frill-necked lizard, Sugar glider, Quokka, Cassowary, Goanna, Brown snake
+60: Thorny devil, Tasmanian tiger|Thylacine, Numbat, Bilby, Quoll, Bandicoot, Wedge-tailed eagle, Lyrebird, Galah, Rainbow lorikeet|Lorikeet, Budgie|Budgerigar, Tiger snake, Blue-tongued skink|Bluetongue|Blue-tongue lizard, Cane toad, Bogong moth, Huntsman|Huntsman spider, Pademelon, Potoroo, Red-bellied black snake, Stonefish, Blue-ringed octopus, Sea dragon|Weedy sea dragon|Leafy sea dragon, Magpie, Black swan, Flying fox, Dugong
+85: Bettong, Kowari, Antechinus, Dunnart, Tree kangaroo, Yabby, Barramundi, Tawny frogmouth|Frogmouth, Currawong, Brolga, Bowerbird, Gang-gang cockatoo, Corroboree frog, Perentie, Inland taipan, Death adder, Mulga, Irukandji, Ghost bat, Honey possum, Ringtail possum, Brushtail possum, Greater glider, Rock-wallaby, Wallaroo, Euro, Spotted quoll, Mountain pygmy possum, Pig-nosed turtle, Murray cod, Witchetty grub, Ulysses butterfly, Emu-wren
+100: Drop bear :: A made-up carnivorous koala Australians use to scare tourists. Keep an eye on the treetops.

@@ -26,15 +26,6 @@
 85: Fridtjof Nansen, Douglas Mawson, Richard Burton, John Hanning Speke, Mungo Park, Burke and Wills, Matthew Flinders, Pedro Álvares Cabral|Cabral, Juan Sebastián Elcano|Elcano, Álvar Núñez Cabeza de Vaca|Cabeza de Vaca, Giovanni da Verrazzano|Verrazano, Gertrude Bell, Isabella Bird, Freya Stark, Mary Kingsley, Nellie Bly, Xuanzang, Piri Reis, Willem Barentsz, Hubert Wilkins, Richard Byrd, Apsley Cherry-Garrard, Tom Crean, Aimé Bonpland, John Wesley Powell, Jedediah Smith
 100: John Colter :: He described Yellowstone's geysers around 1808. People assumed he made it up and mocked it as "Colter's Hell."
 
-? Name a war
-~drop war,wars,the,of
-10: World War II|WW2|WWII|World War 2|World War Two|Second World War, World War I|WW1|WWI|World War 1|World War One|First World War|Great War, Vietnam, American Civil War|Civil, Revolutionary|American Revolution, Korean|Korea
-15: Cold, Star Wars
-30: Iraq, Gulf|Persian Gulf, 1812, Afghanistan, Spanish-American, Trojan, Roses, Crusades, Hundred Years|Hundred Years', Napoleonic, Mexican-American, French Revolution, Falklands, Peloponnesian, Punic, Crimean
-60: Boer, Thirty Years|Thirty Years', Seven Years|Seven Years', French and Indian, Opium, Russo-Japanese, Spanish Civil, Six-Day|Six Day, Yom Kippur, Iran-Iraq, Bosnian, Russian Civil, Franco-Prussian, Winter, Texas Revolution, Cod, Spanish Succession, Irish Independence, Nigerian Civil, Greco-Persian|Persian, Gallic, Anglo-Zulu|Zulu
-85: Football|Soccer, Jenkins' Ear, Pastry, Pig, Bucket, Kalmar, Anglo-Zanzibar, Whiskey Rebellion, Toledo, Aroostook, Honey, Chaco, Thousand Days, Paraguayan, Taiping Rebellion, Boxer Rebellion, Peasants', Hussite, Scottish Independence, Seminole, Sino-Japanese, Balkan
-100: Emu :: In 1932 the Australian military went after emus with machine guns. The emus won.
-
 ? Name a king or queen from history
 ~drop king,queen
 10: Elizabeth I|Queen Elizabeth|Elizabeth|Elizabeth II, Henry VIII|Henry the Eighth, Cleopatra, Marie Antoinette, George III|King George, Victoria
@@ -62,24 +53,6 @@
 85: Anaximander, Empedocles, Protagoras, Plotinus, Boethius, Hypatia, William of Ockham|Occam, Duns Scotus, George Berkeley, Thomas Reid, Johann Fichte, Friedrich Schelling, Edmund Husserl, Maurice Merleau-Ponty, Karl Popper, Thomas Kuhn, W.V.O. Quine|Quine, John Rawls, Robert Nozick, Peter Singer, Derek Parfit, Judith Butler, Mary Wollstonecraft, Zhu Xi, Mozi, Nagarjuna, Shankara, Al-Ghazali, Maimonides, Hildegard of Bingen, Anselm, William James, John Dewey, Charles Peirce, Antisthenes, Pyrrho
 100: Diogenes :: He lived in a large jar and reportedly told Alexander the Great to get out of his sunlight.
 
-? Name a pirate, real or fictional
-~drop captain,the
-10: Blackbeard, Hook|Captain Hook, Jack Sparrow, Kidd|William Kidd
-15: Long John Silver, Dread Pirate Roberts
-30: Henry Morgan|Morgan, Anne Bonny, Mary Read, Calico Jack|Jack Rackham, Barbossa|Hector Barbossa|Barbarossa, Bartholomew Roberts|Black Bart, Jean Lafitte, Davy Jones, Francis Drake, Monkey D. Luffy|Luffy, One-Eyed Willy
-60: Henry Every|Long Ben, Charles Vane, Benjamin Hornigold, Edward Low, Ching Shih|Zheng Yi Sao, Grace O'Malley, Walter Raleigh, Thomas Tew, Sam Bellamy|Black Sam Bellamy, Flint, Will Turner, Elizabeth Swann, Smee, Guybrush Threepwood, Redbeard, Haddock, Roronoa Zoro|Zoro, Nami, Pugwash, Olivier Levasseur, William Dampier, Patchy
-85: François l'Olonnais|L'Olonnais, Black Caesar, Rachel Wall, Jacquotte Delahaye, Sayyida al-Hurra, Anne Dieu-le-Veut, Israel Hands, Howell Davis, Thomas Cavendish, Peter Easton, Jan Janszoon, Piet Hein, Klaus Störtebeker, Koxinga|Zheng Zhilong, Dragut, Roche Braziliano, Ned England, Henry Jennings, Samuel Burgess
-100: Stede Bonnet :: A rich plantation owner with no sailing experience who simply bought a ship and became "the gentleman pirate."
-
-? Name a figure from the Wild West
-~last
-10: Billy the Kid, Wyatt Earp, Jesse James, Buffalo Bill|Buffalo Bill Cody|William Cody, Annie Oakley, Wild Bill Hickok|Wild Bill
-15: John Wayne, Clint Eastwood
-30: Doc Holliday, Butch Cassidy, Sundance Kid|The Sundance Kid, Calamity Jane, Davy Crockett, Geronimo, Sitting Bull, Crazy Horse, George Custer|General Custer, Pat Garrett, Bat Masterson, Belle Starr, Kit Carson, Daniel Boone
-60: Black Bart, Cole Younger, John Wesley Hardin, Sam Bass, Judge Roy Bean|Roy Bean, Pearl Hart, Tom Horn, Chief Joseph, Red Cloud, Cochise, Ike Clanton, Johnny Ringo, Stagecoach Mary|Mary Fields, Levi Strauss, Pawnee Bill, Kid Curry|Harvey Logan, Etta Place, Charles Goodnight, Emmett Dalton, Virgil Earp, Morgan Earp, Seth Bullock, Al Swearengen
-85: Cattle Annie, Little Britches, Rose Dunn, Laura Bullion, Elfego Baca, Commodore Perry Owens, Heck Thomas, Bill Tilghman, Chris Madsen, Nat Love|Deadwood Dick, Bill Pickett, Black Jack Ketchum|Tom Ketchum, Clay Allison, Ben Thompson, Luke Short, Dallas Stoudenmire, Temple Houston, Isaac Parker|Hanging Judge, Cattle Kate|Ella Watson, Liver-Eating Johnson|Jeremiah Johnson, Washakie
-100: Bass Reeves :: Born enslaved, he became one of the first Black deputy US marshals. He may have inspired the Lone Ranger.
-
 ? Name a Nobel Peace Prize winner
 ~last
 10: Barack Obama, Martin Luther King Jr.|MLK|Martin Luther King, Nelson Mandela, Mother Teresa, Malala Yousafzai|Malala
@@ -88,15 +61,6 @@
 60: Yasser Arafat, Shimon Peres, Yitzhak Rabin, F.W. de Klerk|De Klerk, Lech Wałęsa|Lech Walesa, Anwar Sadat, Menachem Begin, Wangari Maathai, Muhammad Yunus, Liu Xiaobo, Juan Manuel Santos, Abiy Ahmed, Doctors Without Borders|Médecins Sans Frontières|MSF, World Food Programme, Rigoberta Menchú|Rigoberta Menchu, George Marshall, Willy Brandt, Ellen Johnson Sirleaf, Leymah Gbowee, Tawakkol Karman, Shirin Ebadi, John Hume, David Trimble, European Union|EU, Amnesty International, Narges Mohammadi, Maria Ressa, Dmitry Muratov, Kailash Satyarthi, Nadia Murad, Denis Mukwege
 85: Jane Addams, Emily Balch, Cordell Hull, Linus Pauling, Ralph Bunche, Lester Pearson, Dag Hammarskjöld|Dag Hammarskjold, René Cassin|Rene Cassin, Norman Borlaug, Andrei Sakharov, Seán MacBride|Sean MacBride, Betty Williams, Mairead Corrigan, Alfonso García Robles, Alva Myrdal, Óscar Arias|Oscar Arias, Jody Williams, José Ramos-Horta|Jose Ramos-Horta, Carlos Belo, Bertha von Suttner, Aristide Briand, Frank Kellogg, Elihu Root, Henri Dunant, Frédéric Passy|Frederic Passy, Albert Lutuli|Albert Luthuli, Mohamed ElBaradei, Martti Ahtisaari, OPCW, Ales Bialiatski, Memorial, Nihon Hidankyo, ICAN, Pugwash
 100: Lê Đức Thọ|Le Duc Tho :: The only person ever to turn down the Nobel Peace Prize, in 1973.
-
-? Name a civil rights leader or activist
-~last
-10: Martin Luther King Jr.|MLK|Martin Luther King, Rosa Parks, Malcolm X, Harriet Tubman, Mahatma Gandhi
-15: Nelson Mandela, Greta Thunberg
-30: Frederick Douglass, Susan B. Anthony, Cesar Chavez, Sojourner Truth, John Lewis, Medgar Evers, W.E.B. Du Bois|Du Bois, Booker T. Washington, Gloria Steinem, Harvey Milk, Ruby Bridges, Elizabeth Cady Stanton, Angela Davis, Emmeline Pankhurst, Jesse Jackson, Thurgood Marshall, Ida B. Wells, Al Sharpton, Malala Yousafzai|Malala, Erin Brockovich, Ralph Nader
-60: Fannie Lou Hamer, Stokely Carmichael, Huey Newton, Bobby Seale, Bayard Rustin, Dorothy Height, Ella Baker, Coretta Scott King, Dolores Huerta, Lucretia Mott, Alice Paul, Betty Friedan, Marsha P. Johnson, Sylvia Rivera, Steve Biko, Desmond Tutu, Emma Goldman, William Lloyd Garrison, Nat Turner, John Brown, James Farmer, A. Philip Randolph, Ralph Abernathy, Joan Baez, Jane Addams, Ruth Bader Ginsburg, Russell Means, Wilma Mankiller, Yuri Kochiyama, Mother Jones, Dorothy Day
-85: Diane Nash, Septima Clark, Whitney Young, Roy Wilkins, Fred Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo, Constance Baker Motley, Pauli Murray, Mary Church Terrell, Carrie Chapman Catt, Inez Milholland, Lucy Stone, Vine Deloria Jr.|Vine Deloria, Dennis Banks, Larry Itliong, Philip Vera Cruz, Fred Korematsu, Mary McLeod Bethune, Barbara Gittings, Frank Kameny, Mamie Till-Mobley|Mamie Till, E.D. Nixon, Homer Plessy, Thich Nhat Hanh, Bella Abzug, Shirley Chisholm
-100: Claudette Colvin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.
 
 ? Name a famous ship
 ~drop hms,rms,uss,ss,css,the,ship
@@ -144,3 +108,40 @@
 60: Qing, Han, Ming, Tang, Yuan, Maurya|Mauryan, Gupta, Khmer|Angkor, Songhai, Ghana, Seleucid, Sasanian|Sassanid, Parthian, Hittite, Akkadian, Median|Medes, Carolingian|Frankish, Timurid, Safavid, Seljuk, Abbasid, Umayyad, Fatimid, Kushan, Vijayanagara, Maratha, Sikh, Zulu, Benin, Ashanti|Asante, Kanem-Bornu|Kanem|Bornu, Aksumite|Aksum|Axum, Golden Horde, Brazilian|Empire of Brazil, Mexican, Dutch, Swedish, Bulgarian, Serbian, Latin, Trebizond, Hunnic|Hun, Tibetan
 85: Ayyubid, Almohad, Almoravid, Ghaznavid, Khwarazmian, Oyo, Wassoulou, Sokoto|Sokoto Caliphate, Luba, Lunda, Rozvi, Mutapa|Monomotapa, Chola, Pala, Rashtrakuta, Chalukya, Satavahana, Srivijaya, Majapahit, Pagan|Bagan, Goguryeo, Liao, Jin, Xiongnu, Rouran, Göktürk|Gokturk|Turkic Khaganate, Uyghur|Uyghur Khaganate, Avar|Avar Khaganate, Khazar|Khazar Khaganate, Hephthalite, Elamite|Elam, Mitanni, Urartu, Kushite|Kush, Palmyrene, Durrani, Tu'i Tonga|Tui Tonga, Wari, Tiwanaku, Chimú|Chimu, Tarascan|Purépecha|Purepecha
 100: Gallic Empire|Gallic :: A breakaway piece of the Roman Empire that ran Gaul, Britain and Spain on its own for about 14 years in the 200s.
+
+? Name a US Supreme Court justice
+~last
+~drop justice,judge,chief
+10: Ruth Bader Ginsburg|RBG, Clarence Thomas, Sonia Sotomayor, John Roberts, Brett Kavanaugh, Amy Coney Barrett, Thurgood Marshall
+15: William Howard Taft
+30: Elena Kagan, Samuel Alito, Neil Gorsuch, Ketanji Brown Jackson, Antonin Scalia, Anthony Kennedy, Sandra Day O'Connor, Stephen Breyer, David Souter, John Paul Stevens, Earl Warren, John Marshall, Oliver Wendell Holmes|Oliver Wendell Holmes Jr., William Rehnquist, Harry Blackmun, Byron White, Lewis Powell, Warren Burger, Louis Brandeis, Felix Frankfurter, Hugo Black, William O. Douglas|William Douglas, John Jay, Roger Taney
+60: Charles Evans Hughes, Benjamin Cardozo, Harlan Fiske Stone, Robert H. Jackson|Robert Jackson, Frank Murphy, Wiley Rutledge, Stanley Reed, Owen Roberts, William Brennan, Potter Stewart, Abe Fortas, Arthur Goldberg, Tom C. Clark|Tom Clark, Sherman Minton, Harold Burton, Fred Vinson, Charles Whittaker, John Marshall Harlan, John Marshall Harlan II, Joseph Story, Salmon P. Chase|Salmon Chase, Morrison Waite, Melville Fuller, Edward Douglass White|Edward White, Stephen Field, Samuel Chase, Bushrod Washington, James Wilson, John Rutledge, Oliver Ellsworth, George Sutherland, Pierce Butler, James McReynolds, Willis Van Devanter
+85: William Paterson, Joseph McKenna, Rufus Peckham, David Brewer, Henry Billings Brown, Mahlon Pitney, Horace Gray, Samuel Freeman Miller|Samuel Miller, Joseph Bradley, Noah Swayne, David Davis, John Catron, Peter Vivian Daniel|Peter Daniel, John McLean, Levi Woodbury, Robert Cooper Grier|Robert Grier, Benjamin Robbins Curtis|Benjamin Curtis, John Archibald Campbell|John Campbell, Nathan Clifford, Ward Hunt, William Strong, Stanley Matthews, Lucius Q. C. Lamar|Lucius Lamar, Howell Edmunds Jackson|Howell Jackson, George Shiras Jr.|George Shiras, William R. Day|William Day, William Henry Moody|William Moody, Horace Lurton, Joseph Rucker Lamar|Joseph Lamar, John Hessin Clarke|John Clarke, Edward Terry Sanford|Edward Sanford, Thomas Todd, Gabriel Duvall, Smith Thompson, Robert Trimble, Henry Baldwin, James Moore Wayne|James Wayne, Philip Pendleton Barbour|Philip Barbour, John McKinley, Alfred Moore, William Johnson, Brockholst Livingston, Thomas Johnson, James Iredell, John Blair
+100: James F. Byrnes|James Byrnes :: Served on the Court for just over a year, then quit to help run the World War II home front. He later became Secretary of State.
+
+? Name a famous general or military commander
+~last
+~drop general,admiral,commander
+10: George Washington, Napoleon|Napoleon Bonaparte, Robert E. Lee|Robert Lee, Ulysses S. Grant|Ulysses Grant, Julius Caesar, Alexander the Great|Alexander, George S. Patton|George Patton
+15: Sun Tzu
+30: Dwight D. Eisenhower|Dwight Eisenhower|Ike, Douglas MacArthur, Hannibal, Genghis Khan, William Tecumseh Sherman|William Sherman, Stonewall Jackson|Thomas Jackson, Erwin Rommel|Desert Fox, Bernard Montgomery|Monty, Duke of Wellington|Wellington|Arthur Wellesley, Horatio Nelson|Lord Nelson, Joan of Arc, Attila|Attila the Hun, Saladin, Charlemagne, Oliver Cromwell, Norman Schwarzkopf, Colin Powell, Omar Bradley, Chester Nimitz, George Armstrong Custer|George Custer, Andrew Jackson, Simón Bolívar|Simon Bolivar, William Wallace, Spartacus, Leonidas, Scipio Africanus, Pompey, Mark Antony|Marc Antony, Cyrus the Great, Tamerlane|Timur, Hernán Cortés|Hernan Cortes, Francisco Pizarro, Georgy Zhukov|Zhukov, Isoroku Yamamoto|Yamamoto, Charles de Gaulle|De Gaulle, John J. Pershing|John Pershing|Black Jack Pershing, Marquis de Lafayette|Lafayette, Benedict Arnold, Crazy Horse
+60: Douglas Haig, Ferdinand Foch, David Petraeus, James Mattis, Võ Nguyên Giáp|Vo Nguyen Giap, Shaka|Shaka Zulu, Sitting Bull, Geronimo, Tecumseh, Lord Kitchener|Kitchener, Winfield Scott, Nathanael Greene|Nathaniel Greene, Friedrich Wilhelm von Steuben|Baron von Steuben, Francis Marion|Swamp Fox, Ethan Allen, Nathan Bedford Forrest, J.E.B. Stuart|Jeb Stuart, James Longstreet, George McClellan, Philip Sheridan, Joshua Chamberlain, George Meade, Ambrose Burnside, Joseph Hooker, Philip II of Macedon|Philip of Macedon, Pancho Villa, Emiliano Zapata, John Paul Jones, Stephen Decatur, David Farragut, Oliver Hazard Perry, William Halsey|Bull Halsey, Matthew Ridgway, William Westmoreland, Curtis LeMay, Chesty Puller, Benjamin O. Davis Jr., Stanley McChrystal, Mark Milley, Boudica|Boadicea, Vercingetorix, Frederick the Great, Gustavus Adolphus, Toussaint Louverture|Toussaint L'Ouverture
+85: Belisarius, Subutai, Khalid ibn al-Walid, Tariq ibn Ziyad, Charles Martel, El Cid, Bertrand du Guesclin, Turenne, Prince Eugene of Savoy|Prince Eugene, Duke of Marlborough|John Churchill, Alexander Suvorov, Mikhail Kutuzov, Louis-Nicolas Davout|Davout, Michel Ney, Joachim Murat, Gebhard von Blücher|Blucher, Carl von Clausewitz|Clausewitz, Helmuth von Moltke, Paul von Hindenburg, Erich Ludendorff, Heinz Guderian, Erich von Manstein, Tōgō Heihachirō|Togo Heihachiro, Yi Sun-sin, Zhuge Liang, Han Xin, Bai Qi, Qi Jiguang, Hamilcar Barca, Gaius Marius, Sulla, Marcus Agrippa|Agrippa, Germanicus, Arminius, Pyrrhus, Epaminondas, Themistocles, Miltiades, Xenophon, Bernardo O'Higgins, José de San Martín|Jose de San Martin, Antonio López de Santa Anna|Santa Anna, Tadeusz Kościuszko|Tadeusz Kosciuszko, Casimir Pulaski, Raymond Spruance, Creighton Abrams, Billy Mitchell, Grace Hopper
+100: Smedley Butler :: A Marine general with two Medals of Honor who later wrote a book called War Is a Racket.
+
+? Name a Chinese dynasty
+~drop dynasty
+10: Ming, Qing|Ching|Manchu, Han, Tang, Song|Sung, Qin|Chin
+15: Yuan|Mongol
+30: Zhou|Chou, Shang, Sui, Xia, Jin, Liao, Western Zhou, Eastern Zhou, Northern Song, Southern Song, Western Han|Former Han, Eastern Han, Cao Wei|Wei, Shu Han|Shu, Eastern Wu|Wu
+60: Western Jin, Eastern Jin, Later Liang, Later Tang, Later Jin, Later Han, Later Zhou, Western Xia|Xi Xia|Tangut, Northern Wei, Northern Qi, Northern Zhou, Western Wei, Eastern Wei, Liu Song, Southern Qi, Liang, Chen, Southern Ming, Wu Zhou
+85: Southern Tang, Wuyue, Former Shu, Later Shu, Northern Han, Min, Chu, Southern Han, Jingnan|Nanping, Former Liang, Northern Liang, Western Liang, Southern Liang, Former Yan, Later Yan, Northern Yan, Southern Yan, Han Zhao|Former Zhao, Later Zhao, Cheng Han, Western Qin, Ran Wei, Dai, Dali, Nanzhao, Western Liao|Kara-Khitan|Qara Khitai, Northern Yuan, Former Qin
+100: Xin :: A dynasty of one emperor, Wang Mang, who seized the throne in 9 AD and lost it, along with his head, in 23 AD.
+
+? Name a medieval weapon
+10: Sword, Bow|Bow and arrow, Crossbow, Spear, Mace, Axe|Battle axe|Battleaxe
+15: Trebuchet
+30: Longbow, Lance, Halberd, Flail, Morning star, Dagger, Pike, War hammer|Warhammer, Catapult, Battering ram, Broadsword, Longsword, Claymore, Javelin, Sling, Knife, Club, Scimitar, Glaive, Poleaxe|Pollaxe, Greek fire, Boiling oil, Ballista, Mangonel, Siege tower, Cannon, Arrow, Falchion, Billhook|Bill, Quarterstaff|Staff, Throwing axe|Francisca
+60: Bastard sword|Hand-and-a-half sword, Zweihänder|Zweihander, Estoc, Arming sword, Messer, Cinquedea, Rondel dagger, Misericorde, Baselard, Stiletto, Dirk, Seax|Sax, Bearded axe, Dane axe, Lochaber axe, Bec de corbin, Lucerne hammer, Partisan, Spetum, Ranseur, Guisarme, Fauchard, Voulge, Bardiche, Military fork, Goedendag, Holy water sprinkler, Horseman's pick|Horsemans pick, Arbalest, Hand cannon, Arquebus, Petard, Springald, Onager, Bombard, Caltrops, Flamberge, Rapier, Katana, Naginata, Yari, Nodachi, Wakizashi, Tantō|Tanto, Kanabō|Kanabo, Jian, Dao, Guandao, Chakram, Khanda, Urumi, Kris|Keris, Shotel, Shuriken
+85: Couillard, Fire lance, Mons Meg, Bohemian earspoon|Earspoon, War scythe, War flail, Kusarigama, Meteor hammer, Rope dart, Tessen|War fan, Lantern shield, Swordbreaker, Main-gauche|Parrying dagger, Hwacha, Repeating crossbow|Chu-ko-nu|Zhuge nu, Ahlspiess, Scorpio|Scorpion
+100: Ribauldequin :: A cart of small cannon barrels lined up side by side to fire all at once, a sort of medieval machine gun.

@@ -31,3 +31,36 @@
 60: Coup d'état|Coup d'etat, Laissez-faire, Nouveau riche, Avant-garde, Carte blanche, Vis-à-vis|Vis a vis, Sang-froid, Savoir faire, Raison d'être|Raison d'etre, Joie de vivre, Esprit de corps, Fait accompli, Double entendre, Femme fatale, Enfant terrible, Tour de force, Cul-de-sac, Bête noire|Bete noire, Mêlée|Melee, Ménage à trois|Menage a trois, Noblesse oblige, Papier-mâché|Paper mache, Pièce de résistance|Piece de resistance, Prêt-à-porter|Pret a porter, Art deco, Art nouveau, Attaché|Attache, Apéritif|Aperitif, Sommelier, Concierge, Connoisseur, Reconnaissance, Chaise longue|Chaise lounge, Chiffon, Château|Chateau, Milieu, Nom de plume, Panache, Penchant, Soirée|Soiree, Malaise, Élan|Elan, Ennui, Gauche, Gaffe, Aplomb, Blasé|Blase, Cachet, Détente|Detente, Dossier, Exposé|Expose, Forte, Impasse, Insouciance, Par excellence, Passé|Passe, Sobriquet, Visage, Tout de suite, Mon dieu, Merci, Sacré bleu|Sacre bleu, Zut alors
 85: Agent provocateur, Amour propre, Bon mot, Bon vivant, Cause célèbre|Cause celebre, Cri de coeur, Dernier cri, Éminence grise|Eminence grise, Haute couture, Idée fixe|Idee fixe, Jeu d'esprit, Mot juste, Objet d'art, Pied-à-terre|Pied a terre, Trompe-l'œil|Trompe l'oeil, Succès de scandale, Roman à clef, Nostalgie de la boue, Mise en scène|Mise en scene, Mise en place, Flâneur|Flaneur, Soupçon|Soupcon, Bric-à-brac|Bric a brac, Démodé|Demode, Arrière-pensée, Sans souci, Vignette, De rigueur, Plus ça change, Tant pis, Au courant, Au fait, Au contraire, Au naturel, Belle époque|Belle epoque, Beau monde, Billet-doux|Billet doux, Cordon bleu, Fin de siècle|Fin de siecle, Nouvelle vague
 100: L'esprit de l'escalier|Esprit de l'escalier|Staircase wit :: "Staircase wit." The perfect comeback you only think of after you've left.
+
+? Name a word that rhymes with cat
+~exact
+10: Hat, Bat, Rat, Mat, Sat, Fat, Pat, That, Chat, Flat
+15: Diplomat, Acrobat
+30: Brat, Gnat, Splat, Spat, Slat, Scat, Vat, Tat, Lat, Format, Combat, Doormat, Bobcat, Wombat, Habitat, Democrat, Aristocrat, Thermostat, Baseball bat, Nonfat, Copycat, Laundromat, Pussycat, Tomcat, Hazmat, Welcome mat
+60: Cravat, Caveat, Muskrat, Meerkat, Ziggurat, Autocrat, Bureaucrat, Technocrat, Plutocrat, Rheostat, Photostat, Kitty cat, Sprat, Drat, Stat, Frat, Thereat, Whereat, Hepcat, Polecat, Wildcat, Fruit bat, Vampire bat, Top hat, Hard hat, Sun hat, Cowboy hat, Yoga mat, Mouse mat, Placemat, Dingbat, Brickbat, Numbat, Fiat, Tit for tat
+85: Rat-a-tat|Ratatat, Concordat, Coup d'état|Coup d'etat, Entrechat, Commissariat, Proletariat, Secretariat, Salariat, Lariat, Aerostat, Heliostat, Hydrostat, Gyrostat, Dandiprat, Marat, Arafat, Ararat, Landsat
+100: Jehoshaphat :: A king of Judah, and the star of the old exclamation "Jumpin' Jehoshaphat!"
+
+? Name another word for big
+10: Large, Huge, Giant, Enormous, Massive, Gigantic
+15: Humongous|Humungous
+30: Tremendous, Colossal, Immense, Vast, Great, Mammoth, Jumbo, Monster|Monstrous, Titanic, Gargantuan, Hefty, Bulky, Whopping, Substantial, Sizable, Mega, King-size|King size, Oversized, Grand, Extra-large|XL, Ginormous, Towering, Heavy, Super-size|Supersize, Monumental, Epic
+60: Behemoth, Elephantine, Hulking, Whopper, Astronomical, Galactic, Cosmic, Prodigious, Stupendous, Considerable, Extensive, Voluminous, Capacious, Spacious, Burly, Strapping, Portly, Goliath, Herculean, Cyclopean, Ample, Mountainous, Walloping, Thumping, Honking, Planetary, Gross, Tall, Wide, Sprawling, Bumper, Almighty
+85: Leviathan, Pantagruelian, Titanesque, Gigantesque, Mastodonic, Cyclopic, Immeasurable, Bloated, Thundering, Whacking, Ponderous, Magnum, Massy, Bulbous, Kingly, Lofty, Commodious, Gigantean, Jovian, Olympian, Vasty, Stonking
+100: Brobdingnagian :: From the land of giants in Gulliver's Travels. It's a real word, and fun to attempt.
+
+? Name a word that starts with X
+10: Xylophone, X-ray|Xray
+15: Xerox, Xbox
+30: Xenophobia, Xenon, Xanadu, Xavier, Xena, Xylem, Xmas, Xanax, X-Men, Xenophobe
+60: Xenomorph, Xylitol, Xanthan gum|Xanthan, Xerxes, Xiphoid, Xeriscape, Xenial, Xenolith, Xebec, Xerography, Xylography, Xenogenesis, Xylophonist, XOXO, Xennial, Xhosa, Xi Jinping, Xi'an|Xian, X-axis, X-factor
+85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous
+100: Xenoglossy :: The supposed ability to speak a language you've never learned.
+
+? Name a way to walk
+10: Stroll, Jog, March, Run, Skip, Hike
+15: Moonwalk, Sashay
+30: Amble, Saunter, Strut, Stride, Wander, Limp, Shuffle, Tiptoe, Stomp, Trudge, Waddle, Pace, Plod, Stumble, Hobble, Sneak, Creep, Swagger, Meander, Ramble, Tread, Trek, Stagger, Mosey, Prance, Lumber, Trot, Tramp, Roam, Power walk
+60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Sleepwalk, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
+85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk
+100: Galumph :: Lewis Carroll made it up for "Jabberwocky." It means to bound along clumsily and in triumph.

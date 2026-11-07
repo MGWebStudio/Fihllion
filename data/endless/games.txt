@@ -30,3 +30,35 @@
 60: Ghost in the Graveyard, Manhunt, Flashlight tag, What Time Is It Mr. Fox?, Fruit Basket Turnover, Heads Up Seven Up|Seven Up, Steal the Bacon, Crack the Whip, Stuck in the Mud, British Bulldog|Bulldog, Mumblety-peg, Conkers, Ringolevio, Hot Lava Monster|Lava Monster, Skully, Stoopball, Gaga ball, Mafia, Slaps, Thumb war, Bloody Knuckles, Chinese jump rope, Zip Zap Zop, Cooties, Cootie catcher
 85: Kabaddi, Pitching pennies, Tip-cat, Hoop rolling, Pickup sticks, Oonch Neech, Kho kho, Gilli danda, Pilolo, Queenie I-O, Blob Tag, Everybody's It, TV Tag, Elbow Tag, Hospital Tag, Butts Up, German Spotlight
 100: Knucklebones :: The ancient Greek and Roman ancestor of jacks, played with actual animal ankle bones.
+
+? Name a space on the Monopoly board
+10: Boardwalk, Park Place, Go, Jail, Free Parking
+15: Marvin Gardens, Baltic Avenue|Baltic
+30: Go to Jail, Chance, Community Chest, Water Works, Electric Company, Reading Railroad|Reading, B&O Railroad|B&O|B and O, Short Line|Short Line Railroad, Pennsylvania Railroad, Mediterranean Avenue|Mediterranean, Income Tax, Luxury Tax, Pennsylvania Avenue
+60: Atlantic Avenue|Atlantic, Ventnor Avenue|Ventnor, Pacific Avenue|Pacific, North Carolina Avenue|North Carolina, Indiana Avenue|Indiana, Kentucky Avenue|Kentucky, New York Avenue|New York, Tennessee Avenue|Tennessee, St. James Place|Saint James Place, St. Charles Place|Saint Charles Place, Just Visiting
+85: Virginia Avenue|Virginia, States Avenue|States, Connecticut Avenue|Connecticut, Vermont Avenue|Vermont, Oriental Avenue|Oriental, Mayfair, Park Lane, Old Kent Road, Whitechapel Road, Pall Mall, Bond Street, Oxford Street, Regent Street, Piccadilly, Trafalgar Square, Fleet Street, Strand, Marylebone Station, King's Cross Station, Liverpool Street Station, Fenchurch Street Station
+100: Illinois Avenue|Illinois :: The property players land on most often, thanks to the odds of leaving jail and those Chance cards.
+
+? Name a chess term
+10: Checkmate, Queen, King, Pawn, Knight, Rook|Castle, Bishop
+15: En passant, Bongcloud
+30: Castling, Check, Stalemate, Gambit|Queen's Gambit, Opening, Endgame, Fork, Pin, Skewer, Promotion, Grandmaster, Resign, Sicilian Defense|Sicilian, Rank, File, Draw, Blunder, Scholar's Mate
+60: Zugzwang, Fool's Mate, Ruy Lopez, French Defense, Caro-Kann, King's Indian, Nimzo-Indian, London System, Italian Game, English Opening, Zwischenzug, Fianchetto, Discovered attack, Discovered check, Double check, Back rank mate, Smothered mate, Sacrifice, Elo|Elo rating, Tempo, Passed pawn, Battery, Underpromotion, Threefold repetition, Perpetual check, Fifty-move rule, Blitz, Bullet, Time control, Middlegame, Opposition, Isolated pawn, Doubled pawns, Pawn structure, Kingside, Queenside, Minor piece, Major piece, Exchange, Deflection, Decoy, Clearance
+85: Zeitnot, Windmill, Desperado, Prophylaxis, Luft, Outpost, Hanging piece, Interference, X-ray, Intermezzo, Lucena position, Philidor position, Immortal Game, Evergreen Game, Opera Game, Réti Opening|Reti Opening, Grünfeld Defense|Grunfeld, Pirc Defense, Alekhine's Defense, Scandinavian Defense, Benoni, Dutch Defense, Vienna Game, Bird's Opening, Grob's Attack|Grob, Fried Liver Attack|Fried Liver, Stafford Gambit, Englund Gambit, Traxler, Elephant Gambit, Latvian Gambit, Evans Gambit, Wayward Queen, Patzer, Kibitzer|Kibitz, Woodpusher, Swindle, Tabia, Novelty, Adjournment, Sealed move, FIDE, Armageddon
+100: Orangutan|Sokolsky|Polish Opening :: A real opening (1. b4), named after a grandmaster visited the zoo during a 1924 tournament and asked an orangutan for advice.
+
+? Name a Super Smash Bros. fighter
+10: Mario, Link, Pikachu, Kirby, Donkey Kong|DK, Sonic
+15: Piranha Plant, Steve
+30: Luigi, Samus, Yoshi, Fox, Ness, Captain Falcon, Jigglypuff, Peach, Bowser, Zelda, Marth, Ganondorf|Ganon, Mewtwo, Meta Knight, Wario, Snake, Diddy Kong, King Dedede, Pac-Man, Mega Man, Ryu, Cloud, Inkling, Sora, Charizard, Pit, Sheik
+60: Falco, Wolf, Lucas, Roy, Ike, Dr. Mario, Young Link, Toon Link, Zero Suit Samus, Daisy, Pichu, Lucina, Chrom, Squirtle, Ivysaur, Pokémon Trainer|Pokemon Trainer, Olimar, Lucario, R.O.B.|ROB, Villager, Rosalina|Rosalina & Luma, Little Mac, Greninja, Palutena, Bowser Jr., Ken, Bayonetta, Ridley, Simon, Richter, King K. Rool, Isabelle, Joker, Incineroar, Terry, Sephiroth, Kazuya, Hero, Banjo|Banjo & Kazooie
+85: Ice Climbers, Mr. Game & Watch|Game and Watch, Dark Samus, Dark Pit, Mii Fighter|Mii Brawler|Mii Gunner|Mii Swordfighter, Robin, Shulk, Duck Hunt|Duck Hunt Duo, Corrin, Byleth, Min Min, Pyra|Mythra
+100: Wii Fit Trainer :: A yoga instructor from an exercise game, who beats people up with a sun salutation.
+
+? Name a poker term
+10: Flush, Straight, Full house, Royal flush, Bluff, All in, Ante, Pair
+15: Dead man's hand, Poker face
+30: Three of a kind, Four of a kind, Two pair, Straight flush, Fold, Call, Raise, Check, Blinds|Big blind|Small blind, Flop, Turn, River, Dealer, Pot, Kicker, Hole cards, Chips, Tell, Texas Hold'em|Hold'em, Stud, Draw, Wild card, High card, Showdown, Joker
+60: Nuts, Muck, Tilt|On tilt, Bad beat, Check-raise, Limp, Under the gun, Button|Dealer button, Side pot, Rake, Burn card, Gutshot|Inside straight, Slow play, Shark, Whale, Pocket rockets, Cowboys, Ladies, Snowmen, Trips, Set, Quads, Boat, Omaha, Seven-card stud, Five-card draw, Deuces wild, Bullets, Big slick, Suited connectors, Drawing dead, Re-raise, Three-bet, Cut-off, Hijack, Buy-in, Cash game, Tournament, Satellite, Wheel
+85: Broadway, Dolly Parton, Doyle Brunson, Crabs, Ducks, Sailboats, Speed limit, Route 66, Walking sticks, Fishhooks|Hooks, Bicycle, Steel wheel, Backdoor, Rabbit hunting, String bet, Splash the pot, Straddle, Squeeze play, Donk|Donk bet, Nit, Rock, Calling station, Maniac, Bubble, Felted, Hollywooding, Angle shot, Run it twice, Chop, Kansas City lowball, Razz, Badugi, Pineapple
+100: Fish :: Poker slang for a weak player who's about to lose their money. The goldfish takes this personally.

@@ -6,22 +6,6 @@
 85: Elio, Hoppers, Toy Story 5, Luxo Jr., Geri's Game, For the Birds, Bao, Piper, Partly Cloudy, Presto, Lifted
 100: The Good Dinosaur :: Widely reported as Pixar's first box-office flop. Its T. rexes herd cattle like cowboys.
 
-? Name a Tom Hanks movie
-10: Forrest Gump, Toy Story, Cast Away, Big, Saving Private Ryan, Apollo 13
-15: Joe Versus the Volcano, The Terminal
-30: The Green Mile, Philadelphia, Sleepless in Seattle, You've Got Mail, The Da Vinci Code, Catch Me If You Can, The Polar Express, Captain Phillips, Sully, Turner & Hooch|Turner and Hooch, A League of Their Own, Bridge of Spies, Road to Perdition, Splash, Angels & Demons|Angels and Demons, Elvis, A Man Called Otto, A Beautiful Day in the Neighborhood, The Post, Saving Mr. Banks
-60: The 'Burbs|The Burbs, Bachelor Party, The Money Pit, Inferno, Cloud Atlas, Charlie Wilson's War, The Ladykillers, Larry Crowne, Greyhound, News of the World, Finch, Dragnet, Punchline, That Thing You Do!, The Bonfire of the Vanities, Extremely Loud & Incredibly Close|Extremely Loud and Incredibly Close, A Hologram for the King, The Circle, Pinocchio, Asteroid City, Nothing in Common, Volunteers, The Man with One Red Shoe
-85: Every Time We Say Goodbye, Mazes and Monsters|Mazes & Monsters, Here, Toy Story 2, Toy Story 3, Toy Story 4, The Great Buck Howard, Radio Flyer
-100: He Knows You're Alone :: Tom Hanks's film debut was a small part in this 1980 slasher.
-
-? Name a Star Wars character
-10: Darth Vader|Vader, Luke Skywalker|Luke, Han Solo|Han, Princess Leia|Leia, Yoda, Chewbacca|Chewie
-15: Jar Jar Binks|Jar Jar, Boba Fett
-30: R2-D2|R2D2|Artoo, C-3PO|C3PO|Threepio, Obi-Wan Kenobi|Obi-Wan|Obi Wan, Anakin Skywalker|Anakin, Emperor Palpatine|Palpatine, Padmé Amidala|Padme|Padme Amidala, Lando Calrissian|Lando, Darth Maul, Rey, Kylo Ren, Finn, Poe Dameron|Poe, BB-8|BB8, Qui-Gon Jinn|Qui-Gon|Qui Gon, Mace Windu, Count Dooku|Dooku, Jabba the Hutt|Jabba, Grogu|Baby Yoda, The Mandalorian|Din Djarin|Mando, Ahsoka Tano|Ahsoka, General Grievous|Grievous, Admiral Ackbar|Ackbar, Wedge Antilles|Wedge
-60: Jango Fett, Greedo, Captain Phasma|Phasma, General Hux|Hux, Snoke, Cassian Andor|Andor, Jyn Erso, K-2SO, Bib Fortuna, Salacious Crumb, Wicket, Nien Nunb, Mon Mothma, Grand Moff Tarkin|Tarkin, Sebulba, Watto, Maz Kanata, Rose Tico, Bo-Katan, Cara Dune, Moff Gideon, Grand Admiral Thrawn|Thrawn, Cad Bane, Captain Rex|Rex, Ezra Bridger, Kanan Jarrus, Sabine Wren, Hera Syndulla, Asajj Ventress, Savage Opress, Lobot, Biggs Darklighter, Aunt Beru|Beru, Uncle Owen|Owen Lars, Nute Gunray, Zam Wesell, Kit Fisto, Plo Koon, Ki-Adi-Mundi, Aayla Secura, Max Rebo, Dengar, IG-88, Bossk, Zuckuss, 4-LOM
-85: Figrin D'an, Ponda Baba, Dr. Evazan, Oola, Yarael Poof, Dexter Jettster, Lama Su, Taun We, Bail Organa, Sly Moore, Mas Amedda, Garindan, Rappertunie, Sy Snootles, Droopy McCool, Malakili, Kitster, Ric Olié, Boss Nass, Captain Panaka, Captain Tarpals, Darth Plagueis, Darth Bane, Revan, Kreia, Mara Jade, Kyle Katarn, Dash Rendar, Saw Gerrera, Chirrut Îmwe, Baze Malbus, Bodhi Rook, Orson Krennic, Galen Erso, Vel Sartha, Luthen Rael, Dedra Meero, Syril Karn, Fennec Shand, Cobb Vanth, Greef Karga, Peli Motto, Babu Frik, Zorii Bliss, DJ, Amilyn Holdo|Holdo, Lor San Tekka, Unkar Plutt
-100: Porkins|Jek Porkins :: The rebel pilot who insists he can hold it, right before he can't. Fans adore him.
-
 ? Name a Harry Potter character
 10: Harry Potter|Harry, Hermione Granger|Hermione, Ron Weasley|Ron, Albus Dumbledore|Dumbledore, Lord Voldemort|Voldemort|Tom Riddle, Severus Snape|Snape, Rubeus Hagrid|Hagrid
 15: Dobby, Moaning Myrtle
@@ -37,14 +21,6 @@
 60: Sideshow Mel, Superintendent Chalmers|Chalmers, Jimbo Jones|Jimbo, Dolph, Kearney, Martin Prince, Sherri, Terri, Agnes Skinner, Kent Brockman|Brockman, Duffman, Gil Gunderson|Gil, Drederick Tatum, Rainier Wolfcastle|McBain, Sea Captain|Captain McCallister, Bumblebee Man, Lou, Eddie, Snake|Snake Jailbird, Ruth Powers, Maude Flanders, Luann Van Houten, Kirk Van Houten, Uter, Jasper, Herman, Manjula, Mona Simpson, Ling Bouvier, Cecil Terwilliger, Poochie, Blinky, Stampy, Pinchy, Mr. Teeny, Bleeding Gums Murphy, Mindy Simmons, Frank Grimes|Grimey, Allison Taylor, Jacques, Roger Meyers Jr.
 85: Kumiko, Database, Wendell, Richard, Lewis, Ms. Hoover|Elizabeth Hoover, Lindsey Naegle, Gerald Samson|Baby Gerald, Dewey Largo, Judge Snyder, Old Jewish Man, Arnie Pye, Scott Christian, Hank Scorpio, Birch Barlow, Rabbi Krustofsky, Plow King, Cookie Kwan, Sanjay, Titania, Artie Ziff, Jebediah Springfield, Akira, Declan Desmond, Sarah Wiggum, Jessica Lovejoy, Lurleen Lumpkin, Herbert Powell, Capital City Goofball, Gabbo, Squeaky-Voiced Teen, Yes Guy, Dr. Monroe, Johnny Tightlips, Legs, Louie
 100: Guy Incognito :: Homer's exact lookalike, who turns up for a single background gag.
-
-? Name a character from The Office
-10: Michael Scott|Michael, Dwight Schrute|Dwight, Jim Halpert|Jim, Pam Beesly|Pam|Pam Halpert, Stanley Hudson|Stanley
-15: Creed Bratton|Creed, Toby Flenderson|Toby
-30: Kevin Malone|Kevin, Angela Martin|Angela, Oscar Martinez|Oscar, Ryan Howard|Ryan, Kelly Kapoor|Kelly, Andy Bernard|Andy, Phyllis Vance|Phyllis, Meredith Palmer|Meredith, Darryl Philbin|Darryl, Erin Hannon|Erin, Jan Levinson|Jan, Holly Flax|Holly, David Wallace
-60: Gabe Lewis|Gabe, Robert California, Karen Filippelli|Karen, Nellie Bertram|Nellie, Mose Schrute|Mose, Roy Anderson|Roy, Todd Packer|Packer, Pete Miller|Pete, Clark, Deangelo Vickers|Deangelo, Charles Miner|Charles, Jo Bennett, Hank, Cathy Simms, Rolf, Danny Cordray, Nate Nickerson|Nate
-85: Val Johnson|Val, Glenn, Lonny Collins, Madge, Jerry, Phillip Schrute, Robert Lipton|The Senator, Hunter, Tony Gardner|Tony, Devon White, Katy Moore, Donna Newton, Ed Truck, Helene Beesly, Isabel Poreba, Brian, Zeke Schrute, Mr. Figaro, Justine, Brenda, A.J., Troy Underbridge, Alan Brand, Ronni, Bandit, Garbage
-100: Bob Vance :: Vance Refrigeration. He will tell you. Every time.
 
 ? Name a superhero
 10: Superman, Batman, Spider-Man|Spiderman, Iron Man, Wonder Woman, Captain America, The Hulk|Hulk|Incredible Hulk
@@ -94,14 +70,6 @@
 85: Amblin', Something Evil, Savage, Escape to Nowhere, Twilight Zone: The Movie|Twilight Zone, Disclosure Day
 100: Firelight :: Spielberg made this sci-fi feature at 17 for about $500, and a local theater screened it.
 
-? Name a movie with a number in the title
-10: 101 Dalmatians, 12 Angry Men, Ocean's Eleven|Ocean's 11, 13 Going on 30, Seven|Se7en, The Hateful Eight, 300, 21 Jump Street, 10 Things I Hate About You
-15: 8 Mile, The 40-Year-Old Virgin|40 Year Old Virgin, 8½|8 1/2
-30: 2001: A Space Odyssey|2001, 50 First Dates, 28 Days Later, 12 Monkeys, 27 Dresses, The Sixth Sense, Apollo 13, Ocean's Twelve|Ocean's 12, Ocean's Thirteen|Ocean's 13, 17 Again, (500) Days of Summer|500 Days of Summer, Four Weddings and a Funeral, Slaughterhouse-Five, Seven Samurai, The Magnificent Seven, Fantastic Four, The Fifth Element, 1917, 9 to 5|Nine to Five, ¡Three Amigos!|Three Amigos, 3 Idiots, Sixteen Candles|16 Candles, Zero Dark Thirty, Catch-22, Blade Runner 2049, 2012, 10 Cloverfield Lane, Six Degrees of Separation, The Three Musketeers, Snow White and the Seven Dwarfs, 12 Years a Slave|Twelve Years a Slave, 21 Grams, 13 Hours, Two Weeks Notice, 16 Blocks, 3:10 to Yuma, 6 Underground, 2 Fast 2 Furious, Four Christmases, The Hundred-Foot Journey, 1984, The 39 Steps, Five Easy Pieces, Seven Pounds, Seven Years in Tibet|7 Years in Tibet
-60: 9, 21, 88 Minutes, 1408, 127 Hours, 1941, 13 Assassins, 20\,000 Leagues Under the Sea|20000 Leagues Under the Sea, 48 Hrs.|48 Hours, The 400 Blows, The 7th Voyage of Sinbad, The Seventh Seal, Butterfield 8, The Taking of Pelham One Two Three, District 9, Stalag 17, Room 237, The Ten Commandments, Fahrenheit 451, Fahrenheit 9/11, Three Kings, Three Men and a Baby, Three Billboards Outside Ebbing\, Missouri|Three Billboards, 12 Strong, Five Feet Apart, Six Days Seven Nights, Eight Legged Freaks, Eight Below, 8 Women, Nine, 10, 10\,000 BC|10000 BC, The 5th Wave, Thir13en Ghosts|13 Ghosts, The Whole Nine Yards, 50/50, 30 Days of Night, 30 Minutes or Less, The Two Towers, Planet 51, Super 8, Terminator 2, Toy Story 3
-85: 2046, 1900, 8 Heads in a Duffel Bag, 29 Palms, 11:14, 8MM, Love Potion No. 9, Assault on Precinct 13, 49th Parallel, 5 Fingers, Twelve O'Clock High|12 O'Clock High, 52 Pick-Up, 3 Women, 7 Faces of Dr. Lao, The 300 Spartans, The 13th Warrior, 3 Ninjas, Three Days of the Condor|3 Days of the Condor, 4 Months\, 3 Weeks and 2 Days, Seven Psychopaths, Gone in 60 Seconds, 8 Seconds, 200 Cigarettes, 200 Motels, The 6th Day, 9 Songs, Thirteen, 99 Homes, 976-EVIL, 1492: Conquest of Paradise, 2010, 3000 Miles to Graceland, 7 Days in Entebbe, 9½ Weeks|Nine and a Half Weeks
-100: Plan 9 from Outer Space :: Often called the worst movie ever made, which made it a legend.
-
 ? Name a movie with a color in the title
 10: The Green Mile, Black Panther, The Color Purple, The Pink Panther|Pink Panther, Men in Black, Red Dragon, Black Swan, White Chicks
 15: A Clockwork Orange|Clockwork Orange
@@ -144,3 +112,35 @@
 60: Legends of the Hidden Temple, Guts|GUTS, Figure It Out, Remote Control, Win Ben Stein's Money|Win Ben Steins Money, Lingo, Chain Reaction, Tic-Tac-Dough|Tic Tac Dough, Concentration, Sale of the Century, The Joker's Wild|Jokers Wild, Blockbusters, Shop 'til You Drop|Shop Til You Drop, The Wall, Cash Cab, 1 vs. 100|1 vs 100, Greed, Twenty-One|Twenty One, Dog Eat Dog, Hole in the Wall, The Floor, Beat Shazam, Ellen's Game of Games|Game of Games, Celebrity Name Game, Pointless, Tipping Point, Only Connect, University Challenge, Mastermind, The Crystal Maze|Crystal Maze, Taskmaster, QI, Fort Boyard, Takeshi's Castle|Takeshis Castle, You Bet Your Life, Beat the Clock, The Gong Show|Gong Show, Win\, Lose or Draw|Win Lose or Draw, The Cube, Nick Arcade, Get the Picture, Think Fast, Finders Keepers, Wild & Crazy Kids|Wild and Crazy Kids, Fun House, Masters of the Maze
 85: Whew!|Whew, Trivia Trap, Child's Play|Childs Play, Wheel 2000, The Big Spin|Big Spin, Duel, Downfall, The Million Second Quiz|Million Second Quiz, Russian Roulette, Bumper Stumpers, Bullseye, Going for Gold, 3-2-1, Blankety Blank, Bob's Full House|Bobs Full House, Treasure Hunt, Strike It Rich, Queen for a Day, The $64\,000 Question|64000 Question, Beat the Geeks, Street Smarts, Scrabble, Jep!|Jep
 100: Dotto :: A 1950s quiz show yanked off the air after a contestant found another player's answers in a notebook. It set off the quiz show scandals.
+
+? Name a reality TV show
+~drop show
+10: Survivor, The Bachelor|Bachelor, Big Brother, American Idol, Keeping Up with the Kardashians|The Kardashians|Kardashians, The Real Housewives|Real Housewives|Housewives
+30: The Bachelorette|Bachelorette, Love Island, The Amazing Race|Amazing Race, Jersey Shore, The Voice, America's Got Talent|Americas Got Talent|AGT, Dancing with the Stars|DWTS, Shark Tank, Project Runway, Top Chef, Hell's Kitchen|Hells Kitchen, The Apprentice, Duck Dynasty, Teen Mom, 16 and Pregnant, Vanderpump Rules, Love Is Blind, Too Hot to Handle, Selling Sunset, Queer Eye, RuPaul's Drag Race|Drag Race, The Great British Bake Off|Great British Baking Show|Bake Off, Naked and Afraid, Deadliest Catch, Pawn Stars, Storage Wars, Cops, The Real World|Real World, Fear Factor, The X Factor|X Factor, MasterChef, Kitchen Nightmares, Below Deck, Dance Moms, Toddlers & Tiaras|Toddlers and Tiaras, Here Comes Honey Boo Boo|Honey Boo Boo, The Osbournes|Osbournes, Flavor of Love, Catfish, 90 Day Fiancé|90 Day Fiance, Married at First Sight, Extreme Makeover: Home Edition|Extreme Makeover, Fixer Upper, The Traitors|Traitors, Alone
+60: The Simple Life, Laguna Beach, The Hills, Newlyweds: Nick and Jessica|Newlyweds, Punk'd|Punkd, MTV Cribs|Cribs, Pimp My Ride, Jackass, Joe Millionaire, Temptation Island, The Mole, Paradise Hotel, Are You the One?|Are You the One, Ex on the Beach, Bachelor in Paradise, The Challenge, Road Rules, Making the Band, Dog the Bounty Hunter, Ice Road Truckers, American Chopper, Monster Garage, Trading Spaces, Supernanny, Wife Swap, Nanny 911, Extreme Couponing, Hoarders, Intervention, My 600-lb Life, Sister Wives, 19 Kids and Counting, Little People\, Big World|Little People Big World, Jon & Kate Plus 8|Jon and Kate Plus 8, Say Yes to the Dress, Cake Boss, Chopped, Nailed It!|Nailed It, Floor Is Lava, Ink Master, Bar Rescue, The Biggest Loser|Biggest Loser, Undercover Boss, Million Dollar Listing, Flip or Flop, Property Brothers, House Hunters, Tiny House Nation, Love After Lockup, Squid Game: The Challenge, Beast Games, Siesta Key, The City, Shahs of Sunset, Mob Wives, Basketball Wives, Love & Hip Hop|Love and Hip Hop, I'm a Celebrity... Get Me Out of Here!|Im a Celebrity, Strictly Come Dancing|Strictly, Britain's Got Talent|Britains Got Talent, Pop Idol, Gogglebox, Made in Chelsea, The Only Way Is Essex|TOWIE, Geordie Shore, Rock of Love, Hogan Knows Best, Gene Simmons Family Jewels, Run's House|Runs House, Physical: 100|Physical 100
+85: Candid Camera, Expedition Robinson, Boot Camp, Murder in Small Town X, Kid Nation, The Swan, Who Wants to Marry a Multi-Millionaire?|Who Wants to Marry a Multi-Millionaire, Mr. Personality, Average Joe, The Littlest Groom, Married by America, I Wanna Marry Harry, Utopia, The Briefcase, Tool Academy, The Anna Nicole Show, There's Something About Miriam|Theres Something About Miriam, Space Cadets, Solitary, The Glass House, Opposite Worlds, Dating Naked, Naked Attraction
+100: An American Family :: A 1973 PBS series that filmed the Loud family at home. It's often called the first reality TV show.
+
+? Name a Batman villain
+10: The Joker|Joker, The Penguin|Penguin|Oswald Cobblepot, Catwoman|Selina Kyle, The Riddler|Riddler|Edward Nygma, Two-Face|Harvey Dent, Bane, Harley Quinn|Harleen Quinzel, Poison Ivy|Pamela Isley
+30: Mr. Freeze|Mister Freeze|Victor Fries, Scarecrow|Jonathan Crane, Ra's al Ghul|Ras al Ghul, Killer Croc|Waylon Jones, Mad Hatter|Jervis Tetch, Hugo Strange, Clayface|Basil Karlo, Black Mask|Roman Sionis, Deathstroke|Slade Wilson, Hush|Thomas Elliot, Talia al Ghul|Talia, Firefly, Man-Bat|Kirk Langstrom, The Ventriloquist|Ventriloquist|Scarface, Victor Zsasz|Zsasz, Calendar Man, Professor Pyg, Court of Owls|Talon, Red Hood|Jason Todd, Anarky, Solomon Grundy, Carmine Falcone|Falcone, Sal Maroni|Maroni, Rupert Thorne
+60: Tweedledum and Tweedledee|Tweedledum|Tweedledee, Clock King, Blockbuster, Lady Shiva, David Cain, KGBeast, Deadshot, Prometheus, The Batman Who Laughs|Batman Who Laughs, Owlman, Arkham Knight, Phantasm|Mask of the Phantasm, Polka-Dot Man|Polka Dot Man, Killer Moth, Mad Monk, Lock-Up, Black Glove|Doctor Hurt|Dr. Hurt, Cluemaster, Copperhead, Electrocutioner, Magpie, Black Spider, Joe Chill, Mr. Bloom, Onomatopoeia, Tally Man, Wrath, Ratcatcher, Maxie Zeus, Bat-Mite
+85: Kite Man, Egghead, King Tut, Bookworm, Louie the Lilac, Shame, False Face, Signalman, Doctor Death, Crazy Quilt, Nocturna, Abattoir, Amygdala, Catman, Dollmaker, Film Freak, Gearhead, Great White Shark|Warren White, Humpty Dumpty, Penny Plunderer, Roxy Rocket, Spellbinder, Orca
+100: Condiment King :: A villain who attacks with ketchup and mustard guns. He was invented for a 1990s cartoon and later joined the comics.
+
+? Name a Christopher Nolan movie
+~drop movie
+10: Inception, The Dark Knight|Dark Knight, Interstellar, Oppenheimer, Batman Begins
+15: Memento
+30: The Dark Knight Rises|Dark Knight Rises, The Prestige|Prestige, Dunkirk, Tenet, Insomnia
+60: Following, The Odyssey|Odyssey, Man of Steel, Transcendence
+85: Tarantella, Larceny, Quay, Batman v Superman: Dawn of Justice|Batman v Superman, Justice League
+100: Doodlebug :: A three-minute short from 1997 about a man chasing a tiny bug around his apartment.
+
+? Name a Muppet
+10: Kermit the Frog|Kermit, Miss Piggy, Fozzie Bear|Fozzie, Gonzo|The Great Gonzo, Animal, Elmo, Big Bird, Cookie Monster
+15: The Swedish Chef|Swedish Chef
+30: Oscar the Grouch|Oscar, Statler, Waldorf, Rowlf|Rowlf the Dog, Beaker, Dr. Bunsen Honeydew|Bunsen Honeydew|Bunsen, Rizzo the Rat|Rizzo, Scooter, Bert, Ernie, Grover, Count von Count|The Count|Count, Mr. Snuffleupagus|Snuffleupagus|Snuffy, Telly Monster|Telly, Zoe, Abby Cadabby|Abby, Rosita, Sam Eagle|Sam the Eagle, Pepe the King Prawn|Pepe, Camilla the Chicken|Camilla, Dr. Teeth, Floyd Pepper|Floyd, Janice, Zoot, Lew Zealand, Sweetums, Walter, Robin the Frog|Robin
+60: Crazy Harry, Uncle Deadly, Marvin Suggs, Link Hogthrob, Dr. Julius Strangepork|Strangepork, Beauregard, Bobo the Bear|Bobo, Clifford, Mahna Mahna|Mah Na Mah Na, Thog, Hilda, Pops, Nigel, Annie Sue, Wayne and Wanda, Prairie Dawn, Herry Monster, Guy Smiley, Two-Headed Monster, Sherlock Hemlock, Forgetful Jones, Roosevelt Franklin, Hoots the Owl|Hoots, Baby Bear, Murray Monster|Murray, Frazzle, Barkley, Slimey the Worm|Slimey, Lefty the Salesman|Lefty, Constantine, Bean Bunny, Johnny Fiama, Sal Minella, Andy and Randy Pig|Andy Pig|Randy Pig, Mr. Johnson|Fat Blue, Gobo Fraggle|Gobo, Red Fraggle, Wembley, Boober, Mokey, Uncle Traveling Matt|Traveling Matt, Sprocket
+85: Doglion, Gorgon Heap, Behemoth, Mean Mama, Lips, Timmy Monster, Mildred Huxtetter|Mildred, Gladys the Cafeteria Lady|Gladys, Beautiful Day Monster, Droop, Yorick, Taminella Grinderfall|Taminella, Big Mean Carl, Spa'am|Spaam, Clueless Morgan, Polly Lobster, Bad Polly, Dr. Phil Van Neuter, Grundgetta, Bruno the Trashman, Herbert Birdsfoot, Placido Flamingo
+100: Don Music :: A Sesame Street composer who banged his head on the piano when he got stuck. He was retired over worries that kids would copy him.
