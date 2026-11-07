@@ -1,4 +1,6 @@
-// Prompts live in data/*.txt, one file per category. Format:
+// Prompts live in .txt files under data/. A file's category is its name minus any batch number,
+// so data/food.txt and data/pool/food-0002.txt are both "food". data/index.json says which file
+// holds each prompt, so the game only fetches the files a dive needs. Format:
 //
 //   ? Name a pasta shape
 //   ~drop pasta                      (optional: ignore this word in answers, so "penne pasta" counts)
@@ -49,8 +51,6 @@ export const RANKS = [
 ];
 
 export const rankFor = (points) => [...RANKS].reverse().find((r) => points >= r.min);
-
-export const FILES = ['food', 'animals', 'places', 'science', 'history', 'words', 'screen', 'music', 'stories', 'sports', 'games', 'everyday', 'culture'];
 
 const slug = (text) => text.toLowerCase()
   .replace(/^name (a |an |the |some )?/, '')
@@ -106,6 +106,8 @@ const utcDay = (year, month, day) => Date.UTC(year, month, day) / 86400000;
 export function makeCalendar(schedule) {
   const [y, m, d] = schedule.epoch.split('-').map(Number);
   const epoch = utcDay(y, m - 1, d);
+  const first = new Map();
+  schedule.days.forEach((ids, i) => ids.forEach((id) => { if (!first.has(id)) first.set(id, i + 1); }));
   return {
     dayNumber(date) {
       return Math.max(1, utcDay(date.getFullYear(), date.getMonth(), date.getDate()) - epoch + 1);
@@ -117,14 +119,57 @@ export function makeCalendar(schedule) {
     idsFor(day) {
       return schedule.days[(day - 1) % schedule.days.length];
     },
+    // The first day a prompt is the daily dive, or null if it isn't on the schedule.
+    firstDay(id) {
+      return first.get(id) ?? null;
+    },
   };
 }
 
+async function fetchOk(path, options) {
+  const res = await fetch(path, options);
+  if (!res.ok) throw new Error(`${path}: ${res.status}`);
+  return res;
+}
+
+// Loads the schedule and the prompt index. Prompt files load later, when a dive needs them.
 export async function loadContent() {
-  const [schedule, ...texts] = await Promise.all([
-    fetch('data/schedule.json').then((res) => { if (!res.ok) throw new Error('schedule'); return res.json(); }),
-    ...FILES.map((file) => fetch(`data/${file}.txt`).then((res) => { if (!res.ok) throw new Error(file); return res.text(); })),
-  ]);
-  const prompts = texts.flatMap((text, i) => parsePrompts(text, FILES[i]));
-  return { prompts, byId: new Map(prompts.map((p) => [p.id, p])), calendar: makeCalendar(schedule) };
+  const [schedule, index] = await Promise.all(['data/schedule.json', 'data/index.json'].map((path) => fetchOk(path).then((res) => res.json())));
+  const fileOf = new Map(index.prompts.map(([id, file]) => [id, file]));
+  const byId = new Map();
+  const loading = new Map();
+  const filesFor = (ids) => [...new Set(ids.map((id) => fileOf.get(id)))];
+
+  const loadFile = (i, options) => {
+    if (!loading.has(i)) {
+      const { path, category } = index.files[i];
+      const job = fetchOk(`data/${path}`, options).then((res) => res.text()).then((text) => {
+        for (const prompt of parsePrompts(text, category)) byId.set(prompt.id, prompt);
+      });
+      // A failed fetch is forgotten, so the next request tries again.
+      job.catch(() => loading.delete(i));
+      loading.set(i, job);
+    }
+    return loading.get(i);
+  };
+
+  return {
+    calendar: makeCalendar(schedule),
+    ids: index.prompts.map(([id]) => id),
+    byId,
+    categoryOf: (id) => index.files[fileOf.get(id)]?.category ?? null,
+    has: (ids) => ids.every((id) => byId.has(id)),
+    async load(ids) {
+      const unknown = ids.filter((id) => !fileOf.has(id));
+      if (unknown.length) throw new Error(`not in data/index.json: ${unknown.join(', ')}`);
+      await Promise.all(filesFor(ids).map((i) => loadFile(i)));
+      // A copy the browser cached before a prompt was added won't have it, so fetch past the cache once.
+      const missing = ids.filter((id) => !byId.has(id));
+      if (!missing.length) return;
+      for (const i of filesFor(missing)) loading.delete(i);
+      await Promise.all(filesFor(missing).map((i) => loadFile(i, { cache: 'reload' })));
+      const lost = ids.filter((id) => !byId.has(id));
+      if (lost.length) throw new Error(`missing from their files: ${lost.join(', ')}`);
+    },
+  };
 }

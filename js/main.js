@@ -21,7 +21,7 @@ const RING = 125.664;
 const SCREENS = ['title', 'play', 'reveal', 'results'];
 const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 
-const G = { phase: 'loading', dive: null, prompt: null, index: null, today: 1, token: 0, lastSecond: null, shownDepth: null, resultsDive: null, fromArchive: false };
+const G = { phase: 'loading', dive: null, prompt: null, index: null, today: 1, token: 0, lastSecond: null, shownDepth: null, resultsDive: null, fromArchive: false, loading: false, noticeTimer: null };
 let content = null;
 let world = null;
 
@@ -99,34 +99,78 @@ function anchorsOf(dive) {
   return anchors;
 }
 
-function nextEndlessIds() {
-  const state = store.get('endless.state', { order: [], pos: 0, run: 0, best: 0, played: 0 });
-  // Next week's daily prompts stay out of Endless so it can't spoil them.
-  const reserved = new Set();
-  for (let day = G.today; day < G.today + 7; day += 1) content.calendar.idsFor(day).forEach((id) => reserved.add(id));
+// Endless never shows a daily prompt before its day: it plays past dailies and prompts that
+// aren't scheduled. Only if those can't fill one dive does it borrow the dailies furthest away,
+// and never one due within a week.
+const ENDLESS_MIN = PROMPTS_PER_DIVE;
+
+function endlessPool() {
+  const { calendar } = content;
+  const safe = [];
+  const later = [];
+  for (const id of content.ids) {
+    const first = calendar.firstDay(id);
+    if (first === null || first < G.today) safe.push(id);
+    else if (first >= G.today + 7) later.push(id);
+  }
+  if (safe.length >= ENDLESS_MIN) return safe;
+  later.sort((a, b) => calendar.firstDay(b) - calendar.firstDay(a));
+  return safe.concat(later.slice(0, ENDLESS_MIN - safe.length));
+}
+
+const endlessState = () => store.get('endless.state', { seen: [], next: null, run: 0, best: 0, played: 0 });
+
+function shuffle(list) {
+  for (let i = list.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+}
+
+// Seven prompts the player hasn't had in Endless yet, from seven categories when the pool allows.
+// Prompts they've already met in a daily dive go last. Once they've played the whole pool, it starts over.
+function drawEndless(state, pool) {
+  const seen = new Set(state.seen || []);
+  let fresh = pool.filter((id) => !seen.has(id));
+  if (fresh.length < PROMPTS_PER_DIVE) {
+    seen.clear();
+    fresh = [...pool];
+  }
+  const met = new Set(store.keysWith('daily.').flatMap((key) => (store.get(key)?.rounds || []).map((round) => round.id)));
+  fresh = [...shuffle(fresh.filter((id) => !met.has(id))), ...shuffle(fresh.filter((id) => met.has(id)))];
   const ids = [];
   const categories = new Set();
-  let guard = content.prompts.length * 3;
-  while (ids.length < PROMPTS_PER_DIVE && guard > 0) {
-    guard -= 1;
-    if (state.pos >= state.order.length) {
-      state.order = content.prompts.map((p) => p.id).sort(() => Math.random() - 0.5);
-      state.pos = 0;
+  for (const id of fresh) {
+    if (ids.length < PROMPTS_PER_DIVE && !categories.has(content.categoryOf(id))) {
+      categories.add(content.categoryOf(id));
+      ids.push(id);
     }
-    const id = state.order[state.pos];
-    state.pos += 1;
-    const category = content.byId.get(id)?.category;
-    if (!category || ids.includes(id) || (reserved.has(id) && guard > content.prompts.length)) continue;
-    if (categories.has(category) && guard > content.prompts.length * 2) {
-      state.order.push(id);
-      continue;
-    }
-    categories.add(category);
-    ids.push(id);
   }
-  state.run += 1;
-  store.set('endless.state', state);
-  return { ids, run: state.run };
+  for (const id of fresh) if (ids.length < PROMPTS_PER_DIVE && !ids.includes(id)) ids.push(id);
+  ids.forEach((id) => seen.add(id));
+  state.seen = [...seen];
+  return ids;
+}
+
+// The next endless dive is picked ahead of time, so its prompts can load before anyone asks for it.
+function queueEndless() {
+  const state = endlessState();
+  const pool = endlessPool();
+  if (!state.next || !state.next.every((id) => pool.includes(id))) {
+    state.next = drawEndless(state, pool);
+    store.set('endless.state', state);
+  }
+  content.load(state.next).catch(() => {});
+  return state;
+}
+
+// Today's dive and the next endless one load in the background, so starting either is instant.
+function prefetch() {
+  content.load(content.calendar.idsFor(G.today)).catch(() => {});
+  const current = store.get('endless.current');
+  if (current && !current.done) content.load(current.ids).catch(() => {});
+  else queueEndless();
 }
 
 // Title ----------------------------------------------------------------------------------
@@ -144,6 +188,7 @@ function refreshTitle() {
     el.btnBegin.innerHTML = `Dive in ${arrow}`;
     el.diveLabel.textContent = `Dive #${G.today} · ${shortDate(G.today)}`;
   }
+  prefetch();
 }
 
 function goHome() {
@@ -315,7 +360,7 @@ function surface() {
   dive.deadline = null;
   saveDive(dive);
   if (dive.mode === 'endless') {
-    const state = store.get('endless.state', { order: [], pos: 0, run: 0, best: 0, played: 0 });
+    const state = endlessState();
     state.best = Math.max(state.best || 0, scoreOf(dive));
     state.played = (state.played || 0) + 1;
     store.set('endless.state', state);
@@ -507,21 +552,6 @@ function renderChart(box, dive) {
 
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
-function roundBody(round) {
-  const prompt = content.byId.get(round.id);
-  if (!prompt) return '';
-  const mark = (answer) => (round.name === answer.name ? `<mark>${esc(answer.name)}</mark>` : esc(answer.name));
-  const gem = prompt.gem
-    ? `<div class="gem-box"><span class="label">${esc(TIERS[5].name)}</span><b>${esc(prompt.gem.name)}</b><span>${esc(prompt.gem.blurb)}</span></div>`
-    : '';
-  const groups = [4, 3, 2, 1, 0].map((tier) => {
-    const answers = prompt.answers.filter((answer) => answer.tier === tier);
-    if (!answers.length) return '';
-    return `<div class="tier-group"><h4 style="color:${TIERS[tier].color}">${esc(TIERS[tier].name)} · ${TIERS[tier].pts}</h4><p>${answers.map(mark).join(', ')}</p></div>`;
-  }).join('');
-  return gem + groups;
-}
-
 function showResults(dive) {
   G.phase = 'results';
   G.resultsDive = dive;
@@ -539,18 +569,17 @@ function showResults(dive) {
   const primary = isEndless
     ? '<button id="resNext" class="btn btn-quiet" type="button">Next endless dive</button>'
     : '<button id="resEndless" class="btn btn-quiet" type="button">Play endless</button>';
-  const rounds = dive.rounds.map((round, i) => {
+  // Only the player's own answers. Listing the rest would give away the hidden answers for
+  // anyone who meets the prompt again.
+  const rounds = dive.rounds.map((round) => {
     const prompt = content.byId.get(round.id);
     const tier = TIERS[round.tier];
-    return `<details class="round" data-i="${i}">
-        <summary>
-          <span class="round-prompt">${esc(prompt?.text || round.id)}</span>
-          <span class="round-answer">${esc(round.name || 'Nothing caught')}</span>
-          <span class="round-tier" style="color:${round.tier >= 0 ? tier.color : 'var(--muted)'}">${round.tier >= 0 ? esc(tier.name) : 'Time ran out'}</span>
-          <span class="round-pts">${round.pts}</span>
-        </summary>
-        <div class="round-body"></div>
-      </details>`;
+    return `<div class="round">
+        <span class="round-prompt">${esc(prompt?.text || round.id)}</span>
+        <span class="round-answer">${esc(round.name || 'Nothing caught')}</span>
+        <span class="round-tier" style="color:${round.tier >= 0 ? tier.color : 'var(--muted)'}">${round.tier >= 0 ? esc(tier.name) : 'Time ran out'}</span>
+        <span class="round-pts">${round.pts}</span>
+      </div>`;
   }).join('');
   el.results.innerHTML = `<div class="results-inner">
       <div class="results-head">
@@ -573,7 +602,7 @@ function showResults(dive) {
         <div id="resChart" class="chart"></div>
       </section>
       <section class="block">
-        <div class="block-title"><h3>What else was down there</h3><span>Tap a prompt</span></div>
+        <div class="block-title"><h3>Your catches</h3></div>
         <div class="rounds">${rounds}</div>
       </section>
       ${isEndless ? '' : `<section class="block">
@@ -586,12 +615,6 @@ function showResults(dive) {
   renderChart($('resChart'), dive);
   const countdown = $('nextDiveCountdown');
   if (countdown) countdown.textContent = untilMidnight();
-  el.results.querySelectorAll('details.round').forEach((node) => {
-    node.addEventListener('toggle', () => {
-      const body = node.querySelector('.round-body');
-      if (node.open && !body.innerHTML) body.innerHTML = roundBody(dive.rounds[Number(node.dataset.i)]);
-    });
-  });
   const copy = $('resCopy');
   copy.addEventListener('click', async () => {
     audio.unlock();
@@ -626,13 +649,40 @@ function showResults(dive) {
 }
 
 // Modes ----------------------------------------------------------------------------------
+function notice(text) {
+  el.bootMessage.textContent = text;
+  el.bootMessage.classList.add('is-notice');
+  el.bootMessage.hidden = false;
+  clearTimeout(G.noticeTimer);
+  G.noticeTimer = setTimeout(() => { el.bootMessage.hidden = true; }, 5000);
+}
+
+// Runs `then` once these prompts have loaded. When they already have, it runs straight away,
+// still inside the tap, which phones need before they'll open the keyboard.
+function whenLoaded(ids, then) {
+  if (content.has(ids)) {
+    then();
+    return;
+  }
+  if (G.loading) return;
+  G.loading = true;
+  content.load(ids)
+    .then(() => then(), (error) => {
+      console.error(error);
+      notice('Couldn’t load that dive. Check your connection and try again.');
+    })
+    .finally(() => { G.loading = false; });
+}
+
 function startDaily() {
   audio.unlock();
   audio.click();
-  G.fromArchive = false;
   const dive = getDaily(G.today);
-  if (dive.done) showResults(dive);
-  else beginDive(dive, { jump: isFresh(dive) });
+  whenLoaded(dive.ids, () => {
+    G.fromArchive = false;
+    if (dive.done) showResults(dive);
+    else beginDive(dive, { jump: isFresh(dive) });
+  });
 }
 
 function startEndless() {
@@ -641,19 +691,28 @@ function startEndless() {
   closeSheet();
   const current = store.get('endless.current');
   if (current && !current.done) {
-    beginDive(current, { jump: isFresh(current) });
+    whenLoaded(current.ids, () => beginDive(current, { jump: isFresh(current) }));
     return;
   }
-  const { ids, run } = nextEndlessIds();
-  beginDive(makeDive('endless', run, ids), { jump: true });
+  const state = queueEndless();
+  whenLoaded(state.next, () => {
+    const ids = state.next;
+    state.next = null;
+    state.run += 1;
+    store.set('endless.state', state);
+    beginDive(makeDive('endless', state.run, ids), { jump: true });
+    queueEndless();
+  });
 }
 
 function openDay(day) {
   closeSheet();
-  G.fromArchive = true;
   const dive = getDaily(day);
-  if (dive.done) showResults(dive);
-  else beginDive(dive, { jump: isFresh(dive) });
+  whenLoaded(dive.ids, () => {
+    G.fromArchive = true;
+    if (dive.done) showResults(dive);
+    else beginDive(dive, { jump: isFresh(dive) });
+  });
 }
 
 // Sheets ---------------------------------------------------------------------------------

@@ -3,24 +3,22 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { FILES, PROMPTS_PER_DIVE, parsePrompts } from '../js/content.js';
+import { PROMPTS_PER_DIVE } from '../js/content.js';
 import { buildIndex, findAnswer, normalize } from '../js/match.js';
+import { indexJSON, readPrompts } from './prompt-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const problems = [];
 const warnings = [];
-const prompts = [];
+const content = readPrompts(join(root, 'data'));
+const { prompts } = content;
 const counts = {};
+for (const prompt of prompts) counts[prompt.category] = (counts[prompt.category] || 0) + 1;
+if (!prompts.length) problems.push('no prompt files found in data/');
 
-for (const file of FILES) {
-  const path = join(root, 'data', `${file}.txt`);
-  if (!existsSync(path)) {
-    problems.push(`missing file data/${file}.txt`);
-    continue;
-  }
-  const parsed = parsePrompts(readFileSync(path, 'utf8'), file);
-  counts[file] = parsed.length;
-  prompts.push(...parsed);
+const indexPath = join(root, 'data', 'index.json');
+if (!existsSync(indexPath) || readFileSync(indexPath, 'utf8').replace(/\r\n/g, '\n') !== indexJSON(content)) {
+  problems.push('data/index.json is out of date. Run node scripts/build-index.mjs');
 }
 
 const seenIds = new Map();

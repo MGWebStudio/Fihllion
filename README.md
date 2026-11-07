@@ -12,7 +12,7 @@ It's a plain static site with no build step, so GitHub Pages serves the files as
 
 ## Adding prompts
 
-Prompts live in `data/*.txt`, with one file per category. Each one looks like this:
+Prompts live in `.txt` files under `data/`. A file's name is its category, minus any batch number, so `data/food.txt` and `data/pool/food-0002.txt` are both food. Each prompt looks like this:
 
 ```
 ? Name a pasta shape
@@ -35,11 +35,14 @@ Prompts live in `data/*.txt`, with one file per category. Each one looks like th
 Then run these and push:
 
 ```
-node scripts/check-prompts.mjs
+node scripts/build-index.mjs
 node scripts/build-schedule.mjs
+node scripts/check-prompts.mjs
 ```
 
-The first catches mistakes. The second adds new daily dives from any prompts that aren't scheduled yet. Days already in the schedule never change. After the last scheduled day, the dives repeat from the start.
+The first updates `data/index.json`, which tells the game which file holds each prompt so it only downloads the files a dive needs. The second adds new daily dives from any prompts that aren't scheduled yet. Days already in the schedule never change, and after the last scheduled day the dives repeat from the start. The third catches mistakes.
+
+Endless never shows a daily prompt before its day. It plays past dailies and prompts that aren't scheduled, saving the ones a player already met in a daily for last. Only if there aren't enough for a single dive does it borrow the dailies furthest away, never one due within a week. The results screen shows only the player's own answers, so the hidden answers stay hidden.
 
 ## Running it locally
 

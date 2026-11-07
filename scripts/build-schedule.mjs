@@ -5,7 +5,8 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { FILES, PROMPTS_PER_DIVE, parsePrompts } from '../js/content.js';
+import { PROMPTS_PER_DIVE } from '../js/content.js';
+import { readPrompts } from './prompt-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const schedulePath = join(root, 'data', 'schedule.json');
@@ -13,10 +14,7 @@ const schedule = existsSync(schedulePath)
   ? JSON.parse(readFileSync(schedulePath, 'utf8'))
   : { epoch: '2026-11-03', days: [] };
 
-const prompts = FILES.flatMap((file) => {
-  const path = join(root, 'data', `${file}.txt`);
-  return existsSync(path) ? parsePrompts(readFileSync(path, 'utf8'), file) : [];
-});
+const { prompts } = readPrompts(join(root, 'data'));
 
 let seed = 20261103 + schedule.days.length;
 const random = () => {
