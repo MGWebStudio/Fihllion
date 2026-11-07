@@ -6,14 +6,6 @@
 85: Xoloitzcuintli|Xolo, Bergamasco, Otterhound, Lagotto Romagnolo, Affenpinscher, Brussels griffon, Norwegian elkhound, Lundehund, Saluki, Sloughi, Azawakh, Pharaoh hound, Ibizan hound, Kuvasz, Beauceron, Briard, Bouvier des Flandres, Schipperke, Tibetan spaniel, Japanese chin, Coton de Tulear, Clumber spaniel, Sussex spaniel, Curly-coated retriever, Flat-coated retriever, Nova Scotia duck tolling retriever|Toller, Chesapeake Bay retriever, Spinone Italiano, Wirehaired pointing griffon, Kooikerhondje, Sealyham terrier, Dandie Dinmont terrier, Glen of Imaal terrier, Skye terrier, Bedlington terrier, Norfolk terrier, Norwich terrier, Lakeland terrier, Manchester terrier, Rat terrier, Treeing walker coonhound, Redbone coonhound, Plott hound, Black Russian terrier, Caucasian shepherd, Boerboel, Tosa, Thai ridgeback, Kai Ken, Kishu Ken, Hokkaido, Finnish spitz, Swedish vallhund, Pumi, Mudi, Cesky terrier, Entlebucher, Greater Swiss Mountain dog
 100: Komondor :: Hungary's sheep guardian, covered head to tail in cords that make it look like a walking mop.
 
-? Name a kind of fish
-10: Salmon, Tuna, Goldfish, Trout, Bass, Cod
-15: Clownfish|Nemo, Pufferfish|Blowfish, Swordfish
-30: Shark, Catfish, Tilapia, Halibut, Mackerel, Sardine, Anchovy, Perch, Carp, Koi, Pike, Mahi-mahi|Mahi mahi, Snapper|Red snapper, Flounder, Herring, Walleye, Barracuda, Eel, Betta|Siamese fighting fish, Angelfish, Piranha, Seahorse, Stingray, Bluegill, Haddock, Sea bass, Sturgeon, Marlin, Tetra|Neon tetra, Guppy, Anglerfish, Sole, Manta ray, Crappie
-60: Grouper, Pollock|Pollack, Monkfish, Sunfish|Mola mola|Ocean sunfish, Lionfish, Tang|Blue tang|Dory, Parrotfish, Minnow, Gar, Smelt, Bream, Whitefish, Turbot, Sailfish, Wahoo, Yellowtail, Swai, Hammerhead, Molly, Platy, Discus, Oscar, Arowana, Coelacanth, Lamprey, Remora, Hagfish, Tarpon, Bonefish, Muskie|Muskellunge, Zander, Arctic char|Char, Shad, Lingcod, Rockfish, Triggerfish, Butterflyfish, Damselfish, Hake, Plaice, Skate, Steelhead, Mullet, Drum, Amberjack
-85: Oarfish, Wrasse, Blobfish, Goby, Blenny, Stonefish, Frogfish, Hatchetfish, Lanternfish, Viperfish, Gulper eel, Fangtooth, Barreleye, Moray|Moray eel, Snakehead, Paddlefish, Bowfin, Sculpin, Sheepshead, Cobia, Pompano, Snook, Tautog, Porgy|Scup, John Dory, Opah|Moonfish, Escolar, Barramundi, Arapaima, Pacu, Tigerfish, Mudskipper, Archerfish, Sawfish, Guitarfish, Wobbegong, Burbot, Ide, Tench, Roach, Rudd, Dace, Chub, Gudgeon, Bitterling, Loach, Pleco|Plecostomus, Cichlid, Gourami, Danio|Zebrafish, Barb, Rasbora, Shubunkin, Snailfish, Handfish, Tilefish, Hoki, Orange roughy, Ribbonfish
-100: Sarcastic fringehead :: A real fish. Rival males settle disputes by pressing their giant open mouths together.
-
 ? Name an insect or bug
 10: Ant, Bee|Honeybee|Bumblebee, Butterfly, Fly|Housefly, Mosquito, Ladybug|Ladybird, Beetle, Grasshopper, Cockroach|Roach
 15: Spider, Praying mantis|Mantis
@@ -38,39 +30,6 @@
 60: Gaboon viper, Pit viper, Bushmaster, Fer-de-lance, Tiger, Brown|Eastern brown, Boomslang, Russell's viper, Green tree python, Emerald tree boa, Rainbow boa, Sand boa, Horned viper, Saw-scaled viper, Death adder, Mojave rattlesnake|Mojave, Timber rattlesnake, Pine, Indigo, Inland taipan, Flying, Vine, Whip, Habu, Mangrove, Water, Blind|Worm
 85: Mulga, Ribbon, Ringneck, Mud, Rubber boa, Dumeril's boa, Bismarck ringed python, Carpet python, Children's python, Blood python, Rosy boa, Twig, Egg-eating, Sunbeam, File|Wart, Black-headed python, Rinkhals, Cape cobra, Coachwhip, Lancehead, Terciopelo, Cantil, Massasauga, Urutu, Jararaca, Kukri, Paradise tree
 100: Tentacled :: An aquatic snake with two little tentacles on its snout for feeling out fish.
-
-? Name a wild cat
-10: Lion, Tiger, Leopard, Cheetah, Jaguar, Panther|Black panther
-15: Snow leopard, Liger
-30: Cougar|Puma|Mountain lion, Lynx, Bobcat, Ocelot, Clouded leopard, Serval, Caracal
-60: Margay, Sand cat, Jaguarundi, Bengal tiger, Siberian tiger|Amur tiger, Amur leopard, Canada lynx, Iberian lynx, Pallas's cat|Manul, African golden cat, Black-footed cat, Wildcat|European wildcat, Jungle cat, Tigon, Bay cat, Marbled cat, Rusty-spotted cat, Oncilla|Tigrina
-85: Geoffroy's cat, Kodkod|Guiña, Pampas cat|Colocolo, Andean mountain cat|Andean cat, Flat-headed cat, Asian golden cat, Leopard cat, Chinese mountain cat, Sumatran tiger, Malayan tiger, Barbary lion, Asiatic lion, Florida panther, Saber-toothed cat|Sabertooth|Smilodon, Cave lion, Sunda clouded leopard, Eurasian lynx
-100: Fishing cat :: It dives into water after fish. The goldfish would like a word.
-
-? Name a sea creature that isn't a fish
-10: Whale, Dolphin, Octopus, Jellyfish, Crab, Lobster, Shrimp|Prawn, Seal, Starfish|Sea star, Sea turtle|Turtle
-15: Narwhal
-30: Squid, Sea lion, Walrus, Manatee|Sea cow, Oyster, Clam, Mussel, Sea otter|Otter, Orca|Killer whale, Coral, Sea urchin|Urchin, Blue whale, Humpback whale|Humpback, Beluga, Sponge, Scallop, Sea anemone|Anemone, Barnacle, Hermit crab, Nautilus, Cuttlefish, Penguin, Sperm whale, Porpoise, Dugong, Sea cucumber, Plankton, Elephant seal
-60: Mantis shrimp, Horseshoe crab, Conch, Abalone, Sea slug|Nudibranch, Portuguese man o' war|Man o' war, Sea snake, Limpet, Periwinkle, Whelk, Giant squid, Vampire squid, Dumbo octopus, Blue-ringed octopus, Box jellyfish, Moon jelly, Bowhead whale, Right whale, Gray whale, Minke whale, Fin whale, Spider crab, King crab, Fiddler crab, Sea spider, Tube worm, Sea pen, Sea lily, Sand dollar, Copepod, Amphipod, Isopod|Giant isopod, Marine iguana, Leatherback, Loggerhead, Coconut crab
-85: Comb jelly, Tardigrade, Sea angel, Sea butterfly, Salp, Pteropod, Goose barnacle, Chiton, Cone snail, Geoduck, Yeti crab, Pompeii worm, Bobbit worm, Christmas tree worm, Feather star, Brittle star, Basket star, Crown-of-thorns starfish, Sea hare, Sea squirt|Tunicate, Bryozoan, Brachiopod|Lamp shell, Beaked whale|Cuvier's beaked whale, Vaquita, Steller's sea cow, Hawksbill, Olive ridley, Pistol shrimp, Cleaner shrimp, Decorator crab, Pea crab, Sponge crab, Colossal squid, Bobtail squid, Firefly squid, Mimic octopus, Argonaut, Flamingo tongue snail, Sea pig
-100: Krill :: Somewhere, a game about krill is very proud of you.
-
-? Name a word for a baby animal
-~drop baby
-10: Puppy|Pup, Kitten, Cub, Calf, Chick
-15: Joey
-30: Foal, Lamb, Piglet, Duckling, Fawn, Kid, Tadpole|Polliwog, Colt, Filly, Gosling, Owlet, Eaglet, Bunny, Hatchling, Cygnet, Larva, Leveret
-60: Kit, Poult, Squab, Eyas, Fry, Elver, Smolt, Nymph, Grub, Whelp, Yearling, Cria, Froglet, Fingerling, Pullet, Heifer, Cockerel, Hoglet, Spat, Squeaker, Nestling, Fledgling
-85: Parr, Alevin, Wriggler, Keet, Porcupette, Pinkie|Pinky, Weaner, Farrow, Spiderling, Ephyra, Neonate, Leptocephalus, Chickling, Shoat|Shote, Gilt, Sprat, Pupa
-100: Puggle :: A baby echidna. It hatches from an egg and grows up in its mother's pouch.
-
-? Name a word for a group of animals
-10: Herd, Flock, Pack, School, Swarm
-15: Murder
-30: Pride, Gaggle, Pod, Colony, Litter, Hive, Troop, Brood, Nest, Shoal, Den, Drove
-60: Parliament, Clowder, Crash, Tower, Mischief, Flamboyance, Bevy, Covey, Skein, Bloat, Dazzle, Charm, Army, Raft, Mob, Rookery, Waddle, Huddle, Murmuration, Unkindness, Exaltation, Smack, Sleuth|Sloth, Ambush, Romp, Leap
-85: Business, Knot, Zeal, Prickle, Kindle, Kettle, Wake, Cast, Rabble, Cauldron, Stand, Sounder, Cete, Skulk, Bask, Float, Bale, Intrusion, Plague, Grist, Scourge, Shrewdness, Barrel, Conspiracy, Pandemonium, Descent, Convocation, Fluther, Bloom, Kaleidoscope, Harem, Gam, Bed, Run, Nide, Sord
-100: Implausibility :: A group of wildebeest can be called an implausibility of gnus. Yes, really.
 
 ? Name an animal that starts with P
 10: Pig, Penguin, Panda, Parrot, Polar bear
@@ -151,3 +110,48 @@
 60: Emu, Pheasant, Pigeon|Dove, Earthworm|Worm|Worms, Silkworm, Mink, Deer|Red deer, Elk|Wapiti, Reindeer|Caribou, Guinea pig|Cuy, Snail|Escargot, Alligator, Crocodile, Cricket|Crickets, Shrimp, Oyster, Mussel, Fish, Capon, Bantam, Drake, Gander, Wether, Gilt, Barrow, Shoat|Shote, Jenny|Jennet, Hinny, Zebu, Mithun|Gayal, Banteng, Dzo|Zo
 85: Musk ox, Vicuña|Vicuna, Guanaco, Rhea, Muscovy duck, Black soldier fly, Mealworm, Chinchilla, Nutria|Coypu, Capybara, Grasscutter|Cane rat, Sea cucumber, Abalone, Geoduck, Eel, Sturgeon, Tilapia, Catfish, Trout, Carp, Koi
 100: Cochineal :: A tiny bug farmed on cactus pads. Crushed, it makes carmine, a red dye used in some candy, yogurt and lipstick.
+
+? Name a lizard
+~drop lizard,lizards
+10: Gecko, Iguana, Chameleon, Komodo dragon|Komodo, Bearded dragon, Gila monster
+15: Godzilla
+30: Monitor|Monitor lizard, Skink, Anole|Green anole, Frilled lizard|Frill-necked lizard, Horned lizard|Horny toad, Leopard gecko, Basilisk|Jesus lizard, Thorny devil, Water dragon|Chinese water dragon, Tegu, Uromastyx|Spiny-tailed agama|Spiny-tailed lizard, Savannah monitor, Nile monitor, Tokay gecko, Crested gecko, Blue-tongued skink|Blue-tongue, Glass lizard|Glass snake, Slow worm, Marine iguana, Green iguana, Chuckwalla, Collared lizard, Fence lizard, Whiptail, Alligator lizard, Flying dragon|Draco, Mexican beaded lizard|Beaded lizard, Panther chameleon, Veiled chameleon
+60: Shingleback, Perentie, Lace monitor|Goanna, Water monitor, Black-throated monitor, Ackie monitor, Emerald tree monitor, Rhinoceros iguana, Desert iguana, Spiny-tailed iguana, Fiji banded iguana, Rock iguana, Galápagos land iguana|Land iguana, Knight anole, Brown anole, Day gecko, Gargoyle gecko, Leaf-tailed gecko, Fat-tailed gecko, Flying gecko, Satanic leaf-tailed gecko, Mossy leaf-tailed gecko, Mourning gecko, House gecko, Sand lizard, Common wall lizard|Wall lizard, Ocellated lizard|Jewelled lizard, Viviparous lizard|Common lizard, Armadillo girdled lizard|Armadillo lizard, Sungazer, Plated lizard, Caiman lizard, Earless monitor, Crocodile skink, Fire skink, Five-lined skink, Prehensile-tailed skink|Solomon Islands skink, Sailfin lizard, Jackson's chameleon|Jacksons chameleon, Pygmy chameleon, Parson's chameleon|Parsons chameleon, Brookesia
+85: Lesser Antillean iguana, Blue iguana|Grand Cayman blue iguana, Lord Howe skink, Pygmy bluetongue, Spiny-tailed monitor, Merten's water monitor, Quince monitor, Crocodile monitor, Gray's monitor, Texas horned lizard, Regal horned lizard, Short-horned lizard, Desert night lizard, Granite night lizard, Shovel-snouted lizard, Fringe-toed lizard, Zebra-tailed lizard, Rainbow agama, Toad-headed agama, Lyre-headed lizard, Gonocephalus, Chinese crocodile lizard
+100: Brookesia nana :: A chameleon from Madagascar found in 2021. The males are among the smallest reptiles ever recorded, small enough to sit on a fingertip.
+
+? Name an extinct animal
+~drop extinct
+10: Woolly mammoth|Mammoth, Dodo, Saber-toothed tiger|Sabertooth|Saber-toothed cat|Smilodon, Megalodon, Passenger pigeon, Tasmanian tiger|Thylacine
+15: T. rex|Tyrannosaurus|T-Rex|Dinosaur
+30: Mastodon, Woolly rhinoceros|Woolly rhino, Great auk, Steller's sea cow|Stellers sea cow, Moa, Irish elk|Giant deer, Quagga, Aurochs, Dire wolf, Cave bear, Giant ground sloth|Ground sloth|Megatherium, Glyptodon, Haast's eagle|Haasts eagle, Elephant bird, Carolina parakeet, Ivory-billed woodpecker, Western black rhinoceros|Western black rhino, Baiji|Yangtze river dolphin, Pyrenean ibex, Golden toad, Caspian tiger, Javan tiger, Bali tiger, Japanese wolf, Falkland Islands wolf|Warrah, Heath hen, Labrador duck, Sea mink, Trilobite, Ammonite, Pterodactyl|Pterosaur, Plesiosaur, Ichthyosaur, Mosasaur, Neanderthal
+60: Short-faced bear, American lion, Cave lion, Diprotodon, Thylacoleo|Marsupial lion, Megalania, Procoptodon|Giant kangaroo, Genyornis, Rodrigues solitaire, Réunion ibis|Reunion ibis, Huia, Laughing owl, Stephens Island wren|Lyall's wren, Bluebuck|Blue antelope, Schomburgk's deer|Schomburgks deer, Toolache wallaby, Pig-footed bandicoot, Desert rat-kangaroo, Bramble Cay melomys, Christmas Island pipistrelle, Po'ouli|Poouli, Kauai oo|Kauaʻi ʻōʻō, Atlas bear, Barbary lion, Cape lion, Zanzibar leopard, Formosan clouded leopard, Tarpan, Syrian elephant, Dwarf elephant, Homo floresiensis|Hobbit, Gigantopithecus, Paraceratherium, Andrewsarchus, Entelodont|Hell pig, Titanoboa, Arthropleura, Meganeura, Dunkleosteus, Helicoprion, Anomalocaris, Opabinia, Hallucigenia, Dimetrodon
+85: Lesser bilby, Broad-faced potoroo, Crescent nail-tail wallaby, Eastern hare-wallaby, Lake Pedder earthworm, Xerces blue, Levuana moth, Gastric-brooding frog, Southern day frog, Chinese paddlefish, Galápagos damsel, Liverpool pigeon, Choiseul pigeon, Mauritius blue pigeon, Red rail, Kosrae crake, Bushwren, Lord Howe swamphen, Slender-billed curlew, Eskimo curlew, Pink-headed duck, Jamaican giant galliwasp, Navassa iguana, Martinique giant rice rat, Little Swan Island hutia, Nelson's rice rat, Caribbean monk seal, Japanese sea lion, Chalicotherium, Macrauchenia, Toxodon, Doedicurus, Phorusrhacos|Terror bird, Argentavis, Pelagornis
+100: Rocky Mountain locust :: Swarms of trillions once darkened the American West. The species vanished around 1902, and no one is completely sure why.
+
+? Name an African animal
+~drop african
+10: Lion, Elephant, Giraffe, Zebra, Hippo|Hippopotamus, Rhino|Rhinoceros, Cheetah, Gorilla
+15: Meerkat
+30: Leopard, Hyena, Wildebeest|Gnu, Gazelle, Crocodile|Nile crocodile, Ostrich, Chimpanzee|Chimp, Baboon, Warthog, Buffalo|Cape buffalo, Antelope, Impala, Lemur, Okapi, Jackal, Wild dog|African wild dog|Painted dog, Mandrill, Flamingo, Vulture, Aardvark, Kudu, Springbok, Oryx, Eland, Hyrax, Mongoose, Pangolin, Porcupine, Serval, Caracal, Honey badger|Ratel, Fennec fox|Fennec, Camel, Black mamba, Puff adder, Cobra, Python, Chameleon
+60: Bonobo, Colobus, Bushbaby|Galago, Aye-aye, Fossa, Sitatunga, Bongo, Nyala, Gerenuk, Dik-dik, Duiker, Klipspringer, Steenbok, Hartebeest, Topi, Sable antelope, Roan antelope, Waterbuck, Lechwe, Addax, Dama gazelle, Thomson's gazelle|Thomsons gazelle, Grant's gazelle|Grants gazelle, Bontebok, Blesbok, Grevy's zebra|Grevys zebra, Mountain zebra, Pygmy hippo|Pygmy hippopotamus, Forest elephant, Bush pig, Red river hog, Giant forest hog, Aardwolf, Striped hyena, Brown hyena, Bat-eared fox, Civet, Genet, Ground hornbill, Secretary bird, Shoebill, Marabou stork, Hornbill, Lovebird, African grey parrot|African grey, Weaver bird|Weaver, Sunbird, Turaco, Guineafowl, Hamerkop, Kori bustard, Crowned crane, Gaboon viper, Boomslang, Nile monitor, Spurred tortoise|Sulcata, Leopard tortoise, Goliath frog, Lungfish, Tigerfish, Elephant shrew|Sengi, Springhare, Cane rat, Naked mole-rat
+85: Zorilla, Ethiopian wolf, Gelada, Walia ibex, Mountain nyala, Somali wild ass, Hirola, Beira, Dibatag, Oribi, Suni, Grysbok, Rhebok, Tsessebe, Blue wildebeest, Black wildebeest, Rock hyrax, Tree hyrax, Potto, Angwantibo, Drill, Golden mole, Tenrec, Otter shrew, Water chevrotain, Kipunji, Bateleur, Lappet-faced vulture, Wattled crane, Picathartes|Rockfowl, Egyptian plover, Malachite kingfisher, Lilac-breasted roller, Red-billed oxpecker|Oxpecker, African bullfrog
+100: Lesula :: A monkey with an oddly human-looking face, first described by scientists in 2012 after one turned up as a pet in Congo.
+
+? Name a butterfly or moth
+~drop butterfly,butterflies,moth,moths
+10: Monarch, Swallowtail, Painted lady, Luna, Cabbage white|Cabbage, Gypsy|Spongy
+15: Mothra
+30: Blue morpho|Morpho, Viceroy, Red admiral, Tiger swallowtail, Atlas, Hawk|Hawkmoth|Sphinx, Silk|Silkworm, Peacock, Mourning cloak|Camberwell beauty, Buckeye|Common buckeye, Zebra longwing, Gulf fritillary|Fritillary, Question mark, Comma, Skipper, Sulphur|Clouded sulphur, Hairstreak, Copper, Blue, Brimstone, Orange tip, Death's-head hawkmoth|Deaths head, Cecropia, Polyphemus, Io, Rosy maple, Tiger|Garden tiger, Clothes|Clothing, Codling, Leopard, Puss, Cinnabar, Emperor, Owl, Glasswing, Birdwing, Apollo
+60: Queen Alexandra's birdwing|Queen Alexandras birdwing, Goliath birdwing, Common jezebel|Jezebel, Postman, Julia, Malachite, Paper kite|Tree nymph, Lacewing, Leafwing|Dead leaf|Oakleaf, Crimson rose, Cattleheart, Pipevine swallowtail, Spicebush swallowtail, Black swallowtail, Giant swallowtail, Zebra swallowtail, Karner blue, Xerces blue, Large blue, Adonis blue, Chalkhill blue, Purple emperor, White admiral, Small tortoiseshell|Tortoiseshell, Marbled white, Meadow brown, Ringlet, Speckled wood, Wall brown, Gatekeeper, Grayling, Heath, Wood nymph, Pearl crescent, Baltimore checkerspot, Great spangled fritillary, Regal fritillary, Hackberry emperor, Red-spotted purple, Hummingbird hawk-moth, Elephant hawk-moth, Poplar hawk-moth, Lime hawk-moth, Privet hawk-moth, Oleander hawk-moth, Carolina sphinx|Tobacco hornworm, Five-spotted hawkmoth|Tomato hornworm, Hercules, Comet|Madagascan moon, Owlet, Underwing|Red underwing, Lappet, Tussock, Ermine, Burnet, Clearwing, Plume, Bagworm, Wax, Peppered, Magpie, Oak eggar, Fox, Drinker, Vapourer, Lobster
+85: Madagascan sunset|Sunset|Uraniid, Bogong, Wood leopard, Rosy underwing, Merveille du jour, Old lady, Mother Shipton, Setaceous Hebrew character, Herald, Angle shades, Burnished brass, Lunar hornet, Hornet moth, Six-spot burnet, Jersey tiger, Scarlet tiger, Isabella tiger|Woolly bear, Spanish moon, Ailanthus silkmoth, Promethea, Imperial, Regal|Royal walnut|Hickory horned devil, Snout, Bella|Ornate bella, Faithful beauty, Bumblebee moth|Snowberry clearwing, Achemon sphinx, Pandorus sphinx, Blinded sphinx
+100: Vampire moth|Calyptra :: A moth with a barbed tongue that, in some species, pierces skin and drinks blood, sometimes even from people.
+
+? Name a frog or toad
+~drop frog,frogs,toad,toads
+10: Bullfrog|American bullfrog, Tree frog|Treefrog, Poison dart|Poison arrow|Dart, Cane|Cane toad, Leopard, Red-eyed tree frog|Red-eyed
+15: Kermit
+30: Glass, Horned|Pacman, Wood, Green, Spring peeper|Peeper, Golden poison frog|Golden poison, Common|Common frog|Common toad, American toad, Natterjack, Fire-bellied toad|Fire-bellied, Goliath, African clawed|Clawed, Pickerel, Gray tree frog|Grey tree frog, Green tree frog, White's tree frog|Dumpy|Whites tree frog, Chorus, Spadefoot, Midwife toad|Midwife, Surinam toad|Pipa, Tomato, Budgett's|Budgetts, Flying|Wallace's flying frog, Hairy, Golden toad, Purple|Pig-nosed frog, Rain|Desert rain, Tailed, Marsh, Edible, Pool, Moor
+60: Strawberry poison frog|Strawberry, Blue poison dart|Blue, Dyeing poison frog|Dyeing, Phantasmal poison frog, Mimic poison frog, Bumblebee poison frog, Amazon milk|Milk, Vietnamese mossy|Mossy, Monkey|Waxy monkey, Painted|Painted reed frog, Reed, Banded bullfrog|Asian painted, African bullfrog|Pyxie, Tiger-legged monkey frog, Cuban tree frog, Coqui, Mountain chicken, Darwin's frog|Darwins frog, Gastric-brooding frog, Lake Titicaca water frog|Titicaca, Corroboree, Turtle frog, Water-holding frog, Crucifix|Holy cross, Rocket, Shovel-nosed, Ornate horned|Argentine horned, Cranwell's horned|Cranwells horned|Chacoan horned, Oriental fire-bellied, European tree frog, Pacific tree frog|Pacific chorus frog, Barking tree frog, Squirrel tree frog, Pine Barrens tree frog, Bird-voiced tree frog, Northern leopard, Southern leopard, Crawfish, Carpenter, Mink, Green and black poison frog, Fowler's toad|Fowlers toad, Western toad, Colorado River toad|Sonoran Desert toad, Great Plains toad, Oak toad, Houston toad, Yosemite toad, Wyoming toad
+85: Lemur leaf frog, Splendid leaf frog, Fringe tree frog, Kloof frog, Shrinking frog|Paradoxical frog, Bornean flat-headed frog, Lake Oku clawed frog, Mexican burrowing toad, Malagasy rainbow frog, Hula painted frog, Borneo rainbow toad|Sambas stream toad, Harlequin|Harlequin toad, Panamanian golden frog, Variable harlequin toad, Seychelles frog, Gardiner's frog|Gardiners frog, Brazilian gold frog, Pumpkin toadlet, Hochstetter's frog|Hochstetters frog, Archey's frog|Archeys frog, Hamilton's frog|Hamiltons frog
+100: Paedophryne amauensis :: A frog from Papua New Guinea found in 2009, about the size of a housefly. It's one of the smallest known vertebrates.

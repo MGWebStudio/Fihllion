@@ -56,3 +56,44 @@
 60: Thorny devil, Tasmanian tiger|Thylacine, Numbat, Bilby, Quoll, Bandicoot, Wedge-tailed eagle, Lyrebird, Galah, Rainbow lorikeet|Lorikeet, Budgie|Budgerigar, Tiger snake, Blue-tongued skink|Bluetongue|Blue-tongue lizard, Cane toad, Bogong moth, Huntsman|Huntsman spider, Pademelon, Potoroo, Red-bellied black snake, Stonefish, Blue-ringed octopus, Sea dragon|Weedy sea dragon|Leafy sea dragon, Magpie, Black swan, Flying fox, Dugong
 85: Bettong, Kowari, Antechinus, Dunnart, Tree kangaroo, Yabby, Barramundi, Tawny frogmouth|Frogmouth, Currawong, Brolga, Bowerbird, Gang-gang cockatoo, Corroboree frog, Perentie, Inland taipan, Death adder, Mulga, Irukandji, Ghost bat, Honey possum, Ringtail possum, Brushtail possum, Greater glider, Rock-wallaby, Wallaroo, Euro, Spotted quoll, Mountain pygmy possum, Pig-nosed turtle, Murray cod, Witchetty grub, Ulysses butterfly, Emu-wren
 100: Drop bear :: A made-up carnivorous koala Australians use to scare tourists. Keep an eye on the treetops.
+
+? Name a kind of fish
+10: Salmon, Tuna, Goldfish, Trout, Bass, Cod
+15: Clownfish|Nemo, Pufferfish|Blowfish, Swordfish
+30: Shark, Catfish, Tilapia, Halibut, Mackerel, Sardine, Anchovy, Perch, Carp, Koi, Pike, Mahi-mahi|Mahi mahi, Snapper|Red snapper, Flounder, Herring, Walleye, Barracuda, Eel, Betta|Siamese fighting fish, Angelfish, Piranha, Seahorse, Stingray, Bluegill, Haddock, Sea bass, Sturgeon, Marlin, Tetra|Neon tetra, Guppy, Anglerfish, Sole, Manta ray, Crappie
+60: Grouper, Pollock|Pollack, Monkfish, Sunfish|Mola mola|Ocean sunfish, Lionfish, Tang|Blue tang|Dory, Parrotfish, Minnow, Gar, Smelt, Bream, Whitefish, Turbot, Sailfish, Wahoo, Yellowtail, Swai, Hammerhead, Molly, Platy, Discus, Oscar, Arowana, Coelacanth, Lamprey, Remora, Hagfish, Tarpon, Bonefish, Muskie|Muskellunge, Zander, Arctic char|Char, Shad, Lingcod, Rockfish, Triggerfish, Butterflyfish, Damselfish, Hake, Plaice, Skate, Steelhead, Mullet, Drum, Amberjack
+85: Oarfish, Wrasse, Blobfish, Goby, Blenny, Stonefish, Frogfish, Hatchetfish, Lanternfish, Viperfish, Gulper eel, Fangtooth, Barreleye, Moray|Moray eel, Snakehead, Paddlefish, Bowfin, Sculpin, Sheepshead, Cobia, Pompano, Snook, Tautog, Porgy|Scup, John Dory, Opah|Moonfish, Escolar, Barramundi, Arapaima, Pacu, Tigerfish, Mudskipper, Archerfish, Sawfish, Guitarfish, Wobbegong, Burbot, Ide, Tench, Roach, Rudd, Dace, Chub, Gudgeon, Bitterling, Loach, Pleco|Plecostomus, Cichlid, Gourami, Danio|Zebrafish, Barb, Rasbora, Shubunkin, Snailfish, Handfish, Tilefish, Hoki, Orange roughy, Ribbonfish
+100: Sarcastic fringehead :: A real fish. Rival males settle disputes by pressing their giant open mouths together.
+
+? Name a wild cat
+10: Lion, Tiger, Leopard, Cheetah, Jaguar, Panther|Black panther
+15: Snow leopard, Liger
+30: Cougar|Puma|Mountain lion, Lynx, Bobcat, Ocelot, Clouded leopard, Serval, Caracal
+60: Margay, Sand cat, Jaguarundi, Bengal tiger, Siberian tiger|Amur tiger, Amur leopard, Canada lynx, Iberian lynx, Pallas's cat|Manul, African golden cat, Black-footed cat, Wildcat|European wildcat, Jungle cat, Tigon, Bay cat, Marbled cat, Rusty-spotted cat, Oncilla|Tigrina
+85: Geoffroy's cat, Kodkod|Guiña, Pampas cat|Colocolo, Andean mountain cat|Andean cat, Flat-headed cat, Asian golden cat, Leopard cat, Chinese mountain cat, Sumatran tiger, Malayan tiger, Barbary lion, Asiatic lion, Florida panther, Saber-toothed cat|Sabertooth|Smilodon, Cave lion, Sunda clouded leopard, Eurasian lynx
+100: Fishing cat :: It dives into water after fish. The goldfish would like a word.
+
+? Name a sea creature that isn't a fish
+10: Whale, Dolphin, Octopus, Jellyfish, Crab, Lobster, Shrimp|Prawn, Seal, Starfish|Sea star, Sea turtle|Turtle
+15: Narwhal
+30: Squid, Sea lion, Walrus, Manatee|Sea cow, Oyster, Clam, Mussel, Sea otter|Otter, Orca|Killer whale, Coral, Sea urchin|Urchin, Blue whale, Humpback whale|Humpback, Beluga, Sponge, Scallop, Sea anemone|Anemone, Barnacle, Hermit crab, Nautilus, Cuttlefish, Penguin, Sperm whale, Porpoise, Dugong, Sea cucumber, Plankton, Elephant seal
+60: Mantis shrimp, Horseshoe crab, Conch, Abalone, Sea slug|Nudibranch, Portuguese man o' war|Man o' war, Sea snake, Limpet, Periwinkle, Whelk, Giant squid, Vampire squid, Dumbo octopus, Blue-ringed octopus, Box jellyfish, Moon jelly, Bowhead whale, Right whale, Gray whale, Minke whale, Fin whale, Spider crab, King crab, Fiddler crab, Sea spider, Tube worm, Sea pen, Sea lily, Sand dollar, Copepod, Amphipod, Isopod|Giant isopod, Marine iguana, Leatherback, Loggerhead, Coconut crab
+85: Comb jelly, Tardigrade, Sea angel, Sea butterfly, Salp, Pteropod, Goose barnacle, Chiton, Cone snail, Geoduck, Yeti crab, Pompeii worm, Bobbit worm, Christmas tree worm, Feather star, Brittle star, Basket star, Crown-of-thorns starfish, Sea hare, Sea squirt|Tunicate, Bryozoan, Brachiopod|Lamp shell, Beaked whale|Cuvier's beaked whale, Vaquita, Steller's sea cow, Hawksbill, Olive ridley, Pistol shrimp, Cleaner shrimp, Decorator crab, Pea crab, Sponge crab, Colossal squid, Bobtail squid, Firefly squid, Mimic octopus, Argonaut, Flamingo tongue snail, Sea pig
+100: Krill :: Somewhere, a game about krill is very proud of you.
+
+? Name a word for a baby animal
+~drop baby
+10: Puppy|Pup, Kitten, Cub, Calf, Chick
+15: Joey
+30: Foal, Lamb, Piglet, Duckling, Fawn, Kid, Tadpole|Polliwog, Colt, Filly, Gosling, Owlet, Eaglet, Bunny, Hatchling, Cygnet, Larva, Leveret
+60: Kit, Poult, Squab, Eyas, Fry, Elver, Smolt, Nymph, Grub, Whelp, Yearling, Cria, Froglet, Fingerling, Pullet, Heifer, Cockerel, Hoglet, Spat, Squeaker, Nestling, Fledgling
+85: Parr, Alevin, Wriggler, Keet, Porcupette, Pinkie|Pinky, Weaner, Farrow, Spiderling, Ephyra, Neonate, Leptocephalus, Chickling, Shoat|Shote, Gilt, Sprat, Pupa
+100: Puggle :: A baby echidna. It hatches from an egg and grows up in its mother's pouch.
+
+? Name a word for a group of animals
+10: Herd, Flock, Pack, School, Swarm
+15: Murder
+30: Pride, Gaggle, Pod, Colony, Litter, Hive, Troop, Brood, Nest, Shoal, Den, Drove
+60: Parliament, Clowder, Crash, Tower, Mischief, Flamboyance, Bevy, Covey, Skein, Bloat, Dazzle, Charm, Army, Raft, Mob, Rookery, Waddle, Huddle, Murmuration, Unkindness, Exaltation, Smack, Sleuth|Sloth, Ambush, Romp, Leap
+85: Business, Knot, Zeal, Prickle, Kindle, Kettle, Wake, Cast, Rabble, Cauldron, Stand, Sounder, Cete, Skulk, Bask, Float, Bale, Intrusion, Plague, Grist, Scourge, Shrewdness, Barrel, Conspiracy, Pandemonium, Descent, Convocation, Fluther, Bloom, Kaleidoscope, Harem, Gam, Bed, Run, Nide, Sord
+100: Implausibility :: A group of wildebeest can be called an implausibility of gnus. Yes, really.

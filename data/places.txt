@@ -15,32 +15,6 @@
 85: Okavango, Limpopo, Orange, Senegal, Volta, Paraná|Parana, Uruguay, Paraguay, Madeira, Purus, Xingu, Tocantins, Negro, Magdalena, Fraser, Churchill, Athabasca, Peace, Nelson, Kootenay, Rogue, Willamette, Gila, Pecos, Brazos, Trinity, Sabine, Wabash, Shenandoah, Rappahannock, James, Connecticut, Penobscot, Salween, Chao Phraya, Pearl, Kaveri, Godavari, Yamuna, Narmada, Ural, Kama, Pechora, Neva, Daugava, Drina, Sava, Inn, Main, Moselle, Meuse, Scheldt, Garonne, Dordogne, Liffey, Trent, Cam, Kwai, Kolyma, Indigirka
 100: Caño Cristales|Cano Cristales :: Colombia's "river of five colors." Plants on its bed turn it red, yellow, green, blue and black.
 
-? Name a mountain
-~drop mount,mountain,mt,peak
-10: Everest, Fuji, Kilimanjaro, K2, Rushmore
-15: Doom, Olympus
-30: Denali|McKinley, Matterhorn, Mont Blanc, St. Helens|Saint Helens, Rainier, Etna, Vesuvius, Whitney, Elbrus, Aconcagua, Krakatoa, Pinatubo, Sinai, Ararat, Hood, Shasta, Kosciuszko, Annapurna, Kangchenjunga
-60: Pikes|Pike's, Mauna Kea, Mauna Loa, Kilauea, Eiger, Jungfrau, Ben Nevis, Snowdon, Zugspitze, Table, Lhotse, Makalu, Cho Oyu, Nanga Parbat, Dhaulagiri, Cotopaxi, Chimborazo, Popocatépetl|Popocatepetl, Washington, Mitchell, Grand Teton|Teton, Half Dome, El Capitan, Longs, Sugarloaf, Logan, Vinson, Erebus, Kenya, Cook|Aoraki, Tambora, Stromboli, Hekla, Eyjafjallajökull|Eyjafjallajokull
-85: Manaslu, Gasherbrum, Broad, Shishapangma, Huascarán|Huascaran, Ojos del Salado, Illimani, Puncak Jaya|Carstensz Pyramid, Ras Dashen, Ventoux, Monte Rosa, Dufourspitze, Grossglockner, Triglav, Musala, Mulhacén|Mulhacen, Teide, Damavand, Haleakala, Borah, Katahdin, Monadnock, Greylock, Mansfield, Cadillac, Gannett, Elbert, Massive, Harvard, Maroon Bells, Capitol, Cloud, Kings, Humphreys, Wheeler, Guadalupe, Black Elk
-100: Thor :: Canada's Mount Thor has the world's greatest sheer vertical drop, about 1,250 metres straight down.
-
-? Name an Asian country
-10: China, Japan, India, South Korea|Korea, Thailand, Vietnam
-15: Bhutan
-30: North Korea, Indonesia, Philippines|The Philippines, Malaysia, Singapore, Pakistan, Bangladesh, Nepal, Iran, Iraq, Israel, Saudi Arabia, Afghanistan, Turkey|Türkiye, Mongolia, Cambodia, Laos, Myanmar|Burma, Taiwan, Sri Lanka, Lebanon, Syria, Jordan, Yemen, Qatar, Kuwait, United Arab Emirates|UAE, Oman, Russia
-60: Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Georgia, Bahrain, Palestine, Cyprus
-85: Turkmenistan, Kyrgyzstan, Tajikistan, Maldives, Timor-Leste|East Timor
-100: Brunei :: Its sultan's palace has about 1,800 rooms, more than most hotels.
-
-? Name a lake
-~drop lake
-10: Superior, Michigan, Erie, Tahoe, Ontario, Huron
-15: Loch Ness|Ness, Titicaca
-30: Victoria, Placid, Great Salt|Salt, Baikal, Geneva, Como, Tanganyika, Powell, Mead, Okeechobee, Champlain, Crater, Caspian Sea|Caspian, Dead Sea, Swan, George, Minnetonka, Winnipeg, Great Bear, Walden Pond|Walden
-60: Malawi, Great Slave, Garda, Maggiore, Lucerne, Bled, Constance|Bodensee, Volta, Chad, Balaton, Windermere, Lomond|Loch Lomond, Aral Sea|Aral, Nicaragua, Athabasca, Louise, Moraine, Flathead, Yellowstone, Pontchartrain, Lanier, Havasu, Ladoga, Onega, Van, Toba, Sea of Galilee|Galilee|Tiberias, Turkana, Albert, Kivu, Taupo, Eyre, Salton Sea|Salton, Winnebago, Seneca, Cayuga, Okoboji, Coeur d'Alene, Pend Oreille
-85: Vostok, Natron, Peyto, Ohrid, Titisee, Annecy, Hillier, Retba, Maracaibo, Poopó|Poopo, Tonlé Sap|Tonle Sap, Dongting, Poyang, Qinghai, Issyk-Kul, Balkhash, Urmia, Vänern|Vanern, Mälaren|Malaren, Inari, Saimaa, Lough Neagh|Neagh, Wakatipu, Tekapo, Manapouri, Burley Griffin, Mono, Chelan, Sakakawea, Oahe, Fort Peck, Lake of the Woods, Nipigon, Reindeer, Pichola, Dal, Wular
-100: Webster|Chargoggagoggmanchauggagoggchaubunagungamaugg :: Its full Massachusetts name is 45 letters long: Chargoggagoggmanchauggagoggchaubunagungamaugg.
-
 ? Name a US state
 10: California, Texas, Florida, New York, Hawaii, Alaska
 15: Delaware, Rhode Island
@@ -48,23 +22,6 @@
 60: Alabama, Mississippi, Maine, Vermont, Idaho, Iowa, Kansas, Missouri, Oklahoma, Indiana, Maryland, Connecticut, South Carolina, New Mexico, Arkansas, Nebraska, New Hampshire
 85: North Dakota, South Dakota, West Virginia
 100: Wyoming :: The least populated state, and the first place in the US to give women the vote, in 1869.
-
-? Name a city in Italy
-10: Rome, Venice, Florence, Milan, Naples
-15: Pisa, Pompeii
-30: Turin, Verona, Bologna, Genoa, Palermo, Siena, Sorrento, Assisi, Amalfi, Positano, Bari, Parma, Perugia, Modena, Trieste, Como, Lucca, Catania, Ravenna, Padua
-60: Bergamo, Cagliari, Messina, Brescia, Vicenza, Cremona, Rimini, Ferrara, Mantua, Taormina, Salerno, Matera, Lecce, Orvieto, San Gimignano, Trento, Bolzano, Ancona, Pescara, Treviso, Syracuse|Siracusa, Portofino, Alberobello, Sanremo|San Remo, Aosta
-85: Reggio Calabria, Reggio Emilia, Piacenza, Pavia, Novara, Foggia, Taranto, Brindisi, Arezzo, Cortona, Montepulciano, Pienza, Urbino, Spoleto, Gubbio, L'Aquila, Sulmona, Caserta, Benevento, Tropea, Agrigento, Trapani, Ragusa, Noto, Sassari, Alghero, Olbia, Udine, Merano, Monza, Lodi, Imola, Maranello, Carrara, Livorno, Prato, Pistoia, Vinci, Cefalù|Cefalu
-100: Corleone :: A real town in Sicily. The Godfather's Vito Andolini took its name when he reached America.
-
-? Name a desert
-~drop desert
-10: Sahara, Mojave, Gobi, Arabian
-15: Antarctica|Antarctic
-30: Kalahari, Sonoran, Atacama, Namib, Great Basin, Painted, Chihuahuan, Outback|Australian Outback, Thar, Death Valley
-60: Taklamakan, Great Victoria, Simpson, Gibson, Patagonian, Negev, Syrian, Karakum, Kyzylkum, Black Rock, Empty Quarter|Rub' al Khali, Sinai, Tanami, Great Sandy, Colorado, Red, Arctic, Libyan, Nubian
-85: Danakil, Dasht-e Kavir|Kavir, Dasht-e Lut|Lut, Ordos, Tengger, Badain Jaran, Karoo, Sechura, Monte, Strzelecki, Sturt Stony, Little Sandy, Owyhee, Alvord, Vizcaino, Wadi Rum, Ténéré|Tenere, Ogaden, Chalbi, Thal, Cholistan, Registan
-100: Carcross :: Often billed as the world's smallest desert. It's a patch of sand dunes in Canada's Yukon.
 
 ? Name a city that has hosted the Summer Olympics
 10: Paris, London, Los Angeles|LA, Tokyo, Beijing
@@ -151,3 +108,45 @@
 60: Vernal, Nevada, Sutherland, Jog, Dudhsagar, Huangguoshu, Ban Gioc|Detian, Kuang Si, Erawan, Wailua, Rainbow, Ouzoud, Murchison, Blue Nile|Tis Abay, Wallaman, Jim Jim, Cumberland, Amicalola, Tahquamenon, Minnehaha, Palouse, Kaaterskill, Bash Bish, Hopetoun, Augrabies, Howick, Maletsunyane, Sipi, Kjelfossen, Vøringsfossen|Voringsfossen, Staubbach, Trümmelbach|Trummelbach, Giessbach, Krimml|Krimmler, Gavarnie, Marmore|Cascata delle Marmore, Mardalsfossen, Svartifoss, Kirkjufellsfoss, Háifoss|Haifoss, Tamul, Basaseachic, Agua Azul, Gocta, Rio Celeste, Pailón del Diablo|Pailon del Diablo
 85: Mongefossen, Vinnufossen, Langfoss, Låtefossen|Latefossen, Steall, Aira Force, High Force, Pistyll Rhaeadr, Torc, Powerscourt, Glencar, Hengifoss, Aldeyjarfoss, Gljúfrabúi|Gljufrabui, Salto del Laja, Yumbilla, Nauyaca, Hiilawe, Oloupena|Olo'upena, Wairere, Browne, Bowen, Stirling, Purakaunui, McLean, Wentworth, Wollomombi, Ellenborough, Mitchell, Ebor, Fitzroy, Mutarazi, Ruacana, Mac-Mac, Berlin
 100: Hierve el Agua :: Mexican cliffs that look like frozen waterfalls. They're actually rock, built up over thousands of years by mineral-rich spring water.
+
+? Name a city in Texas
+10: Houston, Dallas, Austin, San Antonio, El Paso, Fort Worth
+15: Corpus Christi
+30: Arlington, Plano, Lubbock, Amarillo, Laredo, Waco, Galveston, Irving, Garland, McAllen, Brownsville, Odessa, Midland, Abilene, Beaumont, Killeen, Frisco, McKinney, Denton, College Station, San Marcos, Round Rock, Tyler, Wichita Falls, Pasadena, Grand Prairie, Mesquite, Carrollton, Sugar Land, The Woodlands|Woodlands, Port Arthur, Texarkana, San Angelo, Victoria, Temple, Harlingen, Lewisville, Allen, Richardson, Pearland, League City, Conroe, Katy, Kerrville, Fredericksburg, Marfa
+60: Edinburg, Mission, Pharr, Bryan, Longview, Nacogdoches, Lufkin, Huntsville, Sherman, Denison, Del Rio, Eagle Pass, Big Spring, Alpine, Seguin, New Braunfels, Georgetown, Cedar Park, Pflugerville, Leander, Kyle, Buda, Lockhart, Bastrop, Boerne, Baytown, Texas City, Friendswood, Missouri City, Rosenberg, Cleburne, Weatherford, Mansfield, Grapevine, Southlake, Keller, Euless, Bedford, Hurst, Flower Mound, Coppell, DeSoto, Duncanville, Cedar Hill, Rockwall, Rowlett, Wylie, Waxahachie, Corsicana, Stephenville, Brownwood, Paris, Palestine, Athens, Kingsville, Port Aransas, South Padre Island|South Padre, Rockport, Uvalde, Terlingua, Luckenbach, Pecos, Fort Stockton, Monahans, Sweetwater, Snyder, Plainview, Pampa, Borger, Dumas, Canyon, Dalhart
+85: Cut and Shoot, Dime Box, Ding Dong, Nameless, Gun Barrel City, Jot 'Em Down|Jot Em Down, Lolita, Muleshoe, Hext, Comfort, Utopia, Earth, Happy, Notrees, Bug Tussle, Turkey, Telephone, Matador, Shamrock, Quitaque, Quanah, Iraan, Mertzon, Sanderson, Langtry, Study Butte, Lajitas, Presidio, Van Horn, Sierra Blanca, Dell City, Kermit, Jayton, Guthrie, Benjamin, Electra, Olney, Archer City, Thurber
+100: Mentone :: The only town in Loving County, the least-populated county in the US. Its population is a couple dozen people at most.
+
+? Name a city in Germany
+10: Berlin, Munich|München|Munchen, Hamburg, Frankfurt, Cologne|Köln|Koln, Stuttgart
+15: Düsseldorf|Dusseldorf
+30: Dresden, Leipzig, Hanover|Hannover, Nuremberg|Nürnberg|Nurnberg, Bremen, Dortmund, Essen, Bonn, Heidelberg, Freiburg, Mainz, Wiesbaden, Augsburg, Regensburg, Würzburg|Wurzburg, Rothenburg|Rothenburg ob der Tauber, Bamberg, Aachen, Münster|Munster, Kiel, Lübeck|Lubeck, Rostock, Potsdam, Weimar, Erfurt, Jena, Karlsruhe, Mannheim, Duisburg, Bochum, Wuppertal, Bielefeld, Brunswick|Braunschweig, Magdeburg, Kassel, Ulm, Trier, Koblenz, Garmisch-Partenkirchen|Garmisch, Baden-Baden, Wolfsburg, Ingolstadt, Gelsenkirchen, Mönchengladbach|Monchengladbach, Leverkusen, Kaiserslautern
+60: Göttingen|Gottingen, Tübingen|Tubingen, Marburg, Giessen|Gießen, Darmstadt, Offenbach, Heilbronn, Pforzheim, Konstanz|Constance, Lindau, Passau, Bayreuth, Coburg, Erlangen, Fürth|Furth, Landshut, Rosenheim, Berchtesgaden, Füssen|Fussen, Oberammergau, Mittenwald, Dachau, Fulda, Paderborn, Osnabrück|Osnabruck, Oldenburg, Wilhelmshaven, Emden, Cuxhaven, Flensburg, Schwerin, Stralsund, Greifswald, Wismar, Chemnitz, Zwickau, Görlitz|Gorlitz, Meissen|Meißen, Bautzen, Cottbus, Frankfurt an der Oder|Frankfurt Oder, Halle, Dessau, Wittenberg|Lutherstadt Wittenberg, Quedlinburg, Goslar, Hildesheim, Celle, Lüneburg|Luneburg, Hamelin|Hameln, Solingen, Krefeld, Oberhausen, Hagen, Herne, Recklinghausen, Siegen, Saarbrücken|Saarbrucken, Worms, Speyer, Ludwigshafen, Ramstein|Ramstein-Miesenbach, Grafenwöhr|Grafenwohr, Baumholder
+85: Bernkastel-Kues, Cochem, Rüdesheim|Rudesheim, Bacharach, Wernigerode, Eisenach, Gotha, Naumburg, Merseburg, Zittau, Annaberg-Buchholz, Freiberg, Plauen, Hof, Selb, Wunsiedel, Dinkelsbühl|Dinkelsbuhl, Nördlingen|Nordlingen, Bad Tölz|Bad Tolz, Bad Kissingen, Bad Homburg, Bad Ems, Wolfenbüttel|Wolfenbuttel, Einbeck, Höxter|Hoxter, Lemgo, Detmold, Soest, Xanten, Kleve, Emmerich, Monschau, Prüm|Prum, Bitburg, Spangdahlem, Kulmbach, Bingen, Herrenberg, Sindelfingen, Weil am Rhein, Lörrach|Lorrach
+100: Herzogenaurach :: A small Bavarian town that's home to both Adidas and Puma, the rival companies started by two feuding brothers.
+
+? Name a Caribbean island
+~drop island,islands
+10: Jamaica, Cuba, Puerto Rico, Bahamas, Aruba, Barbados
+15: Hispaniola
+30: Dominican Republic|DR, Haiti, Trinidad|Trinidad and Tobago, Tobago, Saint Lucia|St. Lucia|St Lucia, Antigua, Barbuda, Grenada, Martinique, Guadeloupe, Curaçao|Curacao, Bonaire, St. Thomas|Saint Thomas|St Thomas, St. Croix|Saint Croix|St Croix, St. John|Saint John|St John, St. Kitts|Saint Kitts|St Kitts, Nevis, St. Martin|Saint Martin|St. Maarten|Sint Maarten|St Martin|St Maarten, St. Barts|St. Barths|Saint Barthélemy|St Barts, Anguilla, Dominica, St. Vincent|Saint Vincent|St Vincent, Grand Cayman|Cayman Islands|Caymans, Turks and Caicos|Turks & Caicos, Virgin Islands|US Virgin Islands|British Virgin Islands, Tortola, Virgin Gorda, Montserrat, Cozumel, Nassau|New Providence, Grand Bahama, Eleuthera, Exuma|Exumas, Andros, Bimini, Isla Margarita|Margarita
+60: Isla Mujeres, Roatán|Roatan, Utila, Guanaja, Ambergris Caye, Caye Caulker, San Andrés|San Andres, Providencia, Vieques, Culebra, Mona, Isla de la Juventud|Isle of Youth|Isle of Pines, Cayo Coco, Cayo Largo, Cayman Brac, Little Cayman, Jost Van Dyke, Anegada, Water Island, Saba, Sint Eustatius|Statia, Bequia, Mustique, Canouan, Union Island, Carriacou, Petite Martinique, Marie-Galante, Les Saintes, La Désirade|La Desirade, Basse-Terre, Grande-Terre, Abaco|Abacos, Cat Island, San Salvador, Inagua|Great Inagua, Harbour Island, Providenciales|Provo, Grand Turk, Salt Cay, Gonâve|La Gonave|Gonave, Tortuga, Saona, Los Roques, Tobago Cays
+85: Navassa, Sombrero, Aves Island|Isla de Aves, Klein Curaçao|Klein Curacao, Klein Bonaire, Desecheo, Caja de Muertos, Mayreau, Palm Island, Petit St. Vincent|Petit Saint Vincent, Young Island, Norman Island, Peter Island, Necker Island, Guana Island, Swan Islands, Corn Islands|Big Corn|Little Corn, Isla Fuerte, Cayo Levantado, Beata, Alto Velo, Little Tobago, Chacachacare, Gaspar Grande, Prickly Pear Cay, Scrub Island, Cayo Santa María|Cayo Santa Maria, Cayo Guillermo
+100: Redonda :: An uninhabited rock near Antigua. A 19th-century family claimed it as a kingdom, and writers have passed the joke "crown" down ever since.
+
+? Name a famous castle or palace
+~drop castle,palace,of,the
+10: Buckingham Palace, Windsor Castle, Versailles|Palace of Versailles, Neuschwanstein, Cinderella Castle|Cinderella's Castle, Edinburgh Castle
+15: Hogwarts
+30: Tower of London, Kensington Palace, Alhambra, Forbidden City, Kremlin, Hampton Court|Hampton Court Palace, Balmoral, Prague Castle, Château de Chambord|Chambord, Mont-Saint-Michel|Mont Saint Michel, Dracula's Castle|Bran Castle|Bran, Blarney Castle|Blarney, Himeji Castle|Himeji, Osaka Castle, Topkapi Palace|Topkapi, Schönbrunn|Schonbrunn|Schoenbrunn, Hofburg, Winter Palace|Hermitage, Peterhof, Louvre, Westminster|Palace of Westminster|Houses of Parliament, Sleeping Beauty Castle, Hearst Castle, Biltmore|Biltmore Estate, Warwick Castle|Warwick, Leeds Castle, Dover Castle, Stirling Castle, Eilean Donan, Alcázar of Segovia|Alcazar of Segovia, Royal Palace of Madrid|Palacio Real, Pena Palace|Pena, Potala Palace|Potala, Château de Chenonceau|Chenonceau, Fontainebleau, Hohenzollern Castle|Hohenzollern, Malbork Castle|Malbork|Marienburg, Wawel Castle|Wawel, Castel Sant'Angelo|Castel Sant Angelo, Doge's Palace|Doges Palace, Caernarfon Castle|Caernarfon, Conwy Castle|Conwy, Cardiff Castle, Alnwick Castle|Alnwick, Highclere Castle|Highclere, Holyrood|Holyroodhouse, Sanssouci
+60: Château de Chantilly|Chantilly, Château d'If|Chateau d'If, Carcassonne, Château Frontenac|Frontenac, Casa Loma, Iolani Palace, Boldt Castle, Château de Pierrefonds|Pierrefonds, Linderhof, Herrenchiemsee, Wartburg, Heidelberg Castle|Heidelberg, Eltz Castle|Burg Eltz|Eltz, Lichtenstein Castle|Lichtenstein, Hohensalzburg, Belvedere, Charlottenburg, Christiansborg, Amalienborg, Frederiksborg, Kronborg|Elsinore, Drottningholm, Peleș Castle|Peles Castle|Peles, Corvin Castle|Hunyad Castle, Spiš Castle|Spis Castle, Bled Castle|Bled, Trakai, Kilkenny Castle, Bunratty Castle|Bunratty, Cawdor Castle|Cawdor, Glamis Castle|Glamis, Urquhart Castle|Urquhart, Dunnottar Castle|Dunnottar, Bamburgh Castle|Bamburgh, Harlech Castle|Harlech, Beaumaris, Tintagel, Kenilworth, Bodiam, Blenheim Palace|Blenheim, St James's Palace|St James Palace, Sandringham, Mysore Palace|Mysore, Amber Fort|Amer Fort, Hawa Mahal, Red Fort, Gyeongbokgung, Matsumoto Castle|Matsumoto, Nijo Castle|Nijo, Summer Palace, Grand Palace, Krak des Chevaliers, Château Gaillard|Chateau Gaillard, Palace of the Popes|Palais des Papes, Alcázar of Seville|Real Alcázar|Real Alcazar, Château de Chillon|Chillon, Castello Sforzesco|Sforza Castle, Royal Palace of Caserta|Caserta, Pitti Palace|Palazzo Pitti, Castel del Monte, Miramare
+85: Bishop Castle, Coral Castle, Gillette Castle, Hammond Castle, Castello di Amorosa, Singer Castle, Oheka Castle, Fonthill Castle, Montségur|Montsegur, Peyrepertuse, Quéribus|Queribus, Hluboká Castle|Hluboka, Český Krumlov Castle|Cesky Krumlov, Karlštejn|Karlstejn, Bojnice, Orava Castle|Orava, Moszna Castle|Moszna, Książ|Ksiaz, Kalmar Castle|Kalmar, Olavinlinna, Rosenborg, Egeskov, Vianden, Bourscheid, Gravensteen, Muiderslot, Bonaguil, Castle Howard, Raby Castle, Mehrangarh, Chittorgarh, Golconda, Sigiriya, Hwaseong, Shuri Castle|Shuri, Inuyama Castle|Inuyama, Hikone Castle|Hikone, Matsue Castle|Matsue, Citadel of Aleppo, Castillo de San Marcos, Morro Castle|El Morro, Château Ramezay|Chateau Ramezay
+100: Predjama Castle|Predjama :: A Slovenian castle built into the mouth of a cave. Its knight held out through a long siege by sneaking food in through secret tunnels.
+
+? Name a city in Australia
+10: Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra
+15: Darwin
+30: Hobart, Gold Coast, Cairns, Alice Springs, Newcastle, Wollongong, Geelong, Townsville, Sunshine Coast, Toowoomba, Ballarat, Bendigo, Launceston, Byron Bay, Broome, Mackay, Rockhampton, Bundaberg, Wagga Wagga, Albury, Mildura, Shepparton, Kalgoorlie, Fremantle, Coober Pedy, Port Macquarie, Coffs Harbour, Tamworth, Orange, Dubbo, Bathurst, Noosa, Hervey Bay, Mount Isa, Katherine, Port Hedland, Geraldton, Bunbury, Albany, Esperance
+60: Devonport, Burnie, Mount Gambier, Whyalla, Port Augusta, Port Lincoln, Murray Bridge, Broken Hill, Lismore, Armidale, Goulburn, Queanbeyan, Nowra, Gosford, Maitland, Cessnock, Muswellbrook, Griffith, Echuca, Warrnambool, Horsham, Wangaratta, Traralgon, Sale, Bairnsdale, Gympie, Maryborough, Gladstone, Emerald, Longreach, Charters Towers, Karratha, Newman, Carnarvon, Exmouth, Kununurra, Tennant Creek, Nhulunbuy, Port Douglas, Airlie Beach, Margaret River, Mandurah, Katoomba, Bowral, Kiama, Ulladulla, Merimbula, Eden, Cooma, Jindabyne, Thredbo, Lorne, Torquay
+85: Oodnadatta, Marree, Birdsville, Bourke, Lightning Ridge, White Cliffs, Andamooka, Roxby Downs, Leigh Creek, Ceduna, Coolgardie, Leonora, Laverton, Wiluna, Meekatharra, Cue, Halls Creek, Fitzroy Crossing, Derby, Wyndham, Borroloola, Normanton, Karumba, Cooktown, Weipa, Thursday Island, Winton, Cunnamulla, Charleville, Wee Waa, Nimbin, Tibooburra, Wilcannia, Menindee, Hay, Gundagai, Yass, Tumut, Burra, Kapunda, Strahan, Queenstown, Zeehan, Stanley
+100: Nowhere Else :: A real farming area in northern Tasmania. That's its official name.

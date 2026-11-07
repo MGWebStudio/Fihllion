@@ -64,3 +64,44 @@
 60: Frigate, Cutter, Sloop, Ketch, Yawl, Trawler, Clipper, Junk, Sampan, Dhow, Trireme, Icebreaker, Corvette, Cruiser, Dreadnought, Bass, Skiff, Punt, Whaleboat|Whaler, Hydrofoil, Riverboat|River, Showboat|Show, Ocean liner|Liner, Paddle steamer, Pedalo|Pedal, Outrigger, Narrowboat|Narrow, Felucca, Man-of-war|Man o' war, Brigantine, Minesweeper, PT, Tall, Shrimper|Shrimp, Pram
 85: Caravel, Carrack, Xebec, Brig, Barque|Bark, Cog, Knarr, Drakkar, Galley, Birlinn, Umiak, Baidarka, Pirogue, Bateau, Bumboat, Lighter, Vaporetto, Wherry, Gig, Jolly, Tender, Smack, Lugger, Dromon, Quinquereme, Monitor, Ironclad, Bireme, Ro-ro, Bulk carrier, Panamax, Dragon, Reed, Currach, Longtail, Proa, Cigarette
 100: Coracle :: A small round boat shaped like a bowl, light enough to carry on your back. The goldfish feels seen.
+
+? Name a kitchen utensil
+10: Fork, Knife, Spoon, Spatula, Whisk, Tongs
+15: Spork, Melon baller
+30: Ladle, Peeler, Can opener, Grater, Rolling pin, Colander|Strainer, Measuring cup, Cutting board, Chef's knife, Wooden spoon, Pizza cutter, Bottle opener, Corkscrew, Mixing bowl, Pan, Pot, Skillet, Turkey baster|Baster, Ice cream scoop, Chopsticks, Butter knife, Steak knife, Bread knife, Garlic press, Slotted spoon, Thermometer, Oven mitt, Timer, Sieve, Funnel, Blender
+60: Mandoline, Mortar and pestle|Mortar|Pestle, Microplane|Zester, Potato masher|Masher, Pastry brush, Pastry cutter, Cookie cutter, Cheese grater, Meat tenderizer|Meat mallet, Ricer, Salad spinner, Skimmer|Spider, Dutch oven, Wok, Paring knife, Cleaver, Sifter, Nutcracker, Egg slicer, Apple corer, Juicer|Lemon squeezer, Pepper mill, Salt shaker, Kitchen shears, Rubber scraper, Bench scraper, Honing steel|Knife sharpener, Trivet, Tea strainer, Reamer|Citrus reamer, Cake tester, Piping bag, Baking sheet|Cookie sheet, Cooling rack, Ramekin, Immersion blender, Kitchen torch|Torch
+85: Chinois, Tamis, Mezzaluna, Santoku, Nakiri, Boning knife, Fillet knife, Oyster knife, Lobster pick, Lobster cracker, Fish spatula, Fish bone tweezers, Grapefruit spoon, Butter curler, Egg coddler, Egg topper, Comal, Tagine, Molcajete, Suribachi, Tortilla press, Pasta fork, Pasta roller, Spaetzle maker, Strawberry huller, Banana slicer, Avocado slicer, Pie bird, Dough whisk, Docker, Bamboo steamer, Spiralizer|Zoodler, Cherry pitter, Olive pitter, Poultry shears, Trussing needle, Larding needle, Flat whisk, Ball whisk
+100: Spurtle :: A Scottish stick for stirring porridge. The World Porridge Making Championship's trophy is the Golden Spurtle.
+
+? Name a kind of shoe
+~drop shoe,shoes
+10: Sneakers|Tennis, Boots, Sandals, Heels|High heels, Flip-flops|Flip flops, Loafers, Slippers, Crocs
+15: Heelys, Moon boots, Uggs|Ugg boots
+30: Cowboy boots, Flats|Ballet flats, Clogs, Oxfords, Moccasins, Wedges, Pumps, Stilettos, Platforms, Birkenstocks, Converse, Rain boots|Galoshes|Wellingtons|Wellies, Hiking boots, Cleats, Slides, Dress, Boat|Docksiders, Mary Janes, Combat boots, Work boots, Snow boots, Ballet|Pointe, Tap, Running, Golf, Bowling, Water, Ice skates, Roller skates, Doc Martens|Docs
+60: Espadrilles, Derby, Brogues, Chelsea boots, Chukka boots|Chukkas, Desert boots, Monk straps, Penny loafers, Huaraches, Mules, Peep toes, Kitten heels, Slingbacks, Ankle boots|Booties, Knee-high boots, Thigh-high boots, Gladiator sandals, Jellies|Jelly, Keds, Vans, Wingtips, Creepers, Clodhoppers, Waders, Sabots, Tevas, Hush Puppies, Toms, Zoris, Geta, Tabi, Dr. Scholl's, Air Jordans|Jordans, Yeezys, Toe|Five Finger|Vibram, Mukluks, Stompers, Gumboots, Lace-ups, Sperry|Sperrys
+85: Winklepickers, Spectators, Balmorals, Bluchers, Ghillies, Chopines, Pattens, Brothel creepers, Cothurnus, Caligae, Kolhapuri, Mojari|Jutti, Lotus, Okobo, Wooden|Klompen, Barefoot, Ropers, Harness boots, Jodhpurs, Paddock boots, Hessian boots, Nurse's, Orthopedic, Gaiters, Spats, Sock boots, Nike Mags, Reebok Pumps
+100: Poulaines|Crakows :: Medieval shoes with toes so long England passed a law limiting their length.
+
+? Name a currency
+10: Dollar, Euro, Pound, Yen, Peso
+15: Bitcoin, Schrute Bucks
+30: Rupee, Franc|Swiss franc, Ruble|Rouble, Yuan|Renminbi, Won, Real, Krona|Krone, Shekel, Lira, Rand, Dinar, Baht, Deutsche Mark|Mark, Drachma, Canadian dollar|Loonie, Australian dollar, Zloty, Dogecoin
+60: Forint, Dirham, Riyal, Ringgit, Rupiah, Dong, Koruna, Hryvnia, Kuna, Leu, Lev, Naira, Cedi, Shilling, Birr, Kwacha, Pula, Peseta, Escudo, Guilder, Sol, Bolívar|Bolivar, Quetzal, Colón|Colon, Lempira, Córdoba|Cordoba, Guarani, Tugrik, Kyat, Taka, Kip, Riel, Afghani, Tenge, Manat, Doubloon, Ducat, Denarius
+85: Balboa, Gourde, Ngultrum, Pa'anga, Vatu, Kina, Tala, Rufiyaa, Som, Somoni, Lari, Dram, Ouguiya, Lilangeni, Loti, Dalasi, Leone, Kwanza, Metical, Ariary, Nakfa, Pataca, Florin, Sovereign, Farthing, Groat, Guinea, Thaler, Solidus, Obol, Talent, Cowrie, Zimbabwean dollar, Reichsmark, Sucre, Inti, Austral
+100: Rai stones|Rai :: Giant limestone discs used as money on the island of Yap. Too heavy to move, so people just agree who owns them.
+
+? Name a household appliance
+10: Refrigerator|Fridge, Microwave, Oven|Stove, Dishwasher, Washing machine|Washer, Dryer, Toaster
+15: Roomba, Air fryer
+30: Blender, Vacuum|Vacuum cleaner, Coffee maker|Coffee machine, Stand mixer|Mixer|KitchenAid, Freezer, Iron, Hair dryer|Blow dryer, Water heater, Furnace, Air conditioner|AC, Space heater, Humidifier, Dehumidifier, Slow cooker|Crock-Pot, Instant Pot|Pressure cooker, Toaster oven, Garbage disposal, Food processor, Electric kettle, Range, Ceiling fan|Fan, Keurig, Trash compactor, Waffle iron, Rice cooker, Juicer, Can opener, Range hood
+60: Bread maker|Breadmaker, Sous vide, Deep fryer, Ice maker, Wine cooler|Wine fridge, Garment steamer|Clothes steamer, Sewing machine, Air purifier, Hot plate, Griddle, George Foreman Grill, Popcorn maker, Espresso machine, Nespresso, Dehydrator, Chest freezer, Mini fridge, Thermostat, Boiler, Water softener, Sump pump, Smoke detector, Carpet cleaner, Steam mop, Electric blanket, Panini press, SodaStream, Nutribullet|Vitamix, Electric grill, Hand mixer, Electric toothbrush
+85: Salad Shooter, Egg cooker, Yogurt maker, Milk frother, Sandwich maker, Quesadilla maker, Hot dog roller, Soft serve machine, Ice cream maker, Fondue pot, Cotton candy machine, Snow cone maker, Trouser press, Clothes wringer, Bidet, Warming drawer, Induction cooktop, Thermomix, Aga, Rice dispenser, Kimchi fridge, Water cooler, Towel warmer, Bottle warmer, Diaper Genie, Butter churn, Foot spa, Ultrasonic cleaner
+100: Mangle :: Hand-cranked rollers for squeezing water out of laundry, and a real menace to fingers.
+
+? Name a job
+10: Doctor, Teacher, Nurse, Lawyer, Firefighter|Fireman, Police officer|Cop|Policeman, Chef|Cook
+15: Influencer, Astronaut
+30: Plumber, Electrician, Accountant, Dentist, Engineer, Pilot, Carpenter, Mechanic, Farmer, Barber, Hairdresser|Hairstylist, Waiter|Waitress|Server, Bartender, Janitor|Custodian, Cashier, Mail carrier|Mailman|Postman, Truck driver|Trucker, Veterinarian|Vet, Pharmacist, Architect, Scientist, Programmer|Software engineer|Software developer|Coder, Banker, Real estate agent|Realtor, Soldier, Photographer, Journalist|Reporter, Actor, Librarian, Secretary, Construction worker, Flight attendant, Paramedic|EMT, Therapist, Judge, Professor, Artist, Musician, Writer|Author, Salesperson|Salesman, Driver, Baker, Butcher, Receptionist, Sailor, Fisherman, Lifeguard, Coach, Security guard, Tailor, Uber driver
+60: Actuary, Welder, Roofer, Locksmith, Zookeeper, Mortician|Undertaker, Surveyor, Paralegal, Stenographer, Translator, Cartographer, Geologist, Marine biologist, Meteorologist, Optometrist, Chiropractor, Dermatologist, Anesthesiologist, Orthodontist, Social worker, Dispatcher, Longshoreman, Lumberjack|Logger, Miner, Rancher|Cowboy, Beekeeper, Florist, Interior designer, Fashion designer, Personal trainer, Dog walker, Nanny|Babysitter, Maid, Bouncer, Stunt double, Sommelier, Barista, Tattoo artist, Lobbyist, Diplomat, Senator, Mayor, Park ranger, Game warden, Bail bondsman, Repo man, Exterminator|Pest control, Chimney sweep, Window washer, Piano tuner, Blacksmith, Cobbler, Glassblower, Taxidermist, Auctioneer, Referee|Umpire, Data analyst, Product manager, UX designer, Web designer
+85: Foley artist, Best boy, Gaffer, Key grip|Grip, Dolly grip, Script supervisor, Cooper, Fletcher, Farrier, Milliner, Haberdasher, Wainwright, Chandler, Luthier, Ombudsman, Bailiff, Coroner, Court jester, Town crier, Lamplighter, Ice cutter, Whaler, Tallyman, Ichthyologist, Aquarist, Oceanographer, Hydrologist, Ornithologist, Entomologist, Perfumer, Water sommelier, Golf ball diver, Professional mourner, Dog food taster, Ethical hacker, Snake milker, Pet detective, Odor judge, Bike messenger, Steeplejack, Cheesemonger, Fishmonger, Ostler, Scrivener
+100: Knocker-up :: Before alarm clocks, you paid someone to tap on your window with a long pole every morning.

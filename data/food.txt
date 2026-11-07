@@ -1,12 +1,3 @@
-? Name a cheese
-~drop cheese
-10: Cheddar, Mozzarella, Swiss, Parmesan|Parmigiano|Parmigiano-Reggiano, American
-15: Brie, Gouda, Camembert
-30: Feta, Provolone, Monterey Jack|Jack, Colby, Colby Jack, Ricotta, Blue|Bleu, Cream, Cottage, Goat|Chevre|Chèvre, Pepper Jack, Havarti, Muenster|Munster, Gorgonzola, Gruyère|Gruyere, Mascarpone, Edam, Emmental|Emmentaler, Roquefort, String
-60: Manchego, Halloumi, Stilton, Fontina, Asiago, Pecorino|Pecorino Romano, Paneer, Limburger, Queso fresco, Burrata, Neufchâtel|Neufchatel, Cotija, Wensleydale, Jarlsberg, Velveeta
-85: Taleggio, Comté|Comte, Caerphilly, Red Leicester, Double Gloucester, Cheshire, Époisses|Epoisses, Reblochon, Raclette, Morbier, Tête de Moine, Saint-André, Pont-l'Évêque, Mimolette, Provola, Caciocavallo, Oaxaca, Ricotta salata, Brunost|Gjetost, Lancashire, Cambozola, Kefalotyri, Kasseri, Graviera, Mahón|Mahon, Cabrales, Queso blanco, Tilsit, Butterkäse|Butterkase, Bel Paese, Saint-Nectaire, Cantal, Maroilles, Boursin, Port Salut, Vacherin, Beaufort, Manouri, Akkawi, Nabulsi, Sirene, Quark, Stracchino|Crescenza, Scamorza, Robiola, Ossau-Iraty, Sbrinz, Appenzeller, Tomme
-100: Casu marzu|Casu martzu :: Sardinia's cheese that is deliberately full of live maggots.
-
 ? Name a spice or herb
 ~drop spice,herb,seed,seeds,powder,ground
 10: Pepper|Black pepper, Cinnamon, Basil, Paprika, Oregano
@@ -15,15 +6,6 @@
 60: Cardamom, Allspice, Star anise, Tarragon, Marjoram, Anise|Aniseed, Fennel, Sumac, Lemongrass, Caraway, Mace, Fenugreek, Juniper|Juniper berries, Garam masala, Za'atar|Zaatar, Savory, Chervil, Poppy, Sesame, Lavender, Five spice|Chinese five spice, Old Bay, Smoked paprika, Herbes de Provence, Italian seasoning, Ras el hanout, Cajun seasoning, Lemon pepper
 85: Grains of paradise, Asafoetida|Hing, Nigella|Black seed|Kalonji, Epazote, Annatto|Achiote, Galangal, Sichuan pepper|Szechuan pepper, Long pepper, Mahlab, Borage, Lovage, Hyssop, Angelica, Kaffir lime leaf|Makrut lime, Curry leaf, Shiso, Baharat, Berbere, Dukkah, Shichimi togarashi|Shichimi, Tonka bean, Wattleseed, Licorice root, Orris root, Tamarind, Amchur|Amchoor, Ajwain, Pandan, Tellicherry pepper, Aleppo pepper, Urfa biber, Gochugaru, Black lime|Loomi, Sassafras|File powder, Zedoary
 100: Silphium :: Ancient Romans loved this herb so much they apparently ate it out of existence.
-
-? Name a condiment or sauce
-~drop sauce,dressing
-10: Ketchup|Catsup, Mustard, Mayonnaise|Mayo, Ranch, Hot sauce|Hot, Soy, Barbecue|BBQ
-15: Sriracha, Aioli
-30: Relish, Tartar, Honey mustard, Salsa, Buffalo, Teriyaki, Alfredo, Marinara, Pesto, Gravy, Worcestershire|Worcester, Horseradish, Guacamole, Tabasco, Hollandaise, Thousand Island, Caesar, Balsamic|Balsamic vinegar, Vinegar, Chimichurri
-60: Hoisin, Harissa, Tzatziki, Béchamel|Bechamel, Gochujang, Rémoulade|Remoulade, Chutney, Sambal, Cocktail, Béarnaise|Bearnaise, Tahini, Oyster, Fish, Steak|A1|A.1., Ponzu, Wasabi, Dijon, Piri piri|Peri peri, Vodka, Bolognese, Demi-glace, Mornay, Mole, Enchilada, Sweet and sour, Duck, Plum, Ragù|Ragu, Arrabbiata, Carbonara, Yum yum, Kewpie, Brown|HP, Mint, Cranberry, Applesauce|Apple
-85: Romesco, Gremolata, Ajvar, Zhug|Schug|Skhug, Amba, Chermoula, Toum, Nuoc cham|Nước chấm, XO, Tonkatsu, Kecap manis, Mignonette, Espagnole, Velouté|Veloute, Beurre blanc, Pico de gallo, Salsa verde, Tkemali, Adobo, Piccalilli, Gentleman's Relish, Marie Rose, Gribiche, Ravigote, Cumberland, Agrodolce, Bagna cauda, Sofrito, Tapenade, Mostarda, Vincotto, Pepper jelly, Comeback, Mumbo, Alabama white, Fry, Banana ketchup
-100: Garum :: Ancient Rome's favorite condiment was fermented fish guts. The goldfish is not amused.
 
 ? Name a type of bread
 ~drop bread
@@ -43,15 +25,6 @@
 85: Chivito, Pan bagnat, Vada pav, Bauru, Francesinha, Bunny chow, Barros Jarpa, Cemita, Mitraillette, Zapiekanka, Smörgåstårta|Smorgastarta, Medianoche, Mollete, Tramezzino, Katsu sando|Sando, Reina pepiada, Choripán|Choripan, Lampredotto, Tavern, Horseshoe, St. Paul, Jucy Lucy, Spiedie, Slinger
 100: Fluffernutter :: Peanut butter and marshmallow creme. Massachusetts lawmakers once fought about it in schools.
 
-? Name a cocktail
-~drop cocktail
-10: Margarita, Martini, Mojito, Old Fashioned, Bloody Mary
-15: Negroni
-30: Manhattan, Daiquiri, Cosmopolitan|Cosmo, Piña colada|Pina colada, Whiskey sour, Mai tai, Long Island iced tea|Long Island, Moscow mule, Tequila sunrise, Gin and tonic|G&T, White Russian, Screwdriver, Mimosa, Sex on the Beach, Rum and Coke|Cuba libre, Mint julep, Aperol Spritz|Spritz, Espresso martini, Sidecar, Tom Collins, Black Russian, Dark 'n' Stormy|Dark and Stormy
-60: Sazerac, Paloma, Gimlet, Bellini, Hurricane, Caipirinha, Pisco sour, Amaretto sour, Singapore sling, Boulevardier, Zombie, Lemon drop, Kir royale|Kir, Irish coffee, Grasshopper, Mudslide, Harvey Wallbanger, Blue Hawaiian, Blue lagoon, Rusty Nail, Vesper, Bee's Knees, Michelada, Americano, Painkiller, Sangria, Godfather, Greyhound, Salty dog, Aviation, French 75, Alabama Slammer, Woo woo
-85: Last Word, Penicillin, Ramos gin fizz, Clover Club, Monkey gland, Mary Pickford, Bijou, Vieux Carré|Vieux Carre, Naked and Famous, Paper Plane, Hanky Panky, Bobby Burns, Blood and Sand, Southside, Tuxedo, White Lady, Stinger, Gibson, Pegu Club, Brandy Alexander, Japanese Slipper, Bamboo, Adonis, Suffering Bastard, Fog Cutter, Scorpion Bowl, Jungle Bird, Trinidad Sour, Tommy's Margarita, Sherry Cobbler, Mamie Taylor, El Presidente, Hemingway Daiquiri, Bahama Mama, Sea Breeze, Bay Breeze, Cape Codder, Planter's Punch, Bloody Caesar|Caesar, Kamikaze
-100: Corpse Reviver :: A 1930 cocktail book warned that four of these in a row would "unrevive the corpse again."
-
 ? Name a breakfast cereal
 ~drop cereal
 10: Cheerios, Frosted Flakes, Froot Loops|Fruit Loops, Lucky Charms, Cinnamon Toast Crunch, Cap'n Crunch|Captain Crunch, Corn Flakes|Cornflakes
@@ -69,15 +42,6 @@
 60: Artichoke|Artichoke heart, Sun-dried tomato, Goat cheese, Capicola|Gabagool, Pesto, Roasted red pepper, Hot honey|Honey, Eggplant, Zucchini, Broccoli, Soppressata, Truffle|Truffle oil, Fig, Corn|Sweet corn, Shrimp, Clam|White clam, Egg|Fried egg, Parmesan, Gorgonzola, Kalamata olive, Burrata, 'Nduja|Nduja, Mac and cheese, Steak, Pulled pork, Potato, Caper, Balsamic glaze, Hot pepper|Calabrian chili|Chili flakes|Red pepper flakes, Tuna, Pear
 85: Mashed potato, Rosemary, Kimchi, Kale, Asparagus, Smoked salmon, Caviar, Lobster, Pickle, Banana, Cranberry, Tandoori chicken, Paneer, Mayonnaise|Mayo, Squid, Mussel, Octopus, Bulgogi, Spam, Hot dog, Sardine, Ranch, Brussels sprout, Butternut squash, Cauliflower, Duck, Lamb, Haggis, Gouda, Brie, Sweet potato, Taco meat, Doritos, Speck, Bresaola, Mortadella, Guanciale, Alfredo, Tater tot, Seaweed, Teriyaki chicken, Sauerkraut, Crab
 100: Reindeer :: A Finnish smoked-reindeer pizza won a New York pizza contest in 2008.
-
-? Name a Mexican dish
-~drop mexican
-10: Taco, Burrito, Quesadilla, Nachos, Enchilada
-15: Mole, Elote
-30: Tamale, Fajita, Guacamole, Churro, Chimichanga, Tostada, Carnitas, Salsa, Flan, Pozole|Posole, Tortilla soup, Queso|Queso dip, Chile relleno|Chiles rellenos, Menudo, Refried beans|Rice and beans, Birria, Carne asada, Al pastor|Tacos al pastor, Taquito, Chilaquiles, Huevos rancheros, Barbacoa, Horchata, Sopapilla, Tres leches, Empanada, Torta, Ceviche, Gordita, Sope, Esquites, Pico de gallo
-60: Cochinita pibil, Huarache, Tlayuda, Flauta, Mole poblano, Chiles en nogada, Caldo de res, Aguachile, Arroz con leche, Migas, Machaca, Tinga, Pambazo, Mollete, Mixiote, Sincronizada, Capirotada, Champurrado, Cajeta, Concha, Torta ahogada, Alambre, Cabrito, Camarones a la diabla, Carne en su jugo, Nopales, Queso fundido, Tepache, Michelada, Agua fresca
-85: Chapulines, Huitlacoche|Cuitlacoche, Zacahuil, Panucho, Salbute, Papadzules, Poc chuc, Sopa de lima, Tacos de canasta, Tacos gobernador, Cemita, Tetela, Tlacoyo, Memela, Molote, Enfrijoladas, Entomatadas, Enmoladas, Pipián|Pipian, Chileatole, Caldo tlalpeño, Rompope, Jericalla, Cocada, Alegría|Alegria, Buñuelos|Bunuelos, Pescado zarandeado, Sikil pak, Frijoles charros, Frijoles puercos
-100: Escamoles :: Ant larvae harvested from agave roots, sometimes called Mexican caviar.
 
 ? Name a kind of nut
 ~drop nut,nuts
@@ -150,3 +114,48 @@
 60: Zongzi, Wonton noodles, Lanzhou beef noodles|Lanzhou lamian|Hand-pulled noodles, Biang biang noodles|Biangbiang, Zhajiangmian|Zha jiang mian, Hainanese chicken rice, Yangzhou fried rice|Yeung Chow, Fish-fragrant eggplant|Yuxiang eggplant, Dongpo pork, Red braised pork|Hong shao rou, Lion's head meatballs|Lions head, Beggar's chicken|Beggars chicken, Drunken chicken, Salt and pepper shrimp|Salt and pepper squid, West Lake fish, Squirrel fish, Tea egg|Tea eggs, Century egg|Thousand-year egg, Stinky tofu, Jianbing, Roujiamo|Chinese hamburger, Shengjian bao, Cheung fun|Rice noodle roll, Lo mai gai, Turnip cake|Lo bak go, Egg tart|Dan tat, Mooncake, Tangyuan, Nian gao, Sesame balls|Jian dui, Ants climbing a tree, Saliva chicken|Mouthwatering chicken, Chongqing chicken|Laziji, Boiled fish|Shuizhu yu, Cumin lamb, Mala xiang guo|Mala dry pot, Liangpi, Hot dry noodles|Reganmian, Crossing the bridge noodles, Clay pot rice|Bo zai fan, Siu yuk|Crispy pork belly, Roast goose, Buddha's delight|Buddhas delight, Char siu bao
 85: Phoenix claws|Chicken feet, Duck blood soup, Douzhi, Luosifen, Youtiao|Chinese doughnut, Ci fan tuan, Shaobing, Guobaorou, Disanxian|Di san xian, Pickled fish|Suan cai yu, Husband and wife lung slices|Fuqi feipian, Tiger skin peppers, Rabbit heads|Spicy rabbit head, Bird's nest soup|Birds nest soup, Shark fin soup, Chuanr|Lamb skewers, Dapanji|Big plate chicken, Cat ear noodles|Mao erduo, Knife-cut noodles|Daoxiao mian, Oil-splashed noodles|Youpo mian, Yangrou paomo|Pao mo, Guilin rice noodles, Douhua|Tofu pudding, Dragon's beard candy, Tanghulu
 100: Buddha Jumps Over the Wall|Fotiaoqiang :: A Fujian soup so rich, the story goes, that its smell tempted a monk to leap a wall and break his vegetarian vows.
+
+? Name a cut of beef
+~drop steak,beef,cut
+10: Ribeye|Rib eye|Spencer|Scotch fillet|Chuleton, Sirloin, T-bone, Filet mignon|Filet|Fillet, New York strip|Strip|NY strip|Strip steak|Strip loin|Bife de chorizo, Brisket
+15: Wagyu
+30: Porterhouse, Flank|Vacío|Vacio, Skirt|Entraña|Entrana, Chuck, Round, Tenderloin|Lomo|Eye fillet, Prime rib|Standing rib roast|Rib roast, Short rib|Short ribs|Asado de tira, Rump|Rump roast, Top sirloin, Tri-tip, Flat iron|Top blade|Oyster blade|Feather blade, Hanger|Hanging tender|Butcher's steak, Oxtail|Tail, Shank|Shin, Ground beef|Hamburger|Ground chuck, Cube steak|Cubed steak, Chuck roast|Pot roast, London broil, Eye of round, Bottom round|Silverside, Top round|Topside, Plate|Navel, Kobe, Tomahawk, Cowboy steak|Bone-in ribeye
+60: Denver steak|Denver, Picanha|Rump cap|Top sirloin cap|Coulotte|Culotte|Tafelspitz, Bavette, Teres major|Shoulder tender|Petite tender|Bistro filet, Chateaubriand, Tournedos, Delmonico, Merlot cut|Merlot, Sierra steak, Ranch steak, Chuck eye, Flap|Flap meat|Sirloin flap, Sirloin tip|Knuckle|Thick flank, Chuck tender|Mock tender, Clod, Cheeks|Beef cheeks, Tongue, Marrow bones|Marrow, Neck, Brisket point|Point, Brisket flat|Flat, Plate short rib|Dino rib, Ribeye cap|Spinalis, Club steak, Kansas City strip|KC strip
+85: Vegas strip, Oyster steak, Pope's eye|Popes eye, Clod heart, Hump, Leg of mutton cut, Brisket deckle|Deckle, Brisket nose, Bolar blade, Baseball steak, Chuck flap, Zabuton, Matambre, Rib fingers, Ball tip, Chuck roll, Under blade|Underblade, Bottom sirloin, Chuck short rib, Shoulder petite
+100: Spider steak :: A small, rare cut from the hip, named for the web-like marbling across its surface. Butchers often keep it for themselves.
+
+? Name a kind of mushroom
+~drop mushroom,mushrooms
+10: Portobello|Portabella|Portabello, Button|White button|White, Shiitake, Cremini|Crimini|Baby bella, Oyster, Truffle|Truffles
+15: Magic mushroom|Psilocybin|Shrooms
+30: Morel, Chanterelle, Porcini|Cep|Penny bun, Enoki|Velvet shank,Maitake|Hen of the woods, Lion's mane|Lions mane, Black truffle, White truffle, Chicken of the woods, Death cap, Fly agaric|Amanita, Puffball, Reishi, Chaga, King oyster|King trumpet|Eryngii, Shimeji|Beech, Wood ear|Cloud ear, Straw, Matsutake, Toadstool, Cordyceps, Turkey tail, Inky cap|Shaggy mane, Honey fungus|Honey mushroom, Black trumpet|Horn of plenty, Hedgehog|Sweet tooth, Nameko
+60: Destroying angel, Jack-o'-lantern|Jack o lantern, False morel, Liberty cap, Fairy ring|Fairy ring champignon, Parasol, Blewit|Wood blewit, Field mushroom|Meadow, Horse mushroom, Saffron milk cap, Milk cap, Lobster, Cauliflower, Beefsteak fungus, Dryad's saddle|Pheasant back, Witches' butter, Jelly ear|Judas ear, Earthstar, Stinkhorn, Bleeding tooth, Indigo milk cap, Blue oyster, Pink oyster, Golden oyster, Bay bolete, Slippery jack, Birch bolete, Bitter bolete, Devil's bolete, Sulphur tuft, Deadly webcap, Panther cap, Caesar's mushroom|Caesars mushroom, Yellowfoot|Trumpet chanterelle|Winter chanterelle, Cinnabar chanterelle, Ghost fungus, Hoof fungus|Tinder fungus, Artist's conk|Artists conk, Bracket fungus, Tremella|Snow fungus, Huitlacoche|Corn smut, Ergot
+85: Shaggy parasol, Amethyst deceiver, Scarlet elf cup, Orange peel fungus, Dead man's fingers|Dead mans fingers, Devil's fingers|Octopus stinkhorn, Veiled lady, Basket stinkhorn, Collared earthstar, Bird's nest fungus|Birds nest fungus, Hairy curtain crust, King Alfred's cakes, Candlesnuff, Coral tooth, Bearded tooth, Pestle puffball, Giant puffball, Lilac bonnet, Yellow stainer, Angel's wings, Fluted bird's nest, Earthball, Chicken fat, Shrimp russula, Gem-studded puffball, Old man of the woods
+100: Humongous fungus|Armillaria ostoyae :: A honey fungus in Oregon that spreads underground across more than 3 square miles. It may be the largest living thing on Earth.
+
+? Name a variety of apple
+~drop apple,apples
+10: Granny Smith, Red Delicious, Gala, Fuji, Honeycrisp, Golden Delicious
+15: Pink Lady|Cripps Pink
+30: McIntosh, Braeburn, Jazz, Envy, Cosmic Crisp, Ambrosia, Jonagold, Rome|Rome Beauty, Cortland, Empire, Macoun, Pinata|Piñata, SweeTango, Opal, Crab apple|Crabapple, Jonathan, Winesap, Northern Spy, Gravenstein, Paula Red, Zestar|Zestar!
+60: Cox's Orange Pippin|Cox, Bramley, Russet|Golden Russet, Egremont Russet, Baldwin, Rhode Island Greening, Newtown Pippin, Spartan, Idared, Stayman, York, Arkansas Black, Ginger Gold, Lady|Lady apple|Api|Pomme d'Api, Mutsu|Crispin, Kanzi, Rubinette, Elstar, Boskoop|Belle de Boskoop, Discovery, Worcester Pearmain, Liberty, Enterprise, Pristine, Snow Sweet, Sweet Sixteen, Wolf River, Wealthy, Duchess of Oldenburg, Haralson, Frostbite, Honeygold, SnapDragon, RubyFrost, Evercrisp, Pazazz, Smitten, Kiku, Autumn Glory, Rave, KORU|Koru, Junami, Wild Twist, Lucy Glo, Sugar Bee|SugarBee, Cameo, Cripps Red
+85: Hubbardston Nonesuch, Esopus Spitzenburg, Roxbury Russet, Ashmead's Kernel|Ashmeads Kernel, Calville Blanc, Knobbed Russet, Black Oxford, Blue Pearmain, Sheep's Nose|Black Gilliflower, Westfield Seek-No-Further, Winter Banana, Hidden Rose, Pink Pearl, Grimes Golden, Smokehouse, Summer Rambo, Lady Williams, Court Pendu Plat, Decio, Reinette, Annurca, Melrose, Ralls Janet, Harrison, Hewes Crab, Pitmaston Pineapple, Kingston Black, Dabinett, Yarlington Mill
+100: Flower of Kent :: The kind of apple said to have fallen near Isaac Newton and set him thinking about gravity. It's green, mealy and rarely eaten.
+
+? Name a Japanese dish
+~drop dish
+10: Sushi, Ramen, Tempura, Teriyaki, Miso soup|Miso, Sashimi
+15: Edamame
+30: Udon, Soba, Gyoza, Katsu|Tonkatsu, Bento, Onigiri|Rice ball, Yakitori, Takoyaki, Okonomiyaki, Sukiyaki, Shabu-shabu|Shabu shabu, Donburi, Katsudon, Oyakodon, Gyudon, Japanese curry|Kare raisu|Curry rice, Yakisoba, Mochi, Wagyu, Unagi, Nigiri, Maki, California roll, Hand roll|Temaki, Chirashi|Chirashizushi, Karaage, Chawanmushi, Natto, Tamagoyaki, Dango, Taiyaki, Matcha
+60: Omurice, Katsu curry, Tonkotsu ramen, Tsukemen, Nabe, Oden, Kaiseki, Wagashi, Dorayaki, Imagawayaki, Monjayaki, Kushikatsu|Kushiage, Tebasaki, Menchi katsu, Korokke, Hambagu|Hamburg steak, Nikujaga, Tonjiru, Ochazuke, Zosui, Kamameshi, Tendon, Unadon|Unaju, Inari|Inarizushi, Futomaki, Uramaki, Oshizushi, Gunkan, Chikuwa, Kamaboko, Narutomaki, Agedashi tofu, Hiyayakko, Tsukemono, Umeboshi, Furikake, Okayu, Mentaiko, Ikura, Uni, Toro|Otoro, Fugu, Basashi, Gyutan, Horumon, Jingisukan|Genghis Khan, Champon, Hiyashi chuka, Somen, Zaru soba, Kitsune udon, Nabeyaki udon, Yaki onigiri, Sekihan, Ozoni, Osechi, Mitarashi dango, Warabimochi, Anmitsu, Kakigori, Daifuku
+85: Shirako, Inago no tsukudani|Inago, Hachinoko, Kusaya, Shiokara, Hoya, Ankimo, Iburigakko, Narezushi, Kiritanpo, Hōtō|Hoto, Hitsumabushi, Miso katsu, Taco rice, Goya champuru|Champuru, Sata andagi, Shirasu don, Mehari zushi, Masu zushi, Sasa dango, Tekone zushi, Jibuni, Dobin mushi, Ganmodoki, Yuba, Kudzu mochi
+100: Funazushi :: Carp fermented with rice for a year or more, from around Lake Biwa. It's thought to be the ancestor of all sushi.
+
+? Name an Indian dish
+~drop dish
+10: Butter chicken, Chicken tikka masala|Tikka masala, Naan, Samosa, Biryani, Curry
+15: Vindaloo
+30: Tandoori chicken|Tandoori, Palak paneer|Saag paneer, Chana masala|Chole, Dal|Daal|Dhal, Korma, Tikka|Chicken tikka, Masala dosa|Dosa, Idli, Vada, Pakora|Pakoras|Bhaji|Onion bhaji, Paneer tikka, Aloo gobi, Rogan josh, Raita, Chapati|Roti, Paratha, Kheer, Gulab jamun, Jalebi, Lassi, Pani puri|Golgappa|Puchka, Bhel puri, Chaat, Dal makhani, Malai kofta, Matar paneer, Kadai paneer|Karahi paneer, Pav bhaji, Vada pav, Uttapam, Sambar, Rasam, Upma, Poha, Puri|Poori, Kulfi, Ras malai|Rasmalai, Pulao|Pilau, Jeera rice, Madras curry|Madras, Jalfrezi, Balti, Bhuna, Dopiaza, Saag aloo
+60: Nihari, Haleem, Keema|Keema matar, Kebab|Seekh kebab, Galouti kebab, Shami kebab, Chicken 65, Gobi Manchurian|Manchurian, Chilli chicken, Hakka noodles, Momos, Thali, Khichdi, Kadhi, Rajma, Baingan bharta, Bhindi masala, Aloo paratha, Kachori, Dhokla, Khandvi, Thepla, Undhiyu, Misal pav, Puran poli, Modak, Appam, Avial, Puttu, Kerala fish curry|Meen curry, Goan fish curry, Xacuti, Sorpotel, Chettinad chicken|Chettinad, Hyderabadi biryani, Kolkata biryani, Rasgulla, Sandesh, Mishti doi, Barfi, Ladoo|Laddu, Halwa|Gajar halwa, Shrikhand, Payasam, Mysore pak, Peda, Soan papdi, Phirni, Falooda, Kati roll|Kathi roll, Frankie, Dabeli, Sev puri, Dahi puri, Aloo tikki, Chole bhature, Litti chokha, Dum aloo
+85: Thukpa, Sattu, Pitha, Chingri malai curry, Shorshe ilish, Kosha mangsho, Laal maas, Gatte ki sabzi, Dal baati churma, Ker sangri, Bisi bele bath, Ragi mudde, Kozhi kuzhambu, Chemmeen curry, Karimeen pollichathu, Pesarattu, Gongura pachadi, Yakhni, Gushtaba, Rista, Wazwan, Tabak maaz, Sarson ka saag, Makki di roti, Pindi chole, Mirchi bajji, Akki roti, Neer dosa, Kundapur chicken, Bebinca, Dodol, Dalma, Pakhala
+100: Chhena poda :: An Odisha dessert of fresh cheese, sugar and semolina, baked until the outside caramelizes. The name means "burnt cheese."

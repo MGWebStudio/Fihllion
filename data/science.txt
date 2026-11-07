@@ -1,11 +1,3 @@
-? Name a chemical element
-10: Oxygen, Hydrogen, Carbon, Gold, Iron, Helium
-15: Plutonium, Uranium
-30: Nitrogen, Silver, Copper, Sodium, Calcium, Neon, Lead, Aluminum|Aluminium, Mercury, Zinc, Nickel, Tin, Titanium, Platinum, Potassium, Silicon, Chlorine, Sulfur|Sulphur, Magnesium, Lithium, Argon, Fluorine, Iodine, Radium, Cobalt
-60: Boron, Beryllium, Phosphorus, Chromium, Manganese, Krypton, Xenon, Radon, Tungsten, Bromine, Barium, Arsenic, Cesium|Caesium, Palladium, Cadmium, Antimony, Bismuth, Polonium, Einsteinium, Curium, Californium, Americium, Germanium, Selenium, Strontium, Vanadium, Iridium, Neptunium
-85: Scandium, Rubidium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Indium, Tellurium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Rhenium, Osmium, Thallium, Astatine, Francium, Actinium, Thorium, Protactinium, Berkelium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson
-100: Gallium :: A metal that melts in your hand. A spoon made of it dissolves in hot tea.
-
 ? Name a constellation
 10: Orion, Big Dipper, Ursa Major, Little Dipper, Ursa Minor
 15: Southern Cross|Crux
@@ -13,33 +5,6 @@
 60: Aquila, Boötes|Bootes, Canis Major, Canis Minor, Auriga, Cepheus, Corona Borealis, Delphinus, Hydra, Lupus, Ophiuchus, Phoenix, Centaurus, Cetus, Eridanus, Corvus, Crater, Lepus, Serpens
 85: Antlia, Apus, Ara, Caelum, Camelopardalis, Canes Venatici, Carina, Chamaeleon, Circinus, Columba, Coma Berenices, Corona Australis, Dorado, Equuleus, Fornax, Grus, Horologium, Hydrus, Indus, Lacerta, Leo Minor, Lynx, Mensa, Microscopium, Monoceros, Musca, Norma, Octans, Pavo, Pictor, Puppis, Pyxis, Reticulum, Sagitta, Sculptor, Scutum, Sextans, Telescopium, Triangulum, Triangulum Australe, Tucana, Vela, Volans, Vulpecula
 100: Piscis Austrinus :: The Southern Fish. The goldfish has been telling everyone it's named after them.
-
-? Name an organ in the human body
-~drop the
-10: Heart, Brain, Lung, Liver, Stomach, Kidney
-15: Skin, Appendix
-30: Pancreas, Spleen, Intestine|Small intestine|Large intestine|Bowel, Gallbladder, Bladder, Esophagus, Colon, Uterus|Womb, Trachea|Windpipe, Thyroid, Tongue, Eye, Ovary, Prostate
-60: Larynx|Voice box, Pharynx, Duodenum, Thymus, Adrenal gland|Adrenal, Pituitary gland|Pituitary, Diaphragm, Rectum, Testes|Testicle, Placenta, Cerebellum, Hypothalamus, Pineal gland|Pineal, Parathyroid, Salivary gland, Lymph node, Tonsil, Cochlea
-85: Jejunum, Ileum, Cecum|Caecum, Fallopian tube, Urethra, Ureter, Epiglottis, Hippocampus, Amygdala, Medulla, Pons, Bone marrow|Marrow, Vas deferens, Interstitium, Vomeronasal organ, Bile duct, Omentum, Seminal vesicle
-100: Mesentery :: You've always had one, but doctors only argued it should count as an organ in the 2010s.
-
-? Name a famous scientist
-~last
-10: Albert Einstein, Isaac Newton, Marie Curie, Charles Darwin, Stephen Hawking, Galileo Galilei|Galileo
-15: Nikola Tesla, Bill Nye
-30: Thomas Edison, Louis Pasteur, Neil deGrasse Tyson, Carl Sagan, Gregor Mendel, Rosalind Franklin, Nicolaus Copernicus|Copernicus, Aristotle, Archimedes, Benjamin Franklin, J. Robert Oppenheimer|Robert Oppenheimer, Jane Goodall, Alexander Fleming, Michael Faraday, Johannes Kepler, Niels Bohr, Alan Turing, Edwin Hubble, Dmitri Mendeleev, Max Planck, Erwin Schrödinger|Erwin Schrodinger|Schrodinger, Francis Crick, James Watson
-60: Richard Feynman, Robert Hooke, Ernest Rutherford, Enrico Fermi, Werner Heisenberg, Antoine Lavoisier, James Clerk Maxwell, Tycho Brahe, Louis Leakey, Edward Jenner, Jonas Salk, Rachel Carson, George Washington Carver, Alfred Nobel, Carl Linnaeus, Robert Boyle, Joseph Priestley, Lise Meitner, Ada Lovelace, Alessandro Volta, André-Marie Ampère|Andre Ampere|Ampere, Georg Ohm, Katherine Johnson, Dorothy Hodgkin, Barbara McClintock, Linus Pauling, Hans Geiger, Gottfried Leibniz, Blaise Pascal, Leonardo da Vinci|Da Vinci, Anders Celsius, Daniel Fahrenheit, Ibn al-Haytham
-85: Jocelyn Bell Burnell, Emmy Noether, Chien-Shiung Wu, Vera Rubin, Henrietta Leavitt, Cecilia Payne, Dian Fossey, Alfred Wegener, Paul Dirac, Wolfgang Pauli, Subrahmanyan Chandrasekhar, Srinivasa Ramanujan, Antonie van Leeuwenhoek|Leeuwenhoek, Alfred Russel Wallace, Mary Anning, William Harvey, Humphry Davy, Ignaz Semmelweis, Robert Koch, Joseph Lister, Nettie Stevens, Tu Youyou, Marie Tharp, Caroline Herschel, William Herschel, Rudolf Virchow, Fritz Haber, Hermann von Helmholtz|Helmholtz, Ludwig Boltzmann, Heinrich Hertz, Guglielmo Marconi, James Chadwick, J.J. Thomson, Luis Alvarez, Erasmus Darwin, Eratosthenes, Hippocrates
-100: Hedy Lamarr :: The Hollywood star co-invented a frequency-hopping system that helped pave the way for Wi-Fi.
-
-? Name a kind of weather
-~drop weather
-10: Rain|Rainy, Snow|Snowy, Sunny|Sunshine|Sun, Wind|Windy, Hurricane, Tornado, Thunderstorm|Storm, Fog|Foggy, Cloudy|Clouds, Hail
-15: Sharknado, Monsoon
-30: Sleet, Blizzard, Lightning, Thunder, Drizzle, Mist, Typhoon, Cyclone, Flood, Heat wave, Drought, Frost, Ice storm, Breeze, Overcast, Humid|Humidity, Dust storm, Rainbow, Freezing rain, Snowstorm
-60: Derecho, Haboob, Nor'easter, El Niño|El Nino, La Niña|La Nina, Polar vortex, Whiteout, Graupel, Squall, Gale, Waterspout, Dust devil, Heat lightning, Smog, Haze, Flurries, Virga, Bomb cyclone, Microburst, Black ice, Dew, Thundersnow, Sandstorm, Hoarfrost, Cold snap, Indian summer, Chinook, Santa Ana winds|Santa Ana, Atmospheric river|Pineapple Express, Mistral, Sirocco, Zephyr
-85: Foehn|Föhn, Bora, Harmattan, Khamsin, Simoom, Levanter, Meltemi, Williwaw, Diamond dust, Ball lightning, Sun shower|Sunshower, Sun dog|Sundog, Fire whirl|Firenado, Steam devil, Pogonip, Rime, Mammatus, Lake-effect snow|Lake effect, Scud, Supercell, Mesocyclone, Downburst, Wall cloud, Arcus, Noctilucent clouds, Gustnado, Landspout, Tule fog, Morning glory cloud, Sprite, St. Elmo's fire, Ice pellets, Mackerel sky
-100: Snow roller :: Wind can roll snow into hollow logs, as if invisible kids were building snowmen.
 
 ? Name a gemstone
 ~drop stone,gem
@@ -49,14 +14,6 @@
 60: Alexandrite, Tanzanite, Zircon|Cubic zirconia, Morganite, Spinel, Kunzite, Jasper, Agate, Carnelian, Obsidian, Bloodstone, Malachite, Sunstone, Tiger's eye|Tigers eye, Hematite, Beryl, Coral, Jet, Rhodonite, Labradorite, Chrysoberyl, Iolite
 85: Benitoite, Grandidierite, Taaffeite, Musgravite, Red beryl|Bixbite, Poudretteite, Serendibite, Jeremejevite, Larimar, Charoite, Sugilite, Chrysoprase, Sodalite, Ammolite, Demantoid, Tsavorite, Kyanite, Zoisite, Sphene|Titanite, Moldavite, Rhodochrosite, Apatite, Fluorite, Sardonyx, Hiddenite, Heliodor, Padparadscha, Scapolite
 100: Painite :: For decades it held the record as the world's rarest mineral, with only a few known crystals.
-
-? Name a field of study ending in "ology"
-10: Biology, Psychology, Geology, Zoology, Sociology
-15: Scientology, Mixology
-30: Astrology, Archaeology|Archeology, Anthropology, Technology, Cardiology, Neurology, Ecology, Theology, Mythology, Meteorology, Criminology, Dermatology, Oncology, Radiology, Microbiology, Entomology, Paleontology, Cosmology, Pathology, Physiology, Musicology, Etymology
-60: Ornithology, Herpetology, Pharmacology, Immunology, Hematology, Urology, Gastroenterology, Gynecology, Ophthalmology, Toxicology, Epidemiology, Virology, Bacteriology, Seismology, Volcanology|Vulcanology, Oceanology, Mycology, Horology, Graphology, Climatology, Endocrinology, Rheumatology, Kinesiology, Phrenology, Numerology, Terminology, Methodology, Ideology, Chronology, Hydrology, Audiology, Pulmonology, Anesthesiology, Cryptozoology
-85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
-100: Ichthyology :: The study of fish. The goldfish insists you take notes.
 
 ? Name a spacecraft
 ~drop the,spacecraft
@@ -137,3 +94,47 @@
 60: Thales, Diophantus, Eratosthenes, Apollonius, Ptolemy, Zeno, Brahmagupta, Aryabhata, Bhaskara, Gerolamo Cardano|Cardano, Tartaglia, François Viète|Francois Viete, John Napier, Marin Mersenne, Christiaan Huygens, Jacob Bernoulli, Johann Bernoulli, Daniel Bernoulli, Abraham de Moivre, Thomas Bayes, Joseph Fourier, Augustin-Louis Cauchy|Cauchy, Niels Henrik Abel, Carl Jacobi, Peter Dirichlet, Karl Weierstrass, Richard Dedekind, Sophus Lie, Felix Klein, Arthur Cayley, William Rowan Hamilton, Sofia Kovalevskaya, Sophie Germain, Bertrand Russell, Alfred North Whitehead, G. H. Hardy|G.H. Hardy, John Littlewood, Hermann Weyl, André Weil|Andre Weil, Alexander Grothendieck, Claude Shannon, Norbert Wiener, Stanislaw Ulam, John Horton Conway|John Conway, Maryam Mirzakhani, Edward Witten, Andrey Kolmogorov, Nikolai Lobachevsky, Pafnuty Chebyshev, Andrey Markov, Dorothy Vaughan, Mary Jackson, Stephen Hawking, Martin Gardner, Grace Hopper
 85: Brook Taylor, Colin Maclaurin, Bonaventura Cavalieri, Girard Desargues, Bernard Bolzano, Augustus De Morgan, George Green, Hermann Grassmann, Ernst Kummer, Leopold Kronecker, Gotthold Eisenstein, Camille Jordan, Charles Hermite, Henri Lebesgue, Émile Borel|Emile Borel, Felix Hausdorff, Stefan Banach, Ernst Zermelo, Alonzo Church, Emil Post, Haskell Curry, Alfred Tarski, Paul Cohen, Shiing-Shen Chern, Atle Selberg, Harish-Chandra, Michael Atiyah, John Milnor, Stephen Smale, René Thom|Rene Thom, William Thurston, Shing-Tung Yau, Pierre Deligne, Robert Langlands, Peter Scholze, June Huh, Maryna Viazovska, Karen Uhlenbeck, Ingrid Daubechies, Julia Robinson, Hipparchus, Pappus, Proclus, Madhava of Sangamagrama|Madhava, Zu Chongzhi, Liu Hui, Qin Jiushao, Jamshid al-Kashi|Al-Kashi, Ibn al-Haytham|Alhazen, Al-Biruni, Thabit ibn Qurra
 100: Seki Takakazu|Seki Kowa :: A 17th-century Japanese mathematician who worked out determinants around the same time as Leibniz, entirely on his own.
+
+? Name a famous inventor
+~last
+10: Thomas Edison, Alexander Graham Bell, Nikola Tesla, Benjamin Franklin|Ben Franklin, Orville and Wilbur Wright|Wright brothers|Orville Wright|Wilbur Wright, Henry Ford
+15: Steve Jobs
+30: Leonardo da Vinci|Da Vinci|Leonardo, Johannes Gutenberg, James Watt, Eli Whitney, Samuel Morse, Guglielmo Marconi, George Washington Carver, Alfred Nobel, Tim Berners-Lee, Bill Gates, Steve Wozniak|Woz, Elon Musk, Archimedes, Galileo Galilei|Galileo, Isaac Newton, Louis Pasteur, Marie Curie, Karl Benz, Rudolf Diesel, Gottlieb Daimler, Elisha Otis, Charles Babbage, Ada Lovelace, John Logie Baird, Philo Farnsworth, Alessandro Volta, Michael Faraday, George Westinghouse, Cyrus McCormick, Samuel Colt, Richard Gatling, Hedy Lamarr, Dean Kamen, James Dyson, Thomas Crapper, Levi Strauss
+60: Charles Goodyear, Elias Howe, Isaac Singer, John Deere, Garrett Morgan, Lewis Latimer, Granville Woods, Madam C. J. Walker|Madam CJ Walker, Margaret Knight, Mary Anderson, Josephine Cochrane, Stephanie Kwolek, Grace Hopper, Ruth Wakefield, George Eastman, Edwin Land, Chester Carlson, Willis Carrier, Percy Spencer, Robert Fulton, Charles Kettering, Lee de Forest, Edwin Armstrong, Robert Moog, Les Paul, Leo Fender, King Gillette, Whitcomb Judson, Gideon Sundback, Otto Lilienthal, Igor Sikorsky, Robert Goddard, Wernher von Braun, Hiram Maxim, John Moses Browning|John Browning, Mikhail Kalashnikov, Richard Arkwright, James Hargreaves, Edmund Cartwright, John Kay, Samuel Crompton, George Stephenson, Richard Trevithick, Thomas Newcomen, Humphry Davy, Joseph Swan, Blaise Pascal, Gottfried Leibniz, Christiaan Huygens, Evangelista Torricelli, Daniel Gabriel Fahrenheit|Fahrenheit, Anders Celsius, Louis Braille, Louis Daguerre, Nicéphore Niépce|Nicephore Niepce, Auguste and Louis Lumière|Lumière brothers|Lumiere brothers, Momofuku Ando, Akio Morita, Masaru Ibuka, Shuji Nakamura, Martin Cooper, Douglas Engelbart, Vint Cerf
+85: Hero|Hero of Alexandria|Heron of Alexandria, Ismail al-Jazari|Al-Jazari, Zhang Heng, Cai Lun, Bi Sheng, Su Song, Ctesibius, Cornelis Drebbel, Denis Papin, John Harrison, Thomas Savery, Joseph Marie Jacquard, Charles Wheatstone, William Fothergill Cooke, Nils Bohlin, Bette Nesmith Graham, Ermal Fraze, Frank Epperson, Walter Hunt, Earle Dickson, Charles Strite, Marion Donovan, Sarah Boone, Lonnie Johnson, Frank Zamboni, Earl Tupper, Wilson Greatbatch, Spencer Silver, Art Fry, Joseph Glidden, Sylvan Goldman, Percy Shaw, John Boyd Dunlop, Clarence Birdseye, Ralph Teetor, Jack Kilby, Robert Noyce, Mihajlo Pupin, Ányos Jedlik|Anyos Jedlik
+100: Thomas Midgley Jr.|Thomas Midgley :: He gave the world leaded gasoline and the CFCs that thinned the ozone layer. A pulley rig he built to get himself out of bed later killed him.
+
+? Name a part of a computer
+~drop computer
+10: Keyboard, Mouse, Monitor|Screen|Display, CPU|Processor|Central processing unit, Hard drive|Hard disk|HDD, Motherboard
+15: RAM|Memory
+30: Graphics card|GPU|Video card, Power supply|PSU, Fan|Cooling fan, Heat sink|Heatsink, SSD|Solid state drive, USB port|USB, Speakers|Speaker, Webcam|Camera, Microphone|Mic, Trackpad|Touchpad, Case|Tower|Chassis, Cables|Cable, Power button, Battery, Charger|Power cord, Disk drive|CD drive|DVD drive|Optical drive, Floppy drive|Floppy disk, Sound card, Network card|NIC|Ethernet card, Wi-Fi card|WiFi, Ethernet port, HDMI port|HDMI, Headphone jack, Keys, Space bar|Spacebar, Enter key, BIOS, Operating system|OS, Chip|Microchip, Transistor, Circuit board, Thermal paste, Cache, ROM
+60: Northbridge, Southbridge, Chipset, PCIe slot|PCI slot|Expansion slot, CPU socket|Socket, DIMM slot|RAM slot, SATA cable|SATA, M.2 slot|M.2, Front panel connectors|Front panel, System clock|Real-time clock, CMOS battery|CMOS, Capacitor, Resistor, VRM|Voltage regulator, Bus|Data bus, Register, ALU|Arithmetic logic unit, Control unit, Core|Cores, Heat pipe, Liquid cooler|AIO|Water cooling, Radiator, Pump, Drive bay, Expansion card, Riser card|Riser, Daughterboard, Firmware, UEFI, Bootloader, Kernel, Driver|Drivers, Trackball, Stylus, Joystick, Scanner, Printer, Modem, Card reader|SD card reader, Fingerprint reader, Hinge, Bezel, Function keys|F keys, Number pad|Numpad|Num lock, Caps lock, Escape key|Esc, Control key|Ctrl, Alt key, Delete key, Arrow keys, Tab key, Shift key, Windows key|Command key, Thunderbolt, VGA port|VGA, DisplayPort, Serial port, Parallel port, PS/2 port|PS2, Kensington lock|Kensington slot
+85: Platter, Read/write head|Read-write head, Actuator arm|Actuator, Spindle, NAND flash|NAND, SSD controller, TPM|Trusted Platform Module, Jumper|Jumpers, DIP switch, Standoffs|Motherboard standoffs, I/O shield|IO shield, Backplate, Thermal pad, CPU die|Die, IHS|Integrated heat spreader, CPU pins|Pins, L1 cache, L2 cache, L3 cache, Program counter, Instruction register, Accumulator, MMU|Memory management unit, FPU|Floating point unit|Math coprocessor, DMA controller, Interrupt controller, Crystal oscillator, 24-pin connector|24-pin, Molex, Fan header, RGB header, POST code display|Debug LEDs, Clock generator, Pointing stick|TrackPoint|Nub, Keycaps|Keycap, Stabilizers, Key switches|Switches, Scissor switch
+100: Core rope memory|Rope memory :: Apollo's guidance computer kept its programs in copper wire woven by hand through tiny magnetic rings. Engineers nicknamed it "LOL memory," for the little old ladies who wove it.
+
+? Name a vitamin or mineral nutrient
+~drop vitamin
+10: Vitamin C|Ascorbic acid, Vitamin D, Iron, Calcium, Vitamin A|Retinol, Vitamin B12|Cobalamin|Cyanocobalamin|Methylcobalamin
+15: Potassium
+30: Vitamin E|Tocopherol, Vitamin K, Vitamin B6|Pyridoxine, Zinc, Magnesium, Sodium|Salt, Folic acid|Folate|Vitamin B9|Vitamin M, Biotin|Vitamin B7|Vitamin H, Niacin|Vitamin B3, Riboflavin|Vitamin B2|Vitamin G, Thiamine|Thiamin|Vitamin B1, Iodine, Phosphorus, Selenium, Copper, Chromium, Manganese, Fluoride|Fluorine, Vitamin B|B vitamins|B complex, Pantothenic acid|Vitamin B5
+60: Molybdenum, Chloride|Chlorine, Sulfur|Sulphur, Cobalt, Boron, Silicon, Nickel, Vanadium, Vitamin D3|Cholecalciferol, Vitamin D2|Ergocalciferol, Vitamin K2|Menaquinone, Vitamin K1|Phylloquinone, Beta-carotene|Beta carotene, Choline, Inositol|Vitamin B8
+85: Bromine, Lithium, Vitamin K3|Menadione, Calcitriol, Methylfolate|L-methylfolate, Niacinamide|Nicotinamide, Nicotinic acid, Pyridoxal phosphate|P5P, Benfotiamine, Retinoic acid, Vitamin B4|Adenine, Vitamin B10|PABA, Vitamin B13|Orotic acid, Vitamin B15|Pangamic acid, Vitamin U, Vitamin F, Carnitine|Vitamin BT
+100: Vitamin B17|Laetrile|Amygdalin :: Not a real vitamin. It was sold as a cancer cure in the 1970s, and the body breaks it down into cyanide.
+
+? Name a natural disaster
+10: Earthquake, Tornado, Hurricane, Tsunami|Tidal wave, Flood|Flooding, Volcano|Volcanic eruption|Eruption
+15: Wildfire|Forest fire|Bushfire
+30: Avalanche, Landslide|Mudslide|Mudflow, Drought, Blizzard, Typhoon, Cyclone, Sinkhole, Heat wave|Heatwave, Hailstorm|Hail, Ice storm, Lightning|Lightning strike, Thunderstorm|Storm, Famine, Pandemic|Epidemic|Plague, Dust storm|Sandstorm, Flash flood, Monsoon, Asteroid impact|Asteroid|Meteor|Meteorite, Rockslide|Rockfall, Cold snap|Cold wave|Freeze, Locust swarm|Locusts|Locust plague
+60: Lahar, Pyroclastic flow, Storm surge, Derecho, Waterspout, Firestorm, Fire tornado|Firenado|Fire whirl, Haboob, Microburst|Downburst, Whiteout, Polar vortex, Bomb cyclone, Nor'easter|Noreaster, Supercell, Glacial outburst flood|Jökulhlaup|Jokulhlaup|GLOF, Ice jam, Snowstorm, Superstorm, Rogue wave, Liquefaction, Aftershock, Subsidence, Erosion|Coastal erosion, Desertification, Crop failure, Algal bloom|Red tide, Smog, Acid rain, Gamma-ray burst, Supervolcano|Super eruption, Megatsunami|Mega-tsunami, Ashfall|Ash cloud, Ice age, Mass extinction, Solar storm|Solar flare|Geomagnetic storm
+85: Seiche, Snow squall, Black blizzard, Dust devil, Gustnado, Landspout, Thundersnow, Freezing rain, Ice shove, Frost quake|Cryoseism, Mud volcano, Sector collapse, Phreatic eruption, Volcanic winter, Coronal mass ejection|CME, Debris flow, Avulsion, Rockburst, Dry lightning, Marine heatwave, Megadrought, Atmospheric river, Medicane, Hypercane, Dzud
+100: Limnic eruption :: A lake suddenly burps up the carbon dioxide dissolved in its depths. In 1986, one at Cameroon's Lake Nyos suffocated about 1,700 people overnight.
+
+? Name a type of doctor
+~drop doctor
+10: Pediatrician, Surgeon, Dentist, Cardiologist|Heart doctor, Dermatologist|Skin doctor, Family doctor|General practitioner|GP|Family physician|Primary care
+15: Veterinarian|Vet
+30: Neurologist, Oncologist|Cancer doctor, Psychiatrist, Gynecologist|OB-GYN|OBGYN|Obstetrician, Orthopedic surgeon|Orthopedist, Optometrist|Eye doctor, Ophthalmologist, Radiologist, Anesthesiologist, Chiropractor, Podiatrist|Foot doctor, Pathologist, Urologist, Endocrinologist, Gastroenterologist, Neurosurgeon|Brain surgeon, ENT|Otolaryngologist|Ear nose and throat, Allergist|Immunologist, Pulmonologist|Lung doctor, Nephrologist|Kidney doctor, Rheumatologist, Hematologist, Plastic surgeon, Internist|Internal medicine, Emergency physician|ER doctor, Orthodontist, Psychologist, Physical therapist, Osteopath|DO, Geriatrician, Sports medicine, Medical examiner|Coroner
+60: Neonatologist, Perinatologist|Maternal-fetal medicine, Infectious disease specialist, Intensivist|Critical care, Hospitalist, Cardiothoracic surgeon|Heart surgeon, Vascular surgeon, Colorectal surgeon|Proctologist, Hand surgeon, Trauma surgeon, Pediatric surgeon, Oral surgeon|Maxillofacial surgeon, Periodontist, Endodontist, Prosthodontist, Neuroradiologist, Nuclear medicine, Radiation oncologist, Physiatrist|Rehabilitation, Pain specialist|Pain management, Sleep specialist, Bariatric surgeon, Hepatologist|Liver doctor, Electrophysiologist, Interventional cardiologist, Neuropsychologist, Child psychiatrist, Forensic pathologist, Toxicologist, Epidemiologist, Geneticist|Medical geneticist, Andrologist, Reproductive endocrinologist|Fertility doctor, Audiologist, Naturopath, Homeopath, Acupuncturist, Herbalist, Spin doctor, Witch doctor, Plague doctor, PhD|Doctor of philosophy, Flight surgeon, Ship's doctor|Ship doctor, Team doctor, Combat medic|Medic, Country doctor, Locum, Resident, Intern, Attending
+85: Otologist|Neurotologist, Rhinologist, Laryngologist, Phlebologist, Trichologist, Bariatrician, Dysmorphologist, Hyperbaric medicine, Wilderness medicine, Aerospace medicine|Space medicine, Diving medicine|Undersea medicine, Tropical medicine, Travel medicine, Occupational medicine, Addiction medicine, Palliative care|Hospice doctor, Neuro-ophthalmologist, Retina specialist|Retinologist, Mohs surgeon, Dermatopathologist, Cytopathologist, Hematopathologist, Neuropathologist, Gerontologist, Sexologist, Pharmacologist, Venereologist, Leprologist, Flying doctor, Bush doctor, Horse doctor|Equine vet, Zoo vet|Zoo veterinarian
+100: Barber surgeon :: For centuries, barbers did surgery, pulled teeth and let blood. The red-and-white barber pole is a leftover from that trade.

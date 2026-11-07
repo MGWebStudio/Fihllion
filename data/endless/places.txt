@@ -57,3 +57,46 @@
 60: Moai|Easter Island heads, Little Mermaid, Atomium, Tokyo Tower, Tokyo Skytree|Skytree, Oriental Pearl, Nelson's Column, Vietnam Veterans Memorial|Vietnam Memorial, Jefferson Memorial, Crazy Horse Memorial|Crazy Horse, Devils Tower, Hollywood Sign, Cloud Gate|The Bean, Sagrada Familia, St. Basil's, Petronas Towers, Gateway of India, Merlion, Victory Column, Fernsehturm|Berlin TV Tower, Hagia Sophia, Alamo, Petra, Cologne Cathedral, Acropolis, Blarney Stone, Rock of Gibraltar, Spanish Steps
 85: Qutb Minar|Qutub Minar, Giralda, Campanile, Galata Tower, Belém Tower|Belem Tower, Tower of Hercules, Spasskaya Tower, Ostankino, Sky Tower, Milad Tower, Azadi Tower, Motherland Calls, Spring Temple Buddha, Statue of Unity, African Renaissance Monument, Bunker Hill Monument, San Jacinto Monument, Perry's Monument, Coit Tower, Reunion Tower, Stratosphere|Strat, Wallace Monument, Scott Monument, Angel of the North, Kelpies
 100: Manneken Pis :: A tiny statue of a boy peeing. Brussels has given it more than 1,000 costumes.
+
+? Name a mountain
+~drop mount,mountain,mt,peak
+10: Everest, Fuji, Kilimanjaro, K2, Rushmore
+15: Doom, Olympus
+30: Denali|McKinley, Matterhorn, Mont Blanc, St. Helens|Saint Helens, Rainier, Etna, Vesuvius, Whitney, Elbrus, Aconcagua, Krakatoa, Pinatubo, Sinai, Ararat, Hood, Shasta, Kosciuszko, Annapurna, Kangchenjunga
+60: Pikes|Pike's, Mauna Kea, Mauna Loa, Kilauea, Eiger, Jungfrau, Ben Nevis, Snowdon, Zugspitze, Table, Lhotse, Makalu, Cho Oyu, Nanga Parbat, Dhaulagiri, Cotopaxi, Chimborazo, Popocatépetl|Popocatepetl, Washington, Mitchell, Grand Teton|Teton, Half Dome, El Capitan, Longs, Sugarloaf, Logan, Vinson, Erebus, Kenya, Cook|Aoraki, Tambora, Stromboli, Hekla, Eyjafjallajökull|Eyjafjallajokull
+85: Manaslu, Gasherbrum, Broad, Shishapangma, Huascarán|Huascaran, Ojos del Salado, Illimani, Puncak Jaya|Carstensz Pyramid, Ras Dashen, Ventoux, Monte Rosa, Dufourspitze, Grossglockner, Triglav, Musala, Mulhacén|Mulhacen, Teide, Damavand, Haleakala, Borah, Katahdin, Monadnock, Greylock, Mansfield, Cadillac, Gannett, Elbert, Massive, Harvard, Maroon Bells, Capitol, Cloud, Kings, Humphreys, Wheeler, Guadalupe, Black Elk
+100: Thor :: Canada's Mount Thor has the world's greatest sheer vertical drop, about 1,250 metres straight down.
+
+? Name an Asian country
+10: China, Japan, India, South Korea|Korea, Thailand, Vietnam
+15: Bhutan
+30: North Korea, Indonesia, Philippines|The Philippines, Malaysia, Singapore, Pakistan, Bangladesh, Nepal, Iran, Iraq, Israel, Saudi Arabia, Afghanistan, Turkey|Türkiye, Mongolia, Cambodia, Laos, Myanmar|Burma, Taiwan, Sri Lanka, Lebanon, Syria, Jordan, Yemen, Qatar, Kuwait, United Arab Emirates|UAE, Oman, Russia
+60: Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Georgia, Bahrain, Palestine, Cyprus
+85: Turkmenistan, Kyrgyzstan, Tajikistan, Maldives, Timor-Leste|East Timor
+100: Brunei :: Its sultan's palace has about 1,800 rooms, more than most hotels.
+
+? Name a lake
+~drop lake
+10: Superior, Michigan, Erie, Tahoe, Ontario, Huron
+15: Loch Ness|Ness, Titicaca
+30: Victoria, Placid, Great Salt|Salt, Baikal, Geneva, Como, Tanganyika, Powell, Mead, Okeechobee, Champlain, Crater, Caspian Sea|Caspian, Dead Sea, Swan, George, Minnetonka, Winnipeg, Great Bear, Walden Pond|Walden
+60: Malawi, Great Slave, Garda, Maggiore, Lucerne, Bled, Constance|Bodensee, Volta, Chad, Balaton, Windermere, Lomond|Loch Lomond, Aral Sea|Aral, Nicaragua, Athabasca, Louise, Moraine, Flathead, Yellowstone, Pontchartrain, Lanier, Havasu, Ladoga, Onega, Van, Toba, Sea of Galilee|Galilee|Tiberias, Turkana, Albert, Kivu, Taupo, Eyre, Salton Sea|Salton, Winnebago, Seneca, Cayuga, Okoboji, Coeur d'Alene, Pend Oreille
+85: Vostok, Natron, Peyto, Ohrid, Titisee, Annecy, Hillier, Retba, Maracaibo, Poopó|Poopo, Tonlé Sap|Tonle Sap, Dongting, Poyang, Qinghai, Issyk-Kul, Balkhash, Urmia, Vänern|Vanern, Mälaren|Malaren, Inari, Saimaa, Lough Neagh|Neagh, Wakatipu, Tekapo, Manapouri, Burley Griffin, Mono, Chelan, Sakakawea, Oahe, Fort Peck, Lake of the Woods, Nipigon, Reindeer, Pichola, Dal, Wular
+100: Webster|Chargoggagoggmanchauggagoggchaubunagungamaugg :: Its full Massachusetts name is 45 letters long: Chargoggagoggmanchauggagoggchaubunagungamaugg.
+
+? Name a city in Italy
+10: Rome, Venice, Florence, Milan, Naples
+15: Pisa, Pompeii
+30: Turin, Verona, Bologna, Genoa, Palermo, Siena, Sorrento, Assisi, Amalfi, Positano, Bari, Parma, Perugia, Modena, Trieste, Como, Lucca, Catania, Ravenna, Padua
+60: Bergamo, Cagliari, Messina, Brescia, Vicenza, Cremona, Rimini, Ferrara, Mantua, Taormina, Salerno, Matera, Lecce, Orvieto, San Gimignano, Trento, Bolzano, Ancona, Pescara, Treviso, Syracuse|Siracusa, Portofino, Alberobello, Sanremo|San Remo, Aosta
+85: Reggio Calabria, Reggio Emilia, Piacenza, Pavia, Novara, Foggia, Taranto, Brindisi, Arezzo, Cortona, Montepulciano, Pienza, Urbino, Spoleto, Gubbio, L'Aquila, Sulmona, Caserta, Benevento, Tropea, Agrigento, Trapani, Ragusa, Noto, Sassari, Alghero, Olbia, Udine, Merano, Monza, Lodi, Imola, Maranello, Carrara, Livorno, Prato, Pistoia, Vinci, Cefalù|Cefalu
+100: Corleone :: A real town in Sicily. The Godfather's Vito Andolini took its name when he reached America.
+
+? Name a desert
+~drop desert
+10: Sahara, Mojave, Gobi, Arabian
+15: Antarctica|Antarctic
+30: Kalahari, Sonoran, Atacama, Namib, Great Basin, Painted, Chihuahuan, Outback|Australian Outback, Thar, Death Valley
+60: Taklamakan, Great Victoria, Simpson, Gibson, Patagonian, Negev, Syrian, Karakum, Kyzylkum, Black Rock, Empty Quarter|Rub' al Khali, Sinai, Tanami, Great Sandy, Colorado, Red, Arctic, Libyan, Nubian
+85: Danakil, Dasht-e Kavir|Kavir, Dasht-e Lut|Lut, Ordos, Tengger, Badain Jaran, Karoo, Sechura, Monte, Strzelecki, Sturt Stony, Little Sandy, Owyhee, Alvord, Vizcaino, Wadi Rum, Ténéré|Tenere, Ogaden, Chalbi, Thal, Cholistan, Registan
+100: Carcross :: Often billed as the world's smallest desert. It's a patch of sand dunes in Canada's Yukon.

@@ -68,3 +68,39 @@
 60: Duchess, Colcannon, Rösti|Rosti, Aloo gobi, Boxty, Bubble and squeak, Croquette, Samosa, Hasselback, Bangers and mash, Funeral, Patatas bravas|Bravas, Tortilla española|Spanish omelette|Spanish tortilla, Vichyssoise, Lefse, Kugel, Fish and chips, Aligot, Dauphinoise|Gratin dauphinois, Lyonnaise, Pommes Anna, Fondant, Champ, Pringles, Instant|Instant mashed, Aloo tikki|Tikki, Bread, Pancake, Hash|Corned beef hash, Starch
 85: Clapshot, Rumbledethumps, Stovies, Tartiflette, Raclette, Kartoffelpuffer|Reibekuchen, Draniki|Deruny, Kroppkakor, Kumpir, Papa rellena, Causa|Causa limeña, Llapingachos, Salchipapas, Vada pav|Batata vada, Aloo paratha, Dum aloo, Pommes soufflés, Hotdish|Tater Tot hotdish, Cepelinai, Kartoffelsalat, Salt|Syracuse salt, Neeps and tatties|Tatties, Pan haggerty, Cottage fries, Poitín|Poteen, Akvavit, Candy, Mr. Potato Head battery
 100: Chuño|Chuno :: Andean farmers freeze-dry potatoes by leaving them out in the cold and stomping on them.
+
+? Name a cheese
+~drop cheese
+10: Cheddar, Mozzarella, Swiss, Parmesan|Parmigiano|Parmigiano-Reggiano, American
+15: Brie, Gouda, Camembert
+30: Feta, Provolone, Monterey Jack|Jack, Colby, Colby Jack, Ricotta, Blue|Bleu, Cream, Cottage, Goat|Chevre|Chèvre, Pepper Jack, Havarti, Muenster|Munster, Gorgonzola, Gruyère|Gruyere, Mascarpone, Edam, Emmental|Emmentaler, Roquefort, String
+60: Manchego, Halloumi, Stilton, Fontina, Asiago, Pecorino|Pecorino Romano, Paneer, Limburger, Queso fresco, Burrata, Neufchâtel|Neufchatel, Cotija, Wensleydale, Jarlsberg, Velveeta
+85: Taleggio, Comté|Comte, Caerphilly, Red Leicester, Double Gloucester, Cheshire, Époisses|Epoisses, Reblochon, Raclette, Morbier, Tête de Moine, Saint-André, Pont-l'Évêque, Mimolette, Provola, Caciocavallo, Oaxaca, Ricotta salata, Brunost|Gjetost, Lancashire, Cambozola, Kefalotyri, Kasseri, Graviera, Mahón|Mahon, Cabrales, Queso blanco, Tilsit, Butterkäse|Butterkase, Bel Paese, Saint-Nectaire, Cantal, Maroilles, Boursin, Port Salut, Vacherin, Beaufort, Manouri, Akkawi, Nabulsi, Sirene, Quark, Stracchino|Crescenza, Scamorza, Robiola, Ossau-Iraty, Sbrinz, Appenzeller, Tomme
+100: Casu marzu|Casu martzu :: Sardinia's cheese that is deliberately full of live maggots.
+
+? Name a condiment or sauce
+~drop sauce,dressing
+10: Ketchup|Catsup, Mustard, Mayonnaise|Mayo, Ranch, Hot sauce|Hot, Soy, Barbecue|BBQ
+15: Sriracha, Aioli
+30: Relish, Tartar, Honey mustard, Salsa, Buffalo, Teriyaki, Alfredo, Marinara, Pesto, Gravy, Worcestershire|Worcester, Horseradish, Guacamole, Tabasco, Hollandaise, Thousand Island, Caesar, Balsamic|Balsamic vinegar, Vinegar, Chimichurri
+60: Hoisin, Harissa, Tzatziki, Béchamel|Bechamel, Gochujang, Rémoulade|Remoulade, Chutney, Sambal, Cocktail, Béarnaise|Bearnaise, Tahini, Oyster, Fish, Steak|A1|A.1., Ponzu, Wasabi, Dijon, Piri piri|Peri peri, Vodka, Bolognese, Demi-glace, Mornay, Mole, Enchilada, Sweet and sour, Duck, Plum, Ragù|Ragu, Arrabbiata, Carbonara, Yum yum, Kewpie, Brown|HP, Mint, Cranberry, Applesauce|Apple
+85: Romesco, Gremolata, Ajvar, Zhug|Schug|Skhug, Amba, Chermoula, Toum, Nuoc cham|Nước chấm, XO, Tonkatsu, Kecap manis, Mignonette, Espagnole, Velouté|Veloute, Beurre blanc, Pico de gallo, Salsa verde, Tkemali, Adobo, Piccalilli, Gentleman's Relish, Marie Rose, Gribiche, Ravigote, Cumberland, Agrodolce, Bagna cauda, Sofrito, Tapenade, Mostarda, Vincotto, Pepper jelly, Comeback, Mumbo, Alabama white, Fry, Banana ketchup
+100: Garum :: Ancient Rome's favorite condiment was fermented fish guts. The goldfish is not amused.
+
+? Name a cocktail
+~drop cocktail
+10: Margarita, Martini, Mojito, Old Fashioned, Bloody Mary
+15: Negroni
+30: Manhattan, Daiquiri, Cosmopolitan|Cosmo, Piña colada|Pina colada, Whiskey sour, Mai tai, Long Island iced tea|Long Island, Moscow mule, Tequila sunrise, Gin and tonic|G&T, White Russian, Screwdriver, Mimosa, Sex on the Beach, Rum and Coke|Cuba libre, Mint julep, Aperol Spritz|Spritz, Espresso martini, Sidecar, Tom Collins, Black Russian, Dark 'n' Stormy|Dark and Stormy
+60: Sazerac, Paloma, Gimlet, Bellini, Hurricane, Caipirinha, Pisco sour, Amaretto sour, Singapore sling, Boulevardier, Zombie, Lemon drop, Kir royale|Kir, Irish coffee, Grasshopper, Mudslide, Harvey Wallbanger, Blue Hawaiian, Blue lagoon, Rusty Nail, Vesper, Bee's Knees, Michelada, Americano, Painkiller, Sangria, Godfather, Greyhound, Salty dog, Aviation, French 75, Alabama Slammer, Woo woo
+85: Last Word, Penicillin, Ramos gin fizz, Clover Club, Monkey gland, Mary Pickford, Bijou, Vieux Carré|Vieux Carre, Naked and Famous, Paper Plane, Hanky Panky, Bobby Burns, Blood and Sand, Southside, Tuxedo, White Lady, Stinger, Gibson, Pegu Club, Brandy Alexander, Japanese Slipper, Bamboo, Adonis, Suffering Bastard, Fog Cutter, Scorpion Bowl, Jungle Bird, Trinidad Sour, Tommy's Margarita, Sherry Cobbler, Mamie Taylor, El Presidente, Hemingway Daiquiri, Bahama Mama, Sea Breeze, Bay Breeze, Cape Codder, Planter's Punch, Bloody Caesar|Caesar, Kamikaze
+100: Corpse Reviver :: A 1930 cocktail book warned that four of these in a row would "unrevive the corpse again."
+
+? Name a Mexican dish
+~drop mexican
+10: Taco, Burrito, Quesadilla, Nachos, Enchilada
+15: Mole, Elote
+30: Tamale, Fajita, Guacamole, Churro, Chimichanga, Tostada, Carnitas, Salsa, Flan, Pozole|Posole, Tortilla soup, Queso|Queso dip, Chile relleno|Chiles rellenos, Menudo, Refried beans|Rice and beans, Birria, Carne asada, Al pastor|Tacos al pastor, Taquito, Chilaquiles, Huevos rancheros, Barbacoa, Horchata, Sopapilla, Tres leches, Empanada, Torta, Ceviche, Gordita, Sope, Esquites, Pico de gallo
+60: Cochinita pibil, Huarache, Tlayuda, Flauta, Mole poblano, Chiles en nogada, Caldo de res, Aguachile, Arroz con leche, Migas, Machaca, Tinga, Pambazo, Mollete, Mixiote, Sincronizada, Capirotada, Champurrado, Cajeta, Concha, Torta ahogada, Alambre, Cabrito, Camarones a la diabla, Carne en su jugo, Nopales, Queso fundido, Tepache, Michelada, Agua fresca
+85: Chapulines, Huitlacoche|Cuitlacoche, Zacahuil, Panucho, Salbute, Papadzules, Poc chuc, Sopa de lima, Tacos de canasta, Tacos gobernador, Cemita, Tetela, Tlacoyo, Memela, Molote, Enfrijoladas, Entomatadas, Enmoladas, Pipián|Pipian, Chileatole, Caldo tlalpeño, Rompope, Jericalla, Cocada, Alegría|Alegria, Buñuelos|Bunuelos, Pescado zarandeado, Sikil pak, Frijoles charros, Frijoles puercos
+100: Escamoles :: Ant larvae harvested from agave roots, sometimes called Mexican caviar.

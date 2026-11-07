@@ -60,3 +60,49 @@
 60: Fannie Lou Hamer, Stokely Carmichael, Huey Newton, Bobby Seale, Bayard Rustin, Dorothy Height, Ella Baker, Coretta Scott King, Dolores Huerta, Lucretia Mott, Alice Paul, Betty Friedan, Marsha P. Johnson, Sylvia Rivera, Steve Biko, Desmond Tutu, Emma Goldman, William Lloyd Garrison, Nat Turner, John Brown, James Farmer, A. Philip Randolph, Ralph Abernathy, Joan Baez, Jane Addams, Ruth Bader Ginsburg, Russell Means, Wilma Mankiller, Yuri Kochiyama, Mother Jones, Dorothy Day
 85: Diane Nash, Septima Clark, Whitney Young, Roy Wilkins, Fred Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo, Constance Baker Motley, Pauli Murray, Mary Church Terrell, Carrie Chapman Catt, Inez Milholland, Lucy Stone, Vine Deloria Jr.|Vine Deloria, Dennis Banks, Larry Itliong, Philip Vera Cruz, Fred Korematsu, Mary McLeod Bethune, Barbara Gittings, Frank Kameny, Mamie Till-Mobley|Mamie Till, E.D. Nixon, Homer Plessy, Thich Nhat Hanh, Bella Abzug, Shirley Chisholm
 100: Claudette Colvin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.
+
+? Name a US president
+~last
+~drop president
+10: George Washington, Abraham Lincoln|Abe Lincoln, Barack Obama, Donald Trump, Joe Biden, John F. Kennedy|JFK, Thomas Jefferson
+15: Millard Fillmore, Chester A. Arthur|Chester Arthur
+30: Ronald Reagan, Bill Clinton, George W. Bush|George Bush|Bush, Theodore Roosevelt|Teddy Roosevelt|Roosevelt, Franklin D. Roosevelt|FDR|Franklin Roosevelt, Richard Nixon, Jimmy Carter, Ulysses S. Grant|Ulysses Grant, Dwight D. Eisenhower|Dwight Eisenhower|Ike, Harry S. Truman|Harry Truman, Gerald Ford, John Adams, Andrew Jackson, James Madison, George H. W. Bush|George HW Bush, Lyndon B. Johnson|LBJ|Lyndon Johnson, Woodrow Wilson
+60: James Monroe, John Quincy Adams, Herbert Hoover, Calvin Coolidge, William Howard Taft, William McKinley, James K. Polk|James Polk, Andrew Johnson, Warren G. Harding|Warren Harding, Grover Cleveland, James A. Garfield|James Garfield, Zachary Taylor, Martin Van Buren|Van Buren
+85: Rutherford B. Hayes|Rutherford Hayes, John Tyler, Franklin Pierce, James Buchanan, Benjamin Harrison
+100: William Henry Harrison :: Gave the longest inaugural address ever, then served the shortest presidency: 31 days.
+
+? Name a king or queen from history
+~drop king,queen
+10: Elizabeth I|Queen Elizabeth|Elizabeth|Elizabeth II, Henry VIII|Henry the Eighth, Cleopatra, Marie Antoinette, George III|King George, Victoria
+15: Arthur, Elvis|Elvis Presley
+30: Tutankhamun|King Tut|Tut, Louis XIV|Sun King|Louis the Fourteenth, Charlemagne, Alexander the Great, William the Conqueror, Richard the Lionheart|Richard I, Mary Queen of Scots, Mary I|Bloody Mary, Catherine the Great, Nefertiti, Charles III|Charles, Ramses II|Ramses|Ramesses, Solomon, David, Herod, Louis XVI, Hatshepsut, Isabella, Ferdinand, Peter the Great, James I|James, Anne Boleyn
+60: Alfred the Great, Eleanor of Aquitaine, Boudicca, Frederick the Great, Genghis Khan, Kublai Khan, Nicholas II, Philip II, Richard III, Edward VIII, John, Charles I, Henry V, Anne, Liliuokalani, Kamehameha, Moctezuma|Montezuma, Ivan the Terrible, Haile Selassie, Akhenaten, Cyrus the Great, Xerxes, Darius, Leonidas, Hammurabi, Nebuchadnezzar, Macbeth, Canute|Cnut, Wenceslas, Shaka|Shaka Zulu, Ashoka
+85: Æthelred the Unready|Aethelred, Wu Zetian|Empress Wu, Zenobia, Seondeok, Njinga, Ranavalona, Tamar of Georgia, Christina of Sweden, Gustavus Adolphus, Harald Hardrada, Pepin the Short, Charles the Bald, Louis the Pious, Ludwig II, Lady Jane Grey, Sejong, Thutmose, Khufu, Piye, Theodora, Ahmose, Menelik II, Olaf, Brian Boru, Llywelyn, Robert the Bruce, Kenneth MacAlpin, Puyi, Cixi|Empress Dowager Cixi
+100: Mansa Musa :: Maybe the richest person in history. His 1324 pilgrimage handed out so much gold it crashed Cairo's market.
+
+? Name a philosopher
+~last
+10: Socrates, Plato, Aristotle, Confucius, Friedrich Nietzsche
+15: René Descartes|Rene Descartes
+30: Immanuel Kant, Karl Marx, John Locke, Thomas Hobbes, Jean-Paul Sartre, Lao Tzu|Laozi, Sun Tzu, Marcus Aurelius, Epicurus, Seneca, Voltaire, Jean-Jacques Rousseau, Niccolò Machiavelli|Niccolo Machiavelli, Pythagoras, Buddha, Ayn Rand, Simone de Beauvoir|De Beauvoir, David Hume, John Stuart Mill, Thomas Aquinas, Albert Camus, Søren Kierkegaard|Soren Kierkegaard
+60: Zeno, Epictetus, Heraclitus, Thales, Georg Hegel|Hegel, Arthur Schopenhauer, Ludwig Wittgenstein, Baruch Spinoza, Francis Bacon, Bertrand Russell, Michel Foucault, Martin Heidegger, Augustine|St. Augustine, Mencius, Zhuangzi, Hannah Arendt, Noam Chomsky, Slavoj Žižek|Slavoj Zizek, Jacques Derrida, Jeremy Bentham, Edmund Burke, Henry David Thoreau, Ralph Waldo Emerson, Gottfried Leibniz, Blaise Pascal, Michel de Montaigne, Parmenides, Democritus, Alan Watts, Averroes|Ibn Rushd, Avicenna|Ibn Sina
+85: Anaximander, Empedocles, Protagoras, Plotinus, Boethius, Hypatia, William of Ockham|Occam, Duns Scotus, George Berkeley, Thomas Reid, Johann Fichte, Friedrich Schelling, Edmund Husserl, Maurice Merleau-Ponty, Karl Popper, Thomas Kuhn, W.V.O. Quine|Quine, John Rawls, Robert Nozick, Peter Singer, Derek Parfit, Judith Butler, Mary Wollstonecraft, Zhu Xi, Mozi, Nagarjuna, Shankara, Al-Ghazali, Maimonides, Hildegard of Bingen, Anselm, William James, John Dewey, Charles Peirce, Antisthenes, Pyrrho
+100: Diogenes :: He lived in a large jar and reportedly told Alexander the Great to get out of his sunlight.
+
+? Name a Nobel Peace Prize winner
+~last
+10: Barack Obama, Martin Luther King Jr.|MLK|Martin Luther King, Nelson Mandela, Mother Teresa, Malala Yousafzai|Malala
+15: Al Gore
+30: Jimmy Carter, Dalai Lama|The Dalai Lama, Desmond Tutu, Mikhail Gorbachev, Theodore Roosevelt|Teddy Roosevelt, Woodrow Wilson, Henry Kissinger, Aung San Suu Kyi, Kofi Annan, Albert Schweitzer, Elie Wiesel, United Nations|UN, Red Cross
+60: Yasser Arafat, Shimon Peres, Yitzhak Rabin, F.W. de Klerk|De Klerk, Lech Wałęsa|Lech Walesa, Anwar Sadat, Menachem Begin, Wangari Maathai, Muhammad Yunus, Liu Xiaobo, Juan Manuel Santos, Abiy Ahmed, Doctors Without Borders|Médecins Sans Frontières|MSF, World Food Programme, Rigoberta Menchú|Rigoberta Menchu, George Marshall, Willy Brandt, Ellen Johnson Sirleaf, Leymah Gbowee, Tawakkol Karman, Shirin Ebadi, John Hume, David Trimble, European Union|EU, Amnesty International, Narges Mohammadi, Maria Ressa, Dmitry Muratov, Kailash Satyarthi, Nadia Murad, Denis Mukwege
+85: Jane Addams, Emily Balch, Cordell Hull, Linus Pauling, Ralph Bunche, Lester Pearson, Dag Hammarskjöld|Dag Hammarskjold, René Cassin|Rene Cassin, Norman Borlaug, Andrei Sakharov, Seán MacBride|Sean MacBride, Betty Williams, Mairead Corrigan, Alfonso García Robles, Alva Myrdal, Óscar Arias|Oscar Arias, Jody Williams, José Ramos-Horta|Jose Ramos-Horta, Carlos Belo, Bertha von Suttner, Aristide Briand, Frank Kellogg, Elihu Root, Henri Dunant, Frédéric Passy|Frederic Passy, Albert Lutuli|Albert Luthuli, Mohamed ElBaradei, Martti Ahtisaari, OPCW, Ales Bialiatski, Memorial, Nihon Hidankyo, ICAN, Pugwash
+100: Lê Đức Thọ|Le Duc Tho :: The only person ever to turn down the Nobel Peace Prize, in 1973.
+
+? Name a famous ship
+~drop hms,rms,uss,ss,css,the,ship
+10: Titanic, Mayflower, Santa Maria, Noah's Ark|Ark
+15: Black Pearl, Flying Dutchman, Minnow
+30: Lusitania, Bismarck, Arizona, Queen Mary, Niña|Nina, Pinta, Beagle, Edmund Fitzgerald, Constitution|Old Ironsides, Queen Elizabeth 2|QE2, Exxon Valdez, Poseidon, Mary Rose, Yamato, Enterprise, Andrea Doria, Britannic, Monitor, Merrimack|Virginia, Maine, Endurance, Cutty Sark
+60: Bounty, Victory, Golden Hind, Pequod, Nautilus, Calypso, Mary Celeste, Hispaniola, Argo, Carpathia, Californian, Olympic, Vasa, Amistad, Missouri, Indianapolis, Graf Spee, Tirpitz, General Belgrano, Queen Anne's Revenge, Rainbow Warrior, Costa Concordia, Ever Given, Dawn Treader, Orca, Kon-Tiki, Mauretania, Hood, H.L. Hunley|Hunley, Whydah, Nimitz, Akagi, Sea Shepherd
+85: Erebus, Terror, Fram, Discovery, Nimrod, Terra Nova, Belgica, Aurora, Resolute, Cospatrick, Dunbar, Arbella, Speedwell, Susan Constant, Godspeed, Clotilda, Flor de la Mar, Nuestra Señora de Atocha|Atocha, Batavia, Medusa|Méduse, Zong, Empress of Ireland, Sultana, Eastland, Vestris, Wilhelm Gustloff, Doña Paz, Sewol, Great Eastern, Savannah, Turtle, Thresher, Scorpion, Kursk, Liberty, Pueblo, Mayaguez, Cole, Bluenose, America, Intrepid
+100: Essex :: A sperm whale rammed and sank this whaleship in 1820, which inspired Moby-Dick.

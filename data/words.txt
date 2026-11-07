@@ -1,20 +1,3 @@
-? Name a word that rhymes with light
-~exact
-10: Night, Right, Kite, Bite, Fight, White, Sight, Might, Tight, Write
-15: Dynamite, Satellite
-30: Bright, Flight, Height, Fright, Knight, Slight, Site, Quite, Polite, Invite, Excite, Delight, Tonight, Midnight, Daylight, Goodnight, Ignite, Recite, Unite, Spite, Plight, Blight, Alright, Appetite, Kryptonite, Termite, Parasite, Meteorite, Socialite, Graphite, Insight, Highlight, Spotlight, Sunlight, Moonlight, Flashlight, Headlight, Streetlight, Stoplight, Twilight, Fortnight, Overnight, Copyright, Upright, Outright, Downright, Birthright, Contrite, Rite, Wright, Trite, Sprite, Byte, Mite
-60: Stalactite, Stalagmite, Anthracite, Lignite, Acolyte, Neophyte, Erudite, Expedite, Reunite, Extradite, Indict, Incite, Despite, Rewrite, Ghostwrite, Underwrite, Nitrite, Sulfite, Israelite, Luddite, Vegemite, Marmite, Cellulite, Bullfight, Gunfight, Dogfight, Prizefight, Frostbite, Snakebite, Soundbite, Playwright, Shipwright, Wheelwright, Hindsight, Foresight, Eyesight, Campsite, Website, Starlight, Lamplight, Limelight, Skylight, Searchlight, Candlelight, Firelight, Nightlight, Featherlight, Airtight, Watertight, Uptight, Black and white, Snow White, Mr. Right, Sleight
-85: Malachite, Hematite, Magnetite, Dolomite, Bakelite, Ammonite, Muscovite, Trilobite, Proselyte, Anchorite, Eremite, Vulcanite, Lucite, Nephrite, Cordite, Shiite, Jacobite, Mennonite, Moabite, Hittite, Levite, Sybarite, Bedight, Alight, Affright, Aright, Benight, Requite, Smite, Bight, Tripartite, Bipartite, Dendrite, Electrolyte, Cosmopolite, Ebonite, Pyrite
-100: Troglodyte :: A cave dweller. It comes from the Greek for "one who creeps into holes."
-
-? Name another word for happy
-10: Joyful, Glad, Cheerful, Excited, Content, Elated
-15: Jubilant, Euphoric
-30: Ecstatic, Delighted, Merry, Jolly, Pleased, Thrilled, Overjoyed, Blissful, Upbeat, Sunny, Joyous, Satisfied, Giddy, Gleeful, Peppy, Chipper, Smiling, Lighthearted, Contented, Positive, Grinning, Stoked, Psyched, Pumped, Cheery
-60: Jovial, Mirthful, Radiant, Buoyant, Exuberant, Over the moon, On cloud nine|Cloud nine, Tickled pink|Tickled, Walking on air, Beaming, Sanguine, Perky, Bubbly, Chuffed, Rapturous, Exultant, Gay, Bright, Sparkling, Hopeful, Carefree, Breezy, Laughing, In high spirits, Zippy, Lively, Vivacious, Sprightly, Starry-eyed
-85: Felicitous, Beatific, Blithe, Halcyon, Elysian, Eudaemonic, Rhapsodic, Convivial, Winsome, Riant, Gladsome, Blissed out, Jocund, Jocose, Jocular, Mirthsome, Sunshiny, Paradisiacal, Cock-a-hoop, Happy as a clam, Rosy, Pollyannaish, Transported
-100: Gruntled :: The opposite of disgruntled. Yes, it's a real word, and it's in the dictionary.
-
 ? Name a slang word for money
 10: Cash, Dough, Bucks, Bread, Moolah|Moola, Green
 15: Benjamins, Cheddar
@@ -22,14 +5,6 @@
 60: Lolly, Quid, Wad, Cabbage, Kale, Simoleons, Spondulicks|Spondulix, Lucre, Wampum, Bones, Skrilla|Scrilla, Fetti, Guap, Mula, Tender, Currency, Rocks, Frogskins, Pesos, Gravy, Long green, Dead presidents, Ducats, Doubloons, Bling, Stash, Sugar, Jack, Cream, Beans, Peanuts, Tenners, Fivers, Pieces of eight, Hundies, Big bucks, Pony, Monkey
 85: Ackers, Dosh, Readies, Wonga, Bob, Brass, Mazuma, Gelt, Shekels, Geetus, Rhino, Boodle, Blunt, Tin, Scrip, Yard, Score, Deuce, Fin, Nuggets, Two bits, Sheets, Feria, Plata
 100: Oof :: Victorian slang for money, possibly from the Yiddish for "on the table."
-
-? Name a word that means crazy
-10: Insane, Nuts, Mad, Bananas, Bonkers, Loco
-15: Cuckoo
-30: Wacko|Whacko, Looney|Loony, Crackers, Deranged, Psycho, Mental, Wild, Cray cray|Cray, Unhinged, Lunatic, Wacky, Nutty, Kooky, Off your rocker|Off one's rocker|Off his rocker, Out of your mind, Batty, Bats, Demented, Berserk, Maniac, Zany, Daft, Barking mad|Barking, Mad as a hatter, Coo-coo|Koo-koo, Looney Tunes, Sick, Gaga, Haywire, Nutso, Screwy
-60: Unglued, Round the bend, Off the wall, Off the rails, Not all there, Touched, Unstable, Delirious, Certifiable, Stark raving mad, Raving, Out to lunch, Meshuggah|Meshuga, Dotty, Potty, Barmy, Doolally, Loopy, Squirrelly, Whacked, Wigged out, Tetched, Crazed, Frenzied, Manic, Fruity, Fruitcake, Nutcase, Nutjob, Nutter, Basket case, Cracked, Lost your marbles, Rabid
-85: Non compos mentis, Moonstruck, Bedlamite, Crackpot, Bughouse, Buggy, Cockamamie, Dippy, Gonzo, Harebrained, Wonky, Balmy, Scatty, Spare, Yampy, Pixilated, Starkers, Unbalanced, Hatstand, Box of frogs|Mad as a box of frogs, Sandwich short of a picnic|A few sandwiches short of a picnic, Bats in the belfry, Stir-crazy, Cabin fever, Dingbats, Daffy
-100: Troppo :: Australian slang. Stay in the tropical heat too long and you've "gone troppo."
 
 ? Name a language
 ~drop language
@@ -48,23 +23,6 @@
 60: Slough, Breakthrough, Furlough, Sourdough, Walkthrough, Drive-through|Drivethrough, Playdough|Play-Doh, Cookie dough, Pizza dough, Pass-through, See-through, Follow-through, Run-through, Whooping cough
 85: Chough, Lough, Clough, Hough, Brough, Scarborough, Loughborough, Peterborough, Marlborough, Attenborough, Gainsborough, Roxborough, Knaresborough, Greenough, McCullough, Yarborough, Cut-through, Rough-and-tough
 100: Sough :: It means a soft rustling sound, like wind in trees. Even the dictionary can't settle how to say it.
-
-? Name a word or phrase that starts with fire
-10: Firefighter|Fireman, Fireworks|Firework, Firefly, Fireplace, Firetruck|Fire truck, Fire
-15: Firefox, Firestarter
-30: Fire alarm, Fire hydrant, Firewood, Firewall, Fire drill, Fire escape, Fire extinguisher, Firecracker, Fire pit|Firepit, Fireproof, Fire ant, Fire station|Firehouse, Fire department, Fireball, Firearm, Fire exit, Fired, Fire engine, Firestone, Fire Island
-60: Firebrand, Firebird, Firestorm, Firelight, Fireside, Firepower, Firebomb, Fire breather|Fire-breathing, Fire eater|Fire-eater, Fire sale, Firenze, Fire hose, Fire marshal, Fire hazard, Fire opal, Fireweed, Firewater, Fire TV, Fire Stick|Firestick, Fire lane, Fire door, Fire code, Fire and Ice, Fire and Rain, Firehawk, Firebolt, Firenado, Fire Nation, Fire Walk with Me, Firewalk|Firewalking
-85: Firebreak, Fireclay, Firedog, Fireguard, Firelock, Firetrap, Fireboat, Firebox, Fire-and-forget, Firebug, Firefight, Firehall, Fire-rated, Fire retardant, Firewoman, Fire salamander, Firemouth, Firethorn, Fire-roasted, Firesign, Fire coral, Fire-bellied toad
-100: Firedamp :: The explosive methane gas that made old coal mines so dangerous.
-
-? Name a word with no A, E, I, O or U
-~exact
-10: Sky, Fly, Try, Why, My, By, Cry, Dry, Shy, Gym, Spy, Fry, Sly, Pry
-15: Rhythm
-30: Myth, Lynx, Hymn, Crypt, Pygmy, Nymph, Sync, Wry, Ply, Thy, Psych, Cyst, Tryst, Spry, Shyly, Slyly, Dryly, Wryly, Hmm, Shh, Brr|Brrr, Psst, Tsk, Zzz, Nth, Flyby, Sylph, Glyph, Lymph, Pyx
-60: Rhythms, Myths, Hymns, Lynch, Synth, Pfft, Hm, Mm, Grr, Spryly, Tsktsk, Sphynx, Styx, Wych, Drys
-85: Crwth, Cwm, Cwtch, Phpht, Pht, Ssh, Sh, Zzzs, Xylyl, Flysch, Wynd, Hwyl, Ghyll, Rynd, Scry, Stymy, Thymy, Typy, Gyp, Hyp
-100: Syzygy :: When three celestial bodies line up. Also a brutal word to play in Scrabble.
 
 ? Name a punctuation mark
 ~drop mark,sign
@@ -127,3 +85,37 @@
 60: Mens rea, Sine qua non, Annus horribilis, Annus mirabilis, Dulce et decorum est, Pax Romana, In vivo, Ex post facto, Ex officio, Ex libris, Ex nihilo, Nil desperandum, Non compos mentis, Novus ordo seclorum, Annuit coeptis, Quo vadis, Res ipsa loquitur, Sub judice, Sui generis, Ultra vires, Vade mecum, Veritas, Per aspera ad astra|Ad astra per aspera, Sic semper tyrannis, Primus inter pares, Pro forma, Reductio ad absurdum, A priori, A posteriori, A fortiori, Ad hominem, Ad valorem, Amicus curiae, Casus belli, Corpus delicti, Cui bono, De jure, De novo, Dramatis personae, Ecce homo, Ex cathedra, Fiat lux, Habemus papam, Ibidem|Ibid, Imprimatur, In loco parentis, In medias res, In toto, Inter alia, Mutatis mutandis, Ne plus ultra, Nolo contendere, Pari passu, Passim, Rara avis, Senatus Populusque Romanus|SPQR, Sic transit gloria mundi, Sub rosa, Terra incognita, Urbi et orbi, Videlicet|Viz, Festina lente, Si vis pacem\, para bellum|Si vis pacem para bellum, Quis custodiet ipsos custodes, Amor vincit omnia|Omnia vincit amor, Carthago delenda est, Sapere aude, Mens sana in corpore sano, Ars longa\, vita brevis|Ars longa vita brevis
 85: Ipse dixit, Stet, Sensu stricto, Mare nostrum, O tempora\, o mores|O tempora o mores, Panem et circenses, Odi et amo, Dum spiro spero, Deus vult, Errare humanum est, Fortes fortuna adiuvat, Lux et veritas, Nemo dat quod non habet, Lorem ipsum, Ceteris paribus, Obiter dictum, Stare decisis, Pro tempore|Pro tem, Infra dig, Persona grata, Damnatio memoriae, Felix culpa, Horror vacui, Locus amoenus, Nihil obstat
 100: Hic sunt dracones :: "Here be dragons." It's written on only one known old map, a copper globe from about 1510.
+
+? Name an onomatopoeia
+~exact
+10: Boom, Bang, Buzz|Bzz|Bzzz, Pop, Meow|Miaow, Moo
+15: Achoo|Ah-choo|Atchoo
+30: Woof, Bark, Oink, Quack, Baa, Neigh, Hiss, Roar, Growl, Purr, Tweet, Chirp, Cluck, Cock-a-doodle-doo|Cockadoodledoo, Ribbit, Hoot, Splash, Crash, Bam, Wham, Zap, Zoom, Vroom, Beep, Honk, Ding-dong|Ding dong, Ding, Tick-tock|Tick tock, Knock, Thud, Thump, Clang, Click, Clap, Snap, Crackle, Sizzle, Fizz, Drip, Plop, Splat, Squish, Squeak, Creak, Slurp, Burp, Hiccup|Hic, Gulp, Munch, Crunch, Smack, Whack, Whoosh, Swoosh, Hum, Boing, Kaboom|Ka-boom, Ka-ching|Cha-ching|Kaching, Shh|Shush, Zzz|Zzzz, Choo-choo|Choo choo, Bow-wow|Bow wow, Arf, Ruff, Kapow|Ka-pow
+60: Clank, Clink, Clatter, Rattle, Rumble, Grumble, Gurgle, Babble, Bubble, Toot, Tap, Pitter-patter|Pitter patter, Flutter, Flap, Swish, Rustle, Crinkle, Crumple, Scratch, Screech, Squawk, Caw, Coo, Cheep, Peep, Gobble, Howl, Yap, Yelp, Whimper, Bleat, Bray, Hee-haw|Heehaw, Moan, Groan, Murmur, Mumble, Giggle, Gasp, Cough, Sniff, Ahem, Psst, Brr|Brrr, Ouch, Thwack, Bonk, Bop, Whiz|Whizz, Clickety-clack|Clickety clack, Chugga-chugga|Chugga chugga, Tick, Tock, Dong, Ring, Twang, Zing, Ping, Tinkle, Jingle, Clip-clop|Clip clop, Thunk, Clunk, Kerplunk|Ker-plunk, Splosh, Slosh, Squelch, Smash, Bash, Biff, Blam, Rat-a-tat|Ratatat|Rat-a-tat-tat, Nom nom|Nom, Mwah, Smooch, Glug, Splish
+85: Ululate|Ululation, Borborygmus|Borborygmi, Susurrus, Plink, Plonk, Fwoosh, Kerplop, Kersplat, Kersplash, Bloop, Blip, Bleep, Whirr|Whir, Sproing, Thwip, Snikt, Bamf, Awooga|Ahooga|Aooga, Tu-whit tu-whoo|Twit twoo, Gloop, Skronk, Chirr
+100: Tintinnabulation :: The ringing of bells. Edgar Allan Poe helped make the word famous in his poem "The Bells."
+
+? Name another word for fast
+10: Quick|Quickly, Rapid|Rapidly, Speedy|Speedily, Swift|Swiftly, Hasty|Hastily, Fleet
+15: Zippy
+30: Brisk, Nimble, Snappy, Hurried, Lightning|Lightning-fast|Lightning fast, Express, Prompt, Breakneck, Blistering, Supersonic, High-speed|High speed, Turbo, Whirlwind, Meteoric, Headlong, Racing, Flying, Speeding, Fast-paced|Fast paced, Agile, Spry, Lively, Instant|Instantaneous, Immediate, Sudden, Accelerated, Rushed|Rushing, Zooming
+60: Expeditious, Precipitate, Mercurial, Fleet-footed|Fleetfooted, Rapid-fire, Hurtling, Pell-mell|Pellmell, Lickety-split|Lickety split, Chop-chop|Chop chop, Pronto, Posthaste, Double-time|Double time, On the double, Whizzing, Hell-for-leather|Hell for leather, Flat out, Full tilt, Full speed, Warp speed, Galloping, Hustling, Light-footed|Quick-footed, Feverish, Furious, Frenzied, Hectic, Quicksilver, Electric, Nippy
+85: Celeritous, Velocious, Alacritous, Festinate, Tantivy, Apace, Hotfoot, Secure, Fixed, Tight, Stuck, Steadfast, Fastened, Loyal, Faithful, Colorfast|Colourfast, Indelible, Permanent, Loose, Wild, Dissolute, Racy, Abstain, Starve, Go hungry, Ahead
+100: Firm :: "Fast" first meant firmly fixed, as in "hold fast" or "colorfast." The speedy meaning came along later.
+
+? Name a German word used in English
+10: Kindergarten, Wanderlust, Schadenfreude, Angst, Gesundheit, Doppelgänger|Doppelganger
+15: Zeitgeist
+30: Kitsch, Poltergeist, Delicatessen|Deli, Pretzel|Brezel, Sauerkraut, Bratwurst, Frankfurter, Hamburger, Wiener, Strudel, Pumpernickel, Lager, Hinterland, Blitz|Blitzkrieg, Wunderkind, Ersatz, Rucksack, Spiel, Kaput|Kaputt, Über|Uber, Verboten, Oktoberfest|Fest, Gestalt, Leitmotif|Leitmotiv, Realpolitik, Dachshund, Rottweiler, Schnauzer, Poodle, Glockenspiel, Hamster, Waltz, Fräulein|Fraulein, Zeppelin, U-boat|U-Boot, Flak, Panzer, Kaiser, Lederhosen, Dirndl, Schnapps, Schnitzel, Muesli, Pilsner, Autobahn, Edelweiss, Wunderbar, Dummkopf, Putsch, Achtung, Auf Wiedersehen
+60: Lebensraum, Weltanschauung, Weltschmerz, Sehnsucht, Gemütlichkeit|Gemutlichkeit, Noodle, Reich, Stalag, Bildungsroman, Spätzle|Spaetzle|Spaetzle, Quark, Kohlrabi, Sauerbraten, Stollen, Lebkuchen, Kuchen, Wurst, Knackwurst, Liverwurst, Hefeweizen, Weissbier, Bock, Abseil, Quartz, Ohrwurm|Earworm, Zugzwang, Eigenvalue|Eigen, Lied, Diktat, Hausfrau, Kaffeeklatsch|Coffee klatch, Spritzer, Übermensch|Ubermensch, Pinscher, Weimaraner
+85: Fingerspitzengefühl|Fingerspitzengefuhl, Torschlusspanik, Fernweh, Kummerspeck, Treppenwitz, Backpfeifengesicht, Zwischenzug, Gedankenexperiment, Ansatz, Bremsstrahlung, Gegenschein, Schuss, Langlauf, Föhn|Foehn|Fohn, Singspiel, Heldentenor, Kulturkampf, Ostpolitik, Sitzfleisch, Wirtschaftswunder, Lumpenproletariat, Gesamtkunstwerk, Sprechgesang, Cobalt, Nickel, Zinc, Meerschaum, Loess
+100: Mittelschmerz :: A real medical term in English for pain some people feel around ovulation. It means "middle pain."
+
+? Name a word that rhymes with fun
+~exact
+10: Sun, Run, Bun, Gun, One, Done
+15: Son
+30: None, Nun, Won, Ton|Tonne, Spun, Stun, Shun, Pun, Begun, Someone, Anyone, Everyone, Shotgun, Home run|Homerun, Hun, Undone, Outdone, Rerun, Outrun, Overrun, Handgun, Grandson, Twenty-one|Twenty one|21
+60: Dun, Hon, Godson, Stepson, Popgun, Stun gun, Machine gun, Top Gun, Six-gun|Sixgun, Hit and run|Hit-and-run, Trial run, Dry run, Hard-won, Redone, Overdone, Honey bun|Honeybun, Hot cross bun, Cinnamon bun, No one|No-one, Thirty-one|Thirty one|31, Forty-one|Forty one|41, Eighty-one|Eighty one|81, Number one, Well done, Bull Run, Air gun, BB gun, Ray gun, Spray gun, Nail gun, Glue gun, Squirt gun, Water gun
+85: Sally Lunn, Unspun, Outgun, Underdone, Milk run, Bank run, Chicken run, Ski run, Test run, Long run, Tommy gun, Speargun, Flare gun, Zip gun, Potato gun|Spud gun, Fifty-one|Fifty one|51, Ninety-one|Ninety one|91, Area 51|Area Fifty-one
+100: Tun :: A huge barrel for wine or beer. It gave us the word "ton," which first meant the weight of a full tun.

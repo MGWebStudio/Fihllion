@@ -58,3 +58,46 @@
 60: Cotton gin, Assembly line, Phonograph, Sewing machine, Barbed wire, Transistor, Laser, Escalator, Ballpoint pen|Pen, Safety pin, Paper clip, Can opener, Lawn mower, Dishwasher, Traffic light, Windshield wiper, Seat belt, Parachute, Submarine, Helicopter, Hot air balloon, Pacemaker, X-ray, Vaccine, Anesthesia, Super Glue, Scotch tape|Duct tape, Teflon, Kevlar, Nylon, Frisbee, Slinky, Etch A Sketch, Rubik's Cube, Crayon, Remote control, World Wide Web, Email, Thermometer, Pencil, Eraser, Stapler, Aqualung|Scuba gear, Polaroid
 85: Spinning jenny, Flying shuttle, Seed drill, Abacus, Astrolabe, Sextant, Cash register, Zamboni, Jacuzzi, Segway, Tupperware, Aerosol can, Wite-Out|Liquid Paper, Pull tab, Hula hoop, Ferris wheel, Stirrup, Water wheel, Aqueduct, Archimedes screw, Cotton candy, Ice cream cone, Tea bag, Bottle cap, Shopping cart, Parking meter, Snowmobile, Tesla coil, Geiger counter, Seismograph, Barometer, Slide rule, Bunsen burner, Jet engine, Turing machine, Difference engine, Analytical Engine, Mason jar, Dewey Decimal System
 100: Bubble wrap :: It was invented in 1957 as textured wallpaper. Nobody wanted the wallpaper.
+
+? Name a chemical element
+10: Oxygen, Hydrogen, Carbon, Gold, Iron, Helium
+15: Plutonium, Uranium
+30: Nitrogen, Silver, Copper, Sodium, Calcium, Neon, Lead, Aluminum|Aluminium, Mercury, Zinc, Nickel, Tin, Titanium, Platinum, Potassium, Silicon, Chlorine, Sulfur|Sulphur, Magnesium, Lithium, Argon, Fluorine, Iodine, Radium, Cobalt
+60: Boron, Beryllium, Phosphorus, Chromium, Manganese, Krypton, Xenon, Radon, Tungsten, Bromine, Barium, Arsenic, Cesium|Caesium, Palladium, Cadmium, Antimony, Bismuth, Polonium, Einsteinium, Curium, Californium, Americium, Germanium, Selenium, Strontium, Vanadium, Iridium, Neptunium
+85: Scandium, Rubidium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Indium, Tellurium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Rhenium, Osmium, Thallium, Astatine, Francium, Actinium, Thorium, Protactinium, Berkelium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson
+100: Gallium :: A metal that melts in your hand. A spoon made of it dissolves in hot tea.
+
+? Name an organ in the human body
+~drop the
+10: Heart, Brain, Lung, Liver, Stomach, Kidney
+15: Skin, Appendix
+30: Pancreas, Spleen, Intestine|Small intestine|Large intestine|Bowel, Gallbladder, Bladder, Esophagus, Colon, Uterus|Womb, Trachea|Windpipe, Thyroid, Tongue, Eye, Ovary, Prostate
+60: Larynx|Voice box, Pharynx, Duodenum, Thymus, Adrenal gland|Adrenal, Pituitary gland|Pituitary, Diaphragm, Rectum, Testes|Testicle, Placenta, Cerebellum, Hypothalamus, Pineal gland|Pineal, Parathyroid, Salivary gland, Lymph node, Tonsil, Cochlea
+85: Jejunum, Ileum, Cecum|Caecum, Fallopian tube, Urethra, Ureter, Epiglottis, Hippocampus, Amygdala, Medulla, Pons, Bone marrow|Marrow, Vas deferens, Interstitium, Vomeronasal organ, Bile duct, Omentum, Seminal vesicle
+100: Mesentery :: You've always had one, but doctors only argued it should count as an organ in the 2010s.
+
+? Name a famous scientist
+~last
+10: Albert Einstein, Isaac Newton, Marie Curie, Charles Darwin, Stephen Hawking, Galileo Galilei|Galileo
+15: Nikola Tesla, Bill Nye
+30: Thomas Edison, Louis Pasteur, Neil deGrasse Tyson, Carl Sagan, Gregor Mendel, Rosalind Franklin, Nicolaus Copernicus|Copernicus, Aristotle, Archimedes, Benjamin Franklin, J. Robert Oppenheimer|Robert Oppenheimer, Jane Goodall, Alexander Fleming, Michael Faraday, Johannes Kepler, Niels Bohr, Alan Turing, Edwin Hubble, Dmitri Mendeleev, Max Planck, Erwin Schrödinger|Erwin Schrodinger|Schrodinger, Francis Crick, James Watson
+60: Richard Feynman, Robert Hooke, Ernest Rutherford, Enrico Fermi, Werner Heisenberg, Antoine Lavoisier, James Clerk Maxwell, Tycho Brahe, Louis Leakey, Edward Jenner, Jonas Salk, Rachel Carson, George Washington Carver, Alfred Nobel, Carl Linnaeus, Robert Boyle, Joseph Priestley, Lise Meitner, Ada Lovelace, Alessandro Volta, André-Marie Ampère|Andre Ampere|Ampere, Georg Ohm, Katherine Johnson, Dorothy Hodgkin, Barbara McClintock, Linus Pauling, Hans Geiger, Gottfried Leibniz, Blaise Pascal, Leonardo da Vinci|Da Vinci, Anders Celsius, Daniel Fahrenheit, Ibn al-Haytham
+85: Jocelyn Bell Burnell, Emmy Noether, Chien-Shiung Wu, Vera Rubin, Henrietta Leavitt, Cecilia Payne, Dian Fossey, Alfred Wegener, Paul Dirac, Wolfgang Pauli, Subrahmanyan Chandrasekhar, Srinivasa Ramanujan, Antonie van Leeuwenhoek|Leeuwenhoek, Alfred Russel Wallace, Mary Anning, William Harvey, Humphry Davy, Ignaz Semmelweis, Robert Koch, Joseph Lister, Nettie Stevens, Tu Youyou, Marie Tharp, Caroline Herschel, William Herschel, Rudolf Virchow, Fritz Haber, Hermann von Helmholtz|Helmholtz, Ludwig Boltzmann, Heinrich Hertz, Guglielmo Marconi, James Chadwick, J.J. Thomson, Luis Alvarez, Erasmus Darwin, Eratosthenes, Hippocrates
+100: Hedy Lamarr :: The Hollywood star co-invented a frequency-hopping system that helped pave the way for Wi-Fi.
+
+? Name a kind of weather
+~drop weather
+10: Rain|Rainy, Snow|Snowy, Sunny|Sunshine|Sun, Wind|Windy, Hurricane, Tornado, Thunderstorm|Storm, Fog|Foggy, Cloudy|Clouds, Hail
+15: Sharknado, Monsoon
+30: Sleet, Blizzard, Lightning, Thunder, Drizzle, Mist, Typhoon, Cyclone, Flood, Heat wave, Drought, Frost, Ice storm, Breeze, Overcast, Humid|Humidity, Dust storm, Rainbow, Freezing rain, Snowstorm
+60: Derecho, Haboob, Nor'easter, El Niño|El Nino, La Niña|La Nina, Polar vortex, Whiteout, Graupel, Squall, Gale, Waterspout, Dust devil, Heat lightning, Smog, Haze, Flurries, Virga, Bomb cyclone, Microburst, Black ice, Dew, Thundersnow, Sandstorm, Hoarfrost, Cold snap, Indian summer, Chinook, Santa Ana winds|Santa Ana, Atmospheric river|Pineapple Express, Mistral, Sirocco, Zephyr
+85: Foehn|Föhn, Bora, Harmattan, Khamsin, Simoom, Levanter, Meltemi, Williwaw, Diamond dust, Ball lightning, Sun shower|Sunshower, Sun dog|Sundog, Fire whirl|Firenado, Steam devil, Pogonip, Rime, Mammatus, Lake-effect snow|Lake effect, Scud, Supercell, Mesocyclone, Downburst, Wall cloud, Arcus, Noctilucent clouds, Gustnado, Landspout, Tule fog, Morning glory cloud, Sprite, St. Elmo's fire, Ice pellets, Mackerel sky
+100: Snow roller :: Wind can roll snow into hollow logs, as if invisible kids were building snowmen.
+
+? Name a field of study ending in "ology"
+10: Biology, Psychology, Geology, Zoology, Sociology
+15: Scientology, Mixology
+30: Astrology, Archaeology|Archeology, Anthropology, Technology, Cardiology, Neurology, Ecology, Theology, Mythology, Meteorology, Criminology, Dermatology, Oncology, Radiology, Microbiology, Entomology, Paleontology, Cosmology, Pathology, Physiology, Musicology, Etymology
+60: Ornithology, Herpetology, Pharmacology, Immunology, Hematology, Urology, Gastroenterology, Gynecology, Ophthalmology, Toxicology, Epidemiology, Virology, Bacteriology, Seismology, Volcanology|Vulcanology, Oceanology, Mycology, Horology, Graphology, Climatology, Endocrinology, Rheumatology, Kinesiology, Phrenology, Numerology, Terminology, Methodology, Ideology, Chronology, Hydrology, Audiology, Pulmonology, Anesthesiology, Cryptozoology
+85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
+100: Ichthyology :: The study of fish. The goldfish insists you take notes.
