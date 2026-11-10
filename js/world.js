@@ -81,10 +81,12 @@ function creaturePool(m) {
 }
 
 const LINES_TO_SAY = ['blub', 'blub blub', 'wait, what was the question?', 'who are you again?', 'is it lunch?', 'am i deep yet?', 'i forgot', 'nice castle', 'blub?'];
+const THANKSGIVING_LINES = ['gobble?', 'is it pie time yet?', 'i’m thankful for… what was i saying?', 'save me some stuffing', 'pass the fish flakes', 'do you like my hat?'];
 
 export class World {
-  constructor(canvas) {
+  constructor(canvas, { theme = null } = {}) {
     this.canvas = canvas;
+    this.theme = theme?.name || null;
     this.ctx = canvas.getContext('2d', { alpha: false });
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.time = 0;
@@ -132,6 +134,30 @@ export class World {
     this.snow = Array.from({ length: 70 }, (_, i) => ({
       x: hash(i + 1), y: hash(i + 101), z: 0.35 + hash(i + 201) * 0.65, v: 0.004 + hash(i + 301) * 0.012, blink: hash(i + 401),
     }));
+    this.skyTop = SKY_TOP;
+    this.skyLow = SKY_LOW;
+    this.lines = LINES_TO_SAY;
+    this.hat = null;
+    this.leafSprites = null;
+    if (this.theme === 'thanksgiving') this.dressForThanksgiving();
+  }
+
+  // Falling leaves, a warmer late-afternoon sky, a pilgrim hat, and a turkey riding along.
+  dressForThanksgiving() {
+    this.skyTop = [128, 168, 212];
+    this.skyLow = [255, 208, 156];
+    this.sunSprite = art.sun(art.AUTUMN_SUN_RINGS);
+    art.dressBoatForThanksgiving(this.boat);
+    this.hat = art.pilgrimHat();
+    this.lines = [...LINES_TO_SAY, ...THANKSGIVING_LINES];
+    this.leafSprites = art.leaves();
+    const leaf = (i, seed) => ({
+      x: hash(seed + i), y: hash(seed + 50 + i), v: hash(seed + 100 + i), sway: hash(seed + 150 + i),
+      ph: hash(seed + 200 + i) * Math.PI * 2, sprite: Math.floor(hash(seed + 250 + i) * this.leafSprites.length),
+    });
+    this.skyLeaves = Array.from({ length: 16 }, (_, i) => leaf(i, 1500));
+    this.floatLeaves = Array.from({ length: 5 }, (_, i) => leaf(i, 1800));
+    this.seaLeaves = Array.from({ length: 14 }, (_, i) => leaf(i, 2100));
   }
 
   makeBubbles() {
@@ -256,7 +282,7 @@ export class World {
     const y = event.clientY * this.dpr;
     const f = this.fish;
     if (Math.hypot(x - f.x, y - this.m2y(f.m)) < 26 * this.P) {
-      this.say(LINES_TO_SAY[Math.floor(Math.random() * LINES_TO_SAY.length)]);
+      this.say(this.lines[Math.floor(Math.random() * this.lines.length)]);
       this.burst(f.x, f.m, 5);
       audio.unlock();
       audio.bubble();
@@ -556,7 +582,9 @@ export class World {
     if (yS > -80 * this.P) {
       this.drawSky(ctx);
       this.drawBoat(ctx);
+      if (this.leafSprites) this.drawSkyLeaves(ctx, yS);
       this.drawWaves(ctx, yS);
+      if (this.leafSprites) this.drawFloatingLeaves(ctx, yS);
     }
     this.drawRays(ctx, yS);
     this.drawWall(ctx, 0.84, 1.7, 0.32);
@@ -565,6 +593,7 @@ export class World {
     this.drawWall(ctx, 1, 1, 0.62);
     this.drawKelp(ctx);
     this.drawSnow(ctx);
+    if (this.leafSprites) this.drawSeaLeaves(ctx);
     this.drawCaptions(ctx);
     this.drawRuler(ctx);
     this.drawTierLines(ctx);
@@ -588,7 +617,7 @@ export class World {
     for (let y = 0; y < H; y += band) {
       if (y + band <= yWater) {
         const t = clamp((yWater - y) / skySpan, 0, 1);
-        ctx.fillStyle = rgb(mix(SKY_LOW, SKY_TOP, smooth(0, 1, t)));
+        ctx.fillStyle = rgb(mix(this.skyLow, this.skyTop, smooth(0, 1, t)));
       } else {
         ctx.fillStyle = rgb(waterRGB(this.y2m(y + band / 2)));
       }
@@ -1000,7 +1029,76 @@ export class World {
       const off = Math.round(Math.sin(f.phase + sx * 0.34) * amp * k * k);
       ctx.drawImage(s, sx, 0, 1, s.height, (sx - s.width / 2) * P, (off - s.height / 2) * P, P + 0.5, s.height * P);
     }
+    if (this.hat) {
+      const h = this.hat;
+      ctx.drawImage(h, (art.HAT_AT.x - s.width / 2) * P, (art.HAT_AT.y - s.height / 2) * P, h.width * P, h.height * P);
+    }
     ctx.restore();
+  }
+
+  // Leaves -------------------------------------------------------------------------------
+  // Leaves tumble by flipping between full, half and mirrored widths, which keeps the pixels crisp.
+  drawLeaf(ctx, leaf, x, y, { spin = 0, tilt = 0, alpha = 1 } = {}) {
+    const sprite = this.leafSprites[leaf.sprite];
+    const { P } = this;
+    const c = Math.cos(spin);
+    const flip = this.reduced ? 1 : c > 0.5 ? 1 : c > 0 ? 0.5 : c > -0.5 ? -0.5 : -1;
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.translate(Math.round(x), Math.round(y));
+    ctx.rotate(tilt);
+    ctx.scale(flip, 1);
+    ctx.drawImage(sprite, (-sprite.width / 2) * P, (-sprite.height / 2) * P, sprite.width * P, sprite.height * P);
+    ctx.restore();
+  }
+
+  leafTime() {
+    return this.reduced ? this.time * 0.15 : this.time;
+  }
+
+  // Leaves drifting down the sky on a light breeze, vanishing into the waves.
+  drawSkyLeaves(ctx, yS) {
+    const { W, P } = this;
+    const t = this.leafTime();
+    const span = yS + 30 * P;
+    for (const leaf of this.skyLeaves) {
+      const fall = 0.045 + leaf.v * 0.06;
+      const y = ((leaf.y + t * fall) % 1) * span - 20 * P;
+      const sway = Math.sin(t * (0.7 + leaf.sway) + leaf.ph) * (8 + leaf.sway * 16) * P;
+      const x = (((leaf.x * W + t * 10 * P + sway) % W) + W) % W;
+      this.drawLeaf(ctx, leaf, x, y, { spin: t * (1.4 + leaf.v * 2) + leaf.ph, tilt: Math.sin(t * 1.1 + leaf.ph) * 0.35 });
+    }
+  }
+
+  // A few leaves riding the swell before they sink.
+  drawFloatingLeaves(ctx, yS) {
+    const { W, P } = this;
+    const t = this.leafTime();
+    const span = W + 40 * P;
+    for (const leaf of this.floatLeaves) {
+      const x = ((leaf.x * span + t * (3 + leaf.v * 5) * P) % span) - 20 * P;
+      const raw = Math.sin(x * 0.012 / this.dpr + this.time * 0.9) * 2.6 + Math.sin(x * 0.031 / this.dpr - this.time * 1.4) * 1.5;
+      const slope = Math.cos(x * 0.012 / this.dpr + this.time * 0.9) * 0.25;
+      this.drawLeaf(ctx, leaf, x, Math.round(yS / P + raw) * P - 2 * P, { tilt: slope + (leaf.ph - Math.PI) * 0.15 });
+    }
+  }
+
+  // Sunken leaves sway down through the shallows and fade out before the dark water.
+  drawSeaLeaves(ctx) {
+    const { W, H, P } = this;
+    const t = this.leafTime();
+    const surfaceY = this.m2y(0) + 16 * P;
+    for (const leaf of this.seaLeaves) {
+      let y = (leaf.y * H - this.cam * this.ppm * 0.9 + t * (0.012 + leaf.v * 0.02) * H) % H;
+      if (y < 0) y += H;
+      if (y < surfaceY) continue;
+      const fade = 1 - smooth(120, 850, this.y2m(y));
+      if (fade < 0.03) continue;
+      const sway = Math.sin(t * (0.5 + leaf.sway * 0.6) + leaf.ph) * (6 + leaf.sway * 12) * P;
+      this.drawLeaf(ctx, leaf, leaf.x * W + sway, y, {
+        spin: t * (0.6 + leaf.v) + leaf.ph, tilt: Math.sin(t * 0.8 + leaf.ph) * 0.5, alpha: 0.75 * fade,
+      });
+    }
   }
 
   drawSparks(ctx) {

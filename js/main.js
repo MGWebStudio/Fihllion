@@ -6,6 +6,7 @@ import {
 import { buildIndex, findAnswer } from './match.js';
 import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
+import { activeTheme } from './theme.js';
 import { drawLogo, paintIcon, iconURL } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
@@ -851,7 +852,13 @@ function fitTitleLogo() {
 
 async function boot() {
   syncViewport();
-  world = new World($('world'));
+  const theme = activeTheme(currentDate());
+  world = new World($('world'), { theme });
+  if (theme) {
+    document.documentElement.dataset.theme = theme.name;
+    $('themeNote').textContent = theme.note;
+    $('themeNote').hidden = false;
+  }
   const muted = store.get('muted', false);
   audio.setMuted(muted);
   el.btnSound.setAttribute('aria-pressed', String(!muted));

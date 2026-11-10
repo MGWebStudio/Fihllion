@@ -204,6 +204,11 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   font-size: clamp(19px, min(2.9vh, 5.2vw), 26px); line-height: 1.3;
   color: #083247;
 }
+.theme-note {
+  margin: 10px 0 0; font-family: var(--font-label); font-size: clamp(11px, 1.7vh, 14px);
+  letter-spacing: .06em; text-transform: uppercase; color: #8a2f0f;
+}
+.title-sky.is-compact .theme-note { margin-top: 6px; }
 .title-sea {
   flex: 1 1 auto; min-height: 0; width: 100%;
   display: flex; flex-direction: column; align-items: center;

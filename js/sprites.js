@@ -341,12 +341,14 @@ export function cloud(seed) {
   return canvas;
 }
 
-export function sun() {
+const SUN_RINGS = [[36, 'rgba(255,240,190,.28)'], [29, 'rgba(255,236,170,.42)'], [23, '#ffe88f'], [18, '#fff2b5']];
+export const AUTUMN_SUN_RINGS = [[36, 'rgba(255,190,120,.26)'], [29, 'rgba(255,176,104,.4)'], [23, '#ffb25c'], [18, '#ffd28a']];
+
+export function sun(rings = SUN_RINGS) {
   const size = 72;
   const canvas = newCanvas(size, size);
   const ctx = canvas.getContext('2d');
   const c = size / 2;
-  const rings = [[36, 'rgba(255,240,190,.28)'], [29, 'rgba(255,236,170,.42)'], [23, '#ffe88f'], [18, '#fff2b5']];
   for (const [r, color] of rings) {
     ctx.fillStyle = color;
     for (let y = 0; y < size; y += 1) {
@@ -509,4 +511,106 @@ export function drawLogo(canvas, fishShift = 0) {
     ctx.fillRect(x, y, 1, 1);
   }
   return { artW, artH };
+}
+
+// Thanksgiving ---------------------------------------------------------------------------
+
+// L is the leaf's colour, D a darker vein.
+const LEAF_SHAPES = [
+  [
+    '....L....',
+    '..L.L.L..',
+    'L.LLLLL.L',
+    'LLLLDLLLL',
+    '.LLLDLLL.',
+    'LLLLDLLLL',
+    '..LLDLL..',
+    '....D....',
+    '....D....',
+  ],
+  [
+    '..LL..',
+    '.LLLL.',
+    'LLLDLL',
+    '.LLDL.',
+    'LLLDLL',
+    '.LLDL.',
+    'LLLDLL',
+    '..LD..',
+    '...D..',
+  ],
+  [
+    '..L..',
+    '.LLL.',
+    'LLDLL',
+    'LLDLL',
+    '.LDL.',
+    '..D..',
+    '..D..',
+  ],
+];
+const LEAF_COLOURS = [['#c7352b', '#8a1f1a'], ['#de6a2a', '#9c3f14'], ['#eb9b30', '#a8601a'], ['#f2c24e', '#b07f22'], ['#a35a2b', '#6b3417']];
+
+// Every shape in every colour, so a pile of leaves never looks copy-pasted.
+export function leaves() {
+  return LEAF_SHAPES.flatMap((rows) => LEAF_COLOURS.map(([L, D]) => paint(rows, { L, D })));
+}
+
+export const HAT_AT = { x: 19, y: 0 }; // where the hat sits on the GOLDFISH grid
+export function pilgrimHat() {
+  return paint([
+    '...KKKKKK..',
+    '...KkkkhK..',
+    '...KkkkhK..',
+    '...KbbYbK..',
+    'KKKKKKKKKKK',
+  ], { K: '#141217', k: '#2e2b33', h: '#4d4955', b: '#4b3622', Y: '#f2c14e' });
+}
+
+function stamp(ctx, rows, palette, left, top) {
+  rows.forEach((row, y) => {
+    [...row].forEach((ch, x) => {
+      if (ch === '.' || !palette[ch]) return;
+      ctx.fillStyle = palette[ch];
+      ctx.fillRect(left + x, top + y, 1, 1);
+    });
+  });
+}
+
+// A turkey on the stern and two pumpkins on the bow, painted onto the boat's front layer.
+export function dressBoatForThanksgiving({ front }) {
+  const ctx = front.getContext('2d');
+  const pumpkin = { O: '#ee8a26', d: '#c25f17', S: '#5d7a2b' };
+  stamp(ctx, [
+    '....S....',
+    '..OOSOO..',
+    '.OdOOOdO.',
+    'OdOOdOOdO',
+    'OdOOdOOdO',
+    '.OdOOOdO.',
+    '..OOOOO..',
+  ], pumpkin, 13, 42);
+  stamp(ctx, [
+    '..S...',
+    '.OOOO.',
+    'OdOOdO',
+    'OdOOdO',
+    '.OOOO.',
+  ], pumpkin, 22, 44);
+  stamp(ctx, [
+    '.........RORR.',
+    '........ROYOOR',
+    '........RYOYOR',
+    '..HH....ROYYOR',
+    '.HEHH...RYOYOR',
+    'FHHHH..BROYOR.',
+    '.wHHBBBBBRRR..',
+    '.w.BBBbbbBB...',
+    '...BBbbbbBB...',
+    '....BBBBBB....',
+    '.....F..F.....',
+    '....FF.FF.....',
+  ], {
+    R: '#a8402a', O: '#e07b2c', Y: '#f2c14e', H: '#c2453a', E: '#1a0d08', F: '#e8a33a', w: '#d63a2e', B: '#7a4a26', b: '#56331a',
+  }, BOAT.w - 26, 37);
 }
