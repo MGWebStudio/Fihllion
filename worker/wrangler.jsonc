@@ -1,4 +1,4 @@
-// The anonymous answer counter. See the "Answer counts" section of the main README.
+// The answer counter and AI referee. See the "Answer counts" and "AI referee" sections of the main README.
 {
   "name": "fihllion-counts",
   "main": "src/index.js",
@@ -12,8 +12,11 @@
       "migrations_dir": "migrations"
     }
   ],
+  "ai": { "binding": "AI" },
   "vars": {
-    "SCHEDULE_URL": "https://mgwebstudio.github.io/Fihllion/data/schedule.json",
-    "ALLOWED_ORIGINS": "https://mgwebstudio.github.io"
+    "DATA_URL": "https://mgwebstudio.github.io/Fihllion/data/",
+    "ALLOWED_ORIGINS": "https://mgwebstudio.github.io",
+    // Model calls allowed per day. Each costs about 2-3 of the 10,000 free daily "neurons".
+    "AI_DAILY_CAP": "3000"
   }
 }

@@ -6,6 +6,7 @@ import {
 import { buildIndex, findAnswer } from './match.js';
 import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
+import { askReferee } from './referee.js';
 import { activeTheme } from './theme.js';
 import { drawLogo, paintIcon, iconURL } from './sprites.js';
 
@@ -289,26 +290,57 @@ function onSubmit(event) {
     return;
   }
   const hit = findAnswer(raw, G.index);
-  if (!hit) {
-    el.feedback.textContent = `No bites on “${raw}”. Try again.`;
-    el.feedback.classList.add('is-bad');
-    el.answerForm.classList.remove('is-shaking');
-    void el.answerForm.offsetWidth;
-    el.answerForm.classList.add('is-shaking');
-    audio.wrong();
-    el.answer.select();
-    return;
+  if (hit) lockIn(raw, hit);
+  else checkWithReferee(raw);
+}
+
+function noBites(raw) {
+  el.feedback.textContent = `No bites on “${raw}”. Try again.`;
+  el.feedback.classList.add('is-bad');
+  el.answerForm.classList.remove('is-shaking');
+  void el.answerForm.offsetWidth;
+  el.answerForm.classList.add('is-shaking');
+  audio.wrong();
+  el.answer.select();
+}
+
+// An answer that isn't on the list goes to the AI referee. The clock stops while it decides, so
+// the wait never costs the player time. When time has already run out (final), a ruling against it
+// or no ruling at all ends the round as a miss.
+async function checkWithReferee(raw, { final = false } = {}) {
+  const { dive, prompt, token } = { dive: G.dive, prompt: G.prompt, token: G.token };
+  const started = Date.now();
+  G.phase = 'checking';
+  el.feedback.classList.remove('is-bad');
+  el.feedback.textContent = `Not on our list. Asking the referee about “${raw}”…`;
+  el.play.classList.add('is-checking');
+  const verdict = await askReferee(prompt.id, raw);
+  if (token !== G.token || G.dive !== dive || G.prompt !== prompt) return; // they left meanwhile
+  el.play.classList.remove('is-checking');
+  if (!final) {
+    dive.deadline += Date.now() - started;
+    saveDive(dive);
   }
-  lockIn(raw, hit);
+  if (verdict) {
+    lockIn(raw, { ...verdict, checked: true });
+  } else if (final) {
+    missRound(raw);
+  } else {
+    G.phase = 'prompt';
+    G.lastSecond = null;
+    noBites(raw);
+  }
 }
 
 function timeUp() {
   const typed = el.answer.value.trim();
   const hit = typed ? findAnswer(typed, G.index) : null;
-  if (hit) {
-    lockIn(typed, hit);
-    return;
-  }
+  if (hit) lockIn(typed, hit);
+  else if (typed) checkWithReferee(typed, { final: true });
+  else missRound(null);
+}
+
+function missRound(typed) {
   const dive = G.dive;
   const round = { id: G.prompt.id, input: typed || null, name: null, tier: -1, pts: 0 };
   dive.rounds.push(round);
@@ -323,6 +355,7 @@ function timeUp() {
 function lockIn(raw, hit) {
   const dive = G.dive;
   const round = { id: G.prompt.id, input: raw, name: hit.name, tier: hit.tier, pts: TIERS[hit.tier].pts };
+  if (hit.checked) round.checked = true;
   dive.rounds.push(round);
   dive.deadline = null;
   saveDive(dive);
@@ -347,7 +380,8 @@ function showReveal(round) {
   el.revealPts.textContent = missed ? '+0 pts · stayed put' : `+${round.pts} pts · sank ${fmtDepth(round.pts * METRES_PER_POINT)}`;
   el.revealLine.textContent = missed
     ? 'What was the question again?'
-    : round.tier === 5 ? (G.prompt.gem?.blurb || pick(tier.lines)) : pick(tier.lines);
+    : round.tier === 5 ? (G.prompt.gem?.blurb || pick(tier.lines))
+      : round.checked ? 'Not on our list, but the referee says it counts.' : pick(tier.lines);
   el.btnNext.innerHTML = last ? 'Surface <span aria-hidden="true">▲</span>' : 'Keep sinking <span aria-hidden="true">▼</span>';
   setScreen('reveal');
   replay(el.revealCard);
@@ -743,7 +777,8 @@ function openHow() {
       <li>The answers everyone thinks of barely get you wet. The rare ones pull you down.</li>
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One dive a day. Endless mode is there if you want more.</li>
-      <li>Daily answers are counted anonymously to rank how rare each one is.</li>
+      <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
+      <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
 }

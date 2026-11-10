@@ -76,3 +76,21 @@ npx wrangler d1 execute fihllion --remote --command "SELECT prompt, typed, n FRO
 ```
 
 A pick's share is its `n` divided by the prompt's `plays.n`.
+
+## AI referee
+
+When a typed answer isn't on a prompt's list, the game asks the Worker's `/check` before saying "No bites" (`js/referee.js`). This happens in every mode. The Worker first re-checks the list, then looks for a saved ruling, and only then asks a free Workers AI model (`@cf/qwen/qwen3-30b-a3b-fp8`). The model gets the prompt, a few of its commonest answers, any words players may leave off, and the top Wikipedia search results for the answer as evidence. The hidden answer is never shown to it. The clock stops while it decides, which usually takes under a second.
+
+An accepted answer scores by how well known the model says it is (30, 60 or 85 points), unless the model's name for it turns out to be on the list, in which case the list's tier applies. Every ruling, yes or no, is saved in the `verdicts` table with how often it's been typed, so the same guess gets the same answer for everyone and only costs one model call. Model calls are capped at `AI_DAILY_CAP` a day (3,000, about 7,500 of the 10,000 free daily units). Past the cap, or if the model fails, the answer simply doesn't count.
+
+In a test of 180 rulings, it accepted about 80% of real niche answers, rejected every wrong answer from a different subject, and let through one wrong answer from the same subject (a drummer named as a guitarist).
+
+Reviewing rulings, and fixing a wrong one (the next player to type it gets a fresh ruling):
+
+```
+cd worker
+npx wrangler d1 execute fihllion --remote --command "SELECT prompt, typed, valid, name, tier, n FROM verdicts ORDER BY n DESC LIMIT 100"
+npx wrangler d1 execute fihllion --remote --command "DELETE FROM verdicts WHERE prompt = 'game-show' AND typed = 'the cube'"
+```
+
+Answers the referee accepts often belong on the prompt's list. Add them to the `.txt` file like any other answer.

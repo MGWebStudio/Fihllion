@@ -4,10 +4,9 @@
 // think of cold, not what they remember. Archive replays and Endless are never sent. If the counter
 // can't be reached, the dive is tried again the next time the game opens, for a day or so.
 import * as store from './store.js';
+import { SERVER } from './server.js';
 
-const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
-const LIVE = 'https://fihllion-counts.mgstudiogame.workers.dev/dive'; // Empty turns counting off.
-const ENDPOINT = IS_LOCAL ? 'http://localhost:8787/dive' : LIVE;
+const ENDPOINT = SERVER && `${SERVER}/dive`;
 
 // Every prompt that has come up in Endless on this device. Endless's own "seen" list resets when
 // the pool runs low, so it can't be used for this.

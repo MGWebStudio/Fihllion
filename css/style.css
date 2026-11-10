@@ -249,6 +249,10 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
 }
 #play.is-waiting { opacity: 0; }
 #play.is-waiting #answer, #play.is-waiting #btnDrop { pointer-events: none; }
+#play.is-checking #btnDrop { opacity: .55; }
+#play.is-checking #clock { animation: checking 1s steps(2) infinite; }
+@keyframes checking { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { #play.is-checking #clock { animation: none; opacity: .6; } }
 #promptCard {
   width: 100%; max-width: 620px; margin: 0 auto; padding: 13px 18px 11px;
   animation: card-drop .34s steps(6) both;
