@@ -8,6 +8,7 @@ import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
 import { askReferee } from './referee.js';
 import { activeTheme } from './theme.js';
+import { CHANGELOG } from './changelog.js';
 import { drawLogo, paintIcon, iconURL } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
@@ -783,6 +784,37 @@ function openHow() {
     <div class="tier-table">${tiers}</div>`);
 }
 
+// What's new -----------------------------------------------------------------------------
+const newsId = (entry) => `${entry.date} ${entry.time}`;
+const newsDate = (entry) => {
+  const [y, m, d] = entry.date.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
+
+// The title screen names the latest update, with a dot until the player has opened the list.
+function refreshNews() {
+  const latest = CHANGELOG[0];
+  const chip = $('btnNews');
+  if (!latest || !chip) return;
+  const unseen = store.get('news.seen') !== newsId(latest);
+  const [, m, d] = latest.date.split('-').map(Number);
+  const when = new Date(2000, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  chip.innerHTML = `${unseen ? '<i class="news-dot" aria-hidden="true"></i>' : ''}<span class="news-when">New · ${esc(when)}</span><span class="news-what">${esc(latest.short)}</span>`;
+  chip.setAttribute('aria-label', `What’s new: ${latest.title}, ${newsDate(latest)}`);
+  chip.hidden = false;
+}
+
+function openNews() {
+  const entries = CHANGELOG.map((entry, i) => `<li class="news-entry">
+      <p class="label news-stamp">${esc(newsDate(entry))} · ${esc(entry.time)} MT${i === 0 ? ' <span class="news-latest">Latest</span>' : ''}</p>
+      <h3 class="news-title">${esc(entry.title)}</h3>
+      <ul class="news-items">${entry.items.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
+    </li>`).join('');
+  openSheet('What’s new', `<ol class="news-list">${entries}</ol>`);
+  if (CHANGELOG[0]) store.set('news.seen', newsId(CHANGELOG[0]));
+  refreshNews();
+}
+
 function openStats() {
   const best = store.get('endless.state', {}).best;
   openSheet('My stats', `${statsHTML()}${best ? `<p class="results-next">Best endless dive: <b>${best}</b></p>` : ''}`);
@@ -810,6 +842,7 @@ function openMenu() {
     ['Archive', 'menuArchive'],
     ['My stats', 'menuStats'],
     ['How to play', 'menuHow'],
+    ['What’s new', 'menuNews'],
   ].filter(Boolean);
   const note = G.phase === 'prompt' ? '<p class="results-next">Your dive is saved, but the clock keeps running.</p>' : '';
   openSheet('Menu', `<ul class="sheet-list">${items.map(([label, id]) => `<li><button type="button" id="${id}"><span>${esc(label)}</span></button></li>`).join('')}</ul>${note}`);
@@ -826,12 +859,14 @@ function openMenu() {
   $('menuArchive').addEventListener('click', openArchive);
   $('menuStats').addEventListener('click', openStats);
   $('menuHow').addEventListener('click', openHow);
+  $('menuNews').addEventListener('click', openNews);
 }
 
 // Boot -----------------------------------------------------------------------------------
 function wire() {
   el.btnBegin.addEventListener('click', startDaily);
   el.btnEndless.addEventListener('click', startEndless);
+  $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
   el.btnHow.addEventListener('click', () => { audio.unlock(); audio.click(); openHow(); });
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });
@@ -913,6 +948,7 @@ async function boot() {
     drawLogo(el.logo, shift);
   }, 800);
   refreshTitle();
+  refreshNews();
   // A dive that finished while the counter was unreachable gets another try.
   for (const day of [G.today - 1, G.today]) {
     const rec = store.get(`daily.${day}`);

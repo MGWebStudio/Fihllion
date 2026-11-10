@@ -226,6 +226,25 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
 @media (max-width: 460px) {
   .title-links { display: grid; grid-template-columns: 1fr 1fr; width: min(100%, 300px); }
 }
+.news-chip {
+  margin-top: 14px; padding: 6px 10px; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; max-width: min(100%, 340px);
+  background: rgba(6, 24, 42, .72); color: var(--cream);
+  box-shadow: 0 -2px 0 0 var(--slate), 0 2px 0 0 var(--slate), -2px 0 0 0 var(--slate), 2px 0 0 0 var(--slate);
+  font-family: var(--font-body); font-size: 18px; line-height: 1.2;
+}
+.news-chip:hover { filter: brightness(1.2); }
+.news-chip:focus-visible { outline: 3px solid var(--gilt); outline-offset: 3px; }
+.news-when { font-family: var(--font-label); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; color: var(--gilt); white-space: nowrap; }
+.news-what { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.news-dot { width: 8px; height: 8px; flex: none; background: var(--orange); box-shadow: 0 0 0 2px #2a0f02; }
+.news-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.news-entry + .news-entry { padding-top: 16px; border-top: 2px solid var(--slate); }
+.news-stamp { margin: 0; font-size: 10px; color: var(--muted); }
+.news-latest { margin-left: 6px; padding: 1px 5px; background: var(--orange); color: #2a0f02; }
+.news-title { margin: 6px 0 0; font-family: var(--font-display); font-size: 28px; font-weight: 400; line-height: 1.1; color: var(--gilt); }
+.news-items { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 5px; font-size: 20px; line-height: 1.35; list-style: square; }
+.news-items li::marker { color: var(--orange); }
 .credit {
   margin-top: auto; padding-top: 12px;
   font-size: 18px; color: var(--cream);
@@ -239,6 +258,7 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   .title-links { display: flex; width: auto; max-width: none; margin-top: 8px; gap: 8px; }
   .title-links .btn { min-height: 32px; padding: 4px 9px; }
   .credit { padding-top: 4px; font-size: 16px; }
+  .news-chip { margin-top: 8px; padding: 3px 8px; font-size: 16px; }
 }
 
 /* Prompt */
