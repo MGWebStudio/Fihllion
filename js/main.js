@@ -5,6 +5,7 @@ import {
 } from './content.js';
 import { buildIndex, findAnswer } from './match.js';
 import * as store from './store.js';
+import { noteEndless, sendDaily } from './counts.js';
 import { drawLogo, paintIcon, iconURL } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
@@ -359,6 +360,7 @@ function surface() {
   dive.done = true;
   dive.deadline = null;
   saveDive(dive);
+  if (dive.mode === 'daily') sendDaily(dive, content.calendar);
   if (dive.mode === 'endless') {
     const state = endlessState();
     state.best = Math.max(state.best || 0, scoreOf(dive));
@@ -700,6 +702,7 @@ function startEndless() {
     state.next = null;
     state.run += 1;
     store.set('endless.state', state);
+    noteEndless(ids);
     beginDive(makeDive('endless', state.run, ids), { jump: true });
     queueEndless();
   });
@@ -739,6 +742,7 @@ function openHow() {
       <li>The answers everyone thinks of barely get you wet. The rare ones pull you down.</li>
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One dive a day. Endless mode is there if you want more.</li>
+      <li>Daily answers are counted anonymously to rank how rare each one is.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
 }
@@ -867,6 +871,11 @@ async function boot() {
     drawLogo(el.logo, shift);
   }, 800);
   refreshTitle();
+  // A dive that finished while the counter was unreachable gets another try.
+  for (const day of [G.today - 1, G.today]) {
+    const rec = store.get(`daily.${day}`);
+    if (rec) sendDaily(rec, content.calendar);
+  }
   G.phase = 'title';
   setScreen('title');
   requestAnimationFrame(tick);

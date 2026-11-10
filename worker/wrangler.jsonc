@@ -1,0 +1,19 @@
+// The anonymous answer counter. See the "Answer counts" section of the main README.
+{
+  "name": "fihllion-counts",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fihllion",
+      "database_id": "b600079c-daa2-43f3-9a5b-6051ca3b5948",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "SCHEDULE_URL": "https://mgwebstudio.github.io/Fihllion/data/schedule.json",
+    "ALLOWED_ORIGINS": "https://mgwebstudio.github.io"
+  }
+}

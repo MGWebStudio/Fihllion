@@ -49,3 +49,30 @@ Endless never shows a daily prompt before its day. It plays past dailies and pro
 Serve the folder with any static server, for example `python -m http.server 5680`. Opening `index.html` directly won't work, because browsers block the data files on `file://` pages.
 
 On localhost, add `?today=2026-11-10` to the address to pretend it's another day.
+
+## Answer counts
+
+`worker/` is a small Cloudflare Worker with a D1 database that counts Daily answers anonymously, so rarity can come from what players actually say instead of hand-set tiers. When a player finishes a Daily on its own day, `js/counts.js` sends it once: for each prompt they hadn't met before (not in an earlier Daily or in Endless), either the bank answer it matched or what they typed if nothing matched. The database keeps running totals only (`dives`, `plays`, `picks`, `misses`). There are no IP addresses, player IDs or timestamps. Archive replays and Endless are never sent. The game works the same if the counter is down.
+
+The Worker only accepts dives from the game's own site, for a day within one of today, and only prompts that belong to that day. It runs on Cloudflare's free plan, so going over the limits just makes it stop answering until the next day.
+
+Testing locally (`worker/.dev.vars` points the Worker at the local game and allows any day):
+
+```
+cd worker
+npm install
+npm run migrate:local
+npm run dev
+```
+
+With the Worker on port 8787, the game on localhost sends there instead of to the live counter.
+
+Reading the live totals:
+
+```
+cd worker
+npx wrangler d1 execute fihllion --remote --command "SELECT prompt, answer, n FROM picks ORDER BY prompt, n DESC"
+npx wrangler d1 execute fihllion --remote --command "SELECT prompt, typed, n FROM misses ORDER BY n DESC LIMIT 50"
+```
+
+A pick's share is its `n` divided by the prompt's `plays.n`.

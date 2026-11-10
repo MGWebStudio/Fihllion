@@ -1,0 +1,15 @@
+{
+  "name": "fihllion-counts",
+  "private": true,
+  "type": "module",
+  "description": "Anonymous Daily answer counter for Fihllion (Cloudflare Worker + D1).",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "migrate:local": "wrangler d1 migrations apply fihllion --local",
+    "migrate:live": "wrangler d1 migrations apply fihllion --remote",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.158.0"
+  }
+}
