@@ -75,6 +75,7 @@
       <p class="prompt-hint">Rare answers pull you down.</p>
     </div>
     <div id="dock">
+      <button id="btnFaces" class="faces-chip" type="button" hidden>Know the face, not the name?</button>
       <p id="feedback" role="status" aria-live="polite"></p>
       <form id="answerForm" autocomplete="off" novalidate>
         <div id="clock" aria-hidden="true">
@@ -82,8 +83,11 @@
           <span id="clockNum">25</span>
         </div>
         <label class="sr-only" for="answer">Your answer</label>
-        <input id="answer" type="text" name="fihllion-answer" placeholder="Type one answer" maxlength="60"
+        <input id="answer" type="text" name="fihllion-answer" placeholder="One answer" maxlength="60"
           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" data-1p-ignore data-lpignore="true">
+        <button id="btnMic" class="mic-btn" type="button" aria-label="Say your answer" aria-pressed="false" hidden>
+          <svg viewBox="0 0 10 12" aria-hidden="true"><rect x="3" y="0" width="4" height="7"/><rect x="1" y="4" width="1" height="3"/><rect x="8" y="4" width="1" height="3"/><rect x="2" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/><rect x="3" y="8" width="4" height="1"/><rect x="4.5" y="9" width="1" height="2"/><rect x="2.5" y="11" width="5" height="1"/></svg>
+        </button>
         <button id="btnDrop" class="btn btn-primary" type="submit">Drop</button>
       </form>
     </div>

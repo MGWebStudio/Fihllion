@@ -9,6 +9,7 @@ import { noteEndless, sendDaily } from './counts.js';
 import { askReferee } from './referee.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
+import { voiceSupported, listen, stopListening, isListening } from './voice.js';
 import { drawLogo, paintIcon, iconURL } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
@@ -17,7 +18,7 @@ const el = Object.fromEntries([
   'btnHow', 'btnEndless', 'btnArchive', 'btnStats', 'play', 'promptCard', 'promptNum', 'promptText', 'feedback',
   'answerForm', 'answer', 'clock', 'clockRing', 'clockNum', 'reveal', 'revealCard', 'revealIcon', 'revealTier',
   'revealAnswer', 'revealPts', 'revealLine', 'btnNext', 'results', 'sheet', 'sheetTitle', 'sheetBody', 'sheetClose',
-  'btnMenu', 'btnSound',
+  'btnMenu', 'btnSound', 'btnMic', 'btnFaces',
 ].map((id) => [id, $(id)]));
 
 const SITE_URL = 'https://mgwebstudio.github.io/Fihllion/';
@@ -56,6 +57,7 @@ function untilMidnight() {
 
 // Screens --------------------------------------------------------------------------------
 function setScreen(name) {
+  if (name !== 'play') stopListening();
   document.body.dataset.screen = name;
   for (const screen of SCREENS) el[screen].hidden = screen !== name;
   el.hud.hidden = !['play', 'sink', 'reveal'].includes(name);
@@ -231,6 +233,7 @@ function advance() {
 }
 
 function presentPrompt() {
+  stopListening();
   const dive = G.dive;
   const number = dive.rounds.length + 1;
   G.prompt = content.byId.get(dive.ids[dive.rounds.length]);
@@ -241,6 +244,7 @@ function presentPrompt() {
   }
   el.promptNum.textContent = `${dive.mode === 'endless' ? 'Endless · prompt' : 'Prompt'} ${number} of ${PROMPTS_PER_DIVE}`;
   el.promptText.textContent = G.prompt.text;
+  refreshFaces();
   el.answer.value = '';
   el.feedback.textContent = '';
   el.feedback.classList.remove('is-bad');
@@ -282,9 +286,96 @@ function updateClock() {
   }
 }
 
+const VOICE_ERRORS = {
+  'not-allowed': 'The microphone is blocked. Allow it in your browser’s settings for this site.',
+  'service-not-allowed': 'The microphone is blocked. Allow it in your browser’s settings for this site.',
+  'no-speech': 'Didn’t catch that. Tap the mic and try again.',
+  'audio-capture': 'No microphone found.',
+  network: 'Voice needs an internet connection.',
+};
+
+// The mic fills the answer box with what the player says. When the browser heard a few versions,
+// the first one that's on the list wins. The player still taps Drop, in case it misheard.
+function toggleVoice() {
+  if (G.phase !== 'prompt') return;
+  if (isListening()) {
+    stopListening();
+    return;
+  }
+  const prompt = G.prompt;
+  el.btnMic.classList.add('is-listening');
+  el.btnMic.setAttribute('aria-pressed', 'true');
+  el.feedback.classList.remove('is-bad');
+  el.feedback.textContent = 'Listening… say your answer.';
+  listen({
+    onInterim: (text) => {
+      if (G.prompt === prompt && G.phase === 'prompt') el.answer.value = text.slice(0, 60);
+    },
+    onFinal: (heard) => {
+      if (G.prompt !== prompt || G.phase !== 'prompt' || !heard.length) return;
+      const best = heard.find((text) => findAnswer(text, G.index)) || heard[0];
+      el.answer.value = best.slice(0, 60);
+      el.feedback.textContent = `Heard “${best}”. Tap Drop to send it.`;
+    },
+    onError: (reason) => {
+      if (G.prompt !== prompt) return;
+      el.feedback.classList.add('is-bad');
+      el.feedback.textContent = VOICE_ERRORS[reason] || 'Voice didn’t work this time. Try typing it.';
+    },
+    onEnd: () => {
+      el.btnMic.classList.remove('is-listening');
+      el.btnMic.setAttribute('aria-pressed', 'false');
+    },
+  });
+}
+
+// Faces ----------------------------------------------------------------------------------
+// On prompts about real people, photos of the 10-point answers, without names, so a player who
+// knows the face can still get an answer down. data/faces.json is built by scripts/build-faces.mjs.
+let faces = null;
+let facesLoading = null;
+function loadFaces() {
+  facesLoading ||= fetch('data/faces.json')
+    .then((res) => (res.ok ? res.json() : {}))
+    .then((data) => { faces = data; })
+    .catch(() => { facesLoading = null; });
+  return facesLoading;
+}
+
+function refreshFaces() {
+  const prompt = G.prompt;
+  el.btnFaces.hidden = !faces?.[prompt?.id];
+  if (!faces && prompt?.lastName) loadFaces()?.then(() => { if (G.prompt === prompt) refreshFaces(); });
+}
+
+function openFaces() {
+  const list = faces?.[G.prompt?.id];
+  if (!list || G.phase !== 'prompt') return;
+  const shown = [...list].sort(() => Math.random() - 0.5);
+  const grid = shown.map((face, i) => `<button type="button" class="face" data-i="${i}">
+      <img src="${esc(face.img)}" alt="${esc(face.name)}" loading="lazy" referrerpolicy="no-referrer">
+    </button>`).join('');
+  const credits = shown.map((face, i) => `<li><a href="${esc(face.page)}" target="_blank" rel="noopener">Photo ${i + 1}</a>: ${esc(face.credit)}</li>`).join('');
+  openSheet('Pick a face', `<p class="faces-note">Tap one and their name goes in your answer box. These are the answers everyone knows, so they’re worth 10 points.</p>
+    <div class="faces-grid">${grid}</div>
+    <details class="faces-credits"><summary>Photo credits (Wikimedia Commons)</summary><ul>${credits}</ul></details>`);
+  for (const button of el.sheetBody.querySelectorAll('.face')) {
+    button.addEventListener('click', () => {
+      const face = shown[Number(button.dataset.i)];
+      closeSheet();
+      if (G.phase !== 'prompt') return;
+      el.answer.value = face.name;
+      el.feedback.classList.remove('is-bad');
+      el.feedback.textContent = `Picked “${face.name}”. Tap Drop to send it.`;
+      el.answer.focus({ preventScroll: true });
+    });
+  }
+}
+
 function onSubmit(event) {
   event.preventDefault();
   if (G.phase !== 'prompt') return;
+  stopListening();
   const raw = el.answer.value.trim();
   if (!raw) {
     el.answer.focus({ preventScroll: true });
@@ -334,6 +425,7 @@ async function checkWithReferee(raw, { final = false } = {}) {
 }
 
 function timeUp() {
+  stopListening();
   const typed = el.answer.value.trim();
   const hit = typed ? findAnswer(typed, G.index) : null;
   if (hit) lockIn(typed, hit);
@@ -779,6 +871,7 @@ function openHow() {
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One dive a day. Endless mode is there if you want more.</li>
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
+      <li>Tap the mic to say your answer instead of typing it. On prompts about people, you can pick a face if the name won’t come.</li>
       <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
@@ -867,6 +960,11 @@ function wire() {
   el.btnBegin.addEventListener('click', startDaily);
   el.btnEndless.addEventListener('click', startEndless);
   $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
+  if (voiceSupported) {
+    el.btnMic.hidden = false;
+    el.btnMic.addEventListener('click', toggleVoice);
+  }
+  el.btnFaces.addEventListener('click', () => { audio.click(); openFaces(); });
   el.btnHow.addEventListener('click', () => { audio.unlock(); audio.click(); openHow(); });
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });

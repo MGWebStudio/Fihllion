@@ -3,6 +3,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-10',
+    time: '5:12 PM',
+    title: 'Say it or pick a face',
+    short: 'Voice answers + faces',
+    items: [
+      'Tap the mic next to the answer box and say your answer instead of spelling it.',
+      'On prompts about real people, tap “Know the face, not the name?” and pick a photo to put their name in. Faces are only the answers everyone knows, worth 10 points.',
+    ],
+  },
+  {
+    date: '2026-11-10',
     time: '4:03 PM',
     title: 'Deep cuts count now',
     short: 'AI referee + Thanksgiving',

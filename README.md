@@ -44,6 +44,19 @@ The first updates `data/index.json`, which tells the game which file holds each 
 
 Endless never shows a daily prompt before its day. It plays past dailies and prompts that aren't scheduled, saving the ones a player already met in a daily for last. Only if there aren't enough for a single dive does it borrow the dailies furthest away, never one due within a week. The results screen shows only the player's own answers, so the hidden answers stay hidden.
 
+## Growing the lists from Wikidata
+
+Two scripts fill gaps in the hand-made lists from Wikidata (public domain). Both read `scripts/wikidata.mjs`, which says what kind of thing each prompt's answers are. Both show what they'd change unless given `--write`, and both should be followed by `check-prompts` and a read of the diff.
+
+- `node scripts/add-aliases.mjs` adds other names for answers already on a list ("Doberman Pinscher" for Doberman, "Space Shuttle Discovery" for Discovery), up to three each. A name is only taken from the one item that clearly matches the answer, and is skipped if it's shorter than four letters (codes like "ME"), names a company, or, except for people, shares no word with the answer (which keeps out "Lady" for Jane Austen and "Miami FC" style mix-ups).
+- `node scripts/add-answers.mjs [prompt-id ...]` adds answers a list is missing, only for prompts in `CATALOGS`, where the kind is exact (every US state, every Pixar film) rather than approximate. An item needs at least four Wikipedia language editions, and the kind has to fit at least half the answers already on the list. A new answer scores 30, 60 or 85 points by how widely it's covered compared with the list's own 30- and 60-point answers, and anything spelled close to an existing answer is skipped so a typo of a common answer can't land on a rare one.
+
+## Voice and faces
+
+The mic button (`js/voice.js`) uses the browser's own speech recognition, so it's hidden where there isn't any (Firefox). It fills the answer box with what the player says; when the browser heard several versions, the first one on the prompt's list wins. The player still taps Drop.
+
+On prompts about real people (those with `~last`, minus fictional characters), "Know the face, not the name?" opens photos of the 10-point answers without names. Tapping one puts the name in the box. Only Plankton answers get photos, so faces never point at a rare answer. `node scripts/build-faces.mjs` rebuilds `data/faces.json` after the lists change: it finds each person on Wikidata, takes their Wikidata photo (always on Wikimedia Commons, so freely licensed) and keeps the photographer and license for the credits shown under the photos.
+
 ## Running it locally
 
 Serve the folder with any static server, for example `python -m http.server 5680`. Opening `index.html` directly won't work, because browsers block the data files on `file://` pages.
