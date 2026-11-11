@@ -342,7 +342,6 @@ export function cloud(seed) {
 }
 
 const SUN_RINGS = [[36, 'rgba(255,240,190,.28)'], [29, 'rgba(255,236,170,.42)'], [23, '#ffe88f'], [18, '#fff2b5']];
-export const AUTUMN_SUN_RINGS = [[36, 'rgba(255,190,120,.26)'], [29, 'rgba(255,176,104,.4)'], [23, '#ffb25c'], [18, '#ffd28a']];
 
 export function sun(rings = SUN_RINGS) {
   const size = 72;
@@ -575,6 +574,224 @@ function stamp(ctx, rows, palette, left, top) {
       ctx.fillRect(left + x, top + y, 1, 1);
     });
   });
+}
+
+// The bowl moves indoors for Thanksgiving: a dining-room wall, a window onto an autumn
+// afternoon, a leaf garland, and the back rim of the tank the boat floats in.
+const ROOM = {
+  wallTop: [146, 154, 106], wallLow: [212, 210, 160], panel: [118, 128, 84],
+  trim: '#ece2c4', trimShade: '#c4b78f', trimDark: '#7d7a5c',
+  wood: '#5c3822', woodLight: '#8f633f', woodDark: '#33200f',
+  curtain: '#8e2a2a', curtainLight: '#ad3a32', curtainDark: '#5c191b',
+  twine: '#6e5230', brass: '#d0a040', brassDark: '#8a6420',
+};
+const PUMPKIN = { O: '#ee8a26', d: '#c25f17', S: '#5d7a2b' };
+const rgbText = ([r, g, b]) => `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+const blend = (a, b, t) => a.map((v, i) => v + (b[i] - v) * t);
+
+// The view out of the window, painted at the size of its glass. Leaves fall across it live.
+export function windowView(w, h) {
+  const canvas = newCanvas(w, h);
+  const ctx = canvas.getContext('2d');
+  const fill = (color, x, y, cw = 1, ch = 1) => {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, cw, ch);
+  };
+  for (let y = 0; y < h; y += 2) {
+    fill(rgbText(blend([112, 150, 200], [255, 200, 146], Math.min(1, y / (h * 0.74)))), 0, y, w, 2);
+  }
+  const sx = w * 0.3;
+  const sy = h * 0.6;
+  for (const [r, color] of [[10, 'rgba(255,196,128,.35)'], [7, '#ffb25c'], [5, '#ffd28a']]) {
+    for (let y = 0; y < h; y += 1) {
+      for (let x = 0; x < w; x += 1) {
+        if (inCircle(x, y, sx, sy, r)) fill(color, x, y);
+      }
+    }
+  }
+  for (let x = 0; x < w; x += 1) {
+    const top = Math.round(h * 0.68 + Math.sin(x * 0.17) * 1.6 + Math.sin(x * 0.06 + 1) * 2.4);
+    fill('#9a7682', x, top, 1, h - top);
+  }
+  const trees = [['#c7352b', '#8a1f1a'], ['#de6a2a', '#9c3f14'], ['#eb9b30', '#a8601a'], ['#f2c24e', '#b07f22']];
+  for (let i = 0, cx = 2; cx < w + 4; i += 1, cx += 5 + ((i * 7) % 4)) {
+    const r = 3 + ((i * 5) % 3);
+    const cy = h * 0.8 - (i % 2);
+    const [leaf, shade] = trees[(i * 3) % trees.length];
+    fill('#4a2c18', Math.round(cx), Math.round(cy + r - 1), 1, 4);
+    for (let y = Math.floor(cy - r); y <= cy + r; y += 1) {
+      for (let x = Math.floor(cx - r); x <= cx + r; x += 1) {
+        if (inCircle(x, y, cx, cy, r)) fill(y > cy + r / 3 ? shade : leaf, x, y);
+      }
+    }
+  }
+  const ground = Math.round(h * 0.88);
+  fill('#9c7a44', 0, ground, w, 1);
+  fill('#7d5f34', 0, ground + 1, w, h - ground - 1);
+  return canvas;
+}
+
+// Everything on the wall, painted once per screen size at sprite scale. `win` is the window's
+// outer frame; its glass is left clear so the view and its leaves can be drawn underneath.
+// Rows from waterY down sit behind the waves.
+export function thanksgivingRoom({ w, h, waterY, win, picture, keepClear }) {
+  const canvas = newCanvas(w, h);
+  const ctx = canvas.getContext('2d');
+  const fill = (color, x, y, cw = 1, ch = 1) => {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, cw, ch);
+  };
+  const rimTop = waterY - 12;
+
+  // Wallpaper, darker toward the ceiling, with a pale stripe and a small diamond in each panel.
+  for (let y = 0; y < h; y += 2) {
+    const t = Math.min(1, Math.floor((y / rimTop) * 14) / 14);
+    fill(rgbText(blend(ROOM.wallTop, ROOM.wallLow, t)), 0, y, w, 2);
+  }
+  for (let x = 0; x < w; x += 14) {
+    fill('rgba(255,250,224,.09)', x, 0, 4, h);
+    fill('rgba(46,56,30,.07)', x - 1, 0, 1, h);
+    fill('rgba(46,56,30,.07)', x + 4, 0, 1, h);
+    for (let y = 12; y < rimTop; y += 16) {
+      fill('rgba(255,250,224,.11)', x + 9, y, 1, 3);
+      fill('rgba(255,250,224,.11)', x + 8, y + 1, 3, 1);
+    }
+  }
+
+  // Crown moulding along the ceiling.
+  fill(ROOM.trimShade, 0, 0, w, 1);
+  fill(ROOM.trim, 0, 1, w, 2);
+  fill(ROOM.trimShade, 0, 3, w, 1);
+  fill('rgba(30,36,18,.22)', 0, 4, w, 1);
+
+  if (picture) {
+    const { x, y } = picture;
+    fill(ROOM.twine, x + 18, y - 7, 2, 1);
+    for (let i = 1; i <= 7; i += 1) {
+      fill(ROOM.twine, x + 18 - Math.round(i * 2.2), y - 7 + i);
+      fill(ROOM.twine, x + 19 + Math.round(i * 2.2), y - 7 + i);
+    }
+    fill(ROOM.brassDark, x, y, 38, 28);
+    fill(ROOM.brass, x + 1, y + 1, 36, 26);
+    fill('#f0cd70', x + 1, y + 1, 36, 1);
+    fill(ROOM.brassDark, x + 2, y + 2, 34, 24);
+    fill('#2f4a36', x + 3, y + 3, 32, 22);
+    fill('#3b5a42', x + 3, y + 3, 32, 8);
+    stamp(ctx, GOLDFISH, FISH, x + 4, y + 5);
+    ctx.drawImage(pilgrimHat(), x + 4 + HAT_AT.x, y + 5 + HAT_AT.y);
+    fill('rgba(30,36,18,.25)', x + 1, y + 28, 38, 1);
+  }
+
+  if (win) {
+    const { x, y, w: ww, h: wh } = win;
+    // Glass: cleared for the view underneath, then the frame and its cross bars.
+    ctx.clearRect(x + 3, y + 3, ww - 6, wh - 6);
+    fill(ROOM.trimShade, x, y, ww, 3);
+    fill(ROOM.trimShade, x, y + wh - 3, ww, 3);
+    fill(ROOM.trimShade, x, y, 3, wh);
+    fill(ROOM.trimShade, x + ww - 3, y, 3, wh);
+    fill(ROOM.trim, x + 1, y + 1, ww - 2, 1);
+    fill(ROOM.trim, x + 1, y + 1, 1, wh - 2);
+    fill(ROOM.trim, x + ww - 2, y + 1, 1, wh - 2);
+    const midX = x + Math.floor(ww / 2) - 1;
+    const midY = y + 3 + Math.round((wh - 6) * 0.42);
+    fill(ROOM.trim, midX, y + 3, 2, wh - 6);
+    fill(ROOM.trim, x + 3, midY, ww - 6, 2);
+    fill(ROOM.trimShade, midX + 1, y + 3, 1, wh - 6);
+    // Sill, with a pumpkin pie cooling on it.
+    fill(ROOM.trim, x - 3, y + wh, ww + 6, 2);
+    fill(ROOM.trimShade, x - 3, y + wh + 2, ww + 6, 1);
+    fill('rgba(30,36,18,.25)', x - 2, y + wh + 3, ww + 4, 1);
+    stamp(ctx, [
+      '..s....s...',
+      '...s....s..',
+      '..s....s...',
+      '.CcCcCcCcC.',
+      'CFFFfFFFfFC',
+      'CCCCCCCCCCC',
+      '.ttttttttt.',
+    ], { s: 'rgba(255,255,255,.55)', C: '#c98a3e', c: '#e2a95a', F: '#d9701e', f: '#ee8a32', t: '#9aa3a8' }, x + ww - 15, y + wh - 7);
+    // Curtains gathered with brass ties, hanging from a rod.
+    const rodY = y - 4;
+    fill(ROOM.brassDark, x - 9, rodY, ww + 18, 2);
+    fill(ROOM.brass, x - 9, rodY, ww + 18, 1);
+    fill(ROOM.brass, x - 11, rodY - 1, 2, 4);
+    fill(ROOM.brass, x + ww + 9, rodY - 1, 2, 4);
+    const tieY = y + Math.round(wh * 0.56);
+    const bottom = y + wh + 6;
+    for (let row = rodY + 2; row < bottom; row += 1) {
+      const into = row < tieY
+        ? 8 - Math.round(((row - rodY) / (tieY - rodY)) * 9)
+        : -1 + Math.round(((row - tieY) / (bottom - tieY)) * 4);
+      const width = 8 + into;
+      for (let i = 0; i < width; i += 1) {
+        const fold = i % 3 === 0 ? ROOM.curtainDark : i % 3 === 1 ? ROOM.curtainLight : ROOM.curtain;
+        fill(fold, x - 8 + i, row);
+        fill(fold, x + ww + 7 - i, row);
+      }
+    }
+    fill(ROOM.brass, x - 8, tieY, 7, 2);
+    fill(ROOM.brass, x + ww + 1, tieY, 7, 2);
+  }
+
+  // A garland of leaves swagged between hooks under the moulding.
+  const swags = Math.max(2, Math.round(w / 90));
+  const leafRows = [LEAF_SHAPES[1], LEAF_SHAPES[2]];
+  let n = 0;
+  for (let s = 0; s < swags; s += 1) {
+    const x0 = Math.round((s * w) / swags);
+    const x1 = Math.round(((s + 1) * w) / swags);
+    const half = (x1 - x0) / 2;
+    let prev = null;
+    const cord = (x) => Math.round(5 + 7 * (1 - ((x - x0 - half) / half) ** 2));
+    for (let x = x0; x <= x1; x += 1) {
+      const y = cord(x);
+      fill(ROOM.twine, x, Math.min(y, prev ?? y), 1, Math.abs(y - (prev ?? y)) + 1);
+      prev = y;
+    }
+    for (let x = x0 + 5; x < x1 - 3; x += 7, n += 1) {
+      const rows = leafRows[n % 2];
+      const [L, D] = LEAF_COLOURS[(n * 2) % LEAF_COLOURS.length];
+      stamp(ctx, rows, { L, D }, x - Math.floor(rows[0].length / 2), cord(x));
+    }
+    stamp(ctx, ['R.R', '.R.', 'R.R'], { R: ROOM.curtainLight }, x0 - 1, 4);
+  }
+
+  // Painted panelling under a chair rail, behind the tank.
+  const railY = waterY - 25;
+  fill(rgbText(ROOM.panel), 0, railY, w, rimTop - railY);
+  for (let x = 3; x < w; x += 20) {
+    fill('rgba(255,250,224,.16)', x, railY + 5, 15, 1);
+    fill('rgba(255,250,224,.16)', x, railY + 5, 1, rimTop - railY - 7);
+    fill('rgba(30,36,18,.22)', x + 1, rimTop - 3, 15, 1);
+    fill('rgba(30,36,18,.22)', x + 15, railY + 6, 1, rimTop - railY - 9);
+  }
+  fill(ROOM.trim, 0, railY, w, 2);
+  fill(ROOM.trimShade, 0, railY + 2, w, 1);
+  fill('rgba(30,36,18,.25)', 0, railY + 3, w, 1);
+
+  // The back rim of the tank, with the wall showing through the glass below it.
+  fill(ROOM.woodLight, 0, rimTop, w, 1);
+  fill(ROOM.wood, 0, rimTop + 1, w, 2);
+  fill(ROOM.woodDark, 0, rimTop + 3, w, 1);
+  fill('rgba(127,231,220,.22)', 0, rimTop + 4, w, h - rimTop - 4);
+  fill('rgba(240,255,250,.5)', 0, rimTop + 4, w, 1);
+
+  // Things set down on the rim, kept clear of the boat.
+  const clear = (left, right) => !keepClear || right < keepClear[0] || left > keepClear[1];
+  const leftX = Math.round(w * 0.05);
+  if (clear(leftX, leftX + 22)) {
+    stamp(ctx, ['....S....', '..OOSOO..', '.OdOOOdO.', 'OdOOdOOdO', 'OdOOdOOdO', '.OdOOOdO.', '..OOOOO..'], PUMPKIN, leftX, rimTop - 7);
+    stamp(ctx, ['..S..', '.WWWW.', 'WwWWwW', 'WwWWwW', '.WWWW.'], { W: '#efe6d2', w: '#cfc2a4', S: '#5d7a2b' }, leftX + 10, rimTop - 5);
+    stamp(ctx, ['.G..', 'YG..', 'Y...', 'YY..', 'YYY.', 'YYYY', '.YY.'], { Y: '#e8c23a', G: '#5d7a2b' }, leftX + 18, rimTop - 7);
+  }
+  const rightX = Math.round(w * 0.95) - 15;
+  if (clear(rightX, rightX + 15)) {
+    stamp(ctx, ['RRRRRR', 'RrrrrR', 'TTTTTT', 'TWWWWT', 'TWOOWT', 'TWWWWT', 'TTTTTT', 'TTTTTT'],
+      { R: '#c7352b', r: '#e45a48', T: '#e8dcc0', W: '#ffffff', O: '#ff8c1a' }, rightX, rimTop - 8);
+    stamp(ctx, ['..S...', '.OOOO.', 'OdOOdO', 'OdOOdO', '.OOOO.'], PUMPKIN, rightX + 8, rimTop - 5);
+  }
+  return canvas;
 }
 
 // A turkey on the stern and two pumpkins on the bow, painted onto the boat's front layer.

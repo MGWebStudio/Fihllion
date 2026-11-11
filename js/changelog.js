@@ -3,6 +3,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-10',
+    time: '9:30 PM',
+    title: 'Ranked mode is coming',
+    short: 'Ranked mode coming soon',
+    items: [
+      'Coming soon: pick a nickname, play the Daily, and see where you rank on the leaderboard as soon as you finish.',
+      'The bowl moved indoors for Thanksgiving. There’s a dining room, leaves falling past the window, and a fish tank that goes a lot deeper than it looks.',
+    ],
+  },
+  {
+    date: '2026-11-10',
     time: '6:50 PM',
     title: 'Bigger answer lists',
     short: 'Thousands more answers',

@@ -692,7 +692,8 @@ function showResults(dive) {
   const heading = isEndless ? `Endless dive #${dive.day}` : `Dive #${dive.day} · ${shortDate(dive.day)}`;
   const nextLine = isEndless
     ? `<p class="results-next">Best endless dive: <b>${store.get('endless.state', {}).best || total}</b></p>`
-    : dive.day === G.today ? '<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>' : '';
+    : dive.day === G.today ? `<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>
+      <p class="results-soon label">Ranked leaderboard · coming soon</p>` : '';
   const primary = isEndless
     ? '<button id="resNext" class="btn btn-quiet" type="button">Next endless dive</button>'
     : '<button id="resEndless" class="btn btn-quiet" type="button">Play endless</button>';

@@ -137,16 +137,21 @@ export class World {
     this.skyTop = SKY_TOP;
     this.skyLow = SKY_LOW;
     this.lines = LINES_TO_SAY;
+    this.captions = CAPTIONS;
     this.hat = null;
     this.leafSprites = null;
+    this.indoors = false;
+    this.room = null;
     if (this.theme === 'thanksgiving') this.dressForThanksgiving();
   }
 
-  // Falling leaves, a warmer late-afternoon sky, a pilgrim hat, and a turkey riding along.
+  // The bowl moves indoors: a dining room with leaves falling past the window, a pilgrim hat,
+  // and a turkey riding along on a boat in the fish tank.
   dressForThanksgiving() {
-    this.skyTop = [128, 168, 212];
-    this.skyLow = [255, 208, 156];
-    this.sunSprite = art.sun(art.AUTUMN_SUN_RINGS);
+    this.indoors = true;
+    this.skyTop = [134, 146, 112];
+    this.skyLow = [134, 146, 112];
+    this.captions = [...CAPTIONS, { m: 14, text: 'this tank is deeper than it looks', side: 'right' }];
     art.dressBoatForThanksgiving(this.boat);
     this.hat = art.pilgrimHat();
     this.lines = [...LINES_TO_SAY, ...THANKSGIVING_LINES];
@@ -155,7 +160,7 @@ export class World {
       x: hash(seed + i), y: hash(seed + 50 + i), v: hash(seed + 100 + i), sway: hash(seed + 150 + i),
       ph: hash(seed + 200 + i) * Math.PI * 2, sprite: Math.floor(hash(seed + 250 + i) * this.leafSprites.length),
     });
-    this.skyLeaves = Array.from({ length: 16 }, (_, i) => leaf(i, 1500));
+    this.windowLeaves = Array.from({ length: 7 }, (_, i) => leaf(i, 1500));
     this.floatLeaves = Array.from({ length: 5 }, (_, i) => leaf(i, 1800));
     this.seaLeaves = Array.from({ length: 14 }, (_, i) => leaf(i, 2100));
   }
@@ -198,6 +203,7 @@ export class World {
     this.boatX = innerWidth / innerHeight > 1.15 ? this.W * 0.77 : this.W * 0.5;
     this.fish.x *= this.W / oldW;
     this.captionLayout = null;
+    if (this.indoors) this.buildRoom();
     this.ctx.imageSmoothingEnabled = false;
     if (!this.diving && !this.ascent) this.snapToTitle();
     if (this.fish.mode === 'bowl') this.placeFishInBowl();
@@ -580,11 +586,12 @@ export class World {
     this.drawBackdrop(ctx);
     const yS = this.m2y(0);
     if (yS > -80 * this.P) {
-      this.drawSky(ctx);
+      if (this.room) this.drawRoom(ctx, yS);
+      else this.drawSky(ctx);
       this.drawBoat(ctx);
-      if (this.leafSprites) this.drawSkyLeaves(ctx, yS);
       this.drawWaves(ctx, yS);
       if (this.leafSprites) this.drawFloatingLeaves(ctx, yS);
+      if (this.room) this.drawGlass(ctx, yS);
     }
     this.drawRays(ctx, yS);
     this.drawWall(ctx, 0.84, 1.7, 0.32);
@@ -640,6 +647,74 @@ export class World {
       ctx.drawImage(cloud, Math.round(x / P) * P, Math.round(y / P) * P, cw, cloud.height * P);
     });
     ctx.globalAlpha = 1;
+  }
+
+  // Lays out the Thanksgiving dining room for this screen: the window goes on the side away
+  // from the boat, and on wide screens a portrait hangs beside the bowl.
+  buildRoom() {
+    const { W, H, P } = this;
+    const w = Math.ceil(W / P);
+    const waterY = Math.ceil((TITLE_SURFACE * H) / P);
+    const boatAt = this.boatX / P;
+    const keepClear = [boatAt - art.BOAT.w / 2 - 2, boatAt + art.BOAT.w / 2 + 2];
+    const boatOnRight = this.boatX > W * 0.6;
+    let ww = clamp(Math.round(w * 0.16), 40, 64);
+    const wh = Math.min(Math.round(ww * 1.3), waterY - 56);
+    ww = Math.min(ww, Math.round(wh / 1.3));
+    const win = wh >= 30
+      ? { x: Math.round(w * (boatOnRight ? 0.14 : 0.82) - ww / 2), y: waterY - 32 - wh, w: ww, h: wh }
+      : null;
+    // The portrait hangs just right of the bowl, below the logo and above the chair rail.
+    const pictureX = Math.round(boatAt + 28);
+    const picture = boatOnRight && pictureX + 40 <= w ? { x: pictureX, y: waterY - 30 - 28 } : null;
+    this.room = {
+      waterY,
+      win,
+      wall: art.thanksgivingRoom({ w, h: waterY + 8, waterY, win, picture, keepClear }),
+      view: win ? art.windowView(win.w - 6, win.h - 6) : null,
+    };
+  }
+
+  drawRoom(ctx, yS) {
+    const { P } = this;
+    const { wall, view, win, waterY } = this.room;
+    const top = Math.round(yS - waterY * P);
+    if (view) {
+      const gx = (win.x + 3) * P;
+      const gy = top + (win.y + 3) * P;
+      const gw = view.width * P;
+      const gh = view.height * P;
+      ctx.drawImage(view, gx, gy, gw, gh);
+      // Leaves blowing past outside, drawn small because they're far away.
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(gx, gy, gw, gh);
+      ctx.clip();
+      const t = this.leafTime();
+      const scale = Math.max(1, Math.round(P / 2));
+      for (const leaf of this.windowLeaves) {
+        const y = gy + ((leaf.y + t * (0.07 + leaf.v * 0.08)) % 1) * (gh + 16 * scale) - 8 * scale;
+        const sway = Math.sin(t * (0.8 + leaf.sway) + leaf.ph) * (4 + leaf.sway * 6) * scale;
+        const x = gx + ((((leaf.x * gw + t * 9 * scale + sway) % gw) + gw) % gw);
+        this.drawLeaf(ctx, leaf, x, y, { spin: t * (1.4 + leaf.v * 2) + leaf.ph, tilt: Math.sin(t * 1.1 + leaf.ph) * 0.35, scale });
+      }
+      ctx.restore();
+    }
+    ctx.drawImage(wall, 0, top, wall.width * P, wall.height * P);
+  }
+
+  // Shine on the tank's front glass, brightest at the rim and gone a little way under the surface.
+  drawGlass(ctx, yS) {
+    const { W, P } = this;
+    const top = yS - 11 * P;
+    const rows = 80;
+    for (const [at, width, strength] of [[0.03, 4, 0.28], [0.03, -3, 0.2], [0.9, 2, 0.16]]) {
+      const base = Math.round((W * at) / P) * P + (width < 0 ? 7 * P : 0);
+      for (let r = 0; r < rows; r += 1) {
+        ctx.fillStyle = `rgba(255,255,255,${(strength * (1 - r / rows)).toFixed(3)})`;
+        ctx.fillRect(base + Math.floor((rows - r) / 2) * P, top + r * P, Math.abs(width) * P, P);
+      }
+    }
   }
 
   drawBoat(ctx) {
@@ -830,7 +905,7 @@ export class World {
     const { W, dpr } = this;
     const maxWidth = Math.min(W * 0.62, 340 * dpr);
     ctx.font = `${Math.round(11 * dpr)}px Silkscreen, monospace`;
-    this.captionLayout = CAPTIONS.map((caption) => {
+    this.captionLayout = this.captions.map((caption) => {
       const words = caption.text.split(' ');
       const lines = [];
       let line = '';
@@ -861,7 +936,7 @@ export class World {
       const y = this.m2y(caption.m);
       if (y < -60 * dpr || y > H + 60 * dpr) return;
       if (tierLines.some((m) => Math.abs(m - caption.m) < 16)) return;
-      const onLeft = i % 2 === 0;
+      const onLeft = caption.side ? caption.side === 'left' : i % 2 === 0;
       const margin = Math.max(W * 0.05, this.wallWidth(caption.m, 0, 3) + 14 * dpr);
       ctx.globalAlpha = this.rulerAlpha * (caption.big ? 0.92 : 0.72);
       ctx.fillStyle = caption.big ? '#fff1d0' : '#d5ebf4';
@@ -1038,9 +1113,9 @@ export class World {
 
   // Leaves -------------------------------------------------------------------------------
   // Leaves tumble by flipping between full, half and mirrored widths, which keeps the pixels crisp.
-  drawLeaf(ctx, leaf, x, y, { spin = 0, tilt = 0, alpha = 1 } = {}) {
+  drawLeaf(ctx, leaf, x, y, { spin = 0, tilt = 0, alpha = 1, scale = this.P } = {}) {
     const sprite = this.leafSprites[leaf.sprite];
-    const { P } = this;
+    const P = scale;
     const c = Math.cos(spin);
     const flip = this.reduced ? 1 : c > 0.5 ? 1 : c > 0 ? 0.5 : c > -0.5 ? -0.5 : -1;
     ctx.save();
@@ -1054,20 +1129,6 @@ export class World {
 
   leafTime() {
     return this.reduced ? this.time * 0.15 : this.time;
-  }
-
-  // Leaves drifting down the sky on a light breeze, vanishing into the waves.
-  drawSkyLeaves(ctx, yS) {
-    const { W, P } = this;
-    const t = this.leafTime();
-    const span = yS + 30 * P;
-    for (const leaf of this.skyLeaves) {
-      const fall = 0.045 + leaf.v * 0.06;
-      const y = ((leaf.y + t * fall) % 1) * span - 20 * P;
-      const sway = Math.sin(t * (0.7 + leaf.sway) + leaf.ph) * (8 + leaf.sway * 16) * P;
-      const x = (((leaf.x * W + t * 10 * P + sway) % W) + W) % W;
-      this.drawLeaf(ctx, leaf, x, y, { spin: t * (1.4 + leaf.v * 2) + leaf.ph, tilt: Math.sin(t * 1.1 + leaf.ph) * 0.35 });
-    }
   }
 
   // A few leaves riding the swell before they sink.
