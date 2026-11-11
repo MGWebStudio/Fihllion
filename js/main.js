@@ -349,7 +349,12 @@ function showPromptPhoto() {
   el.promptPhoto.hidden = !photo;
   el.promptCredit.hidden = !photo;
   if (photo) {
-    const img = el.promptPhoto.querySelector('img');
+    let img = el.promptPhoto.querySelector('img');
+    if (!img) {
+      img = document.createElement('img');
+      img.referrerPolicy = 'no-referrer';
+      el.promptPhoto.append(img);
+    }
     img.src = photo.img;
     img.alt = photo.name;
     el.promptCredit.innerHTML = `Photo: <a href="${esc(photo.page)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>`;
