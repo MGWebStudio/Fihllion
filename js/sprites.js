@@ -555,15 +555,21 @@ export function leaves() {
   return LEAF_SHAPES.flatMap((rows) => LEAF_COLOURS.map(([L, D]) => paint(rows, { L, D })));
 }
 
-export const HAT_AT = { x: 19, y: 0 }; // where the hat sits on the GOLDFISH grid
+// Where the hat sits on the GOLDFISH grid: the brim rests on the top of the head, and the
+// crown hides the front of the dorsal fin, so the fin pokes out behind it.
+export const HAT_AT = { x: 17, y: -3 };
+// A tapered crown with a square buckle centred on its band.
 export function pilgrimHat() {
   return paint([
-    '...KKKKKK..',
-    '...KkkkhK..',
-    '...KkkkhK..',
-    '...KbbYbK..',
+    '...KKKKK...',
+    '...KhkkK...',
+    '..KhkkkkK..',
+    '..KhkkkkK..',
+    '..KBYYYBK..',
+    '..KBYByBK..',
+    '..KByyyBK..',
     'KKKKKKKKKKK',
-  ], { K: '#141217', k: '#2e2b33', h: '#4d4955', b: '#4b3622', Y: '#f2c14e' });
+  ], { K: '#141217', k: '#34313a', h: '#56525e', B: '#0e0d11', Y: '#f2c14e', y: '#b8862a' });
 }
 
 function stamp(ctx, rows, palette, left, top) {
@@ -993,8 +999,8 @@ export function thanksgivingRoom({ w, h, waterY, boatAt, boatOnRight, text }) {
     fill(ROOM.brassDark, x + 2, y + 2, 34, 24);
     fill('#2f4a36', x + 3, y + 3, 32, 22);
     fill('#3b5a42', x + 3, y + 3, 32, 8);
-    stamp(ctx, GOLDFISH, FISH, x + 4, y + 5);
-    ctx.drawImage(pilgrimHat(), x + 4 + HAT_AT.x, y + 5 + HAT_AT.y);
+    stamp(ctx, GOLDFISH, FISH, x + 4, y + 6);
+    ctx.drawImage(pilgrimHat(), x + 4 + HAT_AT.x, y + 6 + HAT_AT.y);
     fill('rgba(30,36,18,.25)', x + 1, y + 28, 38, 1);
   }
 
