@@ -649,30 +649,65 @@ export class World {
     ctx.globalAlpha = 1;
   }
 
-  // Lays out the Thanksgiving dining room for this screen: the window goes on the side away
-  // from the boat, and on wide screens a portrait hangs beside the bowl.
+  // Paints the Thanksgiving dining room for this screen. The title text is passed in room
+  // pixels so the dinner table, window and portrait can be laid out around it.
   buildRoom() {
-    const { W, H, P } = this;
+    const { W, H, P, dpr } = this;
     const w = Math.ceil(W / P);
     const waterY = Math.ceil((TITLE_SURFACE * H) / P);
-    const boatAt = this.boatX / P;
-    const keepClear = [boatAt - art.BOAT.w / 2 - 2, boatAt + art.BOAT.w / 2 + 2];
-    const boatOnRight = this.boatX > W * 0.6;
-    let ww = clamp(Math.round(w * 0.16), 40, 64);
-    const wh = Math.min(Math.round(ww * 1.3), waterY - 56);
-    ww = Math.min(ww, Math.round(wh / 1.3));
-    const win = wh >= 30
-      ? { x: Math.round(w * (boatOnRight ? 0.14 : 0.82) - ww / 2), y: waterY - 32 - wh, w: ww, h: wh }
-      : null;
-    // The portrait hangs just right of the bowl, below the logo and above the chair rail.
-    const pictureX = Math.round(boatAt + 28);
-    const picture = boatOnRight && pictureX + 40 <= w ? { x: pictureX, y: waterY - 30 - 28 } : null;
+    const text = this.titleText
+      ? this.titleText.map((box) => ({
+        c0: Math.floor((box.left * dpr) / P) - 2,
+        c1: Math.ceil((box.right * dpr) / P) + 2,
+        row: Math.ceil((box.bottom * dpr) / P) + 1,
+      }))
+      : [{ c0: 0, c1: w, row: Math.round(waterY * 0.55) }];
+    const { canvas, candles, win } = art.thanksgivingRoom({
+      w, h: waterY + 8, waterY, boatAt: this.boatX / P, boatOnRight: this.boatX > W * 0.6, text,
+    });
     this.room = {
       waterY,
       win,
-      wall: art.thanksgivingRoom({ w, h: waterY + 8, waterY, win, picture, keepClear }),
+      candles,
+      wall: canvas,
       view: win ? art.windowView(win.w - 6, win.h - 6) : null,
     };
+  }
+
+  // The title screen reports where its lines of text sit (CSS pixels: left, right, bottom).
+  setTitleText(boxes) {
+    const rounded = boxes.map(({ left, right, bottom }) => ({ left: Math.round(left), right: Math.round(right), bottom: Math.round(bottom) }));
+    if (JSON.stringify(rounded) === JSON.stringify(this.titleText)) return;
+    this.titleText = rounded;
+    if (this.indoors) this.buildRoom();
+  }
+
+  // Candle flames flicker, each with a soft glow.
+  drawCandles(ctx, top) {
+    const { P } = this;
+    const t = this.reduced ? this.time * 0.2 : this.time;
+    this.room.candles.forEach(({ x, y }, i) => {
+      const f = noise(t * 9 + i * 7.3);
+      const fx = x * P;
+      const fy = top + y * P;
+      const r = (11 + f * 2) * P;
+      ctx.globalAlpha = 0.2 + f * 0.1;
+      ctx.drawImage(this.fishGlow, fx + P / 2 - r, fy - 2 * P - r, r * 2, r * 2);
+      ctx.globalAlpha = 1;
+      const lean = f > 0.62 ? P : f < 0.3 ? -P : 0;
+      ctx.fillStyle = '#ff9f2e';
+      ctx.fillRect(fx - P, fy, P * 3, P);
+      ctx.fillRect(fx, fy - P, P * 2, P);
+      ctx.fillStyle = '#ffd060';
+      ctx.fillRect(fx + lean, fy - 2 * P, P, P);
+      ctx.fillStyle = '#fff4c4';
+      ctx.fillRect(fx, fy, P, P);
+      ctx.fillRect(fx, fy - P, P, P);
+      if (f > 0.45) {
+        ctx.fillStyle = '#ffe9a0';
+        ctx.fillRect(fx + lean, fy - 3 * P, P, P);
+      }
+    });
   }
 
   drawRoom(ctx, yS) {
@@ -701,6 +736,7 @@ export class World {
       ctx.restore();
     }
     ctx.drawImage(wall, 0, top, wall.width * P, wall.height * P);
+    this.drawCandles(ctx, top);
   }
 
   // Shine on the tank's front glass, brightest at the rim and gone a little way under the surface.

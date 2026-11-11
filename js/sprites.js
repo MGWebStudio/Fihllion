@@ -585,7 +585,6 @@ const ROOM = {
   curtain: '#8e2a2a', curtainLight: '#ad3a32', curtainDark: '#5c191b',
   twine: '#6e5230', brass: '#d0a040', brassDark: '#8a6420',
 };
-const PUMPKIN = { O: '#ee8a26', d: '#c25f17', S: '#5d7a2b' };
 const rgbText = ([r, g, b]) => `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
 const blend = (a, b, t) => a.map((v, i) => v + (b[i] - v) * t);
 
@@ -631,10 +630,327 @@ export function windowView(w, h) {
   return canvas;
 }
 
-// Everything on the wall, painted once per screen size at sprite scale. `win` is the window's
-// outer frame; its glass is left clear so the view and its leaves can be drawn underneath.
-// Rows from waterY down sit behind the waves.
-export function thanksgivingRoom({ w, h, waterY, win, picture, keepClear }) {
+// Thanksgiving dinner -------------------------------------------------------------------
+
+// The roast turkey on its platter, drawn as ellipses so the dome comes out smooth.
+function roastTurkey() {
+  const w = 28;
+  const h = 15;
+  const base = h - 1;
+  const canvas = newCanvas(w, h);
+  const ctx = canvas.getContext('2d');
+  const fill = (color, x, y) => {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, 1, 1);
+  };
+  const inside = (x, y, cx, cy, rx, ry) => ((x + 0.5 - cx) / rx) ** 2 + ((y + 0.5 - cy) / ry) ** 2;
+  for (let y = base - 2; y <= base; y += 1) {
+    for (let x = 0; x < w; x += 1) {
+      if (inside(x, y, 14, base - 0.6, 14, 1.9) <= 1) fill(y === base ? '#a9b4b9' : '#e6ecee', x, y);
+    }
+  }
+  for (let y = 0; y <= base - 2; y += 1) {
+    for (let x = 0; x < w; x += 1) {
+      const d = inside(x, y, 14, base - 2, 10.5, 9);
+      if (d > 1) continue;
+      const t = (y - (base - 11)) / 9;
+      fill(d > 0.8 ? '#5a2a0e' : t < 0.3 ? '#e3a052' : t < 0.62 ? '#c87432' : '#a2541f', x, y);
+    }
+  }
+  for (const cx of [4.5, 23.5]) {
+    for (let y = 0; y < h; y += 1) {
+      for (let x = 0; x < w; x += 1) {
+        const d = inside(x, y, cx, base - 5.5, 2.7, 2.7);
+        if (d <= 1) fill(d > 0.6 ? '#5a2a0e' : '#c06c2c', x, y);
+      }
+    }
+    const out = cx < 14 ? -1 : 1;
+    const bx = Math.round(cx - 0.5);
+    fill('#f3e6c8', bx + out, base - 8);
+    fill('#f3e6c8', bx + out * 2, base - 9);
+    for (const [dx, dy] of [[2, -10], [3, -10], [2, -11], [3, -11], [4, -11], [3, -12]]) fill('#ffffff', bx + out * dx, base + dy);
+    fill('#dd9446', bx - 1, base - 6);
+  }
+  for (const [x, y] of [[9, 6], [10, 6], [11, 6], [8, 7], [9, 7]]) fill('#f6cf86', x, y);
+  for (const [x, y] of [[1, base - 1], [2, base - 2], [3, base - 1], [24, base - 1], [25, base - 2], [26, base - 1]]) fill('#4f8a2b', x, y);
+  return canvas;
+}
+
+const DISHES = {
+  pie: paint([
+    '...W...W...',
+    '.CcWcCcWcC.',
+    'CFFfFFFfFFC',
+    'CCCCCCCCCCC',
+    '.ttttttttt.',
+  ], { W: '#fff8ec', C: '#c98a3e', c: '#e2a95a', F: '#d9701e', f: '#ee8a32', t: '#9aa3a8' }),
+  potatoes: paint([
+    '..s....s..',
+    '...s..s...',
+    '....yy....',
+    '..MMyyMM..',
+    '.MMMMMmMM.',
+    'MmMMMMMMMm',
+    'BBBBBBBBBB',
+    '.BbBBBBbB.',
+    '..BBBBBB..',
+  ], { s: 'rgba(255,255,255,.5)', y: '#f7d64a', M: '#f4ecd6', m: '#d8ccb0', B: '#3d6fa8', b: '#2a4f7c' }),
+  cranberry: paint([
+    '.RRRRRR.',
+    '.rcRRRr.',
+    '.RRRRRR.',
+    '.rcRRRr.',
+    '.RRRRRR.',
+    'pppppppp',
+    '.qqqqqq.',
+  ], { R: '#b0202c', r: '#7a1020', c: '#d8505a', p: '#e6ecee', q: '#a9b4b9' }),
+  cider: paint([
+    '.yy.',
+    '.GG.',
+    '.GG.',
+    '.Gg.',
+    'GGgG',
+    'GGgG',
+    'LLLL',
+    'LllL',
+    'LLLL',
+    'GGgG',
+    'GGgG',
+    'GGGG',
+  ], { y: '#d0a040', G: '#2e5a2a', g: '#5f9a54', L: '#efe2c0', l: '#c8622a' }),
+  rolls: paint([
+    '..LlL.LlL..',
+    '.LLLLLLLLL.',
+    'WwWwWwWwWwW',
+    'wWwWwWwWwWw',
+    '.WwWwWwWwW.',
+    '..wwwwwww..',
+  ], { L: '#e6a95a', l: '#b87830', W: '#a8783a', w: '#7a5226' }),
+  beans: paint([
+    '..oOooOoOo..',
+    '.GgoGgOgGgo.',
+    'DDDDDDDDDDDD',
+    'DddddddddddD',
+    '.DDDDDDDDDD.',
+  ], { o: '#e0a050', O: '#b8762a', G: '#4f8a2b', g: '#356a1c', D: '#ece6d8', d: '#c9c0ae' }),
+  sweetPotato: paint([
+    '.WwW.WwW.WwW',
+    'OWWOOWWOOWWO',
+    'OOOOOOOOOOOO',
+    'RRRRRRRRRRRR',
+    '.RrrrrrrrrR.',
+  ], { W: '#fff6e4', w: '#d9a066', O: '#e8862e', R: '#a8432e', r: '#7c2e1e' }),
+  stuffing: paint([
+    '..sbsbbs..',
+    '.bsbBsbsb.',
+    'sbBsbbsBbs',
+    'YYYYYYYYYY',
+    '.YyyyyyyY.',
+    '..YYYYYY..',
+  ], { s: '#7a5a30', b: '#a8783e', B: '#5d7a2b', Y: '#e8c23a', y: '#b8922a' }),
+  pecanPie: paint([
+    '.CcCcCcCcC.',
+    'CPpPpPpPpPC',
+    'CPPPPPPPPPC',
+    'CCCCCCCCCCC',
+    '.ttttttttt.',
+  ], { C: '#c98a3e', c: '#e2a95a', P: '#5a2a12', p: '#8a4a22', t: '#9aa3a8' }),
+  corn: paint([
+    '..gYYYYYYg..',
+    '.gYyYyYyYyg.',
+    'ggYYYYYYYYgg',
+    'pppppppppppp',
+    '.qqqqqqqqqq.',
+  ], { Y: '#f2c84a', y: '#d8a52c', g: '#7aa043', p: '#e6ecee', q: '#a9b4b9' }),
+};
+
+// A plate and a glass of cider, for the gaps between dishes.
+const placeSetting = () => paint([
+  '.........gaag',
+  '.........gaag',
+  '.........gAAg',
+  '..........gg.',
+  '..nnnn....gg.',
+  'PPPPPPPP.gggg',
+  '.pppppp......',
+], { g: '#cfe7ea', a: '#e0962c', A: '#c47a1c', n: '#c8622a', P: '#f6f3ea', p: '#c9c4b4' });
+
+// A taper in a brass holder. Its flame is drawn live, just above the wick.
+const candle = () => Object.assign(paint([
+  '.k..',
+  ...Array(9).fill('.Cc.'),
+  '.bb.',
+  '.Bb.',
+  '.BB.',
+  'bBBb',
+  'BBBB',
+], { k: '#3a2a1a', C: '#f6ecd2', c: '#d9cba6', B: '#d0a040', b: '#8a6420' }), { isCandle: true });
+
+const chair = () => paint([
+  '.KK......KK.',
+  'KTTKKKKKKTTK',
+  'KTTTTTTTTTTK',
+  'KTttttttttTK',
+  'KKKKKKKKKKKK',
+  ...Array(12).fill('KTK.K..K.KTK'),
+  'KKKKKKKKKKKK',
+  ...Array(5).fill('KTK......KTK'),
+], { K: '#3e2414', T: '#8a5530', t: '#6a3e20' });
+
+const GARLAND_ROWS = 22; // the garland hangs this far below the ceiling
+const FLAME_ROWS = 4;
+const DISH_GAP = 3;
+const rowWidth = (row) => row.reduce((sum, img) => sum + img.width, 0) + DISH_GAP * Math.max(0, row.length - 1);
+// How far down the lowest of `boxes` reaches over columns c0..c1 (boxes are { c0, c1, row }).
+const reach = (boxes, c0, c1) => boxes.reduce((row, b) => (b.c1 < c0 || b.c0 > c1 ? row : Math.max(row, b.row)), -Infinity);
+
+// The run of columns at least `width` wide where every cap is at least `height`, nearest the
+// middle of the room.
+function findRun(caps, w, height, width) {
+  let best = null;
+  const offCentre = (run) => Math.abs((run.l + run.r) / 2 - w / 2);
+  for (let c = 0, start = null; c <= w; c += 1) {
+    if (c < w && caps[c] !== null && caps[c] >= height) {
+      if (start === null) start = c;
+    } else if (start !== null) {
+      const run = { l: start, r: c - 1 };
+      if (run.r - run.l + 1 >= width && (!best || offCentre(run) < offCentre(best))) best = run;
+      start = null;
+    }
+  }
+  return best;
+}
+
+// Decides where the dinner table, window and portrait go. The table rises as high as it can
+// (30 rows above the water) while its widest gap still fits the turkey and its candles under
+// whatever is above: the title text, the window or the portrait. `text` lists the title's
+// lines as { c0, c1, row } in room pixels.
+function planRoom({ w, waterY, boatAt, boatOnRight, text }) {
+  const turkey = roastTurkey();
+  const turkeyRow = turkey.width + 2 * candle().width + 2 * DISH_GAP;
+  const ww0 = Math.min(64, Math.max(36, Math.round(w * 0.16)));
+  const winCentre = w * (boatOnRight ? 0.14 : 0.82);
+  let plan = null;
+  const textBottom = reach(text, 0, w);
+  for (let rise = Math.max(15, Math.min(30, waterY - textBottom - 3)); rise >= 15; rise -= 1) {
+    const top = waterY - rise;
+    const base = top + 1; // the row dishes stand on
+    let win = null;
+    for (const gap of [20, 4]) {
+      const bottom = top - gap;
+      const ceiling = Math.max(GARLAND_ROWS, reach(text, winCentre - ww0 / 2 - 11, winCentre + ww0 / 2 + 11) + 7); // room for the curtain rod
+      const wh = Math.min(Math.round(ww0 * 1.2), bottom - ceiling);
+      if (wh < 30) continue;
+      const ww = Math.min(ww0, Math.round(wh / 1.2));
+      win = { x: Math.round(winCentre - ww / 2), y: bottom - wh, w: ww, h: wh };
+      break;
+    }
+    const px = Math.round(boatOnRight ? boatAt + 28 : (boatAt - BOAT.bowl.r - 2) / 2 - 19);
+    const py = top - 22 - 28;
+    const picture = px >= 2 && px + 40 <= w && py - 8 >= Math.max(GARLAND_ROWS, reach(text, px, px + 38) + 1)
+      ? { x: px, y: py } : null;
+    // Down low the boat's own turkey and pumpkins would hide dishes, so the whole boat stays clear.
+    const half = rise < 24 ? BOAT.w / 2 + 2 : BOAT.bowl.r + 2;
+    const boatSpan = [Math.round(boatAt - half), Math.round(boatAt + half)];
+    const above = [...text];
+    if (win) above.push({ c0: win.x - 11, c1: win.x + win.w + 11, row: win.y + win.h + 3 });
+    if (picture) above.push({ c0: picture.x, c1: picture.x + 38, row: picture.y + 28 });
+    // How tall a dish can stand in each column (null behind the boat).
+    const caps = Array.from({ length: w }, (_, c) => (
+      c < 1 || c > w - 2 || (c >= boatSpan[0] && c <= boatSpan[1]) ? null : base - reach(above, c, c)));
+    // The turkey and its candles go in the run of columns tall enough for a candle flame that's
+    // nearest the middle of the screen. At the lowest table height the turkey can go alone.
+    let main = findRun(caps, w, candle().height + FLAME_ROWS, turkeyRow);
+    if (main) main.candles = true;
+    else if (rise === 15) main = findRun(caps, w, turkey.height, turkey.width);
+    if (main) main.maxH = Math.min(...caps.slice(main.l, main.r + 1));
+    // Everywhere else, runs of columns with the same headroom.
+    const segments = [];
+    caps.forEach((maxH, c) => {
+      if (maxH === null || (main && c >= main.l && c <= main.r)) return;
+      const last = segments[segments.length - 1];
+      if (last && last.r === c - 1 && last.maxH === maxH) last.r = c;
+      else segments.push({ l: c, r: c, maxH });
+    });
+    plan = { top, base, win, picture, boatSpan, above, segments, main };
+    if (main) break;
+  }
+  return plan;
+}
+
+// The dinner table runs the width of the room behind the tank. Chairs stand behind it wherever
+// they'd show; dishes fill each gap, as tall as that gap allows. Returns where each flame goes.
+function dinnerTable(ctx, { w, rimTop, plan }) {
+  const { top, base, boatSpan, above, segments, main } = plan;
+  const fill = (color, x, y, cw = 1, ch = 1) => {
+    if (cw <= 0 || ch <= 0) return;
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, cw, ch);
+  };
+
+  const seat = chair();
+  for (let x = 6; x + seat.width < w; x += 46) {
+    const chairTop = top - seat.height + 3;
+    if (x + seat.width > boatSpan[0] && x < boatSpan[1]) continue;
+    if (chairTop <= reach(above, x, x + seat.width) + 1) continue;
+    ctx.drawImage(seat, x, chairTop);
+  }
+
+  // Tablecloth: the top, its front edge, folds, and a plaid band near the hem when it shows.
+  fill('#f7f0de', 0, top, w, 1);
+  fill('#efe5cc', 0, top + 1, w, 1);
+  fill('#e6d9bc', 0, top + 2, w, 1);
+  fill('#cdbd98', 0, top + 3, w, 1);
+  const drop = rimTop - top - 4;
+  fill('#f1e7cf', 0, top + 4, w, drop);
+  for (let x = 3; x < w; x += 7) {
+    fill('#dccdab', x, top + 4, 1, drop);
+    fill('#fbf5e6', x + 1, top + 4, 1, drop);
+  }
+  if (drop >= 8) {
+    fill('#e8c23a', 0, rimTop - 6, w, 1);
+    for (let x = 0; x < w; x += 4) {
+      fill('#c8622a', x, rimTop - 5, 2, 2);
+      fill('#a24a1c', x + 2, rimTop - 5, 2, 2);
+    }
+  }
+
+  const queue = ['pie', 'potatoes', 'cranberry', 'sweetPotato', 'cider', 'rolls', 'stuffing', 'beans', 'pecanPie', 'corn']
+    .map((name) => DISHES[name]);
+  const setting = placeSetting();
+  const candles = [];
+  const ordered = [main, ...segments.filter((seg) => seg !== main).sort((a, b) => b.r - b.l - (a.r - a.l))].filter(Boolean);
+  for (const seg of ordered) {
+    const room = seg.r - seg.l + 1;
+    const fits = (img) => img.height + (img.isCandle ? FLAME_ROWS : 0) <= seg.maxH;
+    let row = [];
+    if (seg === main) row = main.candles ? [candle(), roastTurkey(), candle()] : [roastTurkey()];
+    let right = true;
+    const add = (img) => {
+      row = right ? [...row, img] : [img, ...row];
+      right = !right;
+    };
+    for (let k = 0; k < queue.length;) {
+      if (fits(queue[k]) && rowWidth([...row, queue[k]]) <= room) add(queue.splice(k, 1)[0]);
+      else k += 1;
+    }
+    while (fits(setting) && rowWidth([...row, setting]) <= room) add(setting);
+    let x = Math.round(seg.l + (room - rowWidth(row)) / 2);
+    for (const img of row) {
+      ctx.drawImage(img, x, base - img.height + 1);
+      if (img.isCandle) candles.push({ x: x + 1, y: base - img.height });
+      x += img.width + DISH_GAP;
+    }
+  }
+  return candles;
+}
+
+// Everything above the water, painted once per screen size at sprite scale. The window's glass
+// is left clear so the view and its leaves can be drawn underneath. Rows from waterY down sit
+// behind the waves.
+export function thanksgivingRoom({ w, h, waterY, boatAt, boatOnRight, text }) {
+  const plan = planRoom({ w, waterY, boatAt, boatOnRight, text });
+  const { win, picture } = plan;
   const canvas = newCanvas(w, h);
   const ctx = canvas.getContext('2d');
   const fill = (color, x, y, cw = 1, ch = 1) => {
@@ -698,19 +1014,10 @@ export function thanksgivingRoom({ w, h, waterY, win, picture, keepClear }) {
     fill(ROOM.trim, midX, y + 3, 2, wh - 6);
     fill(ROOM.trim, x + 3, midY, ww - 6, 2);
     fill(ROOM.trimShade, midX + 1, y + 3, 1, wh - 6);
-    // Sill, with a pumpkin pie cooling on it.
+    // Sill.
     fill(ROOM.trim, x - 3, y + wh, ww + 6, 2);
     fill(ROOM.trimShade, x - 3, y + wh + 2, ww + 6, 1);
     fill('rgba(30,36,18,.25)', x - 2, y + wh + 3, ww + 4, 1);
-    stamp(ctx, [
-      '..s....s...',
-      '...s....s..',
-      '..s....s...',
-      '.CcCcCcCcC.',
-      'CFFFfFFFfFC',
-      'CCCCCCCCCCC',
-      '.ttttttttt.',
-    ], { s: 'rgba(255,255,255,.55)', C: '#c98a3e', c: '#e2a95a', F: '#d9701e', f: '#ee8a32', t: '#9aa3a8' }, x + ww - 15, y + wh - 7);
     // Curtains gathered with brass ties, hanging from a rod.
     const rodY = y - 4;
     fill(ROOM.brassDark, x - 9, rodY, ww + 18, 2);
@@ -757,18 +1064,7 @@ export function thanksgivingRoom({ w, h, waterY, win, picture, keepClear }) {
     stamp(ctx, ['R.R', '.R.', 'R.R'], { R: ROOM.curtainLight }, x0 - 1, 4);
   }
 
-  // Painted panelling under a chair rail, behind the tank.
-  const railY = waterY - 25;
-  fill(rgbText(ROOM.panel), 0, railY, w, rimTop - railY);
-  for (let x = 3; x < w; x += 20) {
-    fill('rgba(255,250,224,.16)', x, railY + 5, 15, 1);
-    fill('rgba(255,250,224,.16)', x, railY + 5, 1, rimTop - railY - 7);
-    fill('rgba(30,36,18,.22)', x + 1, rimTop - 3, 15, 1);
-    fill('rgba(30,36,18,.22)', x + 15, railY + 6, 1, rimTop - railY - 9);
-  }
-  fill(ROOM.trim, 0, railY, w, 2);
-  fill(ROOM.trimShade, 0, railY + 2, w, 1);
-  fill('rgba(30,36,18,.25)', 0, railY + 3, w, 1);
+  const candles = dinnerTable(ctx, { w, rimTop, plan });
 
   // The back rim of the tank, with the wall showing through the glass below it.
   fill(ROOM.woodLight, 0, rimTop, w, 1);
@@ -777,21 +1073,7 @@ export function thanksgivingRoom({ w, h, waterY, win, picture, keepClear }) {
   fill('rgba(127,231,220,.22)', 0, rimTop + 4, w, h - rimTop - 4);
   fill('rgba(240,255,250,.5)', 0, rimTop + 4, w, 1);
 
-  // Things set down on the rim, kept clear of the boat.
-  const clear = (left, right) => !keepClear || right < keepClear[0] || left > keepClear[1];
-  const leftX = Math.round(w * 0.05);
-  if (clear(leftX, leftX + 22)) {
-    stamp(ctx, ['....S....', '..OOSOO..', '.OdOOOdO.', 'OdOOdOOdO', 'OdOOdOOdO', '.OdOOOdO.', '..OOOOO..'], PUMPKIN, leftX, rimTop - 7);
-    stamp(ctx, ['..S..', '.WWWW.', 'WwWWwW', 'WwWWwW', '.WWWW.'], { W: '#efe6d2', w: '#cfc2a4', S: '#5d7a2b' }, leftX + 10, rimTop - 5);
-    stamp(ctx, ['.G..', 'YG..', 'Y...', 'YY..', 'YYY.', 'YYYY', '.YY.'], { Y: '#e8c23a', G: '#5d7a2b' }, leftX + 18, rimTop - 7);
-  }
-  const rightX = Math.round(w * 0.95) - 15;
-  if (clear(rightX, rightX + 15)) {
-    stamp(ctx, ['RRRRRR', 'RrrrrR', 'TTTTTT', 'TWWWWT', 'TWOOWT', 'TWWWWT', 'TTTTTT', 'TTTTTT'],
-      { R: '#c7352b', r: '#e45a48', T: '#e8dcc0', W: '#ffffff', O: '#ff8c1a' }, rightX, rimTop - 8);
-    stamp(ctx, ['..S...', '.OOOO.', 'OdOOdO', 'OdOOdO', '.OOOO.'], PUMPKIN, rightX + 8, rimTop - 5);
-  }
-  return canvas;
+  return { canvas, candles, win };
 }
 
 // A turkey on the stern and two pumpkins on the bow, painted onto the boat's front layer.

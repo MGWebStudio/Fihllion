@@ -995,6 +995,7 @@ function wire() {
     const chart = $('resChart');
     if (chart && G.resultsDive && document.body.dataset.screen === 'results') renderChart(chart, G.resultsDive);
   });
+  document.fonts?.ready.then(() => fitTitleLogo());
   window.visualViewport?.addEventListener('resize', syncViewport);
   window.visualViewport?.addEventListener('scroll', syncViewport);
   el.answer.addEventListener('focus', () => window.scrollTo(0, 0));
@@ -1013,10 +1014,19 @@ function fitTitleLogo() {
   sky.classList.remove('is-compact');
   tagline.hidden = false;
   fitLogo(el.logo, Math.min(innerWidth - 32, 620), innerHeight * 0.24);
-  if (!clashes()) return;
-  sky.classList.add('is-compact');
-  fitLogo(el.logo, Math.min(innerWidth - 120, 620), innerHeight * 0.2);
-  if (clashes()) tagline.hidden = true;
+  if (clashes()) {
+    sky.classList.add('is-compact');
+    fitLogo(el.logo, Math.min(innerWidth - 120, 620), innerHeight * 0.2);
+    if (clashes()) tagline.hidden = true;
+  }
+  // The Thanksgiving dinner table is laid out around the text, line by line.
+  const boxes = [...sky.children].filter((node) => !node.hidden).flatMap((node) => {
+    if (node.tagName !== 'P') return [node.getBoundingClientRect()];
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    return [...range.getClientRects()].filter((rect) => rect.width > 0);
+  });
+  world.setTitleText(boxes);
 }
 
 async function boot() {
