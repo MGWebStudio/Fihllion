@@ -419,10 +419,11 @@ export function boat() {
   fc.fillStyle = 'rgba(255,255,255,.75)';
   [[34, 14], [33, 15], [32, 16], [31, 18], [30, 20], [30, 21], [29, 23], [29, 24], [29, 26]].forEach(([x, y]) => fc.fillRect(x, y, 2, 1));
 
-  // Gravel and the plastic castle.
+  // Gravel and the plastic castle. The gravel runs all the way down to the glass, so no water
+  // shows between it and the boat.
   const gravel = ['#d9b46a', '#b98d4c', '#e8cf95', '#a7773d'];
   for (let x = bowl.x - 15; x < bowl.x + 15; x += 1) {
-    for (let y = 44; y < 48; y += 1) {
+    for (let y = 44; y <= bowl.y + bowl.r; y += 1) {
       if (!inCircle(x, y, bowl.x, bowl.y, bowl.r - 1.6)) continue;
       bc.fillStyle = gravel[(x * 7 + y * 3) % gravel.length];
       bc.fillRect(x, y, 1, 1);
