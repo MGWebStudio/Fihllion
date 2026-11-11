@@ -1,10 +1,10 @@
 ? Name a constellation
-10: Orion, Big Dipper, Ursa Major, Little Dipper, Ursa Minor
+10: Orion|Orionis, Big Dipper, Ursa Major, Little Dipper, Ursa Minor
 15: Southern Cross|Crux
-30: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpius|Scorpio, Sagittarius, Capricornus|Capricorn, Aquarius, Pisces, Cassiopeia, Andromeda, Perseus, Pegasus, Hercules, Cygnus, Draco, Lyra
+30: Aries, Taurus, Gemini, Cancer, Leo|Leonis, Virgo, Libra, Scorpius|Scorpio, Sagittarius, Capricornus|Capricorn|Capri, Aquarius, Pisces, Cassiopeia, Andromeda, Perseus, Pegasus, Hercules, Cygnus, Draco|Draconis, Lyra
 60: Aquila, Boötes|Bootes, Canis Major, Canis Minor, Auriga, Cepheus, Corona Borealis, Delphinus, Hydra, Lupus, Ophiuchus, Phoenix, Centaurus, Cetus, Eridanus, Corvus, Crater, Lepus, Serpens
-85: Antlia, Apus, Ara, Caelum, Camelopardalis, Canes Venatici, Carina, Chamaeleon, Circinus, Columba, Coma Berenices, Corona Australis, Dorado, Equuleus, Fornax, Grus, Horologium, Hydrus, Indus, Lacerta, Leo Minor, Lynx, Mensa, Microscopium, Monoceros, Musca, Norma, Octans, Pavo, Pictor, Puppis, Pyxis, Reticulum, Sagitta, Sculptor, Scutum, Sextans, Telescopium, Triangulum, Triangulum Australe, Tucana, Vela, Volans, Vulpecula
-100: Piscis Austrinus :: The Southern Fish. The goldfish has been telling everyone it's named after them.
+85: Antlia|Antlia Pneumatica, Apus, Ara, Caelum, Camelopardalis, Canes Venatici, Carina, Chamaeleon|Chamaeleontis, Circinus, Columba|Columba Noæ|Columba Noachi, Coma Berenices, Corona Australis|Corona Austrina, Dorado, Equuleus, Fornax, Grus, Horologium, Hydrus, Indus, Lacerta, Leo Minor, Lynx, Mensa, Microscopium, Monoceros, Musca, Norma, Octans, Pavo|Pavonis, Pictor, Puppis, Pyxis, Reticulum, Sagitta, Sculptor, Scutum|Scutum Sobiescanum, Sextans, Telescopium, Triangulum, Triangulum Australe, Tucana, Vela, Volans|Piscis Volans, Vulpecula|Vulpecula cum Ansere
+100: Piscis Austrinus|Piscis Notius|Piscis Australis :: The Southern Fish. The goldfish has been telling everyone it's named after them.
 
 ? Name a gemstone
 ~drop stone,gem
@@ -17,12 +17,12 @@
 
 ? Name a spacecraft
 ~drop the,spacecraft
-10: Apollo 11|Apollo, Hubble|Hubble Space Telescope, International Space Station|ISS|Space Station, Voyager|Voyager 1|Voyager 2, Space Shuttle|Shuttle
-15: Millennium Falcon, USS Enterprise|Enterprise
-30: Challenger, Columbia, Discovery, Atlantis, Endeavour|Endeavor, Sputnik, Curiosity, Perseverance, James Webb|James Webb Space Telescope|Webb|JWST, Apollo 13, Falcon 9|Falcon, Crew Dragon|Dragon, Mir, Skylab, Starship, New Horizons, Cassini, Saturn V, Eagle, Opportunity, Spirit, Viking, Pioneer
-60: Gemini, Mercury, Vostok, Soyuz, Juno, Galileo, Ingenuity, Sojourner, Pathfinder, Artemis, Orion, New Shepard|Blue Origin, Luna, Sputnik 2, Freedom 7, Friendship 7, Rosetta, Philae, Parker Solar Probe|Parker, Kepler, Chandrayaan, Chang'e, Tiangong, SpaceShipOne, Spitzer, Buran, Odyssey, Dawn, Deep Impact, Messenger, DART, Lucy, Psyche, InSight, Mariner, Phoenix, Stardust, OSIRIS-REx|Osiris Rex
-85: Venera, Vega, Zond, Salyut, Giotto, Hayabusa, Akatsuki, Ranger, Surveyor, Lunokhod, Explorer 1, Vanguard, Telstar, Landsat, Magellan, Huygens, Maven, Mangalyaan, Tianwen, Zhurong, Yutu, Hakuto, Vikram, Kvant, Aryabhata, Genesis, Gaia, Planck, Herschel, Chandra, Compton, Spektr-R, Kosmos, Polyot, Liberty Bell 7
-100: Beresheet :: Israel's moon lander crashed in 2019 carrying thousands of dormant tardigrades. They may still be there.
+10: Apollo 11|Apollo, Hubble|Hubble Space Telescope|Large Space Telescope, International Space Station|ISS|Space Station, Voyager|Voyager 1|Voyager 2, Space Shuttle|Shuttle
+15: Millennium Falcon, USS Enterprise|Enterprise|Space Shuttle Enterprise
+30: Challenger|Space Shuttle Challenger, Columbia|Space Shuttle Columbia, Discovery|Space Shuttle Discovery|Discovery Space Shuttle, Atlantis|Space Shuttle Atlantis, Endeavour|Endeavor|Space Shuttle Endeavour, Sputnik, Curiosity|Curiosity rover, Perseverance|Perseverance rover|Mars rover Perseverance, James Webb|James Webb Space Telescope|Webb|JWST|Webb Telescope|Webb Space Telescope, Apollo 13, Falcon 9|Falcon|Falcon 9 rocket|Falcon 9 booster, Crew Dragon|Dragon|Cargo Dragon|SpaceX Dragon, Mir|Mir space station, Skylab, Starship, New Horizons, Cassini|Cassini probe|Cassini Orbiter, Saturn V, Eagle|Lunar Module Eagle, Opportunity|Opportunity rover|Mars Exploration Rover Opportunity, Spirit|Spirit rover|Mars Exploration Rover Spirit, Viking, Pioneer
+60: Gemini|Gemini capsule, Mercury, Vostok, Soyuz, Juno, Galileo|Galileo orbiter, Ingenuity|NASA - Ingenuity|Mars Helicopter Ingenuity, Sojourner, Pathfinder, Artemis, Orion, New Shepard|Blue Origin|Blue Origin New Shepard, Luna, Sputnik 2|Prosteyshiy Sputnik 2, Freedom 7, Friendship 7, Rosetta|Rosetta space probe, Philae, Parker Solar Probe|Parker|NASA Solar Probe|Solar Probe Plus, Kepler, Chandrayaan, Chang'e, Tiangong|Tiangong space station, SpaceShipOne, Spitzer, Buran|Space Shuttle Buran, Odyssey, Dawn, Deep Impact|Deep Impact Flyby, Messenger, DART, Lucy, Psyche, InSight|InSight Lander, Mariner, Phoenix|Phoenix lander|Phoenix Mars Lander|Phoenix Mars Mission, Stardust, OSIRIS-REx|Osiris Rex
+85: Venera, Vega, Zond, Salyut, Giotto, Hayabusa, Akatsuki, Ranger, Surveyor, Lunokhod|Lunokhod programme, Explorer 1, Vanguard, Telstar, Landsat, Magellan|Magellan orbiter, Huygens|Huygens probe, Maven, Mangalyaan, Tianwen, Zhurong|Zhurong rover, Yutu, Hakuto, Vikram, Kvant, Aryabhata, Genesis, Gaia, Planck, Herschel|Herschel Space Observatory, Chandra, Compton, Spektr-R, Kosmos, Polyot, Liberty Bell 7
+100: Beresheet|Beresheet Moon Probe :: Israel's moon lander crashed in 2019 carrying thousands of dormant tardigrades. They may still be there.
 
 ? Name a famous astronaut
 ~last

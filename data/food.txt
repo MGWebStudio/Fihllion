@@ -1,28 +1,28 @@
 ? Name a spice or herb
 ~drop spice,herb,seed,seeds,powder,ground
-10: Pepper|Black pepper, Cinnamon, Basil, Paprika, Oregano
-15: Saffron, Turmeric
-30: Cumin, Thyme, Rosemary, Parsley, Mint, Nutmeg, Ginger, Cilantro|Coriander, Dill, Sage, Chili, Cayenne, Clove, Bay leaf|Bay, Curry, Mustard, Vanilla, Chives, Garlic, Onion, Salt
-60: Cardamom, Allspice, Star anise, Tarragon, Marjoram, Anise|Aniseed, Fennel, Sumac, Lemongrass, Caraway, Mace, Fenugreek, Juniper|Juniper berries, Garam masala, Za'atar|Zaatar, Savory, Chervil, Poppy, Sesame, Lavender, Five spice|Chinese five spice, Old Bay, Smoked paprika, Herbes de Provence, Italian seasoning, Ras el hanout, Cajun seasoning, Lemon pepper
-85: Grains of paradise, Asafoetida|Hing, Nigella|Black seed|Kalonji, Epazote, Annatto|Achiote, Galangal, Sichuan pepper|Szechuan pepper, Long pepper, Mahlab, Borage, Lovage, Hyssop, Angelica, Kaffir lime leaf|Makrut lime, Curry leaf, Shiso, Baharat, Berbere, Dukkah, Shichimi togarashi|Shichimi, Tonka bean, Wattleseed, Licorice root, Orris root, Tamarind, Amchur|Amchoor, Ajwain, Pandan, Tellicherry pepper, Aleppo pepper, Urfa biber, Gochugaru, Black lime|Loomi, Sassafras|File powder, Zedoary
+10: Pepper|Black pepper|black peppercorn, Cinnamon, Basil, Paprika, Oregano
+15: Saffron, Turmeric|powdered turmeric
+30: Cumin, Thyme, Rosemary, Parsley|garden parsley, Mint, Nutmeg, Ginger|ginger root|ginger rhizome, Cilantro|Coriander, Dill, Sage, Chili|chili pepper|spicy chili pepper, Cayenne, Clove|clove flower, Bay leaf|Bay, Curry, Mustard|mustard plant grain, Vanilla, Chives, Garlic|garlic plant|hardneck garlic|softneck garlic, Onion, Salt|table salt|edible salt|dietary salt
+60: Cardamom, Allspice, Star anise, Tarragon, Marjoram, Anise|Aniseed, Fennel, Sumac|Sicilian sumac, Lemongrass, Caraway|wild caraway|caraway plant, Mace, Fenugreek, Juniper|Juniper berries, Garam masala, Za'atar|Zaatar, Savory, Chervil, Poppy, Sesame, Lavender|lavender flower, Five spice|Chinese five spice, Old Bay, Smoked paprika, Herbes de Provence, Italian seasoning, Ras el hanout, Cajun seasoning, Lemon pepper|lemon pepper seasoning
+85: Grains of paradise|Guinea grains, Asafoetida|Hing, Nigella|Black seed|Kalonji, Epazote|epazote leaf|epazote leaves, Annatto|Achiote, Galangal, Sichuan pepper|Szechuan pepper|Sichuan peppercorn, Long pepper, Mahlab, Borage, Lovage, Hyssop, Angelica, Kaffir lime leaf|Makrut lime, Curry leaf, Shiso, Baharat, Berbere, Dukkah, Shichimi togarashi|Shichimi, Tonka bean, Wattleseed, Licorice root, Orris root, Tamarind, Amchur|Amchoor, Ajwain, Pandan, Tellicherry pepper, Aleppo pepper|Halaby pepper, Urfa biber|Urfa pepper, Gochugaru, Black lime|Loomi, Sassafras|File powder, Zedoary
 100: Silphium :: Ancient Romans loved this herb so much they apparently ate it out of existence.
 
 ? Name a type of bread
 ~drop bread
-10: White, Sourdough, Bagel, Baguette, Wheat|Whole wheat, Croissant, Rye
-15: Focaccia, Ciabatta, Brioche
-30: Pita, Naan, Tortilla, Biscuit, Cornbread|Corn, Banana, Garlic, English muffin, Pumpernickel, Challah, Multigrain, Dinner roll|Roll, Bun|Hamburger bun|Hot dog bun, Flatbread, Texas toast, Breadstick, Hawaiian roll, Pretzel
-60: Zucchini, Matzo|Matzah, Soda|Irish soda, Lavash, Fry, Roti, Chapati, Injera, Arepa, Kaiser roll, Hoagie roll, Monkey, Scone, Crumpet, Pain de mie, Milk|Shokupan, Cuban, Potato, Ezekiel, Pan dulce, Hot cross bun, Panettone, Paratha, Bao|Steamed bun
-85: Fougasse, Pide, Bazlama, Simit, Pão de queijo|Pao de queijo, Anadama, Bannock, Barmbrack, Stollen, Kouign-amann, Pain d'épices, Damper, Boule, Batard, Ficelle, Pugliese, Tiger|Dutch crunch, Farl, Manchet, Vienna, Bolillo, Telera, Kulcha, Puri|Poori, Bhatura, Dosa, Pandesal|Pan de sal, Tsoureki, Lefse, Knäckebröd|Crispbread, Rugbrød|Rugbrod, Bialy, Salt-rising, Sally Lunn, Zopf, Msemen, Sangak, Barbari, Piadina, Grissini, Cozonac
+10: White, Sourdough, Bagel, Baguette, Wheat|Whole wheat, Croissant|butter croissant, Rye
+15: Focaccia|stuffed focaccia, Ciabatta, Brioche
+30: Pita, Naan|butter naan|garlic naan, Tortilla, Biscuit|baking powder biscuit, Cornbread|Corn, Banana, Garlic|garlic bread roll, English muffin, Pumpernickel, Challah, Multigrain, Dinner roll|Roll|milk roll|sweet roll|dinner bun, Bun|Hamburger bun|Hot dog bun, Flatbread, Texas toast, Breadstick, Hawaiian roll, Pretzel
+60: Zucchini, Matzo|Matzah|matzoth, Soda|Irish soda, Lavash, Fry|frybread, Roti, Chapati, Injera, Arepa, Kaiser roll|hard roll|Vienna roll, Hoagie roll|hero roll, Monkey, Scone, Crumpet, Pain de mie, Milk|Shokupan|Japanese milk bread|Hokkaido milk bread, Cuban, Potato, Ezekiel, Pan dulce, Hot cross bun, Panettone, Paratha, Bao|Steamed bun|baozi
+85: Fougasse, Pide, Bazlama, Simit, Pão de queijo|Pao de queijo, Anadama, Bannock, Barmbrack, Stollen|stol, Kouign-amann, Pain d'épices, Damper, Boule, Batard, Ficelle, Pugliese, Tiger|Dutch crunch|tiger roll, Farl, Manchet, Vienna, Bolillo, Telera, Kulcha, Puri|Poori, Bhatura, Dosa, Pandesal|Pan de sal, Tsoureki, Lefse, Knäckebröd|Crispbread, Rugbrød|Rugbrod, Bialy, Salt-rising, Sally Lunn, Zopf, Msemen, Sangak, Barbari, Piadina, Grissini, Cozonac
 100: Hardtack|Ship's biscuit :: Sailors' biscuit so hard it earned the nickname "tooth dullers."
 
 ? Name a sandwich
 ~drop sandwich,sub
-10: Grilled cheese, BLT, Peanut butter and jelly|PB&J|PBJ, Ham and cheese, Club, Hamburger|Burger|Cheeseburger
+10: Grilled cheese, BLT, Peanut butter and jelly|PB&J|PBJ|peanut butter & jam sandwich, Ham and cheese, Club, Hamburger|Burger|Cheeseburger
 15: Hot dog, Ice cream
-30: Reuben, Philly cheesesteak|Cheesesteak, Sloppy Joe, Meatball, Tuna melt|Tuna, Egg salad, Turkey, Panini, Gyro, French dip, Monte Cristo, Po' boy|Po boy, Cuban|Cubano, Hoagie|Submarine|Hero, Pulled pork, Italian beef, Chicken salad, Bánh mì|Banh mi, Patty melt
-60: Muffuletta, Croque monsieur, Croque madame, Shawarma, Döner kebab|Doner, Torta, Elvis|Peanut butter and banana, Bologna|Fried bologna, Pastrami|Pastrami on rye, Corned beef, Cucumber|Tea, Smørrebrød|Smorrebrod, Bacon butty, Chip butty, Hot Brown|Kentucky Hot Brown, Dagwood, Bocadillo, Arepa, Pimento cheese, Gatsby, Beef on weck, Lobster roll, Falafel
-85: Chivito, Pan bagnat, Vada pav, Bauru, Francesinha, Bunny chow, Barros Jarpa, Cemita, Mitraillette, Zapiekanka, Smörgåstårta|Smorgastarta, Medianoche, Mollete, Tramezzino, Katsu sando|Sando, Reina pepiada, Choripán|Choripan, Lampredotto, Tavern, Horseshoe, St. Paul, Jucy Lucy, Spiedie, Slinger
+30: Reuben, Philly cheesesteak|Cheesesteak|Philadelphia cheesesteak, Sloppy Joe, Meatball, Tuna melt|Tuna|tuna fish sandwich, Egg salad, Turkey, Panini, Gyro, French dip, Monte Cristo, Po' boy|Po boy, Cuban|Cubano|Cuban mix|Cuban pressed sandwich, Hoagie|Submarine|Hero, Pulled pork, Italian beef, Chicken salad, Bánh mì|Banh mi|bánh mì kẹp|bánh mỳ kẹp, Patty melt
+60: Muffuletta, Croque monsieur, Croque madame, Shawarma, Döner kebab|Doner|kebab, Torta, Elvis|Peanut butter and banana, Bologna|Fried bologna, Pastrami|Pastrami on rye, Corned beef, Cucumber|Tea, Smørrebrød|Smorrebrod, Bacon butty, Chip butty, Hot Brown|Kentucky Hot Brown, Dagwood, Bocadillo, Arepa, Pimento cheese, Gatsby, Beef on weck, Lobster roll, Falafel
+85: Chivito, Pan bagnat, Vada pav|Pao Vada|Pav Vada|Pav Wada, Bauru, Francesinha, Bunny chow, Barros Jarpa, Cemita, Mitraillette, Zapiekanka, Smörgåstårta|Smorgastarta, Medianoche, Mollete, Tramezzino, Katsu sando|Sando, Reina pepiada, Choripán|Choripan, Lampredotto, Tavern, Horseshoe, St. Paul, Jucy Lucy, Spiedie, Slinger
 100: Fluffernutter :: Peanut butter and marshmallow creme. Massachusetts lawmakers once fought about it in schools.
 
 ? Name a breakfast cereal
