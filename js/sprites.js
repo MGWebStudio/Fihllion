@@ -557,18 +557,19 @@ export function leaves() {
 
 // Where the hat sits on the GOLDFISH grid: the brim rests on the top of the head, and the
 // crown hides the front of the dorsal fin, so the fin pokes out behind it.
-export const HAT_AT = { x: 17, y: -3 };
-// A tapered crown with a square buckle centred on its band.
+export const HAT_AT = { x: 18, y: -3 };
+// A tapered crown with a square buckle centred on its band. The brim is a short ledge that ends
+// on the head; a longer one read as a stray line sticking out over the forehead.
 export function pilgrimHat() {
   return paint([
-    '...KKKKK...',
-    '...KhkkK...',
-    '..KhkkkkK..',
-    '..KhkkkkK..',
-    '..KBYYYBK..',
-    '..KBYByBK..',
-    '..KByyyBK..',
-    'KKKKKKKKKKK',
+    '..KKKKK..',
+    '..KhkkK..',
+    '.KhkkkkK.',
+    '.KhkkkkK.',
+    '.KBYYYBK.',
+    '.KBYByBK.',
+    '.KByyyBK.',
+    'KKKKKKKKK',
   ], { K: '#141217', k: '#34313a', h: '#56525e', B: '#0e0d11', Y: '#f2c14e', y: '#b8862a' });
 }
 
