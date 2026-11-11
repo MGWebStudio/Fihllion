@@ -4,11 +4,11 @@ export const CHANGELOG = [
   {
     date: '2026-11-10',
     time: '5:12 PM',
-    title: 'Say it or pick a face',
-    short: 'Voice answers + faces',
+    title: 'Say it out loud',
+    short: 'Voice answers + photos',
     items: [
       'Tap the mic next to the answer box and say your answer instead of spelling it.',
-      'On prompts about real people, tap “Know the face, not the name?” and pick a photo to put their name in. Faces are only the answers everyone knows, worth 10 points.',
+      'Prompts about a person or band now show their photo, like Elton John on “Name an Elton John song.”',
     ],
   },
   {

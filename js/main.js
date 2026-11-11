@@ -18,7 +18,7 @@ const el = Object.fromEntries([
   'btnHow', 'btnEndless', 'btnArchive', 'btnStats', 'play', 'promptCard', 'promptNum', 'promptText', 'feedback',
   'answerForm', 'answer', 'clock', 'clockRing', 'clockNum', 'reveal', 'revealCard', 'revealIcon', 'revealTier',
   'revealAnswer', 'revealPts', 'revealLine', 'btnNext', 'results', 'sheet', 'sheetTitle', 'sheetBody', 'sheetClose',
-  'btnMenu', 'btnSound', 'btnMic', 'btnFaces',
+  'btnMenu', 'btnSound', 'btnMic', 'promptPhoto', 'promptCredit',
 ].map((id) => [id, $(id)]));
 
 const SITE_URL = 'https://mgwebstudio.github.io/Fihllion/';
@@ -244,7 +244,7 @@ function presentPrompt() {
   }
   el.promptNum.textContent = `${dive.mode === 'endless' ? 'Endless · prompt' : 'Prompt'} ${number} of ${PROMPTS_PER_DIVE}`;
   el.promptText.textContent = G.prompt.text;
-  refreshFaces();
+  showPromptPhoto();
   el.answer.value = '';
   el.feedback.textContent = '';
   el.feedback.classList.remove('is-bad');
@@ -329,47 +329,32 @@ function toggleVoice() {
   });
 }
 
-// Faces ----------------------------------------------------------------------------------
-// On prompts about real people, photos of the 10-point answers, without names, so a player who
-// knows the face can still get an answer down. data/faces.json is built by scripts/build-faces.mjs.
-let faces = null;
-let facesLoading = null;
-function loadFaces() {
-  facesLoading ||= fetch('data/faces.json')
+// Prompt photos --------------------------------------------------------------------------
+// A prompt about a person or band shows their photo beside the question ("Name a Michael Jackson
+// song"). data/portraits.json is built by scripts/build-portraits.mjs from Wikimedia Commons.
+let portraits = null;
+let portraitsLoading = null;
+function loadPortraits() {
+  portraitsLoading ||= fetch('data/portraits.json')
     .then((res) => (res.ok ? res.json() : {}))
-    .then((data) => { faces = data; })
-    .catch(() => { facesLoading = null; });
-  return facesLoading;
+    .then((data) => { portraits = data; })
+    .catch(() => { portraitsLoading = null; });
+  return portraitsLoading;
 }
 
-function refreshFaces() {
+function showPromptPhoto() {
   const prompt = G.prompt;
-  el.btnFaces.hidden = !faces?.[prompt?.id];
-  if (!faces && prompt?.lastName) loadFaces()?.then(() => { if (G.prompt === prompt) refreshFaces(); });
-}
-
-function openFaces() {
-  const list = faces?.[G.prompt?.id];
-  if (!list || G.phase !== 'prompt') return;
-  const shown = [...list].sort(() => Math.random() - 0.5);
-  const grid = shown.map((face, i) => `<button type="button" class="face" data-i="${i}">
-      <img src="${esc(face.img)}" alt="${esc(face.name)}" loading="lazy" referrerpolicy="no-referrer">
-    </button>`).join('');
-  const credits = shown.map((face, i) => `<li><a href="${esc(face.page)}" target="_blank" rel="noopener">Photo ${i + 1}</a>: ${esc(face.credit)}</li>`).join('');
-  openSheet('Pick a face', `<p class="faces-note">Tap one and their name goes in your answer box. These are the answers everyone knows, so they’re worth 10 points.</p>
-    <div class="faces-grid">${grid}</div>
-    <details class="faces-credits"><summary>Photo credits (Wikimedia Commons)</summary><ul>${credits}</ul></details>`);
-  for (const button of el.sheetBody.querySelectorAll('.face')) {
-    button.addEventListener('click', () => {
-      const face = shown[Number(button.dataset.i)];
-      closeSheet();
-      if (G.phase !== 'prompt') return;
-      el.answer.value = face.name;
-      el.feedback.classList.remove('is-bad');
-      el.feedback.textContent = `Picked “${face.name}”. Tap Drop to send it.`;
-      el.answer.focus({ preventScroll: true });
-    });
+  const photo = portraits?.[prompt?.id];
+  el.promptCard.classList.toggle('has-photo', Boolean(photo));
+  el.promptPhoto.hidden = !photo;
+  el.promptCredit.hidden = !photo;
+  if (photo) {
+    const img = el.promptPhoto.querySelector('img');
+    img.src = photo.img;
+    img.alt = photo.name;
+    el.promptCredit.innerHTML = `Photo: <a href="${esc(photo.page)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>`;
   }
+  if (!portraits) loadPortraits()?.then(() => { if (G.prompt === prompt) showPromptPhoto(); });
 }
 
 function onSubmit(event) {
@@ -871,7 +856,7 @@ function openHow() {
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One dive a day. Endless mode is there if you want more.</li>
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
-      <li>Tap the mic to say your answer instead of typing it. On prompts about people, you can pick a face if the name won’t come.</li>
+      <li>Tap the mic to say your answer instead of typing it.</li>
       <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
@@ -964,7 +949,7 @@ function wire() {
     el.btnMic.hidden = false;
     el.btnMic.addEventListener('click', toggleVoice);
   }
-  el.btnFaces.addEventListener('click', () => { audio.click(); openFaces(); });
+  loadPortraits();
   el.btnHow.addEventListener('click', () => { audio.unlock(); audio.click(); openHow(); });
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });

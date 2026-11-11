@@ -1,0 +1,128 @@
+{
+ "taylor-swift-song": {
+  "name": "Taylor Swift",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/250px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
+  "credit": "iHeartRadioCA, CC BY 3.0"
+ },
+ "michael-jackson-song": {
+  "name": "Michael Jackson",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg/250px-Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Michael_Jackson_1983_(3x4_cropped)_(contrast).jpg",
+  "credit": "Matthew Rolston; Distributed by Epic Records, Public domain"
+ },
+ "elvis-song": {
+  "name": "Elvis Presley",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Elvis_Presley_Publicity_Photo_for_The_Trouble_with_Girls_1968.jpg/250px-Elvis_Presley_Publicity_Photo_for_The_Trouble_with_Girls_1968.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Elvis_Presley_Publicity_Photo_for_The_Trouble_with_Girls_1968.jpg",
+  "credit": "MGM, Public domain"
+ },
+ "madonna-song": {
+  "name": "Madonna",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Madonna_Rebel_Heart_Tour_2015_-_Stockholm_%2823051472299%29_%28cropped%29.jpg/250px-Madonna_Rebel_Heart_Tour_2015_-_Stockholm_%2823051472299%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Madonna_Rebel_Heart_Tour_2015_-_Stockholm_(23051472299)_(cropped).jpg",
+  "credit": "chrisweger, CC BY-SA 2.0"
+ },
+ "billy-joel-song": {
+  "name": "Billy Joel",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Billy_Joel_Shankbone_NYC_2009.jpg/250px-Billy_Joel_Shankbone_NYC_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Billy_Joel_Shankbone_NYC_2009.jpg",
+  "credit": "David Shankbone, CC BY 3.0"
+ },
+ "elton-john-song": {
+  "name": "Elton John",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Elton_John_2023.jpg/250px-Elton_John_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Elton_John_2023.jpg",
+  "credit": "Raph_PH, CC BY 2.0"
+ },
+ "tom-hanks-movie": {
+  "name": "Tom Hanks",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Tom_Hanks_at_the_Elvis_Premiere_2022.jpg/250px-Tom_Hanks_at_the_Elvis_Premiere_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Tom_Hanks_at_the_Elvis_Premiere_2022.jpg",
+  "credit": "Eva Rinaldi from Abbotsford, Australia, CC BY-SA 2.0"
+ },
+ "will-smith-movie": {
+  "name": "Will Smith",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg/250px-TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:TechCrunch_Disrupt_2019_(48834434641)_(cropped).jpg",
+  "credit": "TechCrunch, CC BY 2.0"
+ },
+ "steven-spielberg-movie": {
+  "name": "Steven Spielberg",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Steven_Spielberg_2025.jpg/250px-Steven_Spielberg_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Steven_Spielberg_2025.jpg",
+  "credit": "Raph_PH, CC BY 4.0"
+ },
+ "christopher-nolan-movie": {
+  "name": "Christopher Nolan",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Christopher_Nolan_August_2026.jpg/250px-Christopher_Nolan_August_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Christopher_Nolan_August_2026.jpg",
+  "credit": "Republic of Korea, CC BY-SA 4.0"
+ },
+ "charles-dickens-character": {
+  "name": "Charles Dickens",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dickens_Gurney_head.jpg/250px-Dickens_Gurney_head.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Dickens_Gurney_head.jpg",
+  "credit": "Jeremiah Gurney, Public domain"
+ },
+ "shakespeare-play": {
+  "name": "William Shakespeare",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/250px-Shakespeare.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Shakespeare.jpg",
+  "credit": "Attributed to John Taylor, Public domain"
+ },
+ "shakespeare-character": {
+  "name": "William Shakespeare",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/250px-Shakespeare.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Shakespeare.jpg",
+  "credit": "Attributed to John Taylor, Public domain"
+ },
+ "dr-seuss-book": {
+  "name": "Dr. Seuss",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Ted_Geisel_NYWTS_2_crop.jpg/250px-Ted_Geisel_NYWTS_2_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ted_Geisel_NYWTS_2_crop.jpg",
+  "credit": "Al Ravenna, New York World-Telegram and the Sun staff photographer, Public domain"
+ },
+ "stephen-king-book": {
+  "name": "Stephen King",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Stephen_King_at_the_2024_Toronto_International_Film_Festival_2_%28cropped%29.jpg/250px-Stephen_King_at_the_2024_Toronto_International_Film_Festival_2_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Stephen_King_at_the_2024_Toronto_International_Film_Festival_2_(cropped).jpg",
+  "credit": "Kevin Payravi, CC BY-SA 4.0"
+ },
+ "roald-dahl-book": {
+  "name": "Roald Dahl",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Roald_Dahl_%281982%29.jpg/250px-Roald_Dahl_%281982%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Roald_Dahl_(1982).jpg",
+  "credit": "Hans van Dijk for Anefo, CC BY-SA 3.0"
+ },
+ "seinfeld-character": {
+  "name": "Jerry Seinfeld",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Jerry_Seinfeld_2016_-_2.jpg/250px-Jerry_Seinfeld_2016_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Jerry_Seinfeld_2016_-_2.jpg",
+  "credit": "slgckgc, CC BY 2.0"
+ },
+ "beatles-song": {
+  "name": "The Beatles",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Beatles_ad_1965_just_the_beatles_crop.jpg/250px-Beatles_ad_1965_just_the_beatles_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Beatles_ad_1965_just_the_beatles_crop.jpg",
+  "credit": "EMI, Public domain"
+ },
+ "queen-song": {
+  "name": "Queen",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg/250px-Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Queen_A_Night_At_The_Opera_(1975_Elektra_publicity_photo_02).jpg",
+  "credit": "Koh Hasebe; Distributed by Elektra Records, Public domain"
+ },
+ "abba-song": {
+  "name": "ABBA",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/ABBA_-_TopPop_1974_5.png/250px-ABBA_-_TopPop_1974_5.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:ABBA_-_TopPop_1974_5.png",
+  "credit": "AVRO, CC BY-SA 3.0 nl"
+ },
+ "james-bond-movie": {
+  "name": "James Bond",
+  "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/James_Bond_at_Madame_Tussauds%2C_London.jpg/250px-James_Bond_at_Madame_Tussauds%2C_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:James_Bond_at_Madame_Tussauds,_London.jpg",
+  "credit": "Aashish Rao (Aashish950 at en.wikipedia - Aashish Rao Photography), CC BY 3.0"
+ }
+}
