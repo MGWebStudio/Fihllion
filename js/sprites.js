@@ -390,8 +390,10 @@ export function boat() {
   const fc = front.getContext('2d');
   const top = bowl.y - bowl.r + 5;
   const waterTop = top + 5;
+  const hullTop = 49;
 
-  for (let y = 0; y < h; y += 1) {
+  // The bowl sits down inside the boat, so none of its glass is drawn over the hull.
+  for (let y = 0; y < hullTop; y += 1) {
     for (let x = 0; x < w; x += 1) {
       const d = Math.hypot(x + 0.5 - bowl.x, y + 0.5 - bowl.y);
       if (d > bowl.r || y < top) continue;
@@ -440,7 +442,6 @@ export function boat() {
   bc.fillRect(61, 37, 1, 8);
 
   // Hull.
-  const hullTop = 49;
   const hullBottom = h - 1;
   for (let y = hullTop; y <= hullBottom; y += 1) {
     const t = (y - hullTop) / (hullBottom - hullTop);
