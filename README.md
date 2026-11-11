@@ -55,7 +55,7 @@ Two scripts fill gaps in the hand-made lists from Wikidata (public domain). Both
 
 The mic button (`js/voice.js`) uses the browser's own speech recognition, so it's hidden where there isn't any (Firefox). It fills the answer box with what the player says; when the browser heard several versions, the first one on the prompt's list wins. The player still taps Drop.
 
-A prompt about a person or band shows their photo beside the question, with its credit underneath ("Name an Elton John song" shows Elton John). The subjects are listed by hand in `scripts/build-portraits.mjs`. Running it rebuilds `data/portraits.json` from each subject's Wikidata photo, which always lives on Wikimedia Commons under a free license, and prints which Wikidata item it matched so a wrong match is easy to spot. Add a line there when a new prompt names someone.
+A prompt about a person or band shows their photo beside the question ("Name an Elton John song" shows Elton John). The photo's credit (photographer, license and a link to its Commons page) appears when the player taps the "i" on its corner. The subjects are listed by hand in `scripts/build-portraits.mjs`. Running it rebuilds `data/portraits.json` from each subject's Wikidata photo, which always lives on Wikimedia Commons under a free license, and prints which Wikidata item it matched so a wrong match is easy to spot. Add a line there when a new prompt names someone.
 
 ## Running it locally
 

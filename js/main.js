@@ -18,7 +18,7 @@ const el = Object.fromEntries([
   'btnHow', 'btnEndless', 'btnArchive', 'btnStats', 'play', 'promptCard', 'promptNum', 'promptText', 'feedback',
   'answerForm', 'answer', 'clock', 'clockRing', 'clockNum', 'reveal', 'revealCard', 'revealIcon', 'revealTier',
   'revealAnswer', 'revealPts', 'revealLine', 'btnNext', 'results', 'sheet', 'sheetTitle', 'sheetBody', 'sheetClose',
-  'btnMenu', 'btnSound', 'btnMic', 'promptPhoto', 'promptCredit',
+  'btnMenu', 'btnSound', 'btnMic', 'promptPhoto', 'promptCredit', 'btnPhotoInfo',
 ].map((id) => [id, $(id)]));
 
 const SITE_URL = 'https://mgwebstudio.github.io/Fihllion/';
@@ -347,19 +347,26 @@ function showPromptPhoto() {
   const photo = portraits?.[prompt?.id];
   el.promptCard.classList.toggle('has-photo', Boolean(photo));
   el.promptPhoto.hidden = !photo;
-  el.promptCredit.hidden = !photo;
+  showPhotoCredit(false);
   if (photo) {
     let img = el.promptPhoto.querySelector('img');
     if (!img) {
       img = document.createElement('img');
       img.referrerPolicy = 'no-referrer';
-      el.promptPhoto.append(img);
+      el.promptPhoto.prepend(img);
     }
     img.src = photo.img;
     img.alt = photo.name;
     el.promptCredit.innerHTML = `Photo: <a href="${esc(photo.page)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>`;
   }
   if (!portraits) loadPortraits()?.then(() => { if (G.prompt === prompt) showPromptPhoto(); });
+}
+
+// The credit stays tucked away until the player taps the "i" on the photo.
+function showPhotoCredit(open) {
+  el.promptCredit.hidden = !open;
+  el.btnPhotoInfo.setAttribute('aria-expanded', String(open));
+  el.btnPhotoInfo.classList.toggle('is-open', open);
 }
 
 function onSubmit(event) {
@@ -955,6 +962,9 @@ function wire() {
     el.btnMic.addEventListener('click', toggleVoice);
   }
   loadPortraits();
+  // Tapping the "i" mustn't pull focus from the answer box, or a phone's keyboard would close.
+  el.btnPhotoInfo.addEventListener('pointerdown', (event) => event.preventDefault());
+  el.btnPhotoInfo.addEventListener('click', () => showPhotoCredit(el.promptCredit.hidden));
   el.btnHow.addEventListener('click', () => { audio.unlock(); audio.click(); openHow(); });
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });
