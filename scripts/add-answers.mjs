@@ -12,14 +12,15 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildIndex, findAnswer, normalize } from '../js/match.js';
 import { readPrompts } from './prompt-files.mjs';
-import { SOURCES, CATALOGS, sparql, values, texts } from './wikidata.mjs';
+import { SOURCES, CATALOGS, sparql } from './wikidata.mjs';
 
 const WRITE = process.argv.includes('--write');
 const ONLY = process.argv.slice(2).filter((arg) => !arg.startsWith('--'));
 const MIN_LINKS = 4;
-const MIN_COVERAGE = 0.5; // the kind has to fit at least half the answers already on the list
+const MIN_COVERAGE = 0.4; // the kind has to cover at least 40% of the answers already on the list
 const MAX_ADD = 120;
 const TIER_PTS = { 2: 30, 3: 60, 4: 85 };
+
 
 const nameLike = (name) => name.length >= 3 && name.length <= 40
   && !/[()[\]{}|:;/\\"]/.test(name)
@@ -43,40 +44,37 @@ const median = (list) => {
   return sorted[Math.floor(sorted.length / 2)];
 };
 
-// How widely each answer already on the list is covered, to learn this prompt's scale.
-async function linksOfListed(prompt, pattern) {
-  const owner = new Map();
-  for (const answer of prompt.answers) {
-    for (const form of [answer.name, ...answer.aliases]) owner.set(normalize(form, prompt.drop), answer);
-  }
-  const forms = [...new Set(prompt.answers.flatMap((answer) => [answer.name, ...answer.aliases]))];
-  const best = new Map();
-  for (let i = 0; i < forms.length; i += 80) {
-    const rows = await sparql(`SELECT ?form (MAX(?n) AS ?links) WHERE {
-      ${values('form', texts(forms.slice(i, i + 80)))}
-      ?item rdfs:label|skos:altLabel ?form .
-      FILTER EXISTS { ${pattern} }
-      ?item wikibase:sitelinks ?n .
-    } GROUP BY ?form`);
-    for (const row of rows) {
-      const answer = owner.get(normalize(row.form.value, prompt.drop));
-      if (answer) best.set(answer, Math.max(best.get(answer) || 0, Number(row.links.value)));
-    }
-  }
-  return best;
-}
-
+// Kept flat on purpose: wrapping the pattern in a subquery makes Wikidata's planner time out.
+// Each item's other names come along, so an answer already on the list under another name
+// ("Constantine I" for Constantine the Great) isn't added twice.
 async function candidates(pattern) {
-  const rows = await sparql(`SELECT ?item ?links ?label WHERE {
-    { SELECT DISTINCT ?item WHERE { ${pattern} } }
+  const rows = await sparql(`SELECT ?item ?links ?label (GROUP_CONCAT(DISTINCT ?alt; separator="|") AS ?alts) WHERE {
+    ${pattern}
     ?item wikibase:sitelinks ?links . FILTER(?links >= ${MIN_LINKS})
-    ?item rdfs:label ?label . FILTER(LANG(?label) IN ("en", "mul"))
-  } ORDER BY DESC(?links) LIMIT 900`);
-  return rows.map((row) => ({ label: row.label.value.trim(), links: Number(row.links.value) }));
+    OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en) = "en") }
+    OPTIONAL { ?item rdfs:label ?mul FILTER(LANG(?mul) = "mul") }
+    BIND(COALESCE(?en, ?mul) AS ?label) FILTER(BOUND(?label))
+    OPTIONAL { ?item skos:altLabel ?alt FILTER(LANG(?alt) IN ("en", "mul")) }
+  } GROUP BY ?item ?links ?label ORDER BY DESC(?links) LIMIT 900`);
+  return rows.map((row) => ({
+    label: row.label.value.trim(),
+    links: Number(row.links.value),
+    alts: row.alts?.value ? row.alts.value.split('|').map((alt) => alt.trim()).filter(Boolean) : [],
+  }));
 }
 
+// One query per prompt: the catalog's best-covered items. Items already on the list show how widely
+// covered each tier is; the rest are the candidates.
 async function answersFor(prompt, pattern) {
-  const listed = await linksOfListed(prompt, pattern);
+  const index = buildIndex(prompt);
+  const items = await candidates(pattern);
+  const listed = new Map();
+  const fresh = [];
+  for (const item of items) {
+    const hit = [item.label, ...item.alts].map((name) => findAnswer(name, index)).find(Boolean);
+    if (hit) listed.set(hit, Math.max(listed.get(hit) || 0, item.links));
+    else fresh.push(item);
+  }
   const coverage = listed.size / prompt.answers.length;
   if (coverage < MIN_COVERAGE) return { coverage, added: [] };
 
@@ -86,14 +84,13 @@ async function answersFor(prompt, pattern) {
   const cut60 = byTier(3) ?? Infinity;
   const tierFor = (links) => (links >= cut30 ? 2 : links >= cut60 ? 3 : 4);
 
-  const index = buildIndex(prompt);
   const keys = [...index.exact.keys()];
   const near = (key) => keys.some((other) => {
     if (Math.abs(other.length - key.length) > 2) return false;
     return editDistance(key, other) <= (Math.min(key.length, other.length) >= 6 ? 2 : 1);
   });
   const added = [];
-  for (const { label, links } of await candidates(pattern)) {
+  for (const { label, links } of fresh) {
     if (added.length >= MAX_ADD) break;
     if (!nameLike(label) || /\d/.test(label)) continue;
     const key = normalize(label, prompt.drop);
@@ -124,7 +121,17 @@ const dataDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
 const { files, prompts } = readPrompts(dataDir);
 const additions = new Map();
 let total = 0;
-for (const prompt of prompts) {
+// --report=file saves what was found; --apply=file writes a saved report without asking Wikidata
+// again, after any lines you don't want have been deleted from it.
+const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice(9);
+const applyPath = process.argv.find((arg) => arg.startsWith('--apply='))?.slice(8);
+if (applyPath) {
+  for (const [id, added] of Object.entries(JSON.parse(readFileSync(applyPath, 'utf8')))) {
+    additions.set(id, added);
+    total += added.length;
+  }
+}
+for (const prompt of applyPath ? [] : prompts) {
   if (!CATALOGS.has(prompt.id) || !SOURCES[prompt.id] || prompt.exact) continue;
   if (ONLY.length && !ONLY.includes(prompt.id)) continue;
   try {
@@ -145,7 +152,8 @@ for (const prompt of prompts) {
   }
 }
 console.log(`${total} new answers across ${additions.size} prompts.`);
-if (WRITE) {
+if (reportPath) writeFileSync(reportPath, JSON.stringify(Object.fromEntries(additions), null, 1));
+if (WRITE || applyPath) {
   files.forEach((file, i) => {
     const path = join(dataDir, file.path);
     const before = readFileSync(path, 'utf8');

@@ -203,20 +203,20 @@ export const PEOPLE = new Set(['rapper', 'basketball-player', 'famous-author', '
 
 // Prompts whose Wikidata kind is exact enough to supply whole new answers, not just other names.
 // Kinds that only approximate the prompt (any person, any city, any Mexican thing) aren't here.
-export const CATALOGS = new Set(['us-state', 'us-state-capital', 'european-capital', 'african-country', 'asian-country',
-  'chemical-element', 'constellation', 'us-president', 'roman-emperor', 'nobel-peace-prize-winner', 'us-first-lady',
-  'pixar-movie', 'disney-animated-movie', 'tom-hanks-movie', 'steven-spielberg-movie', 'best-picture-winner',
-  'beatles-song', 'taylor-swift-song', 'michael-jackson-song', 'elvis-song', 'shakespeare-play', 'dr-seuss-book',
-  'stephen-king-book', 'nfl-team-past-or-present', 'nba-team-past-or-present', 'mlb-team-past-or-present',
-  'nhl-team-past-or-present', 'dinosaur', 'snake', 'bird', 'kind-of-fish', 'insect-or-bug', 'wild-cat', 'dog-breed',
-  'cat-breed', 'horse-breed', 'james-bond-movie', 'simpsons-character', 'star-wars-character', 'harry-potter-character',
-  'lord-of-the-rings-character', 'shakespeare-character', 'charles-dickens-character', 'greek-god-or-goddess',
-  'classical-composer', 'famous-painter', 'famous-scientist', 'philosopher', 'famous-explorer', 'rapper', 'tennis-player',
-  'basketball-player', 'soccer-player', 'famous-author', 'gemstone', 'phobia', 'musical-instrument', 'cheese', 'cocktail',
-  'river', 'mountain', 'lake', 'island', 'desert', 'spacecraft', 'soccer-club', 'video-game-console', 'board-game',
-  'card-game', 'airline', 'broadway-musical', 'martial-art', 'superhero', 'sitcom', 'cartoon-series', 'art-movement',
-  'famous-painting', 'frog-or-toad', 'butterfly-or-moth', 'famous-castle-or-palace', 'will-smith-movie',
-  'elton-john-song', 'billy-joel-song', 'famous-poet', 'famous-drummer', 'pro-wrestler']);
+export const CATALOGS = new Set([
+  'us-state', 'us-state-capital', 'european-capital', 'african-country', 'asian-country', 'chemical-element',
+  'constellation', 'us-president', 'roman-emperor', 'nobel-peace-prize-winner', 'us-first-lady',
+  'best-picture-winner', 'nfl-team-past-or-present', 'nba-team-past-or-present', 'mlb-team-past-or-present',
+  'nhl-team-past-or-present', 'dog-breed', 'cat-breed', 'horse-breed', 'simpsons-character',
+  'star-wars-character', 'harry-potter-character', 'lord-of-the-rings-character', 'shakespeare-character',
+  'charles-dickens-character', 'greek-god-or-goddess', 'classical-composer', 'famous-painter',
+  'famous-scientist', 'philosopher', 'famous-explorer', 'rapper', 'tennis-player', 'basketball-player',
+  'soccer-player', 'famous-author', 'gemstone', 'phobia', 'musical-instrument', 'cheese', 'cocktail',
+  'river', 'mountain', 'lake', 'island', 'desert', 'spacecraft', 'soccer-club', 'video-game-console',
+  'board-game', 'card-game', 'airline', 'broadway-musical', 'martial-art', 'superhero', 'sitcom',
+  'cartoon-series', 'art-movement', 'famous-painting', 'famous-castle-or-palace', 'famous-poet',
+  'famous-drummer', 'pro-wrestler',
+]);
 
 // A query that times out once will time out again, so only rate limits get more than one retry.
 export async function sparql(query) {

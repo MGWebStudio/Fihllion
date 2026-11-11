@@ -3,6 +3,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-10',
+    time: '6:50 PM',
+    title: 'Bigger answer lists',
+    short: 'Thousands more answers',
+    items: [
+      'About 6,000 more ways to say answers we already take: full names, birth names and other names, like “sausage dog” for Dachshund.',
+      'Over 600 new answers for dog, cat and horse breeds, airlines, cheeses, cocktails, Roman emperors and First Ladies.',
+    ],
+  },
+  {
+    date: '2026-11-10',
     time: '5:12 PM',
     title: 'Say it out loud',
     short: 'Voice answers + photos',
