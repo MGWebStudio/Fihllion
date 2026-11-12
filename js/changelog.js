@@ -3,6 +3,17 @@
 export const CHANGELOG = [
   {
     date: '2026-11-12',
+    time: '10:05 AM',
+    title: 'New hidden answers',
+    short: 'New hidden answers',
+    items: [
+      'New One in a Fihllion answers on 242 prompts. They’re still rare, but now they’re things you might actually think of.',
+      'The old hidden answers still count, for 85 points.',
+      'Past dives keep the answers they had.',
+    ],
+  },
+  {
+    date: '2026-11-12',
     time: '9:10 AM',
     title: '29 new prompts in Endless',
     short: '29 new Endless prompts',
