@@ -78,6 +78,7 @@ export function parsePrompts(text, category) {
     if (!current) throw new Error(`${category}: answers before any prompt: ${line}`);
     if (line === '~last') { current.lastName = true; continue; }
     if (line === '~exact') { current.exact = true; continue; }
+    if (line === '~retired') { current.retired = true; continue; }
     if (line.startsWith('~drop ')) {
       current.drop = line.slice(6).split(',').map((word) => word.trim().toLowerCase()).filter(Boolean);
       continue;
@@ -136,6 +137,7 @@ async function fetchOk(path, options) {
 export async function loadContent() {
   const [schedule, index] = await Promise.all(['data/schedule.json', 'data/index.json'].map((path) => fetchOk(path).then((res) => res.json())));
   const fileOf = new Map(index.prompts.map(([id, file]) => [id, file]));
+  const retired = new Set(index.prompts.filter(([, , flag]) => flag).map(([id]) => id));
   const byId = new Map();
   const loading = new Map();
   const filesFor = (ids) => [...new Set(ids.map((id) => fileOf.get(id)))];
@@ -158,6 +160,8 @@ export async function loadContent() {
     ids: index.prompts.map(([id]) => id),
     byId,
     categoryOf: (id) => index.files[fileOf.get(id)]?.category ?? null,
+    // Retired prompts still load for the past dives that used them, but nothing new picks them.
+    retired: (id) => retired.has(id),
     has: (ids) => ids.every((id) => byId.has(id)),
     async load(ids) {
       const unknown = ids.filter((id) => !fileOf.has(id));

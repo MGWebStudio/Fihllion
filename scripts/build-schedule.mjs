@@ -14,8 +14,8 @@ const schedule = existsSync(schedulePath)
   ? JSON.parse(readFileSync(schedulePath, 'utf8'))
   : { epoch: '2026-11-03', days: [] };
 
-// Prompts in data/endless/ have been retired from the daily dive and are never scheduled again.
-const prompts = readPrompts(join(root, 'data')).prompts.filter((prompt) => !prompt.endlessOnly);
+// Prompts in data/endless/ and data/retired/ are never scheduled again.
+const prompts = readPrompts(join(root, 'data')).prompts.filter((prompt) => !prompt.endlessOnly && !prompt.retired);
 
 let seed = 20261103 + schedule.days.length;
 const random = () => {

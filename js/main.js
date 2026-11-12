@@ -115,6 +115,7 @@ function endlessPool() {
   const safe = [];
   const later = [];
   for (const id of content.ids) {
+    if (content.retired(id)) continue;
     const first = calendar.firstDay(id);
     if (first === null || first < G.today) safe.push(id);
     else if (first >= G.today + 7) later.push(id);

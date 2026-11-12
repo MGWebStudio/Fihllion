@@ -56,6 +56,7 @@
 100: Wii Fit Trainer :: A yoga instructor from an exercise game, who beats people up with a sun salutation.
 
 ? Name a poker term
+~retired
 10: Flush, Straight, Full house, Royal flush, Bluff, All in, Ante, Pair
 15: Dead man's hand, Poker face
 30: Three of a kind, Four of a kind, Two pair, Straight flush, Fold, Call, Raise, Check, Blinds|Big blind|Small blind, Flop, Turn, River, Dealer, Pot, Kicker, Hole cards, Chips, Tell, Texas Hold'em|Hold'em, Stud, Draw, Wild card, High card, Showdown, Joker
@@ -88,14 +89,6 @@
 85: Katamari Damacy, Ōkami|Okami, ICO, Vib-Ribbon, PaRappa the Rapper, Rez|Rez HD, Jet Set Radio, Shenmue, Panzer Dragoon, Earthworm Jim, ToeJam & Earl, Battletoads|NES Battletoads, Ecco the Dolphin, Zombies Ate My Neighbors, Gex, Bubsy, E.T. the Extra-Terrestrial, Superman 64|1999 Superman|Nintendo 64 Superman, Daikatana|John Romero's Daikatana, Pathologic, Outer Wilds, Return of the Obra Dinn, Inscryption, Papers\, Please, Hotline Miami, Superhot, Untitled Goose Game, Goat Simulator, Surgeon Simulator|Surgeon Simulator CPR, QWOP, Getting Over It, Dwarf Fortress, NetHack, Rogue, Zork, Colossal Cave Adventure|ADVENT|Colossal Cave, Spacewar!, Tennis for Two|Computer Tennis, Pitfall!, Yars' Revenge, Neopets|neopets.com, Club Penguin, Webkinz, Poptropica, Feeding Frenzy, Insaniquarium, Fishdom
 100: Seaman :: A 1999 Dreamcast game about raising a sarcastic fish with a human face. Leonard Nimoy narrates.
 
-? Name a Minecraft mob
-10: Creeper, Zombie, Skeleton, Enderman, Cow, Pig, Chicken, Sheep, Villager
-15: Herobrine, Steve
-30: Spider, Ender Dragon, Wither, Ghast, Blaze, Iron Golem, Wolf, Cat, Horse, Slime, Witch, Pillager, Axolotl, Bee, Piglin, Warden, Zombified Piglin|Zombie Pigman, Squid, Llama, Parrot, Fox, Panda, Turtle, Rabbit, Bat, Snow Golem, Phantom, Drowned
-60: Cave Spider, Silverfish, Magma Cube, Shulker, Endermite, Guardian, Elder Guardian, Stray, Husk, Wither Skeleton, Evoker, Vindicator, Ravager, Vex, Hoglin, Strider, Zoglin, Piglin Brute, Goat, Dolphin, Polar Bear, Ocelot, Mooshroom, Donkey, Mule, Cod, Salmon, Pufferfish, Tropical Fish, Glow Squid, Frog, Tadpole, Allay, Camel, Sniffer, Breeze, Armadillo, Trader Llama, Wandering Trader, Skeleton Horse, Zombie Horse, Bogged, Creaking, Copper Golem
-85: Giant, Illusioner, Killer Bunny|Killer Rabbit, Zombie Villager, Spider Jockey, Charged Creeper, Baby Zombie, Happy Ghast, Johnny, Toast, Moobloom, Glare, Iceologer, Rascal, Tuff Golem, Crab, Penguin, Ostrich
-100: Chicken Jockey :: A tiny zombie riding a chicken. A rare spawn in the game, and a shout that made movie theaters go feral in 2025.
-
 ? Name a party game
 10: Charades, Pictionary, Truth or Dare, Never Have I Ever, Spin the Bottle
 15: Beer pong, Seven Minutes in Heaven
@@ -103,3 +96,11 @@
 60: Ghost, Salad Bowl, Psychiatrist, Contact, Celebrity|Monikers, The Resistance, Spyfall, One Night Ultimate Werewolf, Wavelength, Telestrations, Reverse Charades, Dixit, Exploding Kittens, Dirty Minds, Sussed, Ouija, Light as a Feather Stiff as a Board, Bloody Mary, Murder in the Dark, Wink Murder, Ring of Fire, Quarters, Hot Seat, Paranoia, Botticelli, Consequences, Exquisite Corpse, 20 Questions|Twenty Questions|21 Questions, I Spy, Who Am I?, Pass the Parcel, Egg Toss, Three-Legged Race, Sack Race
 85: Zip Zap Zop, Thumper, Cardinal Puff, Beirut, Power Hour, Edward Fortyhands, Slap Cup, Rage Cage, Stack Cup, Viking, Snaps, Sculptionary, Cranium, Hullabaloo, Bunco, Dictionary, Hoodwinked, Pass the Slipper, Hunt the Thimble, Sleeping Lions, Squeak Piggy Squeak, Spoons, Tap, Crambo, Fictionary, Reverse Hide and Seek, Human Knot, Bigger and Better, Assassin
 100: Fishbowl :: A mash-up of Taboo and Charades with every clue drawn from a bowl. The goldfish would like its home back.
+
+? Name a game you can play with just a pencil and paper
+10: Tic-tac-toe|Tic tac toe|Noughts and crosses, Hangman, Dots and boxes|Dots, Word search, Crossword|Crossword puzzle, Sudoku
+15: Battleship, Pictionary
+30: Mad Libs|Madlibs, Mazes|Maze, Categories|Scattergories, Word ladder, Wordle, Fortune teller|Cootie catcher, Connect the dots, Anagrams, Word scramble
+60: Exquisite corpse, Squiggle game|Squiggles, Telephone Pictionary|Gartic Phone, Snowman, Sprouts, Beetle|Cootie, Five in a row|Gomoku, Ultimate tic-tac-toe, Racetrack|Paper racing, Nim, Ghost, Bulls and cows|Mastermind, Kakuro, KenKen, Nonograms|Picross, Conway's Game of Life|Game of Life, Rebus, Stop|Basta|Tutti frutti, FLAMES, Connections, Bingo
+85: Hex, Sim, Paper soccer, 3D tic-tac-toe, Jotto, Domineering, Consequences, Acrostic, Pencil cricket, Paper golf, Order and Chaos, Notakto, Black box, Brussels sprouts, Treblecross
+100: MASH|M.A.S.H. :: Mansion, Apartment, Shack, House. Draw the spiral, count it out, and see your whole future.

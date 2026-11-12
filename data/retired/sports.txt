@@ -1,0 +1,9 @@
+
+? Name a famous racehorse
+~retired
+10: Secretariat, Seabiscuit, Man o' War|Man O War|Man of War, American Pharoah|American Pharaoh, Seattle Slew, War Admiral
+15: Affirmed
+30: Phar Lap, Citation, Justify, Smarty Jones, Funny Cide, Barbaro, California Chrome, Zenyatta, Rachel Alexandra, Ruffian, Frankel, Red Rum, Arkle, Northern Dancer, Native Dancer, Kelso, Cigar, Alydar, Sunday Silence, Spectacular Bid, Big Brown, Mine That Bird, Rich Strike, Winx, Black Caviar, Shergar, Nijinsky, Silver Charm, Real Quiet, Count Fleet, Whirlaway, Sir Barton, Gallant Fox, Omaha, Assault, Eclipse, Arrogate, Flightline
+60: Mill Reef, Sea the Stars, Makybe Diva, Forego, Easy Goer, Charismatic, War Emblem, I'll Have Another|Ill Have Another, Animal Kingdom, Orb, Country House, Mage, Authentic, Sovereignty, Gun Runner, Tiznow, Ghostzapper, Curlin, Point Given, Swaps, Exterminator, Dr. Fager, Damascus, Buckpasser, Round Table, Personal Ensign, Lady's Secret|Ladys Secret, Go for Wand, Genuine Risk, Winning Colors, Regret, Hyperion, Ribot, Sea-Bird|Sea Bird, Dancing Brave, Brigadier Gerard, Dubai Millennium, Galileo, Sadler's Wells|Sadlers Wells, Enable, Desert Orchid, Kauto Star, Best Mate, Golden Miller, Tiger Roll, Aldaniti, Foinavon, Devon Loch, Carbine, Kingston Town, Deep Impact, Almond Eye, Equinox, Symboli Rudolf, Dan Patch
+85: Denman, Tulloch, Bernborough, Orfevre, Kitasan Black, Oguri Cap, Zippy Chippy, Hindoo, Lexington, Boston, Hambletonian, Greyhound, Niatross, Cardigan Bay, Stymie, Noor, Tom Fool, Bold Ruler, Gallant Man, Iron Liege, Carry Back, Tim Tam, Needles, Dust Commander, Canonero II|Canonero, Riva Ridge, Sham, Foolish Pleasure, Bold Forbes, Silky Sullivan, Kincsem, Ormonde, St. Simon|St Simon, Gladiateur, Persimmon, Pretty Polly, Sceptre
+100: Haru Urara :: A Japanese mare who lost all 113 of her races and became a national hero for never giving up.

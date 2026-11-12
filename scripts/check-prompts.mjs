@@ -72,9 +72,17 @@ if (existsSync(schedulePath)) {
     }
   });
   const used = new Set(schedule.days.flat());
-  const unused = prompts.filter((p) => !used.has(p.id) && !p.endlessOnly);
+  const unused = prompts.filter((p) => !used.has(p.id) && !p.endlessOnly && !p.retired);
   const retired = prompts.filter((p) => p.endlessOnly && used.has(p.id));
   if (retired.length) problems.push(`prompts in data/endless/ are still scheduled: ${retired.map((p) => p.id).join(', ')}`);
+  // A retired prompt can stay on a day that's already been played, but not on one still to come.
+  // Tomorrow counts as still to come, since it's already tomorrow somewhere.
+  const today = Math.floor((Date.now() - Date.parse(`${schedule.epoch}T00:00:00Z`)) / 86400000) + 1;
+  const retiredIds = new Set(prompts.filter((p) => p.retired).map((p) => p.id));
+  schedule.days.forEach((day, i) => {
+    const late = day.filter((id) => retiredIds.has(id));
+    if (i + 1 > today && late.length) problems.push(`schedule day ${i + 1} uses retired prompts: ${late.join(', ')}`);
+  });
   if (unused.length) warnings.push(`${unused.length} prompts aren't scheduled: ${unused.map((p) => p.id).join(', ')}`);
 } else {
   problems.push('data/schedule.json is missing');

@@ -1,0 +1,9 @@
+
+? Name a casino game
+~retired
+10: Blackjack|Twenty-one|21, Poker, Roulette, Slots|Slot machine|Slot machines, Craps, Baccarat
+15: Texas Hold'em|Texas Holdem|Hold'em|Holdem
+30: Keno, Bingo, Pai Gow|Pai Gow Poker, Video poker, Three Card Poker|3 Card Poker, Let It Ride, Caribbean Stud|Caribbean Stud Poker, Big Six Wheel|Big Six|Money wheel|Wheel of Fortune, Sic Bo, Omaha|Omaha Hold'em, Seven Card Stud|7 Card Stud|Stud, Five Card Draw|5 Card Draw, Mini-baccarat|Mini baccarat, Punto Banco, Casino War|War, Spanish 21, Pachinko, Lottery|Lotto, Scratch-offs|Scratch cards|Scratchers, Sports betting|Sportsbook, Ultimate Texas Hold'em|Ultimate Texas Holdem, Mississippi Stud, Four Card Poker, Faro, Chuck-a-luck|Chuck a luck, Pull tabs
+60: Mahjong, Fan-Tan|Fan Tan, Dragon Tiger, Two-up, Crown and Anchor, Red Dog, Acey Deucey|In-Between, Free Bet Blackjack, Blackjack Switch, Pontoon, Super Fun 21, Pai Gow Tiles, Megabucks, Razz, Lowball, Casino Hold'em, Chemin de Fer, Crazy 4 Poker, High Card Flush, Horse racing|Horse betting
+85: Teen Patti, Andar Bahar, Boule, Trente et Quarante|Trente-et-Quarante|Rouge et Noir, Banca Francesa, Klondike, Double Exposure, Badugi, Pineapple, Short Deck|Six Plus Hold'em, Crazy Pineapple, Baccarat Banque, Under Over Seven|Over/Under 7, Bolita, Pachislot|Pachislo
+100: Hazard :: A dice game played in England since the Middle Ages. Over centuries it was simplified into craps.

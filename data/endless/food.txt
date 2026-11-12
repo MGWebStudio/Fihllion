@@ -88,6 +88,7 @@
 100: Garum :: Ancient Rome's favorite condiment was fermented fish guts. The goldfish is not amused.
 
 ? Name a cocktail
+~retired
 ~drop cocktail
 10: Margarita, Martini, Mojito, Old Fashioned, Bloody Mary
 15: Negroni

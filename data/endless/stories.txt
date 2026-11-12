@@ -1,12 +1,5 @@
-? Name a Greek god or goddess
-10: Zeus, Poseidon, Hades, Athena, Apollo, Aphrodite, Ares
-15: Kratos, Hercules|Heracles
-30: Hera, Hermes, Artemis, Dionysus, Demeter, Hephaestus, Persephone, Eros, Hestia, Pan, Cronus|Kronos, Nike, Gaia
-60: Rhea, Uranus, Atlas, Prometheus, Iris, Nemesis, Hecate, Hebe, Helios, Selene, Eos, Morpheus, Thanatos, Hypnos, Tyche, Asclepius, Aeolus, Triton, Nyx, Erebus, Oceanus, Themis, Eris, Harmonia, Hygieia, Amphitrite, Proteus, Nereus, Metis, Leto, Mnemosyne, Calliope, Clio, Thalia, Terpsichore, Erato, Euterpe, Melpomene, Polyhymnia, Urania
-85: Tethys, Hyperion, Coeus, Phoebe, Crius, Iapetus, Theia, Dione, Maia, Ganymede, Deimos, Phobos, Achlys, Aether, Hemera, Tartarus, Chaos, Ananke, Chronos, Geras, Oizys, Moros, Apate, Dolos, Philotes, Zelus, Bia, Boreas, Zephyrus, Notus, Eurus, Pontus, Styx, Clotho, Lachesis, Atropos, Priapus, Silenus, Aristaeus
-100: Momus :: The god of mockery, thrown off Olympus for criticizing the other gods one time too many.
-
 ? Name a Charles Dickens character
+~retired
 ~last
 10: Ebenezer Scrooge, Oliver Twist|Oliver, Tiny Tim, Pip, Bob Cratchit|Robert Cratchit
 15: Jacob Marley
@@ -40,22 +33,6 @@
 85: Pericles|Pericles\, Prince of Tyre, Cymbeline|Tragedy of Cymbeline|Cymbeline King of Britaine, Timon of Athens|Life of Timon of Athens, King John, The Two Gentlemen of Verona, The Two Noble Kinsmen, Edward III, Love's Labour's Won
 100: Cardenio|The History of Cardenio :: Shakespeare's lost play. It's on record as performed in 1613, and no copy survives.
 
-? Name a Dr. Seuss book
-10: The Cat in the Hat, Green Eggs and Ham, How the Grinch Stole Christmas!|How the Grinch Stole Christmas|The Grinch, The Lorax, Horton Hears a Who!|Horton Hears a Who, One Fish Two Fish Red Fish Blue Fish|One Fish Two Fish, Oh\, the Places You'll Go!|Oh the Places You'll Go
-15: The Butter Battle Book, And to Think That I Saw It on Mulberry Street|Mulberry Street
-30: Fox in Socks, Hop on Pop, Horton Hatches the Egg, Yertle the Turtle, Dr. Seuss's ABC|ABC, The Sneetches|Sneetches, There's a Wocket in My Pocket!|Wocket in My Pocket, The Cat in the Hat Comes Back, If I Ran the Zoo, Mr. Brown Can Moo! Can You?|Mr. Brown Can Moo
-60: Bartholomew and the Oobleck, The 500 Hats of Bartholomew Cubbins, Thidwick the Big-Hearted Moose, Scrambled Eggs Super!, On Beyond Zebra!|On Beyond Zebra, If I Ran the Circus, Happy Birthday to You!, Dr. Seuss's Sleep Book, I Can Lick 30 Tigers Today!, I Had Trouble in Getting to Solla Sollew|Solla Sollew, The Foot Book, Marvin K. Mooney Will You Please Go Now!|Marvin K. Mooney, The Shape of Me and Other Stuff, Great Day for Up!, Oh\, the Thinks You Can Think!|Oh the Thinks You Can Think, Did I Ever Tell You How Lucky You Are?, Hunches in Bunches, I Can Read with My Eyes Shut!, Daisy-Head Mayzie, What Pet Should I Get?, Horton and the Kwuggerbug
-85: The King's Stilts, The Seven Lady Godivas, Because a Little Bug Went Ka-Choo!, Would You Rather Be a Bullfrog?, Oh Say Can You Say?, I Wish That I Had Duck Feet, Wacky Wednesday, The Tooth Book, You're Only Old Once!, In a People House, My Book About Me, Come Over to My House, Please Try to Remember the First of Octember!, Ten Apples Up on Top!, The Eye Book, The Nose Book, The Many Mice of Mr. Brice
-100: McElligot's Pool :: A boy fishes in a tiny junk-filled pool, imagining all the wild fish that might swim in from the sea.
-
-? Name a mythical creature
-10: Unicorn, Dragon, Mermaid, Phoenix, Centaur, Bigfoot|Sasquatch
-15: Kraken, Loch Ness Monster|Nessie|Nessy
-30: Griffin|Gryphon, Minotaur, Medusa, Pegasus, Werewolf, Vampire, Cyclops, Yeti|Abominable Snowman, Hydra|Lernæan Hydra|Lernean Hydra, Troll, Ogre|ogress, Goblin, Fairy|fairy folk, Elf, Gnome, Leprechaun, Genie|Jinn|jinnah|jinnan, Siren|siren song, Cerberus, Chupacabra, Jackalope, Basilisk, Sphinx, Gorgon, Banshee, Dwarf, Zombie, Satyr|Faun, Thunderbird, Mothman, Golem
-60: Manticore, Chimera, Harpy, Selkie, Kelpie|water kelpie, Leviathan, Wendigo, Nymph, Dryad, Naiad, Hippogriff, Roc, Cockatrice, Wyvern, Ghoul, Incubus, Succubus, Kitsune, Tengu, Kappa, Oni, Yokai, Qilin, Nine-tailed fox, Jersey Devil|Leeds Devil|New Jersey Devils, Krampus, Pixie, Sprite, Brownie, Boggart, Hobgoblin, Imp, Sea serpent, Bunyip, Behemoth, Ent, Changeling, Doppelganger, Poltergeist, Will-o'-the-wisp|will-o'-wisp|will-o'-wisps, Valkyrie
-85: Amphisbaena, Catoblepas, Hippocampus, Ichthyocentaur, Lamia, Typhon, Scylla, Charybdis, Echidna, Nuckelavee, Sluagh, Púca|Pooka, Dullahan, Tanuki, Baku, Nue, Bakeneko, Jiangshi, Penanggalan, Aswang, Manananggal, Mokele-mbembe, Ahuizotl, Quetzalcoatl, Ningen, Cadejo|Cadejo negro|Cadejo blanco, Alicorn, Drop bear, Hodag, Squonk, Snallygaster, Hoop snake, Wampus cat, Tatzelwurm, Vodyanoy, Rusalka, Domovoi, Umibozu, Ningyo, Sea goat|Capricorn, Cipactli
-100: Fur-bearing trout :: A trout covered in fur, from the tall tales of the Rocky Mountains. Taxidermists will happily sell you one.
-
 ? Name a nursery rhyme
 10: Twinkle\, Twinkle\, Little Star|Twinkle Twinkle Little Star, Mary Had a Little Lamb, Humpty Dumpty, Baa\, Baa\, Black Sheep|Baa Baa Black Sheep, Row\, Row\, Row Your Boat|Row Row Row Your Boat, Itsy Bitsy Spider|Incy Wincy Spider, Jack and Jill
 15: Ring Around the Rosie|Ring a Ring o' Roses, Three Blind Mice
@@ -65,6 +42,7 @@
 100: Once I Caught a Fish Alive|One Two Three Four Five :: You catch a fish alive, then let it go again. The goldfish approves of the second part.
 
 ? Name a Shakespeare character
+~retired
 10: Romeo|Romeo Montague, Juliet|Juliet Capulet, Hamlet|Prince Hamlet, Macbeth, Lady Macbeth, Othello, King Lear|Lear, Puck
 15: Yorick, Bottom|Nick Bottom|Bottom the Weaver
 30: Ophelia, Iago, Mercutio, Tybalt, Prospero, Shylock, Julius Caesar|Caesar, Brutus, Mark Antony|Marc Antony, Cleopatra, Falstaff|John Falstaff|Sir John Falstaff, Oberon, Titania|Queen Titania|Titania Regina, Desdemona, Polonius, Horatio, Laertes, Gertrude, Claudius|King Claudius, Rosencrantz, Guildenstern, Banquo, Macduff, Duncan, Cordelia, Caliban, Ariel, Miranda, Benedick, Beatrice, Viola, Malvolio, Portia, Katherina|Kate, Petruchio, Paris, Benvolio|Benvolio Montague, Friar Laurence, Nurse, Richard III
@@ -81,6 +59,7 @@
 100: The Fisherman and His Wife :: A magic fish grants a wife's bigger and bigger wishes until the fish has finally had enough.
 
 ? Name a Stephen King book
+~retired
 10: It, The Shining, Carrie, Misery, Pet Sematary, The Stand, The Green Mile
 15: The Shawshank Redemption|Shawshank|Rita Hayworth and Shawshank Redemption, The Body|Stand by Me
 30: Cujo, 'Salem's Lot|Salem's Lot, Christine, The Dark Tower, The Gunslinger, Needful Things, Firestarter, Under the Dome, 11/22/63, Doctor Sleep|Dr. Sleep, The Mist, Dreamcatcher, The Outsider, Gerald's Game, Thinner, Mr. Mercedes, Holly, Fairy Tale, Billy Summers
@@ -89,6 +68,7 @@
 100: On Writing :: His memoir and writing guide, finished after a van nearly killed him in 1999.
 
 ? Name a classic novel
+~retired
 10: To Kill a Mockingbird, The Great Gatsby, Pride and Prejudice, 1984, Moby-Dick|Moby Dick
 15: War and Peace, Ulysses
 30: The Catcher in the Rye, Lord of the Flies, Frankenstein, Dracula, Jane Eyre, Wuthering Heights, Animal Farm, Of Mice and Men, The Grapes of Wrath, Great Expectations, A Tale of Two Cities, Little Women, The Adventures of Huckleberry Finn|Huckleberry Finn|Huck Finn, The Adventures of Tom Sawyer|Tom Sawyer, Fahrenheit 451, Brave New World, Don Quixote, Crime and Punishment, The Scarlet Letter, Anna Karenina, Les Misérables|Les Miserables, Gone with the Wind, Treasure Island, Robinson Crusoe, Gulliver's Travels, The Picture of Dorian Gray, Alice's Adventures in Wonderland|Alice in Wonderland, The Count of Monte Cristo, The Three Musketeers, Slaughterhouse-Five, Catch-22, Beloved, Heart of Darkness, The Hobbit, Sense and Sensibility, Emma, Oliver Twist, The Sun Also Rises, A Farewell to Arms, For Whom the Bell Tolls
@@ -96,10 +76,34 @@
 85: Tristram Shandy, Pamela, Clarissa, Tom Jones, Moll Flanders, Candide, Dead Souls, Fathers and Sons, The Idiot, Demons, Notes from Underground, The Master and Margarita, Doctor Zhivago, The Magic Mountain, Buddenbrooks, Steppenwolf, Siddhartha, The Tin Drum, In Search of Lost Time, Germinal, Nana, The Red and the Black, The Charterhouse of Parma, Dream of the Red Chamber, The Tale of Genji, Journey to the West, Water Margin, Romance of the Three Kingdoms, Nostromo, Lord Jim, Jude the Obscure, Far from the Madding Crowd, The Mayor of Casterbridge, Silas Marner, The Mill on the Floss, Barchester Towers, The Moonstone, The Woman in White, Erewhon, Billy Budd, Absalom\, Absalom!, Light in August, Nightwood, Gravity's Rainbow, Infinite Jest
 100: The Old Man and the Sea :: An old man, a giant marlin and a very bad week. The goldfish considers it a horror story.
 
-? Name a fictional detective
-10: Sherlock Holmes|Sherlock|Holmes, Scooby-Doo|Scooby Doo|Scoob|Scooby|Scoobert Doo, Nancy Drew, Hercule Poirot|Poirot
-15: Ace Ventura|Ventura, Inspector Gadget, Detective Pikachu
-30: Miss Marple|Jane Marple, Columbo|Frank Columbo|Lieutenant Columbo, Philip Marlowe|Marlowe, Sam Spade, Benoit Blanc, Dick Tracy, Thomas Magnum|Magnum P.I.|Magnum, Jessica Fletcher, The Hardy Boys|Frank Hardy|Joe Hardy, Encyclopedia Brown|Leroy Brown, Inspector Clouseau|Clouseau, Veronica Mars, Adrian Monk|Monk, Shawn Spencer, Mike Hammer, Harry Bosch, Alex Cross|Alexander Cross|Alexander Isaïe Cross, Rust Cohle, Dirty Harry|Harry Callahan, Frank Drebin|Drebin, Olivia Benson, Velma Dinkley|Velma|Velma Daisy Dinkley, Temperance Brennan, Richard Castle|Castle|Rick Castle|Richard Edgar Castle|Richard Alexander Rodgers, Kojak, Baretta
-60: Nick Charles|Nora Charles, Lord Peter Wimsey|Peter Wimsey, Father Brown, Dirk Gently|Dirk Cjelli, Easy Rawlins, Kinsey Millhone, V.I. Warshawski, Inspector Morse|Morse|Endeavour Morse|Inspector Endeavour Morse, Inspector Rebus|Rebus, Inspector Lynley, Jane Tennison, Kurt Wallander|Wallander, Lisbeth Salander, Spenser, Travis McGee, Nero Wolfe, Ellery Queen|Ellery Queen character, Charlie Chan, Mr. Moto, Perry Mason, Jim Rockford|Rockford|James Rockford|James Scott Rockford, L|L Lawliet|Lyuzaki Lawliet, Conan Edogawa|Detective Conan|Edogawa Conan, Cam Jansen, Harriet the Spy, Basil of Baker Street|Basil, Sam & Max|Sam and Max, Cole Phelps, Rick Deckard|Deckard, Dale Cooper|Agent Cooper, Fox Mulder|Mulder, Dana Scully|Scully|Dana Katherine Scully|Special Agent Dana Scully, Sonny Crockett, Ricardo Tubbs
-85: Sergeant Cuff, Inspector Bucket, Albert Campion, Roderick Alleyn, Hildegarde Withers, Judge Dee, Jules Maigret|Maigret|Commissaire Maigret|Jules Amedée François Maigret, Arsène Lupin|Arsene Lupin, Sexton Blake, Bulldog Drummond, Lew Archer, Continental Op, Flambeau|Hercule Flambeau, Precious Ramotswe|Mma Ramotswe, Aurelio Zen, Salvo Montalbano|Montalbano|Inspector Montalbano|Inspector Salvo Montalbano, Adam Dalgliesh, Cordelia Gray, Vera Stanhope, Jimmy Perez, Saga Norén|Saga Noren, Sarah Lund, Harry Hole, Erast Fandorin|Fandorin, Kogoro Akechi|Akechi Kogorō, Bernie Gunther, Cormoran Strike|Cormoran Blue Strike, Tom Barnaby|Thomas Geoffrey Barnaby, Jonathan Creek, Gil Grissom, Horatio Caine
-100: C. Auguste Dupin|Auguste Dupin|Dupin :: Edgar Allan Poe's sleuth, from 1841. He beat Sherlock Holmes by decades.
+? Name something you'd find in a fairy tale
+10: Princess, Castle, Dragon, Witch, Prince, Fairy godmother|Fairy, Glass slipper|Slipper
+15: Poisoned apple|Poison apple|Apple, Magic mirror|Mirror
+30: Wolf|Big bad wolf, Giant, Troll, Ogre, Frog|Frog prince, King, Queen, Evil stepmother|Stepmother, Tower, Pumpkin|Pumpkin carriage, Carriage, Spinning wheel, Beanstalk, Magic beans|Beans, Gingerbread house, Breadcrumbs, Knight, Sword, Crown, Spell, Curse, True love's kiss|Kiss, Happily ever after, Once upon a time, Magic wand|Wand, Unicorn, Elves|Elf, Seven dwarfs|Dwarfs|Dwarves|Dwarf, Mermaid, Golden goose|Goose, Golden egg, Three bears|Bears, Porridge, Three little pigs|Pigs, Red cape|Red hood|Red riding hood, Huntsman|Woodcutter, Moat, Dungeon, Enchanted forest|Forest, Talking animals
+60: Long hair|Rapunzel's hair|Hair, Spindle, Thorns|Briars, Golden harp|Harp, Straw into gold|Straw, Rumpelstiltskin, Glass coffin, Cottage, Royal ball|Ball, Midnight, Mice, Magic lamp|Lamp, Genie, Magic carpet, Three wishes|Wishes, Billy goats|Three billy goats gruff, Bridge, Riddle, Ugly stepsisters|Stepsisters, Oven, Cauldron, Potion, Toad, Beast, Enchanted rose|Rose, Ugly duckling, Tin soldier, Matches, Red shoes, Snow queen, Puss in Boots, Fairy ring, Wishing well
+85: Seven-league boots, Twelve dancing princesses|Dancing shoes, Goose girl, Water of life, Golden ball, Tinderbox, Talking fish|Fish, Juniper tree, Nightingale, Thumbelina, Walnut shell, Nettle shirts|Nettles, Donkeyskin, Stone soup, Baba Yaga, Hut on chicken legs|Chicken legs, Firebird, Glass mountain, Golden key, Seven ravens, Iron stove, Bearskin, Flax
+100: Pea|Peas :: A real princess felt one through twenty mattresses and twenty feather beds. That's how they could tell.
+
+? Name a magical object from a story
+10: Magic wand|Wand, Magic carpet|Flying carpet|Carpet, Magic lamp|Genie lamp|Lamp, Crystal ball, Broomstick|Broom, Magic mirror|Mirror
+15: Elder Wand, The One Ring|One Ring|Ring
+30: Invisibility cloak|Cloak of invisibility|Cloak, Sorting Hat, Golden Snitch|Snitch, Philosopher's Stone|Sorcerer's Stone, Time-Turner, Marauder's Map, Horcrux, Glass slipper, Ruby slippers, Magic beans, Excalibur, Mjolnir|Thor's hammer, Infinity Gauntlet, Infinity Stones, Lightsaber, Pensieve, Golden fleece, Pandora's box, Enchanted rose|Rose, Spinning wheel, Poisoned apple, Wishing well, Portkey, Deluminator|Put-Outer, Howler, Floo powder, Goblet of Fire, Tom Riddle's diary|Riddle's diary|Diary, Heart of Te Fiti, Magic conch|Magic conch shell, Tesseract, Lasso of Truth, Maui's fish hook|Maui's hook|Fish hook, Magic candle|Candle
+60: Palantír|Palantir, Arkenstone, Phial of Galadriel, Silmaril, Mirror of Erised, Resurrection Stone, Sword of Gryffindor, Felix Felicis|Liquid luck, Polyjuice Potion, Vanishing Cabinet, Death Note, Golden compass|Alethiometer, Subtle knife, Wardrobe, Lucy's cordial|Cordial, Monkey's paw, Bag of holding, Holy Grail|Grail, Golden harp, Sword in the stone, Golden apple, Trident, Aegis, Medusa's head, Helm of darkness|Cap of invisibility, Jumanji, Zathura, Sundrop flower, Golden cap, Auryn, Spindle, Hand of Glory
+85: Vorpal sword, Babel fish, Sampo, Draupnir, Gjallarhorn, Brisingamen, Tarnhelm, Andúril|Anduril|Narsil, Sting, Mithril shirt|Mithril, Cornucopia|Horn of plenty, Winged sandals|Talaria, Caduceus, Kusanagi, Ruyi Jingu Bang|Golden staff, Ring of Gyges, Bottomless purse, Seven-league boots, Tinderbox, Amulet of Samarkand, Dragon pearl, Bag of winds
+100: Remembrall :: Neville's glass ball fills with red smoke when you've forgotten something. A goldfish's would never stop glowing.
+
+? Name a character who can fly
+10: Superman, Peter Pan, Tinker Bell|Tinkerbell, Iron Man, Dumbo, Thor
+15: Harry Potter, Mary Poppins
+30: Wonder Woman, Captain Marvel, Storm, Falcon, Vision, Doctor Strange, Silver Surfer, Supergirl, Green Lantern, Shazam, Starfire, Raven, Invincible|Mark Grayson, Omni-Man, Homelander, Aang, Goku, Vegeta, Wendy|Wendy Darling, Maleficent, Toothless, Spyro, Pegasus, Baymax, Genie, Magic carpet|Carpet, Charizard, Dragonite, Mewtwo, Mew, Rayquaza, Jean Grey, Angel|Archangel, Magneto, Tails, Kirby, Smaug, Falkor, Fawkes, Hedwig, Buckbeak, Zazu, Iago, Glinda, Elphaba|Wicked Witch of the West, Flying monkeys, Santa Claus|Santa, Rudolph, Tooth Fairy, Cupid
+60: Hawkman, Hawkgirl, Martian Manhunter, Black Adam, Atom Eve, Banshee, Rogue, Ultron, War Machine, Nova, Star-Lord|Peter Quill, Wasp, Green Goblin, Vulture, Syndrome, Kiki, Howl, Haku, Danny Phantom, Cosmo, Wanda, Jake Long|American Dragon, Underdog, Mighty Mouse, Astro Boy, Doraemon, Mothra, Rodan, Drogon, Norbert, Koopa Paratroopa|Paratroopa, Lakitu, Boo, Pit, Icarus, Hermes, Valkyries|Valkyrie, Monkey King|Sun Wukong, Revali, Big Chill, Stinkfly, Jetray
+85: Rocketeer, King Ghidorah|Ghidorah, Kaepora Gaebora, Daedalus, Garuda, Hanuman, Nausicaä|Nausicaa, Sentry, Hyperion, Booster Gold, Firestorm, Captain Atom, Human Torch, Sunfire
+100: Buzz Lightyear|Buzz :: Woody says that's not flying, it's falling with style. We're counting it.
+
+? Name an animal character who wears clothes
+10: Mickey Mouse|Mickey, Donald Duck|Donald, Minnie Mouse|Minnie, Goofy, Winnie the Pooh|Pooh, SpongeBob|SpongeBob SquarePants, Peppa Pig|Peppa
+15: Puss in Boots, Paddington|Paddington Bear
+30: Daisy Duck, Scrooge McDuck|Scrooge, Huey, Dewey, Louie, Patrick|Patrick Star, Squidward, Mr. Krabs, Sandy Cheeks|Sandy, Mrs. Puff, Sonic|Sonic the Hedgehog, Bluey, Bingo, Bandit, Po, Tigress, Shifu, Judy Hopps|Judy, Nick Wilde|Nick, Clawhauser, Buster Moon, Johnny, Ash, Rosita, Gunter, Robin Hood, Piglet, Peter Rabbit, Cat in the Hat, Kermit|Kermit the Frog, Miss Piggy, Fozzie Bear|Fozzie, Arthur|Arthur Read, Big Bad Wolf|Wolf, Three little pigs, Freddy Fazbear|Freddy, Hello Kitty, Donkey Kong|DK, Diddy Kong, Fox McCloud|Fox, Crash Bandicoot|Crash, White Rabbit, Jiminy Cricket, Daniel Tiger, Berenstain Bears|Brother Bear|Sister Bear, Stuart Little, Porky Pig, Yogi Bear|Yogi, Isabelle
+60: Mr. Toad|Toad of Toad Hall, Ratty, Mole, Badger, Benjamin Bunny, Jemima Puddle-Duck, Mrs. Tiggy-Winkle, Babar, Celeste, Franklin, Mrs. Brisby, Mr. Fox|Fantastic Mr. Fox, March Hare, Dormouse, Little John, Prince John, Lady Kluck, Br'er Rabbit, Buster Baxter|Buster, Falco, Ratchet, Sly Cooper, Funky Kong, BoJack Horseman|BoJack, Mr. Peanutbutter, Kuromi, My Melody, Pompompurin, Foxy, Chica, Bonnie, Boo-Boo, Huckleberry Hound, Top Cat, Launchpad McQuack|Launchpad, Darkwing Duck, Chip, Dale, Gadget, Basil of Baker Street|Basil, Ratigan, Max Goof|Max, Pete, Clarabelle Cow, Oswald the Lucky Rabbit|Oswald, Corduroy, Boots, Frog and Toad, Chief Bogo, Flash
+85: Rupert Bear, Bill the Lizard, Brer Fox, Brer Bear, Uncle Wiggily, Bucky O'Hare, Danger Mouse, Penfold, Count Duckula, SuperTed, Lowly Worm, Huckle Cat, Angelina Ballerina, Lilly, Chrysanthemum, Horace Horsecollar, Monterey Jack, Kit Cloudkicker, Dr. Dawson, Katerina Kittycat, Little Critter, Squirrel Nutkin, Samuel Whiskers, Mrs. Frisby
+100: Tom Nook|Nook :: The Animal Crossing tanuki who sells you a house, then a bigger one. Everybody owes him bells.

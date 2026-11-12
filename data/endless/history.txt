@@ -1,13 +1,5 @@
-? Name an ancient civilization
-~drop ancient,the,civilization
-10: Egyptians|Egypt|Egyptian, Romans|Rome|Roman, Greeks|Greece|Greek, Aztecs|Aztec, Mayans|Maya|Mayan
-15: Atlantis
-30: Incas|Inca, Persians|Persia|Persian, Mesopotamia|Mesopotamian, Babylonians|Babylon|Babylonian, Sumerians|Sumer|Sumerian, Phoenicians|Phoenicia, Assyrians|Assyria, China|Chinese|Han dynasty, Indus Valley, Olmecs|Olmec, Carthage|Carthaginians, Celts, Hittites, Spartans|Sparta, Etruscans, Vikings
-60: Minoans|Minoan, Mycenaeans|Mycenae, Akkadians|Akkad, Nubians|Nubia|Kush, Khmer, Harappan, Zapotec, Toltec, Moche, Nazca|Nasca, Scythians, Parthians, Hebrews, Aksum|Axum, Anasazi|Ancestral Puebloans, Mississippian, Shang dynasty|Shang, Zhou dynasty|Zhou, Qin dynasty|Qin, Elamites, Gauls
-85: Hurrians, Urartu, Lydians, Kassites, Chaldeans, Medes, Nabataeans, Sabaeans|Sheba, Dilmun, Mixtec, Chavín|Chavin, Wari, Tiwanaku, Chimú|Chimu, Caral, Norte Chico, Jomon, Kushan, Maurya, Gupta, Thracians, Dacians, Illyrians, Philistines, Garamantes, Hyksos, Ebla, Mitanni, Amorites, Hopewell, Cahokia, Teotihuacan
-100: Sea Peoples :: Mysterious raiders who helped wreck Bronze Age empires around 1200 BC. Nobody knows who they were.
-
 ? Name a US First Lady
+~retired
 ~last
 10: Michelle Obama, Jackie Kennedy|Jacqueline Kennedy|Jackie O|Jacqueline Kennedy Onassis|Jackie Bouvier Kennedy|Jackie Kennedy Onassis, Hillary Clinton, Eleanor Roosevelt|Anna Roosevelt|Anna Eleanor Roosevelt|First Lady of the world, Melania Trump|Melania|Melania Knauss|Melania Knauss-Trump, Jill Biden|Dr. Biden|FLOTUS Biden|Dr. Jill Biden
 15: Martha Washington|Martha Custis|Martha Dandridge, Abigail Adams|Abigail Smith
@@ -34,24 +26,6 @@
 85: Football|Soccer, Jenkins' Ear, Pastry, Pig, Bucket, Kalmar, Anglo-Zanzibar, Whiskey Rebellion, Toledo, Aroostook, Honey, Chaco, Thousand Days, Paraguayan, Taiping Rebellion, Boxer Rebellion, Peasants', Hussite, Scottish Independence, Seminole, Sino-Japanese, Balkan
 100: Emu :: In 1932 the Australian military went after emus with machine guns. The emus won.
 
-? Name a pirate, real or fictional
-~drop captain,the
-10: Blackbeard, Hook|Captain Hook, Jack Sparrow, Kidd|William Kidd
-15: Long John Silver, Dread Pirate Roberts
-30: Henry Morgan|Morgan, Anne Bonny, Mary Read, Calico Jack|Jack Rackham, Barbossa|Hector Barbossa|Barbarossa, Bartholomew Roberts|Black Bart, Jean Lafitte, Davy Jones, Francis Drake, Monkey D. Luffy|Luffy, One-Eyed Willy
-60: Henry Every|Long Ben, Charles Vane, Benjamin Hornigold, Edward Low, Ching Shih|Zheng Yi Sao, Grace O'Malley, Walter Raleigh, Thomas Tew, Sam Bellamy|Black Sam Bellamy, Flint, Will Turner, Elizabeth Swann, Smee, Guybrush Threepwood, Redbeard, Haddock, Roronoa Zoro|Zoro, Nami, Pugwash, Olivier Levasseur, William Dampier, Patchy
-85: François l'Olonnais|L'Olonnais, Black Caesar, Rachel Wall, Jacquotte Delahaye, Sayyida al-Hurra, Anne Dieu-le-Veut, Israel Hands, Howell Davis, Thomas Cavendish, Peter Easton, Jan Janszoon, Piet Hein, Klaus Störtebeker, Koxinga|Zheng Zhilong, Dragut, Roche Braziliano, Ned England, Henry Jennings, Samuel Burgess
-100: Stede Bonnet :: A rich plantation owner with no sailing experience who simply bought a ship and became "the gentleman pirate."
-
-? Name a figure from the Wild West
-~last
-10: Billy the Kid|Kid Antrim|Henry Antrim|Henry McCarty, Wyatt Earp, Jesse James, Buffalo Bill|Buffalo Bill Cody|William Cody|Bill Cody|William Frederick Cody, Annie Oakley|Phoebe Ann Moses, Wild Bill Hickok|Wild Bill
-15: John Wayne, Clint Eastwood|Clinton Eastwood Jr.
-30: Doc Holliday|Dr. John Holliday, Butch Cassidy|George Cassady|Robert Leroy Parker, Sundance Kid|The Sundance Kid|Harry Longabaugh|Harry Alonzo Longabaugh, Calamity Jane|Martha Jane Canary|Martha Jane Cannary, Davy Crockett, Geronimo|Mirko Šenkovski, Sitting Bull|Tatanka Iyotanka|Tȟatȟáŋka Íyotake|Chief Sitting Bull, Crazy Horse|Among the Trees|His-Horse-Is-Crazy, George Custer|General Custer|George Armstrong Custer, Pat Garrett|Patrick Garrett|Pat Floyd Garrett|Patrick Floyd Jarvis Garrett, Bat Masterson|William Masterson|William Barclay Masterson, Belle Starr|Myra Maybelle Shirley Starr|Myra Maybelle Shirley Reed Starr, Kit Carson|Christopher Carson|Christopher Houston Carson, Daniel Boone
-60: Black Bart|Bartholomew Roberts|John Roberts, Cole Younger|Coleman Younger|Thomas Coleman Younger, John Wesley Hardin, Sam Bass, Judge Roy Bean|Roy Bean|Phantly Roy Bean\, Jr., Pearl Hart|Pearl Taylor, Tom Horn, Chief Joseph|Joseph Buruzagia|Heinmot Tooyalaket|Joseph the Younger, Red Cloud|Mahpiya Luta|Makhpiya-luta|Chief Red Cloud, Cochise, Ike Clanton|Joseph Isaac Clanton, Johnny Ringo|John Peters Ringo, Stagecoach Mary|Mary Fields, Levi Strauss|Löb Strauß, Pawnee Bill|Gordon W. Lillie|Gordon William Lillie, Kid Curry|Harvey Logan|Harvey Alexander Logan, Etta Place|Ethel Place, Charles Goodnight, Emmett Dalton|Em Dalton, Virgil Earp|Virgil Walter Earp, Morgan Earp|Morgan Seth Earp, Seth Bullock, Al Swearengen|Ellis Alfred Swearengen
-85: Cattle Annie|Anna Emmaline McDoulet Frost Roach, Little Britches, Rose Dunn|Rose of Cimarron|Rose Elizabeth Dunn|Rose of the Cimarron, Laura Bullion, Elfego Baca, Commodore Perry Owens, Heck Thomas, Bill Tilghman|William Tilghman|William M. Tilghman|William Matthew Tilghman, Chris Madsen, Nat Love|Deadwood Dick, Bill Pickett, Black Jack Ketchum|Tom Ketchum|Thomas Edward Ketchum, Clay Allison|Robert Clay Allison|Robert A. Clay Allison, Ben Thompson, Luke Short, Dallas Stoudenmire, Temple Houston|Temple Lea Houston, Isaac Parker|Hanging Judge, Cattle Kate|Ella Watson|Elizabeth Watson|Ella Carmichael|Ella C. Carmichael, Liver-Eating Johnson|Jeremiah Johnson|John Johnson|Jack Johnson|John Jeremiah Garrison Johnston, Washakie|Chief Washakie
-100: Bass Reeves :: Born enslaved, he became one of the first Black deputy US marshals. He may have inspired the Lone Ranger.
-
 ? Name a civil rights leader or activist
 ~last
 10: Martin Luther King Jr.|MLK|Martin Luther King, Rosa Parks|Rosa McCauley|Rosa McCauley Parks|Rosa Louise McCauley, Malcolm X|Malcolm Little|Malcolm Shabazz|Malachi Shabazz, Harriet Tubman|Minty Ross|Black Moses|Araminta Ross, Mahatma Gandhi|MK Gandhi|Mohandas K Gandhi
@@ -61,26 +35,8 @@
 85: Diane Nash|Diane Judith Nash, Septima Clark|Septima Poinsette Clark|Clark Septima, Whitney Young|Whitney M. Young Jr|Whitney Moore Young|Whitney Moore Young Jr., Roy Wilkins|Roy Ottoway Wilkins, Fred Shuttlesworth|Frederick Lee Shuttlesworth, Daisy Bates, James Meredith, Viola Liuzzo|Viola Fauver Liuzzo, Constance Baker Motley, Pauli Murray|Anna Pauline|Anna Pauline Murray, Mary Church Terrell|Mary Eliza Church|Mary Eliza Church Terrell, Carrie Chapman Catt|Carrie Catt|Carrie Lane|Carrie Chapman, Inez Milholland|Inez Milholland Boissevain, Lucy Stone|Lucy Stone Blackwell, Vine Deloria Jr.|Vine Deloria, Dennis Banks|Dennis James Banks, Larry Itliong|Modesto Dulay Itliong|Seven Fingers Itliong|Modesto Itliong y Dúlay, Philip Vera Cruz|Philip Villamin Vera Cruz, Fred Korematsu|Fred Toyosaburo Korematsu, Mary McLeod Bethune|Mary McLeod|Mary Jane McLeod Bethune, Barbara Gittings, Frank Kameny|Franklin E. Kameny, Mamie Till-Mobley|Mamie Till|Mamie Carthan|Mamie Till Bradley|Mamie Elizabeth Carthan, E.D. Nixon, Homer Plessy|Homer Adolph Plessy|Homère Patrice Adolphe Plessy, Thich Nhat Hanh|Nhat Hanh|Phùng Xuân|Trừng Quang, Bella Abzug|Bella Savitzky Abzug, Shirley Chisholm
 100: Claudette Colvin|Claudette Austin :: She refused to give up her bus seat nine months before Rosa Parks. She was 15.
 
-? Name a US president
-~last
-~drop president
-10: George Washington|American Fabius|American Cincinnatus|Father of the United States, Abraham Lincoln|Abe Lincoln|Uncle Abe, Barack Obama, Donald Trump, Joe Biden|Joseph Robinette Biden Jr., John F. Kennedy|JFK|JF Kennedy, Thomas Jefferson
-15: Millard Fillmore, Chester A. Arthur|Chester Arthur|C. A. Arthur
-30: Ronald Reagan, Bill Clinton|William Clinton|William J. Clinton|William Jefferson Blythe, George W. Bush|George Bush|Bush, Theodore Roosevelt|Teddy Roosevelt|Roosevelt|T. Roosevelt\, Jr., Franklin D. Roosevelt|FDR|Franklin Roosevelt, Richard Nixon|Dick Nixon|Tricky Dick|R. M. Nixon, Jimmy Carter|James E. Carter\, Jr., Ulysses S. Grant|Ulysses Grant|U.S. Grant|General Grant|Hiram Ulysses Grant, Dwight D. Eisenhower|Dwight Eisenhower|Ike|Ike Eisenhower, Harry S. Truman|Harry Truman|H. S. Truman, Gerald Ford|G. R. Ford|Leslie King|Leslie Lynch King, John Adams, Andrew Jackson|Old Hickory, James Madison, George H. W. Bush|George HW Bush|Bush Sr.|GHW Bush|H W Bush, Lyndon B. Johnson|LBJ|Lyndon Johnson|L. B. Johnson|Lyndon Baines Johnson, Woodrow Wilson|T. W. Wilson|Thomas W. Wilson|Thomas Woodrow Wilson
-60: James Monroe, John Quincy Adams, Herbert Hoover|Herbert Clark Hoover, Calvin Coolidge|Silent Cal|J. C. Coolidge|Silent Cal Coolidge, William Howard Taft|W. Taft|W. H. Taft|William Taft, William McKinley|W. McKinley\, Jr., James K. Polk|James Polk|J. Polk|J. K. Polk|James Knox Polk, Andrew Johnson, Warren G. Harding|Warren Harding|W. G. Harding|Warren Gamaliel Harding, Grover Cleveland|Stephen G. Cleveland|Stephen Grover Cleveland|Stephen Grover Cleveland Jr., James A. Garfield|James Garfield|J. A. Garfield, Zachary Taylor|Old Rough and Ready, Martin Van Buren|Van Buren|Old Kinderhook|Martin van Ruin|The Mistletoe Politician
-85: Rutherford B. Hayes|Rutherford Hayes|R. B. Hayes|Rutherford Birchard Hayes, John Tyler, Franklin Pierce, James Buchanan|J. Buchanan\, Jr., Benjamin Harrison
-100: William Henry Harrison|Old Tippecanoe|W. H. Harrison|William H. Harrison :: Gave the longest inaugural address ever, then served the shortest presidency: 31 days.
-
-? Name a king or queen from history
-~drop king,queen
-10: Elizabeth I|Queen Elizabeth|Elizabeth|Elizabeth II, Henry VIII|Henry the Eighth|Henry VIII of England|Henry Tudor, Cleopatra|Cleopatra VII|Cleopatra Philopator|Cleopatra VII Philopator, Marie Antoinette|Maria Antonia|The Austrian Woman|Mary Antionette Queen, George III|King George, Victoria|Victoria Hanover|Alexandrina Hanover|Victoria Alexandrina
-15: Arthur, Elvis|Elvis Presley
-30: Tutankhamun|King Tut|Tut, Louis XIV|Sun King|Louis the Fourteenth|Louis XIV of France|Louis le Grand|Louis the Great, Charlemagne, Alexander the Great|Alexander|Alexander III|Alexandros III, William the Conqueror|William I|William of Normandy|William the Bastard, Richard the Lionheart|Richard I|Richard I of England|Lionheart|Cœur de Lion, Mary Queen of Scots|Mary Stuart|Mary Stewart|Queen of Scots Mary, Mary I|Bloody Mary, Catherine the Great|Catherine II of Russia|Catherine II|Catharine II., Nefertiti, Charles III|Charles, Ramses II|Ramses|Ramesses, Solomon|Salamon Arpád\, King of Hungary, David|David Tiberios|David Tiberius, Herod, Louis XVI|Louis XVI of France|Louis Capet|Louis I of Navarre, Hatshepsut, Isabella|Isabella I of Castile|Isabella of Spain|Isabel of Castile, Ferdinand, Peter the Great|Peter I|Pyotr Velikiy|Peter I of Russia, James I|James|James I of Scotland|James I\, King of Scots, Anne Boleyn|Anne Bullen|Anna Bolina|Ana la mona
-60: Alfred the Great|Alfred|King Aelfred|Alfred the Wise, Eleanor of Aquitaine|Aliénor d'Aquitaine|Aliénor of Aquitaine|Queen Eleanor of France, Boudicca, Frederick the Great|Frederick II of Prussia|Frederick II|Father Fritz, Genghis Khan|Tai Zu|Genghis|Yuan Taizu, Kublai Khan|Shi Zu|Kublai|Yuán Shìzǔ, Nicholas II, Philip II, Richard III, Edward VIII|Prince Edward|David Windsor|Edward Windsor, John, Charles I, Henry V, Anne|Anne of Austria|Ana de Austria|Anne d'Autriche, Liliuokalani|Lydia K. Dominis|Queen Lydia Liliuokalani, Kamehameha, Moctezuma|Montezuma, Ivan the Terrible|Ivan IV|Ivan IV Vasilyevich, Haile Selassie|Ras Tafari|Tafari Makonnen|Lij Tafari Makonnen, Akhenaten|Amenophis IV|Amenhotep IV|Amenhotep mi padre, Cyrus the Great|Cyrus|Cyrus II|Kabir Kurushi, Xerxes|Xerxes the Great|Xerxes I of Persia, Darius|Darius the Mede|Gobryas I., Leonidas|Leonidas the Brave, Hammurabi, Nebuchadnezzar, Macbeth|Mac Bethad mac Findlaich, Canute|Cnut|Cnut the Great|Canute the Dane, Wenceslas, Shaka|Shaka Zulu, Ashoka|Ashok Mahan|Samrat Ashok|Ashoka Mahan
-85: Æthelred the Unready|Aethelred|Æthelræd II|Athelred II|Ethelred II, Wu Zetian|Empress Wu|Wu mei|Wu Zhao|Empress Consort Wu, Zenobia|Julia Augusta|Septima Zenobia|Zenobia Augusta, Seondeok|Queen Seondeok of Silla|Sŏndŏk\, Queen of Korea, Njinga, Ranavalona, Tamar of Georgia, Christina of Sweden|Christina|Queen of Sweden Kristina|Queen of Sweden Christina, Gustavus Adolphus|Gustavus Adolphus of Sweden|Gustav Adolf|Gustav II Adolf, Harald Hardrada|Harald III of Norway|Harald Fairhair|Harald III Sigurdsson, Pepin the Short|Pepin|Pepin III|Pippin III, Charles the Bald|Carlus Calvus|Carolus Calvus, Louis the Pious|Louis the Fair|Ludovicus Pius|Hludovicus Pius, Ludwig II, Lady Jane Grey, Sejong|Sejong the Great|Li Tao|the Great Seijong, Thutmose, Khufu|Khnum-Khufu, Piye, Theodora, Ahmose, Menelik II|Aba Dagnew|Sahle Mariam|Sahle Maryam, Olaf|Olaf of Scotland|Amblaih mac Idulb|Amlaib mac Iduilb, Brian Boru|Brian Boroihme, Llywelyn, Robert the Bruce|Robert I of Scotland|Robert I|Robert Bruce, Kenneth MacAlpin, Puyi|Henry Puyi|Kang-te Emperor|Aixinjueluo Puyi, Cixi|Empress Dowager Cixi|Tzu Hsi|Cixi Taihou|Empress Cixi
-100: Mansa Musa|Musa I|Kankou Moussa|Musa I of Mali :: Maybe the richest person in history. His 1324 pilgrimage handed out so much gold it crashed Cairo's market.
-
 ? Name a philosopher
+~retired
 ~last
 10: Socrates, Plato, Aristotle|Aristo|Pseudo-Aristotle|Pseudo Aristotele, Confucius, Friedrich Nietzsche|Friedrich Wilhelm Nietzsche
 15: René Descartes|Rene Descartes
@@ -90,6 +46,7 @@
 100: Diogenes|Diogenes of Sinope|Diogenes the Cynic :: He lived in a large jar and reportedly told Alexander the Great to get out of his sunlight.
 
 ? Name a Nobel Peace Prize winner
+~retired
 ~last
 10: Barack Obama, Martin Luther King Jr.|MLK|Martin Luther King, Nelson Mandela|Father of the Nation, Mother Teresa|Mary Teresa Bojaxhiu|Agnes Gonxha Bojaxhiu|Saint Teresa of Calcutta, Malala Yousafzai|Malala
 15: Al Gore|Albert Gore|Albert Gore Jr.|Albert Arnold Gore
@@ -98,11 +55,50 @@
 85: Jane Addams|Jane Laura Addams|Laura Jane Addams, Emily Balch|Emily Greene Balch, Cordell Hull, Linus Pauling|Linus Carl Pauling, Ralph Bunche|Ralph Johnson Bunche, Lester Pearson|Mike Pearson|Lester Bowles Pearson, Dag Hammarskjöld|Dag Hammarskjold|tenia cancer en el seno, René Cassin|Rene Cassin|Rene-Samuel Cassin, Norman Borlaug, Andrei Sakharov, Seán MacBride|Sean MacBride, Betty Williams|Elisabeth Smyth|Elizabeth Williams, Mairead Corrigan, Alfonso García Robles, Alva Myrdal, Óscar Arias|Oscar Arias, Jody Williams, José Ramos-Horta|Jose Ramos-Horta|José Manuel Ramos Horta, Carlos Belo, Bertha von Suttner|B. Oulot|Countess Kinsky|B. Oulot\, Jemand, Aristide Briand|Aristide Pierre Henri Briand, Frank Kellogg|Frank Billings Kellogg, Elihu Root|Hon. Elihu Root, Henri Dunant|Anrī Dyunan|Sodabeh Dunant|J. Henry Dunant, Frédéric Passy|Frederic Passy, Albert Lutuli|Albert Luthuli|Albert John Mvumbi Luthuli|Mvumbi Lutuli|Mvumbi Luthuli, Mohamed ElBaradei|Mohamed Mostafa ElBaradei|Mohamed Mustafa ElBaradei, Martti Ahtisaari|Martti Oiva Kalevi Ahtisaari, OPCW, Ales Bialiatski|Ales Viktaravich Bialiatski, Memorial|Memorial International|Memorial Human Rights Centre, Nihon Hidankyo, ICAN, Pugwash
 100: Lê Đức Thọ|Le Duc Tho :: The only person ever to turn down the Nobel Peace Prize, in 1973.
 
-? Name a famous ship
-~drop hms,rms,uss,ss,css,the,ship
-10: Titanic|Royal Mail Steamship Titanic, Mayflower, Santa Maria|nao Santa Maria|caravel Santa Maria, Noah's Ark|Ark
-15: Black Pearl, Flying Dutchman, Minnow
-30: Lusitania, Bismarck|German battleship Bismarck, Arizona, Queen Mary, Niña|Nina, Pinta, Beagle, Edmund Fitzgerald|The Fitz, Constitution|Old Ironsides, Queen Elizabeth 2|QE2, Exxon Valdez, Poseidon, Mary Rose, Yamato, Enterprise|PCU Enterprise, Andrea Doria, Britannic|MV Britannic|RMMV Britannic, Monitor, Merrimack|Virginia, Maine, Endurance, Cutty Sark
-60: Bounty, Victory, Golden Hind, Pequod, Nautilus, Calypso, Mary Celeste, Hispaniola, Argo, Carpathia, Californian, Olympic, Vasa, Amistad|La Amistad, Missouri, Indianapolis, Graf Spee, Tirpitz|German battleship Tirpitz, General Belgrano|ARA General Belgrano, Queen Anne's Revenge, Rainbow Warrior, Costa Concordia|MS Costa Concordia, Ever Given, Dawn Treader, Orca, Kon-Tiki, Mauretania, Hood, H.L. Hunley|Hunley, Whydah|Whydah Gally, Nimitz|Nimitz-class aircraft carrier, Akagi, Sea Shepherd
-85: Erebus, Terror, Fram, Discovery, Nimrod, Terra Nova, Belgica|RV Belgica, Aurora, Resolute, Cospatrick, Dunbar, Arbella, Speedwell, Susan Constant|Sarah Constant, Godspeed, Clotilda, Flor de la Mar, Nuestra Señora de Atocha|Atocha, Batavia, Medusa|Méduse, Zong, Empress of Ireland, Sultana, Eastland, Vestris, Wilhelm Gustloff|MV Wilhelm Gustloff, Doña Paz, Sewol|MV Sewol, Great Eastern, Savannah, Turtle, Thresher, Scorpion, Kursk, Liberty, Pueblo, Mayaguez, Cole, Bluenose, America, Intrepid
-100: Essex :: A sperm whale rammed and sank this whaleship in 1820, which inspired Moby-Dick.
+? Name something people used before electricity
+10: Candles|Candle, Fire|Campfire, Oil lamp, Lantern, Fireplace, Horses|Horse
+15: Torch, Sundial
+30: Washboard, Butter churn|Churn, Well|Water well, Bucket, Outhouse, Chamber pot, Hand pump|Water pump|Pump, Kerosene lamp|Kerosene, Gas lamp|Gaslight|Gas lights, Matches, Flint and steel|Flint, Abacus, Quill pen|Quill, Inkwell|Ink, Typewriter, Letters|Mail, Pony Express, Carrier pigeon|Pigeon, Horse and buggy|Buggy|Carriage|Wagon, Covered wagon, Sailboat|Sails, Windmill, Water wheel|Waterwheel, Hand fan|Fan, Broom, Clothesline, Root cellar|Cellar, Smokehouse, Spinning wheel, Loom, Needle and thread|Needle, Hourglass, Pendulum clock|Clock, Pocket watch, Bellows, Cast-iron skillet|Skillet|Cast iron, Kettle, Wood stove|Stove, Mortar and pestle, Hand saw|Saw, Plow, Oxen|Ox, Mule, Bicycle, Steam engine, Steam train|Train
+60: Icehouse, Ice block|Block of ice|Ice, Whale oil, Tallow, Hearth, Warming pan|Bed warmer, Sad iron|Flat iron|Iron, Mangle, Wringer, Washtub, Springhouse|Spring house, Lamplighter, Town crier, Semaphore, Smoke signals, Water clock, Candle clock, Slide rule, Slate, Chalkboard, Gramophone|Phonograph, Music box, Player piano, Hand crank, Treadle sewing machine|Treadle, Carpet beater|Rug beater, Tinderbox, Grist mill|Mill, Sickle, Scythe, Salt|Salting
+85: Rushlight, Betty lamp, Argand lamp, Camphene, Candle snuffer|Snuffer, Spermaceti, Quern|Hand mill, Dolly peg|Posser, Heliograph, Optical telegraph, Zoetrope, Magic lantern, Stereoscope, Camera obscura, Astrolabe, Sextant, Pie safe, Firkin, Larder, Trivet, Dutch oven, Turnspit|Spit, Turnspit dog, Knocker-up, Linkboy|Link boy
+100: Icebox|Ice box :: A wooden cabinet kept cold by a block of ice the iceman delivered. Some grandparents still call the fridge this.
+
+? Name something a cowboy would carry
+10: Lasso|Lariat|Rope, Revolver|Gun|Pistol|Six-shooter, Cowboy hat|Hat, Canteen, Saddle, Rifle
+15: Harmonica, Guitar
+30: Bandana|Bandanna|Neckerchief, Spurs, Boots|Cowboy boots, Bullwhip|Whip, Pocketknife|Knife|Bowie knife, Bedroll, Saddlebags|Saddlebag, Holster, Bullets|Ammo|Ammunition, Coffee|Coffee pot, Beans|Can of beans, Beef jerky|Jerky, Matches, Blanket, Map, Compass, Lantern, Water, Branding iron, Badge, Horse, Chaps, Slicker|Rain slicker|Duster, Gloves, Bible, Deck of cards|Cards, Shotgun, Gold|Gold nuggets
+60: Colt, Winchester, Hobbles, Picket rope|Picket pin, Lead rope, Halter, Bridle, Reins, Curry comb|Currycomb, Hoof pick, Horseshoes|Horseshoe, Tin cup, Frying pan, Dutch oven, Sourdough starter|Sourdough, Hardtack, Flour, Bacon, Tarp, Tobacco pouch|Pouch, Pocket watch, Fiddle, Banjo, Snakebite kit, Flask, Saddle blanket, Wanted poster, Dice, Fence pliers|Wire cutters, Scarf
+85: Romal, Quirt, Reata|Riata, Mecate, Bosal, Hackamore, Tapaderos|Taps, Catch rope, War bag|Possibles bag, Pommel bag, Cantle bag, Running iron, Pigging string|Piggin string, Bull rope, Rosin, Chinks, Bota bag|Bota, Arbuckles' coffee|Arbuckles, Fence stretcher, Saddle soap
+100: Wild rag|Wildrag|Wild rags|Silk scarf :: The big silk scarf working cowboys tie on. Warm in a blizzard, cool in July, a dust mask on the trail.
+
+? Name a job that doesn't exist anymore
+10: Milkman, Blacksmith, Switchboard operator|Telephone operator|Operator, Elevator operator, Lamplighter, Town crier
+15: Knight, Court jester|Jester
+30: Iceman|Ice delivery man, Chimney sweep, Telegraph operator|Telegrapher, Paperboy|Paper boy|Newsboy, Pony Express rider|Pony Express, Stagecoach driver, Gladiator, Scribe, Executioner, Video store clerk|Blockbuster employee, Toll booth operator|Toll collector, Gas station attendant, Soda jerk, Rat catcher|Ratcatcher, Typist, Typesetter, Projectionist, Film developer|Photo developer, Door-to-door salesman, Encyclopedia salesman, Alchemist, Squire, Highwayman, Coachman|Carriage driver, Ice cutter|Ice harvester, Milkmaid
+60: Human computer|Computer, Rag-and-bone man, Knocker-up, Lector, Leech collector, Body snatcher|Resurrectionist, Phrenologist, Footman, Scullery maid, Radio actor, Typewriter repairman, Whaler, Telegram boy|Telegram messenger, Log driver|River driver, Wheelwright, Tanner, Chandler|Candlemaker, Herald, Plague doctor, Barber surgeon, Bloodletter, Food taster|Royal food taster, Cabin boy
+85: Groom of the stool, Whipping boy, Powder monkey, Linkboy|Link boy, Mudlark, Pure finder, Tosher, Toad eater, Gong farmer, Fuller, Jongleur, Sin eater, Crossing sweeper, Night soil man|Night soil collector, Water carrier, Hurrier, Breaker boy, Lamp trimmer
+100: Pinsetter|Pin setter|Pinboy|Pin boy|Pinspotter :: Before machines did it, bowling alleys paid kids to stand at the end of the lane and reset the pins by hand.
+
+? Name something a pirate would have
+10: Eye patch|Eyepatch|Patch, Parrot, Sword|Cutlass, Pirate ship|Ship, Treasure chest|Treasure|Chest, Peg leg|Wooden leg, Hook|Hook hand
+15: Rum, Jolly Roger|Pirate flag|Flag|Skull and crossbones
+30: Treasure map|Map, Gold coins|Gold, Pirate hat|Hat|Tricorn hat|Tricorn, Cannon|Cannons, Spyglass|Telescope, Pistol|Flintlock, Plank|Walk the plank, Crew, Beard, Earring|Gold earring, Bandana, Compass, Anchor, Rope, Barrel, Boots, Captain's coat|Coat, Gold tooth|Gold teeth, Tattoo|Tattoos, Monkey, Dagger|Knife, Shovel, Island, Jewels|Gems, Rowboat, Crow's nest, Sails, Cannonballs|Cannonball, Musket, Lantern, Message in a bottle|Bottle, Gunpowder, Ship's wheel|Wheel|Helm, Hammock, Brig, Grog
+60: Doubloons, Pieces of eight, Loot|Booty|Plunder, Grappling hook, Boarding axe, Blunderbuss, Letter of marque, Pirate code|Articles|Code, Black spot, Sea shanty|Shanties, Sextant, Hardtack, Weevils, Rats, Barnacles, Cat-o'-nine-tails, Powder monkey, Quartermaster, Cabin boy, Bosun|Boatswain, Bounty|Price on his head, Wanted poster, Lice, Scars|Scar, Rotten teeth|Bad teeth, Ship's cat|Cat
+85: Belaying pin, Marlinspike, Boarding pike, Swivel gun, Chain shot, Grapeshot, Sloop, Brigantine, Galleon, Ditty bag, Sea chest, Ship's log|Logbook, Salmagundi, Bumbo, Dysentery, Yellow fever, Malaria
+100: Scurvy :: Months at sea with no fruit meant no vitamin C. First your gums went, then your teeth.
+
+? Name something from ancient Egypt
+10: Pyramids|Pyramid, Mummies|Mummy, Sphinx|Great Sphinx, Pharaohs|Pharaoh, Hieroglyphics|Hieroglyphs, Nile|Nile River, King Tut|Tutankhamun|Tut
+15: Cleopatra, Cats|Cat
+30: Sarcophagus, Tombs|Tomb, Camels|Camel, Papyrus, Scarab|Scarab beetle, Ankh, Eye of Horus|Eye of Ra, Anubis, Ra, Osiris, Isis, Horus, Set|Seth, Bastet, Thoth, Obelisks|Obelisk, Rosetta Stone, Valley of the Kings, Temples|Temple, Chariots|Chariot, Kohl|Eyeliner, Sand, Desert, Death mask, Book of the Dead, Ramses|Ramesses, Nefertiti, Hatshepsut, Crocodiles|Crocodile, Sobek, Mummification|Embalming, Bandages|Linen, Afterlife, Abu Simbel, Giza, Karnak, Luxor, Memphis, Alexandria, Library of Alexandria, Lighthouse of Alexandria, Scribes|Scribe, Senet, Lotus, Crook and flail, Nemes|Headdress, Bread, Wigs|Wig
+60: Shabti|Ushabti, Natron, Cartouche, Weighing of the heart|Feather of Ma'at|Ma'at, Ptah, Amun|Amun-Ra|Amon, Aten, Akhenaten, Khufu, Step Pyramid|Djoser, Imhotep, Hathor, Sekhmet, Nut, Geb, Apep|Apophis, Bes, Taweret, Khepri, Reed boat|Papyrus boat, Shaduf|Shadoof, Nilometer, Mastaba, Uraeus, Double crown|Pschent, Faience, Curse of the pharaohs|Mummy's curse|Curse, Howard Carter, Sneferu, Bent Pyramid, Red Pyramid, Thebes, Amarna, Ibis, Jackal, Falcon, Cobra|Asp, Ptolemy
+85: Ba, Ka, Akh, Duat, Ammit, Heqet, Wadjet, Nekhbet, Serket, Neith, Hapi, Khnum, Opening of the mouth, Sed festival|Heb-sed, Hyksos, Narmer Palette, Palermo Stone, Book of Gates, Amduat, Pyramid Texts, Coffin Texts, Ostracon|Ostraca, Shendyt, Mehen, Hounds and jackals, Deben, Benben, Sistrum, Menat
+100: Canopic jars|Canopic jar|Canopic :: Four jars for a mummy's lungs, liver, stomach and intestines. The heart stayed in the body.
+
+? Name something you'd see on US money
+10: George Washington|Washington, Abraham Lincoln|Lincoln, Benjamin Franklin|Ben Franklin|Franklin, Bald eagle|Eagle, In God We Trust, Thomas Jefferson|Jefferson
+15: All-seeing eye|Eye|Eye of Providence, Illuminati
+30: Alexander Hamilton|Hamilton, Andrew Jackson|Jackson, Ulysses S. Grant|Grant, White House, Capitol|Capitol building|US Capitol, Lincoln Memorial, Monticello, Independence Hall, Serial numbers|Serial number, Treasury seal|Seal, Signatures|Signature, E Pluribus Unum, United States of America, Liberty, Shield, Stars, Stripes, Numbers|Number, Arrows, Olive branch, Watermark, Security strip|Security thread, Torch, Franklin D. Roosevelt|Roosevelt|FDR, John F. Kennedy|Kennedy|JFK, Sacagawea, Dwight D. Eisenhower|Eisenhower, Susan B. Anthony, Buffalo|Bison, Great Seal, Federal Reserve seal, Year|Date, Mint mark, Federal Reserve Note
+60: Statue of Liberty, Signing of the Declaration of Independence|Declaration of Independence, Novus Ordo Seclorum, Annuit Coeptis, MDCCLXXVI|1776, Thirteen stars|13 stars, Thirteen arrows|13 arrows, Liberty Bell, Inkwell, Quill, Oak branch, Harriet Tubman, State quarters, Mount Rushmore
+85: Bucking horse|Bucking bronco, Moon|Apollo 11, Color-shifting ink, Microprinting, 3D security ribbon|Blue ribbon, Bell in the inkwell, Plate number, Union shield, Indian head|Buffalo nickel, Walking Liberty, Mercury, Morgan dollar, Maya Angelou, Sally Ride, Wilma Mankiller, Keelboat, Peace medal
+100: Pyramid|The pyramid|Unfinished pyramid :: It's on the back of every $1 bill, unfinished, with an eye floating over the top.

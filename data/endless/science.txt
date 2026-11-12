@@ -51,14 +51,6 @@
 85: Risorius, Platysma, Buccinator, Temporalis, Pterygoid, Digastric, Scalene, Splenius, Multifidus, Quadratus lumborum, Pectineus, Tensor fasciae latae, Popliteus, Peroneus|Fibularis, Flexor carpi radialis, Extensor digitorum, Anconeus, Coracobrachialis, Rectus femoris, Vastus intermedius, Obturator, Gemellus, Plantaris, Procerus, Corrugator, Nasalis, Mentalis, Arrector pili, Cremaster, Levator labii superioris alaeque nasi
 100: Stapedius :: The smallest skeletal muscle in your body, about a millimetre long, inside your middle ear.
 
-? Name an invention
-10: Telephone|Phone, Light bulb|Lightbulb, Airplane|Plane, Car|Automobile, Computer, Internet, Wheel
-15: Sliced bread, Fire
-30: Television|TV, Printing press, Radio, Steam engine, Camera, Microwave, Refrigerator|Fridge, Telegraph, Penicillin, Gunpowder, Compass, Paper, Bicycle|Bike, Typewriter, Smartphone|iPhone, Washing machine, Vacuum|Vacuum cleaner, Battery, Clock, Microscope, Telescope, Plastic, Dynamite, Zipper, Velcro, Post-it note|Post-it|Sticky note, Air conditioning|AC, GPS, Elevator, Glasses|Eyeglasses
-60: Cotton gin, Assembly line, Phonograph, Sewing machine, Barbed wire, Transistor, Laser, Escalator, Ballpoint pen|Pen, Safety pin, Paper clip, Can opener, Lawn mower, Dishwasher, Traffic light, Windshield wiper, Seat belt, Parachute, Submarine, Helicopter, Hot air balloon, Pacemaker, X-ray, Vaccine, Anesthesia, Super Glue, Scotch tape|Duct tape, Teflon, Kevlar, Nylon, Frisbee, Slinky, Etch A Sketch, Rubik's Cube, Crayon, Remote control, World Wide Web, Email, Thermometer, Pencil, Eraser, Stapler, Aqualung|Scuba gear, Polaroid
-85: Spinning jenny, Flying shuttle, Seed drill, Abacus, Astrolabe, Sextant, Cash register, Zamboni, Jacuzzi, Segway, Tupperware, Aerosol can, Wite-Out|Liquid Paper, Pull tab, Hula hoop, Ferris wheel, Stirrup, Water wheel, Aqueduct, Archimedes screw, Cotton candy, Ice cream cone, Tea bag, Bottle cap, Shopping cart, Parking meter, Snowmobile, Tesla coil, Geiger counter, Seismograph, Barometer, Slide rule, Bunsen burner, Jet engine, Turing machine, Difference engine, Analytical Engine, Mason jar, Dewey Decimal System
-100: Bubble wrap :: It was invented in 1957 as textured wallpaper. Nobody wanted the wallpaper.
-
 ? Name a chemical element
 10: Oxygen, Hydrogen, Carbon, Gold, Iron, Helium
 15: Plutonium, Uranium
@@ -101,3 +93,11 @@
 60: Ornithology, Herpetology, Pharmacology, Immunology, Hematology, Urology, Gastroenterology, Gynecology, Ophthalmology, Toxicology, Epidemiology, Virology, Bacteriology, Seismology, Volcanology|Vulcanology, Oceanology, Mycology, Horology, Graphology, Climatology, Endocrinology, Rheumatology, Kinesiology, Phrenology, Numerology, Terminology, Methodology, Ideology, Chronology, Hydrology, Audiology, Pulmonology, Anesthesiology, Cryptozoology
 85: Oenology|Enology, Vexillology, Campanology, Oology, Speleology, Nephrology, Proctology, Melittology|Apiology, Dendrology, Malacology, Myrmecology, Pomology, Limnology, Nosology, Odontology, Otolaryngology, Lepidopterology, Cetology, Sinology, Egyptology, Ufology, Hippology, Glaciology, Pedology, Deontology, Eschatology, Scatology, Thanatology, Gerontology, Agrology, Selenology, Tribology, Trichology, Demonology, Conchology
 100: Ichthyology :: The study of fish. The goldfish insists you take notes.
+
+? Name something that glows in the dark
+10: Glow sticks|Glow stick, Stars|Glow-in-the-dark stars, Fireflies|Firefly|Lightning bugs|Lightning bug, Moon, Night light|Nightlight, Phone|Cell phone
+15: Jellyfish, Cat's eyes|Cat eyes
+30: Glowworms|Glow worms|Glowworm, Watch|Glow watch, Clock|Alarm clock, Neon sign|Neon|Neon lights, Lava lamp, TV|Television, Screen|Computer|Monitor, Candle, Flashlight, Exit sign, Lightsaber, Glow-in-the-dark paint|Glow paint, Glow bracelets|Glow necklace, Plankton|Bioluminescent plankton|Sea sparkle, Uranium, Plutonium, Fire|Campfire, Northern lights|Aurora, Christmas lights, Jack-o'-lantern, Light-up shoes|Light-up sneakers, LEDs|LED, Light bulb, Glow slime|Glow-in-the-dark slime, Lava
+60: Glowing mushrooms|Mushrooms|Foxfire, Radium, Phosphorus, Embers|Coals, Highlighter, Scorpions, Squid, Lanternfish, Firefly squid, Comb jelly, GloFish, Glow tape, Kryptonite, Ghosts|Ghost, Will-o'-the-wisp, Fluorite
+85: Uranium glass, Tritium, Tonic water, Dragonfish, Hatchetfish, Vampire squid, Sea pen, Dinoflagellates, Krill, Sea fireflies|Ostracods, Railroad worm, Click beetle, Jack-o'-lantern mushroom, Zinc sulfide, Strontium aluminate
+100: Anglerfish|Angler fish|Angler :: It dangles a glowing lure in front of its own mouth. Snacks swim right in.

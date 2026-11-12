@@ -2,6 +2,17 @@
 // opens the list. Keep lines short and in players' terms. Times are Mountain Time.
 export const CHANGELOG = [
   {
+    date: '2026-11-12',
+    time: '9:10 AM',
+    title: '29 new prompts in Endless',
+    short: '29 new Endless prompts',
+    items: [
+      '29 new prompts in Endless that you beat by thinking sideways, like “Name something you’d find in a fish tank” and “Name a song with a question in the title.”',
+      'Old-school prompts like Queen songs, Supreme Court justices and Best Picture winners are leaving. Past dives that had them still work.',
+      'Upcoming Daily dives swap those out for prompts like Minecraft mobs, Disney villains and Taylor Swift songs.',
+    ],
+  },
+  {
     date: '2026-11-10',
     time: '9:50 PM',
     title: 'Ranked mode is coming',

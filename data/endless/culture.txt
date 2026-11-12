@@ -1,11 +1,3 @@
-? Name a holiday
-10: Christmas, Halloween, Thanksgiving, Easter, New Year's|New Year's Day|New Year's Eve, Valentine's Day, Fourth of July|July 4th|Independence Day
-15: Festivus, Talk Like a Pirate Day
-30: Hanukkah|Chanukah, St. Patrick's Day|Saint Patrick's Day, Labor Day, Memorial Day, Mother's Day, Father's Day, Martin Luther King Jr. Day|MLK Day, Veterans Day, Presidents' Day|Presidents Day, Earth Day, Kwanzaa, Cinco de Mayo, Diwali, Ramadan|Eid, Passover, Yom Kippur, Rosh Hashanah, Mardi Gras, Groundhog Day, April Fools' Day|April Fools, Columbus Day, Black Friday, Juneteenth, Boxing Day, Lunar New Year|Chinese New Year, Day of the Dead|Día de los Muertos|Dia de los Muertos, Arbor Day, Good Friday, Flag Day, Indigenous Peoples' Day
-60: Purim, Sukkot, Eid al-Fitr, Eid al-Adha, Holi, Vesak, Nowruz, Oktoberfest, Bastille Day, Canada Day, Australia Day, Guy Fawkes Night|Bonfire Night, Anzac Day, Remembrance Day, Victoria Day, Epiphany|Three Kings Day, Ash Wednesday, Palm Sunday, Lent, Pentecost, All Saints' Day, St. Nicholas Day, Hogmanay, Waitangi Day, Golden Week, Tet, Songkran, Obon, Mid-Autumn Festival, Dragon Boat Festival, Carnival, Pi Day, May Day, Grandparents Day, Election Day, Cyber Monday, Sweetest Day, Boss's Day, Patriots' Day, Pioneer Day, Kamehameha Day, Star Wars Day|May the Fourth, Hanami
-85: Shavuot, Simchat Torah, Tu BiShvat, Lag BaOmer, Tisha B'Av, Losar, Onam, Pongal, Navratri, Dussehra, Raksha Bandhan, Beltane, Samhain, Yule, Imbolc, Lughnasadh, Walpurgis Night, Midsummer|Midsommar, Krampusnacht, Saint Lucia Day, Twelfth Night, Michaelmas, Whitsun, Shrove Tuesday|Pancake Day, Burns Night, St. Andrew's Day, St. David's Day, St. George's Day, Twelfth of July, Seward's Day, Cesar Chavez Day, Casimir Pulaski Day, Evacuation Day, Towel Day, Bloomsday, Nyepi, Naadam, Inti Raymi, Hari Raya, Vappu, Up Helly Aa, Mischief Night, Lupercalia, Saturnalia
-100: Poisson d'avril|April Fish :: France's April Fools' Day, celebrated by taping paper fish to people's backs. The goldfish approves.
-
 ? Name a hairstyle
 ~drop haircut,cut,hair,hairstyle
 10: Bob, Mohawk, Ponytail, Pixie, Braids|Braid, Bun, Mullet, Buzz
@@ -39,14 +31,6 @@
 60: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat|Sheep, Monkey, Rooster, Dog, Pig
 85: Water buffalo, Bird, Boar, Ram, Bull, Twins, Crab, Lion, Maiden, Scales, Scorpion, Archer, Sea goat, Water bearer, Fish
 100: Cat :: Vietnam's zodiac has a cat where China's has a rabbit. In legend, the rat tricked the cat out of the race.
-
-? Name a ride at a Disney park
-10: Space Mountain, Splash Mountain, It's a Small World|Small World, Pirates of the Caribbean, Haunted Mansion, Big Thunder Mountain|Big Thunder Mountain Railroad
-15: Carousel of Progress, Hall of Presidents
-30: Dumbo the Flying Elephant|Dumbo, Peter Pan's Flight, Mad Tea Party|Teacups|Tea Cups, Tower of Terror, Expedition Everest, Matterhorn Bobsleds|Matterhorn, Jungle Cruise, Toy Story Mania, Star Tours, Soarin'|Soarin, Test Track, Rock 'n' Roller Coaster|Rock n Roller Coaster, Smugglers Run|Millennium Falcon: Smugglers Run, Rise of the Resistance, Tiana's Bayou Adventure, Seven Dwarfs Mine Train, TRON Lightcycle Run|Tron, Kilimanjaro Safaris, Guardians of the Galaxy: Cosmic Rewind|Cosmic Rewind, Incredicoaster, Radiator Springs Racers, Buzz Lightyear|Buzz Lightyear's Space Ranger Spin, Autopia, Monorail, Enchanted Tiki Room|Tiki Room
-60: The Many Adventures of Winnie the Pooh|Winnie the Pooh, Indiana Jones Adventure|Indiana Jones, Mr. Toad's Wild Ride, Alice in Wonderland, Snow White's Scary Adventures, Pinocchio's Daring Journey, Casey Jr., Storybook Land, Mickey's Runaway Railway, Remy's Ratatouille Adventure, Frozen Ever After, Spaceship Earth, Living with the Land, Maelstrom, Dinosaur, Kali River Rapids, Na'vi River Journey, Avatar Flight of Passage, Slinky Dog Dash, Alien Swirling Saucers, Muppet*Vision 3D|MuppetVision, Country Bear Jamboree, PeopleMover, Astro Orbiter, The Barnstormer|Goofy's Barnstormer, Ariel's Undersea Adventure, Turtle Talk with Crush, Finding Nemo Submarine Voyage, The Seas with Nemo & Friends
-85: Horizons, World of Motion, Journey Into Imagination|Figment, Body Wars, Cranium Command, Mission to Mars, Adventure Thru Inner Space, America Sings, Skyway, Rocket Rods, If You Had Wings, Delta Dreamflight, Stitch's Great Escape, Superstar Limo, Mystic Manor, Pooh's Hunny Hunt, Crush's Coaster, Journey to the Center of the Earth, Phantom Manor, Big Grizzly Mountain, Primeval Whirl
-100: 20\,000 Leagues Under the Sea|20000 Leagues Under the Sea :: Disney World once had real submarines full of mechanical fish and a giant squid. It closed in 1994.
 
 ? Name a TV network or channel
 ~drop channel,network,the
@@ -83,6 +67,7 @@
 100: Michael Winslow :: The Man of 10,000 Sound Effects from Police Academy. He does all those noises with his mouth.
 
 ? Name a traditional wedding anniversary gift
+~retired
 10: Paper, Silver, Gold, Diamond, Cotton
 15: Divorce
 30: Wood, Leather, Pearl, Ruby, Tin, Silk, Crystal, China, Platinum
@@ -98,3 +83,19 @@
 60: Wyoming, Emory, Tufts, Carnegie Mellon, Purdue, Wisconsin, Indiana|Indiana University Bloomington, Virginia|UVA, UNC|North Carolina|UNC Chapel Hill, Michigan State|MI State U|MI State University|State Agricultural College, Texas A&M, LSU, Auburn, Clemson, Oregon, Washington|UW, Arizona State|ASU, Arizona|arizona.edu|Univ. of Arizona, Colorado|University of Colorado Boulder|Colo|colorado.edu, Rutgers|Rutgers New Brunswick, Syracuse|Syracuse.edu|Syracuse College, Baylor, TCU, Tulane, Wake Forest, Villanova, Gonzaga, Spelman, Morehouse, Hampton, Oberlin|Oberlin College|Oberlin College & Conservatory, Swarthmore|Swarthmore College, Williams|Williams College, Amherst|Amherst College, Wellesley|Wellesley College|Wellesley Centers for Women, Vassar|Vassar College, Barnard|Barnard College, Smith|Smith College|Smith College\, Massachusetts, Bryn Mawr|Bryn Mawr College, Mount Holyoke|Mount Holyoke College, Sorbonne, Trinity College Dublin|Trinity, St Andrews, Edinburgh, Imperial College London|Imperial|Imperial College, LSE|London School of Economics, Heidelberg, McGill|McGill college, Toronto, Tsinghua|Tsinghua School|Tsinghua College|Tsinghua Imperial College, Peking, Tokyo, National University of Singapore|NUS|Univ. of Singapore, Melbourne, Sydney
 85: Al-Qarawiyyin, Al-Azhar, Salamanca, Uppsala, Coimbra, Leiden, Padua, Deep Springs|Deep Springs College, St. John's, Reed|Reed College, Bowdoin|Bowdoin College, Bates|Bates College, Colby|Colby College, Middlebury|Middlebury College, Grinnell|Grinnell College, Kenyon|Kenyon College, Carleton|Carleton College, Pomona|Pomona College, Harvey Mudd|Harvey Mudd College, Claremont McKenna, Davidson|Davidson College, Furman, Sewanee, Gallaudet, Cooper Union, Juilliard, Berklee, RISD, SCAD, Le Cordon Bleu, Bob Jones, Hillsdale, Trump, Faber, Greendale, Hillman, Miskatonic, Starfleet Academy, Wossamotta U
 100: Bologna :: The world's oldest university, founded in 1088. It's been handing back papers for over 900 years.
+
+? Name something people collect
+10: Stamps, Coins, Pokémon cards|Pokemon cards|Pokemon, Baseball cards|Sports cards, Rocks, Seashells|Shells, Stuffed animals|Plushies|Stuffies
+15: Bottle caps, Spoons|Souvenir spoons
+30: Trading cards|Cards, Comic books|Comics, Action figures, Dolls, Barbies|Barbie, Funko Pops|Funko Pop|Funko, Legos|Lego, Records|Vinyl, Sneakers|Shoes, Hot Wheels|Toy cars, Beanie Babies, Squishmallows, Snow globes, Postcards, Magnets|Fridge magnets, Keychains, Pins|Enamel pins, Patches, Stickers, Rubber ducks, Marbles, Thimbles, Art, Antiques, Books, Autographs, Butterflies, Bugs|Insects, Feathers, Pressed flowers, Fossils, Crystals, Arrowheads, Bottles|Old bottles, Teacups, Mugs|Coffee mugs, Shot glasses, License plates, Jerseys|Sports jerseys, Hats, Watches, Guitars, Classic cars|Cars, Video games, Movies|DVDs, Pencils, Erasers, Bobbleheads, Labubus|Labubu, Jellycats|Jellycat, Stanley cups|Stanleys, Sea glass
+60: Matchbooks, Gum wrappers, Baby teeth, Sonny Angels, Jibbitz|Croc charms, Pressed pennies|Smashed pennies, State quarters, Coasters, Sugar packets, Pez dispensers|Pez, Happy Meal toys, Lunch boxes|Lunchboxes, Cookie jars, Salt and pepper shakers, Nutcrackers, Christmas ornaments|Ornaments, Troll dolls|Trolls, Matchbox cars, Model trains, Toy soldiers, Swords, Knives, Clocks, Typewriters, Cameras, Fountain pens, Maps, Globes, Flags, Buttons, Keys, Ticket stubs|Tickets, Menus, Fortunes, Meteorites, Horseshoes, Belt buckles, Shark teeth, Pine cones, Four-leaf clovers, Antler sheds|Sheds|Antlers, Skulls
+85: Barbed wire, Spurs, Snake skins, Bird nests, Barf bags|Air sickness bags, Traffic cones, Street signs, Bricks, Bread clips|Bread tags, Fruit stickers, Pencil sharpeners, Hotel key cards, Toothpick holders, Rain gauges
+100: Belly button lint|Navel lint|Belly button fluff|Navel fluff|Lint :: An Australian man holds the world record. He saved his own for decades.
+
+? Name something you'd see at a parade
+10: Floats|Float, Marching band|Band, Balloons|Giant balloons, Candy, Clowns|Clown, Horses|Horse
+15: Santa Claus|Santa, Confetti
+30: Fire trucks|Fire truck|Fire engine, Police cars|Police|Cops, Flags|Flag|American flag, Cheerleaders, Baton twirlers|Twirlers|Majorettes, Drum major, Drums|Drummers, Veterans, Soldiers|Military, Politicians|Mayor, Rodeo queen|Parade queen|Beauty queen|Queen, Crowds|Crowd|People, Bubbles, Streamers, Classic cars|Old cars|Vintage cars, Tractors|Tractor, Motorcycles, Dancers, Mascots|Mascot, Costumes, Stilt walkers|Stilts, Jugglers, Unicycles|Unicyclists, Chinese dragon|Dragon|Dragon dance, Lion dance, Bagpipes|Bagpipers, Cowboys|Cowgirls, Scouts|Boy Scouts|Girl Scouts, Banners|Signs, Lawn chairs|Chairs, Vendors|Street vendors, Mardi Gras beads|Beads, Pom-poms, Grand marshal, Fireworks, Snoopy balloon|Snoopy, Turkey, Rockettes, Convertibles|Convertible
+60: Clydesdales, Elephants, Calliope, Moon Pies, Leprechaun, Shamrocks, Bunting, Uncle Sam, Pirates, Pooper scooper|Pooper scoopers, Horse poop|Poop, Ticker tape, Lowriders, Rodeo clowns, Covered wagons|Wagons|Stagecoach, Mounted police, Color guard, Drill team, Homecoming court|Homecoming queen, Decorated bikes|Bikes, Golf carts, Dogs|Pets, Giant puppets|Puppets, Samba dancers, Folklórico dancers|Folklorico, Mariachi band|Mariachi, Roses|Flowers, Squirt guns|Water guns
+85: Mummers, Krewe, Throws, Doubloons, Coconuts, Fire breathers|Fire breather, Kilts, Sousaphones|Sousaphone, Bell lyre|Glockenspiel, Mace, Shakos|Shako, Plumes|Plume, Big heads|Cabezudos, Gigantes, Catrinas, Alebrijes
+100: Shriners|Shriners in tiny cars|Tiny cars|Little cars|Mini cars :: Grown men in fezzes driving tiny cars in circles. They raise money for children's hospitals.
