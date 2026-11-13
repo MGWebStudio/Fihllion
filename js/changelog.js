@@ -3,6 +3,18 @@
 export const CHANGELOG = [
   {
     date: '2026-11-12',
+    time: '10:45 PM',
+    title: 'Ranked mode is here',
+    short: 'Ranked mode is here',
+    items: [
+      'Pick a nickname and your Daily becomes your ranked dive: one try a day, and the board shows up as soon as you finish.',
+      'The server keeps the clock and checks every answer. Switching tabs or apps during a ranked question makes it score 0.',
+      'The title screen and every dive now say which one you’re playing: the gold Daily, or Endless, which is just practice.',
+      'The Daily now changes over at midnight Mountain Time for everyone.',
+    ],
+  },
+  {
+    date: '2026-11-12',
     time: '5:45 PM',
     title: 'Hidden answers move around',
     short: 'Hidden answers move around',

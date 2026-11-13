@@ -102,6 +102,45 @@ export function parsePrompts(text, category) {
   return prompts;
 }
 
+// Days run on Mountain Time for everyone, so the Daily and the ranked board change over together.
+const MOUNTAIN = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/Denver', year: 'numeric', month: 'numeric', day: 'numeric',
+  hour: 'numeric', minute: 'numeric', second: 'numeric', hourCycle: 'h23',
+});
+
+export function mountainParts(now = new Date()) {
+  const parts = {};
+  for (const { type, value } of MOUNTAIN.formatToParts(now)) if (type !== 'literal') parts[type] = Number(value);
+  return parts;
+}
+
+// Today's date in Mountain Time, as a local noon, which is what the calendar reads.
+export function mountainToday(now = new Date()) {
+  const { year, month, day } = mountainParts(now);
+  return new Date(year, month - 1, day, 12);
+}
+
+export function hashOf(text) {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i += 1) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
+  return h >>> 0;
+}
+
+// The hidden answer written in a prompt's file is only hidden on the Daily that debuts the prompt
+// (and Archive replays of that day). Any other time, in Endless or when a Daily comes around again,
+// one of the prompt's Deep Cuts is hidden instead, so a player who found it last time can't just
+// type it again. Whatever isn't hidden this time scores as a Deep Cut. The pick is the same on a
+// reload, and the same for everyone on a given Daily. The game and the ranked server both use this.
+export function withHiddenAnswer(prompt, { mode, day }, firstDay) {
+  if (mode === 'daily' && firstDay === day) return prompt;
+  const pool = prompt.answers.filter((answer) => answer.tier >= 4);
+  const hidden = pool[hashOf(`${mode}:${day}:${prompt.id}`) % pool.length];
+  const answers = prompt.answers
+    .map((answer) => (answer === hidden ? { ...answer, tier: 5 } : answer.tier === 5 ? { ...answer, tier: 4 } : answer))
+    .sort((a, b) => a.tier - b.tier);
+  return { ...prompt, answers, gem: hidden === prompt.gem ? prompt.gem : { ...hidden, tier: 5, blurb: '' } };
+}
+
 const utcDay = (year, month, day) => Date.UTC(year, month, day) / 86400000;
 
 export function makeCalendar(schedule) {

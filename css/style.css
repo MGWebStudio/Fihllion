@@ -212,15 +212,15 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
 .title-sea {
   flex: 1 1 auto; min-height: 0; width: 100%;
   display: flex; flex-direction: column; align-items: center;
-  padding: clamp(24px, 5vh, 56px) 16px max(12px, env(safe-area-inset-bottom));
+  padding: clamp(14px, 3.4vh, 48px) 16px max(10px, env(safe-area-inset-bottom));
 }
 .dive-label {
-  margin-top: 16px; color: var(--cream); font-size: 11px;
+  margin-top: 12px; color: var(--cream); font-size: 11px;
   text-shadow: 0 1px 0 rgba(0, 25, 45, .9);
 }
 .title-links {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-  margin-top: 14px; max-width: 460px;
+  margin-top: 14px; max-width: 580px;
 }
 .title-links .btn { min-height: 40px; padding: 8px 12px; }
 @media (max-width: 460px) {
@@ -491,4 +491,120 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 @media (prefers-reduced-motion: reduce) {
   #promptCard, #revealCard, #answerForm.is-shaking { animation: none; }
   .btn { transition: none; }
+}
+
+/* Which dive is this? Today's Daily and ranked dives are gold, Endless is sea-glass, Archive is grey.
+   The same colors label the title button, the banner as you dive in, the HUD and the prompt card. */
+.daily-tag {
+  margin: 0 0 12px; padding: 4px 10px 3px;
+  font-family: var(--font-label); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: #2a0f02; background: var(--gilt);
+  box-shadow: 0 -2px 0 0 #2a0f02, 0 2px 0 0 #2a0f02, -2px 0 0 0 #2a0f02, 2px 0 0 0 #2a0f02;
+}
+.ranked-line {
+  margin-top: 8px; padding: 4px 8px; border: 0; cursor: pointer; background: none;
+  font-family: var(--font-body); font-size: 20px; line-height: 1.2; color: var(--cream);
+  text-shadow: 0 1px 0 rgba(0, 25, 45, .9);
+  text-decoration: underline; text-decoration-color: rgba(255, 241, 208, .4); text-underline-offset: 4px;
+}
+.ranked-line:hover { color: var(--gilt); }
+.ranked-line:focus-visible { outline: 3px solid var(--glass); outline-offset: 2px; }
+.ranked-line b { font-weight: 400; color: var(--gilt); }
+.ranked-off { color: var(--muted); }
+.btn-endless { color: var(--glass); }
+.btn-sub { color: var(--muted); }
+.btn-sub::before { content: '· '; }
+@media (max-width: 460px) {
+  .btn-sub { display: block; margin-top: 2px; font-size: 9px; }
+  .btn-sub::before { content: none; }
+}
+@media (max-height: 480px) {
+  .daily-tag { margin-bottom: 6px; font-size: 11px; }
+  .ranked-line { margin-top: 2px; font-size: 17px; }
+}
+
+.mode-chip { display: inline-block; margin-right: 6px; padding: 2px 6px 1px; color: #2a0f02; background: var(--gilt); }
+.mode-chip.mode-endless { background: var(--glass); }
+.mode-chip.mode-archive { background: var(--muted); }
+.hud-mode {
+  display: block; margin: -2px 0 4px;
+  font-family: var(--font-label); font-size: 9px; letter-spacing: .06em; text-transform: uppercase;
+  text-align: center; white-space: nowrap; color: var(--gilt);
+}
+.hud-mode.mode-endless { color: var(--glass); }
+.hud-mode.mode-archive { color: var(--muted); }
+
+.mode-banner {
+  --mode: var(--gilt);
+  position: absolute; z-index: 4; left: 50%; top: 40%;
+  width: max-content; max-width: calc(100% - 32px);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 22px 12px; text-align: center; pointer-events: none;
+  background: rgba(6, 24, 42, .95);
+  box-shadow: 0 -3px 0 0 var(--mode), 0 3px 0 0 var(--mode), -3px 0 0 0 var(--mode), 3px 0 0 0 var(--mode);
+  transform: translate(-50%, -50%);
+  animation: banner-in .32s steps(5) both;
+}
+.mode-banner.mode-endless { --mode: var(--glass); }
+.mode-banner.mode-archive { --mode: var(--muted); }
+.mode-banner-tag { font-family: var(--font-display); font-size: clamp(30px, 7.5vw, 46px); line-height: 1; color: var(--mode); }
+.mode-banner-note { font-size: 21px; line-height: 1.25; color: var(--cream); }
+@keyframes banner-in {
+  from { opacity: 0; transform: translate(-50%, -38%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Leaderboard */
+.board-tabs { display: flex; gap: 8px; margin-bottom: 10px; }
+.board-tabs button {
+  appearance: none; border: 0; cursor: pointer; padding: 7px 12px;
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .05em; text-transform: uppercase;
+  background: rgba(13, 40, 62, .9); color: var(--muted);
+}
+.board-tabs button[aria-pressed="true"] { background: var(--gilt); color: #2a0f02; }
+.board-tabs button:focus-visible { outline: 3px solid var(--glass); outline-offset: 2px; }
+.board { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.board li {
+  display: grid; grid-template-columns: 3.2ch minmax(0, 1fr) auto; gap: 10px; align-items: baseline;
+  padding: 6px 12px; background: rgba(13, 40, 62, .9); font-size: 23px; line-height: 1.2;
+}
+.board li.is-me { background: rgba(255, 201, 77, .16); box-shadow: inset 4px 0 0 var(--gilt); }
+.board li.board-gap { display: block; padding: 0; background: none; text-align: center; color: var(--muted); }
+.board-rank { font-family: var(--font-label); font-size: 12px; text-align: right; color: var(--muted); }
+.board-name { overflow-wrap: anywhere; }
+.board-score { font-family: var(--font-display); font-size: 26px; color: var(--gilt); }
+.board-count { margin-top: 8px; font-size: 19px; color: var(--muted); }
+.board-note { margin: 0 0 10px; font-size: 21px; line-height: 1.3; color: var(--muted); }
+.board-note b { font-weight: 400; color: var(--gilt); }
+.link-btn {
+  appearance: none; border: 0; padding: 0; cursor: pointer; background: none;
+  font: inherit; color: var(--gilt); text-decoration: underline; text-underline-offset: 3px;
+}
+.results-place { margin-top: 8px; font-family: var(--font-display); font-size: 30px; line-height: 1.1; color: var(--gilt); }
+
+/* Nickname */
+.nick-lead { margin: 0 0 14px; font-size: 22px; line-height: 1.35; }
+.nick-form .label { display: block; margin-bottom: 7px; }
+.nick-row { display: flex; gap: 10px; align-items: stretch; }
+.nick-row input {
+  flex: 1 1 auto; min-width: 0; height: 50px; margin: 3px 0; padding: 0 12px;
+  border: 0; border-radius: 0; outline: 0;
+  background: var(--ink); color: var(--cream); font-family: var(--font-display); font-size: 26px;
+  box-shadow: 0 -3px 0 0 var(--glass), 0 3px 0 0 var(--glass), -3px 0 0 0 var(--glass), 3px 0 0 0 var(--glass);
+}
+.nick-row input::placeholder { color: var(--muted); opacity: 1; font-size: 21px; }
+.nick-row .btn { margin: 3px 3px 3px 0; }
+.nick-error { min-height: 26px; margin: 6px 0 0; font-size: 20px; color: #ffd2a6; }
+.nick-rules { margin-top: 8px; font-size: 20px; color: var(--muted); }
+.nick-rules li::before { content: '· '; color: var(--gilt); }
+.nick-skip { width: 100%; margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .mode-banner { animation: none; } }
+@media (max-height: 720px) and (min-height: 481px) {
+  #title .btn-big { min-height: 50px; padding: 11px 30px; }
+  .daily-tag { margin-bottom: 9px; }
+  .ranked-line { margin-top: 4px; }
+  .title-links { margin-top: 8px; gap: 8px; }
+  .title-links .btn { min-height: 38px; padding: 5px 10px; }
+  .news-chip { margin-top: 10px; }
+  .credit { padding-top: 6px; }
 }

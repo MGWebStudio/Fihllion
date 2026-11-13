@@ -1,6 +1,6 @@
 # Ranked mode plan
 
-Status: planned, not built. The game shows a "Coming soon" tag for it.
+Status: built 2026-11-12, waiting to go live. How it works now is in the README under "Ranked mode".
 
 ## How it works
 
@@ -17,5 +17,5 @@ Status: planned, not built. The game shows a "Coming soon" tag for it.
 
 - A LockDown Browser isn't possible on a website. Rule 4 (leaving the tab voids the round) is the closest a web game can get.
 - The server holds the clock and does the scoring, so editing the page can't change a score.
-- Days are Mountain Time, the same as the Daily.
+- Days are Mountain Time. The normal Daily switched to Mountain Time too, so both change over together.
 - Needs: a nickname table, a ranked-run table and a board query on the existing Worker and D1 database, plus a nickname filter and an admin delete.

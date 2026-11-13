@@ -18,6 +18,13 @@ export function set(key, value) {
   } catch { /* memory copy is enough */ }
 }
 
+export function remove(key) {
+  memory.delete(key);
+  try {
+    localStorage.removeItem(PREFIX + key);
+  } catch { /* nothing stored */ }
+}
+
 export function keysWith(prefix) {
   const found = new Set([...memory.keys()].filter((key) => key.startsWith(prefix)));
   try {

@@ -107,3 +107,25 @@ npx wrangler d1 execute fihllion --remote --command "DELETE FROM verdicts WHERE 
 ```
 
 Answers the referee accepts often belong on the prompt's list. Add them to the `.txt` file like any other answer.
+
+## Ranked mode
+
+A player who picks a nickname plays their Daily as a ranked run: one try a day, on a board everyone can see. Days are Mountain Time for everyone, and so is the normal Daily. The code is `worker/src/ranked.js` on the server and `js/ranked.js` in the game.
+
+- **Nicknames.** 3 to 16 letters or numbers, unique ignoring case, with a filter for crude words. There are no accounts or emails. The server makes a secret key, the game keeps it in the browser, and the database stores only its SHA-256 hash. Clearing the browser's data loses the nickname.
+- **The server runs the dive.** It sends one question at a time with `/ranked/question` and keeps its own clock: 3 + 25 seconds plus 2.5 seconds for the network, pushed back while the referee thinks. Every answer goes to `/ranked/guess`, which scores it with the same lists, hidden-answer rule and referee as the game. A question whose time runs out scores 0, even if the player never comes back.
+- **Leaving the tab** during a question sends `/ranked/void`: that question scores 0 and is flagged. A web page can't block other apps, so this is as strict as it gets.
+- **No photos** in ranked dives. The mic still works.
+- **Boards.** `/ranked/board` gives today's and this week's (Monday to Sunday) top 100 plus the player's own rank. Nicknames and scores only, never answers. A finished run shows at once. A run quit halfway still counts once its day is over, so quitting can't hide a bad score.
+- **Storage.** `players` (nickname, key hash, banned flag) and `runs` (day, each question's tier and points, score, flags). No answers, IP addresses or emails.
+
+Admin, from `worker/` with the Wrangler login:
+
+```
+node admin.mjs board          # today's board, with how many questions each player voided
+node admin.mjs board 12       # day 12
+node admin.mjs ban Somename   # hide from every board and stop playing ranked
+node admin.mjs unban Somename
+```
+
+Add `--local` to use the test database. The live tables need `npm run migrate:live` once before the Worker that uses them is deployed.

@@ -2,11 +2,13 @@ import { World } from './world.js';
 import { audio } from './audio.js';
 import {
   loadContent, TIERS, rankFor, LIMIT, COUNTDOWN, PROMPTS_PER_DIVE, METRES_PER_POINT, MAX_POINTS,
+  mountainToday, mountainParts, withHiddenAnswer,
 } from './content.js';
 import { buildIndex, findAnswer } from './match.js';
 import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
 import { askReferee } from './referee.js';
+import * as ranked from './ranked.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
@@ -19,12 +21,15 @@ const el = Object.fromEntries([
   'answerForm', 'answer', 'clock', 'clockRing', 'clockNum', 'reveal', 'revealCard', 'revealIcon', 'revealTier',
   'revealAnswer', 'revealPts', 'revealLine', 'btnNext', 'results', 'sheet', 'sheetTitle', 'sheetBody', 'sheetClose',
   'btnMenu', 'btnSound', 'btnMic', 'promptPhoto', 'promptCredit', 'btnPhotoInfo',
+  'hudMode', 'modeBanner', 'dailyTag', 'rankedLine',
 ].map((id) => [id, $(id)]));
 
 const SITE_URL = 'https://mgwebstudio.github.io/Fihllion/';
 const RING = 125.664;
 const SCREENS = ['title', 'play', 'reveal', 'results'];
 const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+// ?today= pretends it's another day, which the ranked server won't go along with, so ranked sits out.
+const PRETEND_DAY = IS_LOCAL && new URLSearchParams(location.search).has('today');
 
 const G = { phase: 'loading', dive: null, prompt: null, index: null, today: 1, token: 0, lastSecond: null, shownDepth: null, resultsDive: null, fromArchive: false, loading: false, noticeTimer: null };
 let content = null;
@@ -42,15 +47,15 @@ function currentDate() {
     const [y, m, d] = forced.split('-').map(Number);
     return new Date(y, m - 1, d, 12);
   }
-  return new Date();
+  return mountainToday();
 }
 
 const shortDate = (day) => content.calendar.dateOf(day).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
+// Time left until midnight Mountain Time, when the next Daily starts.
 function untilMidnight() {
-  const now = new Date();
-  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-  const total = Math.max(0, Math.floor((next - now) / 1000));
+  const { hour, minute, second } = mountainParts();
+  const total = Math.max(0, 86400 - (hour * 3600 + minute * 60 + second));
   const pad = (n) => String(n).padStart(2, '0');
   return `${Math.floor(total / 3600)}:${pad(Math.floor((total % 3600) / 60))}:${pad(total % 60)}`;
 }
@@ -58,6 +63,11 @@ function untilMidnight() {
 // Screens --------------------------------------------------------------------------------
 function setScreen(name) {
   if (name !== 'play') stopListening();
+  if (name !== 'results') stopBoardPolling();
+  if (name !== 'play') {
+    clearTimeout(G.bannerTimer);
+    el.modeBanner.hidden = true;
+  }
   document.body.dataset.screen = name;
   for (const screen of SCREENS) el[screen].hidden = screen !== name;
   el.hud.hidden = !['play', 'sink', 'reveal'].includes(name);
@@ -89,6 +99,37 @@ function syncViewport() {
 function makeDive(mode, day, ids) {
   return { mode, day, ids, rounds: [], deadline: null, done: false, onTime: mode === 'daily' && day === G.today };
 }
+
+// What kind of dive this is, said the same way on the banner, the HUD and the prompt card, so it's
+// always clear whether a dive counts.
+function modeOf(dive) {
+  if (dive.mode === 'endless') return { key: 'endless', tag: 'Endless', long: 'Endless', note: 'Practice. Nothing here counts.' };
+  if (dive.day !== G.today) return { key: 'archive', tag: `Archive #${dive.day}`, long: `Archive · Dive #${dive.day}`, note: 'A replay of a past day.' };
+  if (dive.ranked) return { key: 'ranked', tag: `Ranked #${dive.day}`, long: `Ranked Daily · Dive #${dive.day}`, note: 'One try. This one counts.' };
+  return {
+    key: 'daily',
+    tag: `Daily #${dive.day}`,
+    long: `Today’s Daily · Dive #${dive.day}`,
+    note: ranked.available ? 'Not ranked. Pick a nickname to get on the board.' : 'The same seven prompts for everyone today.',
+  };
+}
+
+function showModeBanner(dive) {
+  const mode = modeOf(dive);
+  el.modeBanner.className = `mode-banner mode-${mode.key}`;
+  el.modeBanner.innerHTML = `<span class="mode-banner-tag">${esc(mode.long)}</span><span class="mode-banner-note">${esc(mode.note)}</span>`;
+  el.modeBanner.hidden = false;
+  replay(el.modeBanner);
+  clearTimeout(G.bannerTimer);
+  G.bannerUntil = Date.now() + 2200; // stays up a moment even when the dive loads instantly
+}
+
+function hideModeBanner() {
+  clearTimeout(G.bannerTimer);
+  G.bannerTimer = setTimeout(() => { el.modeBanner.hidden = true; }, Math.max(0, (G.bannerUntil || 0) - Date.now()));
+}
+
+const isRankedToday = (dive) => Boolean(dive.ranked) && dive.mode === 'daily' && dive.day === G.today;
 
 const diveKey = (dive) => (dive.mode === 'endless' ? 'endless.current' : `daily.${dive.day}`);
 const saveDive = (dive) => store.set(diveKey(dive), dive);
@@ -184,17 +225,30 @@ function prefetch() {
 function refreshTitle() {
   G.today = content.calendar.dayNumber(currentDate());
   const dive = store.get(`daily.${G.today}`);
+  const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
+  const isRanked = Boolean(me) && (!dive || isFresh(dive) || Boolean(dive.ranked));
   const arrow = '<span aria-hidden="true">▼</span>';
+  // The big button is always today's Daily, and the tag above it says so.
+  el.dailyTag.innerHTML = isRanked
+    ? `<span aria-hidden="true">★</span> Ranked Daily · Dive #${G.today}`
+    : `Today’s Daily · Dive #${G.today}`;
+  el.dailyTag.classList.toggle('is-ranked', isRanked);
   if (dive?.done) {
-    el.btnBegin.innerHTML = 'See today’s dive';
+    el.btnBegin.innerHTML = 'See today’s results';
     el.diveLabel.textContent = `Next dive in ${untilMidnight()}`;
   } else if (dive && !isFresh(dive)) {
     el.btnBegin.innerHTML = `Keep diving ${arrow}`;
-    el.diveLabel.textContent = `Dive #${G.today} · prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE}`;
+    el.diveLabel.textContent = `Prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE} · ${shortDate(G.today)}`;
   } else {
     el.btnBegin.innerHTML = `Dive in ${arrow}`;
-    el.diveLabel.textContent = `Dive #${G.today} · ${shortDate(G.today)}`;
+    el.diveLabel.textContent = shortDate(G.today);
   }
+  // Before the dive starts, the tag above the button already says which dive it is.
+  el.diveLabel.hidden = !dive || isFresh(dive);
+  el.rankedLine.hidden = !ranked.available || PRETEND_DAY;
+  if (!me) el.rankedLine.innerHTML = '<span class="ranked-off">Not ranked</span> · Pick a nickname';
+  else if (isRanked) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
+  else el.rankedLine.innerHTML = `<b>${esc(me.name)}</b> · Ranked from tomorrow · Leaderboard`;
   prefetch();
 }
 
@@ -218,6 +272,7 @@ function beginDive(dive, { jump = false } = {}) {
   world.setDive(depthOf(dive), anchorsOf(dive));
   renderHud();
   setScreen('play');
+  showModeBanner(dive);
   el.play.classList.add('is-waiting');
   el.answer.value = '';
   el.feedback.textContent = '';
@@ -233,38 +288,83 @@ function advance() {
   else presentPrompt();
 }
 
-function hashOf(text) {
-  let h = 2166136261;
-  for (let i = 0; i < text.length; i += 1) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
-  return h >>> 0;
-}
-
-// The hidden answer written in a prompt's file is only hidden on the Daily that debuts the prompt
-// (and Archive replays of that day). Any other time, in Endless or when a Daily comes around again,
-// one of the prompt's Deep Cuts is hidden instead, so a player who found it last time can't just
-// type it again. Whatever isn't hidden this time scores as a Deep Cut. The pick is the same on a
-// reload, and the same for everyone on a given Daily.
-function withHiddenAnswer(prompt, dive) {
-  if (dive.mode === 'daily' && content.calendar.firstDay(prompt.id) === dive.day) return prompt;
-  const pool = prompt.answers.filter((answer) => answer.tier >= 4);
-  const hidden = pool[hashOf(`${dive.mode}:${dive.day}:${prompt.id}`) % pool.length];
-  const answers = prompt.answers
-    .map((answer) => (answer === hidden ? { ...answer, tier: 5 } : answer.tier === 5 ? { ...answer, tier: 4 } : answer))
-    .sort((a, b) => a.tier - b.tier);
-  return { ...prompt, answers, gem: hidden === prompt.gem ? prompt.gem : { ...hidden, tier: 5, blurb: '' } };
-}
-
 function presentPrompt() {
   stopListening();
   const dive = G.dive;
-  const number = dive.rounds.length + 1;
-  G.prompt = withHiddenAnswer(content.byId.get(dive.ids[dive.rounds.length]), dive);
+  if (isRankedToday(dive)) {
+    fetchRankedQuestion();
+    return;
+  }
+  const prompt = content.byId.get(dive.ids[dive.rounds.length]);
+  G.prompt = withHiddenAnswer(prompt, dive, content.calendar.firstDay(prompt.id));
   G.index = buildIndex(G.prompt);
   if (!dive.deadline) {
     dive.deadline = Date.now() + (COUNTDOWN + LIMIT) * 1000;
     saveDive(dive);
   }
-  el.promptNum.textContent = `${dive.mode === 'endless' ? 'Endless · prompt' : 'Prompt'} ${number} of ${PROMPTS_PER_DIVE}`;
+  showPrompt();
+}
+
+// Ranked questions come from the server one at a time, and the server's clock is the one that counts.
+async function fetchRankedQuestion() {
+  const dive = G.dive;
+  const token = G.token;
+  G.phase = 'fetching';
+  let q = null;
+  try {
+    q = await ranked.question(dive.day);
+  } catch (error) {
+    console.error(error);
+  }
+  if (token !== G.token) return;
+  if (!q || q.error) {
+    rankedTrouble(q?.error, q);
+    return;
+  }
+  syncRanked(dive, q.run);
+  if (q.finished || dive.rounds.length >= PROMPTS_PER_DIVE) {
+    surface();
+    return;
+  }
+  G.prompt = { id: q.id, text: q.text, ranked: true, gem: null };
+  G.index = null;
+  G.rankedRound = q.round;
+  dive.deadline = Date.now() + Math.max(0, q.msLeft);
+  saveDive(dive);
+  showPrompt();
+}
+
+// The server's record wins. Questions it settled while this page wasn't looking (a reload, a lost
+// connection, leaving the tab) are filled in here.
+function syncRanked(dive, run) {
+  if (!run || run.rounds.length <= dive.rounds.length) return;
+  while (dive.rounds.length < run.rounds.length) {
+    const entry = run.rounds[dive.rounds.length];
+    dive.rounds.push({ id: dive.ids[dive.rounds.length], input: null, name: null, tier: entry.tier, pts: entry.pts, voided: Boolean(entry.flag) });
+  }
+  dive.deadline = null;
+  saveDive(dive);
+  renderHud();
+}
+
+function rankedTrouble(error, reply) {
+  const midnight = error === 'day' && G.dive && reply?.today > G.dive.day;
+  const messages = {
+    unknown: 'The server doesn’t know this nickname anymore. Pick one again to play ranked.',
+    banned: 'This nickname was removed, so today’s dive can’t be ranked.',
+    day: midnight ? 'Midnight passed, so that ranked dive is over. Today’s is ready.'
+      : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
+  };
+  if (error === 'unknown' || error === 'banned') ranked.forget();
+  goHome();
+  notice(messages[error] || 'Couldn’t reach the ranked server. Check your connection and tap Dive in to try again.');
+}
+
+function showPrompt() {
+  const dive = G.dive;
+  const mode = modeOf(dive);
+  hideModeBanner();
+  el.promptNum.innerHTML = `<span class="mode-chip mode-${mode.key}">${esc(mode.tag)}</span> Prompt ${dive.rounds.length + 1} of ${PROMPTS_PER_DIVE}`;
   el.promptText.textContent = G.prompt.text;
   showPromptPhoto();
   el.answer.value = '';
@@ -366,7 +466,7 @@ function loadPortraits() {
 
 function showPromptPhoto() {
   const prompt = G.prompt;
-  const photo = portraits?.[prompt?.id];
+  const photo = prompt?.ranked ? null : portraits?.[prompt?.id]; // no photos in ranked
   el.promptCard.classList.toggle('has-photo', Boolean(photo));
   el.promptPhoto.hidden = !photo;
   showPhotoCredit(false);
@@ -400,9 +500,72 @@ function onSubmit(event) {
     el.answer.focus({ preventScroll: true });
     return;
   }
+  if (isRankedToday(G.dive)) {
+    submitRanked(raw);
+    return;
+  }
   const hit = findAnswer(raw, G.index);
   if (hit) lockIn(raw, hit);
   else checkWithReferee(raw);
+}
+
+// In ranked, every answer goes to the server, which scores it (asking the referee when it isn't on
+// the list) and sends back how much time is left on its clock.
+async function submitRanked(raw, { final = false } = {}) {
+  const { dive, prompt, token } = { dive: G.dive, prompt: G.prompt, token: G.token };
+  G.phase = 'checking';
+  el.feedback.classList.remove('is-bad');
+  el.feedback.textContent = raw ? 'Checking…' : '';
+  const slow = setTimeout(() => {
+    if (G.phase !== 'checking' || G.prompt !== prompt) return;
+    el.play.classList.add('is-checking');
+    if (raw) el.feedback.textContent = `Not on our list. Asking the referee about “${raw}”…`;
+  }, 700);
+  let res = null;
+  try {
+    res = await ranked.guess(dive.day, G.rankedRound, raw, final);
+  } catch (error) {
+    console.error(error);
+  }
+  clearTimeout(slow);
+  if (token !== G.token || G.dive !== dive || G.prompt !== prompt) return; // they left meanwhile
+  el.play.classList.remove('is-checking');
+  if (res?.result === 'hit') {
+    prompt.gem = { blurb: res.blurb };
+    lockIn(raw, { name: res.name, tier: res.tier, checked: res.checked });
+    return;
+  }
+  if (res?.result === 'stale') {
+    syncRanked(dive, res.run);
+    advance();
+    return;
+  }
+  if (final || res?.settled || res?.result === 'late') {
+    missRound(raw || null);
+    return;
+  }
+  G.phase = 'prompt';
+  G.lastSecond = null;
+  if (!res) {
+    el.feedback.textContent = 'Couldn’t reach the server. Try again.';
+    el.feedback.classList.add('is-bad');
+    return;
+  }
+  dive.deadline = Date.now() + Math.max(0, res.msLeft);
+  saveDive(dive);
+  if (res.result === 'busy') {
+    el.feedback.textContent = `The referee is swamped, so “${raw}” can’t be checked. Try another.`;
+    el.feedback.classList.add('is-bad');
+    return;
+  }
+  noBites(raw);
+}
+
+// Ranked rule: leaving the tab or app during a question voids it. It scores 0 and is flagged.
+function leaveRanked() {
+  if (!G.dive || !isRankedToday(G.dive) || G.phase !== 'prompt') return;
+  ranked.voidRound(G.dive.day, G.rankedRound);
+  missRound(el.answer.value.trim() || null, { voided: true });
 }
 
 function noBites(raw) {
@@ -448,15 +611,21 @@ async function checkWithReferee(raw, { final = false } = {}) {
 function timeUp() {
   stopListening();
   const typed = el.answer.value.trim();
+  if (isRankedToday(G.dive)) {
+    submitRanked(typed, { final: true });
+    return;
+  }
   const hit = typed ? findAnswer(typed, G.index) : null;
   if (hit) lockIn(typed, hit);
   else if (typed) checkWithReferee(typed, { final: true });
   else missRound(null);
 }
 
-function missRound(typed) {
+function missRound(typed, { voided = false } = {}) {
+  stopListening();
   const dive = G.dive;
   const round = { id: G.prompt.id, input: typed || null, name: null, tier: -1, pts: 0 };
+  if (voided) round.voided = true;
   dive.rounds.push(round);
   dive.deadline = null;
   saveDive(dive);
@@ -488,12 +657,13 @@ function showReveal(round) {
   const missed = round.tier < 0;
   const tier = TIERS[round.tier];
   paintIcon(el.revealIcon, missed ? 'iconMiss' : tier.icon);
-  el.revealTier.textContent = missed ? 'Nothing caught' : tier.name;
+  el.revealTier.textContent = round.voided ? 'Left the game' : missed ? 'Nothing caught' : tier.name;
   el.revealTier.style.color = missed ? 'var(--muted)' : tier.color;
-  el.revealAnswer.textContent = missed ? 'Time ran out' : `“${round.name}”`;
+  el.revealAnswer.textContent = round.voided ? 'Question voided' : missed ? 'Time ran out' : `“${round.name}”`;
   el.revealPts.textContent = missed ? '+0 pts · stayed put' : `+${round.pts} pts · sank ${fmtDepth(round.pts * METRES_PER_POINT)}`;
-  el.revealLine.textContent = missed
-    ? 'What was the question again?'
+  el.revealLine.textContent = round.voided
+    ? 'You switched away during a ranked question, so it scores 0.'
+    : missed ? 'What was the question again?'
     : round.tier === 5 ? (G.prompt.gem?.blurb || pick(tier.lines))
       : round.checked ? 'Not on our list, but the referee says it counts.' : pick(tier.lines);
   el.btnNext.innerHTML = last ? 'Surface <span aria-hidden="true">▲</span>' : 'Keep sinking <span aria-hidden="true">▼</span>';
@@ -544,6 +714,9 @@ function renderHud() {
   const dive = G.dive;
   if (!dive) return;
   el.hudScore.textContent = scoreOf(dive);
+  const mode = modeOf(dive);
+  el.hudMode.textContent = mode.tag;
+  el.hudMode.className = `hud-mode mode-${mode.key}`;
   renderPips();
 }
 
@@ -716,11 +889,18 @@ function showResults(dive) {
   const heading = isEndless ? `Endless dive #${dive.day}` : `Dive #${dive.day} · ${shortDate(dive.day)}`;
   const nextLine = isEndless
     ? `<p class="results-next">Best endless dive: <b>${store.get('endless.state', {}).best || total}</b></p>`
-    : dive.day === G.today ? `<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>
-      <p class="results-soon label">Ranked leaderboard · coming soon</p>` : '';
+    : dive.day === G.today ? '<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>' : '';
+  const showBoard = ranked.available && dive.mode === 'daily' && dive.day === G.today;
+  const unrankedNote = ranked.player() ? 'Tomorrow’s will be.'
+    : '<button id="resNick" class="link-btn" type="button">Pick a nickname</button> to be on tomorrow’s board.';
+  const boardBlock = showBoard ? `<section class="block">
+        <div class="block-title"><h3>Leaderboard</h3><span>Updates as others finish</span></div>
+        ${dive.ranked ? '' : `<p class="board-note">This dive wasn’t ranked. ${unrankedNote}</p>`}
+        <div id="resBoard"></div>
+      </section>` : '';
   const primary = isEndless
     ? '<button id="resNext" class="btn btn-quiet" type="button">Next endless dive</button>'
-    : '<button id="resEndless" class="btn btn-quiet" type="button">Play endless</button>';
+    : '<button id="resEndless" class="btn btn-quiet" type="button">Play Endless · practice</button>';
   // Only the player's own answers. Listing the rest would give away the hidden answers for
   // anyone who meets the prompt again.
   const rounds = dive.rounds.map((round) => {
@@ -729,7 +909,7 @@ function showResults(dive) {
     return `<div class="round">
         <span class="round-prompt">${esc(prompt?.text || round.id)}</span>
         <span class="round-answer">${esc(round.name || 'Nothing caught')}</span>
-        <span class="round-tier" style="color:${round.tier >= 0 ? tier.color : 'var(--muted)'}">${round.tier >= 0 ? esc(tier.name) : 'Time ran out'}</span>
+        <span class="round-tier" style="color:${round.tier >= 0 ? tier.color : 'var(--muted)'}">${round.tier >= 0 ? esc(tier.name) : round.voided ? 'Left the game' : 'Time ran out'}</span>
         <span class="round-pts">${round.pts}</span>
       </div>`;
   }).join('');
@@ -743,12 +923,14 @@ function showResults(dive) {
       </div>
       <p class="results-rank">${esc(rank.name)}</p>
       <p class="results-joke">${esc(rank.joke)}</p>
+      ${dive.ranked && showBoard ? '<p id="resPlace" class="results-place">Checking the board…</p>' : ''}
       <div class="results-actions">
         <button id="resCopy" class="btn btn-primary" type="button">Copy result</button>
         ${primary}
         <button id="resHome" class="btn btn-quiet" type="button">${G.fromArchive ? 'Back to archive' : 'Back to the boat'}</button>
       </div>
       ${nextLine}
+      ${boardBlock}
       <section class="block">
         <div class="block-title"><h3>Dive log</h3><span>Depth after each prompt</span></div>
         <div id="resChart" class="chart"></div>
@@ -795,10 +977,164 @@ function showResults(dive) {
     if (backToArchive) openArchive();
   });
   $('resNext')?.addEventListener('click', () => startEndless());
+  $('resNick')?.addEventListener('click', () => openNickname());
+  if (showBoard) {
+    const place = $('resPlace');
+    const load = mountBoard($('resBoard'), {
+      onLoad: (data) => {
+        if (!place) return;
+        const me = data.daily.me;
+        place.textContent = me ? `#${me.rank} of ${data.daily.players} today` : 'Your score is on its way to the board.';
+      },
+    });
+    startBoardPolling(load);
+  }
   $('resEndless')?.addEventListener('click', () => { G.fromArchive = false; startEndless(); });
   el.results.scrollTop = 0;
   el.results.focus({ preventScroll: true });
 }
+
+// Leaderboard ----------------------------------------------------------------------------
+// Today's Daily and this week's total. Nicknames and scores only, never answers.
+const boardState = { tab: 'daily', data: null, timer: null };
+
+function boardHTML(data, tab) {
+  const list = data[tab];
+  if (!list.players) {
+    return `<p class="empty">${tab === 'daily' ? 'Nobody’s finished today’s ranked dive yet.' : 'No ranked dives this week yet.'}</p>`;
+  }
+  const me = list.me;
+  const isMe = (row) => me && row.rank === me.rank && row.name === me.name;
+  const row = (r) => `<li${isMe(r) ? ' class="is-me"' : ''}><span class="board-rank">${r.rank}</span><span class="board-name">${esc(r.name)}</span><span class="board-score">${r.score}</span></li>`;
+  const outside = me && !list.top.some(isMe);
+  const count = `${list.players} ${list.players === 1 ? 'player' : 'players'}${tab === 'weekly' ? ' · Monday to Sunday' : ''}`;
+  return `<ol class="board">${list.top.map(row).join('')}${outside ? `<li class="board-gap" aria-hidden="true">···</li>${row(me)}` : ''}</ol>
+    <p class="board-count">${count}</p>`;
+}
+
+// Draws the board into a box and returns a function that reloads it.
+function mountBoard(box, { onLoad } = {}) {
+  boardState.data = null;
+  box.innerHTML = `<div class="board-tabs" role="group" aria-label="Which board">
+      <button type="button" data-tab="daily">Today</button><button type="button" data-tab="weekly">This week</button>
+    </div><div class="board-body"><p class="empty">Loading the board…</p></div>`;
+  const body = box.querySelector('.board-body');
+  const paint = () => {
+    box.querySelectorAll('[data-tab]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.tab === boardState.tab)));
+    if (boardState.data) body.innerHTML = boardHTML(boardState.data, boardState.tab);
+  };
+  box.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => {
+    audio.click();
+    boardState.tab = button.dataset.tab;
+    paint();
+  }));
+  const load = async () => {
+    if (!box.isConnected) return;
+    try {
+      boardState.data = await ranked.board();
+      if (!box.isConnected) return;
+      paint();
+      onLoad?.(boardState.data);
+    } catch (error) {
+      console.error(error);
+      if (!boardState.data) body.innerHTML = '<p class="empty">Couldn’t load the board. Check your connection.</p>';
+    }
+  };
+  paint();
+  load();
+  return load;
+}
+
+// The board keeps updating as other players finish.
+function startBoardPolling(load) {
+  stopBoardPolling();
+  boardState.timer = setInterval(() => {
+    if (!document.hidden) load();
+  }, 30000);
+}
+
+function stopBoardPolling() {
+  clearInterval(boardState.timer);
+  boardState.timer = null;
+}
+
+function openBoard() {
+  const me = ranked.player();
+  openSheet('Leaderboard', `${me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>.</p>`
+    : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Pick a nickname</button> to get on the board.</p>'}
+    <div id="sheetBoard"></div>`);
+  $('sheetNick')?.addEventListener('click', () => openNickname());
+  const load = mountBoard($('sheetBoard'));
+  startBoardPolling(() => {
+    if (el.sheet.open && $('sheetBoard')) load();
+    else if (document.body.dataset.screen !== 'results') stopBoardPolling();
+  });
+}
+
+const NICK_ERRORS = {
+  invalid: 'Use 3 to 16 letters or numbers, no spaces.',
+  blocked: 'Pick a different nickname.',
+  taken: 'Someone already has that one. Try another.',
+};
+
+// Opened from the Daily button the first time someone plays, from the title, or from results.
+function openNickname({ fromDaily = false } = {}) {
+  openSheet(fromDaily ? 'Today’s Daily is ranked' : 'Get on the board', `
+    <p class="nick-lead">Pick a nickname and your Daily becomes your ranked dive. Everyone gets the same seven prompts, and the board fills up as people finish.</p>
+    <form id="nickForm" class="nick-form" novalidate>
+      <label class="label" for="nickInput">Nickname</label>
+      <div class="nick-row">
+        <input id="nickInput" type="text" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+          placeholder="Your nickname" enterkeyhint="go" data-1p-ignore data-lpignore="true">
+        <button class="btn btn-primary" type="submit">${fromDaily ? 'Play ranked' : 'Save'}</button>
+      </div>
+      <p id="nickError" class="nick-error" role="alert"></p>
+    </form>
+    <ul class="how-steps nick-rules">
+      <li>One try a day. The server keeps the clock and checks every answer.</li>
+      <li>Switching tabs or apps during a question makes it score 0.</li>
+      <li>The board shows nicknames and scores, never answers.</li>
+      <li>Your nickname lives in this browser. Clearing its data loses it.</li>
+    </ul>
+    ${fromDaily ? '<button id="nickSkip" class="btn btn-quiet nick-skip" type="button">Play today without a nickname</button>' : ''}`);
+  const form = $('nickForm');
+  const input = $('nickInput');
+  const error = $('nickError');
+  const submit = form.querySelector('button[type="submit"]');
+  input.focus();
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = input.value.trim();
+    if (!/^[A-Za-z0-9]{3,16}$/.test(name)) {
+      error.textContent = NICK_ERRORS.invalid;
+      return;
+    }
+    submit.disabled = true;
+    error.textContent = 'Saving…';
+    let result = null;
+    try {
+      result = await ranked.join(name);
+    } catch (problem) {
+      console.error(problem);
+    }
+    submit.disabled = false;
+    if (!result || result.error) {
+      error.textContent = NICK_ERRORS[result?.error] || 'Couldn’t reach the server. Try again.';
+      input.select();
+      return;
+    }
+    store.set('ranked.asked', true);
+    closeSheet();
+    if (G.phase === 'title') refreshTitle();
+    if (fromDaily) startDaily();
+  });
+  $('nickSkip')?.addEventListener('click', () => {
+    store.set('ranked.asked', true);
+    closeSheet();
+    startDaily();
+  });
+}
+
 
 // Modes ----------------------------------------------------------------------------------
 function notice(text) {
@@ -830,6 +1166,14 @@ function startDaily() {
   audio.unlock();
   audio.click();
   const dive = getDaily(G.today);
+  const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
+  // The first time someone plays, they're told the Daily is the ranked dive and offered a nickname.
+  if (ranked.available && !PRETEND_DAY && !me && isFresh(dive) && !store.get('ranked.asked')) {
+    openNickname({ fromDaily: true });
+    return;
+  }
+  // A Daily started before the player had a nickname stays unranked.
+  if (me && isFresh(dive)) dive.ranked = true;
   whenLoaded(dive.ids, () => {
     G.fromArchive = false;
     if (dive.done) showResults(dive);
@@ -861,6 +1205,7 @@ function startEndless() {
 function openDay(day) {
   closeSheet();
   const dive = getDaily(day);
+  if (dive.ranked && !dive.done) dive.ranked = false;
   whenLoaded(dive.ids, () => {
     G.fromArchive = true;
     if (dive.done) showResults(dive);
@@ -891,10 +1236,11 @@ function openHow() {
       <li>You get 25 seconds to name one thing. Close spellings count, and a wrong answer only costs you time.</li>
       <li>The answers everyone thinks of barely get you wet. The rare ones pull you down.</li>
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
-      <li>One dive a day. Endless mode is there if you want more.</li>
+      <li>One Daily a day. Endless is there for practice, and it never counts.</li>
+      ${ranked.available ? '<li>Pick a nickname and your Daily becomes your ranked dive: one try, scored by the server, on a board everyone can see. Switching away during a ranked question makes it score 0.</li>' : ''}
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
       <li>Tap the mic to say your answer instead of typing it.</li>
-      <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too.</li>
+      <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too. Ranked scores are tied to your nickname, but your answers never show on the board.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
 }
@@ -952,14 +1298,17 @@ function openMenu() {
   const inDive = Boolean(G.dive);
   const items = [
     inDive ? ['Back to the boat', 'menuHome'] : null,
-    ['Today’s dive', 'menuDaily'],
-    ['Endless', 'menuEndless'],
+    ['Today’s Daily', 'menuDaily'],
+    ['Endless · practice', 'menuEndless'],
+    ranked.available ? ['Leaderboard', 'menuBoard'] : null,
     ['Archive', 'menuArchive'],
     ['My stats', 'menuStats'],
     ['How to play', 'menuHow'],
     ['What’s new', 'menuNews'],
   ].filter(Boolean);
-  const note = G.phase === 'prompt' ? '<p class="results-next">Your dive is saved, but the clock keeps running.</p>' : '';
+  const note = G.phase !== 'prompt' ? ''
+    : isRankedToday(G.dive) ? '<p class="results-next">The ranked clock keeps running while this is open.</p>'
+      : '<p class="results-next">Your dive is saved, but the clock keeps running.</p>';
   openSheet('Menu', `<ul class="sheet-list">${items.map(([label, id]) => `<li><button type="button" id="${id}"><span>${esc(label)}</span></button></li>`).join('')}</ul>${note}`);
   $('menuHome')?.addEventListener('click', () => { closeSheet(); goHome(); });
   $('menuDaily').addEventListener('click', () => {
@@ -972,6 +1321,7 @@ function openMenu() {
     startEndless();
   });
   $('menuArchive').addEventListener('click', openArchive);
+  $('menuBoard')?.addEventListener('click', () => openBoard());
   $('menuStats').addEventListener('click', openStats);
   $('menuHow').addEventListener('click', openHow);
   $('menuNews').addEventListener('click', openNews);
@@ -981,6 +1331,12 @@ function openMenu() {
 function wire() {
   el.btnBegin.addEventListener('click', startDaily);
   el.btnEndless.addEventListener('click', startEndless);
+  el.rankedLine.addEventListener('click', () => {
+    audio.unlock();
+    audio.click();
+    if (ranked.player()) openBoard();
+    else openNickname();
+  });
   $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
   if (voiceSupported) {
     el.btnMic.hidden = false;
@@ -1024,8 +1380,10 @@ function wire() {
   window.visualViewport?.addEventListener('scroll', syncViewport);
   el.answer.addEventListener('focus', () => window.scrollTo(0, 0));
   document.addEventListener('visibilitychange', () => {
+    if (document.hidden) leaveRanked();
     if (!document.hidden && G.phase === 'title') refreshTitle();
   });
+  addEventListener('pagehide', leaveRanked);
 }
 
 // Tries the full layout, then a compact one, then drops the tagline, so nothing lands on the bowl.

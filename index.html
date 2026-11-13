@@ -38,6 +38,7 @@
       <span id="hudDepth" class="meter-value">0 m</span>
     </div>
     <div class="pips-wrap">
+      <span id="hudMode" class="hud-mode"></span>
       <div id="pips" class="pips" aria-hidden="true"></div>
     </div>
     <div class="meter meter-score">
@@ -47,6 +48,7 @@
   </div>
 
   <p id="bootMessage" class="boot-message" role="status">Filling the bowl…</p>
+  <div id="modeBanner" class="mode-banner" role="status" hidden></div>
 
   <section id="title" class="screen" hidden>
     <div class="title-sky">
@@ -55,11 +57,13 @@
       <p class="tagline">Seven prompts. Twenty-five seconds each.<br>Say what nobody else would.</p>
     </div>
     <div class="title-sea">
-      <button id="btnBegin" class="btn btn-primary btn-big" type="button">Dive in <span aria-hidden="true">▼</span></button>
+      <p id="dailyTag" class="daily-tag">Today’s Daily</p>
+      <button id="btnBegin" class="btn btn-primary btn-big" type="button" aria-describedby="dailyTag diveLabel">Dive in <span aria-hidden="true">▼</span></button>
       <p id="diveLabel" class="label dive-label"></p>
+      <button id="rankedLine" class="ranked-line" type="button" hidden></button>
       <nav class="title-links" aria-label="More ways to play">
         <button id="btnHow" class="btn btn-quiet" type="button">How to play</button>
-        <button id="btnEndless" class="btn btn-quiet" type="button">Endless</button>
+        <button id="btnEndless" class="btn btn-quiet btn-endless" type="button">Endless <span class="btn-sub">practice</span></button>
         <button id="btnArchive" class="btn btn-quiet" type="button">Archive</button>
         <button id="btnStats" class="btn btn-quiet" type="button">My stats</button>
       </nav>
