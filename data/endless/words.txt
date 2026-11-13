@@ -11,9 +11,9 @@
 10: Alpha, Beta, Gamma, Delta, Omega, Pi
 15: Omicron, Sigma
 30: Epsilon, Theta, Lambda, Mu, Tau, Phi, Psi, Chi, Kappa, Rho, Zeta
-60: Eta, Nu, Xi, Upsilon
-85: San, Koppa, Sampi, Stigma, Heta, Digamma
-100: Iota :: The smallest letter. "Not one iota" means not even a tiny bit.
+60: Eta, Iota, Nu, Xi, Upsilon
+85: San, Koppa, Sampi, Stigma, Heta
+100: Digamma :: A letter the Greeks dropped before their classical age. It looked like an F, and sounded like W.
 
 ? Name a French word or phrase used in English
 ~retired
@@ -28,76 +28,76 @@
 ~exact
 10: Hat, Bat, Rat, Mat, Sat, Fat, Pat, That, Chat, Flat
 15: Diplomat, Acrobat
-30: Brat, Gnat, Spat, Slat, Scat, Vat, Tat, Lat, Format, Combat, Doormat, Bobcat, Wombat, Habitat, Democrat, Aristocrat, Thermostat, Baseball bat, Nonfat, Copycat, Laundromat, Pussycat, Tomcat, Hazmat, Welcome mat
+30: Brat, Gnat, Splat, Spat, Slat, Scat, Vat, Tat, Lat, Format, Combat, Doormat, Bobcat, Wombat, Habitat, Democrat, Aristocrat, Thermostat, Baseball bat, Nonfat, Copycat, Laundromat, Pussycat, Tomcat, Hazmat, Welcome mat
 60: Cravat, Caveat, Muskrat, Meerkat, Ziggurat, Autocrat, Bureaucrat, Technocrat, Plutocrat, Rheostat, Photostat, Kitty cat, Sprat, Drat, Stat, Frat, Thereat, Whereat, Hepcat, Polecat, Wildcat, Fruit bat, Vampire bat, Top hat, Hard hat, Sun hat, Cowboy hat, Yoga mat, Mouse mat, Placemat, Dingbat, Brickbat, Numbat, Fiat, Tit for tat
-85: Rat-a-tat|Ratatat, Concordat, Coup d'état|Coup d'etat, Entrechat, Commissariat, Proletariat, Secretariat, Salariat, Lariat, Aerostat, Heliostat, Hydrostat, Gyrostat, Dandiprat, Marat, Arafat, Ararat, Landsat, Jehoshaphat
-100: Splat :: The sound of you hitting the ground.
+85: Rat-a-tat|Ratatat, Concordat, Coup d'état|Coup d'etat, Entrechat, Commissariat, Proletariat, Secretariat, Salariat, Lariat, Aerostat, Heliostat, Hydrostat, Gyrostat, Dandiprat, Marat, Arafat, Ararat, Landsat
+100: Jehoshaphat :: A king of Judah, and the star of the old exclamation "Jumpin' Jehoshaphat!"
 
 ? Name another word for big
 10: Large, Huge, Giant, Enormous, Massive, Gigantic
 15: Humongous|Humungous
-30: Tremendous, Colossal, Immense, Vast, Great, Mammoth, Jumbo, Monster|Monstrous, Titanic, Gargantuan, Hefty, Bulky, Whopping, Substantial, Sizable, Mega, King-size|King size, Oversized, Grand, Extra-large|XL, Towering, Heavy, Super-size|Supersize, Monumental, Epic
+30: Tremendous, Colossal, Immense, Vast, Great, Mammoth, Jumbo, Monster|Monstrous, Titanic, Gargantuan, Hefty, Bulky, Whopping, Substantial, Sizable, Mega, King-size|King size, Oversized, Grand, Extra-large|XL, Ginormous, Towering, Heavy, Super-size|Supersize, Monumental, Epic
 60: Behemoth, Elephantine, Hulking, Whopper, Astronomical, Galactic, Cosmic, Prodigious, Stupendous, Considerable, Extensive, Voluminous, Capacious, Spacious, Burly, Strapping, Portly, Goliath, Herculean, Cyclopean, Ample, Mountainous, Walloping, Thumping, Honking, Planetary, Gross, Tall, Wide, Sprawling, Bumper, Almighty
-85: Leviathan, Pantagruelian, Titanesque, Gigantesque, Mastodonic, Cyclopic, Immeasurable, Bloated, Thundering, Whacking, Ponderous, Magnum, Massy, Bulbous, Kingly, Lofty, Commodious, Gigantean, Jovian, Olympian, Vasty, Stonking, Brobdingnagian
-100: Ginormous :: Giant plus enormous.
+85: Leviathan, Pantagruelian, Titanesque, Gigantesque, Mastodonic, Cyclopic, Immeasurable, Bloated, Thundering, Whacking, Ponderous, Magnum, Massy, Bulbous, Kingly, Lofty, Commodious, Gigantean, Jovian, Olympian, Vasty, Stonking
+100: Brobdingnagian :: From the land of giants in Gulliver's Travels. It's a real word, and fun to attempt.
 
 ? Name a word that starts with X
 10: Xylophone, X-ray|Xray
 15: Xerox, Xbox
 30: Xenophobia, Xenon, Xanadu, Xavier, Xena, Xylem, Xmas, Xanax, X-Men, Xenophobe
-60: Xylitol, Xanthan gum|Xanthan, Xerxes, Xiphoid, Xeriscape, Xenial, Xenolith, Xebec, Xerography, Xylography, Xenogenesis, Xylophonist, XOXO, Xennial, Xhosa, Xi Jinping, Xi'an|Xian, X-axis, X-factor
-85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous, Xenoglossy
-100: Xenomorph :: The monster from Alien. Its blood is acid.
+60: Xenomorph, Xylitol, Xanthan gum|Xanthan, Xerxes, Xiphoid, Xeriscape, Xenial, Xenolith, Xebec, Xerography, Xylography, Xenogenesis, Xylophonist, XOXO, Xennial, Xhosa, Xi Jinping, Xi'an|Xian, X-axis, X-factor
+85: Xeric, Xylose, Xanthic, Xanthippe, Xanthophyll, Xenophile, Xenopus, Xerarch, Xerophyte, Xeroderma, Xerosis, Xiphias, Xoanon, Xu, Xyloid, Xyst, Xylan, Xanthoma, Xanthous, Xenia, Xenogamy, Xenograft, Xenotransplant, Xiphosuran, Xerophilous, Xylophagous
+100: Xenoglossy :: The supposed ability to speak a language you've never learned.
 
 ? Name a way to walk
 10: Stroll, Jog, March, Run, Skip, Hike
 15: Moonwalk, Sashay
 30: Amble, Saunter, Strut, Stride, Wander, Limp, Shuffle, Tiptoe, Stomp, Trudge, Waddle, Pace, Plod, Stumble, Hobble, Sneak, Creep, Swagger, Meander, Ramble, Tread, Trek, Stagger, Mosey, Prance, Lumber, Trot, Tramp, Roam, Power walk
-60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
-85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk, Galumph
-100: Sleepwalk|Sleepwalking :: Walking while you're asleep, and remembering none of it.
+60: Lope, Traipse, Totter, Toddle, Lurch, Slog, Sidle, Mince, Perambulate, Promenade, Goose-step|Goose step, Shamble, Scuffle, Clomp, Flounce, Stalk, Slink, Skulk, Pussyfoot, Schlep, Sleepwalk, Gallivant, Stump, Yomp, Hoof it, Hotfoot, Bumble, Foot it, Constitutional, Ambulate, Sally, Step, Pad, Patter, Tromp, Tootle, Waltz, Swan, Parade, Rove, Bop, Sway, Dawdle
+85: Peregrinate, Flâner|Flaner, Stravage, Stoat, Dander, Daunder, Bimble, Pootle, Passeggiata, Footslog, Shank's pony, Bushwalk, Tittup, Hirple, Stot, Pigeon-toe, Gad, Mooch, Nordic walk, Wobble, Dodder, Teeter, Hippety-hop, Crabwalk, Duck walk, Zombie walk, Cakewalk, Frogmarch, Lockstep, Catwalk
+100: Galumph :: Lewis Carroll made it up for "Jabberwocky." It means to bound along clumsily and in triumph.
 
 ? Name a word that rhymes with light
 ~exact
 10: Night, Right, Kite, Bite, Fight, White, Sight, Might, Tight, Write
 15: Dynamite, Satellite
-30: Bright, Flight, Height, Fright, Knight, Slight, Site, Quite, Polite, Invite, Excite, Delight, Tonight, Midnight, Daylight, Goodnight, Ignite, Recite, Unite, Spite, Plight, Blight, Alright, Appetite, Termite, Parasite, Meteorite, Socialite, Graphite, Insight, Highlight, Spotlight, Sunlight, Moonlight, Flashlight, Headlight, Streetlight, Stoplight, Twilight, Fortnight, Overnight, Copyright, Upright, Outright, Downright, Birthright, Contrite, Rite, Wright, Trite, Sprite, Byte, Mite
+30: Bright, Flight, Height, Fright, Knight, Slight, Site, Quite, Polite, Invite, Excite, Delight, Tonight, Midnight, Daylight, Goodnight, Ignite, Recite, Unite, Spite, Plight, Blight, Alright, Appetite, Kryptonite, Termite, Parasite, Meteorite, Socialite, Graphite, Insight, Highlight, Spotlight, Sunlight, Moonlight, Flashlight, Headlight, Streetlight, Stoplight, Twilight, Fortnight, Overnight, Copyright, Upright, Outright, Downright, Birthright, Contrite, Rite, Wright, Trite, Sprite, Byte, Mite
 60: Stalactite, Stalagmite, Anthracite, Lignite, Acolyte, Neophyte, Erudite, Expedite, Reunite, Extradite, Indict, Incite, Despite, Rewrite, Ghostwrite, Underwrite, Nitrite, Sulfite, Israelite, Luddite, Vegemite, Marmite, Cellulite, Bullfight, Gunfight, Dogfight, Prizefight, Frostbite, Snakebite, Soundbite, Playwright, Shipwright, Wheelwright, Hindsight, Foresight, Eyesight, Campsite, Website, Starlight, Lamplight, Limelight, Skylight, Searchlight, Candlelight, Firelight, Nightlight, Featherlight, Airtight, Watertight, Uptight, Black and white, Snow White, Mr. Right, Sleight
-85: Malachite, Hematite, Magnetite, Dolomite, Bakelite, Ammonite, Muscovite, Trilobite, Proselyte, Anchorite, Eremite, Vulcanite, Lucite, Nephrite, Cordite, Shiite, Jacobite, Mennonite, Moabite, Hittite, Levite, Sybarite, Bedight, Alight, Affright, Aright, Benight, Requite, Smite, Bight, Tripartite, Bipartite, Dendrite, Electrolyte, Cosmopolite, Ebonite, Pyrite, Troglodyte
-100: Kryptonite :: Superman's one weakness. It rhymes, we checked.
+85: Malachite, Hematite, Magnetite, Dolomite, Bakelite, Ammonite, Muscovite, Trilobite, Proselyte, Anchorite, Eremite, Vulcanite, Lucite, Nephrite, Cordite, Shiite, Jacobite, Mennonite, Moabite, Hittite, Levite, Sybarite, Bedight, Alight, Affright, Aright, Benight, Requite, Smite, Bight, Tripartite, Bipartite, Dendrite, Electrolyte, Cosmopolite, Ebonite, Pyrite
+100: Troglodyte :: A cave dweller. It comes from the Greek for "one who creeps into holes."
 
 ? Name another word for happy
 10: Joyful, Glad, Cheerful, Excited, Content, Elated
 15: Jubilant, Euphoric
-30: Ecstatic, Delighted, Merry, Jolly, Pleased, Thrilled, Overjoyed, Blissful, Upbeat, Sunny, Joyous, Satisfied, Giddy, Gleeful, Peppy, Chipper, Smiling, Lighthearted, Contented, Positive, Grinning, Psyched, Pumped, Cheery
+30: Ecstatic, Delighted, Merry, Jolly, Pleased, Thrilled, Overjoyed, Blissful, Upbeat, Sunny, Joyous, Satisfied, Giddy, Gleeful, Peppy, Chipper, Smiling, Lighthearted, Contented, Positive, Grinning, Stoked, Psyched, Pumped, Cheery
 60: Jovial, Mirthful, Radiant, Buoyant, Exuberant, Over the moon, On cloud nine|Cloud nine, Tickled pink|Tickled, Walking on air, Beaming, Sanguine, Perky, Bubbly, Chuffed, Rapturous, Exultant, Gay, Bright, Sparkling, Hopeful, Carefree, Breezy, Laughing, In high spirits, Zippy, Lively, Vivacious, Sprightly, Starry-eyed
-85: Felicitous, Beatific, Blithe, Halcyon, Elysian, Eudaemonic, Rhapsodic, Convivial, Winsome, Riant, Gladsome, Blissed out, Jocund, Jocose, Jocular, Mirthsome, Sunshiny, Paradisiacal, Cock-a-hoop, Happy as a clam, Rosy, Pollyannaish, Transported, Gruntled
-100: Stoked :: Surfer for really happy.
+85: Felicitous, Beatific, Blithe, Halcyon, Elysian, Eudaemonic, Rhapsodic, Convivial, Winsome, Riant, Gladsome, Blissed out, Jocund, Jocose, Jocular, Mirthsome, Sunshiny, Paradisiacal, Cock-a-hoop, Happy as a clam, Rosy, Pollyannaish, Transported
+100: Gruntled :: The opposite of disgruntled. Yes, it's a real word, and it's in the dictionary.
 
 ? Name a word that means crazy
 10: Insane, Nuts, Mad, Bananas, Bonkers, Loco
 15: Cuckoo
 30: Wacko|Whacko, Looney|Loony, Crackers, Deranged, Psycho, Mental, Wild, Cray cray|Cray, Unhinged, Lunatic, Wacky, Nutty, Kooky, Off your rocker|Off one's rocker|Off his rocker, Out of your mind, Batty, Bats, Demented, Berserk, Maniac, Zany, Daft, Barking mad|Barking, Mad as a hatter, Coo-coo|Koo-koo, Looney Tunes, Sick, Gaga, Haywire, Nutso, Screwy
-60: Unglued, Round the bend, Off the wall, Off the rails, Not all there, Touched, Unstable, Delirious, Certifiable, Stark raving mad, Raving, Meshuggah|Meshuga, Dotty, Potty, Barmy, Doolally, Loopy, Squirrelly, Whacked, Wigged out, Tetched, Crazed, Frenzied, Manic, Fruity, Fruitcake, Nutcase, Nutjob, Nutter, Basket case, Cracked, Lost your marbles, Rabid
-85: Non compos mentis, Moonstruck, Bedlamite, Crackpot, Bughouse, Buggy, Cockamamie, Dippy, Gonzo, Harebrained, Wonky, Balmy, Scatty, Spare, Yampy, Pixilated, Starkers, Unbalanced, Hatstand, Box of frogs|Mad as a box of frogs, Sandwich short of a picnic|A few sandwiches short of a picnic, Bats in the belfry, Stir-crazy, Cabin fever, Dingbats, Daffy, Troppo
-100: Out to lunch :: Not actually at lunch. Just not all there.
+60: Unglued, Round the bend, Off the wall, Off the rails, Not all there, Touched, Unstable, Delirious, Certifiable, Stark raving mad, Raving, Out to lunch, Meshuggah|Meshuga, Dotty, Potty, Barmy, Doolally, Loopy, Squirrelly, Whacked, Wigged out, Tetched, Crazed, Frenzied, Manic, Fruity, Fruitcake, Nutcase, Nutjob, Nutter, Basket case, Cracked, Lost your marbles, Rabid
+85: Non compos mentis, Moonstruck, Bedlamite, Crackpot, Bughouse, Buggy, Cockamamie, Dippy, Gonzo, Harebrained, Wonky, Balmy, Scatty, Spare, Yampy, Pixilated, Starkers, Unbalanced, Hatstand, Box of frogs|Mad as a box of frogs, Sandwich short of a picnic|A few sandwiches short of a picnic, Bats in the belfry, Stir-crazy, Cabin fever, Dingbats, Daffy
+100: Troppo :: Australian slang. Stay in the tropical heat too long and you've "gone troppo."
 
 ? Name a word or phrase that starts with fire
 10: Firefighter|Fireman, Fireworks|Firework, Firefly, Fireplace, Firetruck|Fire truck, Fire
 15: Firefox, Firestarter
 30: Fire alarm, Fire hydrant, Firewood, Firewall, Fire drill, Fire escape, Fire extinguisher, Firecracker, Fire pit|Firepit, Fireproof, Fire ant, Fire station|Firehouse, Fire department, Fireball, Firearm, Fire exit, Fired, Fire engine, Firestone, Fire Island
-60: Firebrand, Firebird, Firestorm, Firelight, Fireside, Firepower, Firebomb, Fire breather|Fire-breathing, Fire eater|Fire-eater, Fire sale, Firenze, Fire hose, Fire marshal, Fire hazard, Fire opal, Fireweed, Firewater, Fire TV, Fire Stick|Firestick, Fire lane, Fire door, Fire code, Fire and Ice, Fire and Rain, Firehawk, Firebolt, Firenado, Fire Walk with Me, Firewalk|Firewalking
-85: Firebreak, Fireclay, Firedog, Fireguard, Firelock, Firetrap, Fireboat, Firebox, Fire-and-forget, Firebug, Firefight, Firehall, Fire-rated, Fire retardant, Firewoman, Fire salamander, Firemouth, Firethorn, Fire-roasted, Firesign, Fire coral, Fire-bellied toad, Firedamp
-100: Fire Nation :: Avatar's villains. Everything changed when they attacked.
+60: Firebrand, Firebird, Firestorm, Firelight, Fireside, Firepower, Firebomb, Fire breather|Fire-breathing, Fire eater|Fire-eater, Fire sale, Firenze, Fire hose, Fire marshal, Fire hazard, Fire opal, Fireweed, Firewater, Fire TV, Fire Stick|Firestick, Fire lane, Fire door, Fire code, Fire and Ice, Fire and Rain, Firehawk, Firebolt, Firenado, Fire Nation, Fire Walk with Me, Firewalk|Firewalking
+85: Firebreak, Fireclay, Firedog, Fireguard, Firelock, Firetrap, Fireboat, Firebox, Fire-and-forget, Firebug, Firefight, Firehall, Fire-rated, Fire retardant, Firewoman, Fire salamander, Firemouth, Firethorn, Fire-roasted, Firesign, Fire coral, Fire-bellied toad
+100: Firedamp :: The explosive methane gas that made old coal mines so dangerous.
 
 ? Name a word with no A, E, I, O or U
 ~exact
 10: Sky, Fly, Try, Why, My, By, Cry, Dry, Shy, Gym, Spy, Fry, Sly, Pry
 15: Rhythm
 30: Myth, Lynx, Hymn, Crypt, Pygmy, Nymph, Sync, Wry, Ply, Thy, Psych, Cyst, Tryst, Spry, Shyly, Slyly, Dryly, Wryly, Hmm, Shh, Brr|Brrr, Psst, Tsk, Zzz, Nth, Flyby, Sylph, Glyph, Lymph, Pyx
-60: Rhythms, Myths, Hymns, Lynch, Synth, Hm, Mm, Grr, Spryly, Tsktsk, Sphynx, Styx, Wych, Drys
-85: Crwth, Cwm, Cwtch, Phpht, Pht, Ssh, Sh, Zzzs, Xylyl, Flysch, Wynd, Hwyl, Ghyll, Rynd, Scry, Stymy, Thymy, Typy, Gyp, Hyp, Syzygy
-100: Pfft :: The sound of not being impressed.
+60: Rhythms, Myths, Hymns, Lynch, Synth, Pfft, Hm, Mm, Grr, Spryly, Tsktsk, Sphynx, Styx, Wych, Drys
+85: Crwth, Cwm, Cwtch, Phpht, Pht, Ssh, Sh, Zzzs, Xylyl, Flysch, Wynd, Hwyl, Ghyll, Rynd, Scry, Stymy, Thymy, Typy, Gyp, Hyp
+100: Syzygy :: When three celestial bodies line up. Also a brutal word to play in Scrabble.
 
 ? Name a word that sounds like a letter
 ~exact

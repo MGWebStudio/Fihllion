@@ -3,13 +3,13 @@
 export const CHANGELOG = [
   {
     date: '2026-11-12',
-    time: '10:05 AM',
-    title: 'New hidden answers',
-    short: 'New hidden answers',
+    time: '5:45 PM',
+    title: 'Hidden answers move around',
+    short: 'Hidden answers move around',
     items: [
-      'New One in a Fihllion answers on 242 prompts. They’re still rare, but now they’re things you might actually think of.',
-      'The old hidden answers still count, for 85 points.',
-      'Past dives keep the answers they had.',
+      'In Endless, the hidden answer changes every time a prompt comes up. The one you found last time now scores 85.',
+      'When a Daily prompt comes back around, it hides a new answer too.',
+      'Hidden answers are hard to find again. This morning’s easier ones are gone.',
     ],
   },
   {

@@ -48,17 +48,17 @@
 15: Minuscule|Miniscule
 30: Teeny|Teeny-weeny, Itty-bitty|Itty bitty, Miniature, Minute, Compact, Short, Slight, Puny, Microscopic, Teensy|Teensy-weensy, Pint-sized|Pint-size|Pint sized, Bite-sized|Bite-size|Bite size, Baby, Pocket-sized|Pocket-size|Pocket size
 60: Diminutive, Infinitesimal, Lilliputian, Undersized, Dinky, Pocket, Toy, Dwarf, Bantam, Tiddly, Measly, Meager|Meagre, Scant, Small-scale, Slender, Limited, Modest, Petty, Trifling, Trivial, Negligible, Insignificant, Minor, Paltry, Narrow, Cramped, Poky|Pokey, Minimal, Nano, Micro, Elfin, Weensy, Teeny-tiny|Teeny tiny, Itsy-bitsy|Itsy bitsy, Snug, Cozy|Cosy, Junior, Stunted, Runty, Knee-high, Smallish, Little-bitty|Little bitty, Thumbnail
-85: Homeopathic, Minikin, Picayune, Inconsequential, Piffling, Footling, Nugatory, Bijou, Titchy, Diddy, Ickle, Atomic, Peewee|Pee-wee, Half-pint|Half pint, Fun-size|Fun size, Travel-size|Travel size, Shrimpy, Weeny, Exiguous
-100: Smol :: Internet speak for tiny and cute, usually about a pet.
+85: Homeopathic, Minikin, Picayune, Inconsequential, Piffling, Footling, Nugatory, Bijou, Titchy, Diddy, Ickle, Atomic, Peewee|Pee-wee, Half-pint|Half pint, Fun-size|Fun size, Travel-size|Travel size, Shrimpy, Weeny
+100: Exiguous :: Means scanty or very small. It comes from the Latin for "weighed out exactly."
 
 ? Name a word that starts with Q
 ~drop word
 10: Queen, Quick, Quiet, Question, Quiz, Quilt, Quarter
 15: Qi
 30: Quack, Quail, Quake, Quality, Quantity, Quarrel, Quart, Quarry, Queasy, Quest, Queue, Quiche, Quill, Quit, Quite, Quote, Quiver, Quirk|Quirky, Quotient, Quench, Query, Quaint, Quarantine, Quartz, Quasar, Quarterback, Quicksand, Quinoa, Quintet, Quadrant, Quadruple, Qualify, Quota, Quokka
-60: Quixotic, Quagmire, Quandary, Quibble, Quintessential|Quintessence, Quorum, Quell, Quasi, Quaff, Quip, Quatrain, Quaver, Quay, Quetzal, Quince, Quinine, Quiescent, Quietus, Quietude, Quarto, Quisling, Quoth, Quadratic, Quadrilateral, Quadriceps|Quads, Quadrillion, Quantum, Quark, Quartile, Quesadilla, Queso, Quintuplet|Quints, Quarterly, Quarrelsome, Quizzical
-85: Quidnunc, Quotidian, Querulous, Quiddity, Quodlibet, Quillon, Quoin, Quern, Qintar|Qindar, Qanat, QWERTY|Qwerty, Quoll, Quahog, Quagga, Quinquennial, Quinquereme, Quadrivium, Quango, Quaestor, Quatrefoil, Quietism, Quassia, Quebracho, Quillwort, Quinsy, Quipu, Quirt, Quaich, Quair, Quincunx
-100: Quidditch :: Played on broomsticks. Real college teams play it on foot, with a broom between their legs.
+60: Quixotic, Quagmire, Quandary, Quibble, Quintessential|Quintessence, Quorum, Quell, Quasi, Quaff, Quip, Quatrain, Quaver, Quay, Quetzal, Quince, Quinine, Quiescent, Quietus, Quietude, Quarto, Quidditch, Quisling, Quoth, Quadratic, Quadrilateral, Quadriceps|Quads, Quadrillion, Quantum, Quark, Quartile, Quesadilla, Queso, Quintuplet|Quints, Quarterly, Quarrelsome, Quizzical
+85: Quidnunc, Quotidian, Querulous, Quiddity, Quodlibet, Quillon, Quoin, Quern, Qintar|Qindar, Qanat, QWERTY|Qwerty, Quoll, Quahog, Quagga, Quinquennial, Quinquereme, Quadrivium, Quango, Quaestor, Quatrefoil, Quietism, Quassia, Quebracho, Quillwort, Quinsy, Quipu, Quirt, Quaich, Quair
+100: Quincunx :: The pattern of five dots on a die: one in each corner and one in the middle.
 
 ? Name a word that rhymes with ring
 ~exact
@@ -66,17 +66,17 @@
 15: Bling
 30: Fling, Cling, Sling, String, Ding, Ping, Zing, Wring, Ka-ching|Kaching|Cha-ching, Anything, Everything, Something, Nothing, Offspring, Earring, Wellspring, Mainspring, Plaything, Upswing, Shoestring, Bowstring, Hamstring, Drawstring, G-string|G string
 60: Ming, Beijing, Peking, Unsling, Restring, Unstring, Ding-a-ling|Dingaling, Ting, Bedspring, Hairspring, Downswing, Backswing, Handspring, Heartstring, Underwing, Lacewing, Redwing, Waxwing, Batwing, Bee sting
-85: Bling-bling, Upspring, Ting-a-ling, Hindwing, Forewing, Chungking, Nanking, Kunming, Taiping, Wingding
-100: Burger King :: It rhymes, and now you're hungry.
+85: Bling-bling, Upspring, Ting-a-ling, Hindwing, Forewing, Chungking, Nanking, Kunming, Taiping
+100: Wingding :: Old slang for a big, lively party.
 
 ? Name another word for sad
 ~drop very
 10: Unhappy, Upset, Depressed, Down, Blue, Gloomy
 15: Melancholy
-30: Miserable, Heartbroken, Sorrowful, Glum, Downcast, Low, Mournful, Crestfallen, Dejected, Despondent, Woeful, Morose, Somber|Sombre, Tearful|Teary, Weepy, Hurt, Grieving|Grief-stricken, Down in the dumps|In the dumps, Sorry, Lonely, Forlorn, Wistful, Dismal, Heavy-hearted|Heavyhearted, Disheartened, Discouraged, Disappointed, Distraught, Devastated, Crushed, Brokenhearted|Broken-hearted|Broken, Low-spirited, Downhearted|Down-hearted
+30: Miserable, Heartbroken, Sorrowful, Glum, Downcast, Low, Mournful, Crestfallen, Dejected, Despondent, Woeful, Morose, Somber|Sombre, Tearful|Teary, Weepy, Hurt, Grieving|Grief-stricken, Bummed|Bummed out, Down in the dumps|In the dumps, Sorry, Lonely, Forlorn, Wistful, Dismal, Heavy-hearted|Heavyhearted, Disheartened, Discouraged, Disappointed, Distraught, Devastated, Crushed, Brokenhearted|Broken-hearted|Broken, Low-spirited, Downhearted|Down-hearted
 60: Doleful, Lugubrious, Dolorous, Lachrymose, Rueful, Plaintive, Pensive, Pained, Anguished, Desolate, Disconsolate, Inconsolable, Cheerless, Joyless, Dispirited, Dismayed, Wretched, Troubled, Distressed, Grieved, Heartsick, Heartsore, Sick at heart, Long-faced, Mopey|Mopy, Hangdog, Woebegone, Melancholic, Saturnine, Funereal, Elegiac, Bleak, Dreary, In a funk, Out of sorts, Gutted, Torn up, Bereft, Emo, Sad sack|Sad-sack
-85: Dolesome, Atrabilious, Hipped, Chapfallen|Chopfallen, Down in the mouth, Dumpish, Lumpish, Woesome, Dolent, Lorn, Cut up, Comfortless, Unglad, Tristful
-100: Bummed out|Bummed :: How you feel when the Wi-Fi goes out.
+85: Dolesome, Atrabilious, Hipped, Chapfallen|Chopfallen, Down in the mouth, Dumpish, Lumpish, Woesome, Dolent, Lorn, Cut up, Comfortless, Unglad
+100: Tristful :: An old, poetic word for sad, related to the French "triste." Shakespeare used it in Hamlet.
 
 ? Name an onomatopoeia
 ~exact
@@ -84,39 +84,39 @@
 15: Achoo|Ah-choo|Atchoo
 30: Woof, Bark, Oink, Quack, Baa, Neigh, Hiss, Roar, Growl, Purr, Tweet, Chirp, Cluck, Cock-a-doodle-doo|Cockadoodledoo, Ribbit, Hoot, Splash, Crash, Bam, Wham, Zap, Zoom, Vroom, Beep, Honk, Ding-dong|Ding dong, Ding, Tick-tock|Tick tock, Knock, Thud, Thump, Clang, Click, Clap, Snap, Crackle, Sizzle, Fizz, Drip, Plop, Splat, Squish, Squeak, Creak, Slurp, Burp, Hiccup|Hic, Gulp, Munch, Crunch, Smack, Whack, Whoosh, Swoosh, Hum, Boing, Kaboom|Ka-boom, Ka-ching|Cha-ching|Kaching, Shh|Shush, Zzz|Zzzz, Choo-choo|Choo choo, Bow-wow|Bow wow, Arf, Ruff, Kapow|Ka-pow
 60: Clank, Clink, Clatter, Rattle, Rumble, Grumble, Gurgle, Babble, Bubble, Toot, Tap, Pitter-patter|Pitter patter, Flutter, Flap, Swish, Rustle, Crinkle, Crumple, Scratch, Screech, Squawk, Caw, Coo, Cheep, Peep, Gobble, Howl, Yap, Yelp, Whimper, Bleat, Bray, Hee-haw|Heehaw, Moan, Groan, Murmur, Mumble, Giggle, Gasp, Cough, Sniff, Ahem, Psst, Brr|Brrr, Ouch, Thwack, Bonk, Bop, Whiz|Whizz, Clickety-clack|Clickety clack, Chugga-chugga|Chugga chugga, Tick, Tock, Dong, Ring, Twang, Zing, Ping, Tinkle, Jingle, Clip-clop|Clip clop, Thunk, Clunk, Kerplunk|Ker-plunk, Splosh, Slosh, Squelch, Smash, Bash, Biff, Blam, Rat-a-tat|Ratatat|Rat-a-tat-tat, Nom nom|Nom, Mwah, Smooch, Glug, Splish
-85: Ululate|Ululation, Borborygmus|Borborygmi, Susurrus, Plink, Plonk, Fwoosh, Kerplop, Kersplat, Kersplash, Bloop, Blip, Bleep, Whirr|Whir, Sproing, Thwip, Snikt, Bamf, Awooga|Ahooga|Aooga, Tu-whit tu-whoo|Twit twoo, Gloop, Skronk, Chirr, Tintinnabulation
-100: Blub|Blub blub :: The sound a goldfish makes. Probably.
+85: Ululate|Ululation, Borborygmus|Borborygmi, Susurrus, Plink, Plonk, Fwoosh, Kerplop, Kersplat, Kersplash, Bloop, Blip, Bleep, Whirr|Whir, Sproing, Thwip, Snikt, Bamf, Awooga|Ahooga|Aooga, Tu-whit tu-whoo|Twit twoo, Gloop, Skronk, Chirr
+100: Tintinnabulation :: The ringing of bells. Edgar Allan Poe helped make the word famous in his poem "The Bells."
 
 ? Name another word for fast
 10: Quick|Quickly, Rapid|Rapidly, Speedy|Speedily, Swift|Swiftly, Hasty|Hastily, Fleet
 15: Zippy
 30: Brisk, Nimble, Snappy, Hurried, Lightning|Lightning-fast|Lightning fast, Express, Prompt, Breakneck, Blistering, Supersonic, High-speed|High speed, Turbo, Whirlwind, Meteoric, Headlong, Racing, Flying, Speeding, Fast-paced|Fast paced, Agile, Spry, Lively, Instant|Instantaneous, Immediate, Sudden, Accelerated, Rushed|Rushing, Zooming
-60: Expeditious, Precipitate, Mercurial, Fleet-footed|Fleetfooted, Rapid-fire, Hurtling, Pell-mell|Pellmell, Chop-chop|Chop chop, Pronto, Posthaste, Double-time|Double time, On the double, Whizzing, Hell-for-leather|Hell for leather, Flat out, Full tilt, Full speed, Warp speed, Galloping, Hustling, Light-footed|Quick-footed, Feverish, Furious, Frenzied, Hectic, Quicksilver, Electric, Nippy
-85: Celeritous, Velocious, Alacritous, Festinate, Tantivy, Apace, Hotfoot, Secure, Fixed, Tight, Stuck, Steadfast, Fastened, Loyal, Faithful, Colorfast|Colourfast, Indelible, Permanent, Loose, Wild, Dissolute, Racy, Abstain, Starve, Go hungry, Ahead, Firm
-100: Lickety-split :: Very fast. Nobody's sure where the word came from.
+60: Expeditious, Precipitate, Mercurial, Fleet-footed|Fleetfooted, Rapid-fire, Hurtling, Pell-mell|Pellmell, Lickety-split|Lickety split, Chop-chop|Chop chop, Pronto, Posthaste, Double-time|Double time, On the double, Whizzing, Hell-for-leather|Hell for leather, Flat out, Full tilt, Full speed, Warp speed, Galloping, Hustling, Light-footed|Quick-footed, Feverish, Furious, Frenzied, Hectic, Quicksilver, Electric, Nippy
+85: Celeritous, Velocious, Alacritous, Festinate, Tantivy, Apace, Hotfoot, Secure, Fixed, Tight, Stuck, Steadfast, Fastened, Loyal, Faithful, Colorfast|Colourfast, Indelible, Permanent, Loose, Wild, Dissolute, Racy, Abstain, Starve, Go hungry, Ahead
+100: Firm :: "Fast" first meant firmly fixed, as in "hold fast" or "colorfast." The speedy meaning came along later.
 
 ? Name a German word used in English
 10: Kindergarten, Wanderlust, Schadenfreude, Angst, Gesundheit, Doppelgänger|Doppelganger
 15: Zeitgeist
 30: Kitsch, Poltergeist, Delicatessen|Deli, Pretzel|Brezel, Sauerkraut, Bratwurst, Frankfurter, Hamburger, Wiener, Strudel, Pumpernickel, Lager, Hinterland, Blitz|Blitzkrieg, Wunderkind, Ersatz, Rucksack, Spiel, Kaput|Kaputt, Über|Uber, Verboten, Oktoberfest|Fest, Gestalt, Leitmotif|Leitmotiv, Realpolitik, Dachshund, Rottweiler, Schnauzer, Poodle, Glockenspiel, Hamster, Waltz, Fräulein|Fraulein, Zeppelin, U-boat|U-Boot, Flak, Panzer, Kaiser, Lederhosen, Dirndl, Schnapps, Schnitzel, Muesli, Pilsner, Autobahn, Edelweiss, Wunderbar, Dummkopf, Putsch, Achtung, Auf Wiedersehen
-60: Lebensraum, Weltanschauung, Weltschmerz, Sehnsucht, Gemütlichkeit|Gemutlichkeit, Reich, Stalag, Bildungsroman, Spätzle|Spaetzle|Spaetzle, Quark, Kohlrabi, Sauerbraten, Stollen, Lebkuchen, Kuchen, Wurst, Knackwurst, Liverwurst, Hefeweizen, Weissbier, Bock, Abseil, Quartz, Ohrwurm|Earworm, Zugzwang, Eigenvalue|Eigen, Lied, Diktat, Hausfrau, Kaffeeklatsch|Coffee klatch, Spritzer, Übermensch|Ubermensch, Pinscher, Weimaraner
-85: Fingerspitzengefühl|Fingerspitzengefuhl, Torschlusspanik, Fernweh, Kummerspeck, Treppenwitz, Backpfeifengesicht, Zwischenzug, Gedankenexperiment, Ansatz, Bremsstrahlung, Gegenschein, Schuss, Langlauf, Föhn|Foehn|Fohn, Singspiel, Heldentenor, Kulturkampf, Ostpolitik, Sitzfleisch, Wirtschaftswunder, Lumpenproletariat, Gesamtkunstwerk, Sprechgesang, Cobalt, Nickel, Zinc, Meerschaum, Loess, Mittelschmerz
-100: Noodle :: Yes, really. It comes from the German word Nudel.
+60: Lebensraum, Weltanschauung, Weltschmerz, Sehnsucht, Gemütlichkeit|Gemutlichkeit, Noodle, Reich, Stalag, Bildungsroman, Spätzle|Spaetzle|Spaetzle, Quark, Kohlrabi, Sauerbraten, Stollen, Lebkuchen, Kuchen, Wurst, Knackwurst, Liverwurst, Hefeweizen, Weissbier, Bock, Abseil, Quartz, Ohrwurm|Earworm, Zugzwang, Eigenvalue|Eigen, Lied, Diktat, Hausfrau, Kaffeeklatsch|Coffee klatch, Spritzer, Übermensch|Ubermensch, Pinscher, Weimaraner
+85: Fingerspitzengefühl|Fingerspitzengefuhl, Torschlusspanik, Fernweh, Kummerspeck, Treppenwitz, Backpfeifengesicht, Zwischenzug, Gedankenexperiment, Ansatz, Bremsstrahlung, Gegenschein, Schuss, Langlauf, Föhn|Foehn|Fohn, Singspiel, Heldentenor, Kulturkampf, Ostpolitik, Sitzfleisch, Wirtschaftswunder, Lumpenproletariat, Gesamtkunstwerk, Sprechgesang, Cobalt, Nickel, Zinc, Meerschaum, Loess
+100: Mittelschmerz :: A real medical term in English for pain some people feel around ovulation. It means "middle pain."
 
 ? Name a word that rhymes with fun
 ~exact
 10: Sun, Run, Bun, Gun, One, Done
 15: Son
-30: None, Nun, Won, Ton|Tonne, Spun, Stun, Shun, Begun, Someone, Anyone, Everyone, Shotgun, Home run|Homerun, Hun, Undone, Outdone, Rerun, Outrun, Overrun, Handgun, Grandson, Twenty-one|Twenty one|21
+30: None, Nun, Won, Ton|Tonne, Spun, Stun, Shun, Pun, Begun, Someone, Anyone, Everyone, Shotgun, Home run|Homerun, Hun, Undone, Outdone, Rerun, Outrun, Overrun, Handgun, Grandson, Twenty-one|Twenty one|21
 60: Dun, Hon, Godson, Stepson, Popgun, Stun gun, Machine gun, Top Gun, Six-gun|Sixgun, Hit and run|Hit-and-run, Trial run, Dry run, Hard-won, Redone, Overdone, Honey bun|Honeybun, Hot cross bun, Cinnamon bun, No one|No-one, Thirty-one|Thirty one|31, Forty-one|Forty one|41, Eighty-one|Eighty one|81, Number one, Well done, Bull Run, Air gun, BB gun, Ray gun, Spray gun, Nail gun, Glue gun, Squirt gun, Water gun
-85: Sally Lunn, Unspun, Outgun, Underdone, Milk run, Bank run, Chicken run, Ski run, Test run, Long run, Tommy gun, Speargun, Flare gun, Zip gun, Potato gun|Spud gun, Fifty-one|Fifty one|51, Ninety-one|Ninety one|91, Area 51|Area Fifty-one, Tun
-100: Pun :: Puns are fun.
+85: Sally Lunn, Unspun, Outgun, Underdone, Milk run, Bank run, Chicken run, Ski run, Test run, Long run, Tommy gun, Speargun, Flare gun, Zip gun, Potato gun|Spud gun, Fifty-one|Fifty one|51, Ninety-one|Ninety one|91, Area 51|Area Fifty-one
+100: Tun :: A huge barrel for wine or beer. It gave us the word "ton," which first meant the weight of a full tun.
 
 ? Name a palindrome
 ~exact
 10: Racecar|Race car, Level, Mom, Dad, Kayak, Bob, Anna, Noon, Wow, Madam
 15: Taco cat|Tacocat, A man a plan a canal Panama|A man, a plan, a canal: Panama, Hannah
 30: Civic, Radar, Refer, Rotor, Peep, Eye, Pop, Deed, Sis, Tot, Nun, Pup, Did, Ewe, Otto, Eve, Ada, Elle, Stats, Solos, Minim, Tenet, Redder, Rotator, Reviver, Sagas, Toot, Poop, Gag, Bib, Tut, Aha, Ava, Nan, Pip, Dud, Mum, Pap, Sees, Kook, Boob, Abba, Repaper
-60: Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
-85: Kinnikinnik, Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo, Tattarrattat
-100: Aibohphobia :: A joke word for the fear of palindromes. It's a palindrome too.
+60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
+85: Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo, Tattarrattat
+100: Kinnikinnik :: A smoking mix of leaves and bark used by many Native American peoples. It reads the same backwards.

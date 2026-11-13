@@ -233,11 +233,32 @@ function advance() {
   else presentPrompt();
 }
 
+function hashOf(text) {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i += 1) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
+  return h >>> 0;
+}
+
+// The hidden answer written in a prompt's file is only hidden on the Daily that debuts the prompt
+// (and Archive replays of that day). Any other time, in Endless or when a Daily comes around again,
+// one of the prompt's Deep Cuts is hidden instead, so a player who found it last time can't just
+// type it again. Whatever isn't hidden this time scores as a Deep Cut. The pick is the same on a
+// reload, and the same for everyone on a given Daily.
+function withHiddenAnswer(prompt, dive) {
+  if (dive.mode === 'daily' && content.calendar.firstDay(prompt.id) === dive.day) return prompt;
+  const pool = prompt.answers.filter((answer) => answer.tier >= 4);
+  const hidden = pool[hashOf(`${dive.mode}:${dive.day}:${prompt.id}`) % pool.length];
+  const answers = prompt.answers
+    .map((answer) => (answer === hidden ? { ...answer, tier: 5 } : answer.tier === 5 ? { ...answer, tier: 4 } : answer))
+    .sort((a, b) => a.tier - b.tier);
+  return { ...prompt, answers, gem: hidden === prompt.gem ? prompt.gem : { ...hidden, tier: 5, blurb: '' } };
+}
+
 function presentPrompt() {
   stopListening();
   const dive = G.dive;
   const number = dive.rounds.length + 1;
-  G.prompt = content.byId.get(dive.ids[dive.rounds.length]);
+  G.prompt = withHiddenAnswer(content.byId.get(dive.ids[dive.rounds.length]), dive);
   G.index = buildIndex(G.prompt);
   if (!dive.deadline) {
     dive.deadline = Date.now() + (COUNTDOWN + LIMIT) * 1000;
@@ -412,7 +433,9 @@ async function checkWithReferee(raw, { final = false } = {}) {
     saveDive(dive);
   }
   if (verdict) {
-    lockIn(raw, { ...verdict, checked: true });
+    // The referee scores listed answers by the file, so this dive's hidden answer is settled here.
+    const listed = findAnswer(verdict.name, G.index);
+    lockIn(raw, { ...verdict, tier: listed ? listed.tier : Math.min(verdict.tier, 4), checked: true });
   } else if (final) {
     missRound(raw);
   } else {
