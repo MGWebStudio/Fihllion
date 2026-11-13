@@ -14,10 +14,13 @@ import { buildIndex, findAnswer } from '../../js/match.js';
 import { parseJSON, cleanTyped, loadCalendar, findPrompt, judge } from './shared.js';
 
 const GRACE_MS = 2500; // network time on top of the clock the player sees
+// Answers passed along by the Google relay (relay/google-apps-script.js) take an extra hop each way,
+// so they get more time before they count as late.
+const RELAY_GRACE_MS = 4000;
 const MAX_GUESSES = 40; // per question
 const BOARD_SIZE = 100;
 
-export async function ranked(action, text, env, reply, json) {
+export async function ranked(action, text, env, reply, json, { relayed = false } = {}) {
   let data;
   try {
     data = parseJSON(text) || {};
@@ -32,7 +35,7 @@ export async function ranked(action, text, env, reply, json) {
     if (player.banned) return json({ error: 'banned' });
     if (action === 'status') return json(await status(env, player));
     if (action === 'question') return json(await question(env, player, data));
-    if (action === 'guess') return json(await guess(env, player, data));
+    if (action === 'guess') return json(await guess(env, player, data, relayed));
     if (action === 'void') return json(await voidRound(env, player, data));
     return reply(404, 'Not found');
   } catch (error) {
@@ -158,7 +161,7 @@ async function question(env, player, data) {
   return { day, round: run.rounds.length, id, text: prompt.text, msLeft: run.deadline - Date.now() - GRACE_MS, run: publicRun(run) };
 }
 
-async function guess(env, player, data) {
+async function guess(env, player, data, relayed) {
   const loaded = await loadCalendar(env);
   if (!loaded) throw new Error('Schedule unavailable');
   const day = loaded.today;
@@ -166,7 +169,7 @@ async function guess(env, player, data) {
   const run = await getRun(env, player, day);
   if (!run || !run.served || data.round !== run.rounds.length) return { result: 'stale', run: publicRun(run) };
   const now = Date.now();
-  if (now > run.deadline) {
+  if (now > run.deadline + (relayed ? RELAY_GRACE_MS : 0)) {
     await settle(env, run, { tier: -1, pts: 0 });
     return { result: 'late', run: publicRun(run) };
   }

@@ -2,7 +2,7 @@
 // the secret key that owns it live on this device only. The server runs ranked dives: it sends each
 // question, keeps the clock and scores every answer.
 import * as store from './store.js';
-import { HAS_SERVER, post, addressNow } from './server.js';
+import { HAS_SERVER, post, urlNow } from './server.js';
 
 const TIMEOUT_MS = 12000; // long enough for the referee, which can take a few seconds
 
@@ -35,7 +35,7 @@ export const board = (day) => call('board', withKey(day ? { day } : {}));
 // Sent as the page hides, so it has to survive the tab closing.
 export function voidRound(day, round) {
   const body = JSON.stringify(withKey({ day, round }));
-  const url = `${addressNow()}/ranked/void`;
+  const url = urlNow('/ranked/void');
   if (navigator.sendBeacon?.(url, new Blob([body], { type: 'text/plain' }))) return;
   fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body, keepalive: true }).catch(() => {});
 }

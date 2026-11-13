@@ -142,3 +142,21 @@ npx wrangler pages deploy --branch main
 ```
 
 Testing it locally: run the Worker (`npm run dev` in `worker/`), then `npx wrangler pages dev public --port 8788` in `relay/`, and point the local address list in `js/server.js` at port 8788.
+
+## Google relay
+
+The school's filter (Securly) blocks both of the server's addresses, `workers.dev` and `pages.dev`, by category, but lets Google through. `relay/google-apps-script.js` is a Google Apps Script web app that passes the game's requests along to the Worker. The game tries the server's own addresses first and only uses the relay when neither answers, since it's slower (about a second each way) and Apps Script has daily limits (20,000 fetches a day on a personal account).
+
+- The relay sends `X-Fihllion-Relay: apps-script` instead of an Origin header, and the Worker accepts that.
+- Ranked answers that come through it get 4 more seconds before they count as late, for the extra hop.
+- The relay always answers 200 with `{"s": status, "b": body}`, and `js/server.js` unwraps it.
+
+Setting it up, in a personal Google account (not a school one):
+
+1. At script.google.com, make a new project called "Fihllion relay".
+2. Replace everything in `Code.gs` with `relay/google-apps-script.js` and save.
+3. Deploy, then New deployment, then the gear, then Web app. Execute as: Me. Who has access: Anyone. Deploy.
+4. Authorize it. Google warns the app isn't verified, because it's your own script, so choose Advanced, then Go to Fihllion relay, then Allow. The only permission it asks for is connecting to an external service.
+5. Copy the web app URL (it ends in `/exec`) into `GOOGLE_RELAY` in `js/server.js`. Opening that URL should show `ok`.
+
+After changing the script, use Deploy, then Manage deployments, then edit the deployment and pick a new version, so the URL stays the same.

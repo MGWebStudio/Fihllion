@@ -15,6 +15,10 @@
 //   POST /check   {"prompt": "lizard", "typed": "shingleback"}  ->  {"valid": true, "name": "Shingleback", "tier": 3}
 //   POST /ranked/...  see ranked.js
 //   GET  /health
+//
+// Requests come from the game's own site, or through the Google relay (relay/google-apps-script.js)
+// for school networks that block this address. The relay isn't a browser, so it has no Origin
+// header and says who it is with X-Fihllion-Relay instead.
 import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge } from './shared.js';
 import { ranked } from './ranked.js';
 
@@ -26,6 +30,7 @@ export default {
     const url = new URL(request.url);
     const origin = request.headers.get('Origin');
     const allowed = allowedOrigin(origin, env);
+    const relayed = request.headers.get('X-Fihllion-Relay') === 'apps-script';
     const cors = allowed
       ? { 'Access-Control-Allow-Origin': origin, 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '86400', Vary: 'Origin' }
       : { Vary: 'Origin' };
@@ -37,7 +42,7 @@ export default {
     if (url.pathname !== '/dive' && url.pathname !== '/check' && !isRanked) return reply(404, 'Not found');
     if (request.method === 'OPTIONS') return reply(allowed ? 204 : 403);
     if (request.method !== 'POST') return reply(405, 'Use POST');
-    if (!allowed) return reply(403, 'Unknown origin');
+    if (!allowed && !relayed) return reply(403, 'Unknown origin');
 
     let text;
     try {
@@ -46,7 +51,7 @@ export default {
       return reply(400, error.message);
     }
     if (url.pathname === '/check') return referee(text, env, reply, json);
-    if (isRanked) return ranked(url.pathname.slice('/ranked/'.length), text, env, reply, json);
+    if (isRanked) return ranked(url.pathname.slice('/ranked/'.length), text, env, reply, json, { relayed });
 
     let dive;
     try {
