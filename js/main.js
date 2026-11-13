@@ -268,6 +268,9 @@ function goHome() {
 // Dive flow ------------------------------------------------------------------------------
 function beginDive(dive, { jump = false } = {}) {
   audio.unlock();
+  // Settle on a way to the server while the boat goes in, so the first referee check doesn't wait
+  // on it. On blocked networks that means trying both addresses and then the Google relay.
+  findServer();
   G.token += 1;
   const token = G.token;
   G.dive = dive;
