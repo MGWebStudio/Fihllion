@@ -5,6 +5,18 @@
 export const CHANGELOG = [
   {
     date: '2026-11-13',
+    time: '11:00 PM',
+    big: true,
+    title: 'Ranked works at school now',
+    short: 'Ranked works at school now',
+    lead: 'If ranked said it couldn’t reach the server at school, give it another try.',
+    items: [
+      'Some school Chromebooks and school Wi-Fi block the game’s server. The game now finds another way through, so ranked sign-up, the leaderboard and the AI referee all work there.',
+      'The first referee check in Endless is quicker on those networks too.',
+    ],
+  },
+  {
+    date: '2026-11-13',
     time: '10:20 AM',
     title: 'Ranked sign-up fixes',
     short: 'Ranked sign-up fixes',
