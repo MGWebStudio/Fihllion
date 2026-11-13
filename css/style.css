@@ -663,3 +663,29 @@ dialog#sheet.is-announce .sheet-head h2 { font-size: 46px; }
   .news-chip.is-big { padding: 4px 10px; }
   .credit { padding-top: 2px; }
 }
+
+/* Computers, where most people play: the labels that say which mode you're in get bigger. */
+@media (min-width: 1024px) {
+  .daily-tag { font-size: 15px; padding: 5px 14px 4px; }
+  .ranked-line { font-size: 23px; }
+  .title-links .btn { font-size: 12px; }
+  .news-chip.is-big { font-size: 23px; max-width: 420px; }
+  #promptNum { font-size: 13px; }
+  .mode-chip { padding: 3px 8px 2px; }
+  .hud-mode { font-size: 13px; }
+  .mode-banner { padding: 20px 34px 18px; }
+  .mode-banner-tag { font-size: 62px; }
+  .mode-banner-note { font-size: 27px; }
+}
+/* Big monitors: the whole Daily block scales up so it doesn't get lost in the water. */
+@media (min-width: 1200px) and (min-height: 860px) {
+  .daily-tag { font-size: 17px; margin-bottom: 16px; }
+  #title .btn-big { font-size: 22px; min-height: 72px; padding: 18px 46px; }
+  .dive-label { font-size: 13px; }
+  .ranked-line { font-size: 26px; margin-top: 12px; }
+  .title-links { gap: 12px; max-width: 720px; margin-top: 18px; }
+  .title-links .btn { font-size: 13px; min-height: 48px; padding: 10px 18px; }
+  .news-chip { margin-top: 18px; font-size: 21px; }
+  .news-chip.is-big { font-size: 26px; padding: 8px 16px; }
+  .news-when { font-size: 12px; }
+}
