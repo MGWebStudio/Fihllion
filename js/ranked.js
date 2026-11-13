@@ -2,21 +2,16 @@
 // the secret key that owns it live on this device only. The server runs ranked dives: it sends each
 // question, keeps the clock and scores every answer.
 import * as store from './store.js';
-import { SERVER } from './server.js';
+import { HAS_SERVER, post, addressNow } from './server.js';
 
 const TIMEOUT_MS = 12000; // long enough for the referee, which can take a few seconds
 
-export const available = Boolean(SERVER);
+export const available = HAS_SERVER;
 export const player = () => store.get('ranked.player', null); // { name, key }
 export const forget = () => store.remove('ranked.player');
 
 async function call(action, body = {}) {
-  const res = await fetch(`${SERVER}/ranked/${action}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain' }, // a simple request, so there's no preflight round trip
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  });
+  const res = await post(`/ranked/${action}`, body, { timeout: TIMEOUT_MS });
   if (!res.ok) throw new Error(`ranked ${action}: ${res.status}`);
   return res.json();
 }
@@ -40,7 +35,7 @@ export const board = (day) => call('board', withKey(day ? { day } : {}));
 // Sent as the page hides, so it has to survive the tab closing.
 export function voidRound(day, round) {
   const body = JSON.stringify(withKey({ day, round }));
-  const url = `${SERVER}/ranked/void`;
+  const url = `${addressNow()}/ranked/void`;
   if (navigator.sendBeacon?.(url, new Blob([body], { type: 'text/plain' }))) return;
   fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body, keepalive: true }).catch(() => {});
 }

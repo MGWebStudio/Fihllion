@@ -9,6 +9,7 @@ import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
 import { askReferee } from './referee.js';
 import * as ranked from './ranked.js';
+import { findServer } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
@@ -314,14 +315,16 @@ async function fetchRankedQuestion() {
   const token = G.token;
   G.phase = 'fetching';
   let q = null;
+  let failure = null;
   try {
     q = await ranked.question(dive.day);
   } catch (error) {
     console.error(error);
+    failure = error.name === 'Unreachable' ? 'unreachable' : null;
   }
   if (token !== G.token) return;
   if (!q || q.error) {
-    rankedTrouble(q?.error, q);
+    rankedTrouble(q?.error || failure, q);
     return;
   }
   syncRanked(dive, q.run);
@@ -350,6 +353,9 @@ function syncRanked(dive, run) {
   renderHud();
 }
 
+// Some school Wi-Fi blocks the server. Shown when neither of its addresses answers.
+const BLOCKED_NETWORK = 'Can’t reach the ranked server from this network. Some school Wi-Fi blocks it. Try another network, or play just for fun.';
+
 function rankedTrouble(error, reply) {
   const midnight = error === 'day' && G.dive && reply?.today > G.dive.day;
   const messages = {
@@ -357,6 +363,7 @@ function rankedTrouble(error, reply) {
     banned: 'This nickname was removed, so today’s dive can’t be ranked.',
     day: midnight ? 'Midnight passed, so that ranked dive is over. Today’s is ready.'
       : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
+    unreachable: BLOCKED_NETWORK,
   };
   if (error === 'unknown' || error === 'banned') ranked.forget();
   goHome();
@@ -1040,7 +1047,11 @@ function mountBoard(box, { onLoad } = {}) {
       onLoad?.(boardState.data);
     } catch (error) {
       console.error(error);
-      if (!boardState.data) body.innerHTML = '<p class="empty">Couldn’t load the board. Check your connection.</p>';
+      if (!boardState.data) {
+        body.innerHTML = error.name === 'Unreachable'
+          ? '<p class="empty">Can’t reach the leaderboard from this network. Some school Wi-Fi blocks it.</p>'
+          : '<p class="empty">Couldn’t load the board. Check your connection.</p>';
+      }
     }
   };
   paint();
@@ -1078,6 +1089,7 @@ const NICK_ERRORS = {
   invalid: 'Use 3 to 16 letters or numbers, no spaces.',
   blocked: 'Pick a different nickname.',
   taken: 'Someone already has that one. Try another.',
+  unreachable: BLOCKED_NETWORK,
 };
 
 const nickFormHTML = (submitLabel, label = 'Nickname') => `<form id="nickForm" class="nick-form" novalidate>
@@ -1111,6 +1123,7 @@ function wireNickForm(done) {
       result = await ranked.join(name);
     } catch (problem) {
       console.error(problem);
+      if (problem.name === 'Unreachable') result = { error: 'unreachable' };
     }
     submit.disabled = false;
     if (!result || result.error) {
@@ -1155,6 +1168,16 @@ function openDailyChoice() {
   $('choiceRanked')?.addEventListener('click', () => choose('ranked'));
   $('choiceNormal').addEventListener('click', () => choose('normal'));
   wireNickForm(() => choose('ranked'));
+  const section = el.sheet.querySelector('.choice-ranked');
+  findServer().then((base) => {
+    if (base || !section.isConnected) return;
+    section.classList.add('is-off');
+    const note = document.createElement('p');
+    note.className = 'choice-off';
+    note.setAttribute('role', 'status');
+    note.textContent = BLOCKED_NETWORK;
+    section.querySelector('#nickForm, #choiceRanked')?.replaceWith(note);
+  });
 }
 
 // For getting a nickname outside the Daily: from the title, the board or results.

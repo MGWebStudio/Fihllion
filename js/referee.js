@@ -1,21 +1,16 @@
 // Asks the AI referee (worker/) about an answer that isn't on the prompt's list. Resolves to
 // { name, tier } when it counts, false when the referee rules it out, or null when the referee
 // couldn't be reached in time. Rulings are remembered for the visit, so a repeat guess is instant.
-import { SERVER } from './server.js';
+import { HAS_SERVER, post } from './server.js';
 
 const TIMEOUT_MS = 5000;
 const asked = new Map();
 
 export function askReferee(promptId, typed) {
-  if (!SERVER) return Promise.resolve(null);
+  if (!HAS_SERVER) return Promise.resolve(null);
   const key = `${promptId}\n${typed.trim().toLowerCase()}`;
   if (asked.has(key)) return asked.get(key);
-  const job = fetch(`${SERVER}/check`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain' }, // a simple request, so there's no preflight round trip
-    body: JSON.stringify({ prompt: promptId, typed }),
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  })
+  const job = post('/check', { prompt: promptId, typed }, { timeout: TIMEOUT_MS })
     .then((res) => (res.ok ? res.json() : null))
     .then((data) => {
       if (!data || data.busy) return null;

@@ -129,3 +129,16 @@ node admin.mjs unban Somename
 ```
 
 Add `--local` to use the test database. The live tables need `npm run migrate:live` once before the Worker that uses them is deployed.
+
+## Second address (relay/)
+
+Some networks, school Wi-Fi filters mostly, block `workers.dev`, which stops ranked, the referee and the counter there. `relay/` is a Cloudflare Pages project (`fihllion-api.pages.dev`) whose only job is to hand every request to the same Worker over a service binding, so it's the same server, database and rules at a second address. `js/server.js` asks both addresses' `/health` at once and uses whichever answers first. If neither does, ranked says the network is blocking it instead of failing on the nickname.
+
+Deploying it (only needed when `relay/` changes; Worker updates reach it automatically):
+
+```
+cd relay
+npx wrangler pages deploy --branch main
+```
+
+Testing it locally: run the Worker (`npm run dev` in `worker/`), then `npx wrangler pages dev public --port 8788` in `relay/`, and point the local address list in `js/server.js` at port 8788.

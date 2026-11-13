@@ -4,9 +4,7 @@
 // think of cold, not what they remember. Archive replays and Endless are never sent. If the counter
 // can't be reached, the dive is tried again the next time the game opens, for a day or so.
 import * as store from './store.js';
-import { SERVER } from './server.js';
-
-const ENDPOINT = SERVER && `${SERVER}/dive`;
+import { HAS_SERVER, post } from './server.js';
 
 // Every prompt that has come up in Endless on this device. Endless's own "seen" list resets when
 // the pool runs low, so it can't be used for this.
@@ -22,7 +20,7 @@ function metInEndless() {
 }
 
 export function sendDaily(dive, calendar) {
-  if (!ENDPOINT || dive.mode !== 'daily' || !dive.done || !dive.onTime || dive.sent) return;
+  if (!HAS_SERVER || dive.mode !== 'daily' || !dive.done || !dive.onTime || dive.sent) return;
   const met = metInEndless();
   const rounds = dive.rounds
     .filter((round) => calendar.firstDay(round.id) === dive.day && !met.has(round.id))
@@ -35,13 +33,7 @@ export function sendDaily(dive, calendar) {
     finish();
     return;
   }
-  // text/plain keeps this a simple request, so the browser doesn't need a preflight first.
-  fetch(ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ day: dive.day, rounds }),
-    keepalive: true,
-  })
+  post('/dive', { day: dive.day, rounds }, { timeout: 15000, keepalive: true })
     .then((res) => {
       // 400 means the counter will never take this dive (too old, say), so stop retrying.
       if (res.ok || res.status === 400) finish();

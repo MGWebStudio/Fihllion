@@ -4,6 +4,17 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-13',
+    time: '10:30 AM',
+    title: 'Ranked sign-up fixes',
+    short: 'Ranked sign-up fixes',
+    items: [
+      'Picking a nickname works on older phones and Chromebooks now.',
+      'When a network blocks the ranked server, the game tries a second way to reach it. Some school Wi-Fi does this.',
+      'If neither way gets through, the game says so up front, so you can play just for fun instead.',
+    ],
+  },
+  {
     date: '2026-11-12',
     time: '11:00 PM',
     big: true,
