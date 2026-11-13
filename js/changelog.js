@@ -1,15 +1,21 @@
 // What's new, newest first. The newest entry's `short` shows on the title screen until the player
 // opens the list. Keep lines short and in players' terms. Times are Mountain Time.
+// `big: true` makes an entry an announcement: it pops up once when the game opens, and its chip
+// on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
     date: '2026-11-12',
-    time: '10:45 PM',
-    title: 'Ranked mode is here',
-    short: 'Ranked mode is here',
+    time: '11:00 PM',
+    big: true,
+    title: 'Ranked mode is here!',
+    short: 'Ranked mode is here!',
+    lead: 'Play the Daily ranked and see where you land on the leaderboard the second you finish.',
     items: [
-      'Pick a nickname and your Daily becomes your ranked dive: one try a day, and the board shows up as soon as you finish.',
-      'The server keeps the clock and checks every answer. Switching tabs or apps during a ranked question makes it score 0.',
-      'The title screen and every dive now say which one you’re playing: the gold Daily, or Endless, which is just practice.',
+      'There’s a board for today and one for the whole week.',
+      'Pick a nickname to get on the board. No real names, no accounts.',
+      'Before each Daily you choose: Ranked, or Just for fun with photos and no board.',
+      'Ranked rules: one try, the server keeps the clock, and switching tabs or apps during a question makes it score 0.',
+      'The front screen now says Daily or Endless right on it. Endless is practice and never counts.',
       'The Daily now changes over at midnight Mountain Time for everyone.',
     ],
   },

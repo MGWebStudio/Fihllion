@@ -110,7 +110,7 @@ function modeOf(dive) {
     key: 'daily',
     tag: `Daily #${dive.day}`,
     long: `Today’s Daily · Dive #${dive.day}`,
-    note: ranked.available ? 'Not ranked. Pick a nickname to get on the board.' : 'The same seven prompts for everyone today.',
+    note: ranked.available ? 'Just for fun. Not on the leaderboard.' : 'The same seven prompts for everyone today.',
   };
 }
 
@@ -226,29 +226,32 @@ function refreshTitle() {
   G.today = content.calendar.dayNumber(currentDate());
   const dive = store.get(`daily.${G.today}`);
   const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
-  const isRanked = Boolean(me) && (!dive || isFresh(dive) || Boolean(dive.ranked));
+  const started = dive && !isFresh(dive);
+  const isRanked = Boolean(dive?.ranked);
   const arrow = '<span aria-hidden="true">▼</span>';
-  // The big button is always today's Daily, and the tag above it says so.
+  // The big button is always today's Daily, and the tag above it says so. Endless sits below it,
+  // marked as practice.
   el.dailyTag.innerHTML = isRanked
     ? `<span aria-hidden="true">★</span> Ranked Daily · Dive #${G.today}`
     : `Today’s Daily · Dive #${G.today}`;
   el.dailyTag.classList.toggle('is-ranked', isRanked);
   if (dive?.done) {
     el.btnBegin.innerHTML = 'See today’s results';
-    el.diveLabel.textContent = `Next dive in ${untilMidnight()}`;
-  } else if (dive && !isFresh(dive)) {
-    el.btnBegin.innerHTML = `Keep diving ${arrow}`;
+    el.diveLabel.textContent = `Next Daily in ${untilMidnight()}`;
+  } else if (started) {
+    el.btnBegin.innerHTML = `Finish the Daily ${arrow}`;
     el.diveLabel.textContent = `Prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE} · ${shortDate(G.today)}`;
   } else {
-    el.btnBegin.innerHTML = `Dive in ${arrow}`;
+    el.btnBegin.innerHTML = `Play the Daily ${arrow}`;
     el.diveLabel.textContent = shortDate(G.today);
   }
   // Before the dive starts, the tag above the button already says which dive it is.
-  el.diveLabel.hidden = !dive || isFresh(dive);
+  el.diveLabel.hidden = !started;
   el.rankedLine.hidden = !ranked.available || PRETEND_DAY;
-  if (!me) el.rankedLine.innerHTML = '<span class="ranked-off">Not ranked</span> · Pick a nickname';
-  else if (isRanked) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
-  else el.rankedLine.innerHTML = `<b>${esc(me.name)}</b> · Ranked from tomorrow · Leaderboard`;
+  if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
+  else if (started) el.rankedLine.innerHTML = '<span class="ranked-off">Just for fun today</span> · Leaderboard';
+  else if (me) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
+  else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Pick a nickname';
   prefetch();
 }
 
@@ -735,7 +738,7 @@ function tick() {
 setInterval(() => {
   if (!content) return;
   if (G.phase === 'title' && document.body.dataset.screen === 'title') {
-    if (el.diveLabel.textContent.startsWith('Next dive')) el.diveLabel.textContent = `Next dive in ${untilMidnight()}`;
+    if (el.diveLabel.textContent.startsWith('Next Daily')) el.diveLabel.textContent = `Next Daily in ${untilMidnight()}`;
     if (content.calendar.dayNumber(currentDate()) !== G.today) refreshTitle();
   }
   const countdown = $('nextDiveCountdown');
@@ -891,11 +894,11 @@ function showResults(dive) {
     ? `<p class="results-next">Best endless dive: <b>${store.get('endless.state', {}).best || total}</b></p>`
     : dive.day === G.today ? '<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>' : '';
   const showBoard = ranked.available && dive.mode === 'daily' && dive.day === G.today;
-  const unrankedNote = ranked.player() ? 'Tomorrow’s will be.'
-    : '<button id="resNick" class="link-btn" type="button">Pick a nickname</button> to be on tomorrow’s board.';
+  const unrankedNote = ranked.player() ? 'Pick Ranked tomorrow to get on the board.'
+    : '<button id="resNick" class="link-btn" type="button">Pick a nickname</button> and choose Ranked tomorrow to get on the board.';
   const boardBlock = showBoard ? `<section class="block">
         <div class="block-title"><h3>Leaderboard</h3><span>Updates as others finish</span></div>
-        ${dive.ranked ? '' : `<p class="board-note">This dive wasn’t ranked. ${unrankedNote}</p>`}
+        ${dive.ranked ? '' : `<p class="board-note">You played today’s just for fun, so it’s not on the board. ${unrankedNote}</p>`}
         <div id="resBoard"></div>
       </section>` : '';
   const primary = isEndless
@@ -1077,31 +1080,23 @@ const NICK_ERRORS = {
   taken: 'Someone already has that one. Try another.',
 };
 
-// Opened from the Daily button the first time someone plays, from the title, or from results.
-function openNickname({ fromDaily = false } = {}) {
-  openSheet(fromDaily ? 'Today’s Daily is ranked' : 'Get on the board', `
-    <p class="nick-lead">Pick a nickname and your Daily becomes your ranked dive. Everyone gets the same seven prompts, and the board fills up as people finish.</p>
-    <form id="nickForm" class="nick-form" novalidate>
-      <label class="label" for="nickInput">Nickname</label>
+const nickFormHTML = (submitLabel, label = 'Nickname') => `<form id="nickForm" class="nick-form" novalidate>
+      <label class="label" for="nickInput">${label}</label>
       <div class="nick-row">
         <input id="nickInput" type="text" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
           placeholder="Your nickname" enterkeyhint="go" data-1p-ignore data-lpignore="true">
-        <button class="btn btn-primary" type="submit">${fromDaily ? 'Play ranked' : 'Save'}</button>
+        <button class="btn btn-primary" type="submit">${submitLabel}</button>
       </div>
       <p id="nickError" class="nick-error" role="alert"></p>
-    </form>
-    <ul class="how-steps nick-rules">
-      <li>One try a day. The server keeps the clock and checks every answer.</li>
-      <li>Switching tabs or apps during a question makes it score 0.</li>
-      <li>The board shows nicknames and scores, never answers.</li>
-      <li>Your nickname lives in this browser. Clearing its data loses it.</li>
-    </ul>
-    ${fromDaily ? '<button id="nickSkip" class="btn btn-quiet nick-skip" type="button">Play today without a nickname</button>' : ''}`);
+    </form>`;
+
+// Saves a nickname from the form in the open sheet, then runs `done`.
+function wireNickForm(done) {
   const form = $('nickForm');
+  if (!form) return;
   const input = $('nickInput');
   const error = $('nickError');
   const submit = form.querySelector('button[type="submit"]');
-  input.focus();
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const name = input.value.trim();
@@ -1123,18 +1118,60 @@ function openNickname({ fromDaily = false } = {}) {
       input.select();
       return;
     }
-    store.set('ranked.asked', true);
-    closeSheet();
-    if (G.phase === 'title') refreshTitle();
-    if (fromDaily) startDaily();
-  });
-  $('nickSkip')?.addEventListener('click', () => {
-    store.set('ranked.asked', true);
-    closeSheet();
-    startDaily();
+    done();
   });
 }
 
+const RANKED_RULES = '<p class="choice-rules">One try · No photos · Leaving the app mid-question scores 0</p>';
+
+// Before each Daily: ranked, on the leaderboard, or just for fun with photos.
+function openDailyChoice() {
+  const me = ranked.player();
+  openSheet('Today’s Daily', `
+    <p class="choice-lead">Dive #${G.today}. How do you want to play it?</p>
+    <section class="choice choice-ranked" aria-labelledby="choiceRankedTitle">
+      <h3 id="choiceRankedTitle" class="choice-title"><span aria-hidden="true">★</span> Ranked</h3>
+      <p class="choice-what">Your score goes on today’s leaderboard.</p>
+      ${RANKED_RULES}
+      ${me ? `<button id="choiceRanked" class="btn btn-primary choice-btn" type="button">Play ranked as ${esc(me.name)}</button>`
+    : nickFormHTML('Play ranked', 'Nickname for the board')}
+    </section>
+    <section class="choice choice-normal" aria-labelledby="choiceNormalTitle">
+      <h3 id="choiceNormalTitle" class="choice-title">Just for fun</h3>
+      <p class="choice-what">Not on the leaderboard. Photos stay on.</p>
+      <button id="choiceNormal" class="btn btn-quiet choice-btn" type="button">Play normally</button>
+    </section>
+    <p class="choice-note">Once you start, today’s pick stays. Endless and the Archive never count.</p>`);
+  const choose = (choice) => {
+    const dive = getDaily(G.today);
+    if (!isFresh(dive)) return;
+    dive.choice = choice;
+    dive.ranked = choice === 'ranked';
+    saveDive(dive);
+    closeSheet();
+    refreshTitle();
+    startDaily();
+  };
+  $('choiceRanked')?.addEventListener('click', () => choose('ranked'));
+  $('choiceNormal').addEventListener('click', () => choose('normal'));
+  wireNickForm(() => choose('ranked'));
+}
+
+// For getting a nickname outside the Daily: from the title, the board or results.
+function openNickname() {
+  openSheet('Get on the board', `
+    <p class="nick-lead">Pick a nickname, then choose Ranked when you start a Daily. Everyone gets the same seven prompts, and the board fills up as people finish.</p>
+    ${nickFormHTML('Save')}
+    <ul class="how-steps nick-rules">
+      <li>The board shows nicknames and scores, never answers.</li>
+      <li>Your nickname lives in this browser. Clearing its data loses it.</li>
+    </ul>`);
+  $('nickInput').focus();
+  wireNickForm(() => {
+    closeSheet();
+    if (G.phase === 'title') refreshTitle();
+  });
+}
 
 // Modes ----------------------------------------------------------------------------------
 function notice(text) {
@@ -1166,14 +1203,12 @@ function startDaily() {
   audio.unlock();
   audio.click();
   const dive = getDaily(G.today);
-  const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
-  // The first time someone plays, they're told the Daily is the ranked dive and offered a nickname.
-  if (ranked.available && !PRETEND_DAY && !me && isFresh(dive) && !store.get('ranked.asked')) {
-    openNickname({ fromDaily: true });
+  // Before each Daily the player picks: ranked, on the leaderboard, or just for fun with photos.
+  // The pick sticks for the day, since the prompts have been seen once the dive starts.
+  if (ranked.available && !PRETEND_DAY && isFresh(dive) && !dive.choice) {
+    openDailyChoice();
     return;
   }
-  // A Daily started before the player had a nickname stays unranked.
-  if (me && isFresh(dive)) dive.ranked = true;
   whenLoaded(dive.ids, () => {
     G.fromArchive = false;
     if (dive.done) showResults(dive);
@@ -1237,7 +1272,7 @@ function openHow() {
       <li>The answers everyone thinks of barely get you wet. The rare ones pull you down.</li>
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One Daily a day. Endless is there for practice, and it never counts.</li>
-      ${ranked.available ? '<li>Pick a nickname and your Daily becomes your ranked dive: one try, scored by the server, on a board everyone can see. Switching away during a ranked question makes it score 0.</li>' : ''}
+      ${ranked.available ? '<li>Before each Daily, pick Ranked to put your score on the leaderboard, or Just for fun. Ranked is one try, scored by the server, with no photos, and switching away during a question makes it score 0.</li>' : ''}
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
       <li>Tap the mic to say your answer instead of typing it.</li>
       <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too. Ranked scores are tied to your nickname, but your answers never show on the board.</li>
@@ -1260,20 +1295,53 @@ function refreshNews() {
   const unseen = store.get('news.seen') !== newsId(latest);
   const [, m, d] = latest.date.split('-').map(Number);
   const when = new Date(2000, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  chip.innerHTML = `${unseen ? '<i class="news-dot" aria-hidden="true"></i>' : ''}<span class="news-when">New · ${esc(when)}</span><span class="news-what">${esc(latest.short)}</span>`;
+  const big = Boolean(latest.big);
+  chip.classList.toggle('is-big', big);
+  chip.innerHTML = big
+    ? `<span class="news-star" aria-hidden="true">★</span><span class="news-what">${esc(latest.short)}</span><span class="news-when">${unseen ? 'New' : esc(when)}</span>`
+    : `${unseen ? '<i class="news-dot" aria-hidden="true"></i>' : ''}<span class="news-when">New · ${esc(when)}</span><span class="news-what">${esc(latest.short)}</span>`;
   chip.setAttribute('aria-label', `What’s new: ${latest.title}, ${newsDate(latest)}`);
   chip.hidden = false;
 }
 
+const markNewsSeen = () => {
+  if (CHANGELOG[0]) store.set('news.seen', newsId(CHANGELOG[0]));
+  refreshNews();
+};
+
 function openNews() {
-  const entries = CHANGELOG.map((entry, i) => `<li class="news-entry">
+  const entries = CHANGELOG.map((entry, i) => `<li class="news-entry${entry.big ? ' is-big' : ''}">
       <p class="label news-stamp">${esc(newsDate(entry))} · ${esc(entry.time)} MT${i === 0 ? ' <span class="news-latest">Latest</span>' : ''}</p>
-      <h3 class="news-title">${esc(entry.title)}</h3>
+      <h3 class="news-title">${entry.big ? '<span aria-hidden="true">★</span> ' : ''}${esc(entry.title)}</h3>
+      ${entry.lead ? `<p class="news-lead">${esc(entry.lead)}</p>` : ''}
       <ul class="news-items">${entry.items.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
     </li>`).join('');
   openSheet('What’s new', `<ol class="news-list">${entries}</ol>`);
-  if (CHANGELOG[0]) store.set('news.seen', newsId(CHANGELOG[0]));
-  refreshNews();
+  markNewsSeen();
+}
+
+// A big update pops up once, the first time the game opens after it ships.
+function announce() {
+  const latest = CHANGELOG[0];
+  if (!latest?.big || store.get('news.seen') === newsId(latest)) return;
+  const today = store.get(`daily.${G.today}`);
+  const go = today?.done ? 'See the leaderboard' : 'Play today’s Daily <span aria-hidden="true">▼</span>';
+  openSheet(latest.title, `<div class="announce">
+      <p class="label announce-stamp">New · ${esc(newsDate(latest))}</p>
+      <p class="announce-lead">${esc(latest.lead || '')}</p>
+      <ul class="news-items">${latest.items.slice(0, 3).map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
+      <button id="announceGo" class="btn btn-primary btn-big announce-go" type="button">${go}</button>
+      <button id="announceLater" class="btn btn-quiet announce-later" type="button">Maybe later</button>
+    </div>`);
+  el.sheet.classList.add('is-announce');
+  el.sheet.addEventListener('close', () => el.sheet.classList.remove('is-announce'), { once: true });
+  markNewsSeen();
+  $('announceGo').addEventListener('click', () => {
+    closeSheet();
+    if (today?.done) openBoard();
+    else startDaily();
+  });
+  $('announceLater').addEventListener('click', () => { audio.click(); closeSheet(); });
 }
 
 function openStats() {
@@ -1440,6 +1508,7 @@ async function boot() {
   }, 800);
   refreshTitle();
   refreshNews();
+  announce();
   // A dive that finished while the counter was unreachable gets another try.
   for (const day of [G.today - 1, G.today]) {
     const rec = store.get(`daily.${day}`);
