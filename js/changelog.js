@@ -5,7 +5,7 @@
 export const CHANGELOG = [
   {
     date: '2026-11-13',
-    time: '10:30 AM',
+    time: '10:20 AM',
     title: 'Ranked sign-up fixes',
     short: 'Ranked sign-up fixes',
     items: [
