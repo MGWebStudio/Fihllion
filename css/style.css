@@ -515,7 +515,7 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .btn-sub { color: var(--muted); }
 .btn-sub::before { content: '· '; }
 @media (max-width: 460px) {
-  .btn-sub { display: block; margin-top: 2px; font-size: 9px; }
+  .btn-sub { display: block; margin-top: 2px; font-size: 11px; }
   .btn-sub::before { content: none; }
 }
 @media (max-height: 480px) {
@@ -528,7 +528,7 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .mode-chip.mode-archive { background: var(--muted); }
 .hud-mode {
   display: block; margin: -2px 0 4px;
-  font-family: var(--font-label); font-size: 9px; letter-spacing: .06em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .04em; text-transform: uppercase;
   text-align: center; white-space: nowrap; color: var(--gilt);
 }
 .hud-mode.mode-endless { color: var(--glass); }
