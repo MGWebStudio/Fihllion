@@ -157,6 +157,8 @@ Setting it up, in a personal Google account (not a school one):
 2. Replace everything in `Code.gs` with `relay/google-apps-script.js` and save.
 3. Deploy, then New deployment, then the gear, then Web app. Execute as: Me. Who has access: Anyone. Deploy.
 4. Authorize it. Google warns the app isn't verified, because it's your own script, so choose Advanced, then Go to Fihllion relay, then Allow. The only permission it asks for is connecting to an external service.
-5. Copy the web app URL (it ends in `/exec`) into `GOOGLE_RELAY` in `js/server.js`. Opening that URL should show `ok`.
+5. Copy the web app URL (it ends in `/exec`) into `GOOGLE_RELAY` in `js/server.js`. Opening that URL in a private window should show `ok`.
+
+If that URL shows Google Drive's "Access Denied, you need access" page even though access is set to Anyone, the script was never authorized. In the editor, pick `doGet` from the function list, click Run, and allow it (step 4). No redeploy is needed.
 
 After changing the script, use Deploy, then Manage deployments, then edit the deployment and pick a new version, so the URL stays the same.

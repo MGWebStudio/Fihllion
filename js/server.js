@@ -5,7 +5,7 @@
 // Google relay, which is slower and has a daily limit, when neither answers. On this PC the game
 // talks to a local copy started with `npm run dev` in worker/.
 const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
-const GOOGLE_RELAY = '';
+const GOOGLE_RELAY = 'https://script.google.com/macros/s/AKfycbyU4JcIVZqJW5G2wCNFJ1KEtlMlU6DxxMPhKTXdUxqN1Tu3Gz-midM5QOkiQLOuF46F/exec';
 const DIRECT = IS_LOCAL
   ? ['http://localhost:8787']
   : ['https://fihllion-counts.mgstudiogame.workers.dev', 'https://fihllion-api.pages.dev'];
