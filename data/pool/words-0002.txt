@@ -1,0 +1,54 @@
+? Name a compound word that starts with "sun"
+~exact
+10: Sunflower, Sunshine, Sunglasses, Sunscreen, Sunburn, Sunset, Sunrise
+15: Sunday
+30: Sunlight, Sunbeam, Sundial, Sunblock, Sunroof, Sunspot, Suntan, Sunbathe|Sunbathing, Sundown, Sunstroke, Sunfish, Sunlamp, Sunroom, Sunhat, Sunbed, Sundress, Sunburst, Sunlit, Sunup
+60: Sunbird, Sunbelt, Sundog, Sunshade, Sunshower, Sunbaked, Sunbather, Sundeck, Sunporch
+85: Sunproof, Sunbow, Sunfast, Sunward, Sunwise, Sunstone, Sunbonnet, Sundowner, Sunstruck
+100: Sunchoke :: Another name for the Jerusalem artichoke, a knobby root from a kind of sunflower. It has nothing to do with Jerusalem.
+
+? Name something that comes in pairs
+10: Socks, Shoes, Gloves, Earrings, Eyes, Ears, Chopsticks
+15: Pants
+30: Hands, Feet, Lungs, Kidneys, Arms, Legs, Boots, Mittens, Dice, Earbuds|AirPods, Scissors, Glasses|Eyeglasses, Sunglasses, Jeans, Shorts, Skates|Roller Skates, Skis, Twins, Wings, Salt and Pepper, Bookends, Cufflinks, Contact Lenses|Contacts, Drumsticks, Knitting Needles, Binoculars, Handcuffs, Slippers, Sneakers, Sandals, Flip-Flops, Stockings, Eyebrows, Cards
+60: Headphones, Pliers, Tweezers, Dumbbells, Speakers, Tights, Underwear, Oars, Ski Poles, Tongs, Pigtails, Nostrils, Shoulders, Knees, Elbows, Cheeks, Lips, Eyelids, Tonsils, Pedals, Headlights, Windshield Wipers, Dance Partners, Aces, Bunk Beds, Lovebirds, Antlers, Horns, Tusks, Fangs, Claws|Pincers, Antennae, Maracas, Cymbals, Bongos
+85: Ovaries, Gills, Swans
+100: Castanets :: Spanish percussion shells held in pairs, one pair in each hand, and clicked together for flamenco.
+
+? Name a slang word your parents might not understand
+10: Rizz, Skibidi, Six Seven|67|6-7, No Cap|Cap, Bussin, Sigma, Gyat
+30: Bet, Slay, Sus, Mid, Bruh, Yeet, Lit, Drip, Rent Free, Delulu, Aura, Brain Rot|Brainrot, Mog|Mogging, Chopped, Glazing|Glaze, Cooked, Locked In|Lock In, Fanum Tax, Mewing, Ohio, Ate|Ate and Left No Crumbs, Tea|Spill the Tea, Stan, Simp, Ick, NPC, Rizzler, Sheesh, Bestie, Slaps, Hits Different, Lowkey, Highkey, Fr|For Real, Ong|On God, Deadass, GOAT, W, L, Ratio, Based, Cringe, Yap|Yapping, Bop, Banger, Opp, Situationship, Glow Up, Ghosting, Flex, Clout, Ship, IRL, Tweaking, Iykyk, It's Giving|Giving, Touch Grass, Main Character, Unc, Chat
+60: Looksmaxxing, Huzz, Tuff, Aura Farming, Crash Out, Twin, Gatekeep, Girlboss, Periodt, Snatched, Valid, Vibe Check, Finna, Bougie, Extra, Salty, Shook, Fam, Pookie, Skrrt, Big Back, Unalive, Era, Demure, Brat, Very Mindful, Caught in 4K, Pick Me, Dab, On Fleek, Bae, YOLO, FOMO, Basic, Savage, Clapback, Thicc, OTP, Sending Me, Ded, Gucci, Snack, Swag, Gaslight, Zesty
+85: Sksksk, And I Oop, VSCO Girl, Hundo P
+100: Goblin Mode :: Oxford's Word of the Year for 2022. It means lazily giving in to your worst habits, like staying in bed eating snacks.
+
+? Name a word that has all five vowels in it
+~exact
+10: Education, Automobile, Communicate, Dialogue, Sequoia
+30: Equation, Tenacious, Cauliflower, Questionable, Unquestionable, Authorize, Euphoria, Ultraviolet, Simultaneous, Discouragement, Housemaid, Pneumonia, Encouraging, Revolutionary, Evaluation, Regulation, Reputation, Housewarming, Facetious
+60: Abstemious, Precarious, Ambidextrous, Nefarious, Gregarious, Consequential, Outpatient, Behaviour, Favourite, Unsociable, Overpopulation, Mouthwatering, Equatorial, Miscellaneous, Precaution
+85: Pertinacious, Vexatious, Mendacious, Sacrilegious, Importunate, Uncomplimentary, Exclusionary, Numeration
+100: Facetiously :: Has all five vowels in alphabetical order, A-E-I-O-U, plus a Y on the end for good measure.
+
+? Name a word that sounds like the noise it describes
+10: Boom, Buzz, Bang, Sizzle, Splash, Pop, Crash
+30: Hiss, Woof, Meow, Moo, Oink, Quack, Tick-Tock|Tick Tock, Ding Dong, Knock, Click, Clap, Snap, Crack, Crunch, Thud, Thump, Zip, Zoom, Whoosh, Whack, Slam, Splat, Drip, Plop, Gurgle, Burp, Hiccup, Achoo, Beep, Honk, Vroom, Ring, Ding, Clang, Clank, Clink, Bark, Growl, Purr, Chirp, Tweet, Cuckoo, Rumble, Grumble, Murmur, Mumble, Whisper, Giggle, Squeak, Creak, Screech, Slurp, Gulp, Munch, Smack, Boing, Twang, Kaboom, Kapow|Pow, Bam, Wham, Zap, Swoosh, Fizz, Pitter-Patter, Rustle, Crinkle, Thwack, Bonk, Clatter, Chime, Jingle, Tinkle, Hum, Whir|Whirr, Roar, Hoot, Baa, Ribbit, Croak, Ka-Ching|Cha-Ching
+60: Chuckle, Howl, Cock-a-Doodle-Doo, Neigh, Splish Splash, Sniff, Snore, Snort, Cough, Sneeze, Thunk, Kerplunk, Clip-Clop, Flutter, Flap, Whiz, Shush, Ahem, Haha|Ha-Ha, Ping, Zing, Ta-Da, Psst, Brr, Ouch, Glug, Blub, Boop
+85: Hush, Mwahaha, Dun Dun Dun, Tsk, Plink, Bloop, Thwomp
+100: Susurrus :: A fancy word for a soft whispering or rustling sound, from the Latin word for "whisper."
+
+? Name a word that's also a first name
+~exact
+10: Rose, Lily, Grace, Hope, Faith, Jack, Mark, Bill
+30: Daisy, Ruby, Pearl, April, May, June, Summer, Autumn, Joy, Iris, Violet, Ivy, Holly, Heather, Jasmine, Olive, Hazel, Amber, Crystal, Dawn, Eve, Bob, Rob, Pat, Sue, Will, Frank, Chip, Chuck, Drew, Grant, Hunter, Mason, Sky, River, Storm, Sunny, Brook, Cliff, Penny, Ginger, Candy, Honey, Melody, Harmony, Destiny, Charity, Ace, Max, Art, Dean, Gene, Ray, Josh, Sandy, Rusty, Nick, Wade, Lance, Miles, Carol, Angel, Raven, Robin, Jay, Willow, Sage, Jade, Chase, Cash, Earl
+60: Bud, Taylor, Carter, Archer, Cooper, Rain, Dale, Glen, Forest, Sugar, Cherry, Trinity, Patience, Prudence, Mercy, Felicity, Serenity, Liberty, Justice, Haven, Journey, Legend, King, Prince, Duke, Major, Dusty, Woody, Harry, Jimmy, Norm, Victor, Eden, Wren, Dove, Fawn, Kitty, Aspen, Juniper, Basil, Rosemary, Clementine, Sterling, Coral, Ebony, Onyx, Diamond, Ember, Blaze, Phoenix, Rider, Gunner, Colt, Bear, Wolf, Fox, Buck, Stone, Flint, Royal, Noble, Nova, Star, Misty
+85: Bliss, Lark, Finch, Baron, Cloud
+100: Wednesday :: Wednesday Addams got her name from the old rhyme line "Wednesday's child is full of woe."
+
+? Name a word with a silent letter
+~exact
+10: Knife, Knee, Know, Lamb, Island, Hour, Write
+30: Knight, Knock, Knot, Knit, Knuckle, Wrong, Wrist, Wrap, Wreck, Wren, Comb, Thumb, Climb, Bomb, Tomb, Crumb, Debt, Doubt, Subtle, Honest, Honor, Ghost, Gnome, Gnat, Sign, Design, Foreign, Reign, Listen, Castle, Whistle, Often, Psychology, Psychic, Pneumonia, Salmon, Half, Calf, Walk, Talk, Chalk, Could, Would, Should, Calm, Palm, Answer, Sword, Two, Receipt, Scissors, Science, Muscle, Scene, Rhythm, Rhyme, Wednesday, February, Column, Autumn, Hymn, Solemn, Aisle, Guitar, Guest, Build, Tongue, Plumber, Numb, Dumb, Light, Night, Daughter, Thought, Eight, High, Knowledge, Pterodactyl, Tsunami, Mortgage, Christmas, Fasten, Wrestle, Ballet, Buffet, Heir, Rhinoceros, Rhino, Who, Whole, Wrinkle, Yacht
+60: Condemn, Handsome, Sandwich, Isle, Biscuit, Limb, Plumb, Gnaw, Champagne, Cologne, Campaign, Weight, Through, Bought, Caught, Kneel, Knack, Knapsack, Knob, Pseudonym, Mnemonic, Psalm, Indict, Glisten, Soften, Moisten, Hustle, Bustle, Gourmet, Debut, Depot, Faux, Herb, Exhibit, Exhaust, Rhubarb, Ghoul, Corps, Rendezvous
+85: Handkerchief, Knave, Czar, Victuals, Apostle, Rapport, Viscount
+100: Ptarmigan :: A bird of snowy mountains that turns white in winter. The P at the start is silent.
