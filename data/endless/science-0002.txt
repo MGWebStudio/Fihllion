@@ -1,0 +1,35 @@
+? Name something measured in degrees
+10: Temperature, Angle|Angles, Latitude, Longitude, Oven Temperature|Oven
+15: Burns
+30: Weather, Body Temperature|Fever, Thermostat, Water Temperature, Circle, Triangle, Compass Direction|Direction|Bearing, Slope|Incline, Rotation|Turn, Skateboard Trick|Spin|360
+60: Earth's Tilt|Axial Tilt, Arc, Pizza Slice, Clock Hands, Wind Direction, Roof Pitch|Pitch, Ramp, Murder, Separation|Degrees of Separation
+85: Golf Club Loft|Loft, Field of View, Right Ascension, Declination, Sun Angle, Range of Motion, Black Belt Rank|Black Belt, Brix
+100: Six Degrees of Kevin Bacon|Kevin Bacon :: A game where you link any actor to Kevin Bacon through costars, usually in six movies or fewer.
+
+? Name a moon in our solar system
+10: The Moon|Moon|Luna, Titan, Europa, Io, Ganymede, Phobos
+30: Callisto, Deimos, Triton, Charon, Enceladus, Mimas, Miranda
+60: Oberon, Titania, Rhea, Iapetus, Dione, Tethys, Hyperion, Phoebe, Ariel
+85: Umbriel, Nereid, Proteus, Amalthea, Himalia, Metis, Thebe, Pan, Atlas, Prometheus, Pandora, Janus, Epimetheus, Puck, Nix, Hydra, Kerberos, Styx, Dysnomia, Hi'iaka, Namaka
+100: Dactyl :: The first moon ever found circling an asteroid, spotted by the Galileo spacecraft in 1994 around the asteroid Ida.
+
+? Name something made of glass
+10: Window, Mirror, Drinking Glass|Glass|Cup, Bottle, Light Bulb, Eyeglasses|Glasses, Vase
+30: Jar|Mason Jar, Windshield, Marbles|Marble, Fish Tank|Aquarium|Fishbowl, Lens, Wine Glass, Stained Glass Window|Stained Glass, Christmas Ornament|Ornament, Phone Screen|Screen, Hourglass, Snow Globe, Test Tube, Beaker, Magnifying Glass, Glass Door|Sliding Door, Baking Dish|Pyrex, Glass Slipper
+60: Microscope Slide, Shower Door, Glass Table, Ashtray, Paperweight, Chandelier, Lamp, Measuring Cup, Beads, Sea Glass, Fiber Optic Cable, Thermometer, Skylight, Greenhouse, Skyscraper, Glass Eye, Bowl, Plate, Pitcher, Teapot, Glass Sculpture, Shot Glass, Mug, Oven Door, Microwave Turntable, Terrarium, Lantern, Candle Holder, Trophy
+85: Louvre Pyramid, Crystal Palace, Glass Bridge, Chihuly Glass, Insulator
+100: Glass Armonica|Armonica|Glass Harmonica :: An instrument invented by Benjamin Franklin. You play its spinning glass bowls by touching their rims with wet fingers.
+
+? Name an organ you can live without
+10: Appendix, Spleen, Gallbladder, Kidney, Tonsils
+30: Lung, Stomach, Colon|Large Intestine, Uterus, Ovary|Ovaries, Adenoids, Eye
+60: Testicle|Testes, Thyroid, Liver, Pancreas, Bladder, Prostate, Breasts, Fallopian Tubes, Larynx|Voice Box
+85: Adrenal Gland, Parathyroid, Salivary Gland, Rectum, Small Intestine, Esophagus, Tongue
+100: Thymus :: Busy training immune cells when you're a kid, then it shrinks and slowly turns mostly to fat as you get older.
+
+? Name a job where you might wear a lab coat
+10: Scientist, Doctor, Chemist, Pharmacist, Lab Technician|Lab Tech, Dentist
+30: Nurse, Researcher, Biologist, Veterinarian|Vet, Physician, Professor, Science Teacher|Teacher, Optometrist, Dermatologist, Medical Student, Pathologist, Microbiologist, Forensic Scientist|Crime Scene Investigator, Geneticist, Physicist, Biochemist
+60: Surgeon, Radiologist, Phlebotomist, Pharmacologist, Toxicologist, Epidemiologist, Immunologist, Virologist, Neuroscientist, Food Scientist, Esthetician, Cosmetologist, Engineer, Dental Hygienist, Chiropractor, Psychiatrist, Pediatrician, Coroner|Medical Examiner, Butcher, Ophthalmologist
+85: Makeup Artist, Mortician|Embalmer, Brewmaster|Brewer, Winemaker, Perfumer, Gemologist, Audiologist, Dietitian
+100: Flavorist :: A chemist who invents the flavors in sodas, snacks and candy, usually after years of training in a lab.

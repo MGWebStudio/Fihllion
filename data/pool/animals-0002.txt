@@ -21,13 +21,6 @@
 85: Fire Coral, Sea Wasp, Fireworm|Bristleworm, Hobo Spider, Six-Eyed Sand Spider, Weever Fish, Catfish, Rabbitfish, Cuttlefish
 100: Solenodon :: A shrew-like mammal from Cuba and Hispaniola that injects venom through grooves in its teeth.
 
-? Name an animal that can fly but isn't a bird
-10: Bat, Butterfly, Bee, Fly|Housefly, Dragonfly, Mosquito
-30: Moth, Ladybug, Wasp, Hornet, Beetle, Firefly, Grasshopper, Locust, Cicada, Fruit Bat|Flying Fox, Vampire Bat, Flying Squirrel, Flying Fish, Gnat, Pterodactyl|Pterosaur, Sugar Glider, Bumblebee, Insects
-60: Flying Snake, Draco Lizard|Flying Lizard|Flying Dragon, Flying Frog, Termite, Flying Ant|Ant, Cockroach, Crane Fly, Horsefly, Mayfly, Damselfly, Hoverfly, Fruit Fly, Stink Bug, June Bug, Praying Mantis|Mantis
-85: Flying Squid, Cricket, Lacewing
-100: Colugo|Flying Lemur :: A Southeast Asian glider nicknamed the flying lemur, even though it isn't a lemur and glides instead of flapping.
-
 ? Name an animal that's black and white
 10: Zebra, Panda|Giant Panda, Penguin, Skunk, Orca|Killer Whale, Dalmatian, Cow|Holstein
 30: Puffin, Magpie, Border Collie, Boston Terrier, Tuxedo Cat, Malayan Tapir|Tapir, Colobus Monkey|Colobus, Badger
@@ -35,54 +28,12 @@
 85: Indri, Avocet, Black-Winged Stilt|Stilt, Oystercatcher, Black-and-White Warbler, Pied Kingfisher, Japanese Chin, Landseer, Zorilla, Dall's Porpoise, Razorbill, Murre, Humbug Damselfish, Jacob Sheep, Valais Blacknose Sheep, Pied Crow, Pied Tamarin
 100: Commerson's Dolphin :: A small dolphin from the waters off South America with a black-and-white pattern that gets it nicknamed the panda dolphin.
 
-? Name a sound an animal makes
-10: Moo, Woof, Meow, Oink, Quack, Baa, Neigh, Roar|Rawr
-30: Bark, Hiss, Cluck, Cock-a-Doodle-Doo, Chirp|Tweet, Howl, Purr, Growl|Grr, Ribbit|Croak, Buzz, Squeak, Hoot, Gobble, Honk, Bleat, Whinny, Hee-Haw|Bray, Caw|Kaw, Coo, Squawk, Trumpet, Bellow, Grunt, Snort, Yip|Yap, Whimper, Whine, Yelp, Mew, Chatter, Screech, Trill, Cheep|Peep, Arf, Bow-Wow
-60: Ruff, Bugle, Rattle, Click, Whistle, Squeal, Low, Cackle, Crow, Chitter, Nicker, Snarl, Yowl, Hum, Song, Bay, Twitter, Cuckoo, Warble
-85: Caterwaul, Ululate, Boom, Drum, Tu-Whit Tu-Whoo
-100: Stridulation|Stridulate :: The chirp crickets make by rubbing a scraper on one wing across a row of tiny ridges on the other.
-
 ? Name an animal that hibernates
 10: Bear|Grizzly Bear|Black Bear, Groundhog|Woodchuck, Bat, Hedgehog, Chipmunk
 30: Ground Squirrel, Dormouse, Marmot, Turtle, Frog, Wood Frog, Toad, Snake, Ladybug, Bumblebee, Prairie Dog
 60: Skunk, Badger, Box Turtle, Painted Turtle, Garter Snake, Rattlesnake, Lizard, Salamander, Snail, Butterfly, Mosquito, Echidna, Polar Bear, Arctic Ground Squirrel, Hamster, Little Brown Bat, Alligator, Tortoise, Squirrel
 85: Mourning Cloak, Common Poorwill|Poorwill, Pygmy Possum, Alpine Marmot, Jumping Mouse
 100: Fat-Tailed Dwarf Lemur :: The only primate known to hibernate for months at a time, living off fat it stores in its tail.
-
-? Name an animal that lives in a herd
-10: Cow|Cattle, Horse, Elephant, Zebra, Bison|Buffalo, Sheep, Deer
-30: Wildebeest|Gnu, Gazelle, Antelope, Giraffe, Goat, Reindeer|Caribou, Elk, Camel, Llama, Alpaca, Yak, Musk Ox, Hippo|Hippopotamus, Kangaroo, Mustang|Wild Horse, Impala, Springbok, Water Buffalo, Cape Buffalo
-60: Rhino|Rhinoceros, Pig, Donkey, Bighorn Sheep, Mountain Goat, Ibex, Oryx, Eland, Kudu, Pronghorn, Vicuña, Guanaco, Przewalski's Horse, Woolly Mammoth|Mammoth
-85: Topi, Hartebeest, Wild Ass|Onager, Takin, Chamois, Gaur, Banteng, Addax, Blackbuck
-100: Saiga :: A Central Asian antelope with a big, droopy nose that filters out dust in summer and warms icy air in winter.
-
-? Name an animal small enough to fit in your hand
-10: Hamster, Mouse, Hummingbird, Frog, Gerbil, Chick|Baby Chick, Ladybug
-30: Spider, Ant, Bee, Butterfly, Caterpillar, Beetle, Cricket, Grasshopper, Snail, Lizard, Gecko, Chameleon, Baby Turtle|Turtle, Goldfish|Fish, Hedgehog, Sugar Glider, Chipmunk, Shrew, Sparrow, Budgie|Parakeet, Tree Frog, Hermit Crab, Pygmy Marmoset|Finger Monkey
-60: Crab, Rat, Mole, Bat, Finch, Canary, Toad, Newt, Salamander, Poison Dart Frog, Axolotl, Starfish, Seahorse, Scorpion, Tarantula, Dormouse, Vole, Tarsier, Mouse Lemur, Tardigrade|Water Bear, Worm, Slug, Pygmy Hedgehog, Kitten, Duckling, Anole
-85: Sea Monkeys|Brine Shrimp, Pygmy Seahorse, Bumblebee Bat|Kitti's Hog-Nosed Bat, Etruscan Shrew, Pygmy Jerboa, Pygmy Chameleon
-100: Bee Hummingbird :: The world's smallest bird, from Cuba. It's about 5 centimeters long and weighs about as much as a dime.
-
-? Name an animal with a shell
-10: Turtle, Snail, Crab, Tortoise, Lobster, Clam, Armadillo
-30: Oyster, Mussel, Scallop, Shrimp, Hermit Crab, Sea Turtle, Crawfish|Crayfish, Barnacle, Nautilus, Conch, Abalone, Horseshoe Crab, Giant Clam
-60: Beetle, Ladybug, Sea Urchin, Cockle, Whelk, Limpet, Periwinkle, Snapping Turtle, Box Turtle, Terrapin, Ammonite, Coconut Crab, King Crab, Pill Bug|Roly-Poly|Woodlouse
-85: Cuttlefish, Glyptodon, Geoduck, Razor Clam, Krill, Argonaut
-100: Chiton :: A sea creature whose shell is made of eight overlapping plates. Its teeth are capped with a hard iron mineral.
-
-? Name an animal that lives in trees
-10: Monkey, Koala, Sloth, Squirrel, Bird|Birds, Owl
-30: Orangutan, Lemur, Tree Frog, Woodpecker, Parrot, Toucan, Opossum|Possum, Gibbon, Spider Monkey, Chameleon, Flying Squirrel, Red Panda, Bat
-60: Chimpanzee, Raccoon, Tree Kangaroo, Howler Monkey, Leopard, Jaguar, Tree Snake|Green Tree Python, Iguana, Gecko, Caterpillar, Bee, Spider, Tarsier, Bushbaby|Galago, Kinkajou, Clouded Leopard, Sugar Glider, Aye-Aye, Slow Loris, Stick Insect|Walking Stick, Katydid, Cicada, Robin, Crow, Eagle, Hornbill, Emerald Tree Boa, Bonobo, Capuchin, Marmoset, Tamarin, Squirrel Monkey, Macaque
-85: Binturong, Margay, Pine Marten|Marten, Tree Hyrax, Colugo, Tree Pangolin, Quetzal, Treehopper, Tree Snail, Green Mamba, Boomslang, Cuscus
-100: Hoatzin :: A South American bird whose chicks have claws on their wings to help them climb back up into the trees.
-
-? Name a nocturnal animal
-10: Owl, Bat, Raccoon, Opossum|Possum, Hedgehog
-30: Fox, Skunk, Hamster, Moth, Firefly, Cricket, Cockroach, Badger, Aardvark, Armadillo, Porcupine, Kiwi, Tarsier, Slow Loris|Loris, Bushbaby|Galago, Aye-Aye, Sugar Glider, Kinkajou, Fennec Fox, Gecko|Leopard Gecko, Scorpion, Mouse, Rat, Flying Squirrel, Wombat, Tasmanian Devil, Pangolin
-60: Wolf, Coyote, Leopard, Lion, Tiger, Hyena, Jaguar, Ocelot, Bobcat, Lynx, Tarantula, Frog, Toad, Salamander, Mosquito, Shrew, Quoll, Bandicoot, Bilby, Platypus, Echidna, Kakapo, Nightjar, Whip-Poor-Will, Night Heron, Tawny Frogmouth|Frogmouth, Potoo, Catfish, Eel, Hippo, Honey Badger, Civet, Genet, Cat
-85: Oilbird, Binturong
-100: Owl Monkey|Night Monkey :: The only truly nocturnal monkeys, from Central and South America, with huge eyes for seeing in the dark.
 
 ? Name an animal that eats bugs
 10: Frog, Lizard, Spider, Bird|Birds, Anteater, Bat, Chameleon

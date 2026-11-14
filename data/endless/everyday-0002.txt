@@ -1,0 +1,60 @@
+? Name something you'd find in a kitchen drawer
+10: Forks|Fork, Spoons|Spoon, Knives|Knife, Spatula, Can Opener, Scissors|Kitchen Shears, Rubber Bands
+30: Tape, Batteries, Takeout Menus|Menus, Twist Ties, Whisk, Ladle, Tongs, Measuring Spoons, Measuring Cups, Vegetable Peeler|Peeler, Bottle Opener, Corkscrew|Wine Opener, Pizza Cutter, Cheese Grater|Grater, Rolling Pin, Wooden Spoon, Chopsticks, Straws, Napkins, Aluminum Foil|Foil, Plastic Wrap|Saran Wrap, Ziploc Bags|Plastic Bags, Oven Mitts, Dish Towels|Towels, Pot Holders, Matches, Lighter, Pens, Pencils, Notepad, Keys, Coupons, Receipts, Birthday Candles|Candles, Meat Thermometer|Thermometer, Ice Cream Scoop, Garlic Press, Zester, Skewers, Chip Clips|Bag Clips, Toothpicks, Flashlight, Screwdriver, Instruction Manuals, Phone Charger, Spare Change|Coins, Pastry Brush, Turkey Baster|Baster, Funnel, Strainer|Sieve, Cookie Cutters, Sauce Packets|Ketchup Packets|Soy Sauce Packets
+60: Mandoline, Steak Knives, Knife Sharpener|Sharpener, Corn Holders, Nutcracker|Lobster Crackers, Egg Slicer, Apple Corer, Piping Bags, Trivet, Coasters, Placemats, Tupperware Lids|Lids, Sticky Notes, Magnets, Super Glue|Glue, Zip Ties, Tape Measure, Hammer, Sporks, Plastic Utensils, Junk, Recipe Cards, Calculator, Rubber Gloves, Sponge, Dish Brush, Bread Clips, Pie Server, Melon Baller
+85: Fortune Cookies, Old Phone, Cake Tester, Nut Picks, Shrimp Deveiner, Cherry Pitter, Tea Infuser|Tea Ball, Honey Dipper
+100: Spurtle :: A Scottish wooden stick for stirring porridge. It has no flat part, so the oats don't clump.
+
+? Name something with buttons
+10: Shirt, TV Remote|Remote, Phone, Keyboard, Coat|Jacket, Calculator, Elevator
+15: Belly Button
+30: Game Controller|Controller, Microwave, Jeans, Pants, Sweater|Cardigan, Blouse, Vest, Pajamas, Overalls, Doorbell, ATM, Vending Machine, Arcade Machine, Computer Mouse|Mouse, Camera, Watch, Washing Machine, Dryer, Dishwasher, Oven, Coffee Maker, Blender, Car Radio|Car, Steering Wheel, Radio, Alarm Clock, Crosswalk Button|Crosswalk, Fan, Air Conditioner, Thermostat, Printer, Game Boy|Nintendo Switch, Walkie-Talkie, Accordion, Pin|Button Pin|Badge, Garage Door Opener, Key Fob|Car Key
+60: Doll, Teddy Bear, Coraline, Snowman, Gingerbread Man, Campaign Button, Panic Button, Treadmill, Slot Machine, Pinball Machine, Simon, Bop It, Tamagotchi, Stopwatch, Flashlight, Game Show Buzzer|Buzzer, Easy Button, Like Button, Subscribe Button, Play Button, Jukebox, Cash Register, Gas Pump, Self-Checkout, Button Mushrooms
+85: Tufted Couch|Couch, Throw Pillow|Pillow, Big Red Button, Button Quail
+100: Bachelor's Button :: Another name for the cornflower, a bright blue flower that young men once wore in their buttonholes.
+
+? Name something you'd bring to the beach
+10: Towel|Beach Towel, Sunscreen|Sunblock, Beach Umbrella|Umbrella, Sunglasses, Swimsuit|Bathing Suit, Cooler, Beach Ball
+15: Baby Powder
+30: Beach Chair|Chair, Sun Hat|Hat, Bucket and Shovel|Bucket|Shovel|Pail, Flip-Flops|Sandals, Snacks, Water Bottle|Water, Book, Phone, Bluetooth Speaker|Speaker, Surfboard, Boogie Board|Bodyboard, Frisbee, Volleyball, Snorkel, Goggles, Floaties|Pool Float|Inflatable, Beach Blanket|Blanket, Beach Bag|Bag, Kite, Sandwiches, Drinks, Chips, Watermelon|Fruit, Aloe Vera|Lotion, Beach Tent|Canopy|Tent, Cover-Up, Sand Toys|Toys, Camera, Headphones, Lip Balm|Chapstick, Rash Guard, Wetsuit, Paddleboard, Kayak, Fishing Rod|Fishing Pole, Paddleball, Spikeball, Skimboard, Beach Wagon|Wagon, Fins|Flippers, Water Gun|Squirt Gun
+60: Magazine, Boombox, Radio, Deck of Cards|Cards, Cornhole, Life Jacket, Bug Spray, Trash Bags, Ziploc Bags, First Aid Kit, Windbreaker, Hoodie, Change of Clothes, Portable Grill|Grill, Firewood, Marshmallows, Hot Dogs, Metal Detector, Sand Molds, Snorkel Mask|Mask, Hammock, Dog, Kindle, Visor, Ice Packs, Juice Boxes, Popsicles, Bubbles
+85: Shell Bucket, Kiteboard
+100: Windbreak :: A strip of fabric on poles that British beachgoers hammer into the sand to block the chilly wind.
+
+? Name something that has keys
+10: Piano, Keyboard, Car, Door|House, Computer|Laptop, Lock|Padlock, Typewriter
+15: Map, Answer Key
+30: Florida Keys, Locker, Safe, Mailbox, Keychain|Key Ring, Hotel Room, Apartment, Office, Motorcycle, Truck, Boat, Clarinet, Saxophone, Flute, Oboe, Organ, Accordion, Synthesizer, Keytar, Harpsichord, Calculator, Cash Register, Jail Cell|Prison, Treasure Chest|Chest, Diary|Journal, Jewelry Box, Handcuffs, Filing Cabinet, Desk, Gate, Garage, Storage Unit, Bike Lock, Music|Song, Basketball Court
+60: Phone, Remote, ATM, Vending Machine, Music Box, Wind-Up Toy, Clock, Gun Safe, Piggy Bank, Cabinet, Window, Encryption|Password, Code|Cipher, Melodica
+85: Elevator, Database, Celesta, Carillon
+100: Hurdy-Gurdy :: A medieval instrument played by turning a crank that rubs a wheel against its strings while you press its keys.
+
+? Name a chore
+10: Washing the Dishes|Dishes|Doing the Dishes, Laundry, Vacuuming, Taking Out the Trash|Trash, Making the Bed, Cleaning Your Room, Mowing the Lawn
+30: Sweeping, Mopping, Dusting, Folding Laundry|Folding Clothes, Feeding the Dog|Feeding the Pet|Feeding the Cat, Walking the Dog, Raking Leaves, Shoveling Snow, Cleaning the Bathroom, Cleaning the Toilet|Scrubbing the Toilet, Setting the Table, Clearing the Table, Loading the Dishwasher|Unloading the Dishwasher, Drying the Dishes, Ironing, Cooking|Making Dinner, Grocery Shopping, Washing the Car, Pulling Weeds|Weeding, Watering the Plants, Gardening, Cleaning the Litter Box|Litter Box, Recycling, Wiping the Counters, Cleaning the Windows, Changing the Sheets, Putting Away Groceries, Putting Away Clothes, Babysitting|Watching Siblings, Cleaning the Fridge, Cleaning Out the Garage, Organizing, Decluttering, Picking Up Toys, Getting the Mail, Taking Out the Trash Cans|Trash Cans, Picking Up Dog Poop|Scooping Poop, Cleaning the Pool, Chopping Wood, Tidying Up
+60: Stacking Firewood, Feeding the Chickens, Milking the Cow, Mucking Stalls, Collecting Eggs, Cleaning the Gutters, Painting the Fence, Trimming Hedges, Changing Light Bulbs, Cleaning the Oven, Scrubbing the Tub, Cleaning the Mirror, Dusting the Ceiling Fan, Washing the Dog, Cleaning the Fish Tank, Taking Out the Compost
+85: Polishing Silver, Edging the Lawn, Defrosting the Freezer, Descaling the Kettle, Darning Socks, Replacing the Air Filter, Wiping Baseboards, Sorting the Mail
+100: Beating the Rugs|Rug Beating :: Before vacuums, people hung rugs outside and whacked the dust out of them with a wicker paddle called a rug beater.
+
+? Name something that's sticky
+10: Glue, Tape, Honey, Gum, Syrup|Maple Syrup, Sticky Notes|Post-it Notes, Slime
+30: Duct Tape, Band-Aid|Bandage, Stickers, Velcro, Tree Sap|Sap, Caramel, Peanut Butter, Jam|Jelly, Molasses, Marshmallow|Marshmallow Fluff, Cotton Candy, Taffy, Spider Web|Cobweb, Flypaper, Glue Stick, Super Glue, Hot Glue, Rubber Cement, Packing Tape, Masking Tape, Scotch Tape, Gummy Bears, Sticky Rice|Rice, Mochi, Cinnamon Rolls, Sticky Buns, Toffee, Frosting, Lollipop, Caramel Apple|Candy Apple, Glue Trap, Lint Roller, Tar, Lip Gloss, Silly Putty|Putty, Sticky Hand, Nutella
+60: Gecko Feet|Gecko, Snail, Slug, Frog Tongue, Pine Pitch, Resin, Asphalt, Humidity, Hair Gel, Hairspray, Lotion, Wet Paint|Paint, Nail Polish, Epoxy, Caulk, Play-Doh, Wax, Beeswax, Honeycomb, Agave, Corn Syrup, Blu Tack|Poster Putty, Spilled Soda, Popsicle, Melted Ice Cream, Sunscreen
+85: Sundew, Glue Dots, Barnacle Glue
+100: Mistletoe Berries|Mistletoe|Birdlime :: Their gooey pulp was boiled down to make birdlime, a glue smeared on branches to catch birds.
+
+? Name something you'd find in a garage
+10: Car, Toolbox|Tools, Bike|Bicycle, Lawn Mower, Boxes, Shovel, Ladder
+15: Garage Band|Band
+30: Hammer, Screwdriver, Wrench, Drill, Saw, Workbench, Shelves, Rake, Hose, Wheelbarrow, Snow Shovel, Snowblower, Leaf Blower, Weed Eater|Weed Whacker|String Trimmer, Paint Cans|Paint, Extension Cord, Tape Measure, Nails, Screws, Duct Tape, WD-40, Motor Oil|Oil, Gas Can, Spare Tire|Tires, Jumper Cables, Car Jack|Jack, Chest Freezer|Freezer, Garage Fridge|Fridge, Trash Cans|Recycling Bins, Storage Bins, Christmas Decorations|Holiday Decorations, Sports Equipment, Basketball, Football, Skateboard, Scooter, Motorcycle, ATV|Four-Wheeler, Golf Clubs, Fishing Poles, Camping Gear|Tent, Cooler, Kayak, Lawn Chairs|Folding Chairs, Grill|BBQ, Water Heater, Washer and Dryer|Washing Machine, Spider Webs|Spiders, Junk|Clutter, Pegboard, Shop Vac, Broom, Bucket, Flashlight, Sled, Home Gym|Weights|Treadmill, Ping Pong Table, Chainsaw
+60: Pool Toys, Rock Salt, Fertilizer, Bird Seed, Dog Food, Cat Litter, Furnace, Mice, Dust, Old Furniture, Air Compressor, Vise, Sawhorse, Table Saw, Circular Saw, Sander, Dustpan, Mop Bucket, Work Gloves|Gloves, Safety Goggles, Batteries, Light Bulbs, Mousetrap, Bug Spray, Pressure Washer, Wagon, Stroller, Skis, Snowboard, Rollerblades, Punching Bag, Pool Table, Dartboard, Old Couch, Sandpaper, Level, Clamps, Crowbar, Axe, Hatchet, Hedge Trimmer, Pruning Shears|Shears, Watering Can, Flower Pots, Potting Soil, Antifreeze, Windshield Washer Fluid, Car Wax, Battery Charger, Garage Sale Stuff
+85: Arcade Machine, Paint Thinner, Caulk, Stud Finder, Trickle Charger, Engine Hoist
+100: Mechanic's Creeper|Creeper :: A low board on wheels you lie on so you can roll yourself under a car.
+
+? Name something that has a lid
+10: Jar, Pot, Trash Can|Garbage Can, Box, Toilet, Coffee Cup|Cup, Tupperware|Container
+15: Eye|Eyelid
+30: Pan, Cooler, Laptop, Piano, Washing Machine, Grill, Slow Cooker|Crock-Pot, Blender, Kettle, Teapot, Sugar Bowl, Cookie Jar, Mason Jar, Lunchbox, Thermos, Water Bottle, Travel Mug, Can, Paint Can, Coffin|Casket, Treasure Chest|Chest, Toy Chest, Laundry Hamper|Hamper, Recycling Bin, Compost Bin, Storage Bin, Tackle Box, Toolbox, Jewelry Box, Music Box, Shoebox, Pill Bottle, Pringles Can, Yogurt Cup, Takeout Container, Pizza Box, Dutch Oven, Pressure Cooker|Instant Pot, Rice Cooker, Chest Freezer, Hot Tub, Sippy Cup, Pandora's Box, Manhole, Sarcophagus
+60: Bottle, Egg Carton, Butter Dish, Casserole Dish, Wok, Frying Pan, Bucket, Barrel, Mailbox, Sandbox, Urn, Pen, Lip Balm, Deodorant, Makeup Compact|Compact, Lipstick, Candle Jar|Candle, Coffee Maker, Popcorn Popper, Ice Cream Tub, Bento Box, Jack-in-the-Box, Well, Time Capsule
+85: Septic Tank, Cistern, Tea Caddy, Ark of the Covenant, Ballot Box, Cigar Box, Snuff Box
+100: Pyxis :: An ancient Greek lidded box for makeup or jewelry. A small constellation is named after one, though it's pictured as a ship's compass box.

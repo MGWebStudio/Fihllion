@@ -1,0 +1,14 @@
+? Name a word that sounds like the noise it describes
+10: Boom, Buzz, Bang, Sizzle, Splash, Pop, Crash
+30: Hiss, Woof, Meow, Moo, Oink, Quack, Tick-Tock|Tick Tock, Ding Dong, Knock, Click, Clap, Snap, Crack, Crunch, Thud, Thump, Zip, Zoom, Whoosh, Whack, Slam, Splat, Drip, Plop, Gurgle, Burp, Hiccup, Achoo, Beep, Honk, Vroom, Ring, Ding, Clang, Clank, Clink, Bark, Growl, Purr, Chirp, Tweet, Cuckoo, Rumble, Grumble, Murmur, Mumble, Whisper, Giggle, Squeak, Creak, Screech, Slurp, Gulp, Munch, Smack, Boing, Twang, Kaboom, Kapow|Pow, Bam, Wham, Zap, Swoosh, Fizz, Pitter-Patter, Rustle, Crinkle, Thwack, Bonk, Clatter, Chime, Jingle, Tinkle, Hum, Whir|Whirr, Roar, Hoot, Baa, Ribbit, Croak, Ka-Ching|Cha-Ching
+60: Chuckle, Howl, Cock-a-Doodle-Doo, Neigh, Splish Splash, Sniff, Snore, Snort, Cough, Sneeze, Thunk, Kerplunk, Clip-Clop, Flutter, Flap, Whiz, Shush, Ahem, Haha|Ha-Ha, Ping, Zing, Ta-Da, Psst, Brr, Ouch, Glug, Blub, Boop
+85: Hush, Mwahaha, Dun Dun Dun, Tsk, Plink, Bloop, Thwomp
+100: Susurrus :: A fancy word for a soft whispering or rustling sound, from the Latin word for "whisper."
+
+? Name a word that's also a first name
+~exact
+10: Rose, Lily, Grace, Hope, Faith, Jack, Mark, Bill
+30: Daisy, Ruby, Pearl, April, May, June, Summer, Autumn, Joy, Iris, Violet, Ivy, Holly, Heather, Jasmine, Olive, Hazel, Amber, Crystal, Dawn, Eve, Bob, Rob, Pat, Sue, Will, Frank, Chip, Chuck, Drew, Grant, Hunter, Mason, Sky, River, Storm, Sunny, Brook, Cliff, Penny, Ginger, Candy, Honey, Melody, Harmony, Destiny, Charity, Ace, Max, Art, Dean, Gene, Ray, Josh, Sandy, Rusty, Nick, Wade, Lance, Miles, Carol, Angel, Raven, Robin, Jay, Willow, Sage, Jade, Chase, Cash, Earl
+60: Bud, Taylor, Carter, Archer, Cooper, Rain, Dale, Glen, Forest, Sugar, Cherry, Trinity, Patience, Prudence, Mercy, Felicity, Serenity, Liberty, Justice, Haven, Journey, Legend, King, Prince, Duke, Major, Dusty, Woody, Harry, Jimmy, Norm, Victor, Eden, Wren, Dove, Fawn, Kitty, Aspen, Juniper, Basil, Rosemary, Clementine, Sterling, Coral, Ebony, Onyx, Diamond, Ember, Blaze, Phoenix, Rider, Gunner, Colt, Bear, Wolf, Fox, Buck, Stone, Flint, Royal, Noble, Nova, Star, Misty
+85: Bliss, Lark, Finch, Baron, Cloud
+100: Wednesday :: Wednesday Addams got her name from the old rhyme line "Wednesday's child is full of woe."

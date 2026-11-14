@@ -1,0 +1,72 @@
+? Name a US state with an ocean coastline
+10: California|Cali, Florida, Hawaii, New York
+30: Washington|Washington State, Oregon, Alaska, Maine, Massachusetts, New Jersey, North Carolina, South Carolina, Texas, Georgia, Virginia
+60: Maryland, Delaware, Rhode Island, Connecticut, Louisiana, Alabama
+85: Mississippi
+100: New Hampshire :: Has the shortest ocean coastline of any coastal state, under 20 miles long.
+
+? Name a country that starts and ends with the same letter
+~exact
+10: Australia, Austria, Argentina
+30: Albania, Algeria, Angola, Armenia, Andorra
+60: Seychelles, Solomon Islands, Antigua and Barbuda
+85: Saint Kitts and Nevis|St Kitts and Nevis
+100: Saint Vincent and the Grenadines|St Vincent and the Grenadines :: A Caribbean country of 32 islands. Its main island has an active volcano, La Soufrière, which erupted in 2021.
+
+? Name a US city with an NBA team
+10: Los Angeles|LA, Chicago, Boston, Miami, New York|New York City|NYC, Houston, Dallas
+30: San Francisco, Philadelphia|Philly, Denver, Atlanta, Cleveland, Detroit, Milwaukee, Orlando, Phoenix, San Antonio, Washington|Washington DC|DC
+60: Oklahoma City|OKC, Memphis, Brooklyn, Portland, Sacramento, Indianapolis, Charlotte, New Orleans
+85: Salt Lake City, Minneapolis
+100: Inglewood :: The Clippers moved into the Intuit Dome here in 2024, so LA's two NBA teams no longer share an arena.
+
+? Name a country where Spanish is an official language
+10: Spain, Mexico, Argentina, Colombia, Peru, Chile, Cuba
+30: Venezuela, Ecuador, Guatemala, Dominican Republic, Costa Rica
+60: Bolivia, Honduras, El Salvador, Nicaragua, Panama
+85: Paraguay, Uruguay
+100: Equatorial Guinea :: The only country in Africa with Spanish as an official language. It was a Spanish colony until 1968.
+
+? Name a country in the Southern Hemisphere
+10: Australia, New Zealand, Argentina, Brazil, South Africa, Chile, Madagascar
+30: Peru, Bolivia, Paraguay, Uruguay, Indonesia, Mozambique, Zimbabwe, Zambia, Angola, Namibia, Botswana, Tanzania, Fiji, Papua New Guinea, Ecuador
+60: Eswatini|Swaziland, Malawi, Burundi, Rwanda, Mauritius, Seychelles, Samoa, Tonga, Vanuatu, Solomon Islands, East Timor|Timor-Leste, Democratic Republic of the Congo|DR Congo|DRC, Republic of the Congo, Gabon
+85: Comoros, Tuvalu, Nauru, Kenya
+100: Lesotho :: Completely surrounded by South Africa. Its lowest point is over 1,000 meters up, higher than the lowest point of any other country.
+
+? Name a famous statue
+10: Statue of Liberty|Lady Liberty, Christ the Redeemer, David|Michelangelo's David, The Thinker, Moai|Easter Island Heads, Venus de Milo, Great Sphinx of Giza|Sphinx
+30: Mount Rushmore, Lincoln Memorial|Abraham Lincoln Statue, Charging Bull|Wall Street Bull, The Little Mermaid|Little Mermaid, Manneken Pis, Spring Temple Buddha, Leshan Giant Buddha, Great Buddha of Kamakura|Kamakura Buddha, Statue of Unity, The Motherland Calls, Angel of the North, Winged Victory of Samothrace|Winged Victory, Discobolus|Discus Thrower, Terracotta Army|Terracotta Warriors, Colossus of Rhodes, Rocky Statue, Fearless Girl, Pietà, Nefertiti Bust|Bust of Nefertiti, Crazy Horse Memorial, Tian Tan Buddha|Big Buddha, Hachiko, Cloud Gate|The Bean, Iwo Jima Memorial|Marine Corps War Memorial, Merlion, Nelson's Column
+60: Statue of Zeus at Olympia, Atlas, Prometheus, Moses, Laocoön and His Sons|Laocoön, Balto, Spoonbridge and Cherry, LOVE Sculpture, The Kelpies|Kelpies, Statue of Freedom, Martin Luther King Jr. Memorial, Capitoline Wolf, Bronze Horseman, Buddhas of Bamiyan|Bamiyan Buddhas, Abu Simbel, Reclining Buddha, Trafalgar Square Lions, Eros, Chicago Picasso
+85: Athena Parthenos, Augustus of Prima Porta, Stone Mountain, Ushiku Daibutsu, Christ of the Ozarks, Cristo Rei, Peter Pan Statue, Greyfriars Bobby, Alice in Wonderland Statue, Warsaw Mermaid, Apollo Belvedere, Dying Gaul, Colossi of Memnon, Golden Buddha, Guan Yin of the South Sea, Spirit of Detroit
+100: Venus of Willendorf :: A tiny figure, about 11 centimeters tall and roughly 25,000 years old, dug up in Austria in 1908.
+
+? Name a US state that borders Canada or Mexico
+10: Texas, California, Arizona, New Mexico, Alaska, Washington|Washington State
+30: Montana, North Dakota, Minnesota, Michigan, New York, Vermont, Maine, Idaho
+60: New Hampshire
+85: Ohio
+100: Pennsylvania :: Its only border with Canada runs through the middle of Lake Erie.
+
+? Name a country with only four letters in its name
+~exact
+10: Cuba, Peru, Iran, Iraq
+30: Chad, Fiji, Oman
+60: Mali, Laos
+85: Togo
+100: Niue :: A tiny Pacific island nation of under 2,000 people that once put Pokémon on its coins.
+
+? Name a country that still has a king or queen
+10: United Kingdom|UK|Britain|England, Spain, Saudi Arabia, Netherlands, Sweden, Norway, Denmark
+30: Belgium, Japan, Thailand, Jordan, Morocco, Bhutan, Monaco, Canada, Australia, New Zealand, Luxembourg, Liechtenstein, Bahrain, Cambodia, Malaysia, Brunei, Oman, Kuwait, Qatar, United Arab Emirates|UAE
+60: Jamaica, Bahamas, Belize, Lesotho, Tonga, Andorra, Papua New Guinea, Vatican City|Vatican
+85: Solomon Islands, Tuvalu, Grenada, Saint Lucia, Antigua and Barbuda, Saint Kitts and Nevis, Saint Vincent and the Grenadines
+100: Eswatini|Swaziland :: Africa's last absolute monarchy. Its king renamed the country from Swaziland to Eswatini in 2018.
+
+? Name a European city that isn't a capital
+10: Barcelona, Milan, Venice, Florence, Munich, Istanbul
+15: The Hague
+30: Manchester, Liverpool, Birmingham, Glasgow, Naples, Marseille, Nice, Lyon, Hamburg, Frankfurt, Seville, Valencia, Porto, Geneva, Zurich, Kraków, Saint Petersburg|St Petersburg, Antwerp, Rotterdam, Salzburg, Cologne, Pisa, Oxford, Cambridge, Bruges, Dubrovnik, Turin
+60: Málaga, Bilbao, Granada, Gdańsk, Düsseldorf, Stuttgart, Dresden, Leipzig, Nuremberg, Bordeaux, Toulouse, Strasbourg, Lille, Cannes, Verona, Bologna, Genoa, Palermo, Thessaloniki, Bergen, Gothenburg, Ibiza, Leeds, Bristol, Bath, York, Newcastle, Brighton, Cork, Galway, Ghent, Utrecht, Basel, Lucerne, Innsbruck, Split, Odesa|Odessa, Lviv, Sochi
+85: Malmö, Aarhus, Tampere, Saint-Tropez, Salamanca, Toledo, Córdoba, Sheffield, Nottingham, Coimbra, Faro, Eindhoven, Graz, Kharkiv, Brno, Wrocław, Poznań, Cluj-Napoca, Plovdiv, Kazan
+100: Matera :: An Italian city where families lived in caves carved into the rock until the 1950s.

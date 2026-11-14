@@ -1,0 +1,98 @@
+? Name a fruit people often eat dried
+10: Raisins|Raisin|Grape, Apricot, Cranberry|Craisins, Mango, Date, Prune|Plum, Banana|Banana Chips
+15: Tomato|Sun-Dried Tomato
+30: Fig, Apple|Apple Chips, Pineapple, Cherry, Blueberry, Strawberry, Coconut, Peach, Pear, Papaya, Goji Berry|Goji, Kiwi, Currant
+60: Golden Raisins|Sultanas, Orange, Persimmon, Jackfruit, Dragon Fruit, Mulberry, Gooseberry, Jujube|Red Date, Tamarind, Plantain, Nectarine, Lychee, Longan, Pomegranate, Cantaloupe|Melon, Olive, Chili Pepper|Chili, Raspberry
+85: Lemon, Guava, Passion Fruit, Kumquat, Quince, Elderberry, Barberry, Sea Buckthorn, Rose Hip|Rosehip, Acai, Blackberry, Golden Berry|Goldenberry|Physalis|Cape Gooseberry
+100: Hoshigaki :: Japanese dried persimmons that get hand-massaged every few days for weeks, until they turn soft and sugary.
+
+? Name a food that's orange
+10: Orange, Carrot, Cheetos, Pumpkin, Cheddar Cheese|Cheddar, Mac and Cheese|Macaroni and Cheese, Sweet Potato
+15: Salmon
+30: Cantaloupe, Mango, Apricot, Peach, Papaya, Tangerine, Clementine, Mandarin, Butternut Squash, Orange Bell Pepper|Bell Pepper, Persimmon, Kumquat, Nectarine, Goldfish Crackers|Goldfish, Doritos, Candy Corn, Orange Juice, Fanta|Orange Soda, Cheez-Its|Cheez-It, Cheese Puffs, Nacho Cheese, Yam, Squash, Pumpkin Pie, Orange Chicken, Sweet Potato Fries, American Cheese|Kraft Singles
+60: Reese's Pieces, Creamsicle, Orange Sherbet|Sherbet, Velveeta, Red Lentils|Lentils, Turmeric, Paprika, Saffron, Egg Yolk, Shrimp, Salmon Roe|Ikura|Roe, Buffalo Sauce, Thai Iced Tea, Carrot Cake, Chicken Tikka Masala|Tikka Masala, Butter Chicken, Curry, Pumpkin Soup, Carrot Soup, Cheese Balls, Tang, Orange Crush|Crush, Sunkist, Kabocha, Acorn Squash, Carrot Juice, Tangelo, Blood Orange, Satsuma, Colby
+85: Uni|Sea Urchin, Circus Peanuts, Orange Slices, Physalis|Golden Berry, Sea Buckthorn, Loquat, Mamey|Mamey Sapote, Cloudberry, Calabaza, Chanterelle, Red Leicester, Mimolette
+100: Chicken of the Woods :: A bright orange mushroom that grows in shelves on tree trunks. People say it tastes like chicken.
+
+? Name a food you'd find at a state fair
+10: Corn Dog, Funnel Cake, Cotton Candy, Turkey Leg|Giant Turkey Leg, Deep-Fried Oreos|Fried Oreos, Kettle Corn, Elephant Ear
+15: Deep-Fried Butter|Fried Butter
+30: Caramel Apple|Candy Apple, Lemonade, Cheese Curds|Fried Cheese Curds, Fried Pickles, Fried Twinkies, Deep-Fried Candy Bar|Fried Snickers, Fried Chicken, Hot Dog, Hamburger|Burger, Pizza, Nachos, Cinnamon Rolls, Mini Donuts, Snow Cone, Ice Cream, Soft Serve, Shaved Ice, Popcorn, Soft Pretzel|Pretzel, Roasted Corn|Corn on the Cob, Elote, Onion Rings, French Fries|Fries, Curly Fries, Bloomin' Onion|Blooming Onion, Pork Chop on a Stick, Pickle on a Stick, Gyro, Barbecue|BBQ, Pulled Pork, Brisket, Italian Sausage|Sausage, Bratwurst, Tacos, Churros, Fried Dough, Baked Potato, Loaded Fries, Chili Cheese Fries, Walking Taco, Cheesesteak, Dippin' Dots, Frozen Banana, Milkshake, Tornado Potato|Spiral Potato
+60: Pierogi, Sno-Ball, Root Beer Float, Peanuts, Saltwater Taffy|Taffy, Fudge, Pie, Cookies, Brownies, Beignets, Fried Ice Cream, Fried Kool-Aid, Fried Alligator|Alligator on a Stick, Fried Mac and Cheese, Chocolate-Covered Bacon, Bacon on a Stick, Fried Cheesecake, Cream Puffs, Zeppole, Burritos, Smoked Sausage, Kebab
+85: Fried Coke, Fried Avocado, Frog Legs, Rocky Mountain Oysters, Corn Fritters, Fried Green Tomatoes, Spudnuts, Fried Jell-O, Sweet Martha's Cookies
+100: Pronto Pup :: The Minnesota State Fair's take on a corn dog, sold there since 1947 and made with a pancake-style batter instead of cornmeal.
+
+? Name something you can put on a hot dog
+10: Ketchup, Mustard, Relish, Onions, Chili, Cheese, Sauerkraut|Kraut
+30: Jalapeños, Bacon, Coleslaw|Slaw, Mayonnaise|Mayo, Barbecue Sauce|BBQ Sauce, Hot Sauce, Sriracha, Pickles|Dill Pickle Spear, Tomatoes, Sport Peppers, Celery Salt, Nacho Cheese, Chili Cheese, Grilled Onions, Sweet Relish, Avocado, Guacamole, Salsa, Pico de Gallo, Spicy Brown Mustard|Brown Mustard
+60: Cream Cheese, Kimchi, Pineapple, Potato Chips|Chips, French Fries|Fries, Mac and Cheese, Lettuce, Honey Mustard, Dijon Mustard|Dijon, Ranch, Buffalo Sauce, Teriyaki, Gravy, Fried Egg, Pulled Pork, Bell Peppers, Peppers and Onions, Banana Peppers, Hot Peppers, Cheez Whiz, American Cheese, Cheddar, Cucumber, Fritos, Doritos, Crispy Onions|French Fried Onions
+85: Poutine, Pepperoncini, Giardiniera, Horseradish, Wasabi, Seaweed|Nori, Peanut Butter, Pepper Jack, Thousand Island, Sweet Onion Sauce, Remoulade, Tzatziki, Hummus, Pesto, Marinara, Pepperoni, Potato Sticks, Pineapple Sauce
+100: Quail Eggs :: A classic topping on a Colombian hot dog, along with pineapple sauce and crunchy potato sticks.
+
+? Name a drink that's served hot
+10: Coffee, Hot Chocolate|Hot Cocoa|Cocoa, Tea, Latte, Cappuccino, Apple Cider|Hot Cider|Cider
+30: Espresso, Mocha, Americano, Chai|Chai Latte|Masala Chai, Green Tea, Matcha|Matcha Latte, Hot Toddy, Mulled Wine|Glühwein, Macchiato, Flat White, Pumpkin Spice Latte|PSL, London Fog, Herbal Tea, Chamomile Tea|Chamomile, Peppermint Tea, Earl Grey, Black Tea, Golden Milk|Turmeric Latte, Irish Coffee, Warm Milk|Hot Milk, Turkish Coffee, Yerba Mate|Mate
+60: Cortado, Café au Lait, Atole, Champurrado, Wassail, Hot Sake|Sake, Rooibos, Oolong, Jasmine Tea, Ginger Tea, Hot Buttered Rum, Bone Broth, Broth, Miso Soup, Ovaltine, Milo, Steamer, Moroccan Mint Tea|Mint Tea, Hot Lemon Water|Lemon Water
+85: Café de Olla, Hibiscus Tea, Butter Tea|Po Cha, Teh Tarik, Kahwa, Postum, Horlicks, Bovril, Babyccino, Red Eye, Breve, Vienna Coffee|Einspänner, Hojicha, Genmaicha, Ponche, Canelazo
+100: Salep|Sahlab :: A thick, hot Turkish drink made with flour ground from orchid roots, usually topped with cinnamon.
+
+? Name a flavor of potato chips
+10: Barbecue|BBQ, Sour Cream and Onion, Salt and Vinegar|Sea Salt and Vinegar, Cheddar, Original|Plain|Salted|Classic, Jalapeño, Ranch
+15: Ketchup
+30: Dill Pickle|Dill, Salt and Pepper, Honey BBQ|Honey Barbecue, Buffalo|Buffalo Wing, Sea Salt, Sweet Chili|Thai Sweet Chili, Flamin' Hot|Flamin Hot, Cheese, Sour Cream and Chive, French Onion, Chili Lime, Cheddar and Sour Cream, Cheddar Jalapeño, Spicy, Cheese and Onion
+60: Truffle, Hot Honey, Mesquite BBQ|Mesquite Barbecue, Garden Salsa, Loaded Baked Potato, Bacon, Bacon Cheddar, Pizza, Wasabi, Prawn Cocktail, Roast Chicken, Pickled Onion, Smoky Bacon, Paprika, Seaweed|Nori, Chicken, Buffalo Ranch, Honey Mustard, Mustard, Cajun, Old Bay, Magic Masala|Masala, Tomato, Lime, Crab
+85: Wasabi Ginger, Worcester Sauce, Marmite, Steak and Onion, Lime and Black Pepper, Chicken and Waffles, Cappuccino, Biscuits and Gravy, Mac and Cheese, Crab Spice, Lobster Roll, Fried Pickles with Ranch, Everything Bagel, Tikka Masala, Cucumber, Caviar, Shrimp
+100: All Dressed :: A Canadian favorite that mixes ketchup, barbecue, salt and vinegar, and sour cream and onion all on one chip.
+
+? Name a food that's often eaten raw
+10: Sushi, Apple, Carrot, Lettuce|Salad, Oysters, Sashimi, Tomato
+15: Cookie Dough
+30: Banana, Grapes, Strawberries|Strawberry, Celery, Cucumber, Spinach, Bell Pepper, Ceviche, Poke, Steak Tartare|Tartare, Carpaccio, Orange, Watermelon, Blueberries, Avocado, Broccoli, Cauliflower, Radish, Onion, Snap Peas|Sugar Snap Peas, Baby Carrots, Kale, Cabbage, Coleslaw, Peach, Pear, Cherries, Mango, Pineapple, Kiwi, Berries, Nuts|Almonds, Raw Eggs|Eggs, Mushrooms, Sprouts, Salmon, Tuna, Clams, Peas, Fruit, Vegetables|Veggies
+60: Sweet Corn|Corn, Jicama, Fennel, Zucchini, Beets, Herbs, Mint, Basil, Parsley, Cilantro, Microgreens, Arugula, Romaine, Coconut, Crudités, Gazpacho, Uni|Sea Urchin, Scallops, Crudo, Tuna Tartare, Fish, Sunflower Seeds
+85: Kohlrabi, Raw Milk, Kitfo, Yukhoe, Tamago Kake Gohan, Kibbeh Nayyeh
+100: Mett :: Raw minced pork that Germans spread on bread rolls, often with raw onion on top.
+
+? Name a cereal mascot
+10: Tony the Tiger|Tony, Toucan Sam, Lucky the Leprechaun|Lucky, Trix Rabbit|Trix Bunny|Silly Rabbit, Cap'n Crunch|Captain Crunch, Snap\, Crackle and Pop|Snap Crackle Pop|Snap|Crackle|Pop, Count Chocula
+30: Buzz the Bee|BuzzBee|Honey Nut Cheerios Bee, Chip the Dog|Chip, Sonny the Cuckoo Bird|Sonny, Dig 'Em Frog|Dig 'Em, Franken Berry, Boo Berry, Fred Flintstone|Fred, Barney Rubble|Barney, Cornelius Rooster|Cornelius, Sugar Bear
+60: Coco the Monkey|Coco, Quisp, Quake, Wendell|Chef Wendell, Crazy Squares, CinnaMon, Sunny|Raisin Bran Sun
+85: Honey Monster, King Vitaman, Fruit Brute, Yummy Mummy, Freakies, Bad Apple, Cookie Jarvis, Cookie Crook, Crunch Berry Beast, Tony Jr.
+100: Jean LaFoote :: Cap'n Crunch's barefoot pirate rival, who kept trying to steal the Captain's cereal in old TV ads.
+
+? Name a food that's green
+10: Broccoli, Lettuce, Spinach, Green Beans, Peas, Cucumber, Avocado, Celery, Kiwi, Green Apple|Granny Smith
+30: Kale, Asparagus, Zucchini, Brussels Sprouts, Green Bell Pepper|Green Pepper, Lime, Green Grapes|Grapes, Edamame, Guacamole, Pesto, Pickles, Jalapeño, Cabbage, Bok Choy, Okra, Artichoke, Honeydew|Honeydew Melon, Pear, Green Olives|Olives, Pistachio, Matcha, Mint Chocolate Chip|Mint, Wasabi, Arugula, Collard Greens, Basil, Parsley, Cilantro, Green Onions|Scallions, Leek, Snap Peas|Snow Peas, Lima Beans, Tomatillo, Seaweed|Nori, Key Lime Pie, Green Tea, Shamrock Shake
+60: Swiss Chard, Fried Green Tomatoes|Green Tomato, Spirulina, Green Jell-O, Green Eggs and Ham, Salsa Verde, Chimichurri, Green Curry, Falafel, Pandan, Mint Jelly, Mountain Dew, Celery Juice, Green Smoothie, Durian, Jackfruit, Plantain, Bitter Melon, Watercress, Fava Beans, Split Pea Soup|Pea Soup, Pistachio Ice Cream, Avocado Toast, Green Goddess Dressing, Nopales|Cactus
+85: Matcha Kit Kat, Feijoa, Soursop|Guanabana, Green Papaya, Gooseberry, Chayote, Endive, Fennel, Sorrel, Moringa
+100: Romanesco :: A green cousin of broccoli whose spiky buds form a natural fractal. Each bud is made of smaller copies of itself.
+
+? Name a food that comes in a shell
+10: Eggs|Egg, Peanuts, Crab, Lobster, Shrimp, Clams, Oysters, Pistachios
+15: Taco|Taco Shell
+30: Mussels, Scallops, Walnuts, Pecans, Almonds, Sunflower Seeds, Coconut, Crawfish|Crayfish, Escargot|Snails, Hazelnuts, Brazil Nuts, Macadamia Nuts, Chestnuts, Pumpkin Seeds, Cannoli, Stuffed Shells|Pasta Shells, M&M's|M&Ms
+60: Cashews, Conch, Abalone, Sea Urchin|Uni, Acorns, Pine Nuts, Lychee, Quail Eggs, Duck Eggs, Balut, Reese's Pieces, Skittles, Edamame, Peas, King Crab, Snow Crab, Dungeness Crab, Blue Crab, Soft-Shell Crab
+85: Longan, Rambutan, Mangosteen, Century Egg, Langoustine, Razor Clams, Cockles, Whelks, Periwinkles, Geoduck, Limpets
+100: Gooseneck Barnacles|Percebes|Barnacles :: A pricey treat in Spain and Portugal. Harvesters pry them off rocks while waves crash over them.
+
+? Name a food you'd order at a Mexican restaurant
+10: Tacos|Taco, Burrito, Quesadilla, Enchiladas, Nachos, Chips and Salsa|Chips, Fajitas
+15: Chimichanga
+30: Guacamole, Tamales, Tostadas, Taquitos|Flautas, Churros, Mexican Rice|Rice|Spanish Rice, Refried Beans|Beans, Queso|Queso Dip, Carne Asada, Al Pastor|Tacos al Pastor, Carnitas, Barbacoa, Birria|Birria Tacos, Pozole, Menudo, Elote, Torta, Sopes, Gorditas, Chilaquiles, Huevos Rancheros, Mole|Mole Poblano, Chile Relleno, Tortilla Soup, Ceviche, Tres Leches Cake|Tres Leches, Flan, Sopapillas, Horchata, Taco Salad, Burrito Bowl, Pico de Gallo, Chalupa, Fish Tacos, Shrimp Tacos, Fried Ice Cream
+60: Jarritos, Agua Fresca, Sour Cream, Salsa Verde, Cochinita Pibil, Tlayudas, Huaraches, Empanadas, Camarones a la Diabla, Aguachile, Shrimp Cocktail|Cóctel de Camarón, Pollo Asado, Sopa de Fideo|Fideo, Caldo de Res, Arroz con Pollo, Chiles en Nogada, Chorizo, Chicharrón, Esquites, Mangonada, Paletas, Pan Dulce|Conchas, Queso Fundido, Nopales
+85: Tlacoyos, Enfrijoladas, Entomatadas, Molletes, Pambazo, Buñuelos, Champurrado, Atole, Café de Olla, Choriqueso, Machaca, Sincronizadas, Gringas
+100: Huitlacoche :: A fungus that grows on ears of corn. In Mexico it's a prized delicacy, sometimes called the Mexican truffle.
+
+? Name a food that's usually served cold
+10: Ice Cream, Salad, Sushi, Popsicle|Popsicles, Gazpacho, Potato Salad, Sandwich|Sandwiches
+30: Coleslaw, Pasta Salad, Smoothie, Milkshake, Yogurt, Fruit Salad, Jell-O|Jello, Pudding, Cheesecake, Shrimp Cocktail, Deviled Eggs, Ceviche, Sashimi, Cold Cuts|Deli Meat, Watermelon, Sorbet, Frozen Yogurt|Froyo, Iced Tea, Iced Coffee, Lemonade, Gelato, Tuna Salad, Chicken Salad, Egg Salad, Cucumber Salad, Cold Noodles, Poke, Caprese Salad, Charcuterie, Overnight Oats, Parfait, Ice Cream Cake, Snow Cone|Shaved Ice, Slushie|Slurpee, Bubble Tea, Oysters, Banana Pudding, Macaroni Salad
+60: Soba, Vichyssoise, Cheese, Hummus, Salsa, Guacamole, Tzatziki, Cereal, Chia Pudding, Panna Cotta, Tiramisu, Mousse, Frozen Grapes, Cold Brew, Lassi, Horchata, Kombucha, Milk, Chocolate Milk, Juice, Smoked Salmon|Lox, Crab Legs, Lobster Roll, Summer Rolls|Fresh Spring Rolls, Gimbap|Kimbap, Onigiri, Cold Pizza, Key Lime Pie, Ambrosia Salad, Waldorf Salad, Borscht, Bingsu, Halo-Halo, Mochi Ice Cream, Naengmyeon
+85: Three Bean Salad, Seven-Layer Salad, Aspic, Gefilte Fish, Pickled Herring|Herring, Salmorejo, Tarator, Chilled Cucumber Soup, Hiyayakko, Liangpi
+100: Okroshka :: A cold Russian summer soup of chopped vegetables and meat, traditionally topped up with kvass, a fizzy drink made from bread.
+
+? Name something you'd put in a smoothie
+10: Banana, Strawberries|Strawberry, Blueberries|Blueberry, Yogurt, Milk, Ice, Mango
+15: Spinach
+30: Kale, Peanut Butter, Protein Powder, Honey, Pineapple, Orange Juice|Juice, Almond Milk, Oat Milk, Oats, Chia Seeds, Flax Seeds|Flaxseed, Avocado, Raspberries, Peaches, Mixed Berries|Berries, Acai, Coconut Milk, Coconut Water, Apple, Kiwi, Cherries, Watermelon, Greek Yogurt, Frozen Fruit, Cocoa Powder|Chocolate, Dates, Ginger, Cucumber, Celery, Cinnamon, Almond Butter
+60: Ice Cream, Carrots, Beets, Lemon, Lime, Mint, Vanilla, Maple Syrup, Agave, Almonds, Walnuts, Cashews, Hemp Seeds, Spirulina, Matcha, Coffee|Espresso, Pumpkin, Papaya, Pear, Grapes, Blackberries, Cranberries, Pomegranate, Dragon Fruit|Pitaya, Passion Fruit, Soy Milk, Kefir, Cottage Cheese, Silken Tofu|Tofu, Collagen, Wheatgrass, Turmeric, Cauliflower
+85: Sweet Potato, Guava, Bee Pollen, Maca|Maca Powder, Moringa, Zucchini, Sea Moss, Ashwagandha, Psyllium, Goji Berries
+100: Camu Camu :: An Amazon rainforest berry with one of the highest vitamin C levels of any fruit. It's usually sold as a powder.

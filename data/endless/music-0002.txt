@@ -1,0 +1,20 @@
+? Name a band or artist with a number in their name
+10: Maroon 5, 50 Cent, Blink-182|Blink 182, U2, 5 Seconds of Summer|5SOS, One Direction, The Jackson 5|Jackson 5, 21 Savage
+30: Fifth Harmony, Matchbox Twenty|Matchbox 20, 3 Doors Down, Sum 41, Thirty Seconds to Mars|30 Seconds to Mars, Twenty One Pilots|21 Pilots, The 1975, The B-52's|B-52s, UB40, 2Pac, 3OH!3, 98 Degrees, Boyz II Men, Three Dog Night, 311, Third Eye Blind, 4 Non Blondes, 2 Chainz, 6ix9ine, 24kGoldn, Nine Inch Nails, Three 6 Mafia, SEVENTEEN|Seventeen, Avenged Sevenfold|A7X, deadmau5
+60: East 17, Level 42, 112, 42 Dugg, E-40, 2 Live Crew, MC5, The 5th Dimension, Ben Folds Five, Jurassic 5, Sixpence None the Richer, Eve 6, S Club 7, Five|5ive, 2NE1, NCT 127, GOT7, 6LACK, B2K
+85: Front 242, 702, 9th Wonder, Seven Mary Three, Sevendust, Gang of Four, Sham 69, Haircut 100, Apollo 440, Galaxie 500, 2PM, Day6, Death from Above 1979, Seven Lions, 070 Shake, The Three Tenors, Third Day, 3LW, 4Minute
+100: 10cc :: A British band best known for "I'm Not in Love," a 1975 hit built on layers of the band singing "ahh" hundreds of times.
+
+? Name a song with "love" in the title
+10: Love Story, Crazy in Love, Love Me Do, I Will Always Love You, All You Need Is Love, Can't Help Falling in Love, Love Yourself
+30: Love Song, Love the Way You Lie, Love on Top, Love Shack, Love Me Tender, Love Me Like You Do, Love You Like a Love Song, Somebody to Love, Crazy Little Thing Called Love, Endless Love, Lovefool, Love Is a Battlefield, I Want to Know What Love Is, What's Love Got to Do with It, Stupid Love, Love Galore, Love Me Harder, I Love It, I Love Rock 'n' Roll, This Love, Make You Feel My Love, The Power of Love|Power of Love, Addicted to Love, Love of My Life, Bleeding Love, Love Me Not, Love Nwantiti, She Loves You, Can't Buy Me Love, Whole Lotta Love, Tainted Love, Higher Love, Can You Feel the Love Tonight, You Give Love a Bad Name
+60: Love Will Keep Us Together, Love Takes Time, Lover, Lovely, Love Is Gone, Love Tonight, Your Love Is My Drug, Love Lockdown, Love Me, Love Somebody, Love in This Club, Love Hurts, Love Train, Love Rollercoaster, Glory of Love, Love Bites, Love Again, Lovers Rock, Love Drunk, Crazy Love, L-O-V-E, P.S. I Love You, And I Love Her, I'd Do Anything for Love (But I Won't Do That)|I'd Do Anything for Love, Love Will Tear Us Apart, Love Is All Around, Love Is in the Air, Love the One You're With, Lovesick Girls, Love Dive, Love Me Again
+85: Love Me Two Times, Everybody Loves Somebody, Love and Happiness, Love Will Find a Way, Love Hangover, Love Scenario
+100: Love Grows (Where My Rosemary Goes)|Love Grows :: A 1970 hit by Edison Lighthouse, a "band" that was really session singer Tony Burrows and a group of studio players.
+
+? Name a singer who goes by one name
+10: Beyoncé, Rihanna, Adele, Madonna, Drake, Shakira, Cher
+30: Prince, Usher, Sia, Lorde, Halsey, Zendaya, Pink|P!nk, Eminem, Lizzo, Selena, Seal, Sting, Bono, Enya, Björk, Akon, Ne-Yo, Pitbull, Ciara, Brandy, Monica, Aaliyah, Ashanti, Shaggy, Moby, Elvis, Fergie, Kesha, Rosalía, Anitta, Maluma, Ozuna, SZA, Raye, Khalid, Lauv, Dido, Jewel, Kehlani, Tinashe, Normani, Nas, Nelly, Sade, Hozier, Psy
+60: Tems, Rema, Wizkid, Davido, Banks, Duffy, Mýa, Ye, Future, Logic, Common, Ludacris, Juvenile, Eve, Offset, Quavo, Takeoff, Tyga, Gunna, Joji, Grimes, Yanni, Morrissey, Slash, Sisqó, Ginuwine, Mario, Omarion, Pharrell, Raffi, Labrinth, Aurora, Laufey, Rosé|Rose, Lisa, Jennie, IU, Thalía, Juanes, Doechii, JoJo
+85: Mase, Trina, Russ, Liberace, Donovan, Lulu, Tank, Lecrae, Rain, Fonseca
+100: Melanie :: Played Woodstock in 1969 and had a big hit two years later with "Brand New Key."
