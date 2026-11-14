@@ -5,7 +5,7 @@
 export const CHANGELOG = [
   {
     date: '2026-11-13',
-    time: '11:00 PM',
+    time: '4:00 PM',
     big: true,
     title: 'Ranked works at school now',
     short: 'Ranked works at school now',

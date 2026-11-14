@@ -30,6 +30,27 @@
     ["fictional-detective","minecraft-mob","kind-of-mushroom","disney-villain","archaeological-site","famous-coach","extinct-animal"],
     ["ancient-civilization","theme-park","famous-castle-or-palace","another-word-for-fast","natural-disaster","item-of-clothing","indian-dish"],
     ["spongebob-character","lizard","music-festival","word-that-rhymes-with-fun","type-of-doctor","famous-magician","king-or-queen-from-history"],
-    ["christmas-song","pro-wrestler","variety-of-apple","city-in-australia","pok-mon-not-in-the-original-151","sit-down-restaurant-chain","harry-potter-spell"]
+    ["christmas-song","pro-wrestler","variety-of-apple","city-in-australia","pok-mon-not-in-the-original-151","sit-down-restaurant-chain","harry-potter-spell"],
+    ["city-with-a-subway-system","movie-where-the-main-character-is-a-kid","chore","animal-small-enough-to-fit-in-your-hand","sport-you-can-do-in-a-swimming-pool","dessert-that-comes-from-outside-the-us","board-game-that-comes-with-dice"],
+    ["sport-where-you-score-goals","us-city-with-an-nba-team","venomous-animal-that-isnt-a-snake","something-youd-find-in-a-garage","video-game-where-you-can-ride-a-horse","moon-in-our-solar-system","something-you-can-put-on-a-hot-dog"],
+    ["olympic-sport-that-uses-a-ball","mobile-game-that-was-huge-at-some-point","tv-show-that-ran-for-10-or-more-seasons","food-thats-often-eaten-raw","country-with-a-star-on-its-flag","something-you-plug-into-a-wall","animal-that-lives-in-a-herd"],
+    ["food-thats-orange","something-measured-in-degrees","movie-based-on-a-toy-or-a-game","island-country","video-game-with-zombies-in-it","something-with-a-screen","animal-with-a-shell"],
+    ["video-game-based-on-a-movie","food-that-comes-in-a-can","animal-thats-black-and-white","k-pop-group-or-soloist","pro-sports-team-named-after-an-animal","european-city-that-isnt-a-capital","something-thats-sticky"],
+    ["food-thats-usually-served-on-a-stick","one-of-the-original-13-colonies","animal-that-eats-bugs","movie-with-a-dog-in-it","video-game-where-you-play-as-an-animal","country-where-people-drive-on-the-left","something-youd-find-in-a-school-backpack"],
+    ["character-who-wears-a-mask","metal","country-where-spanish-is-an-official-language","word-with-a-silent-letter","food-thats-spicy","game-youd-play-at-a-sleepover","something-that-has-a-lid"],
+    ["sound-an-animal-makes","country-that-doesnt-exist-anymore","something-that-floats","water-type-pok-mon","food-that-comes-in-a-shell","netflix-original-show","us-state-that-borders-canada-or-mexico"],
+    ["food-youd-find-at-a-state-fair","word-that-has-all-five-vowels-in-it","something-youd-see-at-a-baseball-game","song-with-love-in-the-title","us-state-with-an-ocean-coastline","roblox-game","something-youd-find-in-a-kitchen-drawer"],
+    ["song-from-a-movie-that-isnt-a-disney-movie","scientist-with-a-unit-or-law-named-after-them","superhero-who-isnt-from-marvel-or-dc","video-game-with-a-number-in-its-title","flavor-of-potato-chips","country-in-the-southern-hemisphere","famous-race"],
+    ["nocturnal-animal","fairy-tale-villain","country-with-no-coastline","video-game-set-in-a-real-city","famous-redhead-real-or-fictional","food-you-eat-with-chopsticks","something-youd-find-in-a-hospital"],
+    ["invention-that-runs-on-batteries","country-that-starts-and-ends-with-the-same-letter","food-youd-order-at-a-mexican-restaurant","organ-you-can-live-without","game-you-can-play-with-no-equipment-at-all","fictional-monster","athlete-famous-enough-to-go-by-one-name"],
+    ["holiday-that-isnt-celebrated-in-the-us","something-with-buttons","video-game-from-the-1990s","band-or-artist-with-a-number-in-their-name","fruit-people-often-eat-dried","movie-from-the-1980s","something-people-used-before-smartphones"],
+    ["something-you-collect-in-a-video-game","song-with-a-place-in-the-title","cereal-mascot","something-youd-bring-to-the-beach","animal-that-hibernates","something-that-comes-in-pairs","country-that-still-has-a-king-or-queen"],
+    ["animal-that-lives-in-trees","something-a-referee-or-umpire-might-call","word-that-sounds-like-the-noise-it-describes","billionaire","food-thats-green","famous-woman-from-history","disease-caused-by-a-virus"],
+    ["famous-sidekick","something-that-has-keys","famous-statue","block-or-item-in-minecraft","tv-show-about-a-family","famous-document-from-history","food-thats-usually-served-cold"],
+    ["famous-person-from-canada","something-made-of-glass","animal-with-stripes","something-youd-put-in-a-smoothie","movie-with-a-talking-animal","musician-whos-played-the-super-bowl-halftime-show","word-thats-also-a-first-name"],
+    ["god-or-goddess-who-isnt-greek","something-in-space-that-isnt-a-planet","movie-based-on-a-true-story","something-thats-usually-red","shoe-brand","sport-in-the-winter-olympics","book-series-with-more-than-three-books"],
+    ["animal-that-lays-eggs-but-isnt-a-bird","singer-who-goes-by-one-name","video-game-you-can-play-with-friends-on-the-same-couch","slang-word-your-parents-might-not-understand","food-people-eat-on-a-certain-holiday","athlete-who-played-more-than-one-pro-sport","country-with-only-four-letters-in-its-name"],
+    ["brand-with-an-animal-in-its-logo","compound-word-that-starts-with-sun","job-where-you-wear-a-uniform","animal-that-can-fly-but-isnt-a-bird","job-where-you-might-wear-a-lab-coat","book-you-might-read-in-english-class","horror-movie-villain"],
+    ["famous-person-who-was-assassinated","tourist-attraction-in-new-york-city","singer-or-rapper-who-has-also-acted-in-a-movie","drink-thats-served-hot","robot-or-ai-from-a-movie-show-or-book","sport-where-you-use-a-racket-or-paddle","video-game-with-a-battle-royale-mode"]
   ]
 }
