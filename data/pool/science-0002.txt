@@ -1,0 +1,74 @@
+? Name something in space that isn't a planet
+10: Moon, Sun, Star|Stars, Asteroid, Comet, Black Hole, Galaxy
+15: Pluto
+30: Milky Way, Meteor, Satellite, International Space Station|ISS|Space Station, Nebula, Supernova, Constellation, Astronaut, Space Junk|Space Debris, Rocket, Hubble Space Telescope|Hubble, James Webb Space Telescope|James Webb|JWST, Dwarf Planet, Ceres, Asteroid Belt, Kuiper Belt, Andromeda Galaxy|Andromeda, Pulsar, Neutron Star, White Dwarf, Red Giant, Dark Matter, Halley's Comet, Voyager 1|Voyager, Polaris|North Star, Titan, Big Dipper, Orion|Orion's Belt
+60: Meteorite, Eris, Oort Cloud, Quasar, Red Dwarf, Wormhole, Dark Energy, Space Dust|Cosmic Dust, Sputnik, Space Shuttle, Mars Rover|Curiosity|Perseverance, Sirius, Betelgeuse, Proxima Centauri, Alpha Centauri, Europa, Io, Ganymede, Phobos, Charon, Vesta, Solar Wind, Solar Flare, Radiation, Pleiades, Crab Nebula, Orion Nebula, Pillars of Creation
+85: Deimos, Haumea, Makemake, Sedna, Pallas, Cosmic Microwave Background, Gamma-Ray Burst, Magnetar, Globular Cluster, Sagittarius A*|Sagittarius A
+100: Tesla Roadster|Starman :: Elon Musk's own red sports car, launched on a rocket test flight in 2018. It's still circling the Sun with a dummy named Starman at the wheel.
+
+? Name a scientist with a unit or law named after them
+~last
+10: Isaac Newton|Newton, Anders Celsius|Celsius, Lord Kelvin|Kelvin, Daniel Fahrenheit|Fahrenheit, Georg Ohm|Ohm, James Watt|Watt, Alessandro Volta|Volta
+30: James Joule|Joule, André-Marie Ampère|Ampère, Charles-Augustin de Coulomb|Coulomb, Michael Faraday|Faraday, Heinrich Hertz|Hertz, Nikola Tesla|Tesla, Blaise Pascal|Pascal, Johannes Kepler|Kepler, Robert Boyle|Boyle, Jacques Charles|Charles, Robert Hooke|Hooke, Amedeo Avogadro|Avogadro, Archimedes, Daniel Bernoulli|Bernoulli, Max Planck|Planck, Edwin Hubble|Hubble, Gregor Mendel|Mendel, Marie Curie|Curie, Albert Einstein|Einstein, Christian Doppler|Doppler, Alexander Graham Bell|Bell
+60: Joseph Louis Gay-Lussac|Gay-Lussac, Willebrord Snell|Snell, Gordon Moore|Moore, Henri Becquerel|Becquerel, Werner von Siemens|Siemens, Wilhelm Weber|Weber, Joseph Henry|Henry, Carl Friedrich Gauss|Gauss, James Clerk Maxwell|Maxwell, Anders Ångström|Ångström, John Dalton|Dalton, Ernst Mach|Mach, Charles Richter|Richter, Friedrich Mohs|Mohs, Ludwig Boltzmann|Boltzmann, Gustav Kirchhoff|Kirchhoff, Heinrich Lenz|Lenz, Germain Hess|Hess, Thomas Graham|Graham, Henry Le Chatelier|Le Chatelier, Werner Heisenberg|Heisenberg, Wolfgang Pauli|Pauli, Erwin Schrödinger|Schrödinger, Galileo Galilei|Galileo, Evangelista Torricelli|Torricelli, William Rankine|Rankine, Wilhelm Röntgen|Röntgen|Roentgen, Rolf Sievert|Sievert, Louis Harold Gray|Gray, Edward Murphy|Murphy
+85: René Réaumur|Réaumur, Peter Debye|Debye, Hans Christian Oersted|Oersted, Henry Darcy|Darcy, Karl Jansky|Jansky, Jean Poiseuille|Poiseuille, George Stokes|Stokes, Johann Lambert|Lambert, Francis Beaufort|Beaufort, Johannes Rydberg|Rydberg, William Bragg|Bragg, Adolf Fick|Fick, Joseph Fourier|Fourier, François-Marie Raoult|Raoult, Josef Stefan|Stefan, Wilhelm Wien|Wien
+100: Theodor Svedberg|Svedberg :: The svedberg unit measures how fast tiny particles settle in a centrifuge. It's why ribosomes get names like "70S."
+
+? Name something measured in degrees
+10: Temperature, Angle|Angles, Latitude, Longitude, Oven Temperature|Oven
+15: Burns
+30: Weather, Body Temperature|Fever, Thermostat, Water Temperature, Circle, Triangle, Compass Direction|Direction|Bearing, Slope|Incline, Rotation|Turn, Skateboard Trick|Spin|360
+60: Earth's Tilt|Axial Tilt, Arc, Pizza Slice, Clock Hands, Wind Direction, Roof Pitch|Pitch, Ramp, Murder, Separation|Degrees of Separation
+85: Golf Club Loft|Loft, Field of View, Right Ascension, Declination, Sun Angle, Range of Motion, Black Belt Rank|Black Belt, Brix
+100: Six Degrees of Kevin Bacon|Kevin Bacon :: A game where you link any actor to Kevin Bacon through costars, usually in six movies or fewer.
+
+? Name a disease caused by a virus
+10: Flu|Influenza, COVID-19|COVID|Coronavirus, Common Cold|Cold, Chickenpox, Measles, HIV|AIDS
+30: Mumps, Rubella|German Measles, Polio, Rabies, Ebola, Smallpox, Hepatitis|Hepatitis A|Hepatitis B|Hepatitis C, Shingles, Mononucleosis|Mono, Herpes, HPV|Warts, Zika, Dengue|Dengue Fever, Yellow Fever, West Nile Virus|West Nile, SARS, Mpox|Monkeypox, Norovirus|Stomach Flu, Rotavirus, RSV, Bird Flu|Avian Flu|H5N1, Swine Flu|H1N1, Hand\, Foot and Mouth Disease|Hand Foot and Mouth, Cold Sores
+60: MERS, Croup, Pinkeye|Conjunctivitis, Bronchiolitis, Encephalitis, Viral Meningitis|Meningitis, Hantavirus, Marburg, Lassa Fever, Chikungunya, Fifth Disease, Roseola, Gastroenteritis, Nipah
+85: Japanese Encephalitis, Tick-Borne Encephalitis, Rift Valley Fever, Hendra, Oropouche, Molluscum Contagiosum
+100: Tobacco Mosaic Disease|Tobacco Mosaic Virus :: A disease of tobacco plants. Studying it in the 1890s led scientists to discover viruses for the first time.
+
+? Name a moon in our solar system
+10: The Moon|Moon|Luna, Titan, Europa, Io, Ganymede, Phobos
+30: Callisto, Deimos, Triton, Charon, Enceladus, Mimas, Miranda
+60: Oberon, Titania, Rhea, Iapetus, Dione, Tethys, Hyperion, Phoebe, Ariel
+85: Umbriel, Nereid, Proteus, Amalthea, Himalia, Metis, Thebe, Pan, Atlas, Prometheus, Pandora, Janus, Epimetheus, Puck, Nix, Hydra, Kerberos, Styx, Dysnomia, Hi'iaka, Namaka
+100: Dactyl :: The first moon ever found circling an asteroid, spotted by the Galileo spacecraft in 1994 around the asteroid Ida.
+
+? Name a metal
+10: Gold, Silver, Iron, Copper, Aluminum|Aluminium, Steel
+15: Mercury
+30: Bronze, Brass, Platinum, Titanium, Lead, Zinc, Tin, Nickel, Chromium|Chrome, Tungsten, Lithium, Magnesium, Uranium, Cobalt, Stainless Steel, Cast Iron
+60: Sodium, Potassium, Calcium, Plutonium, Palladium, Rhodium, Osmium, Iridium, Gallium, Bismuth, Cadmium, Manganese, Vanadium, Molybdenum, Beryllium, Cesium, Radium, Neodymium, Zirconium, Pewter, Sterling Silver, White Gold, Rose Gold, Wrought Iron, Damascus Steel
+85: Francium, Rubidium, Strontium, Barium, Thorium, Lanthanum, Cerium, Europium, Gadolinium, Indium, Thallium, Hafnium, Tantalum, Niobium, Rhenium, Ruthenium, Scandium, Yttrium, Solder, Nichrome, Invar, Duralumin
+100: Electrum :: A natural mix of gold and silver. The first known coins, made in Lydia about 2,600 years ago, were stamped from it.
+
+? Name something made of glass
+10: Window, Mirror, Drinking Glass|Glass|Cup, Bottle, Light Bulb, Eyeglasses|Glasses, Vase
+30: Jar|Mason Jar, Windshield, Marbles|Marble, Fish Tank|Aquarium|Fishbowl, Lens, Wine Glass, Stained Glass Window|Stained Glass, Christmas Ornament|Ornament, Phone Screen|Screen, Hourglass, Snow Globe, Test Tube, Beaker, Magnifying Glass, Glass Door|Sliding Door, Baking Dish|Pyrex, Glass Slipper
+60: Microscope Slide, Shower Door, Glass Table, Ashtray, Paperweight, Chandelier, Lamp, Measuring Cup, Beads, Sea Glass, Fiber Optic Cable, Thermometer, Skylight, Greenhouse, Skyscraper, Glass Eye, Bowl, Plate, Pitcher, Teapot, Glass Sculpture, Shot Glass, Mug, Oven Door, Microwave Turntable, Terrarium, Lantern, Candle Holder, Trophy
+85: Louvre Pyramid, Crystal Palace, Glass Bridge, Chihuly Glass, Insulator
+100: Glass Armonica|Armonica|Glass Harmonica :: An instrument invented by Benjamin Franklin. You play its spinning glass bowls by touching their rims with wet fingers.
+
+? Name an organ you can live without
+10: Appendix, Spleen, Gallbladder, Kidney, Tonsils
+30: Lung, Stomach, Colon|Large Intestine, Uterus, Ovary|Ovaries, Adenoids, Eye
+60: Testicle|Testes, Thyroid, Liver, Pancreas, Bladder, Prostate, Breasts, Fallopian Tubes, Larynx|Voice Box
+85: Adrenal Gland, Parathyroid, Salivary Gland, Rectum, Small Intestine, Esophagus, Tongue
+100: Thymus :: Busy training immune cells when you're a kid, then it shrinks and slowly turns mostly to fat as you get older.
+
+? Name a job where you might wear a lab coat
+10: Scientist, Doctor, Chemist, Pharmacist, Lab Technician|Lab Tech, Dentist
+30: Nurse, Researcher, Biologist, Veterinarian|Vet, Physician, Professor, Science Teacher|Teacher, Optometrist, Dermatologist, Medical Student, Pathologist, Microbiologist, Forensic Scientist|Crime Scene Investigator, Geneticist, Physicist, Biochemist
+60: Surgeon, Radiologist, Phlebotomist, Pharmacologist, Toxicologist, Epidemiologist, Immunologist, Virologist, Neuroscientist, Food Scientist, Esthetician, Cosmetologist, Engineer, Dental Hygienist, Chiropractor, Psychiatrist, Pediatrician, Coroner|Medical Examiner, Butcher, Ophthalmologist
+85: Makeup Artist, Mortician|Embalmer, Brewmaster|Brewer, Winemaker, Perfumer, Gemologist, Audiologist, Dietitian
+100: Flavorist :: A chemist who invents the flavors in sodas, snacks and candy, usually after years of training in a lab.
+
+? Name something that floats
+10: Boat, Ice, Wood, Balloon, Rubber Duck, Cork, Pool Noodle
+15: Pumice
+30: Iceberg, Ship, Raft, Life Jacket|Life Vest, Buoy, Inner Tube|Pool Float|Floatie, Beach Ball, Leaf|Leaves, Feather, Bubble, Cloud, Oil, Apple, Coconut, Plastic Bottle|Bottle, Styrofoam, Ping Pong Ball, Surfboard, Kayak, Canoe, Paddle Board, Hot Air Balloon, Blimp|Zeppelin, Ducks, People|Human Body, Fishing Bobber|Bobber, Log, Lily Pad
+60: Orange, Banana, Watermelon, Lemon, Swan, Jellyfish, Sea Otter, Dead Fish, Driftwood, Seaweed, Water Lily, Sponge, Soap, Paper, Paper Boat, Air Mattress, Tire, Barrel, Plastic Bag, Trash|Garbage, Marshmallow, Cheerios|Cereal, Pine Cone, Hovercraft, Seaplane
+85: Root Beer Float
+100: Ivory Soap :: A soap famous for floating. It's been advertised with the slogan "It floats" since 1891.
