@@ -1,0 +1,20 @@
+? Name a country the equator passes through
+10: Ecuador, Brazil, Kenya, Indonesia
+30: Colombia, Uganda, Somalia, Democratic Republic of the Congo|DR Congo|DRC, Gabon
+60: Republic of the Congo|Congo, Maldives
+85: Kiribati
+100: São Tomé and Príncipe|Sao Tome and Principe|Sao Tome :: Its tiny islet Ilhéu das Rolas sits right on the equator, with a monument marking the line.
+
+? Name a place a school might go on a field trip
+10: Museum, Zoo, Aquarium, Science Museum|Science Center, Farm, Planetarium, Pumpkin Patch
+30: Art Museum, History Museum, Natural History Museum, Children's Museum, Botanical Garden|Garden, State Park|National Park|Park, Nature Center, Library, Fire Station, Police Station, Theater|Play, Orchestra|Symphony, Movie Theater, Bowling Alley, Skating Rink|Roller Rink, Trampoline Park, Amusement Park|Theme Park, Apple Orchard|Orchard, Corn Maze, Factory Tour|Factory, College|University, State Capitol|Capitol, City Hall, Courthouse, Historic Site, Battlefield, Fort, Caverns|Cave, Outdoor School|Science Camp|Camp, Observatory, Space Center|NASA|Kennedy Space Center, Smithsonian, Washington D.C.|Washington DC, Disney World|Disneyland|Disney, SeaWorld, Air and Space Museum
+60: Ballet, Ice Rink, Water Park, Six Flags, Berry Picking, Dairy Farm, Chocolate Factory, Bakery, Grocery Store, Post Office, Bank, Hospital, Lighthouse, Beach, Lake, Hiking Trail, White House, Wildlife Refuge|Bird Sanctuary, Fish Hatchery, Recycling Center, Dam, Airport, Train Museum, Battleship, Butterfly House, Arboretum, Greenhouse, TV Station|Radio Station, Baseball Game|Ballpark, Escape Room, Laser Tag, Pizza Place, Ice Cream Factory, Tide Pools, Holocaust Museum, Living History Farm|Pioneer Village, Colonial Williamsburg, Jamestown, Gettysburg, Mount Vernon, Liberty Bell, Statue of Liberty, Ellis Island, Independence Hall
+85: Water Treatment Plant, Power Plant, Submarine, Newspaper, Cheese Factory, Gold Mine, Underground Railroad Site, Plimoth Patuxet
+100: Sugar Shack|Cabane a Sucre :: A cabin in the woods where maple sap gets boiled into syrup each spring. In Quebec, visits end with hot syrup poured on snow to make taffy.
+
+? Name a country that has hosted a World Cup
+10: Brazil, United States|USA, Qatar, Russia, Germany|West Germany, France, Mexico
+30: Italy, Spain, England, South Africa, Argentina, Japan, South Korea, Canada
+60: Chile, Sweden, Switzerland, Australia
+85: New Zealand, China
+100: Uruguay :: Hosted the very first World Cup in 1930, and won it too.

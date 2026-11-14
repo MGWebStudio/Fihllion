@@ -1,0 +1,22 @@
+? Name a word you'd use to describe the weather
+10: Sunny, Rainy, Cloudy, Windy, Snowy, Hot, Cold
+30: Stormy, Foggy, Humid, Warm, Cool, Chilly, Freezing, Breezy, Overcast, Drizzly|Drizzle, Muggy, Icy, Hazy, Misty, Partly Cloudy, Clear, Dry, Wet, Damp, Gloomy, Gray|Grey, Frosty, Scorching|Boiling, Sweltering, Thundery|Thunderstorms, Blustery, Mild, Pleasant, Nice, Beautiful, Gorgeous, Lovely, Crisp, Balmy, Nippy, Bitter, Sticky, Dreary, Pouring|Raining, Sleety|Sleet, Hail, Blizzard, Hurricane, Tornado, Heat Wave, Bright, Fair, Calm, Gusty, Frigid, Brisk
+60: Arctic, Tropical, Dark, Moody, Still, Drippy, Soggy, Slushy, Toasty, Steamy, Smoggy, Dusty, Unpredictable, Raw, Fresh, Torrential, Monsoon, Inclement, Bleak, Glorious, Spitting, Wintry, Summery, Springlike, Fine, Lousy, Miserable, Nasty, Perfect
+85: Temperamental, Heavenly, Mizzly, Autumnal
+100: Dreich :: A Scots word for dull, gray, damp weather. It was once voted Scotland's favorite Scots word.
+
+? Name a word with a Z in it
+~exact
+10: Zoo, Zebra, Pizza, Zero, Lazy, Crazy, Zipper
+30: Buzz, Fizz, Jazz, Puzzle, Prize, Size, Freeze, Breeze, Sneeze, Squeeze, Amazing, Blizzard, Lizard, Wizard, Zombie, Zone, Zigzag, Zucchini, Quiz, Fuzzy, Dizzy, Frozen, Dozen, Citizen, Organize, Realize, Apologize, Magazine, Gaze, Maze, Haze, Blaze, Daze, Craze, Graze, Bronze, Zinc, Zest, Zeal, Zen, Zap, Zoom, Zip, Glaze, Hazel, Doze, Froze, Seize, Quartz, Pretzel, Kazoo, Bazooka, Zodiac, Ozone, Cozy, Hazard, Gizmo, Gazebo, Snooze, Muzzle, Nozzle, Drizzle, Sizzle, Dazzle, Mozzarella, Horizon, Bizarre, Zillion
+60: Topaz, Waltz, Blitz, Ritz, Bazaar, Zipline, Zeppelin, Zenith, Zygote, Azure, Oz, Ooze, Glitz, Spritz, Mezzanine, Embezzle, Guzzle, Jazzy, Frenzy, Breezy, Zany, Zesty, Zilch
+85: Chutzpah, Zirconium, Schmooze, Razzle-Dazzle
+100: Pizzazz :: Packs four Z's into one word, more than almost any other everyday English word.
+
+? Name a word you can type using only the top row of a keyboard
+~exact
+10: Typewriter, Pretty, Quiet, Power, Tower, Tree, Write
+30: Property, Pottery, Quite, Writer, Wire, Tire, Tie, Toy, Try, Type, Pie, Pit, Pot, Top, Tip, Out, Our, Pour, Rope, Ripe, Poet, Port, Pure, Puppy, Peppy, Equity, Query, Quote, You, Your, Treetop, Teepee, Trip, Trout, Root, Toot, Pup, Wet, Wit, Wiper, Twitter, Tweet, Yeti, Potter, Otter, Report, Router, Route, Upper, Weep, Peer, Pier, Pipe, Piper, Purr, Eye, Owe, Wow, Pew, Rip, Tour, Pout, Prop, Pop, Tutor, Proper, Retire, Rewrite
+60: Pewter, Pirouette, Perpetuity, Repertoire, Proprietor, Etiquette, Quieter, Tripe, Trope, Troupe, Outpour, Rupture, Uproot, Twerp, Yippee, Rioter, Terrier, Territory, Prettier, Ewe, Ire, Ore, Err, Teeter, Totter, Torpor, Puppeteer, Repertory, Prototype, Tripwire, Pipette, Poetry, Petty, Witty, Torque, Weepy
+85: Equipper, Requite, Quoit, Tyre
+100: Rupturewort :: An 11-letter plant name, one letter longer than "typewriter," the famous long word you can type on the top row.

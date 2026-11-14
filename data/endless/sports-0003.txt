@@ -1,0 +1,27 @@
+? Name a sport you'd see at the X Games
+10: Skateboarding, Snowboarding, BMX, Freestyle Motocross|Motocross|FMX, Freestyle Skiing|Skiing, Skateboard Vert|Vert
+30: Superpipe|Halfpipe, Big Air, Slopestyle, Snocross|Snowmobiling, Rallycross|Rally Racing, Skateboard Street|Street, Skateboard Park|Park, BMX Vert, BMX Street, BMX Dirt, Moto X Best Trick|Best Trick, Step Up, Wakeboarding, Aggressive Inline|Inline Skating|Rollerblading
+60: Surfing, Skysurfing, Street Luge, Bungee Jumping, Sport Climbing|Climbing, Mountain Biking, Downhill Biking, Knuckle Huck, Real Street, Moto X Racing
+85: Kayaking, Ice Climbing, Mono Skier X|Monoski, Speed Climbing, Barefoot Water Skiing, Kiteboarding, Skiboarding, Ultracross, Snow Mountain Bike Racing
+100: Super-Modified Shovel Racing|Shovel Racing :: Racers sped down a snowy course sitting on souped-up snow shovels at the very first Winter X Games in 1997.
+
+? Name something you'd wear to play a sport
+10: Helmet, Cleats, Jersey, Shin Guards, Gloves, Mouthguard|Mouth Guard, Knee Pads
+30: Shoulder Pads, Elbow Pads, Swim Goggles|Goggles, Swim Cap, Swimsuit, Headband|Sweatband, Wristband, Sneakers|Basketball Shoes|Shoes, Shorts, Socks, Compression Shirt|Compression Sleeve, Arm Sleeve, Batting Gloves, Batting Helmet, Catcher's Mask|Catcher's Gear, Chest Protector, Cup|Athletic Cup, Baseball Cap|Hat, Visor, Sunglasses, Goalie Mask, Goalie Gloves, Goalie Pads|Hockey Pads, Ice Skates|Skates, Hockey Gloves, Boxing Gloves, Hand Wraps, Headgear, Karate Gi|Gi, Black Belt|Belt, Fencing Mask, Leotard, Singlet, Wetsuit, Ski Boots, Ski Goggles, Ski Helmet, Riding Helmet, Riding Boots, Track Spikes|Spikes, Race Bib|Bib, Golf Shoes, Golf Glove, Tennis Skirt|Skort, Polo Shirt, Pinnie|Scrimmage Vest, Sports Bra, Eye Black, Face Mask, Bowling Shoes
+60: Jodhpurs, Jockstrap, Ankle Brace, Knee Brace, Athletic Tape|Tape, Neck Guard, Thigh Pads, Hip Pads, Rib Protector, Cycling Shorts|Bike Shorts, Cycling Shoes|Clip-In Shoes, Climbing Shoes, Harness, Life Jacket, Rash Guard, Swim Fins
+85: Chalk Bag, Bowling Wrist Brace, Nose Clip|Earplugs
+100: Plastron :: An extra padded half-jacket fencers wear under their main jacket, on the side of their sword arm.
+
+? Name a pro team that plays in New York
+10: New York Yankees|Yankees, New York Mets|Mets, New York Knicks|Knicks, New York Giants|Giants, New York Jets|Jets, New York Rangers|Rangers, Brooklyn Nets|Nets
+30: New York Islanders|Islanders, New York Liberty|Liberty, Buffalo Bills|Bills, Buffalo Sabres|Sabres, New York City FC|NYCFC, New York Red Bulls|Red Bulls
+60: Brooklyn Dodgers, New York Cosmos|Cosmos, Brooklyn Cyclones, Gotham FC
+85: Buffalo Bandits, Syracuse Crunch, Rochester Americans, Long Island Ducks, Staten Island FerryHawks, New York Titans
+100: New York Highlanders|Highlanders :: What the New York Yankees were called before they took their famous name in 1913.
+
+? Name a sport played on a court
+10: Basketball, Tennis, Volleyball, Pickleball, Badminton, Racquetball, Squash
+30: Handball, Netball, Futsal, Padel, Dodgeball, Beach Volleyball, Sepak Takraw, Wheelchair Basketball, Korfball, Jai Alai, Paddle Tennis, Platform Tennis, Four Square, Bocce
+60: Tetherball, Shuffleboard, Croquet, Real Tennis|Court Tennis, Basque Pelota|Pelota, Roller Hockey, Floorball, 3x3 Basketball, Sitting Volleyball, Goalball, Kabaddi
+85: Fives, Wallyball, Teqball, Footvolley, Throwball, Kho Kho, Chinlone
+100: Jeu de Paume :: The French ancestor of tennis, which players first played by hitting the ball with the palms of their hands.

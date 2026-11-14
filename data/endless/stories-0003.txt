@@ -1,0 +1,27 @@
+? Name a character who uses a sword
+10: Link, Zorro, King Arthur, Aragorn, Mulan, Leonardo, Captain Hook
+30: Luke Skywalker, Darth Vader, Obi-Wan Kenobi, Yoda, Kylo Ren, Wonder Woman, He-Man, She-Ra, Inigo Montoya, Jack Sparrow, Peter Pan, Prince Phillip, Puss in Boots, Percy Jackson, Eragon, Jon Snow, Arya Stark, Brienne of Tarth, Gandalf, Frodo, Bilbo, Boromir, Deadpool, Blade, Michonne, Roronoa Zoro|Zoro, Ichigo Kurosaki|Ichigo, Tanjiro Kamado|Tanjiro, Kirito, Cloud Strife|Cloud, Sephiroth, Meta Knight, Sora, Geralt of Rivia|Geralt, Jin Sakai, Samurai Jack, Finn the Human|Finn, D'Artagnan|The Three Musketeers, Conan the Barbarian|Conan, Beatrix Kiddo|The Bride, Mikasa Ackerman|Mikasa, Levi Ackerman|Levi
+60: Xena, Black Knight, Elektra, Katana, Himura Kenshin|Kenshin, Zenitsu, Inosuke, Rengoku, Giyu, Asta, Marth, Ike, Lucina, Kirby, Riku, Dante, Vergil, Raiden, Kratos, The Knight, Yasuo, Ezio, Sinbad, Red Sonja, O-Ren Ishii, Connor MacLeod|Highlander, Inuyasha, Erza Scarlet, Saber, Toji, Maki
+85: Roy, Siegfried, Nightmare, Mitsurugi, Yone, Sesshomaru
+100: Roland :: The hero of the medieval Song of Roland, whose sword Durendal was said to be impossible to break.
+
+? Name a talking toy or object from a movie
+10: Woody, Buzz Lightyear, Mr. Potato Head, Lumiere, Cogsworth, Mrs. Potts, Chip
+30: Rex, Hamm, Slinky Dog|Slinky, Jessie, Bo Peep, Forky, Lotso|Lotso-Huggin' Bear, Ken, Barbie, Little Green Men|Aliens, Stinky Pete|The Prospector, Duke Caboom, Gabby Gabby, Ducky and Bunny, Chucky, M3GAN, Ted, Lightning McQueen, Mater, Magic Mirror, Wardrobe, Olaf, Frosty the Snowman, Emperor Zurg|Zurg, Pinocchio, Emmet, LEGO Batman, Gingy|Gingerbread Man
+60: Teddy, Plumette|Feather Duster, Sarge, Lenny, Wheezy, Trixie, Buttercup, Mr. Pricklepants, Dolly, Chuckles, Chip Hazard, Archer, The Brave Little Toaster|Toaster, Blanky, Radio, Kirby, Wyldstyle, Unikitty, Benny the Spaceman, UglyDolls, Slappy
+85: Mr. Spell, Rocky Gibraltar, Combat Carl, Benson, Giggle McDimples, Raggedy Ann, Little Bear, Gorgonites, Moxy
+100: Lampy :: A desk lamp in The Brave Little Toaster, a 1987 movie about a group of appliances trying to find their owner.
+
+? Name a villain who wants to take over the world
+10: Dr. Evil, The Brain|Brain, Plankton, Dr. Doofenshmirtz|Doofenshmirtz, Lex Luthor, Bowser, Dr. Eggman|Eggman|Dr. Robotnik
+30: Thanos, Ultron, Magneto, Red Skull, Darkseid, Brainiac, Kang the Conqueror|Kang, Loki, Megatron, Shredder, Krang, Mojo Jojo, Doctor Doom, Ganondorf|Ganon, Sauron, Voldemort, Emperor Palpatine|Palpatine, Darth Vader, Skynet, Agent Smith, Dr. Neo Cortex|Cortex, Dr. Wily, Dr. Claw, Cobra Commander, Skeletor, Hordak, Emperor Zurg|Zurg, Gru, Megamind, Hades, Jafar, Blofeld, Ming the Merciless, Giovanni|Team Rocket, Light Yagami|Kira, Frieza, Lord Zedd, Rita Repulsa, Vilgax, Aku, Dr. Drakken|Drakken
+60: HIM, Mumm-Ra, Syndrome, Vector, Ursula, Professor Moriarty|Moriarty, Dr. No, Goldfinger, Hugo Drax, The Mandarin, Hydra, Team Magma|Team Aqua, Cyrus, Lysandre, Ghetsis, King K. Rool, Cell, Majin Buu, Slade, Trigon, Professor Poopypants, Vlad Plasmius, Dr. Blowhole, The Lich, Sigma, Mother Brain, Andross, Magolor, Fawful, Dimentio
+85: Elliot Carver, Zorg, Zant, Vaati, Ivan Ooze, Starro, Professor Calamitous, Dr. Weil, Count Bleck
+100: The Mekon :: A green, big-headed alien who floats around on a hover chair, Dan Dare's archenemy in the 1950s British comic Eagle.
+
+? Name a fictional place you'd want to visit
+10: Hogwarts, Narnia, Wonderland, Neverland, Willy Wonka's Chocolate Factory|Chocolate Factory, Atlantis, Wakanda
+30: Middle-earth, The Shire|Hobbiton, Rivendell, Oz|Emerald City, Pandora, Asgard, Hyrule, Mushroom Kingdom, Bikini Bottom, Springfield, Arendelle, Agrabah, Monstropolis, Pride Rock, Zootopia, Radiator Springs, Halloween Town, Christmas Town, Whoville, Bedrock, Gotham City, Metropolis, Hogsmeade, Diagon Alley, Platform 9 3/4, The Burrow, Tatooine, Naboo, Coruscant, Endor, Westeros, Hawkins, Gravity Falls, Land of Ooo|Ooo, Kanto, Candy Land, Sugar Rush, Toontown, Camp Half-Blood, Mount Olympus|Olympus, Shangri-La, El Dorado, Camelot, Lilliput, Jurassic Park, Themyscira, Krypton, Stars Hollow, Hill Valley, Konoha|Hidden Leaf Village, Spirit World, Howl's Moving Castle, Ba Sing Se, Los Santos, Vice City, Green Hill Zone, The Nether, Terabithia, Hundred Acre Wood, Sesame Street
+60: Hoth, Mos Eisley, Winterfell, King's Landing, Panem, District 12, Ninjago, Pallet Town, Xanadu, Utopia, Avalon, Discworld, Isla Nublar, Skull Island, Sakaar, Riverdale, Pawnee, Sunnydale, Mystic Falls, Twin Peaks, Bedford Falls, Tree Hill, Grand Line, Soul Society, The Bathhouse, Laputa, Omashu, Republic City, Rapture, Columbia, Night City, Liberty City, Destiny Islands, Rainbow Road, Peach's Castle, Isle Delfino, Midgar, Hallownest, The End, Dreamland, Candy Kingdom, Neighborhood of Make-Believe
+85: Earthsea, Xandar, Knowhere, Vormir, Wano, Traverse Town, Station Square, Spira, Aether, Pee-wee's Playhouse
+100: Brigadoon :: A magical Scottish village from a 1947 musical that appears for only one day every hundred years.

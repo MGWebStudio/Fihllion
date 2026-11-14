@@ -1,0 +1,28 @@
+? Name something on a farm that isn't an animal
+10: Barn, Tractor, Hay|Hay Bales, Silo, Fence, Corn, Scarecrow
+30: Farmer, Crops, Wheat, Pumpkins, Field|Fields, Pasture, Plow, Combine|Combine Harvester, Pitchfork, Shovel, Bucket, Water Trough|Trough, Windmill, Barbed Wire, Gate, Farmhouse, Pickup Truck|Truck, Mud, Manure, Straw, Feed, Seeds, Orchard, Apples, Garden, Vegetables, Greenhouse, Chicken Coop|Coop, Pigpen|Pig Pen|Sty, Stable, Corral, Well, Grain, Soybeans, Cotton, Hayloft, Wagon, Trailer, Weather Vane|Weathervane, Mailbox, Sprinklers|Irrigation, Tire Swing, Porch|Rocking Chair, Overalls, Straw Hat|Cowboy Hat, Boots, Lasso|Rope, Saddle, Horseshoe, Milk Can|Milk Pail, Eggs, Milk, Tool Shed|Shed, Haystack, Pond, Sunflowers
+60: Butter Churn, Hoe, Rake, Workshop, Fuel Tank, Grain Bin, Hay Baler|Baler, Seed Planter|Planter, Sickle, Scythe, Salt Lick, Cattle Guard, Electric Fence, Fence Posts, Creek, Flowers, Beehives, Compost, Fertilizer, Farm Stand, Water Pump
+85: Cultivator, Harrow, Thresher, Auger, Feed Bunk, Windbreak, Root Cellar, Smokehouse, Springhouse
+100: Corn Crib :: A narrow shed with slatted walls for drying and storing ears of corn, built so the wind can blow right through.
+
+? Name something that's made of wood
+10: Table, Chair, Pencil, Door, Baseball Bat, Desk, Fence
+30: Log Cabin|House, Hardwood Floor|Floor, Deck, Bookshelf, Dresser, Bed Frame, Cabinet, Toothpick, Popsicle Stick, Chopsticks, Wooden Spoon|Spoon, Cutting Board, Rolling Pin, Picture Frame, Treehouse, Canoe|Boat, Guitar, Violin, Piano, Drumsticks, Clothespin, Matches, Paper, Ladder, Bench, Picnic Table, Barn, Bridge, Dock, Pier, Telephone Pole, Crate, Barrel, Log, Firewood, Plank, Plywood, Jenga Blocks|Jenga, Building Blocks|Blocks, Lincoln Logs, Chess Pieces, Skateboard, Hockey Stick, Pool Cue, Oar|Paddle, Walking Stick|Cane, Pinocchio, Pirate Ship|Ship, Totem Pole
+60: Xylophone, Cardboard, Bow, Arrow, Spear, Club, Wand, Broom Handle, Coffin, Cuckoo Clock, Grandfather Clock, Rocking Horse, Trojan Horse, Raft, Shed, Sauna, Clogs|Wooden Shoes, Charcoal, Pallet, Stairs, Railing, Window Frame, Countertop, Bowl, Tongue Depressor, Golf Tee, Ruler, Easel, Mallet, Gavel, Stilts, Toboggan|Sled, Wagon
+85: Cork, Wooden Yo-Yo, Spinning Top, Abacus, Loom, Spinning Wheel, Bellows, Recorder
+100: Kokeshi :: Japanese wooden dolls with no arms or legs, just a round head on a cylinder body. They were first made in hot-spring towns.
+
+? Name something you'd find on a desk
+10: Computer|Laptop, Pen, Pencil, Paper, Desk Lamp|Lamp, Stapler, Notebook
+30: Monitor, Keyboard, Mouse, Mouse Pad, Calculator, Scissors, Tape|Tape Dispenser, Paper Clips, Sticky Notes, Highlighter, Eraser, Ruler, Pencil Sharpener, Pencil Cup|Pen Holder, Calendar, Planner, Phone, Charger, Headphones, Mug|Coffee Mug, Water Bottle, Books, Folders, Binder, Picture Frame|Photo, Plant, Clock, Speaker, Webcam, Printer, Tissues, Hand Sanitizer, Snacks, Candy, Hole Punch, Rubber Bands, Thumbtacks|Push Pins, Name Plate, Desk Organizer, Inbox Tray|Inbox, Envelopes, Stamps, Notepad, Index Cards, Markers, Newton's Cradle, Homework, Tablet|iPad
+60: Crayons, Glue, White-Out, Letter Opener, Paperweight, Globe, Bobblehead, Funko Pop|Figurine, Stress Ball, Fidget Spinner, Rubik's Cube, Magic 8 Ball, Lava Lamp, Candle, Desk Fan, Mirror, Coaster, Receipts, Bills, Keys, Wallet, Business Cards, Desk Pad|Blotter, Fountain Pen, Zen Garden, Service Bell|Bell, Report, Drawing Tablet, Monitor Stand, Microphone, Ring Light, Game Controller, Dust, Crumbs
+85: Rolodex, Ink Pad, Quill, Inkwell
+100: Memo Spike|Spindle|Spike :: An upright metal spike on a little base for stabbing receipts and notes onto, a fixture of old office desks.
+
+? Name something that has a remote
+10: TV|Television, Garage Door|Garage Door Opener, Car|Key Fob, Air Conditioner, Drone, Ceiling Fan|Fan, RC Car|Remote Control Car
+30: DVD Player, Blu-ray Player, VCR, Cable Box, Roku|Apple TV|Fire Stick, Soundbar|Stereo, Projector, Gas Fireplace|Fireplace, Smart Lights|LED Lights|Lights, Christmas Lights, Space Heater, Robot Vacuum|Roomba, Toy Robot|Robot, RC Helicopter|Helicopter, RC Plane, RC Boat, Electric Gate|Gate, Smart Blinds|Blinds, Adjustable Bed, Recliner, Massage Chair, Presentation Clicker|Clicker, Wii|Wii Remote, Remote Start
+60: Camera, Hot Tub, Pool Cleaner, Security System|Alarm System, Speaker, Karaoke Machine, Fog Machine, Projector Screen, Awning, Sprinklers, Bomb Disposal Robot, Toy Tank, Model Train, Crane, Mars Rover, Toy Dinosaur, LEGO
+85: Disco Ball, Dog Training Collar, Stage Lights, Animatronic, Hexbug, Sphero
+100: Lazy Bones :: Zenith's 1950 Lazy Bones was the first TV remote, and it was attached to the TV by a long cable.
+

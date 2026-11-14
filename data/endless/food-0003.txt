@@ -1,0 +1,41 @@
+? Name a food you usually eat with your hands
+10: Pizza, Hamburger|Burger, Sandwich, Tacos, French Fries|Fries, Chicken Wings|Wings, Hot Dog
+30: Chicken Nuggets, Fried Chicken, Ribs, Corn on the Cob, Burrito, Quesadilla, Nachos, Chips, Popcorn, Pretzel, Apple, Banana, Grapes, Strawberries, Cookies, Donuts, Bagel, Toast, Crackers, Candy, Cupcake, Muffin, Granola Bar, Sushi, Spring Rolls, Egg Rolls, Gyro, Wrap, Pita, Falafel, Samosa, Empanada, Croissant, Hot Pocket, Pop-Tarts, Corn Dog, Mozzarella Sticks, Onion Rings, Jalapeno Poppers, Peel-and-Eat Shrimp|Shrimp, Crab Legs, Lobster, Edamame, Sunflower Seeds, Peanuts, Pistachios, Ice Cream Cone, Popsicle, Watermelon, Cherries, Orange, Peach, Pear, Baby Carrots|Carrots, Celery, Pickles, String Cheese, Beef Jerky, Trail Mix, Pizza Rolls, Bread, Biscuits, Garlic Bread, Breadsticks, S'mores, Rice Krispies Treats, Brownies, Churros, Sliders, Onigiri, Lunchables, Drumsticks, Turkey Leg, Sub|Hoagie, Kebab, Shawarma, Fish and Chips
+60: Tamale, Oysters, Artichoke, Lettuce Wraps, Injera, Naan, Roti, Dosa, Curry and Rice, Ugali, Tostones, Arepa, Pupusa, Bao, Kimbap, Charcuterie, Crawfish, Banh Mi, Po' Boy, Cuban Sandwich, Pasty, Sausage Roll, Meat Pie, Momo, Dolma
+85: Scotch Egg, Pork Pie, Knish, Suya
+100: Fufu :: A soft dough of pounded cassava or plantain eaten across West Africa. You pinch off a bite with your fingers and use it to scoop up soup.
+
+? Name a food that's purple
+10: Grapes, Eggplant, Plums, Blueberries, Purple Cabbage|Red Cabbage, Beets, Grape Jelly
+30: Ube|Purple Yam, Purple Sweet Potato, Blackberries, Red Onion|Purple Onion, Figs, Acai, Purple Carrots, Purple Potatoes, Prunes, Grape Juice, Grape Soda, Grape Popsicle, Ube Ice Cream, Taro, Taro Bubble Tea|Taro Milk Tea, Grimace Shake
+60: Raisins, Passion Fruit, Dragon Fruit, Mangosteen, Elderberries, Boysenberries, Black Currants, Concord Grapes, Purple Corn|Chicha Morada, Black Rice|Purple Rice, Purple Cauliflower, Radicchio, Lavender, Sugar Plums, Fruit Roll-Up, Huckleberries, Okinawan Sweet Potato, Blue Corn Tortillas, Halo-Halo, Ube Cake
+85: Purple Asparagus, Purple Kale, Purple Basil, Candied Violets, Marionberries, Jamun|Java Plum, Purple Bell Peppers, Cherokee Purple Tomatoes, Purple Sprouting Broccoli, Purple Sticky Rice
+100: Jabuticaba :: A Brazilian fruit that grows right on the trunk of its tree, covering the bark in purple, grape-like berries.
+
+? Name something you'd find at a bakery
+10: Bread, Cake, Cookies, Donuts|Doughnuts, Cupcakes, Croissants, Muffins
+30: Bagels, Pie, Brownies, Cinnamon Rolls, Danish, Scones, Baguette, Sourdough, Dinner Rolls|Rolls, Pretzels, Eclairs, Cream Puffs, Macarons, Cheesecake, Turnovers, Bear Claws, Biscotti, Biscuits, Cannoli, Strudel, Tarts, Fruit Tart, Pound Cake, Banana Bread, Zucchini Bread, Rye Bread, Pumpernickel, Challah, Brioche, Ciabatta, Focaccia, Pita, Pastries, Wedding Cake, Birthday Cake, Coffee Cake, Sheet Cake, Kolache, Pan Dulce|Conchas, Empanadas, Apple Fritters, Long Johns, Crullers, Beignets, Puff Pastry, Palmiers, Madeleines, Petit Fours, Whoopie Pies, Cookie Cake, Cake Pops, Frosting|Icing, Sprinkles, Flour, Sugar, Butter, Eggs, Yeast, Oven, Baker, Rolling Pin, Mixer, Display Case, Cash Register, Coffee, Milk, Chocolate Croissant|Pain au Chocolat, Sugar Cookies
+60: Churros, Bread Slicer, Bread Bags, Bakery Box|Pink Box, Take a Number|Number Ticket, Samples, Day-Old Bread, Panettone, Babka, Rugelach, Almond Croissant, Cronut, Mochi Donuts, Egg Tarts, Lemon Bars, Blondies, Snickerdoodles, Gingerbread, Shortbread, Black and White Cookies, Sticky Buns, Hot Cross Buns, Paczki, King Cake, Mooncakes, Pan de Muerto, Bolillos, Tres Leches Cake
+85: Kouign-Amann, Canele, Stollen, Hamantaschen, Melon Pan, Pineapple Buns, Anpan, Linzer Cookies, Pandesal, Ensaymada
+100: Lame|Bread Lame :: A razor blade on a little handle that bakers use to slash the tops of loaves, so they open up in a pretty pattern in the oven.
+
+? Name a food that has layers
+10: Lasagna, Layer Cake|Cake, Onion, Croissant, Club Sandwich|Sandwich, Parfait, Baklava
+30: Tiramisu, Trifle, Seven-Layer Dip, Mille-Feuille|Napoleon, Puff Pastry, Biscuits, Cabbage, Lettuce, Artichoke, Big Mac|Burger, Moussaka, Ice Cream Cake, Neapolitan Ice Cream, Seven-Layer Salad, Banana Pudding, Kit Kat, Oreo, Wafers|Wafer Cookies, Pancakes, Nachos, Eggplant Parmesan, Scalloped Potatoes|Potatoes au Gratin
+60: Shepherd's Pie, Pastitsio, Enchilada Casserole, Layered Jell-O|Jell-O, Dirt Cake, Crepe Cake, Opera Cake, Black Forest Cake, German Chocolate Cake, Red Velvet Cake, Twix, Nanaimo Bars, Magic Bars|Seven-Layer Bars, Lemon Bars, Quesadilla, Deep Dish Pizza, Spanakopita, Burek|Borek, Strudel, Paratha, Scallion Pancake, Danish, Rainbow Cake, Dagwood Sandwich, Ratatouille, Leek, Brussels Sprouts
+85: Tamale Pie, Smith Island Cake, Dobos Torte, Medovik|Russian Honey Cake, Roti Canai, Kouign-Amann, Muffuletta, Pommes Anna, Gratin Dauphinois, Kransekake
+100: Baumkuchen :: A German "tree cake" baked one thin layer at a time on a turning spit, so every slice shows rings like a tree trunk.
+
+? Name a food you'd pack in a lunchbox
+10: PB&J|Peanut Butter and Jelly|Sandwich, Apple, Chips, Lunchables, Juice Box, Cookies, Banana
+30: Grapes, Baby Carrots|Carrots, Yogurt|Go-Gurt, String Cheese, Granola Bar, Fruit Snacks|Gushers, Goldfish|Goldfish Crackers, Crackers, Pretzels, Applesauce|GoGo SqueeZ, Turkey Sandwich, Ham Sandwich, Cold Pizza|Pizza, Leftovers, Pasta Salad, Mac and Cheese, Soup, Chicken Nuggets, Wrap, Hard-Boiled Egg, Cheese and Crackers, Hummus, Celery and Peanut Butter, Pickles, Clementines|Cuties|Orange, Strawberries, Blueberries, Watermelon, Trail Mix, Popcorn, Rice Krispies Treats, Brownies, Pudding Cup|Snack Pack, Jell-O Cup, Uncrustables, Bagel, Muffin, Beef Jerky, Salami, Pepperoni, Water Bottle|Water, Chocolate Milk|Milk, Capri Sun, Cheez-Its, Doritos, Cheetos, Oreos, Fruit Roll-Up, Fruit by the Foot, Dunkaroos, Teddy Grahams, Animal Crackers, Pop-Tarts, Bologna Sandwich, Little Debbie
+60: Grilled Cheese, Sushi, Onigiri|Rice Balls, Bento Box, Dumplings, Quesadilla, Burrito, Tacos, Ramen, Fried Rice, Kimbap, Sunny D, Gatorade, Chips Ahoy, Rice Cakes, Veggie Straws, Cucumber Slices, Cherry Tomatoes, Bell Pepper Strips, Edamame, Snap Peas, Cottage Cheese, Tuna Salad, Egg Salad, Chicken Salad, Lunch Meat, Pita Chips, Candy Bar, Twinkie, Oatmeal Creme Pie
+85: Seaweed Snacks, Pinwheels, Ho Hos, Zebra Cakes, Nutella & GO
+100: Fluffernutter :: A peanut butter and marshmallow fluff sandwich, so loved in Massachusetts that lawmakers once argued over keeping it out of school lunches.
+
+? Name a food that's white
+10: Rice, Milk, White Bread|Bread, Marshmallows, Mashed Potatoes, Vanilla Ice Cream, Cauliflower
+30: Egg Whites|Eggs, Tofu, Coconut, Cottage Cheese, Cream Cheese, Mozzarella, Feta, Ricotta, Brie, Sour Cream, Whipped Cream, Yogurt|Greek Yogurt, Popcorn, Sugar, Salt, Flour, Pasta, Noodles, Potatoes, Garlic, White Onion|Onion, Mushrooms, Turnips, Parsnips, Jicama, Daikon|Radish, White Chocolate, Mayonnaise|Mayo, Ranch Dressing|Ranch, Alfredo Sauce, White Gravy|Sausage Gravy|Gravy, Grits, Oatmeal, Cream of Wheat, Coconut Milk, Meringue, Powdered Donuts, Powdered Sugar, Vanilla Frosting|Frosting, Angel Food Cake, Rice Pudding, Mochi, Steamed Buns|Bao, White Beans|Navy Beans|Cannellini Beans, Goat Cheese, Marshmallow Fluff
+60: Almond Milk, Rice Milk, Cream Puffs, Coconut Cake, Tres Leches Cake, Tapioca, Dumplings, Cod|Fish, Chicken Breast, Turkey, Calamari, Scallops, Lobster Meat, Halibut, Hominy, White Corn, Lychee, Bananas, Dragon Fruit, Horchata, White Cheddar, Queso Blanco, Paneer, Halloumi, Burrata, Provolone, Cream, Half-and-Half, Lard, Rice Krispies, Saltines, Pita, Flour Tortillas, Kefir, Tzatziki, Tteok|Rice Cakes, White Asparagus, Water Chestnuts, Lotus Root, Enoki Mushrooms, Nougat, Snowball Cookies|Mexican Wedding Cookies|Russian Tea Cakes, Coconut Macaroons, Sno Balls
+85: Ayran, Labneh, Celeriac, Endive, White Eggplant, Kohlrabi, Snow Fungus, Divinity
+100: Blancmange :: A wobbly white pudding made from milk, sugar and cornstarch. Its name comes from French words meaning "white food."

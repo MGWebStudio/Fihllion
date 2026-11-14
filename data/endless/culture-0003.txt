@@ -1,0 +1,28 @@
+? Name a company with a mascot
+10: McDonald's, KFC, Geico, Wendy's, Michelin, Pillsbury, Duolingo
+30: Burger King, Jack in the Box, Chuck E. Cheese, Kellogg's, Energizer, Aflac, Progressive, Mr. Clean, M&M's, Planters, Cheetos, Kool-Aid, Little Debbie, Quaker Oats, Morton Salt, Gerber, Chiquita, StarKist, Green Giant, Keebler, Hamburger Helper, Snuggle, Charmin, Pringles, Big Boy, Little Caesars, Chick-fil-A, Sega, Nintendo, Reddit, Jollibee, Sanrio, The Pokémon Company, US Forest Service|Smokey Bear
+60: Taco Bell, State Farm, Coca-Cola, Monopoly, Domino's, Mucinex, Brawny, Nesquik, Android, Linux, Mozilla, Discord, Twitter, GitHub, Red Robin, Kumamon, McGruff
+85: Duracell, Mailchimp, Domo, Bertie Bassett
+100: Alka-Seltzer :: Its mascot Speedy, a little boy whose body was an Alka-Seltzer tablet, starred in its TV ads starting in the 1950s.
+
+? Name a toy that was a big fad
+10: Fidget Spinner, Beanie Babies, Tamagotchi, Furby, Rubik's Cube, Pet Rock, Pokémon Cards
+30: Silly Bandz, Tickle Me Elmo, Cabbage Patch Kids, Slap Bracelets, Pogs, Yo-Yo, Hula Hoop, Slinky, Beyblade|Beyblades, Bop It, Polly Pocket, Bratz, Littlest Pet Shop, Webkinz, Zhu Zhu Pets, Shopkins, L.O.L. Surprise|LOL Surprise, Hatchimals, Squishies, Slime, Pop It, Rainbow Loom, Magic 8 Ball, Etch A Sketch, Lite-Brite, Easy-Bake Oven, Teddy Ruxpin, Troll Dolls|Trolls, Tech Deck, Razor Scooter, Hoverboard, Bakugan, Yu-Gi-Oh! Cards|Yu-Gi-Oh, Super Soaker, Skip-It, Mood Ring, Labubu, Squishmallows, Silly Putty
+60: Power Rangers, Heelys, Monster High, LEGO, Barbie, Hot Wheels, Nerf, Pogo Stick, Koosh Ball, Stretch Armstrong, Spirograph, Lava Lamp, Chia Pet, Sea-Monkeys, Gak, Moon Shoes, Pound Puppies, My Little Pony, Care Bears, Transformers, G.I. Joe, Giga Pets, Fingerlings, Simple Dimple, NeeDoh, Fidget Cube, Orbeez, Rock 'Em Sock 'Em Robots, Simon, Speak & Spell, Ant Farm, Shrinky Dinks, Frisbee, Bouncy Ball|Super Ball
+85: Floam, Pop Tubes, Crazy Bones, Tazos, Wacky Wall Walker, Weebles, Wooly Willy
+100: Clackers :: Two hard balls on a string that you swung so they smacked together over and over. They were a 1970s craze until some started shattering.
+
+? Name something you'd see at a wedding
+10: Bride, Groom, Wedding Cake|Cake, Wedding Dress|Dress, Wedding Ring|Rings, Bouquet|Flowers, Veil
+30: Bridesmaids, Groomsmen, Best Man, Maid of Honor, Flower Girl, Ring Bearer, Officiant|Priest|Minister, Tuxedo|Suit, Aisle, Altar, Arch, Vows, Kiss, First Dance, DJ|Band, Photographer, Camera, Guests, Toast|Champagne, Speeches, Dancing, Dance Floor, Bouquet Toss, Garter Toss|Garter, Confetti|Rice|Bubbles, Limo|Getaway Car, Just Married Sign|Cans on the Car, Programs, Seating Chart|Place Cards, Centerpieces, Candles, Tables, Chairs, Tablecloths, Party Favors|Favors, Gifts|Presents, Card Box, Guest Book, Dinner|Food, Buffet, Cake Topper, Cake Cutting, Church, Chapel, String Lights|Fairy Lights, Rose Petals|Petals, Boutonniere, Corsage, Something Blue, Cha Cha Slide, YMCA, Chicken Dance, Crying, Sparklers
+60: Barn, Beach, Tent, Balloons, Tiara, Something Old, Something Borrowed, Unity Candle, Jumping the Broom, Breaking the Glass, Chuppah, The Hora|Hora, Money Dance|Dollar Dance, Cupid Shuffle, Macarena, Electric Slide, Tissues, Mother of the Bride, Father of the Bride, Kids, Babies, Wedding Planner, Videographer, Waiters|Caterer, Fireworks, Doves, Horse and Carriage|Carriage, Henna|Mehndi, Wedding Bells|Bells
+85: Sixpence, Sand Ceremony, Lazo, Arras|Unity Coins, Jaimala|Garlands, Mandap, Baraat, Tea Ceremony, Handfasting, Croquembouche
+100: Quaich :: A two-handled Scottish cup that a couple drinks from together at the wedding, as a sign of trust.
+
+? Name a trend from the 2010s
+10: Fidget Spinners, Dabbing|The Dab, Water Bottle Flip|Bottle Flip, Ice Bucket Challenge, Planking, Mannequin Challenge, Selfie Sticks
+30: Harlem Shake, Gangnam Style, Flossing|The Floss, Pokémon Go, Fortnite, Minecraft, Vine, Snapchat Streaks|Streaks, Silly Bandz, Rainbow Loom, Hoverboards, Squishies, Slime, Man Buns, Ombre Hair, Unicorn Frappuccino|Unicorn Food, Avocado Toast, Chokers, Skinny Jeans, Jeggings, Yoga Pants, Uggs, Vans, Snapbacks, Swag, YOLO, On Fleek, Hashtags, Emojis, Selfies, Mustaches, Infinity Scarves, Pumpkin Spice Latte|Pumpkin Spice, Hipsters, VSCO Girls, Hydro Flask, Scrunchies, Metal Straws, Musical.ly, Snapchat Dog Filter, Candy Crush, Flappy Bird, Angry Birds, Temple Run, Clash of Clans, Let It Go|Frozen, Minions, Despacito, Call Me Maybe, Whip Nae Nae|Nae Nae, Default Dance, Instagram Filters
+60: Mason Jars, Cupcakes, Cronuts, Bubble Tea, Kale, Fanny Packs, Leggings, Adidas Superstars, Yeezys, Crocs, Duck Face, Owls, Glamping, Adult Coloring Books, Escape Rooms, Zumba, CrossFit, Spikeball, Gender Reveal Parties, Kylie Lip Kit, Contouring, Lip Sync Battle, Instagram Stories, Boomerang, Twitch, Battle Royale, The Hunger Games, Hit the Quan, Running Man Challenge, Milly Rock, Shmoney Dance, Orange Justice, Hotline Bling, Supreme, Athleisure, Mom Jeans, Chia Seeds, Acai Bowls, Matcha, Poke Bowls
+85: Hypebeast, Rainbow Bagels, Freakshakes, Sushi Burritos, Plaid, Stan Smiths
+100: Owling :: A 2011 spin-off of planking, where people posed crouched on top of things like owls perched on a branch.
+

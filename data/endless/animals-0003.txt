@@ -1,0 +1,43 @@
+? Name an animal that's mostly gray
+10: Elephant, Rhino|Rhinoceros, Hippo|Hippopotamus, Koala, Gray Wolf|Wolf, Dolphin, Shark
+30: Mouse, Rat, Pigeon, Donkey, Gray Squirrel|Squirrel, Raccoon, Opossum, Seal, Gray Whale, Manatee, Chinchilla, Kangaroo, Gray Fox, African Grey Parrot|African Grey, Russian Blue|Gray Cat, Weimaraner, Ring-Tailed Lemur|Lemur, Water Buffalo
+60: Wallaby, Coyote, Great Blue Heron|Heron, Sandhill Crane|Crane, Mourning Dove, Cockatiel, Greyhound, Schnauzer, Gray Tree Frog, Slug, Pill Bug|Woodlouse, Moth, Shrew, Vole, Hammerhead Shark, Barracuda, Catfish, Sturgeon, Bat, Baboon, Armadillo, Warthog, Cape Buffalo, Zebu, Canada Goose|Goose, Mockingbird, Great Gray Owl|Owl, Lynx, Snow Leopard, Wombat, Komodo Dragon, Tortoise, Elephant Seal, Sea Lion, Narwhal, Stingray, Manta Ray
+85: Mullet, Gray Langur, Brahman Cattle, Gray Jay, Gray Catbird, Junco, Nuthatch, Tufted Titmouse
+100: Shoebill :: A huge gray African bird with a giant shoe-shaped bill that can stand perfectly still for hours while it waits for fish.
+
+? Name an animal that lives in caves
+10: Bat, Bear, Spider, Cave Cricket|Cricket, Salamander, Snake, Blind Cave Fish|Cave Fish
+30: Glowworm|Glowworms, Cave Spider, Millipede, Centipede, Cave Beetle|Beetle, Cave Crayfish|Crayfish, Cave Bear, Vampire Bat
+60: Mouse, Rat, Raccoon, Fox, Wolf, Mountain Lion|Cougar, Swiftlet, Oilbird, Owl, Porcupine, Hyena, Leopard, Pack Rat|Woodrat, Cave Shrimp|Shrimp, Scorpion, Daddy Longlegs|Harvestman, Moth, Cockroach, Snail, Worm, Frog, Texas Blind Salamander, Mexican Tetra, Cave Lion, Fruit Bat, Brown Bat, Mexican Free-Tailed Bat
+85: Gray Bat, Cave Swallow, Whip Spider|Tailless Whip Scorpion, Cave Angel Fish, Remipede, Pseudoscorpion, Springtail, Cave Weta, Amphipod
+100: Olm :: A blind, pale cave salamander from Europe that can live for 100 years and go about 10 years without eating.
+
+? Name an animal that can live more than 50 years
+10: Tortoise, Elephant, Parrot, Whale, Turtle, Macaw, Alligator
+15: Immortal Jellyfish
+30: Galápagos Tortoise|Giant Tortoise, Aldabra Tortoise, Sea Turtle, Box Turtle, Greenland Shark, Bowhead Whale, Blue Whale, Orca|Killer Whale, Koi, Sturgeon, Lobster, Crocodile, Cockatoo, African Grey Parrot, Albatross, Giant Clam, Humans
+60: Flamingo, Chimpanzee, Gorilla, Orangutan, Hippo, Rhino, Tubeworm, Red Sea Urchin|Sea Urchin, Glass Sponge|Sponge, Coral, Tuatara, Olm, Lungfish, Geoduck, Fin Whale, Sperm Whale, Humpback Whale, Dugong, Manatee, California Condor|Condor, Kakapo, Hydra
+85: Rougheye Rockfish, Bigmouth Buffalo, European Eel, Paddlefish, Ball Python, Bald Eagle
+100: Ocean Quahog|Quahog|Ming the Clam :: A clam nicknamed Ming turned out to be 507 years old, the oldest individual animal ever found.
+
+? Name an animal that's mostly brown
+10: Brown Bear|Grizzly Bear|Bear, Deer, Horse, Dog, Squirrel, Beaver, Moose
+30: Cow, Rabbit|Bunny, Owl, Sparrow, Robin, Hawk, Bald Eagle|Eagle, Turkey, Elk, Bison|Buffalo, Camel, Llama, Alpaca, Kangaroo, Monkey, Chimpanzee, Orangutan, Sloth, Otter, Mink, Weasel, Ferret, Groundhog, Prairie Dog, Hamster, Gerbil, Guinea Pig, Chipmunk, Mouse, Rat, Mole, Hedgehog, Porcupine, Coyote, Hyena, Capybara, Bat, Wombat, Platypus, Kiwi, Emu, Sea Lion, Walrus, Cockroach, Brown Recluse, Toad, Yak, Highland Cow, Wildebeest, Antelope, Gazelle, Impala
+60: Chicken, Duck, Lion, Cougar, Bobcat, Ostrich, Fur Seal, Cricket, Moth, Spider, Tarantula, Snail, Frog, Lizard, Brown Snake|Snake, Rattlesnake, Copperhead, Tortoise, Catfish, Trout, Wren, Thrush, Quail, Pheasant, Grouse, Kestrel, Kudu, Mule, Pony, Chocolate Lab|Labrador, Dachshund, Ox
+85: Woodcock
+100: Mudskipper :: A brown fish that spends much of its time out of the water, hopping across mudflats on its fins.
+
+? Name an animal that lives in a swamp
+10: Alligator, Crocodile, Frog, Snake, Mosquito, Turtle
+15: Shrek
+30: Heron, Egret, Crane, Toad, Salamander, Newt, Cottonmouth|Water Moccasin, Snapping Turtle, Alligator Snapping Turtle, Catfish, Alligator Gar|Gar, Bullfrog, Beaver, Muskrat, River Otter|Otter, Nutria, Raccoon, Opossum, Mink, Florida Panther|Panther, Bobcat, White-Tailed Deer|Deer, Black Bear, Wood Duck|Duck, Ibis, Roseate Spoonbill|Spoonbill, Wood Stork|Stork, Anhinga, Kingfisher, Barred Owl|Owl, Red-Winged Blackbird, Dragonfly, Leech, Crawfish|Crayfish, Snail, Water Bug, Burmese Python|Python, Anaconda, Caiman, Capybara
+60: Firefly, Bat, Hippo, Shoebill, Manatee, Marsh Rabbit|Swamp Rabbit, Bittern, Mud Turtle, Eel, Swamp Thing, Yoda, Kermit the Frog
+85: King Rail, Moorhen, Gallinule, Limpkin, Mudpuppy, Siren, Amphiuma, Musk Turtle, Bowfin, Mosquitofish, Skunk Ape
+100: Barasingha|Swamp Deer :: A deer from India whose name means "twelve-tined," because its antlers can have a dozen or more points.
+
+? Name a pet you'd keep in a cage or tank
+10: Hamster, Goldfish|Fish, Parakeet|Budgie|Bird, Guinea Pig, Rabbit|Bunny, Turtle, Snake
+30: Gerbil, Mouse, Rat, Ferret, Chinchilla, Hedgehog, Sugar Glider, Lizard, Bearded Dragon, Leopard Gecko, Gecko, Iguana, Chameleon, Frog, Axolotl, Hermit Crab, Tarantula, Betta Fish|Betta, Guppy, Neon Tetra|Tetra, Angelfish, Clownfish, Shrimp, Snail, Canary, Cockatiel, Lovebird, Finch, Parrot, Cockatoo, Ball Python, Corn Snake, Tortoise, Sea Monkeys, Ant Farm|Ants
+60: Degu, Cricket, Stick Insect, Praying Mantis, Scorpion, Crayfish, Newt, Salamander, Tree Frog, Pacman Frog, Crested Gecko, Blue-Tongued Skink, Monitor Lizard, Boa Constrictor, Kingsnake, Hognose Snake, Anole, Garter Snake, Box Turtle, Red-Eared Slider, Koi, Molly, Platy, Cichlid, Pleco, Puffer Fish, Seahorse, African Dwarf Frog, Madagascar Hissing Cockroach, Pigeon, Dove, Conure, Macaw
+85: Uromastyx, Tegu, Water Dragon, Swordtail, Oscar, Jellyfish, Octopus, Isopods, Millipede, Mealworms, Quail, Prairie Dog, Short-Tailed Opossum
+100: Triops :: Tiny shrimp-like creatures sold in hatch-at-home kits. They've barely changed in about 200 million years.

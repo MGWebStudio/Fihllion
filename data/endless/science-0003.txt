@@ -1,0 +1,42 @@
+? Name a vitamin or medicine
+10: Vitamin C, Tylenol|Acetaminophen, Advil|Ibuprofen, Aspirin, Vitamin D, Penicillin, Benadryl
+30: Vitamin A, Vitamin B12|B12, Vitamin E, Vitamin K, Vitamin B6, Biotin, Folic Acid|Folate, Niacin, Riboflavin, Thiamine, Multivitamin, Flintstones Vitamins, Gummy Vitamins, Melatonin, Motrin, Aleve|Naproxen, Excedrin, NyQuil, DayQuil, Mucinex, Robitussin, Sudafed, Claritin, Zyrtec, Allegra, Tums, Pepto-Bismol|Pepto, Imodium, Midol, Amoxicillin, Antibiotics, Insulin, Albuterol|Inhaler, EpiPen|Epinephrine, Morphine, Adderall, Prozac, Zoloft, Ozempic, Neosporin, Cough Drops|Halls, Vicks VapoRub, Vaccine|Flu Shot, Cough Syrup
+60: Iron, Zinc, Calcium, Magnesium, Codeine, Ritalin, Lexapro, Xanax, Lipitor, Metformin, Wegovy, Lisinopril, Prednisone, Hydrocortisone|Cortisone, Dramamine, Pedialyte, Miralax|Laxative, Benzoyl Peroxide, Accutane, Chemotherapy, Antihistamine, Steroids, Painkillers, Eye Drops, Flonase|Nasal Spray, Tamiflu, Paxlovid, Quinine, Warfarin, Nitroglycerin, Lithium, Valium, Ambien, Botox, Lidocaine|Novocaine, Narcan|Naloxone, Antivenom
+85: Tretinoin|Retin-A, Remdesivir, Chloroquine, Heparin, Digoxin
+100: Willow Bark :: People chewed it for pain for thousands of years. A chemical inside it led to the invention of aspirin.
+
+? Name something you'd find in a science lab
+10: Microscope, Beaker, Test Tube, Safety Goggles|Goggles, Lab Coat, Bunsen Burner, Flask
+30: Graduated Cylinder, Pipette|Dropper, Petri Dish, Test Tube Rack, Scale|Balance, Thermometer, Funnel, Tongs, Gloves, Fire Extinguisher, Eyewash Station, Safety Shower, Fume Hood, Periodic Table, Chemicals, Skeleton, Microscope Slides|Slides, Magnifying Glass, Ring Stand, Clamp, Hot Plate, Stirring Rod, Centrifuge, Erlenmeyer Flask, Burette, Mortar and Pestle, Scoopula|Spatula, Wash Bottle, Litmus Paper|pH Paper, Filter Paper, Crucible, Tripod, Lab Notebook, Calculator, Computer, Sink, Lab Bench|Lab Table, Stools, Frogs, Dissection Kit|Scalpel, Specimen Jars, Fossils, Rocks|Minerals, Magnets, Batteries, Wires, Light Bulbs, Prism, Lenses, Van de Graaff Generator
+60: Model Cell, Volumetric Flask, Wire Gauze, Evaporating Dish, Watch Glass, Circuits, Mirrors, Telescope, Volcano Model, Plants, Seeds, Fish Tank, Class Pet, Spectrometer, Oscilloscope, Incubator, Tesla Coil, Plasma Ball, Newton's Cradle, Pendulum, Spring Scale, Stopwatch, Meter Stick|Ruler, DNA Model, Torso Model, Brain Model, Lab Mice|Lab Rats, Bacteria, Agar, Liquid Nitrogen, Dry Ice, Baking Soda, Vinegar, Acid, Ethanol, Distilled Water, Mad Scientist
+85: Autoclave, Desiccator, Glove Box, Mass Spectrometer, Calipers, Pipette Tips, Vortex Mixer, PCR Machine, Gel Electrophoresis, Fruit Flies
+100: Kipp's Apparatus :: A three-globe glass device from the 1840s that makes gas like hydrogen on demand, and stops as soon as you close the valve.
+
+? Name something in your body that grows back
+10: Hair, Fingernails|Nails, Skin, Liver, Blood, Toenails, Eyelashes
+15: Baby Teeth|Teeth
+30: Eyebrows, Bones, Stomach Lining, Red Blood Cells|Blood Cells, White Blood Cells, Platelets, Taste Buds, Gut Lining, Fat, Beard|Facial Hair, Body Hair
+60: Fingertips, Bone Marrow, Uterine Lining, Cornea, Nerves, Muscle, Calluses, Scar Tissue|Scabs, Mucus, Leg Hair, Nose Hair, Cuticles
+85: Lungs, Kidney, Ear Hair, Olfactory Neurons
+100: Rib|Ribs :: Surgeons can remove a section of rib, and if they leave the lining around the bone in place, it can grow back.
+
+? Name a kind of energy
+10: Solar|Solar Energy, Wind, Nuclear, Electricity|Electrical, Kinetic, Potential, Thermal|Heat
+30: Hydroelectric|Hydropower|Water, Geothermal, Chemical, Mechanical, Sound, Light, Gravitational, Elastic, Magnetic, Radiant, Coal, Oil|Petroleum, Natural Gas, Gasoline|Gas, Biomass, Biofuel, Fossil Fuels, Renewable Energy, Tidal, Wave, Static Electricity|Static, Atomic, Nuclear Fusion|Fusion, Nuclear Fission|Fission, Battery, Calories|Food, Steam, Hydrogen, Ethanol, Firewood|Wood, Electromagnetic
+60: Propane, Methane, Dark Energy, Mass Energy|Rest Energy|E=mc2, Activation Energy, Positive Energy, Negative Energy
+85: Zero-Point Energy, Vacuum Energy, Ionization Energy, Bond Energy, Free Energy, Internal Energy, Ocean Thermal Energy, Osmotic Energy|Blue Energy, Thermoelectric
+100: Piezoelectric :: Electricity made by squeezing certain crystals, like the quartz that makes a grill lighter click and spark.
+
+? Name a part of a car
+10: Steering Wheel, Tires|Tire|Wheels, Engine, Brakes, Seats, Windshield, Doors
+30: Hood, Trunk, Bumper, Headlights, Taillights, Rearview Mirror|Side Mirror|Mirror, Windshield Wipers|Wipers, Gas Pedal|Accelerator, Brake Pedal, Clutch, Gear Shift|Shifter, Transmission, Battery, Radiator, Muffler, Exhaust|Tailpipe, Gas Tank|Fuel Tank, Spark Plugs, Alternator, Air Filter, Oil Filter, Axle, Suspension, Shock Absorbers|Shocks, Struts, Seatbelt, Airbag, Horn, Dashboard, Speedometer, Glove Box|Glove Compartment, Cup Holder, Radio|Stereo, Air Conditioning|AC, Heater, Turn Signal|Blinker, License Plate, Hubcap, Rims, Spare Tire, Jack, Roof, Sunroof, Antenna, Windows, Door Handle, Ignition|Key, Odometer, Fuel Gauge|Gas Gauge, Fender, Grille, Chassis|Frame, Pistons, Cylinders, Crankshaft, Camshaft, Timing Belt, Serpentine Belt|Fan Belt, Carburetor, Fuel Injector, Starter, Drive Shaft, Differential, Catalytic Converter, Brake Pads, Rotors, Turbocharger|Turbo, Backup Camera, GPS|Navigation, Touchscreen, Floor Mats, Sun Visor|Visor, Spoiler
+60: Calipers, Power Steering, Steering Column, Lug Nuts, Valves, Head Gasket, Oil Pan, Dipstick, Thermostat, Water Pump, Fuel Pump, Supercharger, Manifold, ECU|Engine Control Unit, Fuse Box|Fuses, Wiring, Headrest, Armrest, Child Lock, Mud Flaps, Tow Hitch, Roof Rack, Running Boards, Hood Ornament, Emblem|Badge, Quarter Panel, Tailgate, Truck Bed, Frunk
+85: Brake Lines, Master Cylinder, Tie Rod, Ball Joint, CV Joint, Wheel Bearing, Intercooler, EGR Valve, Oxygen Sensor, Mass Airflow Sensor, Rocker Panel, A-Pillar|Pillar
+100: Rumble Seat :: A fold-out seat in the back of cars from the 1920s and '30s, where passengers rode out in the open air.
+
+? Name a real-life robot or rover
+10: Roomba, Curiosity, Perseverance, Sophia, Spot, Atlas, Tesla Optimus|Optimus
+30: Sojourner, Spirit, Opportunity, Ingenuity, Zhurong, Yutu, Canadarm, ASIMO, Pepper, Nao, Aibo, Ameca, Da Vinci Surgical System|Da Vinci, Waymo|Self-Driving Car, Starship Delivery Robot|Delivery Robot, Robotic Arm, Lunar Roving Vehicle|Moon Buggy|Lunar Rover
+60: Lunokhod, Pragyan, Robonaut, BigDog, Digit, Baxter, Unimate, Shakey, Deep Blue, Watson, AlphaGo, Kiva, Bomb Disposal Robot, Mars Pathfinder, Rosalind Franklin Rover, Philae, Sphero, LEGO Mindstorms, VEX Robot, Cozmo, Paro, Robosapien, Unitree, RoboBee, MIT Cheetah
+85: Valkyrie, Handle, Stretch, Figure 01, Kismet, Cog, PackBot, VIPER, Dragonfly, Hayabusa, Vector, Moxie, Pleo, Flippy, Dash, Bina48, Geminoid, Erica, Kilobots, Snakebot, Octobot, Dragon Runner, Talon
+100: Elektro :: A seven-foot robot shown off at the 1939 World's Fair that could walk, talk and blow up balloons.
