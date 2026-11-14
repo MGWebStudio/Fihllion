@@ -1,0 +1,57 @@
+? Name a famous person who was assassinated
+~last
+10: Abraham Lincoln, John F. Kennedy|JFK, Martin Luther King Jr.|MLK|Martin Luther King, Julius Caesar|Caesar, Malcolm X, Mahatma Gandhi, Archduke Franz Ferdinand|Franz Ferdinand
+30: Robert F. Kennedy|RFK|Bobby Kennedy, John Lennon, William McKinley, James Garfield, Indira Gandhi, Benazir Bhutto, Yitzhak Rabin, Anwar Sadat, Shinzo Abe, Medgar Evers, Harvey Milk, Grigori Rasputin|Rasputin, Leon Trotsky, Charlie Kirk
+60: Tsar Nicholas II|Nicholas II, Olof Palme, Benigno Aquino Jr.|Ninoy Aquino, Patrice Lumumba, Che Guevara, Huey Long, Thomas Becket, Alexander II of Russia|Alexander II, Caligula, Lord Mountbatten, Jovenel Moïse, Rajiv Gandhi, Park Chung-hee, Ngo Dinh Diem, Oscar Romero, Reinhard Heydrich
+85: Henry IV of France, Gustav III, Philip II of Macedon, Commodus, Domitian, Fernando Villavicencio, Liaquat Ali Khan, King Faisal, Sergei Kirov, Pim Fortuyn, Boris Nemtsov, Jo Cox, Paul I of Russia
+100: Spencer Perceval :: The only British prime minister ever assassinated. He was shot in the lobby of the House of Commons in 1812.
+
+? Name an invention that runs on batteries
+10: Cell Phone|Phone|Smartphone, TV Remote|Remote|Remote Control, Flashlight, Watch|Wristwatch, Laptop, Electric Car|Tesla, Smoke Detector
+30: Calculator, Hearing Aid, Pacemaker, Game Boy|Handheld Game Console, Nintendo Switch, Tablet|iPad, Earbuds|AirPods|Headphones, Camera, Electric Toothbrush, Clock, Radio|Transistor Radio, Walkie-Talkie, RC Car|Remote Control Car|Toy Car, Drone, Electric Scooter, E-Bike|Electric Bike, Hoverboard, Cordless Drill|Drill|Power Tool, Digital Thermometer|Thermometer, Game Controller|Controller, Wireless Mouse|Computer Mouse, Keyboard, Smartwatch|Fitness Tracker|Fitbit|Apple Watch, E-Reader|Kindle, MP3 Player|iPod, Walkman, Bluetooth Speaker|Speaker, Robot Vacuum|Roomba, Electric Razor|Shaver, Tamagotchi, Key Fob|Car Key|Garage Door Opener
+60: Insulin Pump, Defibrillator|AED, Cochlear Implant, Hair Trimmer, Toy Robot, Furby, Laser Pointer, Bathroom Scale|Scale, Kitchen Scale, Blood Pressure Monitor, Glucose Meter, Metal Detector, Leaf Blower, Chainsaw, Lawn Mower, Golf Cart, Power Wheelchair|Wheelchair, Forklift, Mars Rover, Satellite, Submarine, Electric Bus, Hybrid Car, Night Vision Goggles, Headlamp, Lantern, Handheld Fan|Fan, Baby Monitor, Bike Light, Doorbell|Video Doorbell
+85: Tickle Me Elmo, Stud Finder, Metronome, Guitar Tuner|Tuner, Smart Lock, Thermostat, Electronic Dictionary
+100: Sinclair C5 :: A tiny one-person electric car from 1985 that flopped. It topped out at about 15 miles per hour.
+
+? Name a god or goddess who isn't Greek
+10: Thor, Odin, Loki, Ra, Anubis, Shiva, Jupiter
+30: Freya|Freyja, Frigg, Baldur, Hel, Heimdall, Tyr, Osiris, Isis, Horus, Set|Seth, Thoth, Bastet, Vishnu, Brahma, Ganesha, Krishna, Kali, Lakshmi, Hanuman, Durga, Quetzalcoatl, Amaterasu, Mars, Venus, Mercury, Neptune, Juno, Minerva, Diana, Pluto, Vulcan, Cupid, Janus, Saturn, Bacchus, Ceres, Vesta, Maui, Pele
+60: Freyr, Njord, Bragi, Idun, Sif, Aurora, Fortuna, Faunus, Sekhmet, Hathor, Ptah, Amun|Amun-Ra, Aten, Sobek, Ma'at, Nut, Geb, Bes, Rama, Parvati, Saraswati, Indra, Agni, Surya, Kartikeya|Murugan, Huitzilopochtli, Tlaloc, Tezcatlipoca, Kukulkan, Inti, Viracocha, Pachamama, Susanoo, Tsukuyomi, Izanagi, Izanami, Inari, Raijin, Fujin, Jade Emperor, Guanyin, Nüwa, Sun Wukong|Monkey King, Chang'e, Marduk, Ishtar|Inanna, Enlil, Enki, Shamash, Tiamat, Baal, Dagon, Moloch, Astarte, Lugh, Brigid, Dagda, Morrigan, Cernunnos, Perun, Veles, Tangaroa, Shango, Oshun, Yemaya|Yemoja, Ogun, Anansi, Ahura Mazda, Mithras
+85: Khnum, Tefnut, Shu, Nephthys, Khonsu, Varuna, Xipe Totec, Coatlicue, Itzamna, Chaac, Hachiman, Caishen, Mazu, Anu, Nergal, Danu, Mokosh, Tane, Eshu, Olodumare, Baron Samedi, Tengri, Ukko, Perkūnas
+100: Taweret :: An Egyptian goddess who protected mothers and babies, shown as a hippo with a crocodile's back and a lion's paws.
+
+? Name a famous woman from history
+~last
+10: Cleopatra, Joan of Arc, Marie Curie, Rosa Parks, Harriet Tubman, Amelia Earhart, Anne Frank
+30: Queen Elizabeth I|Elizabeth I, Queen Victoria, Marie Antoinette, Florence Nightingale, Helen Keller, Susan B. Anthony, Eleanor Roosevelt, Frida Kahlo, Mother Teresa, Sacagawea, Pocahontas, Catherine the Great, Ada Lovelace, Jane Austen, Coco Chanel, Princess Diana|Diana, Queen Elizabeth II|Elizabeth II, Margaret Thatcher, Indira Gandhi, Malala Yousafzai|Malala, Betsy Ross, Clara Barton, Sojourner Truth, Abigail Adams, Martha Washington, Anne Boleyn, Boudica, Nefertiti, Mulan, Rosalind Franklin, Jane Goodall, Katherine Johnson, Sally Ride, Emmeline Pankhurst, Mary Shelley, Emily Dickinson, Maya Angelou, Marilyn Monroe, Annie Oakley, Ruth Bader Ginsburg|RBG, Eva Perón|Evita, Anastasia
+60: Elizabeth Cady Stanton, Dolley Madison, Mary\, Queen of Scots|Mary Queen of Scots, Hatshepsut, Hypatia, Sappho, Wu Zetian, Empress Dowager Cixi|Cixi, Queen Isabella|Isabella I of Castile, Catherine de' Medici, Eleanor of Aquitaine, Lady Godiva, Anne Bonny, Ching Shih|Zheng Yi Sao, Grace Hopper, Valentina Tereshkova, Mae Jemison, Billie Jean King, Wilma Rudolph, Mary Wollstonecraft, Virginia Woolf, Harriet Beecher Stowe, Louisa May Alcott, Beatrix Potter, Agatha Christie, Bessie Coleman, Madam C. J. Walker, Ida B. Wells, Shirley Chisholm, Sandra Day O'Connor, Golda Meir, Benazir Bhutto, Lucretia Mott, Dorothea Dix, Jane Addams, Juliette Gordon Low, Amelia Bloomer, Audrey Hepburn, Josephine Baker, Zora Neale Hurston, Billie Holiday, Ella Fitzgerald, Hedy Lamarr, Mata Hari, Nellie Bly, Calamity Jane, Molly Pitcher, Theodora, Hildegard of Bingen, Murasaki Shikibu, Rani of Jhansi|Lakshmibai, Queen Nzinga|Nzinga, Mary Seacole, Irena Sendler, Sophie Scholl, Lise Meitner, Elizabeth Blackwell, Michelle Obama
+85: Tomoe Gozen, Grace O'Malley, Mary Read, Babe Didrikson Zaharias|Babe Didrikson, Deborah Sampson, Empress Matilda, Yaa Asantewaa, Edith Cavell, Elizabeth Fry, Emmy Noether, Dorothy Hodgkin, Chien-Shiung Wu, Tu Youyou, Artemisia Gentileschi, Clara Schumann, Fanny Mendelssohn
+100: Mary Anning :: A fossil hunter from the English seaside who helped dig up a famous ichthyosaur skeleton when she was about 12. She may have inspired "She sells seashells."
+
+? Name a country that doesn't exist anymore
+10: Soviet Union|USSR, Yugoslavia, Czechoslovakia, East Germany|GDR, West Germany, Prussia
+30: Ottoman Empire, Roman Empire, Austria-Hungary|Austro-Hungarian Empire, Rhodesia, Kingdom of Hawaii|Hawaii, Republic of Texas|Texas, Confederate States of America|Confederacy, Holy Roman Empire, Byzantine Empire, Babylon, Sparta, Carthage, Aztec Empire, Inca Empire, Mongol Empire, South Vietnam
+60: Persia, Siam, Zaire, Ceylon, North Yemen, South Yemen, Tibet, Gaul, Republic of Venice|Venice, Kingdom of Bavaria|Bavaria, Serbia and Montenegro, United Arab Republic, Gran Colombia, Tanganyika, Zanzibar, Biafra, Mali Empire, Zulu Kingdom, Bohemia, Burgundy, Aragon, Castile, Kievan Rus, Khmer Empire, Manchukuo, Mughal Empire, Assyria, Phoenicia, Troy
+85: Kingdom of Sardinia|Sardinia, Kingdom of the Two Sicilies|Two Sicilies, Republic of Florence, Saxony, Federal Republic of Central America, Bophuthatswana, Transvaal, Orange Free State, Kingdom of Kongo, Songhai Empire, Ashanti Empire, Hanover, Navarre, Golden Horde, Ryukyu Kingdom, Dominion of Newfoundland|Newfoundland, Vermont Republic, Free State of Fiume|Fiume
+100: Neutral Moresnet :: A tiny triangle of land between Belgium and Germany that stayed neutral for about 100 years. It once tried to become a country that spoke Esperanto.
+
+? Name something people used before smartphones
+10: Landline|Home Phone|Telephone, Paper Map|Map, Flip Phone, Camera, Alarm Clock, Watch, Calculator
+30: Phone Book|Yellow Pages, Pager|Beeper, MP3 Player|iPod, Walkman, CD Player|Discman, Payphone|Pay Phone, Planner|Calendar|Day Planner, Address Book, Encyclopedia, Dictionary, Newspaper, Letters|Mail, Postcards, Fax Machine, BlackBerry, Palm Pilot|PDA, GPS|TomTom|Garmin, Flashlight, Radio, Notebook|Notepad, Camcorder|Video Camera, Polaroid, Film Camera, Disposable Camera, Game Boy, Atlas, Compass, Phone Card|Calling Card, Answering Machine, Rolodex, Cassette Tapes, CDs, VHS|VCR, MapQuest|Printed Directions, Nokia 3310|Nokia, Motorola Razr|Razr
+60: Sticky Notes, Checkbook, Cash, Library, Card Catalog, Boombox, DVD Player, TV Guide, Wall Clock, Kitchen Timer, Stopwatch, Flashcards, Mirror, Scanner, Typewriter, Telegram, Carrier Pigeon, CB Radio, Car Phone, Brick Phone, Tamagotchi, Magazines, Books, Paper Tickets|Tickets, Boarding Pass, Phrasebook|Pocket Translator, Pedometer, Bus Schedule, Tape Measure, Zune
+85: Transit Map, Gazetteer, Light Meter, Spirit Level|Level, Magnifying Glass, Sidekick
+100: Thomas Guide :: A thick, spiral-bound street atlas that California drivers kept in their cars before GPS.
+
+? Name a famous document from history
+10: Declaration of Independence, US Constitution|Constitution, Magna Carta, Bill of Rights, Emancipation Proclamation, Gettysburg Address
+30: Treaty of Versailles, The Communist Manifesto|Communist Manifesto, Mayflower Compact, Articles of Confederation, Federalist Papers, Dead Sea Scrolls, Rosetta Stone, Code of Hammurabi, Ninety-Five Theses|95 Theses, Universal Declaration of Human Rights, Monroe Doctrine, The Diary of Anne Frank|Diary of Anne Frank, Domesday Book, Declaration of the Rights of Man and of the Citizen|Declaration of the Rights of Man, Treaty of Paris, UN Charter|Charter of the United Nations, Geneva Conventions, Common Sense, I Have a Dream|I Have a Dream Speech, The Bible|Bible
+60: Louisiana Purchase Treaty|Louisiana Purchase, Treaty of Tordesillas, Edict of Nantes, Edict of Milan, Peace of Westphalia, Treaty of Waitangi, Balfour Declaration, Zimmermann Telegram, Atlantic Charter, Marshall Plan, Molotov-Ribbentrop Pact, Munich Agreement, Gutenberg Bible, Book of Kells, The Prince, Letter from Birmingham Jail, Missouri Compromise, Treaty of Guadalupe Hidalgo, Voynich Manuscript, Cyrus Cylinder, Book of the Dead
+85: Treaty of Ghent, Truman Doctrine, Kellogg-Briand Pact, Treaty of Brest-Litovsk, Lindisfarne Gospels, Northwest Ordinance, Codex Leicester, Codex Sinaiticus
+100: Diamond Sutra :: A Buddhist text printed in the year 868. It's the oldest dated printed book in the world, found sealed in a cave in China.
+
+? Name one of the original 13 colonies
+10: Virginia, Massachusetts|Massachusetts Bay, New York, Pennsylvania
+30: Maryland, North Carolina, South Carolina, New Jersey, Connecticut
+60: New Hampshire, Rhode Island
+85: Delaware
+100: Georgia :: The last of the 13 colonies, founded in 1732. Its founder pitched it partly as a fresh start for people stuck in debtors' prisons.
