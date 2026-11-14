@@ -1,0 +1,81 @@
+? Name an Olympic sport that uses a ball
+10: Basketball, Soccer|Football, Volleyball, Tennis, Golf, Baseball, Table Tennis|Ping Pong
+15: Rhythmic Gymnastics
+30: Beach Volleyball, Handball, Water Polo, Field Hockey|Hockey, Softball, Rugby Sevens|Rugby, 3x3 Basketball
+60: Lacrosse, Cricket, Squash, Flag Football
+85: Polo, Basque Pelota|Pelota, Croquet
+100: Roque :: A hard-court version of croquet that was an Olympic sport exactly once, at the 1904 Games in St. Louis.
+
+? Name a pro sports team named after an animal
+10: Chicago Bears|Bears, Chicago Bulls|Bulls, Philadelphia Eagles|Eagles, Detroit Lions|Lions, Miami Dolphins|Dolphins, Pittsburgh Penguins|Penguins, Detroit Tigers|Tigers
+30: Atlanta Falcons|Falcons, Baltimore Ravens|Ravens, Carolina Panthers|Panthers, Florida Panthers, Jacksonville Jaguars|Jaguars, Denver Broncos|Broncos, Indianapolis Colts|Colts, Cincinnati Bengals|Bengals, Seattle Seahawks|Seahawks, St. Louis Cardinals|Cardinals, Arizona Cardinals, Los Angeles Rams|Rams, Milwaukee Bucks|Bucks, Charlotte Hornets|Hornets, Memphis Grizzlies|Grizzlies, Toronto Raptors|Raptors, Minnesota Timberwolves|Timberwolves, Atlanta Hawks|Hawks, New Orleans Pelicans|Pelicans, Toronto Blue Jays|Blue Jays, Baltimore Orioles|Orioles, Chicago Cubs|Cubs, Arizona Diamondbacks|Diamondbacks, Miami Marlins|Marlins, Boston Bruins|Bruins, Anaheim Ducks|Ducks, San Jose Sharks|Sharks
+60: Tampa Bay Rays|Rays, Nashville Predators|Predators, Utah Mammoth|Mammoth, Minnesota Lynx|Lynx, Arizona Coyotes|Coyotes
+85: Hamilton Tiger-Cats|Tiger-Cats, Montreal Alouettes|Alouettes, Edmonton Elks|Elks, Charlotte Bobcats|Bobcats, Vancouver Grizzlies, Toronto Huskies
+100: Boston Bees :: What baseball's Boston Braves called themselves for five seasons, from 1936 to 1940, before switching back.
+
+? Name an athlete famous enough to go by one name
+10: Pelé, Shaq, LeBron, Kobe, Tiger, Serena, Ronaldinho
+30: Ronaldo, Neymar, Kaká, Magic, Kareem, Wilt, A-Rod, Ichiro, Vinícius|Vini Jr., Casemiro, Raphinha, Alisson, Ederson, Richarlison, Firmino, Pepe, Pedri, Gavi, Rodri, Xavi
+60: Messi, Big Papi, Zico, Rivaldo, Romário, Bebeto, Cafu, Marcelo, Rodrygo, Hulk, Endrick, Nani, Deco, Eusébio, Sócrates, Juninho, Robinho, Adriano, Isco, Koke, Zizou, Dr. J, Venus, Rafa, Gronk, Yogi
+85: Fred, Fernandinho, Dida, Jairzinho, Tostão, Didi, Vavá, Rivelino, Joselu
+100: Garrincha :: A Brazilian winger nicknamed "the Joy of the People" who won two World Cups even though one of his legs was shorter than the other.
+
+? Name something a referee or umpire might call
+10: Foul, Strike, Ball, Out, Safe, Offside|Offsides, Timeout
+30: Traveling|Travel, Double Dribble, Penalty, Holding, Pass Interference, False Start, Touchdown, Goal, Fair Ball, Foul Ball, Balk, Interference, Charging, Blocking, Technical Foul|Technical, Flagrant Foul, Free Throw, Free Kick, Penalty Kick, Corner Kick|Corner, Throw-In, Goal Kick, Yellow Card, Red Card, Handball, Icing, Hooking, Tripping, Slashing, High Sticking, Roughing the Passer, Delay of Game, Offensive Foul, Three Seconds|Three-Second Violation, Goaltending, Jump Ball, Play Ball, Home Run, Incomplete Pass|Incomplete, First Down, Unsportsmanlike Conduct, Personal Foul, Face Mask|Facemask, Fault, Double Fault, Let, In, Batter Up
+60: Illegal Formation, Shot Clock Violation, Over and Back|Backcourt Violation, Carrying|Palming, Kicked Ball, Infield Fly, Ground Rule Double, Fair Catch, Safety, Touchback, Catch, Fumble, Encroachment, Clipping, Intentional Grounding, Illegal Procedure, Too Many Men on the Field|Too Many Men, Deuce, Advantage, Love, Game Set Match, Net, Foot Fault, Long, Wide, Hand Check, Break, Ten Count|Count, Knockdown, Low Blow, Pin|Three Count, Stalling, Takedown, Scrum, Knock-On, Forward Pass, Play On, Dead Ball, Obstruction
+85: Two-Minute Warning, Lane Violation, Escape, Reversal, Sin Bin, Catcher's Interference
+100: Hinder :: A call in racquetball and squash when a player accidentally gets in the other's way, so the point is played over.
+
+? Name a sport where you use a racket or paddle
+10: Tennis, Ping Pong|Table Tennis, Badminton, Pickleball, Squash, Racquetball
+15: Kayaking
+30: Paddleball, Canoeing, Stand-Up Paddleboarding|Paddleboarding, White Water Rafting|Rafting, Paddle Tennis, Padel
+60: Dragon Boat Racing, Platform Tennis, Beach Tennis, Real Tennis|Court Tennis, Swingball
+85: Frescobol, Matkot|Kadima, Racquets|Rackets, Crossminton|Speedminton, Soft Tennis, Basque Pelota|Pelota
+100: Tamburello :: An Italian sport where players hit the ball with a round frame covered in stretched skin, like a tambourine.
+
+? Name a sport you can do in a swimming pool
+10: Swimming, Diving, Water Polo, Artistic Swimming|Synchronized Swimming
+15: Underwater Hockey|Octopush
+30: Water Aerobics|Aqua Aerobics, Water Basketball, Water Volleyball, Scuba Diving, Marco Polo, Springboard Diving, Platform Diving, Chicken Fight, Sharks and Minnows
+60: Freediving, Underwater Rugby, Canoe Polo, Kayaking, Aqua Jogging|Water Running, Inner Tube Water Polo, Cannonball Contest, Belly Flop Contest, High Diving, Triathlon, Modern Pentathlon, Finswimming, Lifesaving, Surfing, Aqua Zumba, Water Tag
+85: Aquathlon, Underwater Football, Underwater Target Shooting, Flowboarding|FlowRider, Bodyboarding, Water Yoga, Aquabike, Mermaiding
+100: Plunge for Distance :: An Olympic event held only once, in 1904. Divers glided as far as they could without moving for up to 60 seconds.
+
+? Name a sport in the Winter Olympics
+10: Ice Hockey|Hockey, Figure Skating, Alpine Skiing|Skiing, Snowboarding, Bobsled|Bobsleigh, Curling, Speed Skating
+30: Luge, Skeleton, Ski Jumping, Biathlon, Cross-Country Skiing, Freestyle Skiing, Short Track Speed Skating|Short Track, Nordic Combined, Moguls, Halfpipe, Slalom, Giant Slalom, Downhill, Super-G, Slopestyle, Big Air, Aerials, Ski Cross, Snowboard Cross, Ice Dance|Ice Dancing, Pairs Skating
+60: Mass Start, Team Pursuit, Parallel Giant Slalom, Ski Mountaineering, Alpine Combined|Super Combined, Monobob, Mixed Doubles Curling
+85: Military Patrol, Speed Skiing, Winter Pentathlon, Bandy, Sled Dog Racing
+100: Skijoring :: Skiers towed by galloping horses. It was a demonstration event at the 1928 Winter Olympics in St. Moritz.
+
+? Name something you'd see at a baseball game
+10: Hot Dogs|Hot Dog, Peanuts, Bat, Baseball|Ball, Glove|Mitt, Pitcher, Umpire
+30: Catcher, Batter, Home Plate, Dugout, Bases, Pitcher's Mound|Mound, Scoreboard, Jumbotron, Fans, Mascot, Cracker Jack, Nachos, Beer, Foul Pole, Outfield, Infield, Diamond, Bullpen, Home Run, Strikeout, Kiss Cam, The Wave|Wave, Foul Ball, Batting Helmet|Helmet, Cleats, Uniforms|Jerseys, Baseball Cap|Cap, Rally Cap, Vendors|Peanut Vendor, Seventh-Inning Stretch, Organ, National Anthem, First Pitch|Ceremonial First Pitch, Grand Slam, Stolen Base, Double Play, Foul Lines|Chalk Lines, On-Deck Circle, Catcher's Mask, Pitch Clock, Bleachers, Sunflower Seeds, Take Me Out to the Ball Game, T-Shirt Cannon, Foam Finger, Popcorn
+60: Rosin Bag, Batting Gloves, Chest Protector, Shin Guards, Bat Boy, Ball Kid|Ball Girl, Radar Gun, Warning Track, Upper Deck, Luxury Box|Suite, Press Box, Announcers|Broadcasters, Grounds Crew|Ground Crew, Tarp, Rain Delay, Bubble Gum, Chewing Tobacco, Pine Tar, Sweet Caroline, Sausage Race|Hot Dog Race, Fireworks, Bobblehead, Pretzels, Cotton Candy, Garlic Fries, Dippin' Dots, Soda, Scorecard|Program, Green Monster, Phillie Phanatic, Mr. Met, Wrigley Field, Fenway Park, Dodger Dog, Ejection
+85: Scalpers, Ivy, Pesky's Pole, Splash Hits, Bernie Brewer, Racing Presidents
+100: Rubbing Mud|Baseball Rubbing Mud :: Mud from a secret spot along the Delaware River. Umpires rub it on every new baseball to take the shine off.
+
+? Name a sport where you score goals
+10: Soccer|Football, Ice Hockey|Hockey, Lacrosse, Water Polo, Field Hockey, Handball
+15: Basketball
+30: Rugby, Australian Rules Football|Aussie Rules|AFL, Gaelic Football, Hurling, Netball, Polo, Futsal, Beach Soccer, Floorball, Ringette, Bandy, Roller Hockey|Inline Hockey, Quidditch|Quadball, Underwater Hockey, American Football, Street Hockey, Air Hockey, Foosball|Table Soccer
+60: Korfball, Camogie, Shinty, Canoe Polo, Goalball, Rocket League
+85: Subbuteo, Polocrosse, Horseball, Buzkashi, Elephant Polo, Motoball
+100: Cycleball :: Two-player teams on fixed-gear bikes who steer the ball into the goal using only their wheels.
+
+? Name a famous race
+10: Boston Marathon, Indianapolis 500|Indy 500, Kentucky Derby, Tour de France, Daytona 500, New York City Marathon|NYC Marathon, Iditarod
+30: 24 Hours of Le Mans|Le Mans, Monaco Grand Prix, Belmont Stakes, Preakness Stakes, Grand National, Melbourne Cup, Dakar Rally, London Marathon, Chicago Marathon, Berlin Marathon, Tokyo Marathon, Giro d'Italia, Vuelta a España, Isle of Man TT, Baja 1000, The Boat Race, America's Cup, Ironman World Championship|Ironman, The Amazing Race, Space Race, 100-Meter Dash|100m, Marathon
+60: Head of the Charles, Sydney to Hobart, Vendée Globe, Pikes Peak International Hill Climb|Pikes Peak, Bathurst 1000, 12 Hours of Sebring, Rolex 24 at Daytona, Coca-Cola 600, Brickyard 400, British Grand Prix, Italian Grand Prix, Singapore Grand Prix, Las Vegas Grand Prix, Paris-Roubaix, Great Race of Mercy|Serum Run, The Tortoise and the Hare, Steeplechase
+85: The Ocean Race|Volvo Ocean Race, Japanese Grand Prix, Macau Grand Prix, Western States 100, Badwater Ultramarathon|Badwater 135, Marathon des Sables, Comrades Marathon, Two Oceans Marathon, Milan-San Remo, Tour of Flanders, Peachtree Road Race, Bay to Breakers, Mount Washington Road Race
+100: Barkley Marathons :: A brutal Tennessee trail race. You enter by writing an essay, and it starts when the race director lights a cigarette.
+
+? Name an athlete who played more than one pro sport
+~last
+10: Bo Jackson, Deion Sanders, Michael Jordan, Jim Thorpe
+30: Tim Tebow, Brian Jordan, Danny Ainge, John Elway, Russell Wilson, Herschel Walker, Brock Lesnar
+60: Jackie Robinson, Dave DeBusschere, Gene Conley, Otto Graham, Drew Henson, Renaldo Nehemiah, Bob Hayes, Babe Didrikson Zaharias|Babe Didrikson, Lolo Jones, Clara Hughes, Ricky Williams, John Lynch
+85: Ron Reed, Dick Groat, Ernie Nevers, Josh Booty, Chad Hutchinson, D.J. Dozier, Vic Janowicz, Willie Gault, Christa Rothenburger
+100: Chuck Connors :: Played in both the NBA and Major League Baseball, then became a TV star as the lead in The Rifleman.
