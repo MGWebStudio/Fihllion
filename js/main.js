@@ -368,7 +368,20 @@ function rankedTrouble(error, reply) {
       : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
     unreachable: BLOCKED_NETWORK,
   };
-  if (error === 'unknown' || error === 'banned') ranked.forget();
+  const dive = G.dive;
+  if (error === 'unknown' || error === 'banned') {
+    ranked.forget();
+    // Nothing answered yet, so the choice reopens and they pick a new nickname (or play for fun).
+    if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
+      delete dive.choice;
+      dive.ranked = false;
+      saveDive(dive);
+      goHome();
+      openDailyChoice(error === 'banned' ? 'That nickname was removed. Pick a new one to play ranked.'
+        : 'The server doesn’t know your nickname anymore. Pick one to play ranked.');
+      return;
+    }
+  }
   goHome();
   notice(messages[error] || 'Couldn’t reach the ranked server. Check your connection and tap Dive in to try again.');
 }
@@ -1141,7 +1154,7 @@ function wireNickForm(done) {
 const RANKED_RULES = '<p class="choice-rules">One try · No photos · Leaving the app mid-question scores 0</p>';
 
 // Before each Daily: ranked, on the leaderboard, or just for fun with photos.
-function openDailyChoice() {
+function openDailyChoice(problem = '') {
   const me = ranked.player();
   openSheet('Today’s Daily', `
     <p class="choice-lead">Dive #${G.today}. How do you want to play it?</p>
@@ -1171,6 +1184,7 @@ function openDailyChoice() {
   $('choiceRanked')?.addEventListener('click', () => choose('ranked'));
   $('choiceNormal').addEventListener('click', () => choose('normal'));
   wireNickForm(() => choose('ranked'));
+  if (problem && $('nickError')) $('nickError').textContent = problem;
   const section = el.sheet.querySelector('.choice-ranked');
   findServer().then((base) => {
     if (base || !section.isConnected) return;
