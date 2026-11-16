@@ -336,7 +336,10 @@ async function fetchRankedQuestion() {
     return;
   }
   G.prompt = { id: q.id, text: q.text, ranked: true, gem: null };
-  G.index = null;
+  // Today's answer lists are already loaded (they're public), so an answer on the list can start
+  // sinking right away. The server still scores every answer, and its reply is what counts.
+  const listed = content.byId.get(q.id);
+  G.index = listed ? buildIndex(withHiddenAnswer(listed, { mode: 'daily', day: q.day }, content.calendar.firstDay(q.id))) : null;
   G.rankedRound = q.round;
   dive.deadline = Date.now() + Math.max(0, q.msLeft);
   saveDive(dive);
@@ -536,29 +539,48 @@ function onSubmit(event) {
 }
 
 // In ranked, every answer goes to the server, which scores it (asking the referee when it isn't on
-// the list) and sends back how much time is left on its clock.
+// the list) and sends back how much time is left on its clock. An answer on this device's copy of
+// the list starts sinking while that reply is on its way, which hides the wait on slow routes like
+// the Google relay. The reveal still waits for the server's verdict.
 async function submitRanked(raw, { final = false } = {}) {
   const { dive, prompt, token } = { dive: G.dive, prompt: G.prompt, token: G.token };
+  const listed = raw && G.index ? findAnswer(raw, G.index) : null;
+  const reply = ranked.guess(dive.day, G.rankedRound, raw, final).catch((error) => {
+    console.error(error);
+    return null;
+  });
+  if (listed) {
+    el.answer.blur();
+    G.phase = 'sinking';
+    setScreen('sink');
+    const [, res] = await Promise.all([world.drop({ name: listed.name, tier: listed.tier }), reply]);
+    if (token !== G.token || G.dive !== dive || G.prompt !== prompt) return; // they left meanwhile
+    settleRanked(raw, res, { final, dropped: true });
+    return;
+  }
   G.phase = 'checking';
   el.feedback.classList.remove('is-bad');
-  el.feedback.textContent = raw ? 'Checking…' : '';
-  const slow = setTimeout(() => {
-    if (G.phase !== 'checking' || G.prompt !== prompt) return;
-    el.play.classList.add('is-checking');
-    if (raw) el.feedback.textContent = `Not on our list. Asking the referee about “${raw}”…`;
+  // With the list on this device, a miss is known to need the referee straight away.
+  const toReferee = Boolean(G.index) && raw.length >= 2;
+  el.feedback.textContent = toReferee ? `Not on our list. Asking the referee about “${raw}”…` : raw ? 'Checking…' : '';
+  el.play.classList.toggle('is-checking', toReferee);
+  const slow = toReferee ? null : setTimeout(() => {
+    if (G.phase === 'checking' && G.prompt === prompt) el.play.classList.add('is-checking');
   }, 700);
-  let res = null;
-  try {
-    res = await ranked.guess(dive.day, G.rankedRound, raw, final);
-  } catch (error) {
-    console.error(error);
-  }
+  const res = await reply;
   clearTimeout(slow);
   if (token !== G.token || G.dive !== dive || G.prompt !== prompt) return; // they left meanwhile
   el.play.classList.remove('is-checking');
+  settleRanked(raw, res, { final });
+}
+
+// Acts on the server's verdict on a ranked answer. `dropped` means the answer already sank because
+// it's on this device's list.
+function settleRanked(raw, res, { final = false, dropped = false } = {}) {
+  const dive = G.dive;
   if (res?.result === 'hit') {
-    prompt.gem = { blurb: res.blurb };
-    lockIn(raw, { name: res.name, tier: res.tier, checked: res.checked });
+    G.prompt.gem = { blurb: res.blurb };
+    lockIn(raw, { name: res.name, tier: res.tier, checked: res.checked }, { dropped });
     return;
   }
   if (res?.result === 'stale') {
@@ -569,6 +591,12 @@ async function submitRanked(raw, { final = false } = {}) {
   if (final || res?.settled || res?.result === 'late') {
     missRound(raw || null);
     return;
+  }
+  // The question is still open on the server. After a drop, that means this device's list and the
+  // server's disagreed (an old copy of the list, say), so it's back to the question.
+  if (dropped) {
+    showPrompt();
+    el.answer.value = raw;
   }
   G.phase = 'prompt';
   G.lastSecond = null;
@@ -661,7 +689,8 @@ function missRound(typed, { voided = false } = {}) {
   showReveal(round);
 }
 
-function lockIn(raw, hit) {
+// `dropped`: the answer already sank (a ranked answer on the list), so go straight to the reveal.
+function lockIn(raw, hit, { dropped = false } = {}) {
   const dive = G.dive;
   const round = { id: G.prompt.id, input: raw, name: hit.name, tier: hit.tier, pts: TIERS[hit.tier].pts };
   if (hit.checked) round.checked = true;
@@ -669,6 +698,10 @@ function lockIn(raw, hit) {
   dive.deadline = null;
   saveDive(dive);
   el.answer.blur();
+  if (dropped) {
+    showReveal(round);
+    return;
+  }
   G.phase = 'sinking';
   const token = G.token;
   setScreen('sink');

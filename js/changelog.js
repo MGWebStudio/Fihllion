@@ -4,6 +4,16 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-16',
+    time: '4:30 PM',
+    title: 'Faster ranked at school',
+    short: 'Faster ranked at school',
+    items: [
+      'In ranked, answers on the list start sinking the moment you hit Drop, even on school Wi-Fi.',
+      'On networks that block the game’s server, the game remembers the way around and gets started sooner next time.',
+    ],
+  },
+  {
     date: '2026-11-13',
     time: '4:00 PM',
     big: true,

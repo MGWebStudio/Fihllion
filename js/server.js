@@ -2,8 +2,11 @@
 // School filters (Securly, at least) block both of its own addresses, workers.dev and pages.dev
 // (relay/), so there's a third way in: a Google Apps Script relay (relay/google-apps-script.js),
 // since Google gets through. The game asks the server's own addresses first and only tries the
-// Google relay, which is slower and has a daily limit, when neither answers. On this PC the game
+// Google relay, which is slower and has a daily limit, when neither answers. A device that needed
+// the relay goes straight to it on its next visit and checks the others in the background. On this PC the game
 // talks to a local copy started with `npm run dev` in worker/.
+import * as store from './store.js';
+
 const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 const GOOGLE_RELAY = 'https://script.google.com/macros/s/AKfycbyU4JcIVZqJW5G2wCNFJ1KEtlMlU6DxxMPhKTXdUxqN1Tu3Gz-midM5QOkiQLOuF46F/exec';
 const DIRECT = IS_LOCAL
@@ -14,8 +17,13 @@ const RELAYS = IS_LOCAL ? [] : [GOOGLE_RELAY].filter(Boolean);
 // The relay takes the path as ?path=, and adds a hop each way.
 const direct = (base) => ({ base, relay: false, url: (path) => `${base}${path}` });
 const relay = (base) => ({ base, relay: true, url: (path) => (path === '/health' ? base : `${base}?path=${encodeURIComponent(path)}`) });
-const STAGES = [DIRECT.map(direct), RELAYS.map(relay)].filter((stage) => stage.length);
+const DIRECTS = DIRECT.map(direct);
+const RELAYED = RELAYS.map(relay);
+const STAGES = [DIRECTS, RELAYED].filter((stage) => stage.length);
 const RELAY_EXTRA_MS = 6000;
+// Set while this device's last visit needed the relay (school Wi-Fi, usually), so the next visit
+// goes straight to it instead of first waiting on addresses that were blocked.
+const ROUTE_KEY = 'server.route';
 
 export const HAS_SERVER = STAGES.length > 0;
 
@@ -47,12 +55,26 @@ function firstToAnswer(stage) {
   });
 }
 
+// While on the remembered relay, checks whether the server's own addresses answer again (the
+// Chromebook went home, say) and switches to them, since they're faster.
+function lookForDirect() {
+  firstToAnswer(DIRECTS).then((address) => {
+    if (!address) return;
+    current = address;
+    store.remove(ROUTE_KEY);
+  });
+}
+
 // Settles on an address that answers, trying the server's own addresses before the relay.
 // Resolves to null when nothing does, and the next call asks again.
 export function findServer() {
   if (current) return Promise.resolve(current);
   if (!finding) {
     finding = (async () => {
+      if (RELAYED.length && DIRECTS.length && store.get(ROUTE_KEY) === 'relay') {
+        lookForDirect();
+        return RELAYED[0];
+      }
       for (const stage of STAGES) {
         const address = await firstToAnswer(stage);
         if (address) return address;
@@ -62,6 +84,8 @@ export function findServer() {
     finding.then((address) => {
       current = address;
       finding = null;
+      if (address?.relay) store.set(ROUTE_KEY, 'relay');
+      else if (address) store.remove(ROUTE_KEY);
     });
   }
   return finding;
@@ -102,6 +126,8 @@ export async function post(path, body, { timeout = 12000, keepalive = false } = 
     } catch (error) {
       if (attempt > 0 || error.name === 'AbortError' || error.name === 'TimeoutError') throw error;
       if (current === address) current = null;
+      // The next try checks every address again instead of trusting the remembered relay.
+      if (address.relay) store.remove(ROUTE_KEY);
     }
   }
 }
