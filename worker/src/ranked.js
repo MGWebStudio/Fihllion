@@ -177,7 +177,7 @@ async function guess(env, player, data, relayed) {
   const final = data.final === true;
   const miss = async (result = 'miss') => {
     if (final) {
-      await settle(env, run, { tier: -1, pts: 0 });
+      await settle(env, run, typed ? { tier: -1, pts: 0, typed } : { tier: -1, pts: 0 });
       return { result, settled: true, run: publicRun(run) };
     }
     return { result, msLeft: run.deadline - Date.now() - GRACE_MS };
@@ -208,7 +208,10 @@ async function guess(env, player, data, relayed) {
   }
   if (!hit) return miss();
   const pts = TIERS[hit.tier].pts;
-  if (!(await settle(env, run, { tier: hit.tier, pts }))) return { result: 'stale', run: publicRun(await getRun(env, player, day)) };
+  // The answer is kept with the round so the admin script can show what scored (node admin.mjs answers).
+  const entry = { tier: hit.tier, pts, name: hit.name, typed };
+  if (checked) entry.ref = 1;
+  if (!(await settle(env, run, entry))) return { result: 'stale', run: publicRun(await getRun(env, player, day)) };
   return {
     result: 'hit',
     name: hit.name,
