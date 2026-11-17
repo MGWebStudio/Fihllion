@@ -579,6 +579,54 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .board-count { margin-top: 8px; font-size: 19px; color: var(--muted); }
 .board-note { margin: 0 0 10px; font-size: 21px; line-height: 1.3; color: var(--muted); }
 .board-note b { font-weight: 400; color: var(--gilt); }
+
+/* The top three on a podium: 2nd, 1st, 3rd from left to right, on a floor they rise out of. */
+.podium {
+  list-style: none; margin: 4px auto 12px; padding: 0 3px; max-width: 460px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: end;
+  overflow: hidden; border-bottom: 4px solid var(--slate);
+}
+.podium-spot { display: flex; flex-direction: column; align-items: center; min-width: 0; padding-top: 3px; text-align: center; }
+.podium-spot:nth-child(1) { order: 2; }
+.podium-spot:nth-child(2) { order: 1; }
+.podium-spot:nth-child(3) { order: 3; }
+.medal-gold { --cap: #fff1b8; --face: #ffc94d; --side: #d98a12; --edge: #6f3a06; --digit: #4a1f02; --h: 96px; --digit-size: 52px; }
+.medal-silver { --cap: #f4f9fc; --face: #c3d3dd; --side: #8aa1b0; --edge: #2c4250; --digit: #22343f; --h: 68px; --digit-size: 42px; }
+.medal-bronze { --cap: #ffd2a4; --face: #e08a45; --side: #a65423; --edge: #4d230c; --digit: #3d1a06; --h: 50px; --digit-size: 36px; }
+.podium-champ { display: block; width: 90px; height: 66px; margin-bottom: 2px; image-rendering: pixelated; animation: champ-bob 1.4s steps(1) infinite; }
+@keyframes champ-bob { 50% { transform: translateY(-3px); } }
+.podium-name {
+  max-width: 100%; font-size: 21px; line-height: 1.05; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.podium-you {
+  margin-top: 3px; padding: 2px 5px 1px;
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink); background: var(--glass);
+}
+.podium-score { margin: 1px 0 7px; font-family: var(--font-display); font-size: 27px; line-height: 1.1; color: var(--gilt); }
+.medal-gold .podium-score { font-size: 32px; }
+.podium-block {
+  align-self: stretch; height: var(--h); padding-top: 9px;
+  display: flex; justify-content: center;
+  font-family: var(--font-display); font-size: var(--digit-size); line-height: .8; color: var(--digit);
+  background: linear-gradient(var(--cap) 0 6px, var(--face) 6px);
+  box-shadow: inset -7px 0 0 var(--side), 0 -3px 0 0 var(--edge), -3px 0 0 0 var(--edge), 3px 0 0 0 var(--edge);
+}
+.podium-spot.is-open .podium-block { opacity: .3; }
+.podium.is-rising .podium-spot { animation: podium-rise .45s steps(6) both; }
+.podium.is-rising .podium-spot:nth-child(2) { animation-delay: .14s; }
+.podium.is-rising .podium-spot:nth-child(1) { animation-delay: .28s; }
+@keyframes podium-rise { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .podium.is-rising .podium-spot, .podium-champ { animation: none; }
+}
+@media (max-width: 380px) {
+  .podium { gap: 5px; }
+  .podium-name { font-size: 19px; }
+  .podium-score { font-size: 24px; }
+  .medal-gold .podium-score { font-size: 28px; }
+}
 .link-btn {
   appearance: none; border: 0; padding: 0; cursor: pointer; background: none;
   font: inherit; color: var(--gilt); text-decoration: underline; text-underline-offset: 3px;

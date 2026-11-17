@@ -4,6 +4,17 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-17',
+    time: '8:45 AM',
+    title: 'A podium for the top three',
+    short: 'Leaderboard podium',
+    items: [
+      'The top three on the leaderboard now stand on a gold, silver and bronze podium.',
+      'First place gets the goldfish in a crown.',
+      'If you’re in the top three, your spot says You.',
+    ],
+  },
+  {
     date: '2026-11-16',
     time: '4:30 PM',
     title: 'Faster ranked at school',

@@ -575,6 +575,29 @@ export function pilgrimHat() {
   ], { K: '#141217', k: '#34313a', h: '#56525e', B: '#0e0d11', Y: '#f2c14e', y: '#b8862a' });
 }
 
+// First place on the leaderboard: the goldfish in a crown. The crown sits where the pilgrim hat
+// does, its band on top of the head and the dorsal fin poking out behind it.
+const CROWN = [
+  '.K...K...K.',
+  'KWK.KWK.KWK',
+  'KYK.KYK.KYK',
+  'KYYKYYYKYYK',
+  'KYYYYLYYYYK',
+  'KYRYYBYYRYK',
+  'KYYYYYYYYYK',
+  'KyyyyyyyyyK',
+  'KKKKKKKKKKK',
+];
+const CROWN_COLOURS = { K: '#5a2a06', W: '#fff8e0', Y: '#ffc94d', L: '#fff1b8', y: '#d98a12', R: '#ff5a6e', B: '#7fe7dc' };
+
+export function champion() {
+  const canvas = newCanvas(GOLDFISH[0].length, GOLDFISH.length + 4);
+  const ctx = canvas.getContext('2d');
+  stamp(ctx, GOLDFISH, FISH, 0, 4);
+  stamp(ctx, CROWN, CROWN_COLOURS, 17, 0);
+  return canvas;
+}
+
 function stamp(ctx, rows, palette, left, top) {
   rows.forEach((row, y) => {
     [...row].forEach((ch, x) => {

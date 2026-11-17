@@ -13,7 +13,7 @@ import { findServer } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
-import { drawLogo, paintIcon, iconURL } from './sprites.js';
+import { drawLogo, paintIcon, iconURL, champion } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
 const el = Object.fromEntries([
@@ -1065,10 +1065,36 @@ function boardHTML(data, tab) {
   const me = list.me;
   const isMe = (row) => me && row.rank === me.rank && row.name === me.name;
   const row = (r) => `<li${isMe(r) ? ' class="is-me"' : ''}><span class="board-rank">${r.rank}</span><span class="board-name">${esc(r.name)}</span><span class="board-score">${r.score}</span></li>`;
+  const rest = list.top.slice(3);
   const outside = me && !list.top.some(isMe);
   const count = `${list.players} ${list.players === 1 ? 'player' : 'players'}${tab === 'weekly' ? ' · Monday to Sunday' : ''}`;
-  return `<ol class="board">${list.top.map(row).join('')}${outside ? `<li class="board-gap" aria-hidden="true">···</li>${row(me)}` : ''}</ol>
-    <p class="board-count">${count}</p>`;
+  const others = rest.length || outside
+    ? `<ol class="board" start="4">${rest.map(row).join('')}${outside ? `<li class="board-gap" aria-hidden="true">···</li>${row(me)}` : ''}</ol>`
+    : '';
+  return `${podiumHTML(list.top, isMe)}${others}<p class="board-count">${count}</p>`;
+}
+
+// The top three stand on a podium, first in the middle. Ties share a rank, so the block's
+// colour and height follow the rank: two players tied for first both get gold.
+const MEDALS = ['gold', 'silver', 'bronze'];
+const PLACES = ['1st', '2nd', '3rd'];
+let championURL = null;
+
+function podiumHTML(top, isMe) {
+  const spots = [0, 1, 2].map((i) => {
+    const r = top[i];
+    const rank = r ? r.rank : i + 1;
+    const block = `<span class="podium-block" aria-hidden="true">${rank}</span>`;
+    if (!r) return `<li class="podium-spot is-open medal-${MEDALS[rank - 1]}" aria-hidden="true">${block}</li>`;
+    championURL ||= champion().toDataURL();
+    const crown = rank === 1 ? `<img class="podium-champ" src="${championURL}" alt="">` : '';
+    const you = isMe(r) ? '<span class="podium-you">You</span>' : '';
+    return `<li class="podium-spot medal-${MEDALS[rank - 1]}${isMe(r) ? ' is-me' : ''}">
+      <span class="sr-only">${PLACES[rank - 1]} place:</span>${crown}
+      <span class="podium-name">${esc(r.name)}</span>${you}
+      <span class="podium-score">${r.score}</span>${block}</li>`;
+  });
+  return `<ol class="podium">${spots.join('')}</ol>`;
 }
 
 // Draws the board into a box and returns a function that reloads it.
@@ -1078,21 +1104,30 @@ function mountBoard(box, { onLoad } = {}) {
       <button type="button" data-tab="daily">Today</button><button type="button" data-tab="weekly">This week</button>
     </div><div class="board-body"><p class="empty">Loading the board…</p></div>`;
   const body = box.querySelector('.board-body');
-  const paint = () => {
+  // The podium rises when the board first shows and on a tab switch, not when a refresh
+  // brings the same board back.
+  let shown = '';
+  const paint = (rise = false) => {
     box.querySelectorAll('[data-tab]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.tab === boardState.tab)));
-    if (boardState.data) body.innerHTML = boardHTML(boardState.data, boardState.tab);
+    if (!boardState.data) return;
+    const html = boardHTML(boardState.data, boardState.tab);
+    if (html === shown && !rise) return;
+    shown = html;
+    body.innerHTML = html;
+    if (rise) body.querySelector('.podium')?.classList.add('is-rising');
   };
   box.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => {
     audio.click();
     boardState.tab = button.dataset.tab;
-    paint();
+    paint(true);
   }));
   const load = async () => {
     if (!box.isConnected) return;
     try {
+      const first = !boardState.data;
       boardState.data = await ranked.board();
       if (!box.isConnected) return;
-      paint();
+      paint(first);
       onLoad?.(boardState.data);
     } catch (error) {
       console.error(error);
