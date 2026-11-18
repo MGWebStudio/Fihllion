@@ -295,6 +295,20 @@ function advance() {
   else presentPrompt();
 }
 
+// One tap moves on, and taps after it do nothing. In ranked the next prompt comes from the server,
+// which takes a couple of seconds through the Google relay, so the button shows it's on its way.
+function nextFromReveal() {
+  if (G.phase !== 'reveal') return;
+  audio.click();
+  if (isRankedToday(G.dive) && G.dive.rounds.length < PROMPTS_PER_DIVE) {
+    el.btnNext.style.minWidth = `${el.btnNext.offsetWidth}px`; // the shorter label mustn't shrink it
+    el.btnNext.classList.add('is-busy');
+    el.btnNext.setAttribute('aria-disabled', 'true');
+    el.btnNext.textContent = 'Sinking...'; // the pixel font has no "…"
+  }
+  advance();
+}
+
 function presentPrompt() {
   stopListening();
   const dive = G.dive;
@@ -325,7 +339,8 @@ async function fetchRankedQuestion() {
     console.error(error);
     failure = error.name === 'Unreachable' ? 'unreachable' : null;
   }
-  if (token !== G.token) return;
+  // A second reply for the same question would wipe whatever the player has typed since the first.
+  if (token !== G.token || G.phase !== 'fetching') return;
   if (!q || q.error) {
     rankedTrouble(q?.error || failure, q);
     return;
@@ -726,6 +741,9 @@ function showReveal(round) {
     : round.tier === 5 ? (G.prompt.gem?.blurb || pick(tier.lines))
       : round.checked ? 'Not on our list, but the referee says it counts.' : pick(tier.lines);
   el.btnNext.innerHTML = last ? 'Surface <span aria-hidden="true">▲</span>' : 'Keep sinking <span aria-hidden="true">▼</span>';
+  el.btnNext.classList.remove('is-busy');
+  el.btnNext.removeAttribute('aria-disabled');
+  el.btnNext.style.minWidth = '';
   setScreen('reveal');
   replay(el.revealCard);
   renderHud();
@@ -1526,7 +1544,7 @@ function wire() {
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });
   el.btnMenu.addEventListener('click', () => { audio.unlock(); audio.click(); openMenu(); });
-  el.btnNext.addEventListener('click', () => { audio.click(); advance(); });
+  el.btnNext.addEventListener('click', nextFromReveal);
   el.answerForm.addEventListener('submit', onSubmit);
   el.answerForm.addEventListener('animationend', () => el.answerForm.classList.remove('is-shaking'));
   el.sheetClose.addEventListener('click', closeSheet);

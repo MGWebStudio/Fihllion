@@ -4,6 +4,16 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-18',
+    time: '4:00 PM',
+    title: 'Smoother between prompts',
+    short: 'Smoother between prompts',
+    items: [
+      'In ranked, Keep sinking says Sinking... as soon as you tap it, while the next prompt loads.',
+      'Extra taps on it are ignored, so they can’t slow the game down.',
+    ],
+  },
+  {
     date: '2026-11-17',
     time: '8:45 AM',
     title: 'A podium for the top three',
