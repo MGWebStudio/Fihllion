@@ -1334,7 +1334,7 @@ function mountBoard(box, { onLoad, curve = false } = {}) {
     shown = html;
     body.innerHTML = html;
     drawCurves(body);
-    if (rise) body.querySelector('.podium')?.classList.add('is-rising');
+    if (rise) risePodium(body.querySelector('.podium'));
   };
   box.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => {
     audio.click();
@@ -1361,6 +1361,18 @@ function mountBoard(box, { onLoad, curve = false } = {}) {
   paint();
   load();
   return load;
+}
+
+// Safari on iPhone can leave first place one step short of the floor when the stepped rise
+// ends, hiding a third of its block. Dropping the animation once it's over puts it back.
+function risePodium(podium) {
+  if (!podium) return;
+  podium.classList.add('is-rising');
+  const settle = () => podium.classList.remove('is-rising');
+  podium.addEventListener('animationend', (event) => {
+    if (event.animationName === 'podium-rise' && event.target === podium.firstElementChild) settle();
+  });
+  setTimeout(settle, 1500);
 }
 
 // The board keeps updating as other players finish.

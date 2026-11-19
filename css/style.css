@@ -636,7 +636,7 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
   box-shadow: inset -7px 0 0 var(--side), 0 -3px 0 0 var(--edge), -3px 0 0 0 var(--edge), 3px 0 0 0 var(--edge);
 }
 .podium-spot.is-open .podium-block { opacity: .3; }
-.podium.is-rising .podium-spot { animation: podium-rise .45s steps(6) both; }
+.podium.is-rising .podium-spot { animation: podium-rise .45s steps(6) backwards; }
 .podium.is-rising .podium-spot:nth-child(2) { animation-delay: .14s; }
 .podium.is-rising .podium-spot:nth-child(1) { animation-delay: .28s; }
 @keyframes podium-rise { from { transform: translateY(100%); } }
