@@ -15,6 +15,7 @@ export const CHANGELOG = [
       'The James method is over. For prompts about people, a first or last name on its own, like James, Chris or Adams, doesn’t count anymore. Type the full name.',
       'One word that only fits once the rest is filled in, like “shell” for Shell Falls, scores 10.',
       'After the Daily, a curve shows where you landed among everyone on the ranked board, with your goldfish riding it. The leaderboard has it too.',
+      'New feedback box in the menu. Found a bug, or an answer that should’ve counted? Send it, with your nickname or without.',
       'The podium lines up on phones.',
     ],
   },

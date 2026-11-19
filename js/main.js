@@ -9,7 +9,7 @@ import * as store from './store.js';
 import { noteEndless, sendDaily } from './counts.js';
 import { askReferee } from './referee.js';
 import * as ranked from './ranked.js';
-import { findServer } from './server.js';
+import { findServer, post } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
@@ -1795,6 +1795,7 @@ function openMenu() {
     ['My stats', 'menuStats'],
     ['How to play', 'menuHow'],
     ['What’s new', 'menuNews'],
+    ranked.available ? ['Send feedback', 'menuFeedback'] : null,
   ].filter(Boolean);
   const note = G.phase !== 'prompt' ? ''
     : isRankedToday(G.dive) ? '<p class="results-next">The ranked clock keeps running while this is open.</p>'
@@ -1815,6 +1816,82 @@ function openMenu() {
   $('menuStats').addEventListener('click', openStats);
   $('menuHow').addEventListener('click', openHow);
   $('menuNews').addEventListener('click', openNews);
+  $('menuFeedback')?.addEventListener('click', openFeedback);
+}
+
+// Feedback -------------------------------------------------------------------------------
+// A note to whoever runs the game, read with `node admin.mjs feedback` in worker/. It says where
+// in the game it was sent from, and carries the nickname only when the player ticks the box.
+const FEEDBACK_MAX = 600;
+const FEEDBACK_WAIT_MS = 30000; // between notes from one device
+
+function feedbackPlace() {
+  const screen = document.body.dataset.screen;
+  const dive = G.dive;
+  const which = !dive ? '' : dive.mode === 'daily' ? `Dive #${dive.day}` : 'Endless';
+  if ((screen === 'play' || screen === 'reveal') && G.prompt) return `${which}: ${G.prompt.text}`;
+  return [screen, which].filter(Boolean).join(', ');
+}
+
+function openFeedback() {
+  const me = ranked.player();
+  const place = feedbackPlace();
+  const onPrompt = /: /.test(place);
+  openSheet('Send feedback', `<form id="fbForm" class="fb-form" novalidate>
+      <p class="nick-lead">Found a bug, or an answer that should’ve counted? Got an idea? Write it here.</p>
+      <textarea id="fbText" maxlength="${FEEDBACK_MAX}" rows="5" aria-label="Your feedback" placeholder="Your feedback"></textarea>
+      <p id="fbCount" class="fb-count" aria-hidden="true">0 / ${FEEDBACK_MAX}</p>
+      ${onPrompt ? `<p class="fb-note">The prompt you’re on gets sent with it: “${esc(G.prompt.text)}”</p>` : ''}
+      ${me ? `<label class="fb-sign"><input id="fbSign" type="checkbox"> Add my nickname, ${esc(me.name)}</label>` : ''}
+      <button class="btn btn-primary fb-send" type="submit">Send</button>
+      <p id="fbError" class="nick-error" role="alert"></p>
+    </form>`);
+  const form = $('fbForm');
+  const text = $('fbText');
+  const error = $('fbError');
+  const submit = form.querySelector('button[type="submit"]');
+  text.addEventListener('input', () => { $('fbCount').textContent = `${text.value.length} / ${FEEDBACK_MAX}`; });
+  text.focus();
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const note = text.value.trim();
+    if (note.length < 2) {
+      error.textContent = 'Write something first.';
+      return;
+    }
+    const wait = FEEDBACK_WAIT_MS - (Date.now() - store.get('feedback.sent', 0));
+    if (wait > 0) {
+      error.textContent = `You just sent one. Try again in ${Math.ceil(wait / 1000)} seconds.`;
+      return;
+    }
+    submit.disabled = true;
+    error.textContent = 'Sending…';
+    let status = 0;
+    try {
+      const res = await post('/feedback', {
+        text: note,
+        ...($('fbSign')?.checked ? { key: me.key } : {}),
+        device: ON_PHONE ? 'phone' : 'computer',
+        place,
+      });
+      status = res.status;
+    } catch (problem) {
+      console.error(problem);
+      status = problem.name === 'Unreachable' ? -1 : 0;
+    }
+    if (status === 204) {
+      store.set('feedback.sent', Date.now());
+      audio.click();
+      el.sheetBody.innerHTML = `<p class="nick-lead">Sent. Thanks!</p>
+        <button id="fbDone" class="btn btn-primary fb-send" type="button">Done</button>`;
+      $('fbDone').addEventListener('click', closeSheet);
+      return;
+    }
+    submit.disabled = false;
+    error.textContent = status === 429 ? 'The feedback box is full for today. Try again tomorrow.'
+      : status === -1 ? 'Can’t reach the server from this network. Try again later.'
+        : 'Couldn’t send it. Try again.';
+  });
 }
 
 // Boot -----------------------------------------------------------------------------------

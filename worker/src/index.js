@@ -9,18 +9,22 @@
 // the same ruling for everyone without asking the model again. A daily cap keeps it inside the
 // free allowance. When the cap is hit or the model fails, the answer simply doesn't count.
 //
-// Ranked: see ranked.js.
+// Ranked: see ranked.js. Feedback box: see feedback.js.
 //
 //   POST /dive    {"day": 5, "rounds": [{"id": "lizard", "name": "Gecko"}, {"id": "bank", "typed": "..."}]}
 //   POST /check   {"prompt": "lizard", "typed": "shingleback"}  ->  {"valid": true, "name": "Shingleback", "tier": 3}
 //   POST /ranked/...  see ranked.js
+//   POST /feedback    see feedback.js
 //   GET  /health
 //
 // Requests come from the game's own site, or through the Google relay (relay/google-apps-script.js)
 // for school networks that block this address. The relay isn't a browser, so it has no Origin
-// header and says who it is with X-Fihllion-Relay instead.
+// header and says who it is with X-Fihllion-Relay instead. The relay only passes the paths it was
+// set up with, so the game sends newer ones through it inside /check, as
+// {"via": "/feedback", "body": {...}}, and they're unpacked here.
 import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge } from './shared.js';
 import { ranked } from './ranked.js';
+import { feedback } from './feedback.js';
 
 const MAX_BODY = 4096;
 const MAX_ROUNDS = 7;
@@ -38,8 +42,7 @@ export default {
     const json = (data) => new Response(JSON.stringify(data), { status: 200, headers: { ...cors, 'Content-Type': 'application/json' } });
 
     if (url.pathname === '/health') return reply(200, 'ok');
-    const isRanked = url.pathname.startsWith('/ranked/');
-    if (url.pathname !== '/dive' && url.pathname !== '/check' && !isRanked) return reply(404, 'Not found');
+    if (!['/dive', '/check', '/feedback'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
     if (request.method === 'OPTIONS') return reply(allowed ? 204 : 403);
     if (request.method !== 'POST') return reply(405, 'Use POST');
     if (!allowed && !relayed) return reply(403, 'Unknown origin');
@@ -50,8 +53,11 @@ export default {
     } catch (error) {
       return reply(400, error.message);
     }
-    if (url.pathname === '/check') return referee(text, env, reply, json);
-    if (isRanked) return ranked(url.pathname.slice('/ranked/'.length), text, env, reply, json, { relayed });
+    let path = url.pathname;
+    if (path === '/check') ({ path, text } = unpackVia(text));
+    if (path === '/check') return referee(text, env, reply, json);
+    if (path === '/feedback') return feedback(text, env, reply);
+    if (path.startsWith('/ranked/')) return ranked(path.slice('/ranked/'.length), text, env, reply, json, { relayed });
 
     let dive;
     try {
@@ -72,6 +78,20 @@ export default {
 function allowedOrigin(origin, env) {
   if (!origin) return false;
   return String(env.ALLOWED_ORIGINS || '').split(',').map((item) => item.trim()).includes(origin);
+}
+
+// A request that rode through the relay inside /check (see the top of this file). Anything else is
+// a real referee check.
+const VIA = /^\/(feedback|ranked\/[a-z]+)$/;
+function unpackVia(text) {
+  let data = null;
+  try {
+    data = parseJSON(text);
+  } catch {
+    // The referee says what's wrong with it.
+  }
+  if (typeof data?.via === 'string' && VIA.test(data.via)) return { path: data.via, text: JSON.stringify(data.body ?? {}) };
+  return { path: '/check', text };
 }
 
 async function readBody(request) {

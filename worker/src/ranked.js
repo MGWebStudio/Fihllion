@@ -89,7 +89,7 @@ async function join(env, name) {
   return { name, key };
 }
 
-async function playerFor(env, key) {
+export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
   return env.DB.prepare('SELECT id, name, banned, paused, rename_offer FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
 }

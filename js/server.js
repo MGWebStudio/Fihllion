@@ -14,7 +14,11 @@ const DIRECT = IS_LOCAL
   : ['https://fihllion-counts.mgstudiogame.workers.dev', 'https://fihllion-api.pages.dev'];
 const RELAYS = IS_LOCAL ? [] : [GOOGLE_RELAY].filter(Boolean);
 
-// The relay takes the path as ?path=, and adds a hop each way.
+// The relay takes the path as ?path=, and adds a hop each way. It only passes the paths it was set
+// up with, so newer ones (renames, feedback) ride through it inside /check and the server unpacks
+// them. That way the relay never needs redeploying for a new kind of request.
+const RELAY_PATHS = /^\/(dive|check|ranked\/(join|status|question|guess|void|board))$/;
+const viaRelay = (path, body) => (RELAY_PATHS.test(path) ? [path, body] : ['/check', { via: path, body }]);
 const direct = (base) => ({ base, relay: false, url: (path) => `${base}${path}` });
 const relay = (base) => ({ base, relay: true, url: (path) => (path === '/health' ? base : `${base}?path=${encodeURIComponent(path)}`) });
 const DIRECTS = DIRECT.map(direct);
@@ -115,10 +119,11 @@ export async function post(path, body, { timeout = 12000, keepalive = false } = 
     const address = await findServer();
     if (!address) throw new Unreachable();
     try {
-      const res = await fetch(address.url(path), {
+      const [sendPath, sendBody] = address.relay ? viaRelay(path, body) : [path, body];
+      const res = await fetch(address.url(sendPath), {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify(body),
+        body: JSON.stringify(sendBody),
         signal: timeoutSignal(timeout + (address.relay ? RELAY_EXTRA_MS : 0)),
         keepalive,
       });

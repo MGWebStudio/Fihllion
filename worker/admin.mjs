@@ -3,6 +3,7 @@
 //
 //   node admin.mjs board [day]     today's board (or that day's), with flags for left-the-tab questions
 //   node admin.mjs answers <name> [day]   what that player answered on their latest ranked run (or that day's)
+//   node admin.mjs feedback [days] what players sent from the feedback box in the last 7 days (or that many)
 //   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
 //   node admin.mjs unban <name>
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -98,7 +99,18 @@ if (command === 'board') {
   }));
   console.log(`${run.name}, day ${run.day}: ${run.score} points${run.flags ? `, ${run.flags} flagged` : ''}.`);
   console.table(rows);
+} else if (command === 'feedback') {
+  const days = value ? Math.max(1, Math.floor(Number(value)) || 7) : 7;
+  const rows = sql(`SELECT f.at, f.text, f.device, f.place, p.name FROM feedback f LEFT JOIN players p ON p.id = f.player
+    WHERE f.at > ${Date.now() - days * 86400000} ORDER BY f.at`);
+  if (!rows.length) console.log(`No feedback in the last ${days} days.`);
+  for (const row of rows) {
+    const when = new Date(row.at).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    const about = [when, row.name || 'no nickname', row.device, row.place].filter(Boolean).join(' · ');
+    console.log(`${about}\n  ${row.text.replace(/\n/g, '\n  ')}\n`);
+  }
+  console.log(`${rows.length} in the last ${days} days.`);
 } else {
-  console.log('Use: node admin.mjs board [day] | answers <name> [day] | ban | unban | pause | unpause <name>');
+  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | ban | unban | pause | unpause <name>');
   console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name>  [--local]');
 }

@@ -671,6 +671,21 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .nick-rules { margin-top: 8px; font-size: 20px; color: var(--muted); }
 .nick-rules li::before { content: '· '; color: var(--gilt); }
 .nick-skip { width: 100%; margin-top: 16px; }
+
+/* Feedback box */
+.fb-form textarea {
+  display: block; width: calc(100% - 6px); min-height: 132px; margin: 3px; padding: 8px 11px; resize: vertical;
+  border: 0; border-radius: 0; outline: 0;
+  background: var(--ink); color: var(--cream); font-family: var(--font-body); font-size: 22px; line-height: 1.25;
+  box-shadow: 0 -3px 0 0 var(--glass), 0 3px 0 0 var(--glass), -3px 0 0 0 var(--glass), 3px 0 0 0 var(--glass);
+}
+.fb-form textarea::placeholder { color: var(--muted); opacity: 1; }
+.fb-form textarea:focus-visible { box-shadow: 0 -3px 0 0 var(--gilt), 0 3px 0 0 var(--gilt), -3px 0 0 0 var(--gilt), 3px 0 0 0 var(--gilt); }
+.fb-count { margin: 6px 0 0; text-align: right; font-size: 18px; color: var(--muted); }
+.fb-note { margin: 4px 0 0; font-size: 19px; line-height: 1.3; color: var(--muted); }
+.fb-sign { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 21px; cursor: pointer; }
+.fb-sign input { width: 22px; height: 22px; margin: 0; accent-color: var(--gilt); }
+.fb-send { width: 100%; margin-top: 16px; }
 @media (prefers-reduced-motion: reduce) { .mode-banner { animation: none; } }
 @media (max-height: 720px) and (min-height: 481px) {
   #title .btn-big { min-height: 50px; padding: 11px 30px; }
