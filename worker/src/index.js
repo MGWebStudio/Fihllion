@@ -142,5 +142,6 @@ async function referee(text, env, reply, json) {
   const ruling = await judge(env, prompt, typed, local ? { nobank: data.nobank, nocache: data.nocache, model: data.model } : {});
   if (ruling.busy) return json({ valid: false, busy: true });
   const extra = local ? ruling.debug || {} : {};
-  return json(ruling.valid ? { valid: true, name: ruling.name, tier: ruling.tier, ...extra } : { valid: false, ...extra });
+  return json(ruling.valid ? { valid: true, name: ruling.name, tier: ruling.tier, ...extra }
+    : { valid: false, ...(ruling.reason ? { reason: ruling.reason } : {}), ...extra });
 }

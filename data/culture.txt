@@ -50,6 +50,7 @@
 100: Charles Frederick Worth|Charles Worth :: An Englishman in Paris often called the father of haute couture. He was among the first to sew his name into his clothes as a label.
 
 ? Name a famous person named John
+~last
 10: John Lennon, John F. Kennedy|JFK|John Kennedy, John Travolta, John Wayne, John Legend, John Cena, John Adams
 15: John the Baptist, John Doe
 30: John Mayer, John Krasinski, John Goodman, John Candy, John Belushi, John Cusack, John Malkovich, John Stamos, John Cleese, John Oliver, John Williams, John Grisham, John Steinbeck, John McCain, John Glenn, John Hancock, John Quincy Adams, John Wilkes Booth, John Lithgow, John Mulaney, John Leguizamo, John Boyega, John Cho, John Denver, John Fogerty, John Mellencamp, John Coltrane, John Madden, John Elway, John McEnroe, John Stockton, John D. Rockefeller|John Rockefeller, John Deere, John Muir, John Locke, John Milton, John Keats, John Paul II|Pope John Paul II, John Lewis, John Brown, John Wick, Johnny Depp, Johnny Cash, Johnny Carson

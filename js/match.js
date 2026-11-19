@@ -33,14 +33,14 @@ function singular(key) {
 export function buildIndex(prompt) {
   const exact = new Map();
   const forms = [];
-  const add = (key, answer) => {
+  const add = (key, answer, sound = null) => {
     if (!key) return;
     if (!exact.has(key)) exact.set(key, answer);
-    forms.push({ key, answer });
+    forms.push({ key, answer, sound });
   };
   // Answers are sorted common-first, so a shared spelling resolves to the commoner answer.
   for (const answer of prompt.answers) {
-    for (const form of [answer.name, ...answer.aliases]) add(normalize(form, prompt.drop), answer);
+    for (const form of [answer.name, ...answer.aliases]) add(normalize(form, prompt.drop), answer, sounds(form, prompt.drop));
   }
   if (!prompt.exact) {
     for (const answer of prompt.answers) {
@@ -79,11 +79,50 @@ function editDistance(a, b, limit) {
   return prev[b.length];
 }
 
+// First letters that sound alike count as the same start, so "crave" is one letter off Krave.
+const START = { c: 'k', k: 'k', q: 'k', s: 's', z: 's', f: 'f', v: 'f', i: 'i', y: 'i' };
+const sameStart = (a, b) => a[0] === b[0] || (START[a[0]] && START[a[0]] === START[b[0]]);
+
 function allowedEdits(a, b) {
   const longest = Math.max(a.length, b.length);
   if (longest <= 3) return 0;
-  if (longest <= 7) return a[0] === b[0] || longest >= 6 ? 1 : 0;
-  return a[0] === b[0] ? 2 : 1;
+  if (longest <= 7) return sameStart(a, b) || longest >= 6 ? 1 : 0;
+  return sameStart(a, b) ? 2 : 1;
+}
+
+// How a word sounds, roughly: vowels after the first letter drop out, letters that sound alike
+// share a code (c/k/q, ph/f, s/z, sh/ch) and doubled sounds count once. "sentar" and "Centaur"
+// both sound like SNTR, and "airheart" and "Earhart" like ART, so a guess spelled the way it
+// sounds still counts. Words are compared one by one, so "john white" isn't "John Doe".
+const SOUND_MIN = 6; // shorter words share their consonants too often: tiger and Toyger, water and weather
+const VOWELS = 'aeiouy';
+const sounds = (text, drop) => words(text, drop).map(soundKey).join(' ');
+export function soundKey(key) {
+  const s = key.replace(/^(kn|gn|pn|ps|pt|wr)/, (pair) => pair[1]);
+  let out = '';
+  for (let i = 0; i < s.length; i += 1) {
+    const c = s[i];
+    const next = s[i + 1] || '';
+    if (VOWELS.includes(c)) {
+      if (i === 0) out += 'A';
+      continue;
+    }
+    switch (c) {
+      case 'c': out += next === 'h' ? 'X' : 'eiy'.includes(next) && next ? 'S' : 'K'; break;
+      case 'd': out += 'T'; break;
+      case 'g': out += next === 'h' ? '' : 'G'; break;
+      case 'h': out += i === 0 ? 'H' : ''; break;
+      case 'p': out += next === 'h' ? 'F' : 'P'; break;
+      case 'q': out += 'K'; break;
+      case 's': out += next === 'h' ? 'X' : next === 'c' && s[i + 2] === 'h' ? '' : 'S'; break;
+      case 'v': out += 'F'; break;
+      case 'w': out += VOWELS.includes(next) && next ? 'W' : ''; break;
+      case 'x': out += i === 0 ? 'S' : 'KS'; break;
+      case 'z': out += 'S'; break;
+      default: out += c.toUpperCase();
+    }
+  }
+  return out.replace(/(.)\1+/g, '$1');
 }
 
 export function findAnswer(input, index) {
@@ -103,5 +142,15 @@ export function findAnswer(input, index) {
       bestDistance = distance;
     }
   }
-  return best;
+  if (best || key.length < SOUND_MIN) return best;
+  // Nothing a letter or two off, so try sound-alike spellings. They still have to be close: one
+  // more letter off than usual (two more for long answers), so words that only share their
+  // consonants, like midas and Medusa, don't match.
+  const sound = sounds(input, index.drop);
+  const limit = key.length >= 11 ? 3 : 2;
+  for (const form of index.forms) {
+    if (form.sound !== sound || !sameStart(key, form.key)) continue;
+    if (editDistance(key, form.key, limit) <= limit) return form.answer;
+  }
+  return null;
 }

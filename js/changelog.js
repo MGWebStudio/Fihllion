@@ -5,6 +5,21 @@
 export const CHANGELOG = [
   {
     date: '2026-11-18',
+    time: '6:00 PM',
+    title: 'The Dudrey update',
+    short: 'The Dudrey update',
+    items: [
+      'For the teacher who said Fihllion needs spell check. Answers spelled the way they sound count now, like “sentar” for Centaur or “shoots and ladders.”',
+      'It can’t catch every spelling error and read your mind, so it might still be easier to just learn to spell. 😂 (kidding ofc)',
+      'Ranked is on computers only now. On phones and tablets the Daily is yesterday’s, just for fun, so nobody can try today’s on a phone first.',
+      'The James method is over. For prompts about people, a first or last name on its own, like James, Chris or Adams, doesn’t count anymore. Type the full name.',
+      'One word that only fits once the rest is filled in, like “shell” for Shell Falls, scores 10.',
+      'After the Daily, a curve shows where you landed among everyone on the ranked board, with your goldfish riding it. The leaderboard has it too.',
+      'The podium lines up on phones.',
+    ],
+  },
+  {
+    date: '2026-11-18',
     time: '4:00 PM',
     title: 'Smoother between prompts',
     short: 'Smoother between prompts',

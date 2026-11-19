@@ -8,6 +8,7 @@
 100: Fontange :: A towering 1680s hairdo on a wire frame, supposedly started by a mistress of Louis XIV tying up her hair during a hunt.
 
 ? Name a famous person named Chris
+~last
 10: Chris Hemsworth, Chris Evans, Chris Pratt, Chris Pine, Chris Rock
 15: Chris Griffin, Kris Kringle
 30: Chris Brown, Chris Martin, Chris Farley, Chris Tucker, Chris Paul, Christopher Nolan, Christopher Columbus, Christopher Reeve, Christopher Walken, Christopher Lloyd, Christopher Lee, Chris Cornell, Chris Stapleton, Chris Kyle, Christian Bale, Kris Jenner, Chris Christie, Christopher Robin, Chris Kattan, Chris O'Donnell, Chris Noth, Chris Redfield, Chris Cooper, Chris Evert, Kris Kristofferson, Chris Harrison, Chris Hansen, Christopher Plummer, Christopher Meloni, Christopher Mintz-Plasse, Chris Bosh, Chris Webber, Cristiano Ronaldo, Chris Isaak, Chris Rea
@@ -59,6 +60,7 @@
 100: Mummy brown :: A paint pigment made from actual ground-up Egyptian mummies, until they ran out of mummies.
 
 ? Name a famous person named Michael
+~last
 10: Michael Jordan, Michael Jackson, Michael Scott, Michael Phelps, Michael B. Jordan
 15: Michael Myers, Michael Bolton
 30: Michael Bublé|Michael Buble, Michael J. Fox, Michael Caine, Michael Keaton, Michael Douglas, Michael Cera, Michael Moore, Michael Bay, Michael Corleone, Michael Kors, Michael Vick, Michael Strahan, Michael Buffer, Mike Tyson, Mike Myers, Michael Schumacher, Michael Fassbender, Michael Stipe, Michael Crichton, Michael Bloomberg, Michael Gambon, Michael Richards, Michael Rapaport, Michael Cohen, Michael Dell, Michael Landon, Michael Flatley, Michael Imperioli, Mike Pence, Mike Wazowski, Michael Kelso, Michael Bluth, Michael Knight, Michael Faraday, Mikhail Gorbachev, Michael Clarke Duncan, Michael Shannon

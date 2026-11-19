@@ -26,6 +26,20 @@ export async function join(name) {
 }
 
 export const status = () => call('status', withKey());
+
+// A new nickname, when the admin offered or required one. The scores stay with the key.
+export async function rename(name) {
+  const result = await call('rename', withKey({ name }));
+  if (result.name && !result.error) store.set('ranked.player', { ...player(), name: result.name });
+  return result;
+}
+export const keepName = () => call('rename', withKey({ keep: true }));
+
+// The server's name wins, so a nickname the admin changed shows up on this device too.
+export function syncName(name) {
+  const me = player();
+  if (me && name && me.name !== name) store.set('ranked.player', { ...me, name });
+}
 // `day` is the Daily this page is playing. If midnight passed, the server says so instead of starting
 // the next day's dive early.
 export const question = (day) => call('question', withKey({ day }));

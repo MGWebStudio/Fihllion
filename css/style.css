@@ -439,6 +439,19 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   box-shadow: 0 -2px 0 0 var(--slate), 0 2px 0 0 var(--slate), -2px 0 0 0 var(--slate), 2px 0 0 0 var(--slate);
 }
 .chart-tip small { display: block; margin-top: 2px; font-size: 18px; color: var(--muted); }
+/* Score curve: scores below the player's are orange, the rest a sea blue, and their goldfish rides
+   the curve at their score. */
+.curve-lead { margin: 0 0 6px; font-size: 21px; line-height: 1.25; color: var(--cream); }
+.curve-lead b { font-weight: 400; color: var(--gilt); }
+.curve-note { margin: 0 0 10px; font-size: 19px; line-height: 1.3; color: var(--muted); }
+.curve { margin-bottom: 14px; }
+.curve svg { shape-rendering: crispEdges; }
+.curve .curve-edge { fill: none; stroke: #ffe39a; stroke-width: 2; }
+.curve .curve-edge.is-rest { stroke: #8cc4dd; }
+.curve .curve-mark { stroke: var(--cream); stroke-width: 2; stroke-dasharray: 2 3; }
+.curve .curve-fish { image-rendering: pixelated; }
+.curve .curve-chip { fill: var(--glass); }
+.curve .curve-you { font-size: 10px; letter-spacing: .06em; fill: var(--ink); }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .stat { padding: 8px 10px 7px; background: rgba(13, 40, 62, .7); }
@@ -586,10 +599,16 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 /* The top three on a podium: 2nd, 1st, 3rd from left to right, on a floor they rise out of. */
 .podium {
   list-style: none; margin: 4px auto 12px; padding: 0 3px; max-width: 460px;
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: end;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; align-items: stretch;
   overflow: hidden; border-bottom: 4px solid var(--slate);
 }
-.podium-spot { display: flex; flex-direction: column; align-items: center; min-width: 0; padding-top: 3px; text-align: center; }
+/* Every spot is as tall as the tallest and stacks its contents from the floor up, so the blocks
+   share a floor even where a phone's browser lays the grid out differently. */
+.podium-spot {
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  min-width: 0; padding-top: 3px; text-align: center;
+}
+.podium-name, .podium-score, .podium-you, .podium-champ, .podium-block { flex: none; }
 .podium-spot:nth-child(1) { order: 2; }
 .podium-spot:nth-child(2) { order: 1; }
 .podium-spot:nth-child(3) { order: 3; }

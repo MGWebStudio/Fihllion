@@ -5,6 +5,11 @@
 //   node admin.mjs answers <name> [day]   what that player answered on their latest ranked run (or that day's)
 //   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
 //   node admin.mjs unban <name>
+//   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
+//   node admin.mjs unpause <name>
+//   node admin.mjs offer-rename <name> [name...]   next time they open the game, offer a one-time nickname change
+//   node admin.mjs force-rename <name>   off the boards until they pick a new nickname; scores move to the new one
+//   node admin.mjs cancel-rename <name>
 //   add --local to any of them to use the test database on this PC instead of the live one
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -16,6 +21,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const local = args.includes('--local');
 const [command, value, extra] = args.filter((arg) => arg !== '--local');
+const names = args.filter((arg) => arg !== '--local').slice(1);
 
 function sql(query) {
   const wrangler = join(here, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
@@ -42,6 +48,32 @@ if (command === 'board') {
   if (!found.length) throw new Error(`No player called ${value}.`);
   sql(`UPDATE players SET banned = ${command === 'ban' ? 1 : 0} WHERE name_key = '${key}'`);
   console.log(`${found[0].name} ${command === 'ban' ? 'is hidden from the boards and can’t play ranked' : 'is back on the boards'}.`);
+} else if (['pause', 'unpause', 'offer-rename', 'force-rename', 'cancel-rename'].includes(command)) {
+  if (!names.length) throw new Error('Give at least one nickname.');
+  const set = {
+    pause: 'paused = 1',
+    unpause: 'paused = 0',
+    'offer-rename': 'rename_offer = 1',
+    'force-rename': 'rename_offer = 2',
+    'cancel-rename': 'rename_offer = 0',
+  }[command];
+  const said = {
+    pause: 'is off the boards and can’t play ranked for now',
+    unpause: 'can play ranked again and is back on the boards',
+    'offer-rename': 'will be offered a new nickname next time they open the game',
+    'force-rename': 'is off the boards until they pick a new nickname',
+    'cancel-rename': 'won’t be asked to change nickname',
+  }[command];
+  for (const name of names) {
+    const key = nameKey(name);
+    const found = sql(`SELECT name FROM players WHERE name_key = '${key}'`);
+    if (!found.length) {
+      console.log(`No player called ${name}.`);
+      continue;
+    }
+    sql(`UPDATE players SET ${set} WHERE name_key = '${key}'`);
+    console.log(`${found[0].name} ${said}.`);
+  }
 } else if (command === 'answers') {
   const key = nameKey(value);
   const dayClause = extra ? `AND r.day = ${Math.floor(Number(extra))}` : '';
@@ -67,5 +99,6 @@ if (command === 'board') {
   console.log(`${run.name}, day ${run.day}: ${run.score} points${run.flags ? `, ${run.flags} flagged` : ''}.`);
   console.table(rows);
 } else {
-  console.log('Use: node admin.mjs board [day] | answers <name> [day] | ban <name> | unban <name>  [--local]');
+  console.log('Use: node admin.mjs board [day] | answers <name> [day] | ban | unban | pause | unpause <name>');
+  console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name>  [--local]');
 }

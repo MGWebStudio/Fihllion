@@ -13,7 +13,7 @@ import { findServer } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
-import { drawLogo, paintIcon, iconURL, champion } from './sprites.js';
+import { drawLogo, paintIcon, iconURL, champion, goldfish } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
 const el = Object.fromEntries([
@@ -31,6 +31,20 @@ const SCREENS = ['title', 'play', 'reveal', 'results'];
 const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 // ?today= pretends it's another day, which the ranked server won't go along with, so ranked sits out.
 const PRETEND_DAY = IS_LOCAL && new URLSearchParams(location.search).has('today');
+
+// Ranked is for computers. On a phone or tablet the Daily runs a day behind, so nobody can play
+// today's prompts on their phone and then again, ranked, on a school computer. Chromebooks count as
+// computers, touch screen or not. On this PC, ?device=phone or ?device=computer tries either.
+const ON_PHONE = (() => {
+  const forced = IS_LOCAL && new URLSearchParams(location.search).get('device');
+  if (forced) return forced === 'phone';
+  const ua = navigator.userAgent || '';
+  if (/CrOS/.test(ua)) return false;
+  if (/iPhone|iPad|iPod|Android|Mobile/i.test(ua)) return true;
+  if (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) return true; // iPads say they're Macs
+  // A phone asking for the desktop site still has only a touch screen.
+  return Boolean(window.matchMedia?.('(pointer: coarse)').matches && !window.matchMedia('(any-pointer: fine)').matches);
+})();
 
 const G = { phase: 'loading', dive: null, prompt: null, index: null, today: 1, token: 0, lastSecond: null, shownDepth: null, resultsDive: null, fromArchive: false, loading: false, noticeTimer: null };
 let content = null;
@@ -105,6 +119,10 @@ function makeDive(mode, day, ids) {
 // always clear whether a dive counts.
 function modeOf(dive) {
   if (dive.mode === 'endless') return { key: 'endless', tag: 'Endless', long: 'Endless', note: 'Practice. Nothing here counts.' };
+  // A phone's Daily is yesterday's, played from the big button rather than the Archive.
+  if (dive.day !== G.today && dive.day === dailyDay() && !G.fromArchive) {
+    return { key: 'daily', tag: `Daily #${dive.day}`, long: `Yesterday’s Daily · Dive #${dive.day}`, note: 'Just for fun. Ranked is on computers only.' };
+  }
   if (dive.day !== G.today) return { key: 'archive', tag: `Archive #${dive.day}`, long: `Archive · Dive #${dive.day}`, note: 'A replay of a past day.' };
   if (dive.ranked) return { key: 'ranked', tag: `Ranked #${dive.day}`, long: `Ranked Daily · Dive #${dive.day}`, note: 'One try. This one counts.' };
   return {
@@ -137,6 +155,14 @@ const saveDive = (dive) => store.set(diveKey(dive), dive);
 const getDaily = (day) => store.get(`daily.${day}`) || makeDive('daily', day, content.calendar.idsFor(day));
 const isFresh = (dive) => dive.rounds.length === 0 && !dive.deadline;
 
+// The Daily this device plays: today's, or on a phone yesterday's, just for fun. A phone that had
+// already started today's before this rule finishes it.
+function dailyDay() {
+  if (!ON_PHONE || PRETEND_DAY || G.today <= 1) return G.today;
+  const todays = store.get(`daily.${G.today}`);
+  return todays && !isFresh(todays) ? G.today : G.today - 1;
+}
+
 function anchorsOf(dive) {
   let m = 0;
   const anchors = [];
@@ -156,8 +182,10 @@ function endlessPool() {
   const { calendar } = content;
   const safe = [];
   const later = [];
+  // Not even a returning prompt from today's Daily, so Endless can't preview the ranked dive.
+  const todays = new Set(calendar.idsFor(G.today));
   for (const id of content.ids) {
-    if (content.retired(id)) continue;
+    if (content.retired(id) || todays.has(id)) continue;
     const first = calendar.firstDay(id);
     if (first === null || first < G.today) safe.push(id);
     else if (first >= G.today + 7) later.push(id);
@@ -216,7 +244,7 @@ function queueEndless() {
 
 // Today's dive and the next endless one load in the background, so starting either is instant.
 function prefetch() {
-  content.load(content.calendar.idsFor(G.today)).catch(() => {});
+  content.load(content.calendar.idsFor(dailyDay())).catch(() => {});
   const current = store.get('endless.current');
   if (current && !current.done) content.load(current.ids).catch(() => {});
   else queueEndless();
@@ -225,31 +253,35 @@ function prefetch() {
 // Title ----------------------------------------------------------------------------------
 function refreshTitle() {
   G.today = content.calendar.dayNumber(currentDate());
-  const dive = store.get(`daily.${G.today}`);
+  const day = dailyDay();
+  const behind = day !== G.today; // a phone, on yesterday's Daily
+  const dive = store.get(`daily.${day}`);
   const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
   const started = dive && !isFresh(dive);
-  const isRanked = Boolean(dive?.ranked);
+  const isRanked = Boolean(dive?.ranked) && !behind;
   const arrow = '<span aria-hidden="true">▼</span>';
-  // The big button is always today's Daily, and the tag above it says so. Endless sits below it,
+  // The big button is always the Daily, and the tag above it says which. Endless sits below it,
   // marked as practice.
   el.dailyTag.innerHTML = isRanked
-    ? `<span aria-hidden="true">★</span> Ranked Daily · Dive #${G.today}`
-    : `Today’s Daily · Dive #${G.today}`;
+    ? `<span aria-hidden="true">★</span> Ranked Daily · Dive #${day}`
+    : `${behind ? 'Yesterday’s' : 'Today’s'} Daily · Dive #${day}`;
   el.dailyTag.classList.toggle('is-ranked', isRanked);
   if (dive?.done) {
-    el.btnBegin.innerHTML = 'See today’s results';
+    el.btnBegin.innerHTML = behind ? 'See yesterday’s results' : 'See today’s results';
     el.diveLabel.textContent = `Next Daily in ${untilMidnight()}`;
   } else if (started) {
     el.btnBegin.innerHTML = `Finish the Daily ${arrow}`;
-    el.diveLabel.textContent = `Prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE} · ${shortDate(G.today)}`;
+    el.diveLabel.textContent = `Prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE} · ${shortDate(day)}`;
   } else {
     el.btnBegin.innerHTML = `Play the Daily ${arrow}`;
-    el.diveLabel.textContent = shortDate(G.today);
+    el.diveLabel.textContent = behind ? 'Today’s is ranked, on computers' : shortDate(day);
   }
-  // Before the dive starts, the tag above the button already says which dive it is.
-  el.diveLabel.hidden = !started;
+  // Before the dive starts, the tag above the button already says which dive it is. On a phone
+  // the line under it says why it's yesterday's.
+  el.diveLabel.hidden = !started && !behind;
   el.rankedLine.hidden = !ranked.available || PRETEND_DAY;
-  if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
+  if (behind) el.rankedLine.innerHTML = '<span class="ranked-off">Ranked is on computers only</span> · Leaderboard';
+  else if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
   else if (started) el.rankedLine.innerHTML = '<span class="ranked-off">Just for fun today</span> · Leaderboard';
   else if (me) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
   else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Pick a nickname';
@@ -385,8 +417,22 @@ function rankedTrouble(error, reply) {
     day: midnight ? 'Midnight passed, so that ranked dive is over. Today’s is ready.'
       : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
     unreachable: BLOCKED_NETWORK,
+    paused: 'Ranked is paused for this nickname for now.', // mid-dive, so today's pick can't change
+    rename: 'Pick a new nickname to keep playing ranked.',
   };
   const dive = G.dive;
+  // Paused or asked to change nickname: nothing answered yet, so the choice reopens and says why.
+  if (error === 'paused' || error === 'rename') {
+    G.rankedStatus = { paused: error === 'paused', rename: error === 'rename' ? 'forced' : G.rankedStatus?.rename || null };
+    if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
+      delete dive.choice;
+      dive.ranked = false;
+      saveDive(dive);
+      goHome();
+      openDailyChoice();
+      return;
+    }
+  }
   if (error === 'unknown' || error === 'banned') {
     ranked.forget();
     // Nothing answered yet, so the choice reopens and they pick a new nickname (or play for fun).
@@ -627,7 +673,7 @@ function settleRanked(raw, res, { final = false, dropped = false } = {}) {
     el.feedback.classList.add('is-bad');
     return;
   }
-  noBites(raw);
+  noBites(raw, res.reason);
 }
 
 // Ranked rule: leaving the tab or app during a question voids it. It scores 0 and is flagged.
@@ -637,8 +683,14 @@ function leaveRanked() {
   missRound(el.answer.value.trim() || null, { voided: true });
 }
 
-function noBites(raw) {
-  el.feedback.textContent = `No bites on “${raw}”. Try again.`;
+// A guess the referee found too vague gets told why, so the player knows what would count.
+const TOO_VAGUE = {
+  name: 'Just a name on its own doesn’t count. Try their full name.',
+  repeat: 'That just repeats the prompt. Try a real example.',
+};
+
+function noBites(raw, reason = null) {
+  el.feedback.textContent = TOO_VAGUE[reason] || `No bites on “${raw}”. Try again.`;
   el.feedback.classList.add('is-bad');
   el.answerForm.classList.remove('is-shaking');
   void el.answerForm.offsetWidth;
@@ -664,7 +716,7 @@ async function checkWithReferee(raw, { final = false } = {}) {
     dive.deadline += Date.now() - started;
     saveDive(dive);
   }
-  if (verdict) {
+  if (verdict && !verdict.rejected) {
     // The referee scores listed answers by the file, so this dive's hidden answer is settled here.
     const listed = findAnswer(verdict.name, G.index);
     lockIn(raw, { ...verdict, tier: listed ? listed.tier : Math.min(verdict.tier, 4), checked: true });
@@ -673,7 +725,7 @@ async function checkWithReferee(raw, { final = false } = {}) {
   } else {
     G.phase = 'prompt';
     G.lastSecond = null;
-    noBites(raw);
+    noBites(raw, verdict?.reason);
   }
 }
 
@@ -953,6 +1005,124 @@ function renderChart(box, dive) {
 
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
+// Score curve ----------------------------------------------------------------------------
+// Where a score lands among a day's ranked scores: how many divers scored what, with the player's
+// score marked and everything below it shaded. The server sends only scores, never names.
+const CURVE_MIN = 5;
+let curveCount = 0;
+let fishURL = null;
+
+// The sentence and an empty box that drawCurves fills in once it's on the page. `mine` is the
+// player's score, `onBoard` says whether it's one of `scores`.
+function curveHTML(scores, { mine = null, onBoard = false, day = G.today } = {}) {
+  const n = scores.length;
+  if (n < CURVE_MIN) {
+    return `<p class="curve-note">The curve shows up once ${CURVE_MIN} ranked divers have finished${n ? ` (${n} so far)` : ''}.</p>`;
+  }
+  const today = day === G.today;
+  const divers = (other = '') => (today ? `today’s ${other}ranked divers` : `the ${other}ranked divers on Dive #${day}`);
+  const others = onBoard ? n - 1 : n;
+  const pct = mine === null ? null : Math.round((100 * scores.filter((s) => s < mine).length) / others);
+  const lead = mine === null ? `How ${today ? `today’s ${n} ranked divers` : `the ${n} ranked divers on Dive #${day}`} scored.`
+    : onBoard ? `Better than <b>${pct}%</b> of ${divers('other ')}.`
+    : `Your ${mine} would beat <b>${pct}%</b> of ${divers()}.`;
+  return `<p class="curve-lead">${lead}</p><div class="chart curve" data-scores="${scores.join(',')}" data-mine="${mine ?? ''}"></div>`;
+}
+
+function drawCurves(root) {
+  root.querySelectorAll('.curve[data-scores]').forEach(renderCurve);
+}
+
+function renderCurve(box) {
+  const scores = box.dataset.scores.split(',').map(Number);
+  const mine = box.dataset.mine === '' ? null : Number(box.dataset.mine);
+  const n = scores.length;
+  const width = Math.round(box.clientWidth || 320);
+  const height = 150;
+  const m = { l: 8, r: 8, t: 40, b: 22 }; // room above the curve for your fish and its label
+  const xMax = Math.max(100, Math.ceil((Math.max(...scores, mine ?? 0) + 25) / 100) * 100);
+  const x = (v) => Math.round(m.l + (v / xMax) * (width - m.l - m.r));
+  const base = height - m.b;
+  // A smoothed count of scores, stepped like the pixel art around it.
+  const mean = scores.reduce((sum, s) => sum + s, 0) / n;
+  const sd = Math.sqrt(scores.reduce((sum, s) => sum + (s - mean) ** 2, 0) / n) || 30;
+  const band = Math.max(15, 1.06 * sd * n ** -0.2);
+  const STEPS = 56;
+  const step = xMax / STEPS;
+  const density = Array.from({ length: STEPS }, (_, i) => {
+    const at = (i + 0.5) * step;
+    return scores.reduce((sum, s) => sum + Math.exp(-0.5 * ((at - s) / band) ** 2), 0);
+  });
+  const peak = Math.max(...density);
+  const top = (d) => Math.round(base - (d / peak) * (base - m.t));
+  // The curve's top edge gets a bright cap, like the podium blocks.
+  let edge = `M${x(0)},${top(density[0])}`;
+  density.forEach((d, i) => { edge += `${i ? `V${top(d)}` : ''}H${x((i + 1) * step)}`; });
+  const area = `M${x(0)},${base}V${top(density[0])}${edge.slice(edge.indexOf('H'))}V${base}Z`;
+  const tick = xMax <= 400 ? 100 : 200;
+  let axis = `<line x1="${m.l}" x2="${width - m.r}" y1="${base + 1}" y2="${base + 1}" stroke="#1a4a66" stroke-width="2"/>`;
+  for (let v = 0; v <= xMax; v += tick) {
+    axis += `<text x="${x(v)}" y="${height - 6}" text-anchor="${v === 0 ? 'start' : v === xMax ? 'end' : 'middle'}">${v}</text>`;
+  }
+  const sorted = [...scores].sort((a, b) => a - b);
+  const quart = (q) => sorted[Math.min(n - 1, Math.floor(q * n))];
+  const id = `curve${(curveCount += 1)}`;
+  // Orange fades deeper toward the floor; with your score marked, everything above it is the sea.
+  const gradient = (name, from, to) => `<linearGradient id="${id}${name}" gradientUnits="userSpaceOnUse" x1="0" y1="${m.t}" x2="0" y2="${base}">
+      <stop offset="0" stop-color="${from}"/><stop offset="1" stop-color="${to}"/></linearGradient>`;
+  let defs = gradient('o', '#ffb54a', '#e9650f');
+  let shapes;
+  let marker = '';
+  if (mine === null) {
+    shapes = `<path d="${area}" fill="url(#${id}o)"/><path class="curve-edge" d="${edge}"/>`;
+  } else {
+    const mx = clamp(x(mine), m.l, width - m.r);
+    const at = top(density[clamp(Math.floor(mine / step), 0, STEPS - 1)]);
+    defs += gradient('b', '#4d8db3', '#1d4862');
+    defs += `<clipPath id="${id}c"><rect x="0" y="0" width="${mx}" height="${height}"/></clipPath>`;
+    shapes = `<path d="${area}" fill="url(#${id}b)"/><path class="curve-edge is-rest" d="${edge}"/>
+      <g clip-path="url(#${id}c)"><path d="${area}" fill="url(#${id}o)"/><path class="curve-edge" d="${edge}"/></g>`;
+    // Your goldfish rides the curve at your score, on the highest step under it so it never sinks
+    // into a slope, with a dotted line down to the floor.
+    fishURL ||= goldfish().toDataURL();
+    const fishX = clamp(mx - 15, 0, width - 30);
+    const under = density.filter((_, i) => x((i + 1) * step) > fishX && x(i * step) < fishX + 30).map(top);
+    const fishY = Math.min(at, ...under) - 19;
+    const text = `YOU · ${mine}`;
+    const chipW = 16 + text.length * 7;
+    const chipX = clamp(mx - chipW / 2, 0, width - chipW);
+    marker = `<line class="curve-mark" x1="${mx}" x2="${mx}" y1="${fishY + 19}" y2="${base}"/>
+      <image class="curve-fish" href="${fishURL}" x="${fishX}" y="${fishY}" width="30" height="18"/>
+      <rect class="curve-chip" x="${chipX}" y="${fishY - 18}" width="${chipW}" height="15"/>
+      <text class="curve-you" x="${chipX + chipW / 2}" y="${fishY - 7}" text-anchor="middle">${text}</text>`;
+  }
+  const label = `How ${n} ranked divers scored. Most scored between ${quart(0.25)} and ${quart(0.75)}.${mine === null ? '' : ` Your ${mine} is marked.`}`;
+  box.innerHTML = `<svg viewBox="0 0 ${width} ${height}" height="${height}" role="img" aria-label="${esc(label)}">
+      <defs>${defs}</defs>${shapes}${axis}${marker}
+    </svg><div class="chart-tip" hidden></div>`;
+  // Hovering or tapping a spot says how many scored around there. The box sits above the curve,
+  // so it never covers your fish.
+  const tip = box.querySelector('.chart-tip');
+  const svg = box.querySelector('svg');
+  const BIN = 50;
+  const show = (event) => {
+    const rect = svg.getBoundingClientRect();
+    const at = ((event.clientX - rect.left) * (width / rect.width) - m.l) / (width - m.l - m.r) * xMax;
+    const lo = clamp(Math.floor(at / BIN) * BIN, 0, xMax - BIN);
+    const hi = lo + BIN - 5;
+    const count = scores.filter((s) => s >= lo && s <= hi).length;
+    const you = mine !== null && mine >= lo && mine <= hi;
+    tip.innerHTML = `${count} ${count === 1 ? 'diver' : 'divers'}<small>scored ${lo} to ${hi}${you ? ', like you' : ''}</small>`;
+    tip.hidden = false;
+    const tipW = tip.offsetWidth;
+    tip.style.left = `${clamp(((x(lo + BIN / 2)) / width) * rect.width - tipW / 2, 0, rect.width - tipW)}px`;
+    tip.style.top = `${-tip.offsetHeight - 6}px`;
+  };
+  svg.addEventListener('pointermove', show);
+  svg.addEventListener('pointerdown', show);
+  svg.addEventListener('pointerleave', () => { tip.hidden = true; });
+}
+
 function showResults(dive) {
   G.phase = 'results';
   G.resultsDive = dive;
@@ -974,6 +1144,11 @@ function showResults(dive) {
         <div class="block-title"><h3>Leaderboard</h3><span>Updates as others finish</span></div>
         ${dive.ranked ? '' : `<p class="board-note">You played today’s just for fun, so it’s not on the board. ${unrankedNote}</p>`}
         <div id="resBoard"></div>
+      </section>` : '';
+  // Where this score lands among the day's ranked scores, for any Daily, today's or from the Archive.
+  const curveBlock = ranked.available && dive.mode === 'daily' && !PRETEND_DAY ? `<section class="block">
+        <div class="block-title"><h3>Where you landed</h3><span>${dive.day === G.today ? 'Today’s' : `Dive #${dive.day}’s`} ranked scores</span></div>
+        <div id="resCurve"><p class="curve-note">Loading the scores…</p></div>
       </section>` : '';
   const primary = isEndless
     ? '<button id="resNext" class="btn btn-quiet" type="button">Next endless dive</button>'
@@ -1007,6 +1182,7 @@ function showResults(dive) {
         <button id="resHome" class="btn btn-quiet" type="button">${G.fromArchive ? 'Back to archive' : 'Back to the boat'}</button>
       </div>
       ${nextLine}
+      ${curveBlock}
       ${boardBlock}
       <section class="block">
         <div class="block-title"><h3>Dive log</h3><span>Depth after each prompt</span></div>
@@ -1055,16 +1231,32 @@ function showResults(dive) {
   });
   $('resNext')?.addEventListener('click', () => startEndless());
   $('resNick')?.addEventListener('click', () => openNickname());
+  const curveBox = $('resCurve');
+  let curveShown = '';
+  const fillCurve = (data) => {
+    if (!curveBox?.isConnected || !Array.isArray(data?.daily?.scores)) return;
+    const html = curveHTML(data.daily.scores, { mine: total, onBoard: Boolean(data.daily.me), day: dive.day });
+    if (html === curveShown) return;
+    curveShown = html;
+    curveBox.innerHTML = html;
+    drawCurves(curveBox);
+  };
   if (showBoard) {
     const place = $('resPlace');
     const load = mountBoard($('resBoard'), {
       onLoad: (data) => {
+        fillCurve(data);
         if (!place) return;
         const me = data.daily.me;
         place.textContent = me ? `#${me.rank} of ${data.daily.players} today` : 'Your score is on its way to the board.';
       },
     });
     startBoardPolling(load);
+  } else if (curveBox) {
+    ranked.board(dive.day).then(fillCurve, (error) => {
+      console.error(error);
+      if (curveBox.isConnected) curveBox.innerHTML = '<p class="curve-note">Couldn’t load the scores. Check your connection.</p>';
+    });
   }
   $('resEndless')?.addEventListener('click', () => { G.fromArchive = false; startEndless(); });
   el.results.scrollTop = 0;
@@ -1075,7 +1267,15 @@ function showResults(dive) {
 // Today's Daily and this week's total. Nicknames and scores only, never answers.
 const boardState = { tab: 'daily', data: null, timer: null };
 
-function boardHTML(data, tab) {
+// The player's own score for a board's day: from the board when they played it ranked, or from
+// this device when they played it just for fun.
+function myBoardScore(data) {
+  if (data.daily.me) return { mine: data.daily.me.score, onBoard: true, day: data.day };
+  const dive = store.get(`daily.${data.day}`);
+  return { mine: dive?.done && !dive.ranked ? scoreOf(dive) : null, onBoard: false, day: data.day };
+}
+
+function boardHTML(data, tab, { curve = false } = {}) {
   const list = data[tab];
   if (!list.players) {
     return `<p class="empty">${tab === 'daily' ? 'Nobody’s finished today’s ranked dive yet.' : 'No ranked dives this week yet.'}</p>`;
@@ -1089,7 +1289,8 @@ function boardHTML(data, tab) {
   const others = rest.length || outside
     ? `<ol class="board" start="4">${rest.map(row).join('')}${outside ? `<li class="board-gap" aria-hidden="true">···</li>${row(me)}` : ''}</ol>`
     : '';
-  return `${podiumHTML(list.top, isMe)}${others}<p class="board-count">${count}</p>`;
+  const curvePart = curve && tab === 'daily' && Array.isArray(list.scores) ? curveHTML(list.scores, myBoardScore(data)) : '';
+  return `${curvePart}${podiumHTML(list.top, isMe)}${others}<p class="board-count">${count}</p>`;
 }
 
 // The top three stand on a podium, first in the middle. Ties share a rank, so the block's
@@ -1116,7 +1317,7 @@ function podiumHTML(top, isMe) {
 }
 
 // Draws the board into a box and returns a function that reloads it.
-function mountBoard(box, { onLoad } = {}) {
+function mountBoard(box, { onLoad, curve = false } = {}) {
   boardState.data = null;
   box.innerHTML = `<div class="board-tabs" role="group" aria-label="Which board">
       <button type="button" data-tab="daily">Today</button><button type="button" data-tab="weekly">This week</button>
@@ -1128,10 +1329,11 @@ function mountBoard(box, { onLoad } = {}) {
   const paint = (rise = false) => {
     box.querySelectorAll('[data-tab]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.tab === boardState.tab)));
     if (!boardState.data) return;
-    const html = boardHTML(boardState.data, boardState.tab);
+    const html = boardHTML(boardState.data, boardState.tab, { curve });
     if (html === shown && !rise) return;
     shown = html;
     body.innerHTML = html;
+    drawCurves(body);
     if (rise) body.querySelector('.podium')?.classList.add('is-rising');
   };
   box.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => {
@@ -1176,11 +1378,13 @@ function stopBoardPolling() {
 
 function openBoard() {
   const me = ranked.player();
-  openSheet('Leaderboard', `${me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>.</p>`
-    : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Pick a nickname</button> to get on the board.</p>'}
+  const note = ON_PHONE ? '<p class="board-note">Ranked is on computers only. On a phone the Daily is yesterday’s, just for fun.</p>'
+    : me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>.</p>`
+    : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Pick a nickname</button> to get on the board.</p>';
+  openSheet('Leaderboard', `${note}
     <div id="sheetBoard"></div>`);
   $('sheetNick')?.addEventListener('click', () => openNickname());
-  const load = mountBoard($('sheetBoard'));
+  const load = mountBoard($('sheetBoard'), { curve: true });
   startBoardPolling(() => {
     if (el.sheet.open && $('sheetBoard')) load();
     else if (document.body.dataset.screen !== 'results') stopBoardPolling();
@@ -1191,6 +1395,8 @@ const NICK_ERRORS = {
   invalid: 'Use 3 to 16 letters or numbers, no spaces.',
   blocked: 'Pick a different nickname.',
   taken: 'Someone already has that one. Try another.',
+  forced: 'Pick a new nickname to keep playing ranked.',
+  'not-offered': 'Your nickname doesn’t need to change.',
   unreachable: BLOCKED_NETWORK,
 };
 
@@ -1204,8 +1410,9 @@ const nickFormHTML = (submitLabel, label = 'Nickname') => `<form id="nickForm" c
       <p id="nickError" class="nick-error" role="alert"></p>
     </form>`;
 
-// Saves a nickname from the form in the open sheet, then runs `done`.
-function wireNickForm(done) {
+// Saves a nickname from the form in the open sheet, then runs `done` with the server's reply.
+// `save` makes a new nickname by default, or renames this one.
+function wireNickForm(done, save = ranked.join) {
   const form = $('nickForm');
   if (!form) return;
   const input = $('nickInput');
@@ -1222,7 +1429,7 @@ function wireNickForm(done) {
     error.textContent = 'Saving…';
     let result = null;
     try {
-      result = await ranked.join(name);
+      result = await save(name);
     } catch (problem) {
       console.error(problem);
       if (problem.name === 'Unreachable') result = { error: 'unreachable' };
@@ -1233,7 +1440,56 @@ function wireNickForm(done) {
       input.select();
       return;
     }
-    done();
+    done(result);
+  });
+}
+
+const PAUSED = 'Ranked is paused for this nickname for now. You can still play today’s Daily just for fun.';
+
+// What the server says about this device's nickname: paused, or asked to pick a new one. Checked
+// when the game opens and before each Daily. Also brings over a new name the admin gave it.
+async function checkRanked() {
+  if (!ranked.available || PRETEND_DAY || !ranked.player()) return null;
+  try {
+    const status = await ranked.status();
+    if (!status || status.error) return null;
+    ranked.syncName(status.name);
+    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null };
+    return G.rankedStatus;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+// The admin offered this nickname a one-time change (offer-rename), or requires one
+// (force-rename). The scores stay either way. An offer shows once a day until it's answered.
+function openRename({ then } = {}) {
+  const me = ranked.player();
+  const rename = G.rankedStatus?.rename;
+  if (!me || !rename) return;
+  const forced = rename === 'forced';
+  if (!forced) store.set('ranked.renameAsked', G.today);
+  openSheet(forced ? 'Pick a new nickname' : 'New nickname?', `
+    <p class="nick-lead">${forced
+    ? `“${esc(me.name)}” can’t stay on the leaderboard. Pick a new nickname to keep playing ranked. Your scores stay.`
+    : `Want people to know it’s you on the leaderboard? You can change “${esc(me.name)}” once. Your scores stay.`}</p>
+    ${nickFormHTML('Save', 'New nickname')}
+    ${forced ? '' : `<button id="keepName" class="btn btn-quiet" type="button">Keep ${esc(me.name)}</button>`}`);
+  $('nickInput').focus();
+  wireNickForm((result) => {
+    G.rankedStatus.rename = null;
+    closeSheet();
+    if (G.phase === 'title') refreshTitle();
+    notice(`You’re ${result.name} on the leaderboard now.`);
+    then?.();
+  }, ranked.rename);
+  $('keepName')?.addEventListener('click', () => {
+    audio.click();
+    G.rankedStatus.rename = null;
+    closeSheet();
+    ranked.keepName().catch((error) => console.error(error));
+    then?.();
   });
 }
 
@@ -1242,14 +1498,20 @@ const RANKED_RULES = '<p class="choice-rules">One try · No photos · Leaving th
 // Before each Daily: ranked, on the leaderboard, or just for fun with photos.
 function openDailyChoice(problem = '') {
   const me = ranked.player();
+  const paused = Boolean(me && G.rankedStatus?.paused);
+  const mustRename = Boolean(me && !paused && G.rankedStatus?.rename === 'forced');
+  const rankedPart = paused ? `<p class="choice-off" role="status">${PAUSED}</p>`
+    : mustRename ? `<p class="choice-off">“${esc(me.name)}” can’t stay on the leaderboard.</p>
+      <button id="choiceRename" class="btn btn-primary choice-btn" type="button">Pick a new nickname</button>`
+    : me ? `<button id="choiceRanked" class="btn btn-primary choice-btn" type="button">Play ranked as ${esc(me.name)}</button>`
+    : nickFormHTML('Play ranked', 'Nickname for the board');
   openSheet('Today’s Daily', `
     <p class="choice-lead">Dive #${G.today}. How do you want to play it?</p>
-    <section class="choice choice-ranked" aria-labelledby="choiceRankedTitle">
+    <section class="choice choice-ranked${paused ? ' is-off' : ''}" aria-labelledby="choiceRankedTitle">
       <h3 id="choiceRankedTitle" class="choice-title"><span aria-hidden="true">★</span> Ranked</h3>
       <p class="choice-what">Your score goes on today’s leaderboard.</p>
       ${RANKED_RULES}
-      ${me ? `<button id="choiceRanked" class="btn btn-primary choice-btn" type="button">Play ranked as ${esc(me.name)}</button>`
-    : nickFormHTML('Play ranked', 'Nickname for the board')}
+      ${rankedPart}
     </section>
     <section class="choice choice-normal" aria-labelledby="choiceNormalTitle">
       <h3 id="choiceNormalTitle" class="choice-title">Just for fun</h3>
@@ -1269,9 +1531,19 @@ function openDailyChoice(problem = '') {
   };
   $('choiceRanked')?.addEventListener('click', () => choose('ranked'));
   $('choiceNormal').addEventListener('click', () => choose('normal'));
+  $('choiceRename')?.addEventListener('click', () => { audio.click(); openRename({ then: () => openDailyChoice() }); });
   wireNickForm(() => choose('ranked'));
   if (problem && $('nickError')) $('nickError').textContent = problem;
   const section = el.sheet.querySelector('.choice-ranked');
+  // The nickname may have been paused or asked to change since the game opened.
+  if (me) {
+    checkRanked().then((status) => {
+      if (!status || !section.isConnected) return;
+      const nowPaused = status.paused;
+      const nowRename = !nowPaused && status.rename === 'forced';
+      if (nowPaused !== paused || nowRename !== mustRename) openDailyChoice(problem);
+    });
+  }
   findServer().then((base) => {
     if (base || !section.isConnected) return;
     section.classList.add('is-off');
@@ -1328,6 +1600,18 @@ function whenLoaded(ids, then) {
 function startDaily() {
   audio.unlock();
   audio.click();
+  const day = dailyDay();
+  if (day !== G.today) {
+    // A phone plays yesterday's Daily, just for fun, with no ranked choice.
+    const past = getDaily(day);
+    if (past.ranked && !past.done) past.ranked = false;
+    whenLoaded(past.ids, () => {
+      G.fromArchive = false;
+      if (past.done) showResults(past);
+      else beginDive(past, { jump: isFresh(past) });
+    });
+    return;
+  }
   const dive = getDaily(G.today);
   // Before each Daily the player picks: ranked, on the leaderboard, or just for fun with photos.
   // The pick sticks for the day, since the prompts have been seen once the dive starts.
@@ -1507,7 +1791,7 @@ function openMenu() {
   $('menuHome')?.addEventListener('click', () => { closeSheet(); goHome(); });
   $('menuDaily').addEventListener('click', () => {
     closeSheet();
-    if (G.dive && G.dive.mode === 'daily' && G.dive.day === G.today) return;
+    if (G.dive && G.dive.mode === 'daily' && G.dive.day === dailyDay()) return;
     startDaily();
   });
   $('menuEndless').addEventListener('click', () => {
@@ -1528,7 +1812,7 @@ function wire() {
   el.rankedLine.addEventListener('click', () => {
     audio.unlock();
     audio.click();
-    if (ranked.player()) openBoard();
+    if (ranked.player() || ON_PHONE) openBoard(); // phones can't play ranked, so no nickname here
     else openNickname();
   });
   $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
@@ -1642,6 +1926,13 @@ async function boot() {
   }
   G.phase = 'title';
   setScreen('title');
+  // A nickname offered a new name, or required to pick one, is asked here. An offer asks once a day.
+  checkRanked().then((status) => {
+    if (G.phase === 'title') refreshTitle();
+    if (!status?.rename || G.phase !== 'title' || el.sheet.open) return;
+    if (status.rename === 'offer' && store.get('ranked.renameAsked') === G.today) return;
+    openRename();
+  });
   requestAnimationFrame(tick);
   document.fonts?.ready.then(() => { world.captionLayout = null; });
   if (IS_LOCAL) window.fihllion = { world, G, content, store };

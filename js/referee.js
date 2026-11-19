@@ -1,6 +1,7 @@
 // Asks the AI referee (worker/) about an answer that isn't on the prompt's list. Resolves to
-// { name, tier } when it counts, false when the referee rules it out, or null when the referee
-// couldn't be reached in time. Rulings are remembered for the visit, so a repeat guess is instant.
+// { name, tier } when it counts, { rejected: true, reason } when the referee rules it out (reason
+// is 'name' or 'repeat' when it was too vague, else null), or null when the referee couldn't be
+// reached in time. Rulings are remembered for the visit, so a repeat guess is instant.
 import { HAS_SERVER, post } from './server.js';
 
 const TIMEOUT_MS = 5000;
@@ -15,7 +16,7 @@ export function askReferee(promptId, typed) {
     .then((data) => {
       if (!data || data.busy) return null;
       const ok = data.valid === true && typeof data.name === 'string' && Number.isInteger(data.tier) && data.tier >= 0 && data.tier <= 5;
-      return ok ? { name: data.name, tier: data.tier } : false;
+      return ok ? { name: data.name, tier: data.tier } : { rejected: true, reason: data.reason || null };
     })
     .catch(() => null);
   asked.set(key, job);

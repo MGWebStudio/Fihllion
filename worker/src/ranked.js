@@ -8,6 +8,7 @@
 //   POST /ranked/question  {"key": "..."}                        -> {"day", "round", "id", "text", "msLeft"} or {"finished": true}
 //   POST /ranked/guess     {"key", "round", "typed", "final"}    -> {"result": "hit"|"miss"|"late"|"busy", ...}
 //   POST /ranked/void      {"key", "round"}                      -> the question scores 0, flagged (they left the tab)
+//   POST /ranked/rename    {"key", "name"} or {"key", "keep": true} -> {"name"}, when the admin offered or forced a new nickname
 //   POST /ranked/board     {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
@@ -33,7 +34,11 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     const player = await playerFor(env, data.key);
     if (!player) return json({ error: 'unknown' });
     if (player.banned) return json({ error: 'banned' });
+    if (action === 'rename') return json(await rename(env, player, data));
     if (action === 'status') return json(await status(env, player));
+    // Paused, or made to pick a new nickname: the game says why and they can play just for fun.
+    if (player.paused) return json({ error: 'paused' });
+    if (player.rename_offer === 2) return json({ error: 'rename' });
     if (action === 'question') return json(await question(env, player, data));
     if (action === 'guess') return json(await guess(env, player, data, relayed));
     if (action === 'void') return json(await voidRound(env, player, data));
@@ -49,7 +54,7 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
 const NAME = /^[A-Za-z0-9]{3,16}$/;
 const RESERVED = ['admin', 'administrator', 'fihllion', 'krillion', 'moderator', 'mod', 'official', 'staff', 'system', 'null', 'undefined', 'anonymous', 'teacher', 'principal'];
 // Blocked anywhere in a name.
-const ANYWHERE = ['fuck', 'fuk', 'fck', 'shit', 'cunt', 'nigg', 'niga', 'fag', 'bitch', 'whore', 'slut', 'porn', 'penis', 'vagina', 'pussy', 'dildo', 'nazi', 'hitler', 'rapist', 'retard', 'molest', 'pedo', 'jizz', 'wank', 'twat', 'kkk', 'horny', 'boob', 'dick', 'cock', 'tits', 'butthole', 'asshole', 'dumbass', 'jackass', 'sexy', 'cum4', 'hooker'];
+const ANYWHERE = ['akbar', 'allahu', 'mickbar', 'fuck', 'fuk', 'fck', 'shit', 'cunt', 'nigg', 'niga', 'fag', 'bitch', 'whore', 'slut', 'porn', 'penis', 'vagina', 'pussy', 'dildo', 'nazi', 'hitler', 'rapist', 'retard', 'molest', 'pedo', 'jizz', 'wank', 'twat', 'kkk', 'horny', 'boob', 'dick', 'cock', 'tits', 'butthole', 'asshole', 'dumbass', 'jackass', 'sexy', 'cum4', 'hooker'];
 // Blocked as the whole name (numbers on the end don't help), since they hide inside real words.
 const WHOLE = ['ass', 'anal', 'anus', 'sex', 'rape', 'crap', 'hoe', 'hoes', 'cum', 'tit', 'gay', 'damn', 'piss', 'butt', 'poop', 'pee', 'nut', 'nuts', 'balls'];
 const LEET = { 0: 'o', 1: 'i', 3: 'e', 4: 'a', 5: 's', 7: 't', 8: 'b', 9: 'g' };
@@ -86,7 +91,30 @@ async function join(env, name) {
 
 async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
-  return env.DB.prepare('SELECT id, name, banned FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
+  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
+}
+
+// A nickname change the admin offered (node admin.mjs offer-rename) or requires (force-rename).
+// The player keeps their scores; only the name on the boards changes. An offer can be turned down.
+async function rename(env, player, data) {
+  if (!player.rename_offer) return { error: 'not-offered', name: player.name };
+  const forced = player.rename_offer === 2;
+  if (data.keep === true) {
+    if (forced) return { error: 'forced' };
+    await env.DB.prepare('UPDATE players SET rename_offer = 0 WHERE id = ?1').bind(player.id).run();
+    return { name: player.name };
+  }
+  const problem = nameProblem(data.name);
+  if (problem) return { error: problem };
+  if (forced && data.name.toLowerCase() === player.name.toLowerCase()) return { error: 'blocked' };
+  try {
+    await env.DB.prepare('UPDATE players SET name = ?1, name_key = ?2, rename_offer = 0 WHERE id = ?3')
+      .bind(data.name, data.name.toLowerCase(), player.id).run();
+  } catch (error) {
+    if (/unique/i.test(error.message)) return { error: 'taken' };
+    throw error;
+  }
+  return { name: data.name };
 }
 
 // Runs -----------------------------------------------------------------------------------
@@ -131,7 +159,13 @@ async function status(env, player) {
   if (!loaded) throw new Error('Schedule unavailable');
   const run = await getRun(env, player, loaded.today);
   if (run) await settleIfLate(env, run);
-  return { name: player.name, today: loaded.today, run: publicRun(run) };
+  return {
+    name: player.name,
+    today: loaded.today,
+    run: publicRun(run),
+    paused: Boolean(player.paused),
+    rename: player.rename_offer === 2 ? 'forced' : player.rename_offer === 1 ? 'offer' : null,
+  };
 }
 
 async function question(env, player, data) {
@@ -175,12 +209,13 @@ async function guess(env, player, data, relayed) {
   }
   const typed = cleanTyped(data.typed);
   const final = data.final === true;
+  let reason = null; // why the referee's yes didn't count, so the game can say
   const miss = async (result = 'miss') => {
     if (final) {
       await settle(env, run, typed ? { tier: -1, pts: 0, typed } : { tier: -1, pts: 0 });
       return { result, settled: true, run: publicRun(run) };
     }
-    return { result, msLeft: run.deadline - Date.now() - GRACE_MS };
+    return { result, msLeft: run.deadline - Date.now() - GRACE_MS, ...(reason ? { reason } : {}) };
   };
   if (!typed) return miss();
   if (run.guesses >= MAX_GUESSES) return miss();
@@ -204,6 +239,8 @@ async function guess(env, player, data, relayed) {
     if (ruling.valid) {
       hit = { name: ruling.name, tier: ruling.tier };
       checked = true;
+    } else {
+      reason = ruling.reason || null;
     }
   }
   if (!hit) return miss();
@@ -250,6 +287,9 @@ function ranked_(rows, key) {
   });
 }
 
+// Banned and paused players stay off the boards, and so does a nickname that has to change.
+const ON_BOARD = 'p.banned = 0 AND p.paused = 0 AND p.rename_offer < 2';
+
 async function board(env, data) {
   const loaded = await loadCalendar(env);
   if (!loaded) throw new Error('Schedule unavailable');
@@ -259,14 +299,14 @@ async function board(env, data) {
   const counts = day < today ? '1' : 'r.finished IS NOT NULL';
 
   const dayRows = (await env.DB.prepare(`SELECT p.id, p.name, r.score FROM runs r JOIN players p ON p.id = r.player
-      WHERE r.day = ?1 AND p.banned = 0 AND ${counts} ORDER BY r.score DESC, r.finished ASC`).bind(day).all()).results;
+      WHERE r.day = ?1 AND ${ON_BOARD} AND ${counts} ORDER BY r.score DESC, r.finished ASC`).bind(day).all()).results;
 
   // Weeks start on Monday.
   const weekday = (calendar.dateOf(day).getDay() + 6) % 7;
   const start = day - weekday;
   const end = Math.min(start + 6, today);
   const weekRows = (await env.DB.prepare(`SELECT p.id, p.name, SUM(r.score) AS total FROM runs r JOIN players p ON p.id = r.player
-      WHERE r.day BETWEEN ?1 AND ?2 AND p.banned = 0 AND (r.day < ?3 OR r.finished IS NOT NULL)
+      WHERE r.day BETWEEN ?1 AND ?2 AND ${ON_BOARD} AND (r.day < ?3 OR r.finished IS NOT NULL)
       GROUP BY p.id ORDER BY total DESC, MIN(r.finished) ASC`).bind(start, end, today).all()).results;
 
   const day_ = ranked_(dayRows, 'score');
@@ -280,7 +320,8 @@ async function board(env, data) {
     day,
     today,
     week: { from: start, to: start + 6 },
-    daily: { players: day_.length, top: day_.slice(0, BOARD_SIZE), me: mine(dayRows, day_) },
+    // Every score on the day's board, for the score curve. Scores only, no names.
+    daily: { players: day_.length, top: day_.slice(0, BOARD_SIZE), me: mine(dayRows, day_), scores: dayRows.map((row) => row.score) },
     weekly: { players: week.length, top: week.slice(0, BOARD_SIZE), me: mine(weekRows, week) },
   };
 }
