@@ -6,8 +6,9 @@
 //
 // Referee: when a typed answer isn't on a prompt's list, the game asks whether it's a real, correct
 // answer anyway. A free Workers AI model decides, and every verdict is saved so the same guess gets
-// the same ruling for everyone without asking the model again. A daily cap keeps it inside the
-// free allowance. When the cap is hit or the model fails, the answer simply doesn't count.
+// the same ruling for everyone without asking the model again. A daily budget keeps it inside the
+// free allowance, with part of it kept for ranked (see shared.js). When the budget is spent or the
+// model fails, the answer simply doesn't count.
 //
 // Ranked: see ranked.js. Feedback box: see feedback.js. Poll: see poll.js.
 //

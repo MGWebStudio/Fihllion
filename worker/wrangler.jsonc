@@ -16,7 +16,13 @@
   "vars": {
     "DATA_URL": "https://mgwebstudio.github.io/Fihllion/data/",
     "ALLOWED_ORIGINS": "https://mgwebstudio.github.io",
-    // Model calls allowed per day. Each costs about 2-3 of the 10,000 free daily "neurons".
-    "AI_DAILY_CAP": "3000"
+    // The referee's daily AI budget in Cloudflare's units ("neurons"), out of 10,000 free a day.
+    // A call costs about 2.6, so this is about 3,700 calls. Practice stops AI_RANKED_RESERVE units
+    // sooner, keeping about 750 calls for ranked. See the top of worker/src/shared.js.
+    "AI_DAILY_UNITS": "9800",
+    "AI_RANKED_RESERVE": "2000",
+    // Until this time, practice may use the ranked reserve too. Nov 19, 2026 at 5 PM Mountain Time,
+    // when that day's budget resets. Leave it in the past (or remove it) to keep the reserve.
+    "AI_RESERVE_OFF_UNTIL": "2026-11-20T00:00:00Z"
   }
 }

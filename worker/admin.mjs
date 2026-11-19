@@ -5,6 +5,7 @@
 //   node admin.mjs answers <name> [day]   what that player answered on their latest ranked run (or that day's)
 //   node admin.mjs feedback [days] what players sent from the feedback box in the last 7 days (or that many)
 //   node admin.mjs poll            results of the poll in js/poll.js
+//   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, and when it ran out
 //   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
 //   node admin.mjs unban <name>
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -131,7 +132,31 @@ if (command === 'board') {
     };
   }));
   console.log(`${total} ${total === 1 ? 'vote' : 'votes'}.`);
+} else if (command === 'referee') {
+  const days = value ? Math.max(1, Math.floor(Number(value)) || 7) : 7;
+  // ai_calls counts by UTC day (it resets at 5 PM Mountain Time), numbered like the game's days.
+  const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+  const rows = sql(`SELECT day, n, units, failed, practice_out_at, ranked_out_at FROM ai_calls ORDER BY day DESC LIMIT ${days}`);
+  console.log('AI referee by UTC day (each one runs 5 PM to 5 PM Mountain Time):');
+  console.table(rows.map((row) => ({
+    day: row.day,
+    calls: row.n,
+    units: Math.round(row.units),
+    failed: row.failed,
+    'practice ran out': mt(row.practice_out_at),
+    'ranked ran out': mt(row.ranked_out_at),
+  })));
+  const since = Date.now() - days * 86400000;
+  const kinds = sql(`SELECT kind, COUNT(*) AS n FROM ai_failures WHERE at > ${since} GROUP BY kind ORDER BY n DESC`);
+  if (!kinds.length) {
+    console.log(`No failed calls recorded in the last ${days} days.`);
+  } else {
+    console.log('Failed calls recorded (up to 200 a day):', kinds.map((k) => `${k.kind} ${k.n}`).join(', '));
+    const common = sql(`SELECT kind, substr(detail, 1, 120) AS detail, COUNT(*) AS n FROM ai_failures WHERE at > ${since}
+      GROUP BY kind, substr(detail, 1, 120) ORDER BY n DESC LIMIT 8`);
+    console.table(common);
+  }
 } else {
-  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | ban | unban | pause | unpause <name>');
+  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | referee [days] | ban | unban | pause | unpause <name>');
   console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name>  [--local]');
 }

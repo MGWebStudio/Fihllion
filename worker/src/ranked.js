@@ -230,7 +230,7 @@ async function guess(env, player, data, relayed) {
   if (!hit && typed.length >= 2) {
     // The clock stops while the referee thinks, the same as in the normal game.
     const started = Date.now();
-    const ruling = await judge(env, prompt, typed);
+    const ruling = await judge(env, prompt, typed, { ranked: true });
     const waited = Date.now() - started;
     run.deadline += waited;
     await env.DB.prepare('UPDATE runs SET deadline = deadline + ?1 WHERE player = ?2 AND day = ?3 AND rounds = ?4')
