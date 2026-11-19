@@ -9,12 +9,13 @@
 // the same ruling for everyone without asking the model again. A daily cap keeps it inside the
 // free allowance. When the cap is hit or the model fails, the answer simply doesn't count.
 //
-// Ranked: see ranked.js. Feedback box: see feedback.js.
+// Ranked: see ranked.js. Feedback box: see feedback.js. Poll: see poll.js.
 //
 //   POST /dive    {"day": 5, "rounds": [{"id": "lizard", "name": "Gecko"}, {"id": "bank", "typed": "..."}]}
 //   POST /check   {"prompt": "lizard", "typed": "shingleback"}  ->  {"valid": true, "name": "Shingleback", "tier": 3}
 //   POST /ranked/...  see ranked.js
 //   POST /feedback    see feedback.js
+//   POST /poll        see poll.js
 //   GET  /health
 //
 // Requests come from the game's own site, or through the Google relay (relay/google-apps-script.js)
@@ -25,6 +26,7 @@
 import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge } from './shared.js';
 import { ranked } from './ranked.js';
 import { feedback } from './feedback.js';
+import { poll } from './poll.js';
 
 const MAX_BODY = 4096;
 const MAX_ROUNDS = 7;
@@ -42,7 +44,7 @@ export default {
     const json = (data) => new Response(JSON.stringify(data), { status: 200, headers: { ...cors, 'Content-Type': 'application/json' } });
 
     if (url.pathname === '/health') return reply(200, 'ok');
-    if (!['/dive', '/check', '/feedback'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
+    if (!['/dive', '/check', '/feedback', '/poll'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
     if (request.method === 'OPTIONS') return reply(allowed ? 204 : 403);
     if (request.method !== 'POST') return reply(405, 'Use POST');
     if (!allowed && !relayed) return reply(403, 'Unknown origin');
@@ -57,6 +59,7 @@ export default {
     if (path === '/check') ({ path, text } = unpackVia(text));
     if (path === '/check') return referee(text, env, reply, json);
     if (path === '/feedback') return feedback(text, env, reply);
+    if (path === '/poll') return poll(text, env, reply, json);
     if (path.startsWith('/ranked/')) return ranked(path.slice('/ranked/'.length), text, env, reply, json, { relayed });
 
     let dive;
@@ -82,7 +85,7 @@ function allowedOrigin(origin, env) {
 
 // A request that rode through the relay inside /check (see the top of this file). Anything else is
 // a real referee check.
-const VIA = /^\/(feedback|ranked\/[a-z]+)$/;
+const VIA = /^\/(feedback|poll|ranked\/[a-z]+)$/;
 function unpackVia(text) {
   let data = null;
   try {

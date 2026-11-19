@@ -126,9 +126,12 @@ node admin.mjs board          # today's board, with how many questions each play
 node admin.mjs board 12       # day 12
 node admin.mjs feedback       # what players sent from the feedback box in the last 7 days
 node admin.mjs feedback 30    # the last 30 days
+node admin.mjs poll           # results of the poll in js/poll.js
 node admin.mjs ban Somename   # hide from every board and stop playing ranked
 node admin.mjs unban Somename
 ```
+
+A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 
 Add `--local` to use the test database. The live tables need `npm run migrate:live` once before the Worker that uses them is deployed.
 
@@ -152,7 +155,7 @@ The school's filter (Securly) blocks both of the server's addresses, `workers.de
 - The relay sends `X-Fihllion-Relay: apps-script` instead of an Origin header, and the Worker accepts that.
 - Ranked answers that come through it get 4 more seconds before they count as late, for the extra hop.
 - The relay always answers 200 with `{"s": status, "b": body}`, and `js/server.js` unwraps it.
-- The relay only passes the paths in its `PATHS` list. Newer requests (renames, feedback) go through it inside `/check` as `{"via": "/feedback", "body": {...}}`, and the Worker unpacks them, so the relay doesn't need redeploying when the game adds one.
+- The relay only passes the paths in its `PATHS` list. Newer requests (renames, feedback, the poll) go through it inside `/check` as `{"via": "/feedback", "body": {...}}`, and the Worker unpacks them, so the relay doesn't need redeploying when the game adds one.
 
 Setting it up, in a personal Google account (not a school one):
 

@@ -4,6 +4,7 @@
 //   node admin.mjs board [day]     today's board (or that day's), with flags for left-the-tab questions
 //   node admin.mjs answers <name> [day]   what that player answered on their latest ranked run (or that day's)
 //   node admin.mjs feedback [days] what players sent from the feedback box in the last 7 days (or that many)
+//   node admin.mjs poll            results of the poll in js/poll.js
 //   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
 //   node admin.mjs unban <name>
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -17,6 +18,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { TIERS, makeCalendar, parsePrompts } from '../js/content.js';
+import { POLL, pollOpen } from '../js/poll.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -110,7 +112,26 @@ if (command === 'board') {
     console.log(`${about}\n  ${row.text.replace(/\n/g, '\n  ')}\n`);
   }
   console.log(`${rows.length} in the last ${days} days.`);
+} else if (command === 'poll') {
+  if (!POLL || !/^[a-z0-9-]+$/.test(POLL.id)) throw new Error('No poll in js/poll.js.');
+  const rows = sql(`SELECT choice, named, device, COUNT(*) AS n FROM poll_votes WHERE poll = '${POLL.id}' GROUP BY choice, named, device`);
+  const total = rows.reduce((sum, row) => sum + row.n, 0);
+  const sum = (test) => rows.filter(test).reduce((s, row) => s + row.n, 0);
+  console.log(`${POLL.title}, ${pollOpen() ? `open until ${POLL.closesSaid}` : 'closed'}: ${POLL.question}`);
+  console.table(POLL.options.map((option) => {
+    const votes = sum((row) => row.choice === option.id);
+    return {
+      option: option.label,
+      votes,
+      share: total ? `${Math.round((votes / total) * 100)}%` : '-',
+      'with a nickname': sum((row) => row.choice === option.id && row.named),
+      'no nickname': sum((row) => row.choice === option.id && !row.named),
+      computer: sum((row) => row.choice === option.id && row.device === 'computer'),
+      phone: sum((row) => row.choice === option.id && row.device === 'phone'),
+    };
+  }));
+  console.log(`${total} ${total === 1 ? 'vote' : 'votes'}.`);
 } else {
-  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | ban | unban | pause | unpause <name>');
+  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | ban | unban | pause | unpause <name>');
   console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name>  [--local]');
 }

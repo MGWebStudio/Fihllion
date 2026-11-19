@@ -12,6 +12,7 @@ import * as ranked from './ranked.js';
 import { findServer, post } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
+import { POLL, pollOpen } from './poll.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
 import { drawLogo, paintIcon, iconURL, champion, goldfish } from './sprites.js';
 
@@ -1791,6 +1792,7 @@ function openMenu() {
     ['Today’s Daily', 'menuDaily'],
     ['Endless · practice', 'menuEndless'],
     ranked.available ? ['Leaderboard', 'menuBoard'] : null,
+    ranked.available && pollOpen() ? [POLL.title, 'menuPoll'] : null,
     ['Archive', 'menuArchive'],
     ['My stats', 'menuStats'],
     ['How to play', 'menuHow'],
@@ -1817,6 +1819,134 @@ function openMenu() {
   $('menuHow').addEventListener('click', openHow);
   $('menuNews').addEventListener('click', openNews);
   $('menuFeedback')?.addEventListener('click', openFeedback);
+  $('menuPoll')?.addEventListener('click', () => openPoll());
+}
+
+// Poll -----------------------------------------------------------------------------------
+// The question lives in js/poll.js. It pops up once on the title screen, and stays in the menu
+// until it closes. Players see the results once they've voted, and can change their vote.
+const pollMemoryKey = () => `poll.${POLL.id}`;
+
+// Players without a nickname vote once per browser, under a random id kept here.
+function pollBrowser() {
+  let id = store.get('poll.browser');
+  if (!/^[a-z0-9]{16,40}$/.test(id || '')) {
+    id = [...crypto.getRandomValues(new Uint8Array(12))].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+    store.set('poll.browser', id);
+  }
+  return id;
+}
+
+async function pollRequest(choice) {
+  const me = ranked.player();
+  const res = await post('/poll', {
+    poll: POLL.id,
+    ...(choice ? { choice } : {}),
+    ...(me ? { key: me.key } : {}),
+    browser: pollBrowser(),
+    device: ON_PHONE ? 'phone' : 'computer',
+  }, { timeout: 12000 });
+  if (!res.ok) throw Object.assign(new Error(`poll: ${res.status}`), { status: res.status });
+  return res.json();
+}
+
+function askPoll() {
+  if (!ranked.available || !pollOpen()) return;
+  const memory = store.get(pollMemoryKey(), {});
+  if (memory.vote || memory.asked) return;
+  store.set(pollMemoryKey(), { ...memory, asked: true });
+  openPoll({ popup: true });
+}
+
+function openPoll({ popup = false } = {}) {
+  const me = ranked.player();
+  const memory = store.get(pollMemoryKey(), {});
+  openSheet(POLL.title, `<div class="poll">
+      <p class="nick-lead">${esc(POLL.question)}</p>
+      <div class="poll-options" role="group" aria-label="${esc(POLL.title)}">
+        ${POLL.options.map((option) => `<button class="poll-option" type="button" data-choice="${esc(option.id)}" aria-pressed="false">
+          <span class="poll-fill" aria-hidden="true"></span>
+          <span class="poll-text"><b>${esc(option.label)}</b><small>${esc(option.sub)}</small><small class="poll-yours" hidden>Your vote</small></span>
+          <span class="poll-pct"></span>
+        </button>`).join('')}
+      </div>
+      <p id="pollStatus" class="poll-status" role="status"></p>
+      <p class="fb-note">${me ? `One vote per nickname, so this counts for ${esc(me.name)}.` : 'One vote per device.'} You can change it until ${esc(POLL.closesSaid)}.</p>
+      ${popup ? '<button id="pollLater" class="btn btn-quiet announce-later" type="button">Not now</button>' : ''}
+    </div>`);
+  const box = el.sheetBody.querySelector('.poll');
+  const buttons = [...box.querySelectorAll('.poll-option')];
+  const status = $('pollStatus');
+  let busy = false;
+  let mine = null;
+
+  const paint = (result) => {
+    mine = result.mine;
+    const total = POLL.options.reduce((sum, option) => sum + (result.counts[option.id] || 0), 0);
+    for (const button of buttons) {
+      const n = result.counts[button.dataset.choice] || 0;
+      const pct = total ? Math.round((n / total) * 100) : 0;
+      const picked = mine === button.dataset.choice;
+      button.classList.add('is-counted');
+      button.classList.toggle('is-mine', picked);
+      button.setAttribute('aria-pressed', String(picked));
+      button.style.setProperty('--pct', `${pct}%`);
+      button.querySelector('.poll-pct').textContent = `${pct}%`;
+      button.querySelector('.poll-yours').hidden = !picked;
+    }
+    store.set(pollMemoryKey(), { ...store.get(pollMemoryKey(), {}), vote: mine });
+    const later = $('pollLater');
+    if (later && mine) later.textContent = 'Done';
+  };
+  const totalSaid = (result) => {
+    const total = Object.values(result.counts).reduce((sum, n) => sum + n, 0);
+    return `${total} ${total === 1 ? 'vote' : 'votes'} so far.`;
+  };
+  const problem = (error) => (error.status === 409 ? 'The poll has closed.'
+    : error.status === 429 ? 'The poll is full.'
+      : error.name === 'Unreachable' ? 'Can’t reach the server from this network. Try again later.'
+        : 'Couldn’t send your vote. Try again.');
+
+  // Someone who already voted (here, or with this nickname somewhere else) sees the results.
+  if (memory.vote || me) {
+    if (memory.vote) status.textContent = 'Loading the results…';
+    pollRequest().then((result) => {
+      if (!box.isConnected || busy || !result.mine) {
+        if (box.isConnected && !busy && memory.vote) status.textContent = '';
+        return;
+      }
+      paint(result);
+      status.textContent = `${totalSaid(result)} Tap the other one to change your vote.`;
+    }).catch((error) => {
+      console.error(error);
+      if (box.isConnected && !busy && memory.vote) status.textContent = problem(error);
+    });
+  }
+
+  for (const button of buttons) {
+    button.addEventListener('click', async () => {
+      const choice = button.dataset.choice;
+      if (busy || choice === mine) return;
+      busy = true;
+      buttons.forEach((b) => { b.disabled = true; });
+      status.textContent = 'Sending…';
+      try {
+        const result = await pollRequest(choice);
+        if (!box.isConnected) return;
+        audio.click();
+        const changed = Boolean(mine);
+        paint(result);
+        status.textContent = `${changed ? 'Vote changed.' : 'Thanks for voting!'} ${totalSaid(result)}`;
+      } catch (error) {
+        console.error(error);
+        if (box.isConnected) status.textContent = problem(error);
+      } finally {
+        busy = false;
+        buttons.forEach((b) => { b.disabled = false; });
+      }
+    });
+  }
+  $('pollLater')?.addEventListener('click', () => { audio.click(); closeSheet(); });
 }
 
 // Feedback -------------------------------------------------------------------------------
@@ -2016,11 +2146,13 @@ async function boot() {
   G.phase = 'title';
   setScreen('title');
   // A nickname offered a new name, or required to pick one, is asked here. An offer asks once a day.
+  // Otherwise an open poll the player hasn't seen pops up.
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
-    if (!status?.rename || G.phase !== 'title' || el.sheet.open) return;
-    if (status.rename === 'offer' && store.get('ranked.renameAsked') === G.today) return;
-    openRename();
+    if (G.phase !== 'title' || el.sheet.open) return;
+    const renameDue = status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today);
+    if (renameDue) openRename();
+    else askPoll();
   });
   requestAnimationFrame(tick);
   document.fonts?.ready.then(() => { world.captionLayout = null; });

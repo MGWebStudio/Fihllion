@@ -686,6 +686,30 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .fb-sign { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 21px; cursor: pointer; }
 .fb-sign input { width: 22px; height: 22px; margin: 0; accent-color: var(--gilt); }
 .fb-send { width: 100%; margin-top: 16px; }
+
+/* Poll */
+.poll-options { display: grid; gap: 12px; margin: 4px 3px 0; }
+.poll-option {
+  position: relative; overflow: hidden;
+  width: 100%; min-height: 66px; padding: 10px 14px; border: 0; cursor: pointer; text-align: left;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: rgba(13, 40, 62, .9); color: var(--cream); font-family: var(--font-body);
+  box-shadow: 0 -3px 0 0 var(--slate), 0 3px 0 0 var(--slate), -3px 0 0 0 var(--slate), 3px 0 0 0 var(--slate);
+}
+.poll-option:hover { filter: brightness(1.2); }
+.poll-option:focus-visible { outline: 3px solid var(--glass); outline-offset: 5px; }
+.poll-option:disabled { cursor: progress; }
+.poll-option.is-mine { box-shadow: 0 -3px 0 0 var(--gilt), 0 3px 0 0 var(--gilt), -3px 0 0 0 var(--gilt), 3px 0 0 0 var(--gilt); }
+.poll-fill { position: absolute; inset: 0 auto 0 0; width: 0; background: rgba(127, 231, 220, .16); transition: width .45s steps(9); }
+.poll-option.is-counted .poll-fill { width: var(--pct, 0%); }
+.poll-option.is-mine .poll-fill { background: rgba(255, 201, 77, .24); }
+.poll-text { position: relative; display: grid; gap: 2px; }
+.poll-text b { font-weight: 400; font-size: 24px; line-height: 1.1; }
+.poll-text small { font-size: 18px; line-height: 1.25; color: var(--muted); }
+.poll-text .poll-yours { color: var(--gilt); }
+.poll-pct { position: relative; font-family: var(--font-label); font-size: 15px; white-space: nowrap; }
+.poll-status { min-height: 26px; margin: 14px 0 0; font-size: 20px; }
+@media (prefers-reduced-motion: reduce) { .poll-fill { transition: none; } }
 @media (prefers-reduced-motion: reduce) { .mode-banner { animation: none; } }
 @media (max-height: 720px) and (min-height: 481px) {
   #title .btn-big { min-height: 50px; padding: 11px 30px; }
