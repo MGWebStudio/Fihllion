@@ -100,6 +100,8 @@ export async function judge(env, prompt, typed, options = {}) {
   // The game checks its list first, but a spelling can still slip past it.
   const listed = !options.nobank && findAnswer(typed, index);
   if (listed) return { valid: true, name: listed.name, tier: listed.tier };
+  const described = !options.nobank && describedAnswer(prompt, typed, index);
+  if (described) return { valid: true, name: described.name, tier: described.tier };
   const vague = tooVague(prompt, typed);
   if (vague) return { valid: false, reason: vague };
 
@@ -183,6 +185,50 @@ const stem = (word) => {
 };
 const SMALL = new Set(['the', 'a', 'an', 'of', 'and']);
 
+// Words that only describe a thing: a color, a size, a place or nationality. Players put one in
+// front of a plain answer ("brown mouse", "african hawk") or of the prompt's own word ("african
+// bird") to get the referee to accept something obscure (the African method, Nov 20, 2026): it
+// found the Brown mouse lemur, or took "African flute" as a rare instrument. Compass words aren't
+// here, since they start real names (South Africa, North Dakota). Colors are left out for a prompt
+// about colors ("a movie with a color in the title"), where "red october" is a fair answer.
+const COLORS = ['brown', 'black', 'white', 'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'gray', 'grey', 'golden', 'gold', 'silver'];
+const DESCRIBING_ONLY = new Set([
+  'big', 'little', 'small', 'tiny', 'giant', 'large', 'huge', 'baby', 'mini', 'pygmy', 'dwarf', 'fat', 'cute', 'wild', 'common', 'regular', 'normal',
+  'african', 'asian', 'american', 'european', 'australian', 'indian', 'chinese', 'japanese', 'mexican', 'canadian', 'brazilian',
+  'russian', 'british', 'english', 'french', 'german', 'italian', 'spanish', 'arctic', 'tropical',
+]);
+const DESCRIBING = new Set([...COLORS, ...DESCRIBING_ONLY]);
+const describing = (prompt) => (/\bcolou?rs?\b/i.test(prompt.text) ? DESCRIBING_ONLY : DESCRIBING);
+
+// The same word, allowing for plurals and a typo or two ("bear" for Baer, "leopords" for leopard).
+function sameWord(a, b) {
+  if (a === b || stem(a) === stem(b)) return true;
+  const shorter = Math.min(a.length, b.length);
+  if (shorter < 4) return false;
+  const limit = Math.max(a.length, b.length) >= 7 ? 2 : 1;
+  if (Math.abs(a.length - b.length) > limit) return false;
+  let row = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i += 1) {
+    const next = [i];
+    for (let j = 1; j <= b.length; j += 1) next[j] = Math.min(row[j] + 1, next[j - 1] + 1, row[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    row = next;
+  }
+  return row[b.length] <= limit;
+}
+
+// A describing word or two in front of an answer on the list counts as that answer: "brown mouse"
+// is Mouse, "african hawk" is Hawk, at the list's own points. Not for prompts about people, where
+// a match on what's left could be someone's surname ("little richard").
+export function describedAnswer(prompt, typed, index) {
+  if (prompt.exact || isAboutPeople(prompt)) return null;
+  const guess = plainWords(typed);
+  let start = 0;
+  const words = describing(prompt);
+  while (start < guess.length - 1 && words.has(guess[start])) start += 1;
+  if (start === 0) return null;
+  return findAnswer(guess.slice(start).join(' '), index);
+}
+
 // Prompts about people: a good share of their answers are a common first name and more, like
 // baseball players or characters from The Office. Songs, jobs and minerals named like people
 // ("Jane", "mason", "ruby") aren't, so a name typed for those is judged like any other word.
@@ -201,14 +247,17 @@ function isAboutPeople(prompt) {
 // Guesses too vague to count, caught before the referee is asked. The referee said yes to a bare
 // first name by picking some obscure person with it, which scored as a Deep Cut. Word prompts
 // (rhymes, "a word that's also a first name") judge the word itself, so they're left alone.
-//   'repeat'  it only repeats the prompt ("chris" for "Name a famous person named Chris")
+//   'repeat'  it only repeats the prompt ("chris" for "Name a famous person named Chris"), maybe
+//             with describing words ("african bird" for a bird)
 //   'name'    a common first name on its own, for a prompt about people ("james" for a quarterback)
 export function tooVague(prompt, typed) {
   if (prompt.exact) return null;
   const guess = plainWords(typed);
   if (!guess.length) return null;
   const promptWords = new Set(plainWords(prompt.text).map(stem));
-  if (guess.every((word) => promptWords.has(stem(word)) || SMALL.has(word))) return 'repeat';
+  const given = (word) => promptWords.has(stem(word)) || SMALL.has(word);
+  if (guess.every(given)) return 'repeat';
+  if (guess.some((word) => promptWords.has(stem(word))) && guess.every((word) => given(word) || describing(prompt).has(word))) return 'repeat';
   if (guess.length === 1 && FIRST_NAMES.has(guess[0]) && isAboutPeople(prompt)) return 'name';
   return null;
 }
@@ -218,10 +267,13 @@ export function tooVague(prompt, typed) {
 // obscure ("adams" -> Tony Adams). Any other single word the referee had to fill out into a longer
 // name ("shell" -> Shell Falls) still counts, but only for the fewest points, so a vague guess never
 // beats a real answer. Words the prompt already gives don't count as filling out: "desmet" for a
-// lake is Lake DeSmet, and "walle" is WALL-E.
+// lake is Lake DeSmet, and "walle" is WALL-E. Longer guesses get the fewest points too when the
+// referee added words to them ("brown mouse" -> Brown mouse lemur), and so does one that starts
+// with a describing word and that the referee called obscure ("african flute"): see DESCRIBING.
 export function finalRuling(prompt, typed, name, tier, listed) {
   if (prompt.exact) return { valid: true, name, tier };
   const guess = plainWords(typed).filter((word) => !SMALL.has(word));
+  if (guess.length > 1) return longerRuling(prompt, guess, name, tier, listed);
   if (guess.length !== 1) return { valid: true, name, tier };
   if (!listed && SURNAMES.has(guess[0]) && isAboutPeople(prompt)) return { valid: false, reason: 'name' };
   const promptWords = new Set(plainWords(prompt.text).map(stem));
@@ -230,6 +282,24 @@ export function finalRuling(prompt, typed, name, tier, listed) {
   const full = plainWords(name);
   const core = full.filter((word) => !SMALL.has(word) && !promptWords.has(stem(word)));
   if (core.length > 1 && full.join('') !== guess[0]) return { valid: true, name, tier: 0 };
+  return { valid: true, name, tier };
+}
+
+// finalRuling for a guess of two or more words, which only changes one that starts with a
+// describing word (the African method). Shortened titles and names ("hungry caterpillar") keep
+// their points. It's filled out when every word of the guess is in the referee's name and the name
+// has more ("african mouse" -> African pygmy mouse); a name that doesn't contain the guess is just
+// another name for it. Words in brackets ("Proteus (moon)") and words the prompt gives don't count.
+function longerRuling(prompt, guess, name, tier, listed) {
+  if (!describing(prompt).has(guess[0])) return { valid: true, name, tier };
+  const promptWords = new Set(plainWords(prompt.text).map(stem));
+  const core = (words) => words.filter((word) => !SMALL.has(word) && !promptWords.has(stem(word)));
+  const guessCore = core(guess);
+  const nameCore = core(plainWords(String(name || '').replace(/\([^)]*\)/g, ' ')));
+  const inName = (word) => nameCore.some((other) => sameWord(word, other));
+  const inGuess = (word) => guessCore.some((other) => sameWord(word, other));
+  if (guessCore.length && guessCore.every(inName) && nameCore.some((word) => !inGuess(word))) return { valid: true, name, tier: 0 };
+  if (!listed && tier >= 4) return { valid: true, name, tier: 0 };
   return { valid: true, name, tier };
 }
 

@@ -3,6 +3,7 @@
 // is 'name' or 'repeat' when it was too vague, else null), or null when the referee couldn't be
 // reached in time. Rulings are remembered for the visit, so a repeat guess is instant.
 import { HAS_SERVER, post } from './server.js';
+import { player } from './ranked.js';
 
 const TIMEOUT_MS = 5000;
 const asked = new Map();
@@ -11,7 +12,9 @@ export function askReferee(promptId, typed) {
   if (!HAS_SERVER) return Promise.resolve(null);
   const key = `${promptId}\n${typed.trim().toLowerCase()}`;
   if (asked.has(key)) return asked.get(key);
-  const job = post('/check', { prompt: promptId, typed }, { timeout: TIMEOUT_MS })
+  // The player's ranked key, when there is one, so a paused or banned player's checks are refused.
+  const me = player();
+  const job = post('/check', { prompt: promptId, typed, ...(me?.key ? { key: me.key } : {}) }, { timeout: TIMEOUT_MS })
     .then((res) => (res.ok ? res.json() : null))
     .then((data) => {
       if (!data || data.busy) return null;

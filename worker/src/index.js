@@ -30,7 +30,7 @@
 // set up with, so the game sends newer ones through it inside /check, as
 // {"via": "/feedback", "body": {...}}, and they're unpacked here.
 import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge } from './shared.js';
-import { ranked } from './ranked.js';
+import { ranked, playerFor } from './ranked.js';
 import { feedback } from './feedback.js';
 import { poll } from './poll.js';
 import { visit } from './visits.js';
@@ -181,6 +181,12 @@ async function referee(text, env, reply, json) {
   if (typeof data?.prompt !== 'string' || typed.length < 2) return reply(400, 'Wrong shape');
   const prompt = await findPrompt(env, data.prompt);
   if (!prompt) return reply(400, 'Unknown prompt');
+  // A paused or banned player isn't checked for, in Endless and the Archive too, so only answers on
+  // the list count for them. The game sends the player's ranked key when it has one.
+  if (typeof data.key === 'string' && data.key) {
+    const player = await playerFor(env, data.key);
+    if (player && (player.banned || player.paused)) return json({ valid: false });
+  }
   const local = env.ANY_DAY === '1'; // test switches, only on this PC
   const ruling = await judge(env, prompt, typed, local ? { nobank: data.nobank, nocache: data.nocache, model: data.model } : {});
   if (ruling.busy) return json({ valid: false, busy: true });
