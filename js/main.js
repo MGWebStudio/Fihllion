@@ -13,13 +13,14 @@ import { findServer, post } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { POLL, pollOpen } from './poll.js';
+import { NOTE } from './note.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
 import { drawLogo, paintIcon, iconURL, champion, goldfish } from './sprites.js';
 
 const $ = (id) => document.getElementById(id);
 const el = Object.fromEntries([
   'hud', 'hudDepth', 'hudScore', 'pips', 'bootMessage', 'title', 'logo', 'btnBegin', 'diveLabel',
-  'btnHow', 'btnEndless', 'btnArchive', 'btnStats', 'play', 'promptCard', 'promptNum', 'promptText', 'feedback',
+  'btnHow', 'btnEndless', 'btnArchive', 'btnStats', 'btnFeedback', 'play', 'promptCard', 'promptNum', 'promptText', 'feedback',
   'answerForm', 'answer', 'clock', 'clockRing', 'clockNum', 'reveal', 'revealCard', 'revealIcon', 'revealTier',
   'revealAnswer', 'revealPts', 'revealLine', 'btnNext', 'results', 'sheet', 'sheetTitle', 'sheetBody', 'sheetClose',
   'btnMenu', 'btnSound', 'btnMic', 'promptPhoto', 'promptCredit', 'btnPhotoInfo',
@@ -1904,6 +1905,24 @@ async function pollRequest(choice) {
   return res.json();
 }
 
+// The message in js/note.js, once per browser. Says whether it opened.
+function showNote() {
+  if (!NOTE || store.get(`note.${NOTE.id}`)) return false;
+  store.set(`note.${NOTE.id}`, true);
+  openSheet(NOTE.title, `<div class="note">
+      ${NOTE.paragraphs.map((text) => `<p class="note-text">${esc(text)}</p>`).join('')}
+      ${ranked.available ? '<button id="noteFeedback" class="btn btn-primary btn-big announce-go" type="button">Send feedback</button>' : ''}
+      <button id="noteDone" class="btn btn-quiet announce-later" type="button">Got it</button>
+    </div>`);
+  $('noteFeedback')?.addEventListener('click', () => {
+    audio.click();
+    closeSheet();
+    openFeedback();
+  });
+  $('noteDone').addEventListener('click', () => { audio.click(); closeSheet(); });
+  return true;
+}
+
 function askPoll() {
   if (!ranked.available || !pollOpen()) return;
   const memory = store.get(pollMemoryKey(), {});
@@ -2100,6 +2119,9 @@ function wire() {
   el.btnHow.addEventListener('click', () => { audio.unlock(); audio.click(); openHow(); });
   el.btnArchive.addEventListener('click', () => { audio.unlock(); audio.click(); openArchive(); });
   el.btnStats.addEventListener('click', () => { audio.unlock(); audio.click(); openStats(); });
+  // The feedback box needs the server, like the menu's Send feedback.
+  el.btnFeedback.hidden = !ranked.available;
+  el.btnFeedback.addEventListener('click', () => { audio.unlock(); audio.click(); openFeedback(); });
   el.btnMenu.addEventListener('click', () => { audio.unlock(); audio.click(); openMenu(); });
   el.btnNext.addEventListener('click', nextFromReveal);
   el.answerForm.addEventListener('submit', onSubmit);
@@ -2201,13 +2223,13 @@ async function boot() {
   setScreen('title');
   // The name question (real name or anonymous) is asked every time until it's answered. A name the
   // admin offered a change, or requires one, is asked too; an offer asks once a day.
-  // Otherwise an open poll the player hasn't seen pops up.
+  // Otherwise the note in js/note.js pops up once, and after that an open poll the player hasn't seen.
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
     if (G.phase !== 'title' || el.sheet.open) return;
     const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
     if (renameDue) openRename();
-    else askPoll();
+    else if (!showNote()) askPoll();
   });
   requestAnimationFrame(tick);
   document.fonts?.ready.then(() => { world.captionLayout = null; });

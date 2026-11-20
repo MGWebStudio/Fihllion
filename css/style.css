@@ -225,6 +225,8 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
 .title-links .btn { min-height: 40px; padding: 8px 12px; }
 @media (max-width: 460px) {
   .title-links { display: grid; grid-template-columns: 1fr 1fr; width: min(100%, 300px); }
+  /* An odd button out (Send feedback) takes the whole last row instead of sitting alone on the left. */
+  .title-links .btn:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 .news-chip {
   margin-top: 14px; padding: 6px 10px; border: 0; cursor: pointer;
@@ -758,6 +760,9 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 dialog#sheet.is-announce { box-shadow: 0 -4px 0 0 var(--gilt), 0 4px 0 0 var(--gilt), -4px 0 0 0 var(--gilt), 4px 0 0 0 var(--gilt); }
 dialog#sheet.is-announce .sheet-head h2 { font-size: 46px; }
 .announce-stamp { margin: 0; color: var(--orange); }
+/* The maker's note (js/note.js) */
+.note-text { margin: 0 0 12px; font-size: 22px; line-height: 1.35; }
+.note-text:first-child { font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--gilt); }
 .announce-lead { margin: 6px 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--cream); }
 .announce-go { width: 100%; margin-top: 18px; }
 .announce-later { width: 100%; margin-top: 10px; }
