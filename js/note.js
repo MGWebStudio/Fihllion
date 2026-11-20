@@ -2,12 +2,11 @@
 // the name question if that's due, and has a button to the feedback box. Set NOTE to null to take
 // it down, or give a new message a new id so everyone sees it once.
 export const NOTE = {
-  id: 'overload-2026-11-20',
-  title: 'A quick note',
+  id: 'fixed-2026-11-20',
+  title: 'The fix is here',
   paragraphs: [
-    'Hey everyone! Thanks to all of you for making Fihllion possible.',
-    'Fihllion is trying its hardest to keep up with all the niche answer requests, but the server can get overloaded because of how much you all love the game!',
-    'Fixes are coming this weekend, but for now, give a little grace that this is a work in progress, and understand I’m learning with you as the player base grows.',
-    'Feedback is much appreciated!',
+    'Hey everyone! Fihllion can keep up with all your niche answers again.',
+    'Sorry for the frustration with the answer checker yesterday, and thanks for giving it some grace while I sorted it out.',
+    'Feedback is still much appreciated!',
   ],
 };
