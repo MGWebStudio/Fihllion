@@ -7,7 +7,11 @@ export const EPOCH = Date.UTC(2026, 10, 3); // Day 1, the same epoch as data/sch
 const DAY_MS = 86400000;
 export const MAX_NAME = 100;
 const MAX_TYPED = 60;
-const MODEL = '@cf/qwen/qwen3-30b-a3b-fp8';
+// Cloudflare retired the first referee model, @cf/qwen/qwen3-30b-a3b-fp8, on Nov 20, 2026 (its calls
+// failed from 5 PM Mountain Time on Nov 19). On the hard set of 72 rare real answers and 35 tricky
+// wrong ones it had accepted 71 and turned down 28. Gemma 4 accepted 71 and turned down 31, at about
+// 3.2 units a check instead of 2.5. GLM 4.7 Flash accepted all 72 but turned down only 27 (2 units).
+const MODEL = '@cf/google/gemma-4-26b-a4b-it';
 const FAME_TIER = { 1: 2, 2: 3, 3: 4 }; // well known: 30 points, fans know it: 60, obscure: 85
 // Attempts to talk the referee into a ruling, rejected without asking it.
 const SUSPICIOUS = /\b(ignore|disregard|instructions?)\b|[{}]/i;
@@ -31,7 +35,7 @@ export const utcToday = () => Math.floor((Date.now() - EPOCH) / DAY_MS) + 1;
 // AI_DAILY_UNITS stops a little before, so the last call can't be the one that's refused. Practice
 // (Endless, the Archive, a Daily played for fun) stops AI_RANKED_RESERVE units earlier still, so
 // ranked players always have the referee. A call that doesn't say what it cost counts as this much:
-const UNITS_PER_CALL = 2.7;
+const UNITS_PER_CALL = 3.3;
 const FAILURES_KEPT_PER_DAY = 200;
 
 export function parseJSON(text) {
@@ -269,6 +273,9 @@ async function askModel(env, prompt, typed, model) {
       messages: [{ role: 'system', content: REFEREE }, { role: 'user', content: user }],
       max_tokens: 120,
       temperature: 0,
+      // Straight to the JSON answer, without writing out reasoning first (slower, and paid per word).
+      chat_template_kwargs: { enable_thinking: false },
+      response_format: { type: 'json_object' },
     });
   } catch (error) {
     return { failed: { kind: 'error', detail: String(error?.message || error) }, units: 0 };
