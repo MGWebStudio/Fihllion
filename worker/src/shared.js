@@ -243,13 +243,15 @@ async function askReferee(env, prompt, typed, options) {
   const day = utcToday();
   const { messages, evidence } = await refereeMessages(prompt, typed);
   const mode = env.PC ? env.PC_REFEREE || 'off' : 'off';
-  const onlyPC = options.model === 'pc'; // test switch on this PC
-  const pcFirst = onlyPC || mode === 'all' || (mode === 'practice' && !options.ranked);
+  // Test switches on this PC: model 'pc' asks only the PC, and a Cloudflare model's name asks only it.
+  const onlyPC = options.model === 'pc';
+  const onlyCloudflare = Boolean(options.model) && !onlyPC;
+  const pcFirst = onlyPC || (!onlyCloudflare && (mode === 'all' || (mode === 'practice' && !options.ranked)));
   let verdict = null;
   if (pcFirst) verdict = await askPC(env, day, messages);
   if (!verdict && !onlyPC) {
     verdict = await askCloudflare(env, day, messages, options);
-    if (!verdict && !pcFirst && mode !== 'off') verdict = await askPC(env, day, messages);
+    if (!verdict && !pcFirst && !onlyCloudflare && mode !== 'off') verdict = await askPC(env, day, messages);
   }
   if (verdict && env.ANY_DAY === '1') console.log('MODEL', verdict.via, JSON.stringify(messages[1].content), '=>', JSON.stringify(verdict.raw));
   return verdict && { ...verdict, evidence };
