@@ -10,7 +10,8 @@
 // free allowance, with part of it kept for ranked (see shared.js). When the budget is spent or the
 // model fails, the answer simply doesn't count.
 //
-// Ranked: see ranked.js. Feedback box: see feedback.js. Poll: see poll.js.
+// Ranked: see ranked.js. Feedback box: see feedback.js. Poll: see poll.js. The PC referee, the admin's
+// own computer answering referee checks: see pc.js.
 //
 //   POST /dive    {"day": 5, "rounds": [{"id": "lizard", "name": "Gecko"}, {"id": "bank", "typed": "..."}]}
 //   POST /check   {"prompt": "lizard", "typed": "shingleback"}  ->  {"valid": true, "name": "Shingleback", "tier": 3}
@@ -18,6 +19,7 @@
 //   POST /feedback    see feedback.js
 //   POST /poll        see poll.js
 //   GET  /health
+//   GET  /pc/connect  WebSocket from the PC referee (pc.js)
 //
 // Requests come from the game's own site, or through the Google relay (relay/google-apps-script.js)
 // for school networks that block this address. The relay isn't a browser, so it has no Origin
@@ -28,6 +30,8 @@ import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge
 import { ranked } from './ranked.js';
 import { feedback } from './feedback.js';
 import { poll } from './poll.js';
+
+export { PcLink } from './pc.js';
 
 const MAX_BODY = 4096;
 const MAX_ROUNDS = 7;
@@ -45,6 +49,13 @@ export default {
     const json = (data) => new Response(JSON.stringify(data), { status: 200, headers: { ...cors, 'Content-Type': 'application/json' } });
 
     if (url.pathname === '/health') return reply(200, 'ok');
+    // The PC referee connects here. It isn't a browser, so it has no Origin; its key is checked
+    // inside the connection (pc.js).
+    if (url.pathname === '/pc/connect') {
+      if (!env.PC || request.headers.get('Upgrade') !== 'websocket') return reply(404, 'Not found');
+      return env.PC.get(env.PC.idFromName('pc')).fetch(request);
+    }
+    if (url.pathname === '/pc/status' && env.ANY_DAY === '1' && env.PC) return json(await env.PC.get(env.PC.idFromName('pc')).status());
     if (!['/dive', '/check', '/feedback', '/poll'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
     if (request.method === 'OPTIONS') return reply(allowed ? 204 : 403);
     if (request.method !== 'POST') return reply(405, 'Use POST');

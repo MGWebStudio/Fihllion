@@ -13,6 +13,9 @@
     }
   ],
   "ai": { "binding": "AI" },
+  // The PC referee's connection (src/pc.js). Free-plan Durable Objects have to be SQLite-backed.
+  "durable_objects": { "bindings": [{ "name": "PC", "class_name": "PcLink" }] },
+  "migrations": [{ "tag": "pc-v1", "new_sqlite_classes": ["PcLink"] }],
   "vars": {
     "DATA_URL": "https://mgwebstudio.github.io/Fihllion/data/",
     "ALLOWED_ORIGINS": "https://mgwebstudio.github.io",
@@ -23,6 +26,9 @@
     "AI_RANKED_RESERVE": "2000",
     // When players start getting asked to put in their real name or go anonymous, and need to answer
     // before a ranked Daily: Friday Nov 20, 2026 at midnight Mountain Time. See needsName in src/ranked.js.
-    "NAMES_FROM": "2026-11-20T07:00:00Z"
+    "NAMES_FROM": "2026-11-20T07:00:00Z",
+    // Which referee checks try the PC referee first (src/pc.js, pc-referee/): "practice" (Endless,
+    // the Archive, a Daily for fun), "all", or "off". It also needs the secret PC_REFEREE_KEY.
+    "PC_REFEREE": "off"
   }
 }

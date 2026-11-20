@@ -5,7 +5,8 @@
 //   node admin.mjs answers <name> [day]   what that player answered on their latest ranked run (or that day's)
 //   node admin.mjs feedback [days] what players sent from the feedback box in the last 7 days (or that many)
 //   node admin.mjs poll            results of the poll in js/poll.js
-//   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, and when it ran out
+//   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, when it ran out, and
+//                                  how many checks the PC referee (pc-referee/) answered
 //   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
 //   node admin.mjs unban <name>
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -173,13 +174,15 @@ if (command === 'board') {
   const days = value ? Math.max(1, Math.floor(Number(value)) || 7) : 7;
   // ai_calls counts by UTC day (it resets at 5 PM Mountain Time), numbered like the game's days.
   const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
-  const rows = sql(`SELECT day, n, units, failed, practice_out_at, ranked_out_at FROM ai_calls ORDER BY day DESC LIMIT ${days}`);
+  const rows = sql(`SELECT day, n, units, failed, pc, pc_failed, practice_out_at, ranked_out_at FROM ai_calls ORDER BY day DESC LIMIT ${days}`);
   console.log('AI referee by UTC day (each one runs 5 PM to 5 PM Mountain Time):');
   console.table(rows.map((row) => ({
     day: row.day,
     calls: row.n,
     units: Math.round(row.units),
     failed: row.failed,
+    'your PC answered': row.pc,
+    'your PC failed': row.pc_failed,
     'practice ran out': mt(row.practice_out_at),
     'ranked ran out': mt(row.ranked_out_at),
   })));

@@ -108,6 +108,30 @@ npx wrangler d1 execute fihllion --remote --command "DELETE FROM verdicts WHERE 
 
 Answers the referee accepts often belong on the prompt's list. Add them to the `.txt` file like any other answer.
 
+## PC referee (pc-referee/)
+
+The admin's own computer can answer referee checks for free with Ollama, running `qwen3:30b-a3b`, the same model family as the first referee. `pc-referee/pc-referee.mjs` connects out to the Worker (`/pc/connect`) and keeps one WebSocket open; a Durable Object (`worker/src/pc.js`) holds it and sends checks down it. Nothing on the computer is opened to the internet, so there's no tunnel, domain or open port. Free-plan Durable Objects allow 100,000 requests a day, and one sleeps while the computer is idle.
+
+- **Which checks.** `PC_REFEREE` in `wrangler.jsonc`: `practice` sends Endless, Archive and just-for-fun checks to the PC first and keeps ranked on Cloudflare's model, `all` tries the PC first for everything, and `off` never asks it. Whichever goes first, the other is the backup, so a check only goes unanswered when both are out.
+- **Quality.** On the hard set (Nov 20, 2026) it accepted 71 of 72 rare real answers and turned down 31 or 32 of 35 tricky wrong ones, against Cloudflare's old model's 71 and 28. Its fame ratings matched the old model's on 59 of 71. Its rulings are saved like any other.
+- **Speed.** About 0.6 seconds a check on an RTX 5070 (the model is 19 GB, so about half of it runs on the processor). Ollama's thinking switch doesn't stop this model writing out its reasoning, so the helper holds the reply to the verdict's JSON shape, which keeps it under a second.
+- **When it's gone.** Off, paused, or more than 8 seconds late, and the check goes to Cloudflare's model; after a late answer it's skipped for 30 seconds. It pings every 30 seconds, and 75 seconds without one counts as gone. A second copy connecting replaces the first.
+- `node admin.mjs referee` shows how many checks it answered and failed each day.
+
+Setting it up once, from `pc-referee/` (Ollama installed, with `ollama pull qwen3:30b-a3b`):
+
+```
+node pc-referee.mjs new-key
+cd ..\worker
+Get-Content ..\pc-referee\key.txt | node node_modules/wrangler/bin/wrangler.js secret put PC_REFEREE_KEY
+```
+
+Then set `PC_REFEREE` to `"practice"`, run `npm run migrate:live` (migration 0009 adds its columns), and deploy the Worker. `key.txt` is ignored by git; never commit it.
+
+Running it: `node pc-referee.mjs` in `pc-referee/` while Ollama is running. Type `p` and Enter to pause for games (it unloads the model from the graphics card), `r` to resume, `q` to quit. Closing the window is fine too.
+
+Testing on this PC: `node pc-referee.mjs --local` connects to `wrangler dev` with the test key in `worker/.dev.vars`, and a `/check` with `"model": "pc"` asks only the PC.
+
 ## Ranked mode
 
 A player who picks a nickname plays their Daily as a ranked run: one try a day, on a board everyone can see. Days are Mountain Time for everyone, and so is the normal Daily. The code is `worker/src/ranked.js` on the server and `js/ranked.js` in the game.

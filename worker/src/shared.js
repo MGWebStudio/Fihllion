@@ -93,7 +93,7 @@ export async function findPrompt(env, id) {
 // Rules on a typed answer: the prompt's list first, then saved rulings, then the model.
 // Returns { valid, name, tier } or { valid: false, busy: true } when the referee can't answer now.
 // `options.ranked` draws on the units kept for ranked; the rest are this PC's test switches
-// (nobank, nocache, model).
+// (nobank, nocache, model; model 'pc' asks only the PC referee).
 export async function judge(env, prompt, typed, options = {}) {
   const index = buildIndex(prompt);
   // The game checks its list first, but a spelling can still slip past it.
@@ -126,29 +126,8 @@ export async function judge(env, prompt, typed, options = {}) {
 
   let verdict = { valid: false, name: '', fame: 0 };
   if (!SUSPICIOUS.test(typed)) {
-    const day = utcToday();
-    const budget = Number(env.AI_DAILY_UNITS || 0);
-    // AI_RESERVE_OFF_UNTIL (a date and time) lets practice use the ranked reserve too until then.
-    const shared = Date.now() < (Date.parse(env.AI_RESERVE_OFF_UNTIL || '') || 0);
-    const stop = options.ranked || shared ? budget : budget - Number(env.AI_RANKED_RESERVE || 0);
-    const spent = await env.DB.prepare('SELECT units FROM ai_calls WHERE day = ?1').bind(day).first('units');
-    if ((spent || 0) >= stop) {
-      // The first time each budget runs out today is noted for `node admin.mjs referee`.
-      const column = options.ranked ? 'ranked_out_at' : 'practice_out_at';
-      await env.DB.prepare(`UPDATE ai_calls SET ${column} = ?2 WHERE day = ?1 AND ${column} IS NULL`).bind(day, Date.now()).run();
-      return { valid: false, busy: true };
-    }
-    await env.DB.prepare('INSERT INTO ai_calls (day, n) VALUES (?1, 1) ON CONFLICT (day) DO UPDATE SET n = n + 1').bind(day).run();
-    const asked = await askModel(env, prompt, typed, options.model || MODEL);
-    await env.DB.prepare('UPDATE ai_calls SET units = units + ?2 WHERE day = ?1').bind(day, asked.units).run();
-    if (asked.failed) {
-      await noteFailure(env, day, asked.failed);
-      // Cloudflare's own daily limit ran out first (error 4006): don't ask again until it resets.
-      if (/\b4006\b|daily free allocation/i.test(asked.failed.detail)) {
-        await env.DB.prepare('UPDATE ai_calls SET units = MAX(units, ?2) WHERE day = ?1').bind(day, budget).run();
-      }
-      return { valid: false, busy: true };
-    }
+    const asked = await askReferee(env, prompt, typed, options);
+    if (!asked) return { valid: false, busy: true };
     verdict = asked;
   }
 
@@ -164,7 +143,7 @@ export async function judge(env, prompt, typed, options = {}) {
   await env.DB.prepare('INSERT INTO verdicts (prompt, typed, valid, name, tier, n) VALUES (?1, ?2, ?3, ?4, ?5, 1) ON CONFLICT (prompt, typed) DO UPDATE SET n = n + 1')
     .bind(prompt.id, typed, verdict.valid ? 1 : 0, name, tier).run();
   if (verdict.valid) learnedCache.delete(prompt.id);
-  const debug = { fame: verdict.fame, usage: verdict.usage, evidence: verdict.evidence };
+  const debug = { fame: verdict.fame, usage: verdict.usage, evidence: verdict.evidence, via: verdict.via, ms: verdict.ms };
   return verdict.valid ? { ...finalRuling(prompt, typed, name, tier, hit), debug } : { valid: false, debug };
 }
 
@@ -255,7 +234,29 @@ export function finalRuling(prompt, typed, name, tier, listed) {
 
 // A few of the commonest answers show the model what kind of thing the prompt means. The hidden
 // answer is never shown.
-async function askModel(env, prompt, typed, model) {
+// Who answers a check. Two referees run the same model: Cloudflare's, inside the day's budget, and
+// the PC referee (pc.js), the admin's own computer, which is free but only there while it's on.
+// PC_REFEREE says which checks try the PC first: 'practice' (Endless, the Archive, a Daily played
+// for fun), 'all', or 'off' (never). Whichever goes first, the other is the backup, so a check only
+// goes unanswered when both are out. Resolves to a verdict, or null when nobody could answer.
+async function askReferee(env, prompt, typed, options) {
+  const day = utcToday();
+  const { messages, evidence } = await refereeMessages(prompt, typed);
+  const mode = env.PC ? env.PC_REFEREE || 'off' : 'off';
+  const onlyPC = options.model === 'pc'; // test switch on this PC
+  const pcFirst = onlyPC || mode === 'all' || (mode === 'practice' && !options.ranked);
+  let verdict = null;
+  if (pcFirst) verdict = await askPC(env, day, messages);
+  if (!verdict && !onlyPC) {
+    verdict = await askCloudflare(env, day, messages, options);
+    if (!verdict && !pcFirst && mode !== 'off') verdict = await askPC(env, day, messages);
+  }
+  if (verdict && env.ANY_DAY === '1') console.log('MODEL', verdict.via, JSON.stringify(messages[1].content), '=>', JSON.stringify(verdict.raw));
+  return verdict && { ...verdict, evidence };
+}
+
+// The instructions plus what the model needs to know about this answer, Wikipedia's results included.
+async function refereeMessages(prompt, typed) {
   const examples = prompt.answers.filter((answer) => answer.tier === 0).slice(0, 4).map((answer) => answer.name);
   const evidence = prompt.exact ? [] : await wikipedia(prompt, typed);
   const user = [
@@ -267,13 +268,47 @@ async function askModel(env, prompt, typed, model) {
       : evidence.length ? `Wikipedia search results:\n${evidence.map((line, i) => `${i + 1}. ${line}`).join('\n')}` : 'Wikipedia search results: none',
     '/no_think',
   ].filter(Boolean).join('\n');
-  // A call that fails comes back as { failed: { kind, detail }, units } instead of a verdict:
-  // 'error' when Workers AI refused or broke (its message says why), 'unreadable' when the model
-  // answered with something that isn't the JSON asked for.
-  let result;
+  return { messages: [{ role: 'system', content: REFEREE }, { role: 'user', content: user }], evidence };
+}
+
+// The model's reply, or null when it isn't the JSON asked for.
+function readVerdict(raw) {
+  const found = String(raw || '').replace(/<think>[\s\S]*?<\/think>/g, '').match(/\{[\s\S]*\}/);
+  let parsed = null;
   try {
-    result = await env.AI.run(model, {
-      messages: [{ role: 'system', content: REFEREE }, { role: 'user', content: user }],
+    parsed = found ? JSON.parse(found[0]) : null;
+  } catch {
+    // Reported by the caller.
+  }
+  if (!parsed || typeof parsed !== 'object') return null;
+  return {
+    valid: parsed.valid === true,
+    name: typeof parsed.name === 'string' ? parsed.name.trim() : '',
+    fame: [1, 2, 3].includes(Number(parsed.fame)) ? Number(parsed.fame) : 3,
+    raw,
+  };
+}
+
+// Cloudflare's model, inside the day's budget (see the top of this file). null when the budget is
+// spent or the call failed; failures are kept for `node admin.mjs referee`.
+async function askCloudflare(env, day, messages, options) {
+  const budget = Number(env.AI_DAILY_UNITS || 0);
+  // AI_RESERVE_OFF_UNTIL (a date and time) lets practice use the ranked reserve too until then.
+  const shared = Date.now() < (Date.parse(env.AI_RESERVE_OFF_UNTIL || '') || 0);
+  const stop = options.ranked || shared ? budget : budget - Number(env.AI_RANKED_RESERVE || 0);
+  const spent = await env.DB.prepare('SELECT units FROM ai_calls WHERE day = ?1').bind(day).first('units');
+  if ((spent || 0) >= stop) {
+    // The first time each budget runs out today is noted for `node admin.mjs referee`.
+    const column = options.ranked ? 'ranked_out_at' : 'practice_out_at';
+    await env.DB.prepare(`UPDATE ai_calls SET ${column} = ?2 WHERE day = ?1 AND ${column} IS NULL`).bind(day, Date.now()).run();
+    return null;
+  }
+  await env.DB.prepare('INSERT INTO ai_calls (day, n) VALUES (?1, 1) ON CONFLICT (day) DO UPDATE SET n = n + 1').bind(day).run();
+  let result = null;
+  let failed = null;
+  try {
+    result = await env.AI.run(options.model || MODEL, {
+      messages,
       max_tokens: 120,
       temperature: 0,
       // Straight to the JSON answer, without writing out reasoning first (slower, and paid per word).
@@ -281,27 +316,48 @@ async function askModel(env, prompt, typed, model) {
       response_format: { type: 'json_object' },
     });
   } catch (error) {
-    return { failed: { kind: 'error', detail: String(error?.message || error) }, units: 0 };
+    // 'error' when Workers AI refused or broke (its message says why).
+    failed = { kind: 'error', detail: String(error?.message || error) };
   }
-  const units = Number(result?.usage?.neurons) || UNITS_PER_CALL;
-  const raw = modelText(result);
-  if (env.ANY_DAY === '1') console.log('MODEL', JSON.stringify(user), '=>', JSON.stringify(raw));
-  const found = raw.replace(/<think>[\s\S]*?<\/think>/g, '').match(/\{[\s\S]*\}/);
-  let parsed = null;
+  const units = result ? Number(result?.usage?.neurons) || UNITS_PER_CALL : 0;
+  await env.DB.prepare('UPDATE ai_calls SET units = units + ?2 WHERE day = ?1').bind(day, units).run();
+  const raw = result ? modelText(result) : '';
+  const verdict = result ? readVerdict(raw) : null;
+  // 'unreadable' when the model answered with something that isn't the JSON asked for.
+  if (!failed && !verdict) failed = { kind: 'unreadable', detail: raw || '(empty)' };
+  if (failed) {
+    await noteFailure(env, day, failed);
+    // Cloudflare's own daily limit ran out first (error 4006): don't ask again until it resets.
+    if (/\b4006\b|daily free allocation/i.test(failed.detail)) {
+      await env.DB.prepare('UPDATE ai_calls SET units = MAX(units, ?2) WHERE day = ?1').bind(day, budget).run();
+    }
+    return null;
+  }
+  return { ...verdict, usage: result?.usage, units, via: 'cloudflare' };
+}
+
+// The PC referee (pc.js). null when no PC is connected (or it's paused), or when it failed or was
+// too slow; those failures are counted apart from Cloudflare's, as 'pc' and 'pc-unreadable'.
+async function askPC(env, day, messages) {
+  if (!env.PC) return null;
+  let reply;
   try {
-    parsed = found ? JSON.parse(found[0]) : null;
-  } catch {
-    // Reported below.
+    reply = await env.PC.get(env.PC.idFromName('pc')).ask(messages);
+  } catch (error) {
+    reply = { error: String(error?.message || error) };
   }
-  if (!parsed || typeof parsed !== 'object') return { failed: { kind: 'unreadable', detail: raw || '(empty)' }, units };
-  return {
-    valid: parsed.valid === true,
-    name: typeof parsed.name === 'string' ? parsed.name.trim() : '',
-    fame: [1, 2, 3].includes(Number(parsed.fame)) ? Number(parsed.fame) : 3,
-    usage: result?.usage,
-    units,
-    evidence,
-  };
+  if (reply?.offline) return null;
+  const verdict = typeof reply?.text === 'string' ? readVerdict(reply.text) : null;
+  if (!verdict) {
+    const failed = await env.DB.prepare('INSERT INTO ai_calls (day, n, pc_failed) VALUES (?1, 0, 1) ON CONFLICT (day) DO UPDATE SET pc_failed = pc_failed + 1 RETURNING pc_failed')
+      .bind(day).first('pc_failed');
+    const kind = reply?.error ? 'pc' : 'pc-unreadable';
+    console.error('PC REFEREE FAILED', kind, reply?.error || reply?.text);
+    if (failed <= FAILURES_KEPT_PER_DAY) await keepFailure(env, kind, reply?.error || reply?.text || '(empty)');
+    return null;
+  }
+  await env.DB.prepare('INSERT INTO ai_calls (day, n, pc) VALUES (?1, 0, 1) ON CONFLICT (day) DO UPDATE SET pc = pc + 1').bind(day).run();
+  return { ...verdict, via: 'pc', ms: reply.ms };
 }
 
 // Kept so `node admin.mjs referee` can say why calls fail, up to a couple hundred a day.
@@ -309,8 +365,11 @@ async function noteFailure(env, day, { kind, detail }) {
   console.error('REFEREE FAILED', kind, detail);
   const failed = await env.DB.prepare('UPDATE ai_calls SET failed = failed + 1 WHERE day = ?1 RETURNING failed').bind(day).first('failed');
   if (failed > FAILURES_KEPT_PER_DAY) return;
-  await env.DB.prepare('INSERT INTO ai_failures (at, kind, detail) VALUES (?1, ?2, ?3)').bind(Date.now(), kind, String(detail).slice(0, 300)).run();
+  await keepFailure(env, kind, detail);
 }
+
+const keepFailure = (env, kind, detail) => env.DB.prepare('INSERT INTO ai_failures (at, kind, detail) VALUES (?1, ?2, ?3)')
+  .bind(Date.now(), kind, String(detail).slice(0, 300)).run();
 
 // Titles and one-line descriptions of the top Wikipedia matches, searched two ways at once: the
 // answer alone ("Wawel Castle") and with the prompt's subject ("Ego Elton John song"), which finds
