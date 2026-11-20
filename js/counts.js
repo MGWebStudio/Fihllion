@@ -19,6 +19,25 @@ function metInEndless() {
   return new Set([...store.get('endless.met', []), ...(state.seen || []), ...(store.get('endless.current')?.ids || [])]);
 }
 
+// Counts this device once a day toward how many different people open the game (the admin's
+// dashboard). It sends a random id kept on this device; the server keeps only a scrambled copy tied
+// to the day, so one day's visitors can't be matched with another's.
+export function sendVisit(day, phone) {
+  if (!HAS_SERVER || store.get('visit.day') === day) return;
+  let id = store.get('visit.id');
+  // New to the game: no id yet, and nothing played on this device before.
+  const fresh = !id && !store.keysWith('daily.').length && !store.keysWith('endless.').length && !store.get('ranked.player');
+  if (!/^[a-f0-9]{24}$/.test(id || '')) {
+    id = [...crypto.getRandomValues(new Uint8Array(12))].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+    store.set('visit.id', id);
+  }
+  post('/visit', { day, id, phone, fresh }, { timeout: 15000, keepalive: true })
+    .then((res) => {
+      if (res.ok || res.status === 400) store.set('visit.day', day);
+    })
+    .catch(() => {});
+}
+
 export function sendDaily(dive, calendar) {
   if (!HAS_SERVER || dive.mode !== 'daily' || !dive.done || !dive.onTime || dive.sent) return;
   const met = metInEndless();

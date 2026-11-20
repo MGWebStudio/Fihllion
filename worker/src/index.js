@@ -11,13 +11,16 @@
 // model fails, the answer simply doesn't count.
 //
 // Ranked: see ranked.js. Feedback box: see feedback.js. Poll: see poll.js. The PC referee, the admin's
-// own computer answering referee checks: see pc.js.
+// own computer answering referee checks: see pc.js. How many people open the game each day: see
+// visits.js. The admin's dashboard, behind a password: see dashboard.js.
 //
 //   POST /dive    {"day": 5, "rounds": [{"id": "lizard", "name": "Gecko"}, {"id": "bank", "typed": "..."}]}
 //   POST /check   {"prompt": "lizard", "typed": "shingleback"}  ->  {"valid": true, "name": "Shingleback", "tier": 3}
 //   POST /ranked/...  see ranked.js
 //   POST /feedback    see feedback.js
 //   POST /poll        see poll.js
+//   POST /visit       see visits.js
+//   GET  /admin       the admin's dashboard (dashboard.js)
 //   GET  /health
 //   GET  /pc/connect  WebSocket from the PC referee (pc.js)
 //
@@ -30,6 +33,8 @@ import { MAX_NAME, utcToday, parseJSON, cleanTyped, fetchJSON, findPrompt, judge
 import { ranked } from './ranked.js';
 import { feedback } from './feedback.js';
 import { poll } from './poll.js';
+import { visit } from './visits.js';
+import { dashboard } from './dashboard.js';
 
 export { PcLink } from './pc.js';
 
@@ -56,7 +61,9 @@ export default {
       return env.PC.get(env.PC.idFromName('pc')).fetch(request);
     }
     if (url.pathname === '/pc/status' && env.ANY_DAY === '1' && env.PC) return json(await env.PC.get(env.PC.idFromName('pc')).status());
-    if (!['/dive', '/check', '/feedback', '/poll'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
+    // The dashboard is its own page on this address, so it skips the game's origin checks.
+    if (url.pathname === '/admin' || url.pathname.startsWith('/admin/')) return dashboard(request, env, url);
+    if (!['/dive', '/check', '/feedback', '/poll', '/visit'].includes(url.pathname) && !url.pathname.startsWith('/ranked/')) return reply(404, 'Not found');
     if (request.method === 'OPTIONS') return reply(allowed ? 204 : 403);
     if (request.method !== 'POST') return reply(405, 'Use POST');
     if (!allowed && !relayed) return reply(403, 'Unknown origin');
@@ -72,6 +79,7 @@ export default {
     if (path === '/check') return referee(text, env, reply, json);
     if (path === '/feedback') return feedback(text, env, reply);
     if (path === '/poll') return poll(text, env, reply, json);
+    if (path === '/visit') return visit(text, env, reply);
     if (path.startsWith('/ranked/')) return ranked(path.slice('/ranked/'.length), text, env, reply, json, { relayed });
 
     let dive;
@@ -97,7 +105,7 @@ function allowedOrigin(origin, env) {
 
 // A request that rode through the relay inside /check (see the top of this file). Anything else is
 // a real referee check.
-const VIA = /^\/(feedback|poll|ranked\/[a-z]+)$/;
+const VIA = /^\/(feedback|poll|visit|ranked\/[a-z]+)$/;
 function unpackVia(text) {
   let data = null;
   try {

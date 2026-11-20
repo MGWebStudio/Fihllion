@@ -139,9 +139,11 @@ export class PcLink extends DurableObject {
   }
 }
 
-// Compares the key in constant time, so its length and contents can't be guessed from timing.
-async function sameKey(given, expected) {
-  if (typeof given !== 'string' || typeof expected !== 'string' || expected.trim().length < 16) return false;
+// Compares the key in constant time, so its length and contents can't be guessed from timing. A key
+// shorter than the minimum never matches, so a missing or too-short secret locks everyone out.
+// The dashboard (dashboard.js) checks its password with this too.
+export async function sameKey(given, expected, minimum = 16) {
+  if (typeof given !== 'string' || typeof expected !== 'string' || expected.trim().length < minimum) return false;
   const encode = (text) => crypto.subtle.digest('SHA-256', new TextEncoder().encode(text.trim()));
   const [a, b] = await Promise.all([encode(given), encode(expected)]);
   return crypto.subtle.timingSafeEqual(a, b);

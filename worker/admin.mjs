@@ -1,4 +1,5 @@
 // Ranked mode admin, run from this PC with the Wrangler login that deploys the Worker.
+// Most of what these show is also on the dashboard, /admin on the Worker, for a phone (README, "Dashboard").
 // There's no admin password on the server: these commands talk to the database directly.
 //
 //   node admin.mjs board [day]     today's board (or that day's), with flags for left-the-tab questions

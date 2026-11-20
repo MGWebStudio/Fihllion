@@ -6,7 +6,7 @@ import {
 } from './content.js';
 import { buildIndex, findAnswer } from './match.js';
 import * as store from './store.js';
-import { noteEndless, sendDaily } from './counts.js';
+import { noteEndless, sendDaily, sendVisit } from './counts.js';
 import { askReferee } from './referee.js';
 import * as ranked from './ranked.js';
 import { findServer, post } from './server.js';
@@ -2204,6 +2204,7 @@ async function boot() {
     return;
   }
   G.today = content.calendar.dayNumber(currentDate());
+  sendVisit(G.today, ON_PHONE);
   wire();
   let shift = 0;
   setInterval(() => {

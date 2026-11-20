@@ -65,7 +65,7 @@ On localhost, add `?today=2026-11-10` to the address to pretend it's another day
 
 ## Answer counts
 
-`worker/` is a small Cloudflare Worker with a D1 database that counts Daily answers anonymously, so rarity can come from what players actually say instead of hand-set tiers. When a player finishes a Daily on its own day, `js/counts.js` sends it once: for each prompt they hadn't met before (not in an earlier Daily or in Endless), either the bank answer it matched or what they typed if nothing matched. The database keeps running totals only (`dives`, `plays`, `picks`, `misses`). There are no IP addresses, player IDs or timestamps. Archive replays and Endless are never sent. The game works the same if the counter is down.
+`worker/` is a small Cloudflare Worker with a D1 database that counts Daily answers anonymously, so rarity can come from what players actually say instead of hand-set tiers. When a player finishes a Daily on its own day, `js/counts.js` sends it once: for each prompt they hadn't met before (not in an earlier Daily or in Endless), either the bank answer it matched or what they typed if nothing matched. The database keeps running totals only (`dives`, `plays`, `picks`, `misses`). There are no IP addresses, player IDs or timestamps. Archive replays and Endless are never sent. (How many people open the game each day is counted separately; see Dashboard.) The game works the same if the counter is down.
 
 The Worker only accepts dives from the game's own site, for a day within one of today, and only prompts that belong to that day. It runs on Cloudflare's free plan, so going over the limits just makes it stop answering until the next day.
 
@@ -163,6 +163,20 @@ Real names: from `NAMES_FROM` in `wrangler.jsonc` (Nov 20, 2026), the board uses
 A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 
 Add `--local` to use the test database. The live tables need `npm run migrate:live` once before the Worker that uses them is deployed.
+
+## Dashboard
+
+`https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; the newest real names, each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
+
+It asks for a password: the secret `ADMIN_KEY`, which only the admin sets, from `worker/`. Wrangler asks for it, so it isn't typed into a command or saved in a file. It needs at least 12 characters.
+
+```powershell
+node node_modules/wrangler/bin/wrangler.js secret put ADMIN_KEY
+```
+
+A device remembers the password until "Sign out on this device". After 20 wrong passwords in an hour, the page stays locked until the next hour, right password included. Without `ADMIN_KEY`, the data stays locked. The code is `worker/src/dashboard.js` and `dashboard.html`.
+
+"People" is how many different devices open the game each day. `js/counts.js` sends a random id kept on the device once a day, with whether it had played before. The `visits` table keeps only a scrambled copy of the id tied to that day, so one day's visitors can't be matched with another's, and clears copies older than two days; `visit_days` keeps the totals. Counting started Nov 20, 2026.
 
 ## Second address (relay/)
 

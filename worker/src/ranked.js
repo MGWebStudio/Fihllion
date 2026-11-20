@@ -78,7 +78,7 @@ export function nameProblem(name) {
 }
 
 // Anonymous players show on the boards as Anon and four numbers.
-const anonName = () => `Anon${1000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 9000)}`;
+export const anonName = () => `Anon${1000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 9000)}`;
 
 // Real names on the leaderboard: from NAMES_FROM on (wrangler.jsonc), every player answers once,
 // their own name or anonymous, and can't start a ranked Daily until they do. Without the setting
