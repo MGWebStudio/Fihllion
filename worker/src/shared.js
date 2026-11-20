@@ -9,9 +9,12 @@ export const MAX_NAME = 100;
 const MAX_TYPED = 60;
 // Cloudflare retired the first referee model, @cf/qwen/qwen3-30b-a3b-fp8, on Nov 20, 2026 (its calls
 // failed from 5 PM Mountain Time on Nov 19). On the hard set of 72 rare real answers and 35 tricky
-// wrong ones it had accepted 71 and turned down 28. Gemma 4 accepted 71 and turned down 31, at about
-// 3.2 units a check instead of 2.5. GLM 4.7 Flash accepted all 72 but turned down only 27 (2 units).
-const MODEL = '@cf/google/gemma-4-26b-a4b-it';
+// wrong ones it had accepted 71 and turned down 28, at about 2.5 units a check. GLM 4.7 Flash accepted
+// all 72 and turned down 27, at about 2 units on that set and 2.4 to 2.7 on ordinary checks, so the
+// free allowance covers about 4,000 checks a day. Gemma 4 (@cf/google/gemma-4-26b-a4b-it) is
+// stricter, accepting 71 and turning down 31, but costs about 1.5 times as much (about 2,600 checks),
+// fewer than players already needed on Nov 19.
+const MODEL = '@cf/zai-org/glm-4.7-flash';
 const FAME_TIER = { 1: 2, 2: 3, 3: 4 }; // well known: 30 points, fans know it: 60, obscure: 85
 // Attempts to talk the referee into a ruling, rejected without asking it.
 const SUSPICIOUS = /\b(ignore|disregard|instructions?)\b|[{}]/i;
@@ -35,7 +38,7 @@ export const utcToday = () => Math.floor((Date.now() - EPOCH) / DAY_MS) + 1;
 // AI_DAILY_UNITS stops a little before, so the last call can't be the one that's refused. Practice
 // (Endless, the Archive, a Daily played for fun) stops AI_RANKED_RESERVE units earlier still, so
 // ranked players always have the referee. A call that doesn't say what it cost counts as this much:
-const UNITS_PER_CALL = 3.3;
+const UNITS_PER_CALL = 2.6;
 const FAILURES_KEPT_PER_DAY = 200;
 
 export function parseJSON(text) {
