@@ -158,9 +158,14 @@ node admin.mjs ban Somename   # hide from every board and stop playing ranked
 node admin.mjs unban Somename
 node admin.mjs names          # who put in their real name (with what they had before), who went anonymous, who hasn't answered
 node admin.mjs anon Somename  # change a name that isn't a real name to an anonymous one ("anonymous" and a few numbers)
+node admin.mjs requests       # names players asked for from the leaderboard, waiting for an answer
+node admin.mjs approve-name Somename   # give them the name they asked for (use the name they have now)
+node admin.mjs deny-name Somename      # turn it down; they keep their name and can ask again
 ```
 
 Real names: from `NAMES_FROM` in `wrangler.jsonc` (Nov 20, 2026), the board uses real names. Every player answers once: put in their name (a first name, or a version of it people know), keep the one they have because it's their name, or go anonymous, which the server turns into "anonymous" and a few numbers, like anonymous482. The game asks every time it opens until they answer, and the server won't start a ranked Daily until they do. New players make the same choice when they sign up. Names starting with "anon" are kept for anonymous players. `node admin.mjs names` lists the names to check; anything that isn't a name gets `node admin.mjs anon`, and the player sees the new name next time they open the game. The `players` table keeps the answer in `name_kind` ('own' or 'anon'), the old nickname in `name_before`, and when in `name_at`.
+
+Name requests: a player who already has a name can ask for a different one from the leaderboard (Request a new name). It goes through the same name rules as signing up and can't be a name someone else has or is waiting on. It changes only once the admin approves it, on the dashboard or with `node admin.mjs approve-name`; until then they keep playing under the name they have. One request per player at a time: a new one replaces it, and they can cancel it. A turned-down request is said once in the game, and they can ask again. The request is kept in `name_request`, `name_request_at` and `name_request_no` (1 once it's turned down).
 
 A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 
@@ -168,7 +173,7 @@ Add `--local` to use the test database. The live tables need `npm run migrate:li
 
 ## Dashboard
 
-`https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; the newest real names, each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
+`https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; the newest real names, name requests waiting, each with Approve and Turn down (the same as `node admin.mjs approve-name` and `deny-name`); each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
 
 It asks for a password: the secret `ADMIN_KEY`, which only the admin sets, from `worker/`. Wrangler asks for it, so it isn't typed into a command or saved in a file. It needs at least 12 characters.
 

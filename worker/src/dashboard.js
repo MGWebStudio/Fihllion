@@ -3,6 +3,8 @@
 //   GET  /admin        the page (dashboard.html); it asks for the password and remembers it
 //   GET  /admin/data   everything on it, as JSON           (header X-Admin-Key: the password)
 //   POST /admin/anon   {"name": "Sammy"} -> {"name": "anonymous482"}, like node admin.mjs anon
+//   POST /admin/name   {"id": 12, "name": "Sam", "approve": true|false} -> a player's name request approved or
+//                      turned down, like node admin.mjs approve-name / deny-name
 //
 // The password is the secret ADMIN_KEY, which only the admin sets (README, "Dashboard"); with no
 // ADMIN_KEY the data stays locked. After MAX_TRIES wrong passwords in an hour, every try is turned
@@ -10,7 +12,7 @@
 import PAGE from './dashboard.html';
 import { POLL, pollOpen } from '../../js/poll.js';
 import { EPOCH, utcToday, loadCalendar, parseJSON } from './shared.js';
-import { anonName } from './ranked.js';
+import { anonName, decideName } from './ranked.js';
 import { sameKey } from './pc.js';
 
 const MIN_PASSWORD = 12;
@@ -23,7 +25,7 @@ export async function dashboard(request, env, url) {
   const path = url.pathname.replace(/\/$/, '');
   if (path === '/admin' && request.method === 'GET') return page();
   const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { ...PRIVATE, 'Content-Type': 'application/json' } });
-  if (path !== '/admin/data' && path !== '/admin/anon') return new Response('Not found', { status: 404, headers: PRIVATE });
+  if (!['/admin/data', '/admin/anon', '/admin/name'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
 
   const access = await checkPassword(request, env);
   if (access === 'unset') return json(503, { error: 'unset' });
@@ -34,6 +36,12 @@ export async function dashboard(request, env, url) {
   if (path === '/admin/anon' && request.method === 'POST') {
     const data = parseJSON(await request.text()) || {};
     const result = await makeAnonymous(env, data.name);
+    return json(result.error ? 400 : 200, result);
+  }
+  if (path === '/admin/name' && request.method === 'POST') {
+    const data = parseJSON(await request.text()) || {};
+    if (!Number.isInteger(data.id) || typeof data.name !== 'string' || typeof data.approve !== 'boolean') return json(400, { error: 'Wrong shape' });
+    const result = await decideName(env, data.id, data.name, data.approve);
     return json(result.error ? 400 : 200, result);
   }
   return json(405, { error: 'method' });
@@ -86,7 +94,7 @@ async function collect(env) {
   const from = today - DAYS + 1;
   const weekAgo = Date.now() - 7 * 86400000;
   const db = env.DB;
-  const [visits, dives, runs, joined, ai, board, names, recent, feedback, votes, failures] = await db.batch([
+  const [visits, dives, runs, joined, ai, board, names, recent, requests, feedback, votes, failures] = await db.batch([
     db.prepare('SELECT day, n, phone, fresh FROM visit_days WHERE day >= ?1').bind(from),
     db.prepare('SELECT day, n FROM dives WHERE day >= ?1').bind(from),
     db.prepare('SELECT day, COUNT(*) AS n, SUM(finished IS NOT NULL) AS done FROM runs WHERE day >= ?1 GROUP BY day').bind(from),
@@ -98,6 +106,8 @@ async function collect(env) {
       SUM(name_kind IS NULL AND NOT banned) AS waiting FROM players`),
     db.prepare(`SELECT name, name_before, name_at FROM players WHERE name_kind = 'own' AND NOT banned AND name_at IS NOT NULL
       ORDER BY name_at DESC LIMIT 40`),
+    db.prepare(`SELECT id, name, name_kind, name_before, name_request, name_request_at, paused FROM players
+      WHERE name_request IS NOT NULL AND name_request_no = 0 AND NOT banned ORDER BY name_request_at LIMIT 40`),
     db.prepare(`SELECT f.at, f.text, f.device, f.place, p.name FROM feedback f LEFT JOIN players p ON p.id = f.player
       WHERE f.at > ?1 ORDER BY f.at DESC LIMIT 40`).bind(weekAgo),
     db.prepare('SELECT choice, COUNT(*) AS n FROM poll_votes WHERE poll = ?1 GROUP BY choice').bind(POLL?.id || ''),
@@ -130,6 +140,7 @@ async function collect(env) {
     board: rows(board),
     names: rows(names)[0] || {},
     recent: rows(recent),
+    requests: rows(requests),
     feedback: rows(feedback),
     poll: POLL && {
       title: POLL.title,

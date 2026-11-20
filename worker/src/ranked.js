@@ -5,13 +5,15 @@
 // Days are Mountain Time, the same as the Daily.
 //
 //   POST /ranked/join      {"name": "Sam"} or {"anonymous": true} -> {"name": "Sam" or "Anon4821", "key": "..."}
-//   POST /ranked/status    {"key": "..."}                        -> {"name", "today", "run": {...}|null, "paused", "rename", "nameCheck"}
+//   POST /ranked/status    {"key": "..."}                        -> {"name", "today", "run": {...}|null, "paused", "rename", "nameCheck", "request"}
 //   POST /ranked/question  {"key": "..."}                        -> {"day", "round", "id", "text", "msLeft"} or {"finished": true}
 //   POST /ranked/guess     {"key", "round", "typed", "final"}    -> {"result": "hit"|"miss"|"late"|"busy", ...}
 //   POST /ranked/void      {"key", "round"}                      -> the question scores 0, flagged (they left the tab)
 //   POST /ranked/rename    {"key", "name"}, {"key", "anonymous": true} or {"key", "keep": true} -> {"name"},
 //                          for the name question, or when the admin offered or forced a new name
-//   POST /ranked/board     {"key"?, "day"?}                      -> today's and this week's boards
+//   POST /ranked/request   {"key", "name"} or {"key", "cancel": true} -> {"request": {"name", "state"}|null}, a different
+//                          name that changes once the admin approves it
+//   POST /ranked/board    {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
 import { parseJSON, cleanTyped, loadCalendar, findPrompt, judge } from './shared.js';
@@ -37,6 +39,7 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     if (!player) return json({ error: 'unknown' });
     if (player.banned) return json({ error: 'banned' });
     if (action === 'rename') return json(await rename(env, player, data));
+    if (action === 'request') return json(await requestName(env, player, data));
     if (action === 'status') return json(await status(env, player));
     // Paused, or made to pick a new nickname: the game says why and they can play just for fun.
     if (player.paused) return json({ error: 'paused' });
@@ -119,7 +122,8 @@ async function join(env, data) {
 
 export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
-  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer, name_kind FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
+  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer, name_kind, name_request, name_request_no FROM players WHERE key_hash = ?1')
+    .bind(await sha256(key)).first();
 }
 
 // The name question, or a name change the admin offered (node admin.mjs offer-rename) or requires
@@ -151,7 +155,7 @@ async function rename(env, player, data) {
     const name = anonymous ? anonName(8 - tries) : data.name;
     try {
       await env.DB.prepare(`UPDATE players SET name = ?1, name_key = ?2, rename_offer = 0, name_kind = ?3,
-          name_before = COALESCE(name_before, name), name_at = ?4 WHERE id = ?5`)
+          name_before = COALESCE(name_before, name), name_at = ?4, name_request = NULL, name_request_no = 0 WHERE id = ?5`)
         .bind(name, name.toLowerCase(), anonymous ? 'anon' : 'own', now, player.id).run();
       return { name };
     } catch (error) {
@@ -159,6 +163,54 @@ async function rename(env, player, data) {
     }
   }
   return { error: 'taken' };
+}
+
+// A player who already has a name asks for a different one, from the leaderboard. It changes once
+// the admin approves it (the dashboard, or node admin.mjs approve-name); until then they keep playing
+// as they are. A new request replaces the last one, and {"cancel": true} takes it back. Players who
+// can change their name themselves right now (the name question, or an offered or forced change) do
+// that instead.
+async function requestName(env, player, data) {
+  if (player.rename_offer || needsName(env, player)) return { error: 'can-rename' };
+  if (data.cancel === true) {
+    await env.DB.prepare('UPDATE players SET name_request = NULL, name_request_at = NULL, name_request_no = 0 WHERE id = ?1').bind(player.id).run();
+    return { request: null };
+  }
+  const problem = nameProblem(data.name);
+  if (problem) return { error: problem };
+  if (data.name === player.name) return { error: 'same' };
+  // Taken by someone else's name, or by someone else's request that's still waiting. A different
+  // capitalization of their own name is fine.
+  const key = data.name.toLowerCase();
+  const taken = await env.DB.prepare(`SELECT 1 FROM players WHERE id != ?2 AND (name_key = ?1 OR (lower(name_request) = ?1 AND name_request_no = 0)) LIMIT 1`)
+    .bind(key, player.id).first();
+  if (taken) return { error: 'taken' };
+  await env.DB.prepare('UPDATE players SET name_request = ?2, name_request_at = ?3, name_request_no = 0 WHERE id = ?1')
+    .bind(player.id, data.name, Date.now()).run();
+  return { request: { name: data.name, state: 'waiting' } };
+}
+
+const requestFor = (player) => (player.name_request ? { name: player.name_request, state: player.name_request_no ? 'no' : 'waiting' } : null);
+
+// The admin's answer to a name request, from the dashboard. Only the request the admin saw is
+// decided, so one the player changed meanwhile stays waiting. Approving moves the player to the new
+// name and keeps their scores.
+export async function decideName(env, id, requested, approve) {
+  const player = await env.DB.prepare('SELECT id, name, name_request, name_request_no FROM players WHERE id = ?1').bind(id).first();
+  if (!player || player.name_request !== requested || player.name_request_no) return { error: 'That request changed. Refresh and look again.' };
+  if (!approve) {
+    await env.DB.prepare('UPDATE players SET name_request_no = 1 WHERE id = ?1 AND name_request = ?2').bind(id, requested).run();
+    return { was: player.name, name: player.name, denied: requested };
+  }
+  try {
+    await env.DB.prepare(`UPDATE players SET name = name_request, name_key = lower(name_request), name_kind = 'own', name_before = COALESCE(name_before, name),
+        name_at = ?3, rename_offer = 0, name_request = NULL, name_request_at = NULL, name_request_no = 0 WHERE id = ?1 AND name_request = ?2`)
+      .bind(id, requested, Date.now()).run();
+  } catch (error) {
+    if (/unique/i.test(error.message)) return { error: `Someone else has ${requested} now. Turn it down instead.` };
+    throw error;
+  }
+  return { was: player.name, name: requested };
 }
 
 // Runs -----------------------------------------------------------------------------------
@@ -210,6 +262,7 @@ async function status(env, player) {
     paused: Boolean(player.paused),
     rename: player.rename_offer === 2 ? 'forced' : player.rename_offer === 1 ? 'offer' : null,
     nameCheck: needsName(env, player),
+    request: requestFor(player),
   };
 }
 

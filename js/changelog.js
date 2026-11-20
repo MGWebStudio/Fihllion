@@ -5,6 +5,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-20',
+    time: '1:45 PM',
+    title: 'Ask for a different name',
+    short: 'Ask for a different name',
+    items: [
+      'Want a different name on the leaderboard? Open the leaderboard and tap Request a new name.',
+      'It changes once it’s approved. Your scores stay.',
+    ],
+  },
+  {
+    date: '2026-11-20',
     time: '12:00 AM',
     title: 'Real names on the leaderboard',
     short: 'Real names on the board',

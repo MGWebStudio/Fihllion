@@ -19,6 +19,10 @@
 //                                  who went anonymous, and who hasn't answered the name question yet
 //   node admin.mjs anon <name> [name...]   change a name that isn't a real name to an anonymous one ("anonymous"
 //                                  and a few numbers); the player sees it next time they open the game
+//   node admin.mjs requests        names players asked for from the leaderboard, waiting for an answer
+//   node admin.mjs approve-name <name> [name...]   give each of these players the name they asked for (use
+//                                  the name they have now); they see it next time they open the game
+//   node admin.mjs deny-name <name> [name...]      turn their request down; they keep their name and can ask again
 //   add --local to any of them to use the test database on this PC instead of the live one
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -101,6 +105,47 @@ if (command === 'board') {
   })));
   if (anon.length) console.log(`\nAnonymous: ${anon.map((row) => (row.name_before ? `${row.name} (was ${row.name_before})` : row.name)).join(', ')}`);
   if (waiting.length) console.log(`\nHaven't answered yet, with their last ranked day: ${waiting.map((row) => `${row.name} (${row.last_day ?? 'none'})`).join(', ')}`);
+} else if (command === 'requests') {
+  const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+  const rows = sql(`SELECT name, name_before, name_request, name_request_at, paused FROM players
+    WHERE name_request IS NOT NULL AND name_request_no = 0 AND NOT banned ORDER BY name_request_at`);
+  if (!rows.length) console.log('No name requests waiting.');
+  else {
+    console.log(`${rows.length} waiting. Answer with: node admin.mjs approve-name <name now>  or  deny-name <name now>`);
+    console.table(rows.map((row) => ({
+      'name now': row.name,
+      'asked for': row.name_request,
+      was: row.name_before && row.name_before !== row.name ? row.name_before : '',
+      asked: mt(row.name_request_at),
+      ...(row.paused ? { paused: 'yes' } : {}),
+    })));
+  }
+} else if (command === 'approve-name' || command === 'deny-name') {
+  if (!names.length) throw new Error('Give at least one name: the one they have now.');
+  for (const name of names) {
+    const key = nameKey(name);
+    const [found] = sql(`SELECT id, name, name_request FROM players WHERE name_key = '${key}' AND name_request IS NOT NULL AND name_request_no = 0`);
+    if (!found) {
+      console.log(`${name} has no name request waiting.`);
+      continue;
+    }
+    // The request passed the same name rules as a new player's when it was made, so it's letters and
+    // numbers only; checked again before it goes into a query.
+    const asked = found.name_request;
+    if (!/^[A-Za-z0-9]{3,16}$/.test(asked)) throw new Error(`Unexpected request: ${asked}`);
+    if (command === 'deny-name') {
+      sql(`UPDATE players SET name_request_no = 1 WHERE id = ${found.id}`);
+      console.log(`Turned down ${asked} for ${found.name}. They keep ${found.name} and can ask again.`);
+      continue;
+    }
+    if (sql(`SELECT 1 FROM players WHERE name_key = '${asked.toLowerCase()}' AND id != ${found.id}`).length) {
+      console.log(`Someone else has ${asked} now, so ${found.name} can't have it. Turn it down with: node admin.mjs deny-name ${found.name}`);
+      continue;
+    }
+    sql(`UPDATE players SET name = name_request, name_key = lower(name_request), name_kind = 'own', name_before = COALESCE(name_before, name),
+      name_at = ${Date.now()}, rename_offer = 0, name_request = NULL, name_request_at = NULL, name_request_no = 0 WHERE id = ${found.id}`);
+    console.log(`${found.name} is ${asked} now. They'll see it next time they open the game.`);
+  }
 } else if (command === 'anon') {
   if (!names.length) throw new Error('Give at least one name.');
   const taken = new Set(sql("SELECT name_key FROM players WHERE name_key LIKE 'anon%'").map((row) => row.name_key));
@@ -200,6 +245,6 @@ if (command === 'board') {
     console.table(common);
   }
 } else {
-  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | referee [days] | ban | unban | pause | unpause <name>');
+  console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | referee [days] | ban | unban | pause | unpause <name> | names | anon <name> | requests | approve-name | deny-name <name>');
   console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name> | names | anon <name> [name...]  [--local]');
 }

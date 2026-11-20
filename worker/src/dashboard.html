@@ -146,6 +146,14 @@
     cursor: pointer;
   }
   .small-btn:hover { border-color: var(--danger); color: var(--danger); }
+  .small-btn.yes { border-color: var(--glass); color: var(--glass); }
+  .small-btn.yes:hover { background: var(--glass); color: var(--ink); }
+  /* A request: the name asked for, then its two answers on their own row so they fit a phone. */
+  .rows li.req { flex-wrap: wrap; }
+  .req .who { flex-basis: 100%; }
+  .pair { display: flex; gap: 6px; width: 100%; }
+  .pair .small-btn { flex: 1; min-height: 40px; }
+  .asked { font: 26px/1.05 var(--display); color: var(--cream); }
   .summary { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 12px; font-size: 18px; color: var(--muted); }
   .summary b { font: 26px/1 var(--display); color: var(--cream); font-weight: normal; margin-right: 4px; }
   .more { margin-top: 10px; }
@@ -363,6 +371,17 @@
         <button type="button" class="small-btn" data-anon="${esc(row.name)}">Make anonymous</button></li>`).join('')}</ul>`
         : '<p class="empty">Nobody has put in a name yet.</p>'}`;
 
+    // What each player asked to be called, with who they are now. Only the request shown here is
+    // decided, so one the player changed meanwhile waits for the next look.
+    const requests = d.requests.length ? `<ul class="rows">${d.requests.map((row) => `<li class="req">
+        <span class="who"><span class="asked">${esc(row.name_request)}</span>
+          <small>now ${esc(row.name)}${row.name_before && row.name_before !== row.name ? `, was ${esc(row.name_before)}` : ''}${row.paused ? ' · paused' : ''} · asked ${esc(dateTime(row.name_request_at))}</small></span>
+        <span class="pair">
+          <button type="button" class="small-btn yes" data-decide="yes" data-id="${row.id}" data-name="${esc(row.name_request)}" data-now="${esc(row.name)}">Approve</button>
+          <button type="button" class="small-btn" data-decide="no" data-id="${row.id}" data-name="${esc(row.name_request)}" data-now="${esc(row.name)}">Turn down</button>
+        </span></li>`).join('')}</ul>`
+      : '<p class="empty">No name requests waiting.</p>';
+
     const feedback = d.feedback.length ? `<ul class="rows feedback">${d.feedback.map((row) => `<li>
         <div class="meta">${esc([dateTime(row.at), row.name || 'no name', row.device, row.place].filter(Boolean).join(' · '))}</div>
         <div class="text">${esc(row.text)}</div></li>`).join('')}</ul>`
@@ -423,6 +442,7 @@
       </section>
 
       <section><h2>Today’s board<small>top ${d.board.length || 20}</small></h2><div class="card">${board}</div></section>
+      <section><h2>Name requests${d.requests.length ? `<small>${d.requests.length} waiting</small>` : ''}</h2><div class="card">${requests}</div></section>
       <section><h2>Names</h2><div class="card">${names}</div></section>
       <section><h2>Feedback<small>last 7 days</small></h2><div class="card">${feedback}</div></section>
       ${poll}`;
@@ -432,6 +452,17 @@
     if (!confirm(`Change ${name} to an anonymous name? They’ll see it next time they open the game.`)) return;
     const { status, body } = await call('/admin/anon', { method: 'POST', body: JSON.stringify({ name }) });
     flash(status === 200 ? `${body.was} is ${body.name} now.` : body.error || PROBLEMS[status] || 'That didn’t work. Try again.');
+    load();
+  }
+
+  async function decide(button) {
+    const { id, name, now, decide: choice } = button.dataset;
+    const approve = choice === 'yes';
+    if (!approve && !confirm(`Turn down ${name} for ${now}? They keep ${now} and can ask for a different name.`)) return;
+    button.closest('.pair').querySelectorAll('button').forEach((each) => { each.disabled = true; });
+    const { status, body } = await call('/admin/name', { method: 'POST', body: JSON.stringify({ id: Number(id), name, approve }) });
+    flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
+      : approve ? `${body.was} is ${body.name} now. They’ll see it next time they open the game.` : `Turned down ${name}. ${now} can ask again.`);
     load();
   }
 
@@ -468,6 +499,8 @@
     }
     const anon = event.target.closest('[data-anon]');
     if (anon) makeAnonymous(anon.dataset.anon);
+    const decision = event.target.closest('[data-decide]');
+    if (decision) decide(decision);
   });
   // Fresh numbers every minute while the page is open, and when coming back to it.
   setInterval(() => { if (data && document.visibilityState === 'visible') load(); }, 60000);

@@ -1398,12 +1398,16 @@ function stopBoardPolling() {
 
 function openBoard() {
   const me = ranked.player();
+  const request = G.rankedStatus?.request;
   const note = ON_PHONE ? '<p class="board-note">Ranked is on computers only. On a phone the Daily is yesterday’s, just for fun.</p>'
-    : me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>.</p>`
+    : me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>. ${request?.state === 'waiting'
+      ? `You asked for <b>${esc(request.name)}</b>, waiting on approval. <button id="sheetRequest" class="link-btn" type="button">Change</button>`
+      : '<button id="sheetRequest" class="link-btn" type="button">Request a new name</button>'}</p>`
     : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Add your name</button> to get on the board.</p>';
   openSheet('Leaderboard', `${note}
     <div id="sheetBoard"></div>`);
   $('sheetNick')?.addEventListener('click', () => openNickname());
+  $('sheetRequest')?.addEventListener('click', () => { audio.click(); openNameRequest(); });
   const load = mountBoard($('sheetBoard'), { curve: true });
   startBoardPolling(() => {
     if (el.sheet.open && $('sheetBoard')) load();
@@ -1418,6 +1422,9 @@ const NICK_ERRORS = {
   anon: 'Names starting with “anon” are for anonymous players. Tap Go anonymous instead.',
   forced: 'Put in your name, or go anonymous, to keep playing ranked.',
   'not-offered': 'Your name doesn’t need to change.',
+  same: 'That’s already your name.',
+  'anon-request': 'Names starting with “anon” are kept for anonymous players. Pick a different name.',
+  'can-rename': 'You can change your name yourself right now. Reopen the game to do it.',
   unreachable: BLOCKED_NETWORK,
 };
 
@@ -1491,7 +1498,13 @@ async function checkRanked() {
     const before = ranked.player()?.name;
     ranked.syncName(status.name);
     if (before && status.name && before !== status.name) notice(`Your name on the leaderboard is ${status.name} now.`);
-    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null, nameCheck: Boolean(status.nameCheck) };
+    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null, nameCheck: Boolean(status.nameCheck), request: status.request || null };
+    // A name request the admin turned down is said once. An approved one shows up as the new name above.
+    const request = status.request;
+    if (request?.state === 'no' && store.get('ranked.requestSaid') !== request.name) {
+      store.set('ranked.requestSaid', request.name);
+      notice(`Your request for ${request.name} wasn’t approved. You can ask for a different name from the leaderboard.`);
+    }
     return G.rankedStatus;
   } catch (error) {
     console.error(error);
@@ -1554,6 +1567,62 @@ function openRename({ then } = {}) {
     finish();
     if (asking) notice(`Got it. You’re staying ${me.name}.`);
     then?.();
+  });
+}
+
+// A different name on the board, for a player who already has one, from the leaderboard. It changes
+// once the admin approves it; until then they keep playing as they are. Players who can change it
+// themselves right now (the name question, or an offered or forced change) get that sheet instead.
+function openNameRequest() {
+  const me = ranked.player();
+  if (!me) return;
+  const status = G.rankedStatus || {};
+  if (status.rename || status.nameCheck) {
+    openRename({ then: () => openBoard() });
+    return;
+  }
+  const request = status.request;
+  const waiting = request?.state === 'waiting';
+  const lead = waiting ? `You asked for <b>${esc(request.name)}</b>. It changes once it’s approved. Put in a different name to change your request.`
+    : request?.state === 'no' ? `<b>${esc(request.name)}</b> wasn’t approved. You can ask for a different name.`
+    : 'Put in the name you want on the board. It changes once it’s approved, and your scores stay.';
+  openSheet('Request a new name', `
+    <p class="nick-lead">${lead}</p>
+    ${nickFormHTML('Send', 'Name you want')}
+    ${waiting ? '<button id="cancelRequest" class="btn btn-quiet nick-alt" type="button">Cancel my request</button>' : ''}`);
+  $('nickInput').focus();
+  const save = (result) => {
+    G.rankedStatus = { ...(G.rankedStatus || {}), request: result.request };
+    openBoard();
+  };
+  wireNickForm((result) => {
+    save(result);
+    notice(`Request sent. You’ll be ${result.request.name} once it’s approved.`);
+  }, async (name) => {
+    // This sheet has no Go anonymous button, so the usual "anon" message would point at nothing.
+    const result = await ranked.requestName(name);
+    return result?.error === 'anon' ? { error: 'anon-request' } : result;
+  });
+  $('cancelRequest')?.addEventListener('click', async (event) => {
+    audio.click();
+    const button = event.currentTarget;
+    const error = $('nickError');
+    button.disabled = true;
+    error.textContent = 'Saving…';
+    let result = null;
+    try {
+      result = await ranked.cancelRequest();
+    } catch (problem) {
+      console.error(problem);
+      if (problem.name === 'Unreachable') result = { error: 'unreachable' };
+    }
+    button.disabled = false;
+    if (!result || result.error) {
+      error.textContent = NICK_ERRORS[result?.error] || 'Couldn’t reach the server. Try again.';
+      return;
+    }
+    save(result);
+    notice(`Request cancelled. You’re staying ${me.name}.`);
   });
 }
 

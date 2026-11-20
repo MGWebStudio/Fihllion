@@ -37,6 +37,11 @@ export async function rename(name, { anonymous = false } = {}) {
 }
 export const keepName = () => call('rename', withKey({ keep: true }));
 
+// Asks for a different name on the boards, from the leaderboard. It changes once the admin approves
+// it. Resolves to { request: { name, state: 'waiting' } } or { error }; cancelling to { request: null }.
+export const requestName = (name) => call('request', withKey({ name }));
+export const cancelRequest = () => call('request', withKey({ cancel: true }));
+
 // The server's name wins, so a nickname the admin changed shows up on this device too.
 export function syncName(name) {
   const me = player();
