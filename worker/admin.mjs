@@ -17,8 +17,8 @@
 //   node admin.mjs cancel-rename <name>
 //   node admin.mjs names           who put in their real name (newest first, with what they were before),
 //                                  who went anonymous, and who hasn't answered the name question yet
-//   node admin.mjs anon <name> [name...]   change a name that isn't a real name to an anonymous one (Anon and
-//                                  four numbers); the player sees it next time they open the game
+//   node admin.mjs anon <name> [name...]   change a name that isn't a real name to an anonymous one ("anonymous"
+//                                  and a few numbers); the player sees it next time they open the game
 //   add --local to any of them to use the test database on this PC instead of the live one
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -26,6 +26,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { TIERS, makeCalendar, parsePrompts } from '../js/content.js';
 import { POLL, pollOpen } from '../js/poll.js';
+import { anonName } from './src/ranked.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -111,7 +112,8 @@ if (command === 'board') {
       continue;
     }
     let anon;
-    do anon = `Anon${1000 + Math.floor(Math.random() * 9000)}`; while (taken.has(anon.toLowerCase()));
+    let attempt = 0;
+    do anon = anonName(attempt++); while (taken.has(anon.toLowerCase()));
     taken.add(anon.toLowerCase());
     sql(`UPDATE players SET name = '${anon}', name_key = '${anon.toLowerCase()}', name_kind = 'anon', name_before = COALESCE(name_before, name),
       name_at = ${Date.now()}, rename_offer = 0 WHERE name_key = '${key}'`);

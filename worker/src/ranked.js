@@ -66,19 +66,23 @@ export function nameProblem(name) {
   if (typeof name !== 'string' || !NAME.test(name)) return 'invalid';
   const plain = name.toLowerCase().replace(/[0-9]/g, (digit) => LEET[digit] ?? digit);
   const letters = name.toLowerCase().replace(/[0-9]+$/, '').replace(/[0-9]/g, (digit) => LEET[digit] ?? digit);
+  // Kept for anonymous players, so a name like anonymous482 always means someone chose to go anonymous.
+  if (/^an+on/.test(plain)) return 'anon';
   if (RESERVED.includes(letters)) return 'blocked';
   for (const word of ANYWHERE) {
     if (plain.includes(word)) return 'blocked';
     if (collapse(word) === word && collapse(plain).includes(word)) return 'blocked';
   }
   for (const word of WHOLE) if (letters === word || collapse(letters) === collapse(word)) return 'blocked';
-  // Kept for anonymous players, so a name like Anon4821 always means someone chose to go anonymous.
-  if (/^an+on/.test(plain)) return 'anon';
   return null;
 }
 
-// Anonymous players show on the boards as Anon and four numbers.
-export const anonName = () => `Anon${1000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 9000)}`;
+// Anonymous players show on the boards as "anonymous" and three numbers, like anonymous482. From the
+// fifth try at a free one, it's four numbers, so there's always room.
+export const anonName = (attempt = 0) => {
+  const [low, span] = attempt < 4 ? [100, 900] : [1000, 9000];
+  return `anonymous${low + (crypto.getRandomValues(new Uint32Array(1))[0] % span)}`;
+};
 
 // Real names on the leaderboard: from NAMES_FROM on (wrangler.jsonc), every player answers once,
 // their own name or anonymous, and can't start a ranked Daily until they do. Without the setting
@@ -104,7 +108,7 @@ async function join(env, data) {
   const keyHash = await sha256(key);
   // An anonymous name that's already taken gets another try with new numbers.
   for (let tries = anonymous ? 8 : 1; tries > 0; tries -= 1) {
-    const name = anonymous ? anonName() : data.name;
+    const name = anonymous ? anonName(8 - tries) : data.name;
     const result = await env.DB.prepare(`INSERT INTO players (name, name_key, key_hash, created, name_kind, name_at) VALUES (?1, ?2, ?3, ?4, ?5, ?6)
         ON CONFLICT (name_key) DO NOTHING`)
       .bind(name, name.toLowerCase(), keyHash, loaded?.today ?? 0, anonymous ? 'anon' : 'own', Date.now()).run();
@@ -144,7 +148,7 @@ async function rename(env, player, data) {
     if (forced && data.name.toLowerCase() === player.name.toLowerCase()) return { error: 'blocked' };
   }
   for (let tries = anonymous ? 8 : 1; tries > 0; tries -= 1) {
-    const name = anonymous ? anonName() : data.name;
+    const name = anonymous ? anonName(8 - tries) : data.name;
     try {
       await env.DB.prepare(`UPDATE players SET name = ?1, name_key = ?2, rename_offer = 0, name_kind = ?3,
           name_before = COALESCE(name_before, name), name_at = ?4 WHERE id = ?5`)

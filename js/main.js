@@ -1415,7 +1415,7 @@ const NICK_ERRORS = {
   invalid: 'Use 3 to 16 letters or numbers, no spaces.',
   blocked: 'Pick a different name.',
   taken: 'Someone already has that one. Add a letter or number.',
-  anon: 'Names starting with Anon are for anonymous players. Tap Go anonymous instead.',
+  anon: 'Names starting with “anon” are for anonymous players. Tap Go anonymous instead.',
   forced: 'Put in your name, or go anonymous, to keep playing ranked.',
   'not-offered': 'Your name doesn’t need to change.',
   unreachable: BLOCKED_NETWORK,
@@ -1434,7 +1434,7 @@ const nickFormHTML = (submitLabel, label = 'Your name') => `<form id="nickForm" 
       <p class="nick-hint">First name is plenty, or a version people know, like SamR or Sammy7. Anything that isn’t your name gets changed to an anonymous one.</p>
     </form>`;
 
-// Anonymous players show on the board as Anon and four numbers.
+// Anonymous players show on the board as "anonymous" and a few numbers, like anonymous482.
 const anonButtonHTML = (label) => `<button id="nickAnon" class="btn btn-quiet nick-alt" type="button">${label}</button>`;
 
 // Saves the name from the form in the open sheet, or goes anonymous from its Go anonymous button,
@@ -1513,7 +1513,7 @@ function openRename({ then } = {}) {
   const [title, lead] = forced
     ? ['Pick a new name', `“${name}” can’t stay on the leaderboard. Put in your name, or go anonymous. Your scores stay.`]
     : asking
-      ? ['Your name on the board', 'The leaderboard is switching to real names. Put in your name, or go anonymous and show up as Anon and four numbers. Your scores stay either way.']
+      ? ['Your name on the board', 'The leaderboard is switching to real names. Put in your name, or go anonymous and show up as “anonymous” and a few numbers. Your scores stay either way.']
       : ['New name?', `You can change “${name}” once. Put in your name, or go anonymous. Your scores stay.`];
   openSheet(title, `
     <p class="nick-lead">${lead}</p>

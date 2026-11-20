@@ -11,7 +11,7 @@ export const CHANGELOG = [
     items: [
       'The leaderboard is switching to real names. No more made-up nicknames.',
       'Next time you open the game, put in your name or go anonymous. You need to answer before your next ranked Daily.',
-      'First name is plenty, or a version of it people know, like SamR or Sammy7. Anonymous shows up as Anon and four numbers.',
+      'First name is plenty, or a version of it people know, like SamR or Sammy7. Anonymous shows up as “anonymous” and a few numbers.',
       'Anything that isn’t your name gets changed to an anonymous one. Your scores stay either way.',
     ],
   },

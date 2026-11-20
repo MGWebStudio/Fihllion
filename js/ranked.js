@@ -18,7 +18,7 @@ async function call(action, body = {}) {
 
 const withKey = (body = {}) => ({ ...body, key: player()?.key });
 
-// The player's own name, or `anonymous: true` for a name like Anon4821 picked by the server.
+// The player's own name, or `anonymous: true` for a name like anonymous482 picked by the server.
 // Resolves to { name } or { error: 'invalid' | 'blocked' | 'anon' | 'taken' }.
 export async function join(name, { anonymous = false } = {}) {
   const result = await call('join', anonymous ? { anonymous: true } : { name });

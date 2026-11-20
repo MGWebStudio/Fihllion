@@ -2,7 +2,7 @@
 //
 //   GET  /admin        the page (dashboard.html); it asks for the password and remembers it
 //   GET  /admin/data   everything on it, as JSON           (header X-Admin-Key: the password)
-//   POST /admin/anon   {"name": "Sammy"} -> {"name": "Anon4821"}, like node admin.mjs anon
+//   POST /admin/anon   {"name": "Sammy"} -> {"name": "anonymous482"}, like node admin.mjs anon
 //
 // The password is the secret ADMIN_KEY, which only the admin sets (README, "Dashboard"); with no
 // ADMIN_KEY the data stays locked. After MAX_TRIES wrong passwords in an hour, every try is turned
@@ -141,18 +141,18 @@ async function collect(env) {
   };
 }
 
-// The same change as node admin.mjs anon: an Anon name the player sees next time they open the game.
+// The same change as node admin.mjs anon: an anonymous name the player sees next time they open the game.
 async function makeAnonymous(env, name) {
   if (typeof name !== 'string' || !name.trim()) return { error: 'No name given' };
   const found = await env.DB.prepare('SELECT id, name FROM players WHERE name_key = ?1').bind(name.trim().toLowerCase()).first();
   if (!found) return { error: `No player called ${name}` };
   for (let i = 0; i < 8; i += 1) {
-    const anon = anonName();
+    const anon = anonName(i);
     const taken = await env.DB.prepare('SELECT 1 FROM players WHERE name_key = ?1').bind(anon.toLowerCase()).first();
     if (taken) continue;
     await env.DB.prepare(`UPDATE players SET name = ?2, name_key = ?3, name_kind = 'anon', name_before = COALESCE(name_before, name),
       name_at = ?4, rename_offer = 0 WHERE id = ?1`).bind(found.id, anon, anon.toLowerCase(), Date.now()).run();
     return { was: found.name, name: anon };
   }
-  return { error: 'Couldn’t find a free Anon name. Try again.' };
+  return { error: 'Couldn’t find a free anonymous name. Try again.' };
 }
