@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const local = args.includes('--local');
-const MODEL = 'qwen3:30b-a3b'; // the same model as Cloudflare's referee
+const MODEL = 'qwen3:30b-a3b'; // the model Cloudflare's referee ran until Cloudflare retired it (Nov 20, 2026)
 const OLLAMA = 'http://127.0.0.1:11434';
 const SERVER = local ? 'ws://localhost:8787/pc/connect' : 'wss://fihllion-counts.mgstudiogame.workers.dev/pc/connect';
 const KEY_FILE = join(here, 'key.txt');
@@ -139,7 +139,7 @@ async function work() {
     } else {
       answered += 1;
       totalMs += reply.ms;
-      if (answered === 1 || answered % 25 === 0) log(`${answered} checks answered, ${Math.round(totalMs / answered)} ms on average.`);
+      if (answered === 1 || answered % 25 === 0) log(`${answered === 1 ? "First check" : `${answered} checks`} answered, ${Math.round(totalMs / answered)} ms on average.`);
     }
     send({ type: 'result', id: job.id, ...reply });
   }

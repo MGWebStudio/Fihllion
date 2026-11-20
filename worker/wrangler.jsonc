@@ -29,6 +29,6 @@
     "NAMES_FROM": "2026-11-20T07:00:00Z",
     // Which referee checks try the PC referee first (src/pc.js, pc-referee/): "practice" (Endless,
     // the Archive, a Daily for fun), "all", or "off". It also needs the secret PC_REFEREE_KEY.
-    "PC_REFEREE": "off"
+    "PC_REFEREE": "practice"
   }
 }
