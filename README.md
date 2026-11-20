@@ -130,7 +130,11 @@ node admin.mjs poll           # results of the poll in js/poll.js
 node admin.mjs referee        # the AI referee's budget and failures over the last 7 days
 node admin.mjs ban Somename   # hide from every board and stop playing ranked
 node admin.mjs unban Somename
+node admin.mjs names          # who put in their real name (with what they had before), who went anonymous, who hasn't answered
+node admin.mjs anon Somename  # change a name that isn't a real name to an anonymous one (Anon and four numbers)
 ```
+
+Real names: from `NAMES_FROM` in `wrangler.jsonc` (Nov 20, 2026), the board uses real names. Every player answers once: put in their name (a first name, or a version of it people know), keep the one they have because it's their name, or go anonymous, which the server turns into Anon and four numbers. The game asks every time it opens until they answer, and the server won't start a ranked Daily until they do. New players make the same choice when they sign up. Names starting with "Anon" are kept for anonymous players. `node admin.mjs names` lists the names to check; anything that isn't a name gets `node admin.mjs anon`, and the player sees the new name next time they open the game. The `players` table keeps the answer in `name_kind` ('own' or 'anon'), the old nickname in `name_before`, and when in `name_at`.
 
 A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 

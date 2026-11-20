@@ -13,6 +13,10 @@
 //   node admin.mjs offer-rename <name> [name...]   next time they open the game, offer a one-time nickname change
 //   node admin.mjs force-rename <name>   off the boards until they pick a new nickname; scores move to the new one
 //   node admin.mjs cancel-rename <name>
+//   node admin.mjs names           who put in their real name (newest first, with what they were before),
+//                                  who went anonymous, and who hasn't answered the name question yet
+//   node admin.mjs anon <name> [name...]   change a name that isn't a real name to an anonymous one (Anon and
+//                                  four numbers); the player sees it next time they open the game
 //   add --local to any of them to use the test database on this PC instead of the live one
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -77,6 +81,39 @@ if (command === 'board') {
     }
     sql(`UPDATE players SET ${set} WHERE name_key = '${key}'`);
     console.log(`${found[0].name} ${said}.`);
+  }
+} else if (command === 'names') {
+  const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+  const rows = sql(`SELECT p.name, p.name_before, p.name_kind, p.name_at, p.banned, (SELECT MAX(day) FROM runs WHERE player = p.id) AS last_day
+    FROM players p ORDER BY p.name_at DESC, p.id DESC`);
+  const own = rows.filter((row) => row.name_kind === 'own' && !row.banned);
+  const anon = rows.filter((row) => row.name_kind === 'anon' && !row.banned);
+  const waiting = rows.filter((row) => !row.name_kind && !row.banned).sort((a, b) => (b.last_day ?? 0) - (a.last_day ?? 0));
+  console.log(`${own.length} put in their name, ${anon.length} went anonymous, ${waiting.length} haven't answered yet.`);
+  console.log('\nTheir own name, newest first. Make one anonymous with: node admin.mjs anon <name>');
+  console.table(own.map((row) => ({
+    name: row.name,
+    before: row.name_before == null ? '(new player)' : row.name_before === row.name ? '(kept it)' : row.name_before,
+    when: mt(row.name_at),
+  })));
+  if (anon.length) console.log(`\nAnonymous: ${anon.map((row) => (row.name_before ? `${row.name} (was ${row.name_before})` : row.name)).join(', ')}`);
+  if (waiting.length) console.log(`\nHaven't answered yet, with their last ranked day: ${waiting.map((row) => `${row.name} (${row.last_day ?? 'none'})`).join(', ')}`);
+} else if (command === 'anon') {
+  if (!names.length) throw new Error('Give at least one name.');
+  const taken = new Set(sql("SELECT name_key FROM players WHERE name_key LIKE 'anon%'").map((row) => row.name_key));
+  for (const name of names) {
+    const key = nameKey(name);
+    const found = sql(`SELECT name FROM players WHERE name_key = '${key}'`);
+    if (!found.length) {
+      console.log(`No player called ${name}.`);
+      continue;
+    }
+    let anon;
+    do anon = `Anon${1000 + Math.floor(Math.random() * 9000)}`; while (taken.has(anon.toLowerCase()));
+    taken.add(anon.toLowerCase());
+    sql(`UPDATE players SET name = '${anon}', name_key = '${anon.toLowerCase()}', name_kind = 'anon', name_before = COALESCE(name_before, name),
+      name_at = ${Date.now()}, rename_offer = 0 WHERE name_key = '${key}'`);
+    console.log(`${found[0].name} is ${anon} now. They'll see it next time they open the game.`);
   }
 } else if (command === 'answers') {
   const key = nameKey(value);
@@ -158,5 +195,5 @@ if (command === 'board') {
   }
 } else {
   console.log('Use: node admin.mjs board [day] | answers <name> [day] | feedback [days] | poll | referee [days] | ban | unban | pause | unpause <name>');
-  console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name>  [--local]');
+  console.log('     | offer-rename <name> [name...] | force-rename | cancel-rename <name> | names | anon <name> [name...]  [--local]');
 }

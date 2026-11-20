@@ -18,18 +18,20 @@ async function call(action, body = {}) {
 
 const withKey = (body = {}) => ({ ...body, key: player()?.key });
 
-// Resolves to { name } or { error: 'invalid' | 'blocked' | 'taken' }.
-export async function join(name) {
-  const result = await call('join', { name });
+// The player's own name, or `anonymous: true` for a name like Anon4821 picked by the server.
+// Resolves to { name } or { error: 'invalid' | 'blocked' | 'anon' | 'taken' }.
+export async function join(name, { anonymous = false } = {}) {
+  const result = await call('join', anonymous ? { anonymous: true } : { name });
   if (result.key) store.set('ranked.player', { name: result.name, key: result.key });
   return result;
 }
 
 export const status = () => call('status', withKey());
 
-// A new nickname, when the admin offered or required one. The scores stay with the key.
-export async function rename(name) {
-  const result = await call('rename', withKey({ name }));
+// A new name for the name question (real name or anonymous), or when the admin offered or required
+// one. The scores stay with the key.
+export async function rename(name, { anonymous = false } = {}) {
+  const result = await call('rename', withKey(anonymous ? { anonymous: true } : { name }));
   if (result.name && !result.error) store.set('ranked.player', { ...player(), name: result.name });
   return result;
 }

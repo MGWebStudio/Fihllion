@@ -285,7 +285,7 @@ function refreshTitle() {
   else if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
   else if (started) el.rankedLine.innerHTML = '<span class="ranked-off">Just for fun today</span> · Leaderboard';
   else if (me) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
-  else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Pick a nickname';
+  else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Add your name';
   prefetch();
 }
 
@@ -413,18 +413,24 @@ const BLOCKED_NETWORK = 'Can’t reach the ranked server from this network. Some
 function rankedTrouble(error, reply) {
   const midnight = error === 'day' && G.dive && reply?.today > G.dive.day;
   const messages = {
-    unknown: 'The server doesn’t know this nickname anymore. Pick one again to play ranked.',
-    banned: 'This nickname was removed, so today’s dive can’t be ranked.',
+    unknown: 'The server doesn’t know your name anymore. Put it in again to play ranked.',
+    banned: 'This name was removed, so today’s dive can’t be ranked.',
     day: midnight ? 'Midnight passed, so that ranked dive is over. Today’s is ready.'
       : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
     unreachable: BLOCKED_NETWORK,
-    paused: 'Ranked is paused for this nickname for now.', // mid-dive, so today's pick can't change
-    rename: 'Pick a new nickname to keep playing ranked.',
+    paused: 'Ranked is paused for this name for now.', // mid-dive, so today's pick can't change
+    rename: 'Pick a new name to keep playing ranked.',
+    name: 'Put in your name, or go anonymous, to play ranked.',
   };
   const dive = G.dive;
-  // Paused or asked to change nickname: nothing answered yet, so the choice reopens and says why.
-  if (error === 'paused' || error === 'rename') {
-    G.rankedStatus = { paused: error === 'paused', rename: error === 'rename' ? 'forced' : G.rankedStatus?.rename || null };
+  // Paused, asked to change name, or not through the name question yet: nothing answered yet, so
+  // the choice reopens and says why.
+  if (error === 'paused' || error === 'rename' || error === 'name') {
+    G.rankedStatus = {
+      paused: error === 'paused',
+      rename: error === 'rename' ? 'forced' : G.rankedStatus?.rename || null,
+      nameCheck: error === 'name' || Boolean(G.rankedStatus?.nameCheck),
+    };
     if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
       delete dive.choice;
       dive.ranked = false;
@@ -436,14 +442,14 @@ function rankedTrouble(error, reply) {
   }
   if (error === 'unknown' || error === 'banned') {
     ranked.forget();
-    // Nothing answered yet, so the choice reopens and they pick a new nickname (or play for fun).
+    // Nothing answered yet, so the choice reopens and they put in a name (or play for fun).
     if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
       delete dive.choice;
       dive.ranked = false;
       saveDive(dive);
       goHome();
-      openDailyChoice(error === 'banned' ? 'That nickname was removed. Pick a new one to play ranked.'
-        : 'The server doesn’t know your nickname anymore. Pick one to play ranked.');
+      openDailyChoice(error === 'banned' ? 'That name was removed. Put in a new one to play ranked.'
+        : 'The server doesn’t know your name anymore. Put it in again to play ranked.');
       return;
     }
   }
@@ -1140,7 +1146,7 @@ function showResults(dive) {
     : dive.day === G.today ? '<p class="results-next">Next dive in <b id="nextDiveCountdown"></b></p>' : '';
   const showBoard = ranked.available && dive.mode === 'daily' && dive.day === G.today;
   const unrankedNote = ranked.player() ? 'Pick Ranked tomorrow to get on the board.'
-    : '<button id="resNick" class="link-btn" type="button">Pick a nickname</button> and choose Ranked tomorrow to get on the board.';
+    : '<button id="resNick" class="link-btn" type="button">Add your name</button> and choose Ranked tomorrow to get on the board.';
   const boardBlock = showBoard ? `<section class="block">
         <div class="block-title"><h3>Leaderboard</h3><span>Updates as others finish</span></div>
         ${dive.ranked ? '' : `<p class="board-note">You played today’s just for fun, so it’s not on the board. ${unrankedNote}</p>`}
@@ -1265,7 +1271,7 @@ function showResults(dive) {
 }
 
 // Leaderboard ----------------------------------------------------------------------------
-// Today's Daily and this week's total. Nicknames and scores only, never answers.
+// Today's Daily and this week's total. Names and scores only, never answers.
 const boardState = { tab: 'daily', data: null, timer: null };
 
 // The player's own score for a board's day: from the board when they played it ranked, or from
@@ -1393,7 +1399,7 @@ function openBoard() {
   const me = ranked.player();
   const note = ON_PHONE ? '<p class="board-note">Ranked is on computers only. On a phone the Daily is yesterday’s, just for fun.</p>'
     : me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>.</p>`
-    : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Pick a nickname</button> to get on the board.</p>';
+    : '<p class="board-note"><button id="sheetNick" class="link-btn" type="button">Add your name</button> to get on the board.</p>';
   openSheet('Leaderboard', `${note}
     <div id="sheetBoard"></div>`);
   $('sheetNick')?.addEventListener('click', () => openNickname());
@@ -1406,68 +1412,85 @@ function openBoard() {
 
 const NICK_ERRORS = {
   invalid: 'Use 3 to 16 letters or numbers, no spaces.',
-  blocked: 'Pick a different nickname.',
-  taken: 'Someone already has that one. Try another.',
-  forced: 'Pick a new nickname to keep playing ranked.',
-  'not-offered': 'Your nickname doesn’t need to change.',
+  blocked: 'Pick a different name.',
+  taken: 'Someone already has that one. Add a letter or number.',
+  anon: 'Names starting with Anon are for anonymous players. Tap Go anonymous instead.',
+  forced: 'Put in your name, or go anonymous, to keep playing ranked.',
+  'not-offered': 'Your name doesn’t need to change.',
   unreachable: BLOCKED_NETWORK,
 };
 
-const nickFormHTML = (submitLabel, label = 'Nickname') => `<form id="nickForm" class="nick-form" novalidate>
+// The board uses real names (from Nov 20, 2026): a first name, or a version of it people know.
+// The admin changes anything else to an anonymous name (node admin.mjs anon).
+const nickFormHTML = (submitLabel, label = 'Your name') => `<form id="nickForm" class="nick-form" novalidate>
       <label class="label" for="nickInput">${label}</label>
       <div class="nick-row">
         <input id="nickInput" type="text" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-          placeholder="Your nickname" enterkeyhint="go" data-1p-ignore data-lpignore="true">
+          placeholder="Your first name" enterkeyhint="go" data-1p-ignore data-lpignore="true">
         <button class="btn btn-primary" type="submit">${submitLabel}</button>
       </div>
       <p id="nickError" class="nick-error" role="alert"></p>
+      <p class="nick-hint">First name is plenty, or a version people know, like SamR or Sammy7. Anything that isn’t your name gets changed to an anonymous one.</p>
     </form>`;
 
-// Saves a nickname from the form in the open sheet, then runs `done` with the server's reply.
-// `save` makes a new nickname by default, or renames this one.
+// Anonymous players show on the board as Anon and four numbers.
+const anonButtonHTML = (label) => `<button id="nickAnon" class="btn btn-quiet nick-alt" type="button">${label}</button>`;
+
+// Saves the name from the form in the open sheet, or goes anonymous from its Go anonymous button,
+// then runs `done` with the server's reply. `save` makes a new player by default, or renames this one.
 function wireNickForm(done, save = ranked.join) {
   const form = $('nickForm');
   if (!form) return;
   const input = $('nickInput');
   const error = $('nickError');
-  const submit = form.querySelector('button[type="submit"]');
-  form.addEventListener('submit', async (event) => {
+  const buttons = [form.querySelector('button[type="submit"]'), $('nickAnon')].filter(Boolean);
+  const attempt = async (name, options) => {
+    buttons.forEach((button) => { button.disabled = true; });
+    error.textContent = 'Saving…';
+    let result = null;
+    try {
+      result = await save(name, options);
+    } catch (problem) {
+      console.error(problem);
+      if (problem.name === 'Unreachable') result = { error: 'unreachable' };
+    }
+    buttons.forEach((button) => { button.disabled = false; });
+    if (!result || result.error) {
+      error.textContent = NICK_ERRORS[result?.error] || 'Couldn’t reach the server. Try again.';
+      if (name) input.select();
+      return;
+    }
+    done(result);
+  };
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = input.value.trim();
     if (!/^[A-Za-z0-9]{3,16}$/.test(name)) {
       error.textContent = NICK_ERRORS.invalid;
       return;
     }
-    submit.disabled = true;
-    error.textContent = 'Saving…';
-    let result = null;
-    try {
-      result = await save(name);
-    } catch (problem) {
-      console.error(problem);
-      if (problem.name === 'Unreachable') result = { error: 'unreachable' };
-    }
-    submit.disabled = false;
-    if (!result || result.error) {
-      error.textContent = NICK_ERRORS[result?.error] || 'Couldn’t reach the server. Try again.';
-      input.select();
-      return;
-    }
-    done(result);
+    attempt(name);
+  });
+  $('nickAnon')?.addEventListener('click', () => {
+    audio.click();
+    attempt(null, { anonymous: true });
   });
 }
 
-const PAUSED = 'Ranked is paused for this nickname for now. You can still play today’s Daily just for fun.';
+const PAUSED = 'Ranked is paused for this name for now. You can still play today’s Daily just for fun.';
 
-// What the server says about this device's nickname: paused, or asked to pick a new one. Checked
-// when the game opens and before each Daily. Also brings over a new name the admin gave it.
+// What the server says about this device's name: paused, asked to pick a new one, or not yet
+// through the name question (real name or anonymous). Checked when the game opens and before each
+// Daily. Also brings over a new name the admin gave it, like an anonymous one.
 async function checkRanked() {
   if (!ranked.available || PRETEND_DAY || !ranked.player()) return null;
   try {
     const status = await ranked.status();
     if (!status || status.error) return null;
+    const before = ranked.player()?.name;
     ranked.syncName(status.name);
-    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null };
+    if (before && status.name && before !== status.name) notice(`Your name on the leaderboard is ${status.name} now.`);
+    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null, nameCheck: Boolean(status.nameCheck) };
     return G.rankedStatus;
   } catch (error) {
     console.error(error);
@@ -1475,33 +1498,60 @@ async function checkRanked() {
   }
 }
 
-// The admin offered this nickname a one-time change (offer-rename), or requires one
-// (force-rename). The scores stay either way. An offer shows once a day until it's answered.
+// Asks for this player's name on the board: the name question (real name or anonymous, asked every
+// time the game opens until it's answered), or a change the admin offered (offer-rename, asked once
+// a day) or requires (force-rename). The scores stay either way.
 function openRename({ then } = {}) {
   const me = ranked.player();
-  const rename = G.rankedStatus?.rename;
-  if (!me || !rename) return;
-  const forced = rename === 'forced';
-  if (!forced) store.set('ranked.renameAsked', G.today);
-  openSheet(forced ? 'Pick a new nickname' : 'New nickname?', `
-    <p class="nick-lead">${forced
-    ? `“${esc(me.name)}” can’t stay on the leaderboard. Pick a new nickname to keep playing ranked. Your scores stay.`
-    : `Want people to know it’s you on the leaderboard? You can change “${esc(me.name)}” once. Your scores stay.`}</p>
-    ${nickFormHTML('Save', 'New nickname')}
-    ${forced ? '' : `<button id="keepName" class="btn btn-quiet" type="button">Keep ${esc(me.name)}</button>`}`);
+  const status = G.rankedStatus || {};
+  if (!me || !(status.rename || status.nameCheck)) return;
+  const forced = status.rename === 'forced';
+  const asking = Boolean(status.nameCheck) && !forced;
+  if (status.rename === 'offer' && !asking) store.set('ranked.renameAsked', G.today);
+  const name = esc(me.name);
+  const [title, lead] = forced
+    ? ['Pick a new name', `“${name}” can’t stay on the leaderboard. Put in your name, or go anonymous. Your scores stay.`]
+    : asking
+      ? ['Your name on the board', 'The leaderboard is switching to real names. Put in your name, or go anonymous and show up as Anon and four numbers. Your scores stay either way.']
+      : ['New name?', `You can change “${name}” once. Put in your name, or go anonymous. Your scores stay.`];
+  openSheet(title, `
+    <p class="nick-lead">${lead}</p>
+    ${nickFormHTML('Save')}
+    ${forced ? '' : `<button id="keepName" class="btn btn-quiet nick-alt" type="button">${asking ? `Keep ${name}, it’s my name` : `Keep ${name}`}</button>`}
+    ${anonButtonHTML('Go anonymous')}`);
   $('nickInput').focus();
-  wireNickForm((result) => {
+  const finish = () => {
     G.rankedStatus.rename = null;
+    G.rankedStatus.nameCheck = false;
     closeSheet();
     if (G.phase === 'title') refreshTitle();
+  };
+  wireNickForm((result) => {
+    finish();
     notice(`You’re ${result.name} on the leaderboard now.`);
     then?.();
   }, ranked.rename);
-  $('keepName')?.addEventListener('click', () => {
+  // Keeping it has to reach the server when it answers the name question, or ranked stays locked.
+  $('keepName')?.addEventListener('click', async (event) => {
     audio.click();
-    G.rankedStatus.rename = null;
-    closeSheet();
-    ranked.keepName().catch((error) => console.error(error));
+    const button = event.currentTarget;
+    const error = $('nickError');
+    button.disabled = true;
+    error.textContent = 'Saving…';
+    let result = null;
+    try {
+      result = await ranked.keepName();
+    } catch (problem) {
+      console.error(problem);
+      if (problem.name === 'Unreachable') result = { error: 'unreachable' };
+    }
+    button.disabled = false;
+    if (!result || (result.error && result.error !== 'not-offered')) {
+      error.textContent = NICK_ERRORS[result?.error] || 'Couldn’t reach the server. Try again.';
+      return;
+    }
+    finish();
+    if (asking) notice(`Got it. You’re staying ${me.name}.`);
     then?.();
   });
 }
@@ -1512,12 +1562,14 @@ const RANKED_RULES = '<p class="choice-rules">One try · No photos · Leaving th
 function openDailyChoice(problem = '') {
   const me = ranked.player();
   const paused = Boolean(me && G.rankedStatus?.paused);
-  const mustRename = Boolean(me && !paused && G.rankedStatus?.rename === 'forced');
+  const forced = G.rankedStatus?.rename === 'forced';
+  const mustRename = Boolean(me && !paused && (forced || G.rankedStatus?.nameCheck));
   const rankedPart = paused ? `<p class="choice-off" role="status">${PAUSED}</p>`
-    : mustRename ? `<p class="choice-off">“${esc(me.name)}” can’t stay on the leaderboard.</p>
-      <button id="choiceRename" class="btn btn-primary choice-btn" type="button">Pick a new nickname</button>`
+    : mustRename ? `<p class="choice-off">${forced ? `“${esc(me.name)}” can’t stay on the leaderboard.`
+      : 'The leaderboard uses real names now. Put in yours, or go anonymous, to play ranked.'}</p>
+      <button id="choiceRename" class="btn btn-primary choice-btn" type="button">${forced ? 'Pick a new name' : 'Choose my name'}</button>`
     : me ? `<button id="choiceRanked" class="btn btn-primary choice-btn" type="button">Play ranked as ${esc(me.name)}</button>`
-    : nickFormHTML('Play ranked', 'Nickname for the board');
+    : nickFormHTML('Play ranked', 'Your name for the board') + anonButtonHTML('Play ranked anonymously');
   openSheet('Today’s Daily', `
     <p class="choice-lead">Dive #${G.today}. How do you want to play it?</p>
     <section class="choice choice-ranked${paused ? ' is-off' : ''}" aria-labelledby="choiceRankedTitle">
@@ -1548,12 +1600,12 @@ function openDailyChoice(problem = '') {
   wireNickForm(() => choose('ranked'));
   if (problem && $('nickError')) $('nickError').textContent = problem;
   const section = el.sheet.querySelector('.choice-ranked');
-  // The nickname may have been paused or asked to change since the game opened.
+  // The name may have been paused or asked to change since the game opened.
   if (me) {
     checkRanked().then((status) => {
       if (!status || !section.isConnected) return;
       const nowPaused = status.paused;
-      const nowRename = !nowPaused && status.rename === 'forced';
+      const nowRename = !nowPaused && (status.rename === 'forced' || status.nameCheck);
       if (nowPaused !== paused || nowRename !== mustRename) openDailyChoice(problem);
     });
   }
@@ -1565,17 +1617,19 @@ function openDailyChoice(problem = '') {
     note.setAttribute('role', 'status');
     note.textContent = BLOCKED_NETWORK;
     section.querySelector('#nickForm, #choiceRanked')?.replaceWith(note);
+    section.querySelector('#nickAnon')?.remove();
   });
 }
 
-// For getting a nickname outside the Daily: from the title, the board or results.
+// For getting on the board outside the Daily: from the title, the board or results.
 function openNickname() {
   openSheet('Get on the board', `
-    <p class="nick-lead">Pick a nickname, then choose Ranked when you start a Daily. Everyone gets the same seven prompts, and the board fills up as people finish.</p>
+    <p class="nick-lead">Put in your name, then choose Ranked when you start a Daily. Everyone gets the same seven prompts, and the board fills up as people finish.</p>
     ${nickFormHTML('Save')}
+    ${anonButtonHTML('Go anonymous')}
     <ul class="how-steps nick-rules">
-      <li>The board shows nicknames and scores, never answers.</li>
-      <li>Your nickname lives in this browser. Clearing its data loses it.</li>
+      <li>The board shows names and scores, never answers.</li>
+      <li>Your spot on the board lives in this browser. Clearing its data loses it.</li>
     </ul>`);
   $('nickInput').focus();
   wireNickForm(() => {
@@ -1698,7 +1752,7 @@ function openHow() {
       ${ranked.available ? '<li>Before each Daily, pick Ranked to put your score on the leaderboard, or Just for fun. Ranked is one try, scored by the server, with no photos, and switching away during a question makes it score 0.</li>' : ''}
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
       <li>Tap the mic to say your answer instead of typing it.</li>
-      <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too. Ranked scores are tied to your nickname, but your answers never show on the board.</li>
+      <li>Daily answers are counted anonymously to rank how rare each one is, and answers the referee checks are saved anonymously too. Ranked scores are tied to your name on the board, but your answers never show there.</li>
     </ul>
     <div class="tier-table">${tiers}</div>`);
 }
@@ -1827,7 +1881,7 @@ function openMenu() {
 // until it closes. Players see the results once they've voted, and can change their vote.
 const pollMemoryKey = () => `poll.${POLL.id}`;
 
-// Players without a nickname vote once per browser, under a random id kept here.
+// Players without a name on the board vote once per browser, under a random id kept here.
 function pollBrowser() {
   let id = store.get('poll.browser');
   if (!/^[a-z0-9]{16,40}$/.test(id || '')) {
@@ -1871,7 +1925,7 @@ function openPoll({ popup = false } = {}) {
         </button>`).join('')}
       </div>
       <p id="pollStatus" class="poll-status" role="status"></p>
-      <p class="fb-note">${me ? `One vote per nickname, so this counts for ${esc(me.name)}.` : 'One vote per device.'} You can change it until ${esc(POLL.closesSaid)}.</p>
+      <p class="fb-note">${me ? `One vote per player, so this counts for ${esc(me.name)}.` : 'One vote per device.'} You can change it until ${esc(POLL.closesSaid)}.</p>
       ${popup ? '<button id="pollLater" class="btn btn-quiet announce-later" type="button">Not now</button>' : ''}
     </div>`);
   const box = el.sheetBody.querySelector('.poll');
@@ -1907,7 +1961,7 @@ function openPoll({ popup = false } = {}) {
       : error.name === 'Unreachable' ? 'Can’t reach the server from this network. Try again later.'
         : 'Couldn’t send your vote. Try again.');
 
-  // Someone who already voted (here, or with this nickname somewhere else) sees the results.
+  // Someone who already voted (here, or with this name somewhere else) sees the results.
   if (memory.vote || me) {
     if (memory.vote) status.textContent = 'Loading the results…';
     pollRequest().then((result) => {
@@ -1951,7 +2005,7 @@ function openPoll({ popup = false } = {}) {
 
 // Feedback -------------------------------------------------------------------------------
 // A note to whoever runs the game, read with `node admin.mjs feedback` in worker/. It says where
-// in the game it was sent from, and carries the nickname only when the player ticks the box.
+// in the game it was sent from, and carries the name only when the player ticks the box.
 const FEEDBACK_MAX = 600;
 const FEEDBACK_WAIT_MS = 30000; // between notes from one device
 
@@ -1972,7 +2026,7 @@ function openFeedback() {
       <textarea id="fbText" maxlength="${FEEDBACK_MAX}" rows="5" aria-label="Your feedback" placeholder="Your feedback"></textarea>
       <p id="fbCount" class="fb-count" aria-hidden="true">0 / ${FEEDBACK_MAX}</p>
       ${onPrompt ? `<p class="fb-note">The prompt you’re on gets sent with it: “${esc(G.prompt.text)}”</p>` : ''}
-      ${me ? `<label class="fb-sign"><input id="fbSign" type="checkbox"> Add my nickname, ${esc(me.name)}</label>` : ''}
+      ${me ? `<label class="fb-sign"><input id="fbSign" type="checkbox"> Add my name, ${esc(me.name)}</label>` : ''}
       <button class="btn btn-primary fb-send" type="submit">Send</button>
       <p id="fbError" class="nick-error" role="alert"></p>
     </form>`);
@@ -2031,7 +2085,7 @@ function wire() {
   el.rankedLine.addEventListener('click', () => {
     audio.unlock();
     audio.click();
-    if (ranked.player() || ON_PHONE) openBoard(); // phones can't play ranked, so no nickname here
+    if (ranked.player() || ON_PHONE) openBoard(); // phones can't play ranked, so no name here
     else openNickname();
   });
   $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
@@ -2145,12 +2199,13 @@ async function boot() {
   }
   G.phase = 'title';
   setScreen('title');
-  // A nickname offered a new name, or required to pick one, is asked here. An offer asks once a day.
+  // The name question (real name or anonymous) is asked every time until it's answered. A name the
+  // admin offered a change, or requires one, is asked too; an offer asks once a day.
   // Otherwise an open poll the player hasn't seen pops up.
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
     if (G.phase !== 'title' || el.sheet.open) return;
-    const renameDue = status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today);
+    const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
     if (renameDue) openRename();
     else askPoll();
   });

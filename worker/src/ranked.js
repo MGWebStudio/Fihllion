@@ -1,14 +1,16 @@
-// Ranked mode. A player picks a nickname, and from then on their Daily is a ranked run, one try a day.
+// Ranked mode. A player picks a name for the board (their own, or anonymous), and from then on their
+// Daily is a ranked run, one try a day.
 // The server runs the dive: it sends one question at a time, keeps its own clock, and scores every
 // answer itself with the answer lists and the referee, so editing the page can't change a score.
 // Days are Mountain Time, the same as the Daily.
 //
-//   POST /ranked/join      {"name": "Goldie"}                    -> {"name": "Goldie", "key": "..."}
-//   POST /ranked/status    {"key": "..."}                        -> {"name", "today", "run": {...}|null}
+//   POST /ranked/join      {"name": "Sam"} or {"anonymous": true} -> {"name": "Sam" or "Anon4821", "key": "..."}
+//   POST /ranked/status    {"key": "..."}                        -> {"name", "today", "run": {...}|null, "paused", "rename", "nameCheck"}
 //   POST /ranked/question  {"key": "..."}                        -> {"day", "round", "id", "text", "msLeft"} or {"finished": true}
 //   POST /ranked/guess     {"key", "round", "typed", "final"}    -> {"result": "hit"|"miss"|"late"|"busy", ...}
 //   POST /ranked/void      {"key", "round"}                      -> the question scores 0, flagged (they left the tab)
-//   POST /ranked/rename    {"key", "name"} or {"key", "keep": true} -> {"name"}, when the admin offered or forced a new nickname
+//   POST /ranked/rename    {"key", "name"}, {"key", "anonymous": true} or {"key", "keep": true} -> {"name"},
+//                          for the name question, or when the admin offered or forced a new name
 //   POST /ranked/board     {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
@@ -29,7 +31,7 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     return reply(400, error.message);
   }
   try {
-    if (action === 'join') return json(await join(env, data.name));
+    if (action === 'join') return json(await join(env, data));
     if (action === 'board') return json(await board(env, data));
     const player = await playerFor(env, data.key);
     if (!player) return json({ error: 'unknown' });
@@ -70,7 +72,21 @@ export function nameProblem(name) {
     if (collapse(word) === word && collapse(plain).includes(word)) return 'blocked';
   }
   for (const word of WHOLE) if (letters === word || collapse(letters) === collapse(word)) return 'blocked';
+  // Kept for anonymous players, so a name like Anon4821 always means someone chose to go anonymous.
+  if (/^an+on/.test(plain)) return 'anon';
   return null;
+}
+
+// Anonymous players show on the boards as Anon and four numbers.
+const anonName = () => `Anon${1000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 9000)}`;
+
+// Real names on the leaderboard: from NAMES_FROM on (wrangler.jsonc), every player answers once,
+// their own name or anonymous, and can't start a ranked Daily until they do. Without the setting
+// it's always on.
+export function needsName(env, player) {
+  if (player.name_kind) return false;
+  const from = Date.parse(env.NAMES_FROM || '');
+  return Number.isNaN(from) || Date.now() >= from;
 }
 
 async function sha256(text) {
@@ -78,43 +94,67 @@ async function sha256(text) {
   return [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-async function join(env, name) {
-  const problem = nameProblem(name);
+// A new player puts in their name or goes anonymous, which answers the name question too.
+async function join(env, data) {
+  const anonymous = data.anonymous === true;
+  const problem = anonymous ? null : nameProblem(data.name);
   if (problem) return { error: problem };
   const loaded = await loadCalendar(env);
   const key = [...crypto.getRandomValues(new Uint8Array(24))].map((b) => b.toString(16).padStart(2, '0')).join('');
-  const result = await env.DB.prepare('INSERT INTO players (name, name_key, key_hash, created) VALUES (?1, ?2, ?3, ?4) ON CONFLICT (name_key) DO NOTHING')
-    .bind(name, name.toLowerCase(), await sha256(key), loaded?.today ?? 0).run();
-  if (!result.meta.changes) return { error: 'taken' };
-  return { name, key };
+  const keyHash = await sha256(key);
+  // An anonymous name that's already taken gets another try with new numbers.
+  for (let tries = anonymous ? 8 : 1; tries > 0; tries -= 1) {
+    const name = anonymous ? anonName() : data.name;
+    const result = await env.DB.prepare(`INSERT INTO players (name, name_key, key_hash, created, name_kind, name_at) VALUES (?1, ?2, ?3, ?4, ?5, ?6)
+        ON CONFLICT (name_key) DO NOTHING`)
+      .bind(name, name.toLowerCase(), keyHash, loaded?.today ?? 0, anonymous ? 'anon' : 'own', Date.now()).run();
+    if (result.meta.changes) return { name, key };
+  }
+  return { error: 'taken' };
 }
 
 export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
-  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
+  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer, name_kind FROM players WHERE key_hash = ?1').bind(await sha256(key)).first();
 }
 
-// A nickname change the admin offered (node admin.mjs offer-rename) or requires (force-rename).
-// The player keeps their scores; only the name on the boards changes. An offer can be turned down.
+// The name question, or a name change the admin offered (node admin.mjs offer-rename) or requires
+// (force-rename). The player puts in their name, goes anonymous, or keeps the one they have (not
+// when it was forced). They keep their scores; only the name on the boards changes.
 async function rename(env, player, data) {
-  if (!player.rename_offer) return { error: 'not-offered', name: player.name };
+  const asked = needsName(env, player);
+  if (!player.rename_offer && !asked) return { error: 'not-offered', name: player.name };
   const forced = player.rename_offer === 2;
+  const now = Date.now();
   if (data.keep === true) {
     if (forced) return { error: 'forced' };
-    await env.DB.prepare('UPDATE players SET rename_offer = 0 WHERE id = ?1').bind(player.id).run();
+    // Keeping it when asked the name question means it's their name.
+    if (asked) {
+      await env.DB.prepare("UPDATE players SET rename_offer = 0, name_kind = 'own', name_before = COALESCE(name_before, name), name_at = ?2 WHERE id = ?1")
+        .bind(player.id, now).run();
+    } else {
+      await env.DB.prepare('UPDATE players SET rename_offer = 0 WHERE id = ?1').bind(player.id).run();
+    }
     return { name: player.name };
   }
-  const problem = nameProblem(data.name);
-  if (problem) return { error: problem };
-  if (forced && data.name.toLowerCase() === player.name.toLowerCase()) return { error: 'blocked' };
-  try {
-    await env.DB.prepare('UPDATE players SET name = ?1, name_key = ?2, rename_offer = 0 WHERE id = ?3')
-      .bind(data.name, data.name.toLowerCase(), player.id).run();
-  } catch (error) {
-    if (/unique/i.test(error.message)) return { error: 'taken' };
-    throw error;
+  const anonymous = data.anonymous === true;
+  if (!anonymous) {
+    const problem = nameProblem(data.name);
+    if (problem) return { error: problem };
+    if (forced && data.name.toLowerCase() === player.name.toLowerCase()) return { error: 'blocked' };
   }
-  return { name: data.name };
+  for (let tries = anonymous ? 8 : 1; tries > 0; tries -= 1) {
+    const name = anonymous ? anonName() : data.name;
+    try {
+      await env.DB.prepare(`UPDATE players SET name = ?1, name_key = ?2, rename_offer = 0, name_kind = ?3,
+          name_before = COALESCE(name_before, name), name_at = ?4 WHERE id = ?5`)
+        .bind(name, name.toLowerCase(), anonymous ? 'anon' : 'own', now, player.id).run();
+      return { name };
+    } catch (error) {
+      if (!/unique/i.test(error.message)) throw error;
+    }
+  }
+  return { error: 'taken' };
 }
 
 // Runs -----------------------------------------------------------------------------------
@@ -165,6 +205,7 @@ async function status(env, player) {
     run: publicRun(run),
     paused: Boolean(player.paused),
     rename: player.rename_offer === 2 ? 'forced' : player.rename_offer === 1 ? 'offer' : null,
+    nameCheck: needsName(env, player),
   };
 }
 
@@ -173,6 +214,8 @@ async function question(env, player, data) {
   if (!loaded) throw new Error('Schedule unavailable');
   const day = loaded.today;
   if (data.day !== undefined && data.day !== day) return { error: 'day', today: day };
+  // Until they answer the name question they can finish a run they started, but not start one.
+  if (needsName(env, player) && !(await getRun(env, player, day))) return { error: 'name' };
   await env.DB.prepare('INSERT INTO runs (player, day) VALUES (?1, ?2) ON CONFLICT (player, day) DO NOTHING').bind(player.id, day).run();
   const run = await getRun(env, player, day);
   await settleIfLate(env, run);

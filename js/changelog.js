@@ -4,6 +4,18 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-20',
+    time: '12:00 AM',
+    title: 'Real names on the leaderboard',
+    short: 'Real names on the board',
+    items: [
+      'The leaderboard is switching to real names. No more made-up nicknames.',
+      'Next time you open the game, put in your name or go anonymous. You need to answer before your next ranked Daily.',
+      'First name is plenty, or a version of it people know, like SamR or Sammy7. Anonymous shows up as Anon and four numbers.',
+      'Anything that isn’t your name gets changed to an anonymous one. Your scores stay either way.',
+    ],
+  },
+  {
     date: '2026-11-18',
     time: '6:00 PM',
     title: 'The Dudrey update',

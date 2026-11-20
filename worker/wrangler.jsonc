@@ -21,8 +21,8 @@
     // sooner, keeping about 750 calls for ranked. See the top of worker/src/shared.js.
     "AI_DAILY_UNITS": "9800",
     "AI_RANKED_RESERVE": "2000",
-    // Until this time, practice may use the ranked reserve too. Nov 19, 2026 at 5 PM Mountain Time,
-    // when that day's budget resets. Leave it in the past (or remove it) to keep the reserve.
-    "AI_RESERVE_OFF_UNTIL": "2026-11-20T00:00:00Z"
+    // When players start getting asked to put in their real name or go anonymous, and need to answer
+    // before a ranked Daily: Friday Nov 20, 2026 at midnight Mountain Time. See needsName in src/ranked.js.
+    "NAMES_FROM": "2026-11-20T07:00:00Z"
   }
 }

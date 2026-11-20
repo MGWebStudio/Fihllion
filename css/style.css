@@ -670,7 +670,8 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
 .nick-error { min-height: 26px; margin: 6px 0 0; font-size: 20px; color: #ffd2a6; }
 .nick-rules { margin-top: 8px; font-size: 20px; color: var(--muted); }
 .nick-rules li::before { content: '· '; color: var(--gilt); }
-.nick-skip { width: 100%; margin-top: 16px; }
+.nick-hint { margin: 2px 0 0; font-size: 19px; line-height: 1.3; color: var(--muted); }
+.nick-alt { width: 100%; margin-top: 12px; }
 
 /* Feedback box */
 .fb-form textarea {
