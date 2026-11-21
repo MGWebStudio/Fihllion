@@ -1,10 +1,3 @@
-? Name a country in Africa with a coastline
-10: Egypt, South Africa, Morocco, Kenya, Nigeria, Madagascar, Somalia
-30: Tanzania, Ghana, Senegal, Algeria, Tunisia, Libya, Angola, Namibia, Mozambique, Sudan, Cameroon, Ivory Coast|Côte d'Ivoire|Cote d'Ivoire, Liberia, Sierra Leone, Guinea, Eritrea, Gabon, Republic of the Congo|Congo|Congo-Brazzaville
-60: Mauritania, The Gambia|Gambia, Guinea-Bissau, Benin, Togo, Equatorial Guinea, Djibouti, Cape Verde|Cabo Verde, Mauritius, Seychelles, Comoros
-85: São Tomé and Príncipe|Sao Tome and Principe|Sao Tome
-100: Democratic Republic of the Congo|DR Congo|DRC|Congo-Kinshasa :: Africa's second-biggest country has only about 37 km (23 miles) of coastline, where the Congo River meets the Atlantic.
-
 ? Name a country that's colder than the US
 10: Canada, Russia, Iceland, Norway, Greenland, Finland, Sweden
 30: Switzerland, Austria, Estonia, Latvia, Lithuania, Belarus, Kazakhstan, North Korea, Denmark
