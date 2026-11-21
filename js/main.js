@@ -34,9 +34,10 @@ const IS_LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 // ?today= pretends it's another day, which the ranked server won't go along with, so ranked sits out.
 const PRETEND_DAY = IS_LOCAL && new URLSearchParams(location.search).has('today');
 
-// Ranked is for computers. On a phone or tablet the Daily runs a day behind, so nobody can play
-// today's prompts on their phone and then again, ranked, on a school computer. Chromebooks count as
-// computers, touch screen or not. On this PC, ?device=phone or ?device=computer tries either.
+// The Daily is for computers. Phones and tablets get Endless only, so nobody can play today's
+// prompts on their phone and then again, ranked, on a school computer. (Phones used to get
+// yesterday's Daily, which looked like a bug that repeated it.) Chromebooks count as computers,
+// touch screen or not. On this PC, ?device=phone or ?device=computer tries either.
 const ON_PHONE = (() => {
   const forced = IS_LOCAL && new URLSearchParams(location.search).get('device');
   if (forced) return forced === 'phone';
@@ -121,10 +122,6 @@ function makeDive(mode, day, ids) {
 // always clear whether a dive counts.
 function modeOf(dive) {
   if (dive.mode === 'endless') return { key: 'endless', tag: 'Endless', long: 'Endless', note: 'Practice. Nothing here counts.' };
-  // A phone's Daily is yesterday's, played from the big button rather than the Archive.
-  if (dive.day !== G.today && dive.day === dailyDay() && !G.fromArchive) {
-    return { key: 'daily', tag: `Daily #${dive.day}`, long: `Yesterday’s Daily · Dive #${dive.day}`, note: 'Just for fun. Ranked is on computers only.' };
-  }
   if (dive.day !== G.today) return { key: 'archive', tag: `Archive #${dive.day}`, long: `Archive · Dive #${dive.day}`, note: 'A replay of a past day.' };
   if (dive.ranked) return { key: 'ranked', tag: `Ranked #${dive.day}`, long: `Ranked Daily · Dive #${dive.day}`, note: 'One try. This one counts.' };
   return {
@@ -156,14 +153,6 @@ const diveKey = (dive) => (dive.mode === 'endless' ? 'endless.current' : `daily.
 const saveDive = (dive) => store.set(diveKey(dive), dive);
 const getDaily = (day) => store.get(`daily.${day}`) || makeDive('daily', day, content.calendar.idsFor(day));
 const isFresh = (dive) => dive.rounds.length === 0 && !dive.deadline;
-
-// The Daily this device plays: today's, or on a phone yesterday's, just for fun. A phone that had
-// already started today's before this rule finishes it.
-function dailyDay() {
-  if (!ON_PHONE || PRETEND_DAY || G.today <= 1) return G.today;
-  const todays = store.get(`daily.${G.today}`);
-  return todays && !isFresh(todays) ? G.today : G.today - 1;
-}
 
 function anchorsOf(dive) {
   let m = 0;
@@ -246,7 +235,7 @@ function queueEndless() {
 
 // Today's dive and the next endless one load in the background, so starting either is instant.
 function prefetch() {
-  content.load(content.calendar.idsFor(dailyDay())).catch(() => {});
+  if (!ON_PHONE) content.load(content.calendar.idsFor(G.today)).catch(() => {});
   const current = store.get('endless.current');
   if (current && !current.done) content.load(current.ids).catch(() => {});
   else queueEndless();
@@ -255,35 +244,46 @@ function prefetch() {
 // Title ----------------------------------------------------------------------------------
 function refreshTitle() {
   G.today = content.calendar.dayNumber(currentDate());
-  const day = dailyDay();
-  const behind = day !== G.today; // a phone, on yesterday's Daily
+  const arrow = '<span aria-hidden="true">▼</span>';
+  el.rankedLine.hidden = !ranked.available || PRETEND_DAY;
+  // On a phone the big button is Endless, and the line under it says where the Daily went.
+  el.dailyTag.classList.toggle('is-endless', ON_PHONE);
+  el.btnEndless.hidden = ON_PHONE;
+  if (ON_PHONE) {
+    const current = store.get('endless.current');
+    el.dailyTag.textContent = 'Endless · practice';
+    el.dailyTag.classList.remove('is-ranked');
+    el.btnBegin.innerHTML = `${current && !current.done && !isFresh(current) ? 'Keep diving' : 'Play Endless'} ${arrow}`;
+    el.rankedLine.innerHTML = '<span class="ranked-off">The Daily is on computers only</span> · Leaderboard';
+    el.diveLabel.textContent = 'The Daily is on computers only';
+    el.diveLabel.hidden = !el.rankedLine.hidden;
+    prefetch();
+    return;
+  }
+  const day = G.today;
   const dive = store.get(`daily.${day}`);
   const me = ranked.available && !PRETEND_DAY ? ranked.player() : null;
   const started = dive && !isFresh(dive);
-  const isRanked = Boolean(dive?.ranked) && !behind;
-  const arrow = '<span aria-hidden="true">▼</span>';
+  const isRanked = Boolean(dive?.ranked);
   // The big button is always the Daily, and the tag above it says which. Endless sits below it,
   // marked as practice.
   el.dailyTag.innerHTML = isRanked
     ? `<span aria-hidden="true">★</span> Ranked Daily · Dive #${day}`
-    : `${behind ? 'Yesterday’s' : 'Today’s'} Daily · Dive #${day}`;
+    : `Today’s Daily · Dive #${day}`;
   el.dailyTag.classList.toggle('is-ranked', isRanked);
   if (dive?.done) {
-    el.btnBegin.innerHTML = behind ? 'See yesterday’s results' : 'See today’s results';
+    el.btnBegin.innerHTML = 'See today’s results';
     el.diveLabel.textContent = `Next Daily in ${untilMidnight()}`;
   } else if (started) {
     el.btnBegin.innerHTML = `Finish the Daily ${arrow}`;
     el.diveLabel.textContent = `Prompt ${Math.min(dive.rounds.length + 1, PROMPTS_PER_DIVE)} of ${PROMPTS_PER_DIVE} · ${shortDate(day)}`;
   } else {
     el.btnBegin.innerHTML = `Play the Daily ${arrow}`;
-    el.diveLabel.textContent = behind ? 'Today’s is ranked, on computers' : shortDate(day);
+    el.diveLabel.textContent = shortDate(day);
   }
-  // Before the dive starts, the tag above the button already says which dive it is. On a phone
-  // the line under it says why it's yesterday's.
-  el.diveLabel.hidden = !started && !behind;
-  el.rankedLine.hidden = !ranked.available || PRETEND_DAY;
-  if (behind) el.rankedLine.innerHTML = '<span class="ranked-off">Ranked is on computers only</span> · Leaderboard';
-  else if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
+  // Before the dive starts, the tag above the button already says which dive it is.
+  el.diveLabel.hidden = !started;
+  if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
   else if (started) el.rankedLine.innerHTML = '<span class="ranked-off">Just for fun today</span> · Leaderboard';
   else if (me) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
   else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Add your name';
@@ -1399,7 +1399,7 @@ function stopBoardPolling() {
 function openBoard() {
   const me = ranked.player();
   const request = G.rankedStatus?.request;
-  const note = ON_PHONE ? '<p class="board-note">Ranked is on computers only. On a phone the Daily is yesterday’s, just for fun.</p>'
+  const note = ON_PHONE ? '<p class="board-note">The Daily and ranked are on computers only. On a phone, play Endless.</p>'
     : me ? `<p class="board-note">Playing as <b>${esc(me.name)}</b>. ${request?.state === 'waiting'
       ? `You asked for <b>${esc(request.name)}</b>, waiting on approval. <button id="sheetRequest" class="link-btn" type="button">Change</button>`
       : '<button id="sheetRequest" class="link-btn" type="button">Request a new name</button>'}</p>`
@@ -1735,20 +1735,12 @@ function whenLoaded(ids, then) {
 }
 
 function startDaily() {
-  audio.unlock();
-  audio.click();
-  const day = dailyDay();
-  if (day !== G.today) {
-    // A phone plays yesterday's Daily, just for fun, with no ranked choice.
-    const past = getDaily(day);
-    if (past.ranked && !past.done) past.ranked = false;
-    whenLoaded(past.ids, () => {
-      G.fromArchive = false;
-      if (past.done) showResults(past);
-      else beginDive(past, { jump: isFresh(past) });
-    });
+  if (ON_PHONE) {
+    startEndless(); // the big button on a phone, and anything else that asks for the Daily there
     return;
   }
+  audio.unlock();
+  audio.click();
   const dive = getDaily(G.today);
   // Before each Daily the player picks: ranked, on the leaderboard, or just for fun with photos.
   // The pick sticks for the day, since the prompts have been seen once the dive starts.
@@ -1819,6 +1811,7 @@ function openHow() {
       <li>The answers everyone thinks of barely get you wet. The rare ones pull you down.</li>
       <li>Every point sinks you 10 metres. A perfect 700 reaches 7,000 m.</li>
       <li>One Daily a day. Endless is there for practice, and it never counts.</li>
+      ${ON_PHONE ? '<li>The Daily is on computers only. On a phone or tablet, play Endless.</li>' : ''}
       ${ranked.available ? '<li>Before each Daily, pick Ranked to put your score on the leaderboard, or Just for fun. Ranked is one try, scored by the server, with no photos, and switching away during a question makes it score 0.</li>' : ''}
       <li>Not on our list? An AI referee checks it, so real deep cuts still count.</li>
       <li>Tap the mic to say your answer instead of typing it.</li>
@@ -1872,7 +1865,8 @@ function announce() {
   const latest = CHANGELOG[0];
   if (!latest?.big || store.get('news.seen') === newsId(latest)) return;
   const today = store.get(`daily.${G.today}`);
-  const go = today?.done ? 'See the leaderboard' : 'Play today’s Daily <span aria-hidden="true">▼</span>';
+  const go = ON_PHONE ? 'Play Endless <span aria-hidden="true">▼</span>'
+    : today?.done ? 'See the leaderboard' : 'Play today’s Daily <span aria-hidden="true">▼</span>';
   openSheet(latest.title, `<div class="announce">
       <p class="label announce-stamp">New · ${esc(newsDate(latest))}</p>
       <p class="announce-lead">${esc(latest.lead || '')}</p>
@@ -1885,7 +1879,8 @@ function announce() {
   markNewsSeen();
   $('announceGo').addEventListener('click', () => {
     closeSheet();
-    if (today?.done) openBoard();
+    if (ON_PHONE) startEndless();
+    else if (today?.done) openBoard();
     else startDaily();
   });
   $('announceLater').addEventListener('click', () => { audio.click(); closeSheet(); });
@@ -1913,7 +1908,7 @@ function openMenu() {
   const inDive = Boolean(G.dive);
   const items = [
     inDive ? ['Back to the boat', 'menuHome'] : null,
-    ['Today’s Daily', 'menuDaily'],
+    ON_PHONE ? null : ['Today’s Daily', 'menuDaily'],
     ['Endless · practice', 'menuEndless'],
     ranked.available ? ['Leaderboard', 'menuBoard'] : null,
     ranked.available && pollOpen() ? [POLL.title, 'menuPoll'] : null,
@@ -1928,9 +1923,9 @@ function openMenu() {
       : '<p class="results-next">Your dive is saved, but the clock keeps running.</p>';
   openSheet('Menu', `<ul class="sheet-list">${items.map(([label, id]) => `<li><button type="button" id="${id}"><span>${esc(label)}</span></button></li>`).join('')}</ul>${note}`);
   $('menuHome')?.addEventListener('click', () => { closeSheet(); goHome(); });
-  $('menuDaily').addEventListener('click', () => {
+  $('menuDaily')?.addEventListener('click', () => {
     closeSheet();
-    if (G.dive && G.dive.mode === 'daily' && G.dive.day === dailyDay()) return;
+    if (G.dive && G.dive.mode === 'daily' && G.dive.day === G.today) return;
     startDaily();
   });
   $('menuEndless').addEventListener('click', () => {

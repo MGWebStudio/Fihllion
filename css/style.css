@@ -227,6 +227,8 @@ body[data-screen="results"] #btnSound, body[data-screen="results"] #btnMenu { di
   .title-links { display: grid; grid-template-columns: 1fr 1fr; width: min(100%, 300px); }
   /* An odd button out (Send feedback) takes the whole last row instead of sitting alone on the left. */
   .title-links .btn:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  /* On a phone Endless is the big button, so the four left fill two rows. */
+  .title-links .btn-endless[hidden] ~ .btn:last-child { grid-column: auto; }
 }
 .news-chip {
   margin-top: 14px; padding: 6px 10px; border: 0; cursor: pointer;
@@ -519,6 +521,7 @@ dialog#sheet::backdrop { background: rgba(2, 8, 18, .72); }
   color: #2a0f02; background: var(--gilt);
   box-shadow: 0 -2px 0 0 #2a0f02, 0 2px 0 0 #2a0f02, -2px 0 0 0 #2a0f02, 2px 0 0 0 #2a0f02;
 }
+.daily-tag.is-endless { background: var(--glass); } /* a phone's big button is Endless */
 .ranked-line {
   margin-top: 8px; padding: 4px 8px; border: 0; cursor: pointer; background: none;
   font-family: var(--font-body); font-size: 20px; line-height: 1.2; color: var(--cream);

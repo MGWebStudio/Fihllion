@@ -5,6 +5,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-20',
+    time: '8:35 PM',
+    title: 'The Daily is on computers only',
+    short: 'Daily on computers only',
+    items: [
+      'Phones and tablets don’t get a Daily anymore, not even yesterday’s. It looked like the same Daily was repeating.',
+      'On a phone, the big button plays Endless. The Archive and the leaderboard are still there.',
+    ],
+  },
+  {
+    date: '2026-11-20',
     time: '1:45 PM',
     title: 'Ask for a different name',
     short: 'Ask for a different name',
