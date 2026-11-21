@@ -1,0 +1,62 @@
+? Name an animal that's faster than a human
+10: Cheetah, Horse, Lion, Greyhound|Dog, Deer, Ostrich, Rabbit|Hare
+30: Pronghorn|Antelope, Gazelle, Zebra, Kangaroo, Wolf, Coyote, Fox, Elk, Moose, Bear|Grizzly Bear|Black Bear, Tiger, Leopard, Jaguar, Hyena, Wildebeest, Giraffe, Camel, Elephant, Rhino|Rhinoceros, Hippo|Hippopotamus, Bison|Buffalo, House Cat|Cat, Emu, Peregrine Falcon|Falcon, Eagle, Hawk, Pigeon, Sailfish, Marlin, Swordfish, Tuna, Mako Shark|Shark, Dolphin, Orca|Killer Whale, Roadrunner, Bull, Mountain Lion|Cougar|Puma, Bobcat, Lynx, Caribou|Reindeer, Jackrabbit, Seal, Sea Lion, Penguin
+60: Springbok, Impala, Blackbuck, African Wild Dog|Wild Dog, Jackal, Cassowary, Rhea, Frigatebird, Swift, Albatross, Golden Eagle, Dragonfly, Horsefly, Flying Fish, Blue Shark, Warthog, Wallaby, Kudu, Eland, Oryx|Gemsbok, Hartebeest, Topi, Dingo, Duck, Goose, Hummingbird
+85: Wahoo, Gyrfalcon, Dhole, Saiga
+100: Brazilian Free-tailed Bat|Mexican Free-tailed Bat|Free-tailed Bat :: In 2016 scientists clocked it at about 100 mph in level flight, faster than any bird measured the same way.
+
+? Name an animal with a mane
+10: Lion, Horse, Zebra, Pony
+30: Donkey, Giraffe, Bison|Buffalo, Hyena|Striped Hyena|Brown Hyena, Maned Wolf, Mule, Wildebeest|Gnu, Gelada|Gelada Baboon, Hamadryas Baboon|Baboon, Golden Lion Tamarin|Lion Tamarin, Lionhead Rabbit, Elk, Caribou|Reindeer, Mustang, Clydesdale
+60: Barbary Sheep|Aoudad, Sea Lion, Przewalski's Horse, Onager, Kiang, Aardwolf, Lion-tailed Macaque, Markhor, Chow Chow, Tibetan Mastiff, Leonberger, Maine Coon, Wolf, Takin, Musk Ox
+85: Quagga, Maned Duck, Crested Rat|Maned Rat, Sable Antelope, Roan Antelope
+100: Maned Sloth :: A sloth from Brazil's Atlantic Forest with a mane of long dark hair around its neck and shoulders.
+
+? Name an animal that can climb
+10: Monkey, Cat, Squirrel, Bear, Koala, Sloth, Gecko|Lizard
+30: Chimpanzee, Gorilla, Orangutan, Lemur, Raccoon, Leopard, Jaguar, Mountain Lion|Cougar|Puma, Bobcat, Lynx, Snake, Spider, Ant, Mountain Goat|Goat, Ibex, Bighorn Sheep, Opossum|Possum, Chipmunk, Rat, Mouse, Woodpecker, Parrot, Tree Frog|Frog, Chameleon, Iguana, Anole, Tarsier, Gibbon, Baboon, Red Panda, Panda, Sun Bear, Black Bear, Porcupine, Marten, Fisher, Kinkajou, Coati, Binturong, Clouded Leopard, Ocelot, Margay, Tree Kangaroo, Sugar Glider, Flying Squirrel, Snail, Slug, Caterpillar, Ladybug, Inchworm, Cockroach, Spider Monkey, Capuchin, Howler Monkey, Macaque, Coconut Crab|Crab, Tree Snake, Python
+60: Nuthatch, Treecreeper, Woodcreeper, Pangolin|Tree Pangolin, Tree Hyrax|Hyrax, Pine Marten, Ringtail, Tamandua, Silky Anteater, Fossa, Chamois, Klipspringer, Markhor, Tahr, Dormouse, Harvest Mouse, Colugo, Slow Loris|Loris, Bush Baby|Galago, Aye-aye, Cuscus, Mudskipper, Tree-Climbing Goats|Moroccan Goats, Mantis|Praying Mantis, Weasel
+85: Climbing Perch, Raccoon Dog, Arboreal Salamander, Wandering Salamander
+100: Gray Fox|Grey Fox :: The only member of the dog family in North America that regularly climbs trees, using hooked claws.
+
+? Name an animal with sharp teeth
+10: Shark, Lion, Tiger, Crocodile, Alligator, Wolf, Piranha
+30: Bear, Dog, Cat, Leopard, Jaguar, Cheetah, Hyena, Snake|Viper|Rattlesnake, Barracuda, Orca|Killer Whale, T. rex|Tyrannosaurus Rex|Dinosaur, Velociraptor, Komodo Dragon, Beaver, Rat, Hippo|Hippopotamus, Wild Boar|Boar|Warthog, Vampire Bat|Bat, Fox, Coyote, Weasel, Wolverine, Badger, Honey Badger, Tasmanian Devil, Polar Bear, Grizzly Bear, Mountain Lion|Cougar, Lynx, Bobcat, Sea Lion, Leopard Seal, Moray Eel|Eel, Anglerfish, Viperfish, Gar|Alligator Gar, Pike, Muskie, Bluefish, Saber-toothed Cat|Sabertooth Tiger, Megalodon, Gharial, Caiman, Monitor Lizard, Gila Monster, Baboon, Mandrill, Raccoon, Opossum, Otter, Seal, Great White Shark, Dolphin
+60: Wolf Fish|Wolffish, Snakehead, Lancetfish, Dragonfish, Lamprey|Sea Lamprey, Sand Tiger Shark, Water Deer, Musk Deer, Muntjac, Fossa, Mink, Ferret, Stoat, Marten, Fisher, Dhole, African Wild Dog, Spinosaurus, Allosaurus, Mosasaurus, Triggerfish, Walleye
+85: Goliath Tigerfish|Tigerfish, Payara|Vampire Fish, Fangtooth, Goblin Shark, Frilled Shark
+100: Cookiecutter Shark :: It bites round plugs of flesh out of whales and big fish with a ring of saw-like teeth, and has even left bite marks on submarines.
+
+? Name an animal you might see at a petting zoo
+10: Goat, Sheep, Pig, Rabbit|Bunny, Chicken, Pony, Cow|Calf
+30: Llama, Alpaca, Donkey, Duck, Guinea Pig, Turkey, Lamb, Baby Goat|Kid, Horse, Miniature Horse|Mini Horse, Goose, Chicks|Baby Chicks|Chick, Tortoise|Turtle, Peacock, Emu, Deer|Fallow Deer, Reindeer, Kangaroo|Wallaby, Camel, Zebu, Pot-bellied Pig|Potbelly Pig, Mule, Ferret, Chinchilla, Hedgehog, Puppy|Dog, Kitten|Cat, Rooster, Pygmy Goat|Nigerian Dwarf Goat, Highland Cow|Scottish Highland Cow, Mini Cow, Mini Donkey, Mini Pig
+60: Capybara, Jacob Sheep, Babydoll Sheep, Silkie|Silkie Chicken, Guinea Fowl, Quail, Dove|Pigeon, Yak, Water Buffalo, Prairie Dog, Skunk, Lizard|Bearded Dragon, Hermit Crab, Nubian Goat, Angora Goat, Angora Rabbit, Holland Lop, Flemish Giant, Parakeet|Budgie, Cockatiel, Snake, Ostrich, Sugar Glider
+85: Mara|Patagonian Cavy, Watusi|Ankole-Watusi, Muscovy Duck, Valais Blacknose Sheep
+100: Kunekune|Kunekune Pig :: A hairy little pig from New Zealand. Its Māori name means "fat and round."
+
+? Name an animal with a bushy tail
+10: Squirrel, Fox, Raccoon, Skunk, Wolf, Red Panda, Husky
+30: Coyote, Dog|Samoyed|Pomeranian|Chow Chow, Cat|Maine Coon|Persian Cat, Chipmunk, Chinchilla, Ring-tailed Lemur|Lemur, Binturong, Arctic Fox, Fennec Fox, Gray Fox, Kit Fox, Red Fox, Snow Leopard, Pine Marten|Marten, Fisher, Sable, Wolverine, Flying Squirrel, Jackal, Dingo, Raccoon Dog, Ringtail, Bushbaby|Galago
+60: Maned Wolf, Dhole, Bushy-tailed Woodrat|Pack Rat, Brushtail Possum|Common Brushtail Possum, Aardwolf, Saki Monkey, Yak, Mink, Sugar Glider, Arctic Wolf, Shiba Inu, Pallas's Cat
+85: Brush-tailed Rock Wallaby, Brush-tailed Phascogale|Phascogale, Brush-tailed Bettong|Woylie, Bushy-tailed Olingo
+100: Giant Anteater|Anteater :: Its huge, bushy tail can be almost as long as its body, and it drapes it over itself like a blanket when it sleeps.
+
+? Name an animal that's bigger than a car
+10: Elephant, Blue Whale|Whale, Giraffe, Hippo|Hippopotamus, Rhino|Rhinoceros, Dinosaur|T. rex|Tyrannosaurus Rex, Whale Shark
+30: Orca|Killer Whale, Humpback Whale, Sperm Whale, Gray Whale, Fin Whale, Bowhead Whale, Right Whale, Minke Whale, Megalodon, Elephant Seal, Brachiosaurus|Brontosaurus|Diplodocus|Argentinosaurus|Sauropod, Spinosaurus, Triceratops, Stegosaurus, Woolly Mammoth|Mammoth, Mastodon, Mosasaurus, African Elephant, Asian Elephant
+60: Giant Squid, Colossal Squid, Saltwater Crocodile, Plesiosaur, Ichthyosaur, Quetzalcoatlus, Paraceratherium, Giant Ground Sloth|Megatherium, Titanoboa, Manta Ray, Ocean Sunfish|Mola, Lion's Mane Jellyfish, Oarfish, Great White Shark, Pliosaur
+85: Siphonophore, Shastasaurus, Leedsichthys, Livyatan, Deinosuchus
+100: Basking Shark :: The second-biggest fish in the world can grow about as long as a school bus, but it eats only tiny plankton.
+
+? Name an animal that lives underground
+10: Mole, Earthworm|Worm, Rabbit, Groundhog|Woodchuck, Prairie Dog, Ant|Ants, Gopher
+30: Meerkat, Badger, Fox, Naked Mole Rat|Mole Rat, Armadillo, Chipmunk, Ground Squirrel, Wombat, Aardvark, Snake, Termite, Cicada, Grub|Beetle Larva, Field Mouse|Mouse, Rat, Vole, Gopher Tortoise|Desert Tortoise|Tortoise, Burrowing Owl, Tarantula|Trapdoor Spider|Spider, Scorpion, Centipede, Millipede, Pill Bug|Roly-Poly, Bat, Black-footed Ferret|Ferret, Marmot, Hamster
+60: Platypus, Echidna, Shrew, Puffin, Mole Cricket, Crayfish, Fiddler Crab, Clam, Bumblebee, Yellowjacket, Blind Cave Fish|Cave Fish, Cave Salamander, Salamander, Caecilian, Spadefoot Toad, Pangolin, Aardwolf, Hyena, Skunk, Honey Badger, Bilby, Kangaroo Rat, Jerboa, Gerbil, Dung Beetle, Penguin, Weasel, Kingfisher
+85: Golden Mole, Marsupial Mole, Blind Snake, Worm Lizard|Amphisbaenian, Olm, Tuco-tuco
+100: Purple Frog :: An Indian frog that spends almost its whole life buried underground, coming up only for a few weeks a year to breed.
+
+? Name an animal you'd hear at night
+10: Owl, Crickets|Cricket, Frogs|Frog, Wolves|Wolf, Coyotes|Coyote, Dogs|Dog, Bats|Bat
+30: Cats|Cat, Raccoon, Fox, Toad, Bullfrog, Spring Peepers|Peepers, Cicada, Katydid, Mosquito, Whip-poor-will, Nightingale, Mockingbird, Rooster, Mountain Lion|Cougar, Hyena, Lion, Howler Monkey, Mice|Mouse, Rat, Tokay Gecko|Gecko, Loon, Nighthawk, Nightjar, Screech Owl, Great Horned Owl, Barred Owl, Barn Owl, Tree Frog
+60: Opossum|Possum, Deer, Elk, Bobcat, Bushbaby|Galago, Geese, Killdeer, Chuck-will's-widow, Coqui|Coquí, Cane Toad, Hedgehog, Badger, Porcupine, Kiwi, Kookaburra, Koala, Tasmanian Devil, Kakapo, Alligator, Hippo, Leopard, Jackal, Dingo
+85: Bush Stone-curlew, Common Poorwill|Poorwill, Frogmouth, Woodcock, Mole Cricket
+100: Potoo :: A Central and South American bird of the night with an eerie, wailing call that sounds almost human.

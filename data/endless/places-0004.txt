@@ -1,0 +1,34 @@
+? Name a country in Africa with a coastline
+10: Egypt, South Africa, Morocco, Kenya, Nigeria, Madagascar, Somalia
+30: Tanzania, Ghana, Senegal, Algeria, Tunisia, Libya, Angola, Namibia, Mozambique, Sudan, Cameroon, Ivory Coast|Côte d'Ivoire|Cote d'Ivoire, Liberia, Sierra Leone, Guinea, Eritrea, Gabon, Republic of the Congo|Congo|Congo-Brazzaville
+60: Mauritania, The Gambia|Gambia, Guinea-Bissau, Benin, Togo, Equatorial Guinea, Djibouti, Cape Verde|Cabo Verde, Mauritius, Seychelles, Comoros
+85: São Tomé and Príncipe|Sao Tome and Principe|Sao Tome
+100: Democratic Republic of the Congo|DR Congo|DRC|Congo-Kinshasa :: Africa's second-biggest country has only about 37 km (23 miles) of coastline, where the Congo River meets the Atlantic.
+
+? Name a country that's colder than the US
+10: Canada, Russia, Iceland, Norway, Greenland, Finland, Sweden
+30: Switzerland, Austria, Estonia, Latvia, Lithuania, Belarus, Kazakhstan, North Korea, Denmark
+60: Kyrgyzstan, Tajikistan, Georgia, Armenia, Slovakia, Czech Republic|Czechia, China
+85: Bhutan, Andorra, Liechtenstein
+100: Mongolia :: Its capital, Ulaanbaatar, is the coldest national capital in the world.
+
+? Name a place you'd go skiing
+10: Colorado, Aspen, Vail, Utah, Switzerland, The Alps|Alps, The Mountains|Mountains
+30: Whistler, Park City, Breckenridge, Telluride, Jackson Hole, Lake Tahoe|Tahoe, Mammoth Mountain|Mammoth, Big Sky, Sun Valley, Steamboat Springs|Steamboat, Keystone, Copper Mountain, Winter Park, Snowbird, Alta, Deer Valley, Killington, Stowe, Vermont, Montana, Idaho, Wyoming, Canada, Banff, Lake Louise, Austria, France, Italy, Norway, Japan, Niseko|Hokkaido, Chamonix, Zermatt, St. Moritz, Courchevel, Val d'Isère|Val d'Isere, Verbier, Innsbruck, Kitzbühel|Kitzbuhel, Cortina d'Ampezzo|Cortina, Dolomites, Rocky Mountains|Rockies, Sierra Nevada, New Hampshire, Maine, Sugarloaf, Michigan, Wisconsin, Minnesota, Taos|New Mexico, California, Mount Hood|Oregon, Washington, Alaska, Sweden, Finland, Andorra, Chile, Argentina, New Zealand|Queenstown, Germany, Antelope Butte, Grand Targhee, Bighorn Mountains|Bighorns, Arapahoe Basin|A-Basin, Bridger Bowl, Red Lodge
+60: Snow King, Meadowlark, Snowy Range, Hogadon, Arizona Snowbowl|Arizona, Australia|Thredbo, Slovenia, Zakopane|Poland, Bulgaria, PyeongChang|South Korea, China, Mount Bachelor, Crystal Mountain, Mount Baker, Squaw Valley|Palisades Tahoe, Heavenly, Big Bear, Whiteface, Lake Placid, Sundance, Brighton, Solitude, Crested Butte, Purgatory, Revelstoke, Mont-Tremblant|Tremblant, Lapland, Garmisch-Partenkirchen, Sochi, Andes
+85: Gulmarg|India, Lebanon, Dizin|Iran, Oukaïmeden|Morocco, Afriski|Lesotho
+100: Ski Dubai :: An indoor ski slope inside a shopping mall in the desert, with real snow and even penguins.
+
+? Name a country whose name ends in "-stan"
+10: Pakistan, Afghanistan
+30: Kazakhstan, Uzbekistan
+60: Turkmenistan
+85: Tajikistan|Tadjikistan
+100: Kyrgyzstan|Kirghizstan|Kirgizstan :: The sun on its flag has 40 rays, one for each of the 40 tribes in its national legend, around the crown of a yurt.
+
+? Name a country where English is an official language
+10: United States|USA|America|US, United Kingdom|UK|England|Britain|Great Britain, Canada, Australia, Ireland, New Zealand, India
+30: South Africa, Nigeria, Jamaica, Philippines, Singapore, Kenya, Ghana, Pakistan, Scotland, Wales, Bahamas|The Bahamas, Barbados, Belize, Malta, Fiji, Trinidad and Tobago|Trinidad, Guyana, Uganda, Zambia, Zimbabwe, Botswana, Liberia, Cameroon, Tanzania, Papua New Guinea, Namibia, Sierra Leone
+60: Samoa, Sudan, South Sudan, Malawi, The Gambia|Gambia, Lesotho, Eswatini|Swaziland, Mauritius, Seychelles, Grenada, Saint Lucia|St. Lucia, Antigua and Barbuda, Dominica, Saint Kitts and Nevis|St. Kitts and Nevis, Saint Vincent and the Grenadines|St. Vincent, Solomon Islands, Vanuatu, Kiribati, Tonga, Burundi, Northern Ireland
+85: Tuvalu, Nauru, Palau, Marshall Islands, Micronesia
+100: Rwanda :: It switched its schools from French to English in 2008, then joined the Commonwealth the next year.
