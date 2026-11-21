@@ -5,6 +5,16 @@
 export const CHANGELOG = [
   {
     date: '2026-11-20',
+    time: '9:30 PM',
+    title: '84 new prompts in Endless',
+    short: '84 new Endless prompts',
+    items: [
+      '84 new prompts in Endless, like “Name a sport where the clock stops” and “Name a word with a double O in it.”',
+      'Every one has its own hidden answer worth 100.',
+    ],
+  },
+  {
+    date: '2026-11-20',
     time: '8:35 PM',
     title: 'The Daily is on computers only',
     short: 'Daily on computers only',
