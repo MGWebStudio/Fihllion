@@ -101,6 +101,23 @@
   .split div { border-top: 2px solid var(--line); padding-top: 6px; }
   .split .n { font: 32px/1 var(--display); }
   .split .l { font-size: 16px; color: var(--muted); }
+  /* Who goes first: two halves of one bar, the lit one is in use. */
+  .switch { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 14px; background: var(--line); border: 2px solid var(--line); }
+  .switch button {
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 0;
+    background: var(--ink);
+    color: var(--muted);
+    font: 11px/1.2 var(--label);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+  .switch button:hover { color: var(--cream); }
+  .switch button[aria-pressed="true"] { background: var(--glass); color: var(--ink); cursor: default; }
+  .switch button:disabled { cursor: progress; }
+  .switch + .note { margin-top: 8px; }
   .meter { position: relative; height: 14px; background: var(--ink); border: 2px solid var(--line); }
   .meter .fill { position: absolute; inset: 0 auto 0 0; background: var(--glass); }
   .meter .fill.warn { background: var(--orange); }
@@ -329,11 +346,25 @@
 
   function pcLine(pc) {
     if (!pc) return '<div class="status"><span class="dot off"></span>Not set up</div>';
-    const what = pc.mode === 'all' ? 'all checks' : pc.mode === 'practice' ? 'practice checks' : 'nothing (turned off)';
+    const what = { all: 'answering all checks', practice: 'answering practice checks', cloudflare: 'backing up Cloudflare' }[pc.mode] || 'turned off for checks';
     if (pc.connected && pc.paused) return `<div class="status"><span class="dot paused"></span>Your PC is paused</div>`;
-    if (pc.connected && pc.ready) return `<div class="status"><span class="dot on"></span>Your PC is answering ${what}</div>`;
+    if (pc.connected && pc.ready) return `<div class="status"><span class="dot on"></span>Your PC is ${what}</div>`;
     if (pc.connected) return '<div class="status"><span class="dot paused"></span>Your PC is connected but slow to answer</div>';
     return '<div class="status"><span class="dot off"></span>Your PC is off. Cloudflare is answering everything</div>';
+  }
+
+  // Which referee goes first. 'all' and 'off' can't be picked here, so neither half is lit for them.
+  const MODE_NOTES = {
+    practice: 'Endless, the Archive and Dailies played for fun try your PC first. Ranked tries Cloudflare first.',
+    cloudflare: 'Every check tries Cloudflare first. Your PC answers only when Cloudflare runs out of units or fails.',
+    all: 'Every check tries your PC first, ranked too.',
+    off: 'Your PC is never asked. Cloudflare answers everything.',
+  };
+  function modeSwitch(pc) {
+    if (!pc) return '';
+    const half = (mode, label) => `<button type="button" data-mode="${mode}" aria-pressed="${pc.mode === mode}">${label}</button>`;
+    return `<div class="switch" role="group" aria-label="Which referee goes first">${half('practice', 'PC first')}${half('cloudflare', 'Cloudflare first')}</div>
+      <p class="note">${esc(MODE_NOTES[pc.mode] || '')}</p>`;
   }
 
   function render() {
@@ -414,6 +445,7 @@
         <h2>Answer checker<small>resets at 5 PM</small></h2>
         <div class="card">
           ${pcLine(d.pc)}
+          ${modeSwitch(d.pc)}
           <div class="split">
             <div><div class="n">${num(ai.pc)}</div><div class="l">by your PC</div></div>
             <div><div class="n">${num(ai.n - ai.failed)}</div><div class="l">by Cloudflare</div></div>
@@ -466,6 +498,15 @@
     load();
   }
 
+  async function setMode(button) {
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    button.parentElement.querySelectorAll('button').forEach((each) => { each.disabled = true; });
+    const { status, body } = await call('/admin/referee', { method: 'POST', body: JSON.stringify({ mode: button.dataset.mode }) });
+    flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
+      : body.mode === 'cloudflare' ? 'Checks try Cloudflare first now.' : 'Practice checks try your PC first now.');
+    load();
+  }
+
   function flash(text) {
     $('flash').textContent = text;
     $('flash').hidden = false;
@@ -501,6 +542,8 @@
     if (anon) makeAnonymous(anon.dataset.anon);
     const decision = event.target.closest('[data-decide]');
     if (decision) decide(decision);
+    const mode = event.target.closest('[data-mode]');
+    if (mode) setMode(mode);
   });
   // Fresh numbers every minute while the page is open, and when coming back to it.
   setInterval(() => { if (data && document.visibilityState === 'visible') load(); }, 60000);

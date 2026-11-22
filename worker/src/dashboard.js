@@ -5,13 +5,15 @@
 //   POST /admin/anon   {"name": "Sammy"} -> {"name": "anonymous482"}, like node admin.mjs anon
 //   POST /admin/name   {"id": 12, "name": "Sam", "approve": true|false} -> a player's name request approved or
 //                      turned down, like node admin.mjs approve-name / deny-name
+//   POST /admin/referee {"mode": "practice"|"cloudflare"|"all"|"off"} -> which checks try the PC
+//                      referee first, from the next check on (refereeMode in shared.js)
 //
 // The password is the secret ADMIN_KEY, which only the admin sets (README, "Dashboard"); with no
 // ADMIN_KEY the data stays locked. After MAX_TRIES wrong passwords in an hour, every try is turned
 // away until the next hour, right password included, so it can't be guessed.
 import PAGE from './dashboard.html';
 import { POLL, pollOpen } from '../../js/poll.js';
-import { EPOCH, utcToday, loadCalendar, parseJSON } from './shared.js';
+import { EPOCH, utcToday, loadCalendar, parseJSON, REFEREE_MODES, refereeMode } from './shared.js';
 import { anonName, decideName } from './ranked.js';
 import { sameKey } from './pc.js';
 
@@ -25,7 +27,7 @@ export async function dashboard(request, env, url) {
   const path = url.pathname.replace(/\/$/, '');
   if (path === '/admin' && request.method === 'GET') return page();
   const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { ...PRIVATE, 'Content-Type': 'application/json' } });
-  if (!['/admin/data', '/admin/anon', '/admin/name'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
+  if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
 
   const access = await checkPassword(request, env);
   if (access === 'unset') return json(503, { error: 'unset' });
@@ -43,6 +45,13 @@ export async function dashboard(request, env, url) {
     if (!Number.isInteger(data.id) || typeof data.name !== 'string' || typeof data.approve !== 'boolean') return json(400, { error: 'Wrong shape' });
     const result = await decideName(env, data.id, data.name, data.approve);
     return json(result.error ? 400 : 200, result);
+  }
+  if (path === '/admin/referee' && request.method === 'POST') {
+    const data = parseJSON(await request.text()) || {};
+    if (!REFEREE_MODES.includes(data.mode)) return json(400, { error: 'Unknown mode' });
+    await env.DB.prepare(`INSERT INTO settings (key, value, at) VALUES ('pc_referee', ?1, ?2)
+      ON CONFLICT (key) DO UPDATE SET value = ?1, at = ?2`).bind(data.mode, Date.now()).run();
+    return json(200, { mode: await refereeMode(env) });
   }
   return json(405, { error: 'method' });
 }
@@ -135,7 +144,7 @@ async function collect(env) {
     joined: rows(joined),
     ai: rows(ai),
     budget: { daily: Number(env.AI_DAILY_UNITS || 0), reserve: Number(env.AI_RANKED_RESERVE || 0) },
-    pc: pc && { ...pc, mode: env.PC_REFEREE || 'off' },
+    pc: pc && { ...pc, mode: await refereeMode(env) },
     failures: rows(failures),
     board: rows(board),
     names: rows(names)[0] || {},

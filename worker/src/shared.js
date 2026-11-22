@@ -305,15 +305,33 @@ function longerRuling(prompt, guess, name, tier, listed) {
 
 // A few of the commonest answers show the model what kind of thing the prompt means. The hidden
 // answer is never shown.
+// Which checks try the PC referee first: 'practice' (Endless, the Archive, a Daily played for fun),
+// 'all', 'cloudflare' (none; the PC is only the backup), or 'off' (the PC is never asked).
+export const REFEREE_MODES = ['practice', 'all', 'cloudflare', 'off'];
+
+// The mode in use: the dashboard's switch once it's been flipped (the settings table), else
+// PC_REFEREE in wrangler.jsonc. Read on every check, so a flip applies to the very next one.
+export async function refereeMode(env) {
+  if (!env.PC) return 'off';
+  let chosen = null;
+  try {
+    chosen = await env.DB.prepare("SELECT value FROM settings WHERE key = 'pc_referee'").first('value');
+  } catch {
+    // No settings table yet (migration 0012 not applied): PC_REFEREE decides.
+  }
+  const mode = chosen || env.PC_REFEREE || 'off';
+  return REFEREE_MODES.includes(mode) ? mode : 'off';
+}
+
 // Who answers a check. Two referees run the same model: Cloudflare's, inside the day's budget, and
 // the PC referee (pc.js), the admin's own computer, which is free but only there while it's on.
-// PC_REFEREE says which checks try the PC first: 'practice' (Endless, the Archive, a Daily played
-// for fun), 'all', or 'off' (never). Whichever goes first, the other is the backup, so a check only
-// goes unanswered when both are out. Resolves to a verdict, or null when nobody could answer.
+// refereeMode says which checks try the PC first. Whichever goes first, the other is the backup
+// (except in 'off'), so a check only goes unanswered when both are out. Resolves to a verdict, or
+// null when nobody could answer.
 async function askReferee(env, prompt, typed, options) {
   const day = utcToday();
   const { messages, evidence } = await refereeMessages(prompt, typed);
-  const mode = env.PC ? env.PC_REFEREE || 'off' : 'off';
+  const mode = await refereeMode(env);
   // Test switches on this PC: model 'pc' asks only the PC, and a Cloudflare model's name asks only it.
   const onlyPC = options.model === 'pc';
   const onlyCloudflare = Boolean(options.model) && !onlyPC;
