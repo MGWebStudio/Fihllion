@@ -8,8 +8,8 @@
 //   node admin.mjs poll            results of the poll in js/poll.js
 //   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, when it ran out, and
 //                                  how many checks the PC referee (pc-referee/) answered
-//   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked; the
-//                                  player sees they're banned and can appeal from the game
+//   node admin.mjs ban <name>      the player can only play Endless: off every board, no Daily, Archive,
+//                                  feedback or poll; they see they're banned and can appeal from the game
 //   node admin.mjs unban <name>    (also answers a waiting appeal: the ban is lifted)
 //   node admin.mjs appeals         who's banned, and what each banned player wrote in an appeal
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -67,7 +67,7 @@ if (command === 'board') {
   sql(command === 'ban'
     ? `UPDATE players SET banned = 1, appeal = NULL, appeal_at = NULL, appeal_state = NULL WHERE name_key = '${key}'`
     : `UPDATE players SET banned = 0, appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE name_key = '${key}'`);
-  console.log(`${found[0].name} ${command === 'ban' ? 'is hidden from the boards and can’t play ranked' : 'is back on the boards'}.`);
+  console.log(`${found[0].name} ${command === 'ban' ? 'is banned: Endless only, off every board, and they can appeal from the game' : 'is back on the boards'}.`);
 } else if (['pause', 'unpause', 'offer-rename', 'force-rename', 'cancel-rename'].includes(command)) {
   if (!names.length) throw new Error('Give at least one nickname.');
   const set = {

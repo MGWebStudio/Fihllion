@@ -25,6 +25,7 @@ export async function feedback(text, env, reply) {
   const recent = await env.DB.prepare('SELECT COUNT(*) AS n FROM feedback WHERE at > ?1').bind(Date.now() - DAY_MS).first();
   if (recent.n >= DAILY_CAP) return reply(429, 'Full for today');
   const player = data.key ? await playerFor(env, data.key) : null;
+  if (player?.banned) return reply(403, 'Banned'); // banned players play Endless only
   const device = ['phone', 'computer'].includes(data.device) ? data.device : null;
   const place = typeof data.place === 'string' ? data.place.trim().slice(0, MAX_PLACE) : '';
   await env.DB.prepare('INSERT INTO feedback (at, text, player, device, place) VALUES (?1, ?2, ?3, ?4, ?5)')

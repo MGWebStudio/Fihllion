@@ -18,8 +18,9 @@ export async function poll(text, env, reply, json) {
   }
   if (!POLL || data.poll !== POLL.id) return reply(404, 'No such poll');
   const player = data.key ? await playerFor(env, data.key) : null;
+  if (player?.banned) return reply(403, 'Banned'); // banned players play Endless only
   const browser = typeof data.browser === 'string' && /^[a-z0-9]{16,40}$/.test(data.browser) ? data.browser : null;
-  const voter = player && !player.banned ? `p:${player.id}` : browser ? `b:${browser}` : null;
+  const voter = player ? `p:${player.id}` : browser ? `b:${browser}` : null;
   const open = pollOpen();
 
   if (data.choice !== undefined) {
