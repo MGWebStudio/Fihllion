@@ -5,7 +5,7 @@
 export const CHANGELOG = [
   {
     date: '2026-11-23',
-    time: '12:00 PM',
+    time: '9:39 AM',
     big: true,
     title: 'The Christmas update is coming Dec 1',
     short: 'Christmas update: Dec 1',
