@@ -15,7 +15,8 @@
 //                          name that changes once the admin approves it
 //   POST /ranked/appeal    {"key", "text"}                       -> {"appeal": {"state": "waiting", "at"}}, a banned
 //                          player asking for the ban to be lifted; the admin answers on the dashboard
-//   A banned player's /ranked/status is {"banned": true, "name", "appeal"}, and everything else is {"error": "banned"}.
+//   A banned player's /ranked/status is {"banned": true, "name", "appeal", "until"} ("until": when a timed ban
+//   ends, or null), and everything else is {"error": "banned"}.
 //   POST /ranked/board    {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
@@ -44,7 +45,7 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     // A banned player can see that they're banned and appeal it, and nothing else. The game keeps
     // their key, so the appeal is theirs and its answer reaches them.
     if (player.banned) {
-      if (action === 'status') return json({ banned: true, name: player.name, appeal: appealFor(player) });
+      if (action === 'status') return json({ banned: true, name: player.name, appeal: appealFor(player), until: player.banned_until || null });
       if (action === 'appeal') return json(await appeal(env, player, data));
       return json({ error: 'banned' });
     }
@@ -133,9 +134,17 @@ async function join(env, data) {
 
 export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
-  return env.DB.prepare(`SELECT id, name, banned, paused, rename_offer, name_kind, name_request, name_request_no, appeal_at, appeal_state
-      FROM players WHERE key_hash = ?1`)
+  const player = await env.DB.prepare(`SELECT id, name, banned, banned_until, paused, rename_offer, name_kind, name_request, name_request_no,
+      appeal_at, appeal_state FROM players WHERE key_hash = ?1`)
     .bind(await sha256(key)).first();
+  // A timed ban that has run out is lifted the first time the player's game asks.
+  if (player?.banned && player.banned_until && player.banned_until <= Date.now()) {
+    await env.DB.prepare('UPDATE players SET banned = 0, banned_until = NULL WHERE id = ?1 AND banned_until = ?2')
+      .bind(player.id, player.banned_until).run();
+    player.banned = 0;
+    player.banned_until = null;
+  }
+  return player;
 }
 
 // The name question, or a name change the admin offered (node admin.mjs offer-rename) or requires
@@ -246,7 +255,7 @@ const appealFor = (player) => (player.appeal_state ? { state: player.appeal_stat
 export async function decideAppeal(env, id, at, lift) {
   const player = await env.DB.prepare('SELECT id, name, banned, appeal_at, appeal_state FROM players WHERE id = ?1').bind(id).first();
   if (!player || player.appeal_state !== 'waiting' || player.appeal_at !== at) return { error: 'That appeal changed. Refresh and look again.' };
-  await env.DB.prepare(`UPDATE players SET appeal_state = ?3${lift ? ', banned = 0' : ''} WHERE id = ?1 AND appeal_at = ?2`)
+  await env.DB.prepare(`UPDATE players SET appeal_state = ?3${lift ? ', banned = 0, banned_until = NULL' : ''} WHERE id = ?1 AND appeal_at = ?2`)
     .bind(id, at, lift ? 'yes' : 'no').run();
   return { name: player.name, lifted: lift };
 }
@@ -427,7 +436,11 @@ function ranked_(rows, key) {
 }
 
 // Banned and paused players stay off the boards, and so does a nickname that has to change.
-const ON_BOARD = 'p.banned = 0 AND p.paused = 0 AND p.rename_offer < 2';
+// A timed ban that has run out counts as over right away: the player is back on the boards before
+// their game next asks the server (which clears it for good).
+const NOW_MS = "CAST(strftime('%s', 'now') AS INTEGER) * 1000";
+export const STILL_BANNED = `banned = 1 AND (banned_until IS NULL OR banned_until > ${NOW_MS})`;
+const ON_BOARD = `(p.banned = 0 OR p.banned_until <= ${NOW_MS}) AND p.paused = 0 AND p.rename_offer < 2`;
 
 async function board(env, data) {
   const loaded = await loadCalendar(env);

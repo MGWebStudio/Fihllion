@@ -16,7 +16,7 @@
 import PAGE from './dashboard.html';
 import { POLL, pollOpen } from '../../js/poll.js';
 import { EPOCH, utcToday, loadCalendar, parseJSON, REFEREE_MODES, refereeMode } from './shared.js';
-import { anonName, decideName, decideAppeal } from './ranked.js';
+import { anonName, decideName, decideAppeal, STILL_BANNED } from './ranked.js';
 import { sameKey } from './pc.js';
 
 const MIN_PASSWORD = 12;
@@ -126,7 +126,7 @@ async function collect(env) {
     db.prepare(`SELECT id, name, name_kind, name_before, name_request, name_request_at, paused FROM players
       WHERE name_request IS NOT NULL AND name_request_no = 0 AND NOT banned ORDER BY name_request_at LIMIT 40`),
     // Everyone banned, with their appeal if they sent one; waiting appeals first, oldest first.
-    db.prepare(`SELECT id, name, appeal, appeal_at, appeal_state FROM players WHERE banned = 1
+    db.prepare(`SELECT id, name, appeal, appeal_at, appeal_state, banned_until FROM players WHERE ${STILL_BANNED}
       ORDER BY appeal_state = 'waiting' DESC, appeal_at, name LIMIT 60`),
     db.prepare(`SELECT f.at, f.text, f.device, f.place, p.name FROM feedback f LEFT JOIN players p ON p.id = f.player
       WHERE f.at > ?1 ORDER BY f.at DESC LIMIT 40`).bind(weekAgo),

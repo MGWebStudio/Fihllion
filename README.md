@@ -155,6 +155,7 @@ node admin.mjs feedback 30    # the last 30 days
 node admin.mjs poll           # results of the poll in js/poll.js
 node admin.mjs referee        # the AI referee's budget and failures over the last 7 days
 node admin.mjs ban Somename   # Endless only: off every board, no Daily, Archive, feedback or poll; they can appeal from the game
+node admin.mjs ban Somename 24h   # the same, ending by itself after 24 hours (or 3d for three days)
 node admin.mjs unban Somename # also lifts the ban if they appealed
 node admin.mjs appeals        # who's banned, and what each one wrote in an appeal
 node admin.mjs names          # who put in their real name (with what they had before), who went anonymous, who hasn't answered
@@ -169,6 +170,8 @@ Real names: from `NAMES_FROM` in `wrangler.jsonc` (Nov 20, 2026), the board uses
 Name requests: a player who already has a name can ask for a different one from the leaderboard (Request a new name). It goes through the same name rules as signing up and can't be a name someone else has or is waiting on. It changes only once the admin approves it, on the dashboard or with `node admin.mjs approve-name`; until then they keep playing under the name they have. One request per player at a time: a new one replaces it, and they can cancel it. A turned-down request is said once in the game, and they can ask again. The request is kept in `name_request`, `name_request_at` and `name_request_no` (1 once it's turned down).
 
 Bans and appeals: a banned player can only play Endless. The Daily (ranked or not), the Archive, the leaderboard, the feedback box, the poll and signing up a name are all shut, and they're off every board. The device remembers the ban, so it holds from the moment the game opens; the server also turns away a banned player's ranked runs, referee checks, signed feedback and poll votes. Clearing the browser's data gets around it, since there are no accounts. The game tells them they're banned when it opens (once a day) and on the line under the big button, each time with an Appeal button; the menu has one too. An appeal (up to 600 characters, one waiting at a time) goes to the dashboard's Ban appeals card, with Lift the ban and Keep the ban. A lifted ban puts them back on the boards with their scores and tells them once; a turned-down appeal is said the next time they open the game, and they can send another. A new ban starts with no appeal. The appeal is kept in `appeal`, `appeal_at` and `appeal_state` ('waiting', 'no' or 'yes').
+
+Timed bans: given a length, a ban ends by itself. The player sees when, and the dashboard lists it. It's kept in `banned_until`. Once it has passed, the player is back on the boards at once, and the ban is cleared for good the next time their game talks to the server; the game then tells them it's over.
 
 A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 

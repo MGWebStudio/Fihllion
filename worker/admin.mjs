@@ -8,8 +8,9 @@
 //   node admin.mjs poll            results of the poll in js/poll.js
 //   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, when it ran out, and
 //                                  how many checks the PC referee (pc-referee/) answered
-//   node admin.mjs ban <name>      the player can only play Endless: off every board, no Daily, Archive,
-//                                  feedback or poll; they see they're banned and can appeal from the game
+//   node admin.mjs ban <name> [24h|3d]   the player can only play Endless: off every board, no Daily, Archive,
+//                                  feedback or poll; they see they're banned and can appeal from the game.
+//                                  With a length (hours or days), the ban ends by itself and they see when.
 //   node admin.mjs unban <name>    (also answers a waiting appeal: the ban is lifted)
 //   node admin.mjs appeals         who's banned, and what each banned player wrote in an appeal
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
@@ -32,7 +33,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { TIERS, makeCalendar, parsePrompts } from '../js/content.js';
 import { POLL, pollOpen } from '../js/poll.js';
-import { anonName } from './src/ranked.js';
+import { anonName, STILL_BANNED } from './src/ranked.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -63,11 +64,16 @@ if (command === 'board') {
   const key = nameKey(value);
   const found = sql(`SELECT name FROM players WHERE name_key = '${key}'`);
   if (!found.length) throw new Error(`No player called ${value}.`);
+  // How long: "24h" or "3d" ends the ban by itself; nothing means until it's lifted.
+  const length = command === 'ban' && extra ? /^(\d+)([hd])$/.exec(extra) : null;
+  if (command === 'ban' && extra && !length) throw new Error('Give the length as hours or days, like 24h or 3d.');
+  const until = length ? Date.now() + Number(length[1]) * (length[2] === 'd' ? 86400000 : 3600000) : null;
   // A new ban starts with no appeal; lifting one answers an appeal that's waiting.
   sql(command === 'ban'
-    ? `UPDATE players SET banned = 1, appeal = NULL, appeal_at = NULL, appeal_state = NULL WHERE name_key = '${key}'`
-    : `UPDATE players SET banned = 0, appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE name_key = '${key}'`);
-  console.log(`${found[0].name} ${command === 'ban' ? 'is banned: Endless only, off every board, and they can appeal from the game' : 'is back on the boards'}.`);
+    ? `UPDATE players SET banned = 1, banned_until = ${until ?? 'NULL'}, appeal = NULL, appeal_at = NULL, appeal_state = NULL WHERE name_key = '${key}'`
+    : `UPDATE players SET banned = 0, banned_until = NULL, appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE name_key = '${key}'`);
+  const ends = until ? `, until ${new Date(until).toLocaleString('en-US', { timeZone: 'America/Denver', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })} MT` : '';
+  console.log(`${found[0].name} ${command === 'ban' ? `is banned${ends}: Endless only, off every board, and they can appeal from the game` : 'is back on the boards'}.`);
 } else if (['pause', 'unpause', 'offer-rename', 'force-rename', 'cancel-rename'].includes(command)) {
   if (!names.length) throw new Error('Give at least one nickname.');
   const set = {
@@ -112,13 +118,14 @@ if (command === 'board') {
   if (waiting.length) console.log(`\nHaven't answered yet, with their last ranked day: ${waiting.map((row) => `${row.name} (${row.last_day ?? 'none'})`).join(', ')}`);
 } else if (command === 'appeals') {
   const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
-  const rows = sql(`SELECT name, appeal, appeal_at, appeal_state FROM players WHERE banned = 1 ORDER BY appeal_state = 'waiting' DESC, appeal_at, name`);
+  const rows = sql(`SELECT name, appeal, appeal_at, appeal_state, banned_until FROM players WHERE ${STILL_BANNED} ORDER BY appeal_state = 'waiting' DESC, appeal_at, name`);
   if (!rows.length) console.log('Nobody is banned.');
   else {
     console.log('Lift a ban with node admin.mjs unban <name>, or answer on the dashboard.');
     for (const row of rows) {
       const state = { waiting: `appealed ${mt(row.appeal_at)}`, no: 'appeal turned down' }[row.appeal_state] || 'no appeal';
-      console.log(`\n${row.name} · ${state}${row.appeal_state === 'waiting' ? `\n  ${row.appeal.replace(/\n/g, '\n  ')}` : ''}`);
+      const ends = row.banned_until ? ` · until ${mt(row.banned_until)}` : '';
+      console.log(`\n${row.name}${ends} · ${state}${row.appeal_state === 'waiting' ? `\n  ${row.appeal.replace(/\n/g, '\n  ')}` : ''}`);
     }
   }
 } else if (command === 'requests') {

@@ -1515,10 +1515,11 @@ async function checkRanked() {
     const status = await ranked.status();
     if (!status || status.error) return null;
     if (status.banned) {
-      G.rankedStatus = { banned: true, appeal: status.appeal || null };
-      store.set('ranked.banned', true);
+      G.rankedStatus = { banned: true, appeal: status.appeal || null, until: status.until || null };
+      store.set('ranked.banned', status.until || true);
       return G.rankedStatus;
     }
+    const wasBanned = Boolean(store.get('ranked.banned'));
     store.remove('ranked.banned');
     const before = ranked.player()?.name;
     ranked.syncName(status.name);
@@ -1530,10 +1531,12 @@ async function checkRanked() {
       store.set('ranked.requestSaid', request.name);
       notice(`Your request for ${request.name} wasn’t approved. You can ask for a different name from the leaderboard.`);
     }
-    // A lifted ban is said once.
+    // A lifted ban is said once: by an appeal, or a timed one that ran out.
     if (status.appeal?.state === 'yes' && store.get('ranked.appealSaid') !== status.appeal.at) {
       store.set('ranked.appealSaid', status.appeal.at);
       notice('Your appeal went through. You’re back on the leaderboard.');
+    } else if (wasBanned) {
+      notice('Your ban is over. Everything’s open again.');
     }
     return G.rankedStatus;
   } catch (error) {
@@ -1735,7 +1738,9 @@ function openDailyChoice(problem = '') {
 const BANNED_LINE = '<span class="ranked-off">Banned · Endless only</span> · Appeal';
 const APPEAL_MAX = 600;
 const sentOn = (ms) => new Date(ms).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-const isBanned = () => Boolean(ranked.available && ranked.player() && G.rankedStatus?.banned);
+const banOver = (until) => Boolean(until && Date.now() >= until);
+const isBanned = () => Boolean(ranked.available && ranked.player() && G.rankedStatus?.banned && !banOver(G.rankedStatus.until));
+const banEnds = (ms) => new Date(ms).toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
 
 // For anything a banned player can't open: shows the ban instead. Says whether it did.
 function blockedByBan() {
@@ -1748,8 +1753,11 @@ function openBan() {
   const me = ranked.player();
   const appeal = G.rankedStatus?.appeal;
   const waiting = appeal?.state === 'waiting';
+  const until = G.rankedStatus?.until;
   openSheet('You’re banned', `<div class="fb-form">
-      <p class="nick-lead">“${esc(me?.name || '')}” is banned. You can still play Endless, but the Daily, the Archive, the leaderboard and the feedback box are off for you.</p>
+      <p class="nick-lead">${until
+    ? `“${esc(me?.name || '')}” is banned until ${esc(banEnds(until))}. Until then you can play Endless, but the Daily, the Archive, the leaderboard and the feedback box are off for you.`
+    : `“${esc(me?.name || '')}” is banned. You can still play Endless, but the Daily, the Archive, the leaderboard and the feedback box are off for you.`}</p>
       ${waiting ? `<p class="choice-off" role="status">Your appeal was sent ${esc(sentOn(appeal.at))}. The answer will show up here.</p>`
         : `${appeal?.state === 'no' ? '<p class="choice-off" role="status">Your appeal was turned down. You can send another.</p>' : ''}
           <p class="nick-lead">Think it’s a mistake? Send an appeal and it’ll be looked at.</p>
@@ -2416,8 +2424,10 @@ async function boot() {
   }
   G.today = content.calendar.dayNumber(currentDate());
   sendVisit(G.today, ON_PHONE);
-  // A ban this device already knows about holds from the first frame.
-  if (ranked.player() && store.get('ranked.banned')) G.rankedStatus = { banned: true, appeal: null };
+  // A ban this device already knows about holds from the first frame, unless it was a timed one that's over.
+  const knownBan = store.get('ranked.banned');
+  const knownUntil = typeof knownBan === 'number' ? knownBan : null;
+  if (ranked.player() && knownBan && !banOver(knownUntil)) G.rankedStatus = { banned: true, appeal: null, until: knownUntil };
   wire();
   let shift = 0;
   setInterval(() => {

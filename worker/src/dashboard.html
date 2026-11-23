@@ -419,13 +419,16 @@
     const waiting = d.banned.filter((row) => row.appeal_state === 'waiting');
     const others = d.banned.filter((row) => row.appeal_state !== 'waiting');
     const appeals = `${waiting.length ? `<ul class="rows">${waiting.map((row) => `<li class="req">
-        <span class="who"><span class="asked">${esc(row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}</small></span>
+        <span class="who"><span class="asked">${esc(row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}${row.banned_until ? ` · ban ends ${esc(dateTime(row.banned_until))}` : ''}</small></span>
         <span class="appeal-text">${esc(row.appeal)}</span>
         <span class="pair">
           <button type="button" class="small-btn yes" data-appeal="lift" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Lift the ban</button>
           <button type="button" class="small-btn" data-appeal="keep" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Keep the ban</button>
         </span></li>`).join('')}</ul>` : '<p class="empty">No appeals waiting.</p>'}
-      ${others.length ? `<p class="note">Banned: ${others.map((row) => `${esc(row.name)}${row.appeal_state === 'no' ? ' (appeal turned down)' : ''}`).join(', ')}</p>` : ''}`;
+      ${others.length ? `<p class="note">Banned: ${others.map((row) => `${esc(row.name)}${[
+        row.banned_until ? `until ${dateTime(row.banned_until)}` : '',
+        row.appeal_state === 'no' ? 'appeal turned down' : '',
+      ].filter(Boolean).map((note) => ` (${esc(note)})`).join('')}`).join(', ')}</p>` : ''}`;
 
     const feedback = d.feedback.length ? `<ul class="rows feedback">${d.feedback.map((row) => `<li>
         <div class="meta">${esc([dateTime(row.at), row.name || 'no name', row.device, row.place].filter(Boolean).join(' · '))}</div>
