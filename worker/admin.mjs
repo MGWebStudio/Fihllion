@@ -8,8 +8,10 @@
 //   node admin.mjs poll            results of the poll in js/poll.js
 //   node admin.mjs referee [days]  the AI referee's calls, units and failures per day, when it ran out, and
 //                                  how many checks the PC referee (pc-referee/) answered
-//   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked
-//   node admin.mjs unban <name>
+//   node admin.mjs ban <name>      hide a nickname from every board and stop it playing ranked; the
+//                                  player sees they're banned and can appeal from the game
+//   node admin.mjs unban <name>    (also answers a waiting appeal: the ban is lifted)
+//   node admin.mjs appeals         who's banned, and what each banned player wrote in an appeal
 //   node admin.mjs pause <name>    keep a nickname off the boards and out of ranked for now; it keeps its scores
 //   node admin.mjs unpause <name>
 //   node admin.mjs offer-rename <name> [name...]   next time they open the game, offer a one-time nickname change
@@ -61,7 +63,10 @@ if (command === 'board') {
   const key = nameKey(value);
   const found = sql(`SELECT name FROM players WHERE name_key = '${key}'`);
   if (!found.length) throw new Error(`No player called ${value}.`);
-  sql(`UPDATE players SET banned = ${command === 'ban' ? 1 : 0} WHERE name_key = '${key}'`);
+  // A new ban starts with no appeal; lifting one answers an appeal that's waiting.
+  sql(command === 'ban'
+    ? `UPDATE players SET banned = 1, appeal = NULL, appeal_at = NULL, appeal_state = NULL WHERE name_key = '${key}'`
+    : `UPDATE players SET banned = 0, appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE name_key = '${key}'`);
   console.log(`${found[0].name} ${command === 'ban' ? 'is hidden from the boards and can’t play ranked' : 'is back on the boards'}.`);
 } else if (['pause', 'unpause', 'offer-rename', 'force-rename', 'cancel-rename'].includes(command)) {
   if (!names.length) throw new Error('Give at least one nickname.');
@@ -105,6 +110,17 @@ if (command === 'board') {
   })));
   if (anon.length) console.log(`\nAnonymous: ${anon.map((row) => (row.name_before ? `${row.name} (was ${row.name_before})` : row.name)).join(', ')}`);
   if (waiting.length) console.log(`\nHaven't answered yet, with their last ranked day: ${waiting.map((row) => `${row.name} (${row.last_day ?? 'none'})`).join(', ')}`);
+} else if (command === 'appeals') {
+  const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+  const rows = sql(`SELECT name, appeal, appeal_at, appeal_state FROM players WHERE banned = 1 ORDER BY appeal_state = 'waiting' DESC, appeal_at, name`);
+  if (!rows.length) console.log('Nobody is banned.');
+  else {
+    console.log('Lift a ban with node admin.mjs unban <name>, or answer on the dashboard.');
+    for (const row of rows) {
+      const state = { waiting: `appealed ${mt(row.appeal_at)}`, no: 'appeal turned down' }[row.appeal_state] || 'no appeal';
+      console.log(`\n${row.name} · ${state}${row.appeal_state === 'waiting' ? `\n  ${row.appeal.replace(/\n/g, '\n  ')}` : ''}`);
+    }
+  }
 } else if (command === 'requests') {
   const mt = (ms) => (ms ? new Date(ms).toLocaleString('en-US', { timeZone: 'America/Denver', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
   const rows = sql(`SELECT name, name_before, name_request, name_request_at, paused FROM players

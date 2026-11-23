@@ -154,8 +154,9 @@ node admin.mjs feedback       # what players sent from the feedback box in the l
 node admin.mjs feedback 30    # the last 30 days
 node admin.mjs poll           # results of the poll in js/poll.js
 node admin.mjs referee        # the AI referee's budget and failures over the last 7 days
-node admin.mjs ban Somename   # hide from every board and stop playing ranked
-node admin.mjs unban Somename
+node admin.mjs ban Somename   # hide from every board and stop playing ranked; they can appeal from the game
+node admin.mjs unban Somename # also lifts the ban if they appealed
+node admin.mjs appeals        # who's banned, and what each one wrote in an appeal
 node admin.mjs names          # who put in their real name (with what they had before), who went anonymous, who hasn't answered
 node admin.mjs anon Somename  # change a name that isn't a real name to an anonymous one ("anonymous" and a few numbers)
 node admin.mjs requests       # names players asked for from the leaderboard, waiting for an answer
@@ -167,13 +168,15 @@ Real names: from `NAMES_FROM` in `wrangler.jsonc` (Nov 20, 2026), the board uses
 
 Name requests: a player who already has a name can ask for a different one from the leaderboard (Request a new name). It goes through the same name rules as signing up and can't be a name someone else has or is waiting on. It changes only once the admin approves it, on the dashboard or with `node admin.mjs approve-name`; until then they keep playing under the name they have. One request per player at a time: a new one replaces it, and they can cancel it. A turned-down request is said once in the game, and they can ask again. The request is kept in `name_request`, `name_request_at` and `name_request_no` (1 once it's turned down).
 
+Bans and appeals: a banned player keeps playing just for fun, but is off every board and can't play ranked. The game tells them so when it opens (once a day), on the line under the big button, and in the Daily's choice, each time with an Appeal button. An appeal (up to 600 characters, one waiting at a time) goes to the dashboard's Ban appeals card, with Lift the ban and Keep the ban. A lifted ban puts them back on the boards with their scores and tells them once; a turned-down appeal is said the next time they open the game, and they can send another. A new ban starts with no appeal. The appeal is kept in `appeal`, `appeal_at` and `appeal_state` ('waiting', 'no' or 'yes').
+
 A poll goes in `js/poll.js` (question, options and closing time), which both the game and the Worker read. It pops up once on the title screen and sits in the menu until it closes. Each nickname gets one vote, players without one get one per browser, and votes can be changed while it's open. Set `POLL` to `null` once it's over.
 
 Add `--local` to use the test database. The live tables need `npm run migrate:live` once before the Worker that uses them is deployed.
 
 ## Dashboard
 
-`https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; the newest real names, name requests waiting, each with Approve and Turn down (the same as `node admin.mjs approve-name` and `deny-name`); each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
+`https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; the newest real names, name requests waiting, each with Approve and Turn down (the same as `node admin.mjs approve-name` and `deny-name`); ban appeals waiting, each with Lift the ban and Keep the ban, and who else is banned; each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
 
 It asks for a password: the secret `ADMIN_KEY`, which only the admin sets, from `worker/`. Wrangler asks for it, so it isn't typed into a command or saved in a file. It needs at least 12 characters.
 

@@ -4,6 +4,20 @@
 // on the title screen turns gold until it's been seen.
 export const CHANGELOG = [
   {
+    date: '2026-11-23',
+    time: '12:00 PM',
+    big: true,
+    title: 'The Christmas update is coming Dec 1',
+    short: 'Christmas update: Dec 1',
+    lead: 'The biggest update yet. Here’s a peek.',
+    items: [
+      'A shop for your goldfish: new fish, hats, boats and bowls to make it yours.',
+      'Pay with Flakes, which you earn by playing. Nothing costs real money.',
+      'The whole game dresses up for Christmas.',
+      'Tap anyone on the leaderboard to see their goldfish and how they’ve been doing.',
+    ],
+  },
+  {
     date: '2026-11-20',
     time: '9:30 PM',
     title: '81 new prompts in Endless',

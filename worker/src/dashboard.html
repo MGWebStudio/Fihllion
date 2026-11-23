@@ -171,6 +171,7 @@
   .pair { display: flex; gap: 6px; width: 100%; }
   .pair .small-btn { flex: 1; min-height: 40px; }
   .asked { font: 26px/1.05 var(--display); color: var(--cream); }
+  .appeal-text { flex-basis: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
   .summary { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 12px; font-size: 18px; color: var(--muted); }
   .summary b { font: 26px/1 var(--display); color: var(--cream); font-weight: normal; margin-right: 4px; }
   .more { margin-top: 10px; }
@@ -413,6 +414,19 @@
         </span></li>`).join('')}</ul>`
       : '<p class="empty">No name requests waiting.</p>';
 
+    // Ban appeals: what each banned player wrote, with Lift the ban and Keep the ban. Only the appeal
+    // shown here is decided. Everyone else who's banned is listed under them.
+    const waiting = d.banned.filter((row) => row.appeal_state === 'waiting');
+    const others = d.banned.filter((row) => row.appeal_state !== 'waiting');
+    const appeals = `${waiting.length ? `<ul class="rows">${waiting.map((row) => `<li class="req">
+        <span class="who"><span class="asked">${esc(row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}</small></span>
+        <span class="appeal-text">${esc(row.appeal)}</span>
+        <span class="pair">
+          <button type="button" class="small-btn yes" data-appeal="lift" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Lift the ban</button>
+          <button type="button" class="small-btn" data-appeal="keep" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Keep the ban</button>
+        </span></li>`).join('')}</ul>` : '<p class="empty">No appeals waiting.</p>'}
+      ${others.length ? `<p class="note">Banned: ${others.map((row) => `${esc(row.name)}${row.appeal_state === 'no' ? ' (appeal turned down)' : ''}`).join(', ')}</p>` : ''}`;
+
     const feedback = d.feedback.length ? `<ul class="rows feedback">${d.feedback.map((row) => `<li>
         <div class="meta">${esc([dateTime(row.at), row.name || 'no name', row.device, row.place].filter(Boolean).join(' · '))}</div>
         <div class="text">${esc(row.text)}</div></li>`).join('')}</ul>`
@@ -475,6 +489,7 @@
 
       <section><h2>Today’s board<small>top ${d.board.length || 20}</small></h2><div class="card">${board}</div></section>
       <section><h2>Name requests${d.requests.length ? `<small>${d.requests.length} waiting</small>` : ''}</h2><div class="card">${requests}</div></section>
+      <section><h2>Ban appeals${waiting.length ? `<small>${waiting.length} waiting</small>` : ''}</h2><div class="card">${appeals}</div></section>
       <section><h2>Names</h2><div class="card">${names}</div></section>
       <section><h2>Feedback<small>last 7 days</small></h2><div class="card">${feedback}</div></section>
       ${poll}`;
@@ -495,6 +510,18 @@
     const { status, body } = await call('/admin/name', { method: 'POST', body: JSON.stringify({ id: Number(id), name, approve }) });
     flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
       : approve ? `${body.was} is ${body.name} now. They’ll see it next time they open the game.` : `Turned down ${name}. ${now} can ask again.`);
+    load();
+  }
+
+  async function answerAppeal(button) {
+    const { id, at, name, appeal } = button.dataset;
+    const lift = appeal === 'lift';
+    if (!confirm(lift ? `Lift ${name}’s ban? They go back on the boards with their scores.`
+      : `Keep ${name}’s ban? They’ll see their appeal was turned down, and can send another.`)) return;
+    button.closest('.pair').querySelectorAll('button').forEach((each) => { each.disabled = true; });
+    const { status, body } = await call('/admin/appeal', { method: 'POST', body: JSON.stringify({ id: Number(id), at: Number(at), lift }) });
+    flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
+      : lift ? `${body.name}’s ban is lifted. They’ll see it next time they open the game.` : `${body.name} stays banned. They’ll see the appeal was turned down.`);
     load();
   }
 
@@ -544,6 +571,8 @@
     if (decision) decide(decision);
     const mode = event.target.closest('[data-mode]');
     if (mode) setMode(mode);
+    const appeal = event.target.closest('[data-appeal]');
+    if (appeal) answerAppeal(appeal);
   });
   // Fresh numbers every minute while the page is open, and when coming back to it.
   setInterval(() => { if (data && document.visibilityState === 'visible') load(); }, 60000);

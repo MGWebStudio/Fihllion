@@ -42,6 +42,10 @@ export const keepName = () => call('rename', withKey({ keep: true }));
 export const requestName = (name) => call('request', withKey({ name }));
 export const cancelRequest = () => call('request', withKey({ cancel: true }));
 
+// A banned player asks for the ban to be lifted. Resolves to { appeal: { state: 'waiting', at } } or
+// { error: 'empty' | 'waiting' | 'not-banned' }.
+export const appeal = (text) => call('appeal', withKey({ text }));
+
 // The server's name wins, so a nickname the admin changed shows up on this device too.
 export function syncName(name) {
   const me = player();

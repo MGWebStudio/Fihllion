@@ -249,12 +249,13 @@ function refreshTitle() {
   // On a phone the big button is Endless, and the line under it says where the Daily went.
   el.dailyTag.classList.toggle('is-endless', ON_PHONE);
   el.btnEndless.hidden = ON_PHONE;
+  const banned = Boolean(ranked.available && !PRETEND_DAY && ranked.player() && G.rankedStatus?.banned);
   if (ON_PHONE) {
     const current = store.get('endless.current');
     el.dailyTag.textContent = 'Endless · practice';
     el.dailyTag.classList.remove('is-ranked');
     el.btnBegin.innerHTML = `${current && !current.done && !isFresh(current) ? 'Keep diving' : 'Play Endless'} ${arrow}`;
-    el.rankedLine.innerHTML = '<span class="ranked-off">The Daily is on computers only</span> · Leaderboard';
+    el.rankedLine.innerHTML = banned ? BANNED_LINE : '<span class="ranked-off">The Daily is on computers only</span> · Leaderboard';
     el.diveLabel.textContent = 'The Daily is on computers only';
     el.diveLabel.hidden = !el.rankedLine.hidden;
     prefetch();
@@ -283,7 +284,8 @@ function refreshTitle() {
   }
   // Before the dive starts, the tag above the button already says which dive it is.
   el.diveLabel.hidden = !started;
-  if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
+  if (banned) el.rankedLine.innerHTML = BANNED_LINE;
+  else if (started && isRanked) el.rankedLine.innerHTML = `<span aria-hidden="true">★</span> Ranked as <b>${esc(me?.name || '')}</b> · Leaderboard`;
   else if (started) el.rankedLine.innerHTML = '<span class="ranked-off">Just for fun today</span> · Leaderboard';
   else if (me) el.rankedLine.innerHTML = `Playing as <b>${esc(me.name)}</b> · Leaderboard`;
   else el.rankedLine.innerHTML = '<span aria-hidden="true">★</span> Leaderboard · Add your name';
@@ -415,7 +417,7 @@ function rankedTrouble(error, reply) {
   const midnight = error === 'day' && G.dive && reply?.today > G.dive.day;
   const messages = {
     unknown: 'The server doesn’t know your name anymore. Put it in again to play ranked.',
-    banned: 'This name was removed, so today’s dive can’t be ranked.',
+    banned: 'This name is banned from ranked, so today’s dive can’t be ranked.',
     day: midnight ? 'Midnight passed, so that ranked dive is over. Today’s is ready.'
       : 'Your device’s date doesn’t match today’s Daily, so ranked can’t start. Check the date and time.',
     unreachable: BLOCKED_NETWORK,
@@ -441,7 +443,20 @@ function rankedTrouble(error, reply) {
       return;
     }
   }
-  if (error === 'unknown' || error === 'banned') {
+  // Banned: the device keeps its name, so the player can appeal. Nothing answered yet, so the
+  // choice reopens and says so.
+  if (error === 'banned') {
+    G.rankedStatus = { ...(G.rankedStatus || {}), banned: true };
+    if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
+      delete dive.choice;
+      dive.ranked = false;
+      saveDive(dive);
+      goHome();
+      openDailyChoice();
+      return;
+    }
+  }
+  if (error === 'unknown') {
     ranked.forget();
     // Nothing answered yet, so the choice reopens and they put in a name (or play for fun).
     if (dive && dive.mode === 'daily' && dive.day === G.today && isFresh(dive)) {
@@ -449,8 +464,7 @@ function rankedTrouble(error, reply) {
       dive.ranked = false;
       saveDive(dive);
       goHome();
-      openDailyChoice(error === 'banned' ? 'That name was removed. Put in a new one to play ranked.'
-        : 'The server doesn’t know your name anymore. Put it in again to play ranked.');
+      openDailyChoice('The server doesn’t know your name anymore. Put it in again to play ranked.');
       return;
     }
   }
@@ -1487,14 +1501,18 @@ function wireNickForm(done, save = ranked.join) {
 
 const PAUSED = 'Ranked is paused for this name for now. You can still play today’s Daily just for fun.';
 
-// What the server says about this device's name: paused, asked to pick a new one, or not yet
-// through the name question (real name or anonymous). Checked when the game opens and before each
-// Daily. Also brings over a new name the admin gave it, like an anonymous one.
+// What the server says about this device's name: banned, paused, asked to pick a new one, or not
+// yet through the name question (real name or anonymous). Checked when the game opens and before
+// each Daily. Also brings over a new name the admin gave it, like an anonymous one.
 async function checkRanked() {
   if (!ranked.available || PRETEND_DAY || !ranked.player()) return null;
   try {
     const status = await ranked.status();
     if (!status || status.error) return null;
+    if (status.banned) {
+      G.rankedStatus = { banned: true, appeal: status.appeal || null };
+      return G.rankedStatus;
+    }
     const before = ranked.player()?.name;
     ranked.syncName(status.name);
     if (before && status.name && before !== status.name) notice(`Your name on the leaderboard is ${status.name} now.`);
@@ -1504,6 +1522,11 @@ async function checkRanked() {
     if (request?.state === 'no' && store.get('ranked.requestSaid') !== request.name) {
       store.set('ranked.requestSaid', request.name);
       notice(`Your request for ${request.name} wasn’t approved. You can ask for a different name from the leaderboard.`);
+    }
+    // A lifted ban is said once.
+    if (status.appeal?.state === 'yes' && store.get('ranked.appealSaid') !== status.appeal.at) {
+      store.set('ranked.appealSaid', status.appeal.at);
+      notice('Your appeal went through. You’re back on the leaderboard.');
     }
     return G.rankedStatus;
   } catch (error) {
@@ -1631,10 +1654,13 @@ const RANKED_RULES = '<p class="choice-rules">One try · No photos · Leaving th
 // Before each Daily: ranked, on the leaderboard, or just for fun with photos.
 function openDailyChoice(problem = '') {
   const me = ranked.player();
-  const paused = Boolean(me && G.rankedStatus?.paused);
+  const banned = Boolean(me && G.rankedStatus?.banned);
+  const paused = Boolean(me && !banned && G.rankedStatus?.paused);
   const forced = G.rankedStatus?.rename === 'forced';
-  const mustRename = Boolean(me && !paused && (forced || G.rankedStatus?.nameCheck));
-  const rankedPart = paused ? `<p class="choice-off" role="status">${PAUSED}</p>`
+  const mustRename = Boolean(me && !banned && !paused && (forced || G.rankedStatus?.nameCheck));
+  const rankedPart = banned ? `<p class="choice-off" role="status">“${esc(me.name)}” is banned from ranked. You can still play today’s Daily just for fun.</p>
+      <button id="choiceAppeal" class="btn btn-quiet choice-btn" type="button">${G.rankedStatus.appeal?.state === 'waiting' ? 'See your appeal' : 'Appeal the ban'}</button>`
+    : paused ? `<p class="choice-off" role="status">${PAUSED}</p>`
     : mustRename ? `<p class="choice-off">${forced ? `“${esc(me.name)}” can’t stay on the leaderboard.`
       : 'The leaderboard uses real names now. Put in yours, or go anonymous, to play ranked.'}</p>
       <button id="choiceRename" class="btn btn-primary choice-btn" type="button">${forced ? 'Pick a new name' : 'Choose my name'}</button>`
@@ -1642,7 +1668,7 @@ function openDailyChoice(problem = '') {
     : nickFormHTML('Play ranked', 'Your name for the board') + anonButtonHTML('Play ranked anonymously');
   openSheet('Today’s Daily', `
     <p class="choice-lead">Dive #${G.today}. How do you want to play it?</p>
-    <section class="choice choice-ranked${paused ? ' is-off' : ''}" aria-labelledby="choiceRankedTitle">
+    <section class="choice choice-ranked${paused || banned ? ' is-off' : ''}" aria-labelledby="choiceRankedTitle">
       <h3 id="choiceRankedTitle" class="choice-title"><span aria-hidden="true">★</span> Ranked</h3>
       <p class="choice-what">Your score goes on today’s leaderboard.</p>
       ${RANKED_RULES}
@@ -1667,6 +1693,7 @@ function openDailyChoice(problem = '') {
   $('choiceRanked')?.addEventListener('click', () => choose('ranked'));
   $('choiceNormal').addEventListener('click', () => choose('normal'));
   $('choiceRename')?.addEventListener('click', () => { audio.click(); openRename({ then: () => openDailyChoice() }); });
+  $('choiceAppeal')?.addEventListener('click', () => { audio.click(); openBan(); });
   wireNickForm(() => choose('ranked'));
   if (problem && $('nickError')) $('nickError').textContent = problem;
   const section = el.sheet.querySelector('.choice-ranked');
@@ -1674,9 +1701,10 @@ function openDailyChoice(problem = '') {
   if (me) {
     checkRanked().then((status) => {
       if (!status || !section.isConnected) return;
-      const nowPaused = status.paused;
-      const nowRename = !nowPaused && (status.rename === 'forced' || status.nameCheck);
-      if (nowPaused !== paused || nowRename !== mustRename) openDailyChoice(problem);
+      const nowBanned = Boolean(status.banned);
+      const nowPaused = !nowBanned && Boolean(status.paused);
+      const nowRename = !nowBanned && !nowPaused && Boolean(status.rename === 'forced' || status.nameCheck);
+      if (nowBanned !== banned || nowPaused !== paused || nowRename !== mustRename) openDailyChoice(problem);
     });
   }
   findServer().then((base) => {
@@ -1689,6 +1717,99 @@ function openDailyChoice(problem = '') {
     section.querySelector('#nickForm, #choiceRanked')?.replaceWith(note);
     section.querySelector('#nickAnon')?.remove();
   });
+}
+
+// Banned ---------------------------------------------------------------------------------
+// A banned name is off the boards and can't play ranked, but keeps playing just for fun. The game
+// says so when it opens (once a day, and again when an appeal is turned down), from the line under
+// the big button, and from the Daily's choice, each time with a way to appeal. The admin answers
+// on the dashboard, and the answer shows up here.
+const BANNED_LINE = '<span class="ranked-off">Banned from ranked</span> · Appeal';
+const APPEAL_MAX = 600;
+const sentOn = (ms) => new Date(ms).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+function openBan() {
+  const me = ranked.player();
+  const appeal = G.rankedStatus?.appeal;
+  const waiting = appeal?.state === 'waiting';
+  openSheet('Banned from ranked', `<div class="fb-form">
+      <p class="nick-lead">“${esc(me?.name || '')}” is banned from ranked. It’s off the leaderboard and can’t play ranked Dailies. You can still play just for fun.</p>
+      ${waiting ? `<p class="choice-off" role="status">Your appeal was sent ${esc(sentOn(appeal.at))}. The answer will show up here.</p>`
+        : `${appeal?.state === 'no' ? '<p class="choice-off" role="status">Your appeal was turned down. You can send another.</p>' : ''}
+          <p class="nick-lead">Think it’s a mistake? Send an appeal and it’ll be looked at.</p>
+          <button id="banAppeal" class="btn btn-primary fb-send" type="button">Appeal</button>`}
+      <button id="banDone" class="btn btn-quiet fb-send" type="button">${waiting ? 'OK' : 'Not now'}</button>
+    </div>`);
+  $('banAppeal')?.addEventListener('click', () => { audio.click(); openAppeal(); });
+  $('banDone').addEventListener('click', () => { audio.click(); closeSheet(); });
+}
+
+function openAppeal() {
+  openSheet('Appeal the ban', `<form id="appealForm" class="fb-form" novalidate>
+      <p class="nick-lead">Why should the ban be lifted? Only the admin sees this.</p>
+      <textarea id="appealText" maxlength="${APPEAL_MAX}" rows="5" aria-label="Your appeal" placeholder="Your appeal"></textarea>
+      <p id="appealCount" class="fb-count" aria-hidden="true">0 / ${APPEAL_MAX}</p>
+      <button class="btn btn-primary fb-send" type="submit">Send appeal</button>
+      <p id="appealError" class="nick-error" role="alert"></p>
+    </form>`);
+  const form = $('appealForm');
+  const text = $('appealText');
+  const error = $('appealError');
+  const submit = form.querySelector('button[type="submit"]');
+  text.addEventListener('input', () => { $('appealCount').textContent = `${text.value.length} / ${APPEAL_MAX}`; });
+  text.focus();
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const note = text.value.trim();
+    if (note.length < 2) {
+      error.textContent = 'Write something first.';
+      return;
+    }
+    submit.disabled = true;
+    error.textContent = 'Sending…';
+    let reply;
+    try {
+      reply = await ranked.appeal(note);
+    } catch (problem) {
+      console.error(problem);
+      reply = { error: problem.name === 'Unreachable' ? 'unreachable' : 'failed' };
+    }
+    if (reply.appeal) {
+      G.rankedStatus = { ...(G.rankedStatus || {}), banned: true, appeal: reply.appeal };
+      audio.click();
+      el.sheetBody.innerHTML = `<p class="nick-lead">Appeal sent. The answer will show up here when it’s been looked at.</p>
+        <button id="appealDone" class="btn btn-primary fb-send" type="button">Done</button>`;
+      $('appealDone').addEventListener('click', closeSheet);
+      if (G.phase === 'title') refreshTitle();
+      return;
+    }
+    if (reply.error === 'waiting') {
+      G.rankedStatus = { ...(G.rankedStatus || {}), appeal: reply.appeal };
+      openBan();
+      return;
+    }
+    if (reply.error === 'not-banned') {
+      G.rankedStatus = { ...(G.rankedStatus || {}), banned: false };
+      closeSheet();
+      notice('You’re not banned anymore. You can play ranked again.');
+      if (G.phase === 'title') refreshTitle();
+      return;
+    }
+    submit.disabled = false;
+    error.textContent = reply.error === 'unreachable' ? 'Can’t reach the server from this network. Try again later.' : 'Couldn’t send it. Try again.';
+  });
+}
+
+// The ban is said when the game opens, once a day, unless an appeal is waiting. A turned-down appeal
+// is said the next time the game opens. Says whether it opened.
+function sayBan(status) {
+  const appeal = status.appeal;
+  const turnedDown = appeal?.state === 'no' && store.get('ranked.appealSaid') !== appeal.at;
+  if (!turnedDown && (appeal?.state === 'waiting' || store.get('ranked.banSaid') === G.today)) return false;
+  store.set('ranked.banSaid', G.today);
+  if (turnedDown) store.set('ranked.appealSaid', appeal.at);
+  openBan();
+  return true;
 }
 
 // For getting on the board outside the Daily: from the title, the board or results.
@@ -2168,7 +2289,8 @@ function wire() {
   el.rankedLine.addEventListener('click', () => {
     audio.unlock();
     audio.click();
-    if (ranked.player() || ON_PHONE) openBoard(); // phones can't play ranked, so no name here
+    if (ranked.player() && G.rankedStatus?.banned) openBan();
+    else if (ranked.player() || ON_PHONE) openBoard(); // phones can't play ranked, so no name here
     else openNickname();
   });
   $('btnNews').addEventListener('click', () => { audio.click(); openNews(); });
@@ -2292,6 +2414,10 @@ async function boot() {
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
     if (G.phase !== 'title' || el.sheet.open) return;
+    if (status?.banned) {
+      sayBan(status);
+      return;
+    }
     const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
     if (renameDue) openRename();
     else if (!showNote()) askPoll();

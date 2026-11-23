@@ -13,12 +13,16 @@
 //                          for the name question, or when the admin offered or forced a new name
 //   POST /ranked/request   {"key", "name"} or {"key", "cancel": true} -> {"request": {"name", "state"}|null}, a different
 //                          name that changes once the admin approves it
+//   POST /ranked/appeal    {"key", "text"}                       -> {"appeal": {"state": "waiting", "at"}}, a banned
+//                          player asking for the ban to be lifted; the admin answers on the dashboard
+//   A banned player's /ranked/status is {"banned": true, "name", "appeal"}, and everything else is {"error": "banned"}.
 //   POST /ranked/board    {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
 import { parseJSON, cleanTyped, loadCalendar, findPrompt, judge } from './shared.js';
 
 const GRACE_MS = 2500; // network time on top of the clock the player sees
+const APPEAL_MAX = 600; // characters, the same as the feedback box
 // Answers passed along by the Google relay (relay/google-apps-script.js) take an extra hop each way,
 // so they get more time before they count as late.
 const RELAY_GRACE_MS = 4000;
@@ -37,7 +41,14 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     if (action === 'board') return json(await board(env, data));
     const player = await playerFor(env, data.key);
     if (!player) return json({ error: 'unknown' });
-    if (player.banned) return json({ error: 'banned' });
+    // A banned player can see that they're banned and appeal it, and nothing else. The game keeps
+    // their key, so the appeal is theirs and its answer reaches them.
+    if (player.banned) {
+      if (action === 'status') return json({ banned: true, name: player.name, appeal: appealFor(player) });
+      if (action === 'appeal') return json(await appeal(env, player, data));
+      return json({ error: 'banned' });
+    }
+    if (action === 'appeal') return json({ error: 'not-banned' });
     if (action === 'rename') return json(await rename(env, player, data));
     if (action === 'request') return json(await requestName(env, player, data));
     if (action === 'status') return json(await status(env, player));
@@ -122,7 +133,8 @@ async function join(env, data) {
 
 export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
-  return env.DB.prepare('SELECT id, name, banned, paused, rename_offer, name_kind, name_request, name_request_no FROM players WHERE key_hash = ?1')
+  return env.DB.prepare(`SELECT id, name, banned, paused, rename_offer, name_kind, name_request, name_request_no, appeal_at, appeal_state
+      FROM players WHERE key_hash = ?1`)
     .bind(await sha256(key)).first();
 }
 
@@ -213,6 +225,32 @@ export async function decideName(env, id, requested, approve) {
   return { was: player.name, name: requested };
 }
 
+// Ban appeals ----------------------------------------------------------------------------
+
+// A banned player asks for the ban to be lifted. One appeal waits at a time; after a turned-down
+// one they can send another.
+async function appeal(env, player, data) {
+  const text = typeof data.text === 'string' ? data.text.trim().slice(0, APPEAL_MAX) : '';
+  if (text.length < 2) return { error: 'empty' };
+  if (player.appeal_state === 'waiting') return { error: 'waiting', appeal: appealFor(player) };
+  const at = Date.now();
+  await env.DB.prepare("UPDATE players SET appeal = ?2, appeal_at = ?3, appeal_state = 'waiting' WHERE id = ?1")
+    .bind(player.id, text, at).run();
+  return { appeal: { state: 'waiting', at } };
+}
+
+const appealFor = (player) => (player.appeal_state ? { state: player.appeal_state, at: player.appeal_at } : null);
+
+// The admin's answer to an appeal, from the dashboard. Only the appeal the admin read is decided.
+// Lifting it puts the player back on the boards with their scores; turning it down keeps the ban.
+export async function decideAppeal(env, id, at, lift) {
+  const player = await env.DB.prepare('SELECT id, name, banned, appeal_at, appeal_state FROM players WHERE id = ?1').bind(id).first();
+  if (!player || player.appeal_state !== 'waiting' || player.appeal_at !== at) return { error: 'That appeal changed. Refresh and look again.' };
+  await env.DB.prepare(`UPDATE players SET appeal_state = ?3${lift ? ', banned = 0' : ''} WHERE id = ?1 AND appeal_at = ?2`)
+    .bind(id, at, lift ? 'yes' : 'no').run();
+  return { name: player.name, lifted: lift };
+}
+
 // Runs -----------------------------------------------------------------------------------
 
 async function getRun(env, player, day) {
@@ -263,6 +301,7 @@ async function status(env, player) {
     rename: player.rename_offer === 2 ? 'forced' : player.rename_offer === 1 ? 'offer' : null,
     nameCheck: needsName(env, player),
     request: requestFor(player),
+    appeal: appealFor(player), // a lifted ban says so once
   };
 }
 

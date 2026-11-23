@@ -7,6 +7,8 @@
 //                      turned down, like node admin.mjs approve-name / deny-name
 //   POST /admin/referee {"mode": "practice"|"cloudflare"|"all"|"off"} -> which checks try the PC
 //                      referee first, from the next check on (refereeMode in shared.js)
+//   POST /admin/appeal {"id": 12, "at": 1764..., "lift": true|false} -> a ban appeal answered: the ban
+//                      lifted, or kept (decideAppeal in ranked.js)
 //
 // The password is the secret ADMIN_KEY, which only the admin sets (README, "Dashboard"); with no
 // ADMIN_KEY the data stays locked. After MAX_TRIES wrong passwords in an hour, every try is turned
@@ -14,7 +16,7 @@
 import PAGE from './dashboard.html';
 import { POLL, pollOpen } from '../../js/poll.js';
 import { EPOCH, utcToday, loadCalendar, parseJSON, REFEREE_MODES, refereeMode } from './shared.js';
-import { anonName, decideName } from './ranked.js';
+import { anonName, decideName, decideAppeal } from './ranked.js';
 import { sameKey } from './pc.js';
 
 const MIN_PASSWORD = 12;
@@ -27,7 +29,7 @@ export async function dashboard(request, env, url) {
   const path = url.pathname.replace(/\/$/, '');
   if (path === '/admin' && request.method === 'GET') return page();
   const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { ...PRIVATE, 'Content-Type': 'application/json' } });
-  if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
+  if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee', '/admin/appeal'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
 
   const access = await checkPassword(request, env);
   if (access === 'unset') return json(503, { error: 'unset' });
@@ -44,6 +46,12 @@ export async function dashboard(request, env, url) {
     const data = parseJSON(await request.text()) || {};
     if (!Number.isInteger(data.id) || typeof data.name !== 'string' || typeof data.approve !== 'boolean') return json(400, { error: 'Wrong shape' });
     const result = await decideName(env, data.id, data.name, data.approve);
+    return json(result.error ? 400 : 200, result);
+  }
+  if (path === '/admin/appeal' && request.method === 'POST') {
+    const data = parseJSON(await request.text()) || {};
+    if (!Number.isInteger(data.id) || !Number.isInteger(data.at) || typeof data.lift !== 'boolean') return json(400, { error: 'Wrong shape' });
+    const result = await decideAppeal(env, data.id, data.at, data.lift);
     return json(result.error ? 400 : 200, result);
   }
   if (path === '/admin/referee' && request.method === 'POST') {
@@ -103,7 +111,7 @@ async function collect(env) {
   const from = today - DAYS + 1;
   const weekAgo = Date.now() - 7 * 86400000;
   const db = env.DB;
-  const [visits, dives, runs, joined, ai, board, names, recent, requests, feedback, votes, failures] = await db.batch([
+  const [visits, dives, runs, joined, ai, board, names, recent, requests, banned, feedback, votes, failures] = await db.batch([
     db.prepare('SELECT day, n, phone, fresh FROM visit_days WHERE day >= ?1').bind(from),
     db.prepare('SELECT day, n FROM dives WHERE day >= ?1').bind(from),
     db.prepare('SELECT day, COUNT(*) AS n, SUM(finished IS NOT NULL) AS done FROM runs WHERE day >= ?1 GROUP BY day').bind(from),
@@ -117,6 +125,9 @@ async function collect(env) {
       ORDER BY name_at DESC LIMIT 40`),
     db.prepare(`SELECT id, name, name_kind, name_before, name_request, name_request_at, paused FROM players
       WHERE name_request IS NOT NULL AND name_request_no = 0 AND NOT banned ORDER BY name_request_at LIMIT 40`),
+    // Everyone banned, with their appeal if they sent one; waiting appeals first, oldest first.
+    db.prepare(`SELECT id, name, appeal, appeal_at, appeal_state FROM players WHERE banned = 1
+      ORDER BY appeal_state = 'waiting' DESC, appeal_at, name LIMIT 60`),
     db.prepare(`SELECT f.at, f.text, f.device, f.place, p.name FROM feedback f LEFT JOIN players p ON p.id = f.player
       WHERE f.at > ?1 ORDER BY f.at DESC LIMIT 40`).bind(weekAgo),
     db.prepare('SELECT choice, COUNT(*) AS n FROM poll_votes WHERE poll = ?1 GROUP BY choice').bind(POLL?.id || ''),
@@ -150,6 +161,7 @@ async function collect(env) {
     names: rows(names)[0] || {},
     recent: rows(recent),
     requests: rows(requests),
+    banned: rows(banned),
     feedback: rows(feedback),
     poll: POLL && {
       title: POLL.title,
