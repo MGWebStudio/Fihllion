@@ -1515,7 +1515,7 @@ async function checkRanked() {
     const status = await ranked.status();
     if (!status || status.error) return null;
     if (status.banned) {
-      G.rankedStatus = { banned: true, appeal: status.appeal || null, until: status.until || null };
+      G.rankedStatus = { banned: true, appeal: status.appeal || null, until: status.until || null, messages: messagesIn(status) };
       store.set('ranked.banned', status.until || true);
       return G.rankedStatus;
     }
@@ -1524,7 +1524,8 @@ async function checkRanked() {
     const before = ranked.player()?.name;
     ranked.syncName(status.name);
     if (before && status.name && before !== status.name) notice(`Your name on the leaderboard is ${status.name} now.`);
-    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null, nameCheck: Boolean(status.nameCheck), request: status.request || null };
+    G.rankedStatus = { paused: Boolean(status.paused), rename: status.rename || null, nameCheck: Boolean(status.nameCheck), request: status.request || null,
+      messages: messagesIn(status) };
     // A name request the admin turned down is said once. An approved one shows up as the new name above.
     const request = status.request;
     if (request?.state === 'no' && store.get('ranked.requestSaid') !== request.name) {
@@ -1740,6 +1741,7 @@ function openDailyChoice(problem = '') {
 const BANNED_LINE = '<span class="ranked-off">Banned · Endless only</span> · Appeal';
 const APPEAL_MAX = 600;
 const sentOn = (ms) => new Date(ms).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+const sentAt = (ms) => new Date(ms).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
 const banOver = (until) => Boolean(until && Date.now() >= until);
 const isBanned = () => Boolean(ranked.available && ranked.player() && G.rankedStatus?.banned && !banOver(G.rankedStatus.until));
 const banEnds = (ms) => new Date(ms).toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
@@ -1836,6 +1838,32 @@ function sayBan(status) {
   store.set('ranked.banSaid', G.today);
   if (turnedDown) store.set('ranked.appealSaid', appeal.at);
   openBan();
+  return true;
+}
+
+// Messages the admin sent this player from the dashboard: all the new ones in one sheet, oldest first,
+// when the game opens with no other sheet up. They count as seen once they're on screen. `then` runs
+// after Got it, for whatever the game had to say next. Says whether it opened.
+const messagesIn = (status) => (Array.isArray(status.messages) ? status.messages : [])
+  .filter((message) => Number.isInteger(message?.id) && typeof message.text === 'string' && message.text);
+
+function sayMessages(status, then) {
+  const messages = status?.messages || [];
+  if (!messages.length) return false;
+  status.messages = [];
+  ranked.read(messages.map((message) => message.id)).catch(() => {}); // not marked: they show again next time
+  openSheet(messages.length === 1 ? 'A message for you' : 'Messages for you', `<div class="note">
+      ${messages.map((message) => `<div class="dm">
+        <p class="dm-text">${esc(message.text)}</p>
+        <p class="dm-when">From Fihllion${Number.isFinite(message.at) ? ` · ${esc(sentAt(message.at))}` : ''}</p>
+      </div>`).join('')}
+      <button id="messagesDone" class="btn btn-primary btn-big announce-go" type="button">Got it</button>
+    </div>`);
+  $('messagesDone').addEventListener('click', () => {
+    audio.click();
+    closeSheet();
+    then?.();
+  });
   return true;
 }
 
@@ -2465,18 +2493,23 @@ async function boot() {
   // The name question (real name or anonymous) is asked every time until it's answered. A name the
   // admin offered a change, or requires one, is asked too; an offer asks once a day.
   // Otherwise the note in js/note.js pops up once, and after that an open poll the player hasn't seen.
-  // An appeal lifted with a note from the admin goes before all of those.
+  // An appeal lifted with a note from the admin goes before all of those, and messages from the admin
+  // before everything; whatever was due opens after them.
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
     if (G.phase !== 'title' || el.sheet.open) return;
-    if (status?.banned) {
-      sayBan(status);
-      return;
-    }
-    if (sayAppealReply()) return;
-    const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
-    if (renameDue) openRename();
-    else if (!showNote()) askPoll();
+    const next = () => {
+      if (G.phase !== 'title' || el.sheet.open) return;
+      if (status?.banned) {
+        sayBan(status);
+        return;
+      }
+      if (sayAppealReply()) return;
+      const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
+      if (renameDue) openRename();
+      else if (!showNote()) askPoll();
+    };
+    if (!sayMessages(status, next)) next();
   });
   requestAnimationFrame(tick);
   document.fonts?.ready.then(() => { world.captionLayout = null; });

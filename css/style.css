@@ -768,6 +768,10 @@ dialog#sheet.is-announce .sheet-head h2 { font-size: 46px; }
 .note-text:first-child { font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--gilt); }
 /* The admin's note with a lifted appeal (sayAppealReply in main.js), as the admin typed it. */
 .appeal-reply { padding-left: 12px; border-left: 4px solid var(--glass); white-space: pre-wrap; overflow-wrap: anywhere; }
+/* Messages from the admin (sayMessages in main.js), as the admin typed them. */
+.dm { margin: 0 0 16px; padding-left: 12px; border-left: 4px solid var(--glass); }
+.dm-text { margin: 0; font-size: 22px; line-height: 1.35; white-space: pre-wrap; overflow-wrap: anywhere; }
+.dm-when { margin: 6px 0 0; font-size: 17px; color: var(--muted); }
 .announce-lead { margin: 6px 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--cream); }
 .announce-go { width: 100%; margin-top: 18px; }
 .announce-later { width: 100%; margin-top: 10px; }

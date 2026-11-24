@@ -181,6 +181,13 @@ Add `--local` to use the test database. The live tables need `npm run migrate:li
 
 `https://fihllion-counts.mgstudiogame.workers.dev/admin` is a page for the admin showing how the game is doing, made to read on a phone. It has today's people, finished Dailies, ranked players and new players on the board; whether the PC referee is answering and how much of Cloudflare's daily allowance is used; the last 14 days of each as small bar charts; today's board; name requests waiting, each with Approve and Turn down (the same as `node admin.mjs approve-name` and `deny-name`); bans, with a box to ban a player by name for an hour, a day, three days, a week or until it's lifted (the same as `node admin.mjs ban`), then everyone who's banned: a waiting appeal with a box for a note they'll see if it's lifted, Lift the ban and Keep the ban, anyone else with Unban; the newest real names, each with a button to make it anonymous (the same as `node admin.mjs anon`); the last week's feedback; and the poll. It refreshes every minute while it's open. Added to a phone's home screen, it opens like an app. Some school Wi-Fi blocks the address.
 
+Tapping a player's name anywhere on the page, or looking one up by name in the Players box (a miss offers close names), opens their panel:
+
+- **Answers:** every ranked run, newest first, each with a strip of seven squares in the colors of what each answer scored and their place that day ("would be" when they're off the boards). Opening a run shows each prompt, what they typed, what it counted as and its points, whether the referee said yes, and when they left the tab. Change score sets a run's score by hand (a finished run, or one from an earlier day); the first score is kept in `runs.score_was`, with Put it back.
+- **Message:** up to 500 characters that pop up the next time they open the game ("A message for you", before anything else the game had to say, banned or not), with when each one was seen. Kept in the `messages` table; the game marks them seen with `POST /ranked/read`.
+- **Ban, pause, name:** ban for a length or until it's lifted, change the length, or unban; pause (off the boards and ranked locked, without a ban or an appeal, the same as `node admin.mjs pause`) or unpause; make anonymous.
+- Their appeal, with the note box and Lift or Keep the ban when it's waiting, and feedback they sent with their name on it.
+
 It asks for a password: the secret `ADMIN_KEY`, which only the admin sets, from `worker/`. Wrangler asks for it, so it isn't typed into a command or saved in a file. It needs at least 12 characters.
 
 ```powershell

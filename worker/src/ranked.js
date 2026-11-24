@@ -15,6 +15,9 @@
 //                          name that changes once the admin approves it
 //   POST /ranked/appeal    {"key", "text"}                       -> {"appeal": {"state": "waiting", "at"}}, a banned
 //                          player asking for the ban to be lifted; the admin answers on the dashboard
+//   POST /ranked/read      {"key", "ids": [3, 4]}                -> {"read": 2}, the admin's messages the game has shown
+//   Every /ranked/status also has "messages": [{"id", "text", "at"}], the admin's messages this player
+//   hasn't seen yet (sent from the dashboard's player panel), banned or not.
 //   A banned player's /ranked/status is {"banned": true, "name", "appeal", "until"} ("until": when a timed ban
 //   ends, or null), and everything else is {"error": "banned"}. Once the appeal is answered, "appeal" is
 //   {"state": "yes"|"no", "at"}, with "reply" when the admin lifted it with a note.
@@ -26,6 +29,8 @@ import { parseJSON, cleanTyped, loadCalendar, findPrompt, judge } from './shared
 const GRACE_MS = 2500; // network time on top of the clock the player sees
 const APPEAL_MAX = 600; // characters, the same as the feedback box
 export const REPLY_MAX = 300; // characters in the admin's note with a lifted appeal
+export const MESSAGE_MAX = 500; // characters in a message from the admin
+const MESSAGES_AT_ONCE = 5;
 // Answers passed along by the Google relay (relay/google-apps-script.js) take an extra hop each way,
 // so they get more time before they count as late.
 const RELAY_GRACE_MS = 4000;
@@ -47,11 +52,15 @@ export async function ranked(action, text, env, reply, json, { relayed = false }
     // A banned player can see that they're banned and appeal it, and nothing else. The game keeps
     // their key, so the appeal is theirs and its answer reaches them.
     if (player.banned) {
-      if (action === 'status') return json({ banned: true, name: player.name, appeal: appealFor(player), until: player.banned_until || null });
+      if (action === 'status') {
+        return json({ banned: true, name: player.name, appeal: appealFor(player), until: player.banned_until || null, messages: await unseenMessages(env, player) });
+      }
       if (action === 'appeal') return json(await appeal(env, player, data));
+      if (action === 'read') return json(await readMessages(env, player, data));
       return json({ error: 'banned' });
     }
     if (action === 'appeal') return json({ error: 'not-banned' });
+    if (action === 'read') return json(await readMessages(env, player, data));
     if (action === 'rename') return json(await rename(env, player, data));
     if (action === 'request') return json(await requestName(env, player, data));
     if (action === 'status') return json(await status(env, player));
@@ -319,7 +328,32 @@ async function status(env, player) {
     nameCheck: needsName(env, player),
     request: requestFor(player),
     appeal: appealFor(player), // a lifted ban says so once
+    messages: await unseenMessages(env, player),
   };
+}
+
+// Messages from the admin -----------------------------------------------------------------
+// Written to one player from the dashboard's player panel. Their game shows the ones not seen yet
+// when it opens, a few at a time and oldest first, and says so here, which the panel shows as seen.
+
+async function unseenMessages(env, player) {
+  try {
+    const { results } = await env.DB.prepare('SELECT id, text, at FROM messages WHERE player = ?1 AND seen_at IS NULL ORDER BY at LIMIT ?2')
+      .bind(player.id, MESSAGES_AT_ONCE).all();
+    return results;
+  } catch (error) {
+    // Never worth breaking the status over (a database without migration 0016, say).
+    console.log('MESSAGES', error.message);
+    return [];
+  }
+}
+
+async function readMessages(env, player, data) {
+  const ids = Array.isArray(data.ids) ? [...new Set(data.ids.filter(Number.isInteger))].slice(0, MESSAGES_AT_ONCE) : [];
+  if (!ids.length) return { read: 0 };
+  const result = await env.DB.prepare(`UPDATE messages SET seen_at = ?2 WHERE player = ?1 AND seen_at IS NULL
+      AND id IN (${ids.map((_, i) => `?${i + 3}`).join(', ')})`).bind(player.id, Date.now(), ...ids).run();
+  return { read: result.meta?.changes ?? 0 };
 }
 
 async function question(env, player, data) {
@@ -448,7 +482,7 @@ function ranked_(rows, key) {
 // their game next asks the server (which clears it for good).
 const NOW_MS = "CAST(strftime('%s', 'now') AS INTEGER) * 1000";
 export const STILL_BANNED = `banned = 1 AND (banned_until IS NULL OR banned_until > ${NOW_MS})`;
-const ON_BOARD = `(p.banned = 0 OR p.banned_until <= ${NOW_MS}) AND p.paused = 0 AND p.rename_offer < 2`;
+export const ON_BOARD = `(p.banned = 0 OR p.banned_until <= ${NOW_MS}) AND p.paused = 0 AND p.rename_offer < 2`;
 
 async function board(env, data) {
   const loaded = await loadCalendar(env);

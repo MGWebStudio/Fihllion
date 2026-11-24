@@ -173,10 +173,10 @@
   .asked { font: 26px/1.05 var(--display); color: var(--cream); }
   .appeal-text { flex-basis: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
   /* Bans: a name and how long, then everyone who's banned, appeals first. */
-  .ban-form label { display: block; font: 11px/1.2 var(--label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
+  .ban-form label, .find-form label { display: block; font: 11px/1.2 var(--label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
   .ban-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
   .ban-fields input { grid-column: 1 / -1; }
-  .ban-fields input, .ban-fields select {
+  .ban-fields input, .ban-fields select, .find-fields input, .act select {
     min-width: 0;
     min-height: 44px;
     font: 20px var(--body);
@@ -202,6 +202,117 @@
     border-radius: 0;
     resize: vertical;
   }
+  /* A player's name anywhere on the page opens their panel. */
+  .pname {
+    border: 0;
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: underline 2px var(--slate);
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+  .pname:hover { color: var(--gilt); text-decoration-color: var(--gilt); }
+  .find-fields { display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+  .find-go { min-height: 44px; padding: 6px 16px; font-size: 12px; border-color: var(--glass); color: var(--glass); }
+  .find-go:hover { background: var(--glass); color: var(--ink); border-color: var(--glass); }
+  .find-miss { margin: 8px 0 0; font-size: 17px; color: var(--muted); }
+  .find-miss:empty { display: none; }
+
+  /* The player panel: everything about one player, over the page (full screen on a phone). */
+  body:has(.panel[open]) { overflow: hidden; }
+  .panel {
+    width: 640px;
+    max-width: calc(100% - 32px);
+    max-height: calc(100% - 32px);
+    padding: 0;
+    border: 2px solid var(--slate);
+    background: var(--abyss);
+    color: var(--cream);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .panel::backdrop { background: rgba(3, 11, 24, 0.82); }
+  @media (max-width: 680px) {
+    .panel { width: 100%; max-width: 100%; height: 100%; max-height: 100%; margin: 0; border: 0; }
+  }
+  .panel-top {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: max(16px, env(safe-area-inset-top)) 16px 12px;
+    background: var(--abyss);
+    border-bottom: 2px solid var(--line);
+  }
+  .panel-name { display: block; margin: 0; font: 40px/0.95 var(--display); letter-spacing: 0.01em; text-transform: none; color: var(--gilt); overflow-wrap: anywhere; }
+  .panel-sub { margin: 6px 0 0; font-size: 17px; color: var(--muted); }
+  .panel-x { flex: none; width: 44px; height: 44px; border: 2px solid var(--slate); background: var(--card); font: 28px/1 var(--body); cursor: pointer; }
+  .panel-x:hover { border-color: var(--gilt); color: var(--gilt); }
+  .panel-body { padding: 16px 16px max(32px, env(safe-area-inset-bottom)); }
+  .panel-body section { margin: 0 0 20px; }
+  .panel-body h3 {
+    margin: 0 0 8px;
+    font: 12px/1.2 var(--label);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .panel-body h3 small { font: inherit; text-transform: none; letter-spacing: 0.02em; }
+  .panel-tags { margin: 0 0 14px; }
+  .panel-tags .tag { display: inline-block; margin: 0 6px 6px 0; font-size: 11px; padding: 4px 6px; }
+  /* Runs: one row a day, with a strip of seven squares in the colors of what each answer scored. */
+  .runs details + details { border-top: 2px solid var(--line); }
+  .runs summary { display: flex; align-items: center; gap: 10px; padding: 10px 0; cursor: pointer; list-style: none; }
+  .runs summary::-webkit-details-marker { display: none; }
+  .runs summary::before { content: '+'; flex: none; width: 12px; font: 14px/1 var(--label); color: var(--muted); }
+  .runs details[open] > summary::before { content: '–'; }
+  .runs details:first-child > summary { padding-top: 0; }
+  .run-day { flex: 1; min-width: 0; }
+  .run-day small { display: block; font-size: 16px; color: var(--muted); }
+  .run-day b { font-weight: normal; white-space: nowrap; }
+  .strip { flex: none; display: grid; grid-template-columns: repeat(7, 9px); gap: 2px; }
+  .strip i { height: 14px; background: var(--line); }
+  .strip i.none { background: none; box-shadow: inset 0 0 0 1px var(--line); }
+  .runs .score { flex: none; min-width: 46px; text-align: right; }
+  .answers { list-style: none; margin: 2px 0 10px; padding: 0; }
+  .answers li { padding: 6px 0 6px 10px; border-left: 4px solid var(--line); margin-bottom: 6px; }
+  .answers .q { display: block; font-size: 16px; color: var(--muted); }
+  .answers .a { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .answers .a b { font-weight: normal; color: var(--cream); }
+  .answers .typed { color: var(--muted); }
+  .answers .pts { flex: none; font: 22px/1 var(--display); }
+  .answers .why { display: block; font-size: 15px; color: var(--muted); }
+  .answers .miss .a > span:first-child { color: var(--muted); }
+  .run-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 0 12px; }
+  .run-tools .note { margin: 0; }
+  .link.inline { font-size: inherit; padding: 0; }
+  .act { display: flex; flex-wrap: wrap; gap: 6px; }
+  .act + .act, .line + .act { margin-top: 8px; }
+  .act .small-btn { min-height: 44px; padding: 6px 12px; }
+  .act select { flex: 1; min-width: 140px; }
+  .act-block + .act-block { margin-top: 14px; padding-top: 14px; border-top: 2px solid var(--line); }
+  .act-block .line { margin: 0; }
+  .act-block .note { margin-top: 6px; }
+  .msg-go { display: flex; justify-content: flex-end; margin-top: 6px; }
+  .msg-go .small-btn { min-height: 44px; padding: 6px 18px; }
+  .msgs { margin-top: 14px; }
+  .msgs li { display: block; }
+  .msgs .text { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .msgs .meta { font-size: 16px; color: var(--muted); margin-top: 2px; }
+  .msgs .meta b { font-weight: normal; color: var(--glass); }
+  .panel-appeal .appeal-text { display: block; margin-bottom: 8px; }
+  .panel-appeal .pair { margin-top: 6px; }
+
   .summary { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 12px; font-size: 18px; color: var(--muted); }
   .summary b { font: 26px/1 var(--display); color: var(--cream); font-weight: normal; margin-right: 4px; }
   .more { margin-top: 10px; }
@@ -281,6 +392,14 @@
 
   <div id="flash" class="flash" role="status" hidden></div>
   <div id="content" hidden></div>
+  <dialog id="panel" class="panel" aria-labelledby="panelName">
+    <header class="panel-top">
+      <div><h2 id="panelName" class="panel-name"></h2><p id="panelSub" class="panel-sub"></p></div>
+      <button type="button" class="panel-x" data-panel-close aria-label="Close">×</button>
+    </header>
+    <div id="panelBody" class="panel-body"></div>
+    <div id="panelFlash" class="flash" role="status" hidden></div>
+  </dialog>
 
   <footer><button id="signout" class="link" type="button" hidden>Sign out on this device</button></footer>
 </main>
@@ -304,6 +423,14 @@
   let loading = false;
   const picked = {}; // which day's bar is selected in each chart
   const BAN_LENGTHS = [['', 'Until I lift it'], [1, '1 hour'], [24, '1 day'], [72, '3 days'], [168, '1 week']];
+  let panel = null; // the open player panel's data, with which runs are open and their prompts
+  let ticket = 0; // the latest panel request; an older one that answers late is dropped
+  const ordinal = (n) => {
+    const tail = n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th';
+    return `${num(n)}${tail}`;
+  };
+  // A player's name that opens their panel.
+  const nameButton = (id, name) => (id ? `<button type="button" class="pname" data-player="${id}">${esc(name)}</button>` : esc(name));
 
   async function call(path, options = {}) {
     const res = await fetch(path, {
@@ -436,14 +563,14 @@
 
     const board = d.board.length ? `<ul class="rows">${d.board.map((row, i) => `<li>
         <span class="rank">${i + 1}</span>
-        <span class="who">${esc(row.name)}${row.done ? '' : `<span class="tag">${row.answered}/7</span>`}${row.flags ? `<span class="tag bad">left tab ×${row.flags}</span>` : ''}${row.banned ? '<span class="tag bad">banned</span>' : ''}${row.paused ? '<span class="tag">paused</span>' : ''}</span>
+        <span class="who">${nameButton(row.id, row.name)}${row.done ? '' : `<span class="tag">${row.answered}/7</span>`}${row.flags ? `<span class="tag bad">left tab ×${row.flags}</span>` : ''}${row.banned ? '<span class="tag bad">banned</span>' : ''}${row.paused ? '<span class="tag">paused</span>' : ''}</span>
         <span class="score">${num(row.score)}</span></li>`).join('')}</ul>`
       : '<p class="empty">No ranked runs yet today.</p>';
 
     const recent = d.recent.slice(0, 12);
     const names = `<div class="summary"><span><b>${num(d.names.own)}</b>real names</span><span><b>${num(d.names.anon)}</b>anonymous</span><span><b>${num(d.names.waiting)}</b>haven’t answered</span></div>
       ${recent.length ? `<ul class="rows">${recent.map((row) => `<li>
-        <span class="who">${esc(row.name)}<small>${row.name_before == null ? 'new player' : row.name_before === row.name ? 'kept their name' : `was ${esc(row.name_before)}`} · ${esc(dateTime(row.name_at))}</small></span>
+        <span class="who">${nameButton(row.id, row.name)}<small>${row.name_before == null ? 'new player' : row.name_before === row.name ? 'kept their name' : `was ${esc(row.name_before)}`} · ${esc(dateTime(row.name_at))}</small></span>
         <button type="button" class="small-btn" data-anon="${esc(row.name)}">Make anonymous</button></li>`).join('')}</ul>`
         : '<p class="empty">Nobody has put in a name yet.</p>'}`;
 
@@ -451,7 +578,7 @@
     // decided, so one the player changed meanwhile waits for the next look.
     const requests = d.requests.length ? `<ul class="rows">${d.requests.map((row) => `<li class="req">
         <span class="who"><span class="asked">${esc(row.name_request)}</span>
-          <small>now ${esc(row.name)}${row.name_before && row.name_before !== row.name ? `, was ${esc(row.name_before)}` : ''}${row.paused ? ' · paused' : ''} · asked ${esc(dateTime(row.name_request_at))}</small></span>
+          <small>now ${nameButton(row.id, row.name)}${row.name_before && row.name_before !== row.name ? `, was ${esc(row.name_before)}` : ''}${row.paused ? ' · paused' : ''} · asked ${esc(dateTime(row.name_request_at))}</small></span>
         <span class="pair">
           <button type="button" class="small-btn yes" data-decide="yes" data-id="${row.id}" data-name="${esc(row.name_request)}" data-now="${esc(row.name)}">Approve</button>
           <button type="button" class="small-btn" data-decide="no" data-id="${row.id}" data-name="${esc(row.name_request)}" data-now="${esc(row.name)}">Turn down</button>
@@ -461,18 +588,26 @@
     // Bans: ban someone by name, then everyone who's banned. A waiting appeal shows what they wrote,
     // with Lift the ban and Keep the ban (only the appeal shown here is decided); anyone else has Unban.
     const waiting = d.banned.filter((row) => row.appeal_state === 'waiting');
-    const suggest = [...new Set([...d.board.filter((row) => !row.banned).map((row) => row.name), ...d.recent.map((row) => row.name)])];
+    const suggest = [...new Set([...d.board.map((row) => row.name), ...d.recent.map((row) => row.name), ...d.banned.map((row) => row.name)])];
+    const find = `<form id="findForm" class="find-form" autocomplete="off">
+        <label for="findName">Look up a player</label>
+        <div class="find-fields">
+          <input id="findName" type="text" list="playerNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+          <button type="submit" class="small-btn find-go">Open</button>
+        </div>
+        <p class="find-miss" id="findMiss" role="status"></p>
+        <datalist id="playerNames">${suggest.map((name) => `<option value="${esc(name)}">`).join('')}</datalist>
+      </form>`;
     const banForm = `<form id="banForm" class="ban-form" autocomplete="off">
         <label for="banName">Ban a player</label>
         <div class="ban-fields">
-          <input id="banName" type="text" list="banNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+          <input id="banName" type="text" list="playerNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
           <select id="banLength" aria-label="How long">${BAN_LENGTHS.map(([hours, label]) => `<option value="${hours}">${label}</option>`).join('')}</select>
           <button type="submit" class="small-btn ban-go">Ban</button>
         </div>
-        <datalist id="banNames">${suggest.map((name) => `<option value="${esc(name)}">`).join('')}</datalist>
       </form>`;
     const bannedList = d.banned.length ? `<ul class="rows">${d.banned.map((row) => row.appeal_state === 'waiting' ? `<li class="req">
-        <span class="who"><span class="asked">${esc(row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}${row.banned_until ? ` · ban ends ${esc(dateTime(row.banned_until))}` : ''}</small></span>
+        <span class="who"><span class="asked">${nameButton(row.id, row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}${row.banned_until ? ` · ban ends ${esc(dateTime(row.banned_until))}` : ''}</small></span>
         <span class="appeal-text">${esc(row.appeal)}</span>
         <textarea class="reply" id="reply-${row.id}" rows="2" maxlength="300" aria-label="Message for ${esc(row.name)} if you lift the ban"
           placeholder="A message they’ll see if you lift it (optional)"></textarea>
@@ -480,13 +615,13 @@
           <button type="button" class="small-btn yes" data-appeal="lift" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Lift the ban</button>
           <button type="button" class="small-btn" data-appeal="keep" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Keep the ban</button>
         </span></li>` : `<li>
-        <span class="who">${esc(row.name)}<small>${esc([row.banned_until ? `until ${dateTime(row.banned_until)}` : 'until you lift it', row.appeal_state === 'no' ? 'appeal turned down' : ''].filter(Boolean).join(' · '))}</small></span>
+        <span class="who">${nameButton(row.id, row.name)}<small>${esc([row.banned_until ? `until ${dateTime(row.banned_until)}` : 'until you lift it', row.appeal_state === 'no' ? 'appeal turned down' : ''].filter(Boolean).join(' · '))}</small></span>
         <button type="button" class="small-btn" data-unban="${row.id}" data-name="${esc(row.name)}">Unban</button></li>`).join('')}</ul>`
       : '<p class="empty">Nobody is banned.</p>';
     const bans = `${banForm}<div class="banned-list">${bannedList}</div>`;
 
     const feedback = d.feedback.length ? `<ul class="rows feedback">${d.feedback.map((row) => `<li>
-        <div class="meta">${esc([dateTime(row.at), row.name || 'no name', row.device, row.place].filter(Boolean).join(' · '))}</div>
+        <div class="meta">${[esc(dateTime(row.at)), row.id ? nameButton(row.id, row.name) : 'no name', esc(row.device), esc(row.place)].filter(Boolean).join(' · ')}</div>
         <div class="text">${esc(row.text)}</div></li>`).join('')}</ul>`
       : '<p class="empty">No feedback in the last 7 days.</p>';
 
@@ -502,8 +637,8 @@
         <p class="note">${num(total)} ${total === 1 ? 'vote' : 'votes'}</p></div></section>`;
     }
 
-    // What's typed in the ban form and the appeal messages stays through a refresh.
-    const draft = { name: $('banName')?.value || '', length: $('banLength')?.value || '' };
+    // What's typed in the ban form, the search box and the appeal messages stays through a refresh.
+    const draft = { name: $('banName')?.value || '', length: $('banLength')?.value || '', find: $('findName')?.value || '', miss: $('findMiss')?.innerHTML || '' };
     const replies = [...document.querySelectorAll('textarea.reply')].map((box) => [box.id, box.value]);
     $('content').innerHTML = `
       <section>
@@ -548,6 +683,7 @@
         </div>
       </section>
 
+      <section><h2>Players<small>or tap a name anywhere</small></h2><div class="card">${find}</div></section>
       <section><h2>Today’s board<small>top ${d.board.length || 20}</small></h2><div class="card">${board}</div></section>
       <section><h2>Name requests${d.requests.length ? `<small>${d.requests.length} waiting</small>` : ''}</h2><div class="card">${requests}</div></section>
       <section><h2>Bans${waiting.length ? `<small>${waiting.length} ${waiting.length === 1 ? 'appeal' : 'appeals'} waiting</small>` : ''}</h2><div class="card">${bans}</div></section>
@@ -556,14 +692,26 @@
       ${poll}`;
     $('banName').value = draft.name;
     $('banLength').value = draft.length;
+    $('findName').value = draft.find;
+    $('findMiss').innerHTML = draft.miss;
     for (const [id, value] of replies) if ($(id)) $(id).value = value;
   }
 
-  async function makeAnonymous(name) {
-    if (!confirm(`Change ${name} to an anonymous name? They’ll see it next time they open the game.`)) return;
-    const { status, body } = await call('/admin/anon', { method: 'POST', body: JSON.stringify({ name }) });
-    flash(status === 200 ? `${body.was} is ${body.name} now.` : body.error || PROBLEMS[status] || 'That didn’t work. Try again.');
+  // After a change: fresh numbers on the page, and in the player panel if it's open.
+  function changed() {
     load();
+    if (panel && $('panel').open) refreshPanel();
+  }
+
+  // The list's buttons give a name; the panel's give an id, which stays right if the name changes.
+  async function makeAnonymous(button) {
+    const { anon, anonId, name } = button.dataset;
+    const who = name || anon;
+    if (!confirm(`Change ${who} to an anonymous name? They’ll see it next time they open the game.`)) return;
+    button.disabled = true;
+    const { status, body } = await call('/admin/anon', { method: 'POST', body: JSON.stringify(anonId ? { id: Number(anonId) } : { name: anon }) });
+    flash(status === 200 ? `${body.was} is ${body.name} now.` : body.error || PROBLEMS[status] || 'That didn’t work. Try again.');
+    changed();
   }
 
   async function decide(button) {
@@ -574,22 +722,23 @@
     const { status, body } = await call('/admin/name', { method: 'POST', body: JSON.stringify({ id: Number(id), name, approve }) });
     flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
       : approve ? `${body.was} is ${body.name} now. They’ll see it next time they open the game.` : `Turned down ${name}. ${now} can ask again.`);
-    load();
+    changed();
   }
 
   async function answerAppeal(button) {
     const { id, at, name, appeal } = button.dataset;
     const lift = appeal === 'lift';
-    const reply = lift ? ($(`reply-${id}`)?.value.trim() || '') : '';
+    const box = button.closest('li, .panel-appeal')?.querySelector('textarea.reply');
+    const reply = lift ? (box?.value.trim() || '') : '';
     if (!confirm(lift ? `Lift ${name}’s ban? They go back on the boards with their scores${reply ? ', and see your message when they open the game' : ''}.`
       : `Keep ${name}’s ban? They’ll see their appeal was turned down, and can send another.`)) return;
     button.closest('.pair').querySelectorAll('button').forEach((each) => { each.disabled = true; });
     const { status, body } = await call('/admin/appeal', { method: 'POST', body: JSON.stringify({ id: Number(id), at: Number(at), lift, ...(reply ? { reply } : {}) }) });
-    if (status === 200 && $(`reply-${id}`)) $(`reply-${id}`).value = '';
+    if (status === 200 && box) box.value = '';
     flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
       : lift ? `${body.name}’s ban is lifted. They’ll see it${body.reply ? ', and your message,' : ''} next time they open the game.`
       : `${body.name} stays banned. They’ll see the appeal was turned down.`);
-    load();
+    changed();
   }
 
   async function ban(form) {
@@ -614,7 +763,7 @@
     $('banLength').value = '';
     const ends = body.until ? `until ${dateTime(body.until)}` : 'until you lift it';
     flash(body.already ? `${body.name} was already banned. It lasts ${ends} now.` : `${body.name} is banned ${ends}. They’ll see it next time they open the game.`);
-    load();
+    changed();
   }
 
   async function unban(button) {
@@ -624,7 +773,273 @@
     const { status, body } = await call('/admin/unban', { method: 'POST', body: JSON.stringify({ id: Number(id) }) });
     flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
       : `${body.name} is unbanned. They’ll see it next time they open the game.`);
-    load();
+    changed();
+  }
+
+  // The player panel ---------------------------------------------------------------------
+
+  async function post(path, payload) {
+    try {
+      return await call(path, { method: 'POST', body: JSON.stringify(payload) });
+    } catch {
+      return { status: 0, body: { error: 'Couldn’t reach the server. Try again.' } };
+    }
+  }
+  const problem = ({ status, body }) => body.error || PROBLEMS[status] || 'That didn’t work. Try again.';
+
+  // From a name on the page ({id}) the panel opens at once and fills in; from the search box ({name})
+  // it opens only once the player is found, and a miss shows under the box with any close names.
+  async function openPlayer(query) {
+    const mine = ++ticket;
+    const dialog = $('panel');
+    const byName = 'name' in query;
+    if (!byName) {
+      panel = null;
+      $('panelName').textContent = query.label || '';
+      $('panelSub').textContent = '';
+      $('panelBody').innerHTML = '<p class="empty">Loading…</p>';
+      if (!dialog.open) dialog.showModal();
+    }
+    const result = await post('/admin/player', byName ? { name: query.name } : { id: query.id });
+    if (mine !== ticket) return;
+    if (result.status !== 200) {
+      if (byName) return showMiss(problem(result), result.body.close || []);
+      $('panelBody').innerHTML = `<p class="empty">${esc(problem(result))}</p>`;
+      return;
+    }
+    const body = result.body;
+    panel = { ...body, openDays: new Set(body.runs.length ? [body.runs[0].day] : []), loading: new Set(), failed: new Set() };
+    if (byName && $('findName')) {
+      $('findName').value = '';
+      $('findMiss').textContent = '';
+    }
+    renderPanel({ fresh: true });
+    if (!dialog.open) dialog.showModal();
+    dialog.scrollTop = 0;
+  }
+
+  function showMiss(message, close) {
+    const box = $('findMiss');
+    if (!box) return flash(message);
+    const names = close.map((name) => `<button type="button" class="pname" data-find-name="${esc(name)}">${esc(name)}</button>`).join(', ');
+    box.innerHTML = close.length ? `${esc(message.replace(/ Did you mean .*$/, ''))} Did you mean ${names}?` : esc(message);
+  }
+
+  // The same player again after a change, keeping which runs are open and the prompts already loaded.
+  async function refreshPanel() {
+    if (!panel) return;
+    const { id } = panel.player;
+    const mine = ticket;
+    const result = await post('/admin/player', { id });
+    if (mine !== ticket || !panel || panel.player.id !== id || result.status !== 200) return;
+    panel = { ...result.body, prompts: { ...panel.prompts, ...result.body.prompts }, openDays: panel.openDays, loading: panel.loading, failed: panel.failed };
+    renderPanel();
+  }
+
+  // A run's prompts, when it's opened. Each call to the server looks up one day's.
+  async function loadPrompts(day) {
+    if (!panel || panel.prompts[day] || panel.loading.has(day)) return;
+    const { id } = panel.player;
+    panel.loading.add(day);
+    panel.failed.delete(day);
+    const result = await post('/admin/player', { id, day });
+    if (!panel || panel.player.id !== id) return;
+    panel.loading.delete(day);
+    if (result.status === 200 && result.body.prompts?.[day]) panel.prompts[day] = result.body.prompts[day];
+    else panel.failed.add(day);
+    renderPanel();
+  }
+
+  const safeColor = (color) => (/^#[0-9a-f]{3,8}$/i.test(color || '') ? color : 'var(--line)');
+
+  function runHTML(run) {
+    const p = panel;
+    const me = p.player;
+    const onBoard = !me.banned && !me.paused && me.rename_offer < 2;
+    const prompts = p.prompts[run.day];
+    const tier = (round) => p.tiers[round.tier] || { name: '?', color: '' };
+    const strip = Array.from({ length: 7 }, (_, i) => {
+      const round = run.rounds[i];
+      if (!round) return '<i class="none"></i>';
+      return round.tier >= 0 ? `<i style="background:${safeColor(tier(round).color)}"></i>` : '<i></i>';
+    }).join('');
+    const sum = run.rounds.reduce((total, round) => total + (round.pts || 0), 0);
+    const when = run.finished ? `finished ${dateTime(run.finished)}` : run.day === p.today ? `playing now, ${run.rounds.length}/7` : `stopped at ${run.rounds.length}/7`;
+    const about = [`${onBoard ? '' : 'would be '}${ordinal(run.place)} of ${num(run.players)}`, when, run.flags ? `left the tab ×${run.flags}` : ''].filter(Boolean).join(' · ');
+    const answers = run.rounds.map((round, i) => {
+      const question = esc(prompts?.[i] || `Question ${i + 1}`);
+      if (round.tier >= 0) {
+        const name = round.name ?? '(not saved)';
+        const typed = round.typed && round.typed.toLowerCase() !== String(name).toLowerCase() ? `<span class="typed">“${esc(round.typed)}” → </span>` : '';
+        return `<li style="border-left-color:${safeColor(tier(round).color)}"><span class="q">${question}</span>
+          <span class="a"><span>${typed}<b>${esc(name)}</b></span><span class="pts">${num(round.pts)}</span></span>
+          <span class="why">${esc(tier(round).name)}${round.ref ? ' · the referee said yes' : ''}</span></li>`;
+      }
+      return `<li class="miss"><span class="q">${question}</span>
+        <span class="a"><span>${round.flag ? 'Left the tab' : 'No answer'}${round.typed ? ` · last typed “${esc(round.typed)}”` : ''}</span><span class="pts">0</span></span></li>`;
+    }).join('');
+    const note = run.score_was != null
+      ? `<span class="note">Changed from ${num(run.score_was)}. <button type="button" class="link inline" data-score-day="${run.day}" data-score="${run.score_was}">Put it back</button></span>`
+      : sum !== run.score ? `<span class="note">The answers add up to ${num(sum)}.</span>` : '';
+    const loadingNote = prompts ? '' : `<p class="note">${p.failed.has(run.day) ? 'Couldn’t load the questions. Close this day and open it again.' : 'Loading the questions…'}</p>`;
+    return `<details data-day="${run.day}"${p.openDays.has(run.day) ? ' open' : ''}>
+        <summary><span class="run-day"><b>Day ${run.day}</b> · <b>${esc(panelDay(run.day))}</b><small>${esc(about)}</small></span>
+          <span class="strip" aria-hidden="true">${strip}</span><span class="score">${num(run.score)}</span></summary>
+        ${loadingNote}
+        <ol class="answers">${answers || '<li class="miss"><span class="a"><span>No answers yet.</span></span></li>'}</ol>
+        <div class="run-tools"><button type="button" class="small-btn" data-score-day="${run.day}">Change score</button>${note}</div>
+      </details>`;
+  }
+
+  const panelDay = (day) => new Date(panel.epoch + (day - 1) * 86400000).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric' });
+
+  function renderPanel({ fresh = false } = {}) {
+    const p = panel;
+    const me = p.player;
+    const keep = fresh ? {} : {
+      message: $('panelMsg')?.value || '',
+      reply: document.querySelector('#panelBody .panel-appeal textarea')?.value || '',
+      length: $('panelBanLength')?.value || '',
+      scroll: $('panel').scrollTop,
+    };
+    $('panelName').textContent = me.name;
+    const kind = { own: 'real name', anon: 'anonymous' }[me.name_kind] || 'hasn’t answered the name question';
+    $('panelSub').textContent = [`Player #${me.id}`, me.created ? `joined ${panelDay(me.created)}` : '', kind,
+      me.name_before && me.name_before !== me.name ? `was ${me.name_before}` : ''].filter(Boolean).join(' · ');
+
+    const tags = [
+      me.banned && `<span class="tag bad">${me.banned_until ? `banned until ${esc(dateTime(me.banned_until))}` : 'banned until you lift it'}</span>`,
+      me.paused && '<span class="tag">paused, off the boards</span>',
+      me.appeal_state === 'waiting' && me.banned && '<span class="tag">appeal waiting</span>',
+      me.rename_offer === 2 && '<span class="tag">has to pick a new name</span>',
+      me.name_request && !me.name_request_no && `<span class="tag">asked to be ${esc(me.name_request)}</span>`,
+    ].filter(Boolean).join('');
+
+    const runs = p.runs.length ? `<div class="runs">${p.runs.map(runHTML).join('')}</div>` : '<p class="empty">No ranked runs yet.</p>';
+
+    const sent = p.messages.length ? `<ul class="rows msgs">${p.messages.map((m) => `<li>
+        <div class="text">${esc(m.text)}</div>
+        <div class="meta">sent ${esc(dateTime(m.at))} · ${m.seen_at ? `<b>seen ${esc(dateTime(m.seen_at))}</b>` : 'not seen yet'}</div></li>`).join('')}</ul>` : '';
+    const message = `<form id="msgForm" autocomplete="off">
+        <textarea id="panelMsg" class="reply" rows="3" maxlength="${p.messageMax}" aria-label="Message for ${esc(me.name)}"
+          placeholder="It pops up the next time they open the game"></textarea>
+        <div class="msg-go"><button type="submit" class="small-btn yes">Send</button></div>
+      </form>${sent}`;
+
+    const lengths = BAN_LENGTHS.map(([hours, label]) => `<option value="${hours}">${label}</option>`).join('');
+    const ban = me.banned
+      ? `<p class="line">Banned ${me.banned_until ? `until ${esc(dateTime(me.banned_until))}` : 'until you lift it'}. They can only play Endless.</p>
+        <div class="act"><button type="button" class="small-btn yes" data-unban="${me.id}" data-name="${esc(me.name)}">Unban</button></div>
+        <div class="act"><select id="panelBanLength" aria-label="New length">${lengths}</select><button type="button" class="small-btn" data-panel-ban>Change length</button></div>`
+      : `<div class="act"><select id="panelBanLength" aria-label="How long">${lengths}</select><button type="button" class="small-btn ban-go" data-panel-ban>Ban</button></div>`;
+    const pause = me.paused
+      ? `<p class="line">Paused: off the boards, and ranked is locked for them.</p>
+        <div class="act"><button type="button" class="small-btn yes" data-pause="0">Put back on the boards</button></div>`
+      : `<div class="act"><button type="button" class="small-btn" data-pause="1">Pause</button></div>
+        <p class="note">Takes them off the boards and locks ranked, without a ban. They can still play for fun.</p>`;
+    const name = me.name_kind === 'anon' ? ''
+      : `<div class="act-block"><div class="act"><button type="button" class="small-btn" data-anon-id="${me.id}" data-name="${esc(me.name)}">Make anonymous</button></div></div>`;
+
+    const appeal = me.appeal ? `<section class="panel-appeal"><h3>Appeal<small>${esc(dateTime(me.appeal_at))}</small></h3><div class="card">
+        <span class="appeal-text">${esc(me.appeal)}</span>
+        ${me.appeal_state === 'waiting' && me.banned ? `<textarea class="reply" rows="2" maxlength="300" aria-label="Message for ${esc(me.name)} if you lift the ban"
+            placeholder="A message they’ll see if you lift it (optional)"></textarea>
+          <span class="pair">
+            <button type="button" class="small-btn yes" data-appeal="lift" data-id="${me.id}" data-at="${me.appeal_at}" data-name="${esc(me.name)}">Lift the ban</button>
+            <button type="button" class="small-btn" data-appeal="keep" data-id="${me.id}" data-at="${me.appeal_at}" data-name="${esc(me.name)}">Keep the ban</button>
+          </span>`
+        : `<p class="note">${me.appeal_state === 'yes' ? 'The ban was lifted.' : me.appeal_state === 'no' ? 'You kept the ban.' : ''}${me.appeal_reply ? ` Your note: “${esc(me.appeal_reply)}”` : ''}</p>`}
+      </div></section>` : '';
+
+    const feedback = p.feedback.length ? `<section><h3>Feedback they sent<small>with their name on it</small></h3><div class="card"><ul class="rows feedback">${p.feedback.map((row) => `<li>
+        <div class="meta">${esc([dateTime(row.at), row.device, row.place].filter(Boolean).join(' · '))}</div>
+        <div class="text">${esc(row.text)}</div></li>`).join('')}</ul></div></section>` : '';
+
+    $('panelBody').innerHTML = `
+      ${tags ? `<div class="panel-tags">${tags}</div>` : ''}
+      <section><h3>Answers<small>${p.runs.length ? `${num(p.runs.length)} ranked ${p.runs.length === 1 ? 'run' : 'runs'}` : ''}</small></h3><div class="card">${runs}</div></section>
+      <section><h3>Message</h3><div class="card">${message}</div></section>
+      <section><h3>Ban, pause, name</h3><div class="card"><div class="act-block">${ban}</div><div class="act-block">${pause}</div>${name}</div></section>
+      ${appeal}
+      ${feedback}`;
+    if (!fresh) {
+      if ($('panelMsg')) $('panelMsg').value = keep.message;
+      const replyBox = document.querySelector('#panelBody .panel-appeal textarea');
+      if (replyBox) replyBox.value = keep.reply;
+      if ($('panelBanLength')) $('panelBanLength').value = keep.length;
+      $('panel').scrollTop = keep.scroll;
+    }
+  }
+
+  async function sendMessage() {
+    const box = $('panelMsg');
+    const text = box.value.trim();
+    if (!text || !panel) return;
+    const { id, name } = panel.player;
+    if (!confirm(`Send this to ${name}? It pops up the next time they open the game.`)) return;
+    const go = $('msgForm').querySelector('button');
+    go.disabled = true;
+    const result = await post('/admin/message', { id, text });
+    go.disabled = false;
+    if (result.status !== 200) return flash(problem(result));
+    box.value = '';
+    flash(`Sent. ${result.body.name} will see it the next time they open the game.`);
+    refreshPanel();
+  }
+
+  async function panelBan(button) {
+    const me = panel?.player;
+    if (!me) return;
+    const choice = $('panelBanLength');
+    const hours = choice.value ? Number(choice.value) : null;
+    const length = choice.selectedOptions[0].textContent;
+    if (!confirm(me.banned ? `Change ${me.name}’s ban to ${hours ? `${length} from now` : 'until you lift it'}?`
+      : hours ? `Ban ${me.name} for ${length}? Until then they can only play Endless, and they can appeal.`
+        : `Ban ${me.name} until you lift it? They can only play Endless, and they can appeal.`)) return;
+    button.disabled = true;
+    const result = await post('/admin/ban', { id: me.id, hours });
+    if (result.status !== 200) {
+      button.disabled = false;
+      return flash(problem(result));
+    }
+    const { body } = result;
+    const ends = body.until ? `until ${dateTime(body.until)}` : 'until you lift it';
+    flash(body.already ? `${body.name}’s ban lasts ${ends} now.` : `${body.name} is banned ${ends}. They’ll see it next time they open the game.`);
+    changed();
+  }
+
+  async function setPause(button) {
+    const me = panel?.player;
+    if (!me) return;
+    const paused = button.dataset.pause === '1';
+    if (!confirm(paused ? `Pause ${me.name}? They go off the boards and can’t play ranked, without a ban.` : `Put ${me.name} back on the boards with their scores?`)) return;
+    button.disabled = true;
+    const result = await post('/admin/pause', { id: me.id, paused });
+    flash(result.status !== 200 ? problem(result) : paused ? `${result.body.name} is paused and off the boards.` : `${result.body.name} is back on the boards.`);
+    changed();
+  }
+
+  // A new score typed in, or the first score put back.
+  async function changeScore(button) {
+    const me = panel?.player;
+    const day = Number(button.dataset.scoreDay);
+    const run = panel?.runs.find((each) => each.day === day);
+    if (!me || !run) return;
+    let score;
+    if (button.dataset.score !== undefined) {
+      score = Number(button.dataset.score);
+      if (!confirm(`Put ${me.name}’s Day ${day} score back to ${num(score)}?`)) return;
+    } else {
+      const typed = prompt(`New score for ${me.name} on Day ${day}, from 0 to ${panel.scoreMax}. It’s ${run.score} now.`, String(run.score));
+      if (typed === null) return;
+      score = Number(typed.trim());
+      if (!typed.trim() || !Number.isInteger(score) || score < 0 || score > panel.scoreMax) return flash(`A score is a whole number from 0 to ${panel.scoreMax}.`);
+      if (score === run.score) return;
+    }
+    button.disabled = true;
+    const result = await post('/admin/score', { id: me.id, day, score });
+    flash(result.status !== 200 ? problem(result) : `${result.body.name}’s Day ${day} score is ${num(result.body.score)} now.`);
+    changed();
   }
 
   async function setMode(button) {
@@ -636,11 +1051,13 @@
     load();
   }
 
+  // Inside the player panel while it's open, since the page under it is covered.
   function flash(text) {
-    $('flash').textContent = text;
-    $('flash').hidden = false;
-    clearTimeout(flash.timer);
-    flash.timer = setTimeout(() => { $('flash').hidden = true; }, 6000);
+    const box = $('panel').open ? $('panelFlash') : $('flash');
+    box.textContent = text;
+    box.hidden = false;
+    clearTimeout(box.timer);
+    box.timer = setTimeout(() => { box.hidden = true; }, 6000);
   }
 
   $('signin').addEventListener('submit', (event) => {
@@ -667,8 +1084,12 @@
       document.querySelector(`.bar[data-chart="${bar.dataset.chart}"][data-i="${bar.dataset.i}"]`)?.focus();
       return;
     }
+    const who = event.target.closest('[data-player]');
+    if (who) openPlayer({ id: Number(who.dataset.player), label: who.textContent });
+    const near = event.target.closest('[data-find-name]');
+    if (near) openPlayer({ name: near.dataset.findName });
     const anon = event.target.closest('[data-anon]');
-    if (anon) makeAnonymous(anon.dataset.anon);
+    if (anon) makeAnonymous(anon);
     const decision = event.target.closest('[data-decide]');
     if (decision) decide(decision);
     const mode = event.target.closest('[data-mode]');
@@ -679,13 +1100,56 @@
     if (lift) unban(lift);
   });
   $('content').addEventListener('submit', (event) => {
-    if (event.target.id !== 'banForm') return;
-    event.preventDefault();
-    ban(event.target);
+    if (event.target.id === 'banForm') {
+      event.preventDefault();
+      ban(event.target);
+    }
+    if (event.target.id === 'findForm') {
+      event.preventDefault();
+      const name = $('findName').value.trim();
+      if (name) openPlayer({ name });
+    }
   });
+
+  const dialog = $('panel');
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog || event.target.closest('[data-panel-close]')) return dialog.close();
+    const target = (selector) => event.target.closest(selector);
+    if (target('[data-panel-ban]')) panelBan(target('[data-panel-ban]'));
+    else if (target('[data-unban]')) unban(target('[data-unban]'));
+    else if (target('[data-pause]')) setPause(target('[data-pause]'));
+    else if (target('[data-anon-id]')) makeAnonymous(target('[data-anon-id]'));
+    else if (target('[data-score-day]')) changeScore(target('[data-score-day]'));
+    else if (target('[data-appeal]')) answerAppeal(target('[data-appeal]'));
+  });
+  dialog.addEventListener('submit', (event) => {
+    if (event.target.id !== 'msgForm') return;
+    event.preventDefault();
+    sendMessage();
+  });
+  // Opening a run loads its prompts; which runs are open stays through a refresh.
+  dialog.addEventListener('toggle', (event) => {
+    const details = event.target;
+    if (!panel || details.tagName !== 'DETAILS') return;
+    const day = Number(details.dataset.day);
+    // A day whose prompts didn't load tries again when it's closed and opened, not on every redraw.
+    if (details.open) {
+      panel.openDays.add(day);
+      if (!panel.failed.has(day)) loadPrompts(day);
+    } else {
+      panel.openDays.delete(day);
+      panel.failed.delete(day);
+    }
+  }, true);
+  dialog.addEventListener('close', () => {
+    panel = null;
+    ticket += 1;
+    $('panelFlash').hidden = true;
+  });
+
   // Fresh numbers every minute while the page is open, and when coming back to it. Not while the ban
-  // form or an appeal message is being filled in, so a phone's keyboard stays up.
-  const typing = () => Boolean(document.activeElement?.closest?.('#banForm, .reply'));
+  // form, the search box or an appeal message is being filled in, so a phone's keyboard stays up.
+  const typing = () => Boolean(document.activeElement?.closest?.('#banForm, #findForm, .reply'));
   const fresh = () => { if (data && document.visibilityState === 'visible' && !typing()) load(); };
   setInterval(fresh, 60000);
   document.addEventListener('visibilitychange', fresh);

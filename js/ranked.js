@@ -46,6 +46,9 @@ export const cancelRequest = () => call('request', withKey({ cancel: true }));
 // { error: 'empty' | 'waiting' | 'not-banned' }.
 export const appeal = (text) => call('appeal', withKey({ text }));
 
+// Says which of the admin's messages the game has shown, so the dashboard shows them as seen.
+export const read = (ids) => call('read', withKey({ ids }));
+
 // The server's name wins, so a nickname the admin changed shows up on this device too.
 export function syncName(name) {
   const me = player();
