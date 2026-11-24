@@ -1531,10 +1531,12 @@ async function checkRanked() {
       store.set('ranked.requestSaid', request.name);
       notice(`Your request for ${request.name} wasn’t approved. You can ask for a different name from the leaderboard.`);
     }
-    // A lifted ban is said once: by an appeal, or a timed one that ran out.
+    // A lifted ban is said once: by an appeal, or a timed one that ran out. An appeal lifted with a
+    // note from the admin is said in a sheet instead, when one can open (sayAppealReply).
     if (status.appeal?.state === 'yes' && store.get('ranked.appealSaid') !== status.appeal.at) {
       store.set('ranked.appealSaid', status.appeal.at);
-      notice('Your appeal went through. You’re back on the leaderboard.');
+      if (status.appeal.reply) store.set('ranked.appealReply', String(status.appeal.reply));
+      else notice('Your appeal went through. You’re back on the leaderboard.');
     } else if (wasBanned) {
       notice('Your ban is over. Everything’s open again.');
     }
@@ -1834,6 +1836,21 @@ function sayBan(status) {
   store.set('ranked.banSaid', G.today);
   if (turnedDown) store.set('ranked.appealSaid', appeal.at);
   openBan();
+  return true;
+}
+
+// An appeal lifted with a note from the admin: the note pops up once, the first time the game opens
+// with no other sheet up. Says whether it opened.
+function sayAppealReply() {
+  const reply = store.get('ranked.appealReply');
+  if (!reply || isBanned()) return false;
+  store.remove('ranked.appealReply');
+  openSheet('Your appeal went through', `<div class="note">
+      <p class="note-text">You’re back on the leaderboard.</p>
+      <p class="note-text appeal-reply">${esc(reply)}</p>
+      <button id="appealReplyDone" class="btn btn-primary btn-big announce-go" type="button">Got it</button>
+    </div>`);
+  $('appealReplyDone').addEventListener('click', () => { audio.click(); closeSheet(); });
   return true;
 }
 
@@ -2448,6 +2465,7 @@ async function boot() {
   // The name question (real name or anonymous) is asked every time until it's answered. A name the
   // admin offered a change, or requires one, is asked too; an offer asks once a day.
   // Otherwise the note in js/note.js pops up once, and after that an open poll the player hasn't seen.
+  // An appeal lifted with a note from the admin goes before all of those.
   checkRanked().then((status) => {
     if (G.phase === 'title') refreshTitle();
     if (G.phase !== 'title' || el.sheet.open) return;
@@ -2455,6 +2473,7 @@ async function boot() {
       sayBan(status);
       return;
     }
+    if (sayAppealReply()) return;
     const renameDue = status?.nameCheck || (status?.rename && !(status.rename === 'offer' && store.get('ranked.renameAsked') === G.today));
     if (renameDue) openRename();
     else if (!showNote()) askPoll();

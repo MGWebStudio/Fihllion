@@ -766,6 +766,8 @@ dialog#sheet.is-announce .sheet-head h2 { font-size: 46px; }
 /* The maker's note (js/note.js) */
 .note-text { margin: 0 0 12px; font-size: 22px; line-height: 1.35; }
 .note-text:first-child { font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--gilt); }
+/* The admin's note with a lifted appeal (sayAppealReply in main.js), as the admin typed it. */
+.appeal-reply { padding-left: 12px; border-left: 4px solid var(--glass); white-space: pre-wrap; overflow-wrap: anywhere; }
 .announce-lead { margin: 6px 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 1.15; color: var(--cream); }
 .announce-go { width: 100%; margin-top: 18px; }
 .announce-later { width: 100%; margin-top: 10px; }

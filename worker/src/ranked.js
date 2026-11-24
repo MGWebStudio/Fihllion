@@ -16,7 +16,8 @@
 //   POST /ranked/appeal    {"key", "text"}                       -> {"appeal": {"state": "waiting", "at"}}, a banned
 //                          player asking for the ban to be lifted; the admin answers on the dashboard
 //   A banned player's /ranked/status is {"banned": true, "name", "appeal", "until"} ("until": when a timed ban
-//   ends, or null), and everything else is {"error": "banned"}.
+//   ends, or null), and everything else is {"error": "banned"}. Once the appeal is answered, "appeal" is
+//   {"state": "yes"|"no", "at"}, with "reply" when the admin lifted it with a note.
 //   POST /ranked/board    {"key"?, "day"?}                      -> today's and this week's boards
 import { COUNTDOWN, LIMIT, PROMPTS_PER_DIVE, TIERS, withHiddenAnswer } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
@@ -24,6 +25,7 @@ import { parseJSON, cleanTyped, loadCalendar, findPrompt, judge } from './shared
 
 const GRACE_MS = 2500; // network time on top of the clock the player sees
 const APPEAL_MAX = 600; // characters, the same as the feedback box
+export const REPLY_MAX = 300; // characters in the admin's note with a lifted appeal
 // Answers passed along by the Google relay (relay/google-apps-script.js) take an extra hop each way,
 // so they get more time before they count as late.
 const RELAY_GRACE_MS = 4000;
@@ -135,7 +137,7 @@ async function join(env, data) {
 export async function playerFor(env, key) {
   if (typeof key !== 'string' || key.length < 16 || key.length > 100) return null;
   const player = await env.DB.prepare(`SELECT id, name, banned, banned_until, paused, rename_offer, name_kind, name_request, name_request_no,
-      appeal_at, appeal_state FROM players WHERE key_hash = ?1`)
+      appeal_at, appeal_state, appeal_reply FROM players WHERE key_hash = ?1`)
     .bind(await sha256(key)).first();
   // A timed ban that has run out is lifted the first time the player's game asks.
   if (player?.banned && player.banned_until && player.banned_until <= Date.now()) {
@@ -243,21 +245,27 @@ async function appeal(env, player, data) {
   if (text.length < 2) return { error: 'empty' };
   if (player.appeal_state === 'waiting') return { error: 'waiting', appeal: appealFor(player) };
   const at = Date.now();
-  await env.DB.prepare("UPDATE players SET appeal = ?2, appeal_at = ?3, appeal_state = 'waiting' WHERE id = ?1")
+  await env.DB.prepare("UPDATE players SET appeal = ?2, appeal_at = ?3, appeal_state = 'waiting', appeal_reply = NULL WHERE id = ?1")
     .bind(player.id, text, at).run();
   return { appeal: { state: 'waiting', at } };
 }
 
-const appealFor = (player) => (player.appeal_state ? { state: player.appeal_state, at: player.appeal_at } : null);
+const appealFor = (player) => {
+  if (!player.appeal_state) return null;
+  const reply = player.appeal_state === 'yes' && player.appeal_reply;
+  return { state: player.appeal_state, at: player.appeal_at, ...(reply ? { reply } : {}) };
+};
 
 // The admin's answer to an appeal, from the dashboard. Only the appeal the admin read is decided.
-// Lifting it puts the player back on the boards with their scores; turning it down keeps the ban.
-export async function decideAppeal(env, id, at, lift) {
+// Lifting it puts the player back on the boards with their scores, with the admin's note if there is
+// one; turning it down keeps the ban.
+export async function decideAppeal(env, id, at, lift, reply = '') {
   const player = await env.DB.prepare('SELECT id, name, banned, appeal_at, appeal_state FROM players WHERE id = ?1').bind(id).first();
   if (!player || player.appeal_state !== 'waiting' || player.appeal_at !== at) return { error: 'That appeal changed. Refresh and look again.' };
-  await env.DB.prepare(`UPDATE players SET appeal_state = ?3${lift ? ', banned = 0, banned_until = NULL' : ''} WHERE id = ?1 AND appeal_at = ?2`)
-    .bind(id, at, lift ? 'yes' : 'no').run();
-  return { name: player.name, lifted: lift };
+  const note = lift ? reply.trim().slice(0, REPLY_MAX) || null : null;
+  await env.DB.prepare(`UPDATE players SET appeal_state = ?3, appeal_reply = ?4${lift ? ', banned = 0, banned_until = NULL' : ''} WHERE id = ?1 AND appeal_at = ?2`)
+    .bind(id, at, lift ? 'yes' : 'no', note).run();
+  return { name: player.name, lifted: lift, reply: Boolean(note) };
 }
 
 // Runs -----------------------------------------------------------------------------------

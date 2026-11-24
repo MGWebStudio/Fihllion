@@ -172,6 +172,36 @@
   .pair .small-btn { flex: 1; min-height: 40px; }
   .asked { font: 26px/1.05 var(--display); color: var(--cream); }
   .appeal-text { flex-basis: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
+  /* Bans: a name and how long, then everyone who's banned, appeals first. */
+  .ban-form label { display: block; font: 11px/1.2 var(--label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
+  .ban-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .ban-fields input { grid-column: 1 / -1; }
+  .ban-fields input, .ban-fields select {
+    min-width: 0;
+    min-height: 44px;
+    font: 20px var(--body);
+    color: var(--cream);
+    background: var(--ink);
+    border: 2px solid var(--slate);
+    padding: 8px 10px;
+    border-radius: 0;
+  }
+  .ban-go { min-height: 44px; font-size: 12px; border-color: var(--danger); color: var(--danger); }
+  .ban-go:hover { background: var(--danger); color: var(--ink); }
+  .ban-go:disabled { cursor: progress; opacity: 0.6; }
+  .banned-list { margin-top: 16px; padding-top: 14px; border-top: 2px solid var(--line); }
+  .reply {
+    flex-basis: 100%;
+    width: 100%;
+    min-height: 64px;
+    font: 20px/1.25 var(--body);
+    color: var(--cream);
+    background: var(--ink);
+    border: 2px solid var(--slate);
+    padding: 8px 10px;
+    border-radius: 0;
+    resize: vertical;
+  }
   .summary { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 12px; font-size: 18px; color: var(--muted); }
   .summary b { font: 26px/1 var(--display); color: var(--cream); font-weight: normal; margin-right: 4px; }
   .more { margin-top: 10px; }
@@ -185,7 +215,20 @@
   .opt-bar { height: 8px; background: var(--ink); margin-top: 4px; }
   .opt-bar i { display: block; height: 100%; background: var(--glass); }
   .empty { color: var(--muted); margin: 0; }
-  .flash { border: 2px solid var(--glass); background: var(--card); padding: 10px 12px; margin: 0 0 16px; }
+  /* What a button did, at the bottom of the screen so it shows wherever the button was. */
+  .flash {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    max-width: 608px;
+    margin: 0 auto;
+    z-index: 5;
+    border: 2px solid var(--glass);
+    background: var(--card);
+    padding: 10px 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  }
 
   /* Sign in */
   .signin label { display: block; font: 12px var(--label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
@@ -260,6 +303,7 @@
   let data = null;
   let loading = false;
   const picked = {}; // which day's bar is selected in each chart
+  const BAN_LENGTHS = [['', 'Until I lift it'], [1, '1 hour'], [24, '1 day'], [72, '3 days'], [168, '1 week']];
 
   async function call(path, options = {}) {
     const res = await fetch(path, {
@@ -414,21 +458,32 @@
         </span></li>`).join('')}</ul>`
       : '<p class="empty">No name requests waiting.</p>';
 
-    // Ban appeals: what each banned player wrote, with Lift the ban and Keep the ban. Only the appeal
-    // shown here is decided. Everyone else who's banned is listed under them.
+    // Bans: ban someone by name, then everyone who's banned. A waiting appeal shows what they wrote,
+    // with Lift the ban and Keep the ban (only the appeal shown here is decided); anyone else has Unban.
     const waiting = d.banned.filter((row) => row.appeal_state === 'waiting');
-    const others = d.banned.filter((row) => row.appeal_state !== 'waiting');
-    const appeals = `${waiting.length ? `<ul class="rows">${waiting.map((row) => `<li class="req">
+    const suggest = [...new Set([...d.board.filter((row) => !row.banned).map((row) => row.name), ...d.recent.map((row) => row.name)])];
+    const banForm = `<form id="banForm" class="ban-form" autocomplete="off">
+        <label for="banName">Ban a player</label>
+        <div class="ban-fields">
+          <input id="banName" type="text" list="banNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+          <select id="banLength" aria-label="How long">${BAN_LENGTHS.map(([hours, label]) => `<option value="${hours}">${label}</option>`).join('')}</select>
+          <button type="submit" class="small-btn ban-go">Ban</button>
+        </div>
+        <datalist id="banNames">${suggest.map((name) => `<option value="${esc(name)}">`).join('')}</datalist>
+      </form>`;
+    const bannedList = d.banned.length ? `<ul class="rows">${d.banned.map((row) => row.appeal_state === 'waiting' ? `<li class="req">
         <span class="who"><span class="asked">${esc(row.name)}</span><small>appealed ${esc(dateTime(row.appeal_at))}${row.banned_until ? ` · ban ends ${esc(dateTime(row.banned_until))}` : ''}</small></span>
         <span class="appeal-text">${esc(row.appeal)}</span>
+        <textarea class="reply" id="reply-${row.id}" rows="2" maxlength="300" aria-label="Message for ${esc(row.name)} if you lift the ban"
+          placeholder="A message they’ll see if you lift it (optional)"></textarea>
         <span class="pair">
           <button type="button" class="small-btn yes" data-appeal="lift" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Lift the ban</button>
           <button type="button" class="small-btn" data-appeal="keep" data-id="${row.id}" data-at="${row.appeal_at}" data-name="${esc(row.name)}">Keep the ban</button>
-        </span></li>`).join('')}</ul>` : '<p class="empty">No appeals waiting.</p>'}
-      ${others.length ? `<p class="note">Banned: ${others.map((row) => `${esc(row.name)}${[
-        row.banned_until ? `until ${dateTime(row.banned_until)}` : '',
-        row.appeal_state === 'no' ? 'appeal turned down' : '',
-      ].filter(Boolean).map((note) => ` (${esc(note)})`).join('')}`).join(', ')}</p>` : ''}`;
+        </span></li>` : `<li>
+        <span class="who">${esc(row.name)}<small>${esc([row.banned_until ? `until ${dateTime(row.banned_until)}` : 'until you lift it', row.appeal_state === 'no' ? 'appeal turned down' : ''].filter(Boolean).join(' · '))}</small></span>
+        <button type="button" class="small-btn" data-unban="${row.id}" data-name="${esc(row.name)}">Unban</button></li>`).join('')}</ul>`
+      : '<p class="empty">Nobody is banned.</p>';
+    const bans = `${banForm}<div class="banned-list">${bannedList}</div>`;
 
     const feedback = d.feedback.length ? `<ul class="rows feedback">${d.feedback.map((row) => `<li>
         <div class="meta">${esc([dateTime(row.at), row.name || 'no name', row.device, row.place].filter(Boolean).join(' · '))}</div>
@@ -447,6 +502,9 @@
         <p class="note">${num(total)} ${total === 1 ? 'vote' : 'votes'}</p></div></section>`;
     }
 
+    // What's typed in the ban form and the appeal messages stays through a refresh.
+    const draft = { name: $('banName')?.value || '', length: $('banLength')?.value || '' };
+    const replies = [...document.querySelectorAll('textarea.reply')].map((box) => [box.id, box.value]);
     $('content').innerHTML = `
       <section>
         <h2>Today<small>midnight to midnight</small></h2>
@@ -492,10 +550,13 @@
 
       <section><h2>Today’s board<small>top ${d.board.length || 20}</small></h2><div class="card">${board}</div></section>
       <section><h2>Name requests${d.requests.length ? `<small>${d.requests.length} waiting</small>` : ''}</h2><div class="card">${requests}</div></section>
-      <section><h2>Ban appeals${waiting.length ? `<small>${waiting.length} waiting</small>` : ''}</h2><div class="card">${appeals}</div></section>
+      <section><h2>Bans${waiting.length ? `<small>${waiting.length} ${waiting.length === 1 ? 'appeal' : 'appeals'} waiting</small>` : ''}</h2><div class="card">${bans}</div></section>
       <section><h2>Names</h2><div class="card">${names}</div></section>
       <section><h2>Feedback<small>last 7 days</small></h2><div class="card">${feedback}</div></section>
       ${poll}`;
+    $('banName').value = draft.name;
+    $('banLength').value = draft.length;
+    for (const [id, value] of replies) if ($(id)) $(id).value = value;
   }
 
   async function makeAnonymous(name) {
@@ -519,12 +580,50 @@
   async function answerAppeal(button) {
     const { id, at, name, appeal } = button.dataset;
     const lift = appeal === 'lift';
-    if (!confirm(lift ? `Lift ${name}’s ban? They go back on the boards with their scores.`
+    const reply = lift ? ($(`reply-${id}`)?.value.trim() || '') : '';
+    if (!confirm(lift ? `Lift ${name}’s ban? They go back on the boards with their scores${reply ? ', and see your message when they open the game' : ''}.`
       : `Keep ${name}’s ban? They’ll see their appeal was turned down, and can send another.`)) return;
     button.closest('.pair').querySelectorAll('button').forEach((each) => { each.disabled = true; });
-    const { status, body } = await call('/admin/appeal', { method: 'POST', body: JSON.stringify({ id: Number(id), at: Number(at), lift }) });
+    const { status, body } = await call('/admin/appeal', { method: 'POST', body: JSON.stringify({ id: Number(id), at: Number(at), lift, ...(reply ? { reply } : {}) }) });
+    if (status === 200 && $(`reply-${id}`)) $(`reply-${id}`).value = '';
     flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
-      : lift ? `${body.name}’s ban is lifted. They’ll see it next time they open the game.` : `${body.name} stays banned. They’ll see the appeal was turned down.`);
+      : lift ? `${body.name}’s ban is lifted. They’ll see it${body.reply ? ', and your message,' : ''} next time they open the game.`
+      : `${body.name} stays banned. They’ll see the appeal was turned down.`);
+    load();
+  }
+
+  async function ban(form) {
+    const name = $('banName').value.trim();
+    if (!name) return;
+    const choice = $('banLength');
+    const hours = choice.value ? Number(choice.value) : null;
+    if (!confirm(hours ? `Ban ${name} for ${choice.selectedOptions[0].textContent}? Until then they can only play Endless, and they can appeal.`
+      : `Ban ${name} until you lift it? They can only play Endless, and they can appeal.`)) return;
+    const go = form.querySelector('button');
+    go.disabled = true;
+    let result;
+    try {
+      result = await call('/admin/ban', { method: 'POST', body: JSON.stringify({ name, hours }) });
+    } catch {
+      result = { status: 0, body: { error: 'Couldn’t reach the server. Try again.' } };
+    }
+    go.disabled = false;
+    const { status, body } = result;
+    if (status !== 200) return flash(body.error || PROBLEMS[status] || 'That didn’t work. Try again.');
+    $('banName').value = '';
+    $('banLength').value = '';
+    const ends = body.until ? `until ${dateTime(body.until)}` : 'until you lift it';
+    flash(body.already ? `${body.name} was already banned. It lasts ${ends} now.` : `${body.name} is banned ${ends}. They’ll see it next time they open the game.`);
+    load();
+  }
+
+  async function unban(button) {
+    const { unban: id, name } = button.dataset;
+    if (!confirm(`Unban ${name}? They go back on the boards with their scores.`)) return;
+    button.disabled = true;
+    const { status, body } = await call('/admin/unban', { method: 'POST', body: JSON.stringify({ id: Number(id) }) });
+    flash(status !== 200 ? body.error || PROBLEMS[status] || 'That didn’t work. Try again.'
+      : `${body.name} is unbanned. They’ll see it next time they open the game.`);
     load();
   }
 
@@ -576,10 +675,20 @@
     if (mode) setMode(mode);
     const appeal = event.target.closest('[data-appeal]');
     if (appeal) answerAppeal(appeal);
+    const lift = event.target.closest('[data-unban]');
+    if (lift) unban(lift);
   });
-  // Fresh numbers every minute while the page is open, and when coming back to it.
-  setInterval(() => { if (data && document.visibilityState === 'visible') load(); }, 60000);
-  document.addEventListener('visibilitychange', () => { if (data && document.visibilityState === 'visible') load(); });
+  $('content').addEventListener('submit', (event) => {
+    if (event.target.id !== 'banForm') return;
+    event.preventDefault();
+    ban(event.target);
+  });
+  // Fresh numbers every minute while the page is open, and when coming back to it. Not while the ban
+  // form or an appeal message is being filled in, so a phone's keyboard stays up.
+  const typing = () => Boolean(document.activeElement?.closest?.('#banForm, .reply'));
+  const fresh = () => { if (data && document.visibilityState === 'visible' && !typing()) load(); };
+  setInterval(fresh, 60000);
+  document.addEventListener('visibilitychange', fresh);
 
   if (password) load();
   else showSignin();

@@ -70,7 +70,7 @@ if (command === 'board') {
   const until = length ? Date.now() + Number(length[1]) * (length[2] === 'd' ? 86400000 : 3600000) : null;
   // A new ban starts with no appeal; lifting one answers an appeal that's waiting.
   sql(command === 'ban'
-    ? `UPDATE players SET banned = 1, banned_until = ${until ?? 'NULL'}, appeal = NULL, appeal_at = NULL, appeal_state = NULL WHERE name_key = '${key}'`
+    ? `UPDATE players SET banned = 1, banned_until = ${until ?? 'NULL'}, appeal = NULL, appeal_at = NULL, appeal_state = NULL, appeal_reply = NULL WHERE name_key = '${key}'`
     : `UPDATE players SET banned = 0, banned_until = NULL, appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE name_key = '${key}'`);
   const ends = until ? `, until ${new Date(until).toLocaleString('en-US', { timeZone: 'America/Denver', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })} MT` : '';
   console.log(`${found[0].name} ${command === 'ban' ? `is banned${ends}: Endless only, off every board, and they can appeal from the game` : 'is back on the boards'}.`);

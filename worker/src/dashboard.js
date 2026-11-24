@@ -7,8 +7,11 @@
 //                      turned down, like node admin.mjs approve-name / deny-name
 //   POST /admin/referee {"mode": "practice"|"cloudflare"|"all"|"off"} -> which checks try the PC
 //                      referee first, from the next check on (refereeMode in shared.js)
-//   POST /admin/appeal {"id": 12, "at": 1764..., "lift": true|false} -> a ban appeal answered: the ban
-//                      lifted, or kept (decideAppeal in ranked.js)
+//   POST /admin/appeal {"id": 12, "at": 1764..., "lift": true|false, "reply"?: "..."} -> a ban appeal answered:
+//                      the ban lifted, with a note the player sees once, or kept (decideAppeal in ranked.js)
+//   POST /admin/ban    {"name": "Sam", "hours": 24|null} -> the player banned, for that many hours or until
+//                      it's lifted, like node admin.mjs ban
+//   POST /admin/unban  {"id": 12} -> a ban lifted, like node admin.mjs unban
 //
 // The password is the secret ADMIN_KEY, which only the admin sets (README, "Dashboard"); with no
 // ADMIN_KEY the data stays locked. After MAX_TRIES wrong passwords in an hour, every try is turned
@@ -20,6 +23,7 @@ import { anonName, decideName, decideAppeal, STILL_BANNED } from './ranked.js';
 import { sameKey } from './pc.js';
 
 const MIN_PASSWORD = 12;
+const BAN_HOURS_MAX = 24 * 365;
 const MAX_TRIES = 20;
 const DAYS = 14;
 
@@ -29,7 +33,7 @@ export async function dashboard(request, env, url) {
   const path = url.pathname.replace(/\/$/, '');
   if (path === '/admin' && request.method === 'GET') return page();
   const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { ...PRIVATE, 'Content-Type': 'application/json' } });
-  if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee', '/admin/appeal'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
+  if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee', '/admin/appeal', '/admin/ban', '/admin/unban'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
 
   const access = await checkPassword(request, env);
   if (access === 'unset') return json(503, { error: 'unset' });
@@ -50,8 +54,22 @@ export async function dashboard(request, env, url) {
   }
   if (path === '/admin/appeal' && request.method === 'POST') {
     const data = parseJSON(await request.text()) || {};
-    if (!Number.isInteger(data.id) || !Number.isInteger(data.at) || typeof data.lift !== 'boolean') return json(400, { error: 'Wrong shape' });
-    const result = await decideAppeal(env, data.id, data.at, data.lift);
+    if (!Number.isInteger(data.id) || !Number.isInteger(data.at) || typeof data.lift !== 'boolean'
+      || (data.reply !== undefined && typeof data.reply !== 'string')) return json(400, { error: 'Wrong shape' });
+    const result = await decideAppeal(env, data.id, data.at, data.lift, data.reply || '');
+    return json(result.error ? 400 : 200, result);
+  }
+  if (path === '/admin/ban' && request.method === 'POST') {
+    const data = parseJSON(await request.text()) || {};
+    const hours = data.hours ?? null;
+    if (typeof data.name !== 'string' || (hours !== null && !(Number.isInteger(hours) && hours >= 1 && hours <= BAN_HOURS_MAX))) return json(400, { error: 'Wrong shape' });
+    const result = await banPlayer(env, data.name, hours);
+    return json(result.error ? 400 : 200, result);
+  }
+  if (path === '/admin/unban' && request.method === 'POST') {
+    const data = parseJSON(await request.text()) || {};
+    if (!Number.isInteger(data.id)) return json(400, { error: 'Wrong shape' });
+    const result = await unbanPlayer(env, data.id);
     return json(result.error ? 400 : 200, result);
   }
   if (path === '/admin/referee' && request.method === 'POST') {
@@ -187,4 +205,37 @@ async function makeAnonymous(env, name) {
     return { was: found.name, name: anon };
   }
   return { error: 'Couldn’t find a free anonymous name. Try again.' };
+}
+
+// A ban from the dashboard, the same as node admin.mjs ban: Endless only, off every board, until it
+// ends or is lifted. A new ban starts with no appeal. Banning someone who's already banned only
+// changes how long it lasts, so an appeal they've sent still waits.
+async function banPlayer(env, name, hours) {
+  const key = name.trim().toLowerCase();
+  if (!key) return { error: 'Type the name of the player to ban.' };
+  const found = await env.DB.prepare(`SELECT id, name, (${STILL_BANNED}) AS still FROM players WHERE name_key = ?1`).bind(key).first();
+  if (!found) {
+    // A near miss: part of a name, or a name they had before.
+    const { results } = await env.DB.prepare(`SELECT name FROM players
+      WHERE instr(name_key, ?1) > 0 OR instr(lower(name_before), ?1) > 0 OR (length(name_key) >= 3 AND instr(?1, name_key) > 0)
+      ORDER BY length(name) LIMIT 3`).bind(key).all();
+    const close = results.map((row) => row.name);
+    return { error: `No player called ${name.trim()}.${close.length ? ` Did you mean ${close.join(', ')}?` : ''}` };
+  }
+  const until = hours ? Date.now() + hours * 3600000 : null;
+  await env.DB.prepare(found.still
+    ? 'UPDATE players SET banned_until = ?2 WHERE id = ?1'
+    : 'UPDATE players SET banned = 1, banned_until = ?2, appeal = NULL, appeal_at = NULL, appeal_state = NULL, appeal_reply = NULL WHERE id = ?1')
+    .bind(found.id, until).run();
+  return { name: found.name, until, already: Boolean(found.still) };
+}
+
+// Lifting a ban from the dashboard's list, the same as node admin.mjs unban: back on the boards with
+// their scores. An appeal that was waiting counts as answered, so the game says it went through.
+async function unbanPlayer(env, id) {
+  const found = await env.DB.prepare(`SELECT id, name FROM players WHERE id = ?1 AND ${STILL_BANNED}`).bind(id).first();
+  if (!found) return { error: 'That player isn’t banned any more. Refresh and look again.' };
+  await env.DB.prepare(`UPDATE players SET banned = 0, banned_until = NULL,
+    appeal_state = CASE WHEN appeal_state = 'waiting' THEN 'yes' ELSE appeal_state END WHERE id = ?1`).bind(id).run();
+  return { name: found.name };
 }
