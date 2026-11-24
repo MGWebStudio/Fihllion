@@ -12,6 +12,7 @@
 //   POST /admin/ban    {"name": "Sam", "hours": 24|null} -> the player banned, for that many hours or until
 //                      it's lifted, like node admin.mjs ban ({"id": 12} instead of the name, from the player panel)
 //   POST /admin/unban  {"id": 12} -> a ban lifted, like node admin.mjs unban
+//   GET  /admin/names  every player's name, for the Players box's suggestions as a name is typed
 //   POST /admin/player {"id": 12} or {"name": "Sam"}, and "day"? -> the player panel: who they are, their runs
 //                      with every answer, the prompts of one run's day (the latest, or "day"), messages, feedback
 //   POST /admin/message {"id": 12, "text": "..."} -> a message their game shows once, next time it opens
@@ -42,7 +43,7 @@ export async function dashboard(request, env, url) {
   if (path === '/admin' && request.method === 'GET') return page();
   const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { ...PRIVATE, 'Content-Type': 'application/json' } });
   if (!['/admin/data', '/admin/anon', '/admin/name', '/admin/referee', '/admin/appeal', '/admin/ban', '/admin/unban',
-    '/admin/player', '/admin/message', '/admin/pause', '/admin/score'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
+    '/admin/names', '/admin/player', '/admin/message', '/admin/pause', '/admin/score'].includes(path)) return new Response('Not found', { status: 404, headers: PRIVATE });
 
   const access = await checkPassword(request, env);
   if (access === 'unset') return json(503, { error: 'unset' });
@@ -50,6 +51,7 @@ export async function dashboard(request, env, url) {
   if (access === 'wrong') return json(401, { error: 'wrong' });
 
   if (path === '/admin/data' && request.method === 'GET') return json(200, await collect(env));
+  if (path === '/admin/names' && request.method === 'GET') return json(200, await allNames(env));
   if (path === '/admin/anon' && request.method === 'POST') {
     const data = parseJSON(await request.text()) || {};
     const result = await makeAnonymous(env, data);
@@ -242,6 +244,15 @@ async function findPlayer(env, { id, name }, columns = 'id, name') {
     ORDER BY length(name) LIMIT 3`).bind(key).all();
   const close = results.map((row) => row.name);
   return { error: `No player called ${name.trim()}.${close.length ? ` Did you mean ${close.join(', ')}?` : ''}`, close };
+}
+
+// Every player's name for the Players box, which suggests names as they're typed, with what helps
+// tell them apart: a name they had before, whether they're banned or paused, and the last day they
+// played ranked. The page does the matching, so it keeps up with every key.
+async function allNames(env) {
+  const { results } = await env.DB.prepare(`SELECT p.id, p.name, NULLIF(p.name_before, p.name) AS before, (${STILL_BANNED}) AS banned,
+      p.paused, (SELECT MAX(r.day) FROM runs r WHERE r.player = p.id) AS last FROM players p`).all();
+  return { players: results.map((row) => ({ ...row, banned: Boolean(row.banned), paused: Boolean(row.paused) })) };
 }
 
 // Everything the player panel shows about one player. Prompts come from the game's data, so only one

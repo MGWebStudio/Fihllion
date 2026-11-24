@@ -221,6 +221,33 @@
   .find-go:hover { background: var(--glass); color: var(--ink); border-color: var(--glass); }
   .find-miss { margin: 8px 0 0; font-size: 17px; color: var(--muted); }
   .find-miss:empty { display: none; }
+  /* Suggestions as a name is typed, dropped over the page under the box. What was typed stays dim
+     and the rest of the name is lit, the part being suggested. */
+  .find-fields { position: relative; }
+  .find-box { min-width: 0; }
+  .find-box input { width: 100%; }
+  .find-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 4;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    background: var(--ink);
+    border: 2px solid var(--slate);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+  }
+  .find-opt { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; padding: 6px 12px; cursor: pointer; }
+  .find-opt:hover { background: var(--card); }
+  .find-opt[aria-selected="true"] { background: var(--card); box-shadow: inset 4px 0 0 var(--gilt); }
+  .find-name { min-width: 0; color: var(--muted); overflow-wrap: anywhere; }
+  .find-name b { font-weight: normal; color: var(--cream); }
+  .find-name small { display: block; font-size: 15px; }
+  .find-meta { flex: none; font-size: 15px; color: var(--muted); white-space: nowrap; }
+  .find-meta .tag { margin: 0 6px 0 0; vertical-align: 1px; }
+  .find-none { padding: 10px 12px; font-size: 17px; color: var(--muted); }
 
   /* The player panel: everything about one player, over the page (full screen on a phone). */
   body:has(.panel[open]) { overflow: hidden; }
@@ -592,7 +619,11 @@
     const find = `<form id="findForm" class="find-form" autocomplete="off">
         <label for="findName">Look up a player</label>
         <div class="find-fields">
-          <input id="findName" type="text" list="playerNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+          <div class="find-box">
+            <input id="findName" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="findList"
+              placeholder="Start typing a name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+            <ul id="findList" class="find-list" role="listbox" aria-label="Players whose name fits" hidden></ul>
+          </div>
           <button type="submit" class="small-btn find-go">Open</button>
         </div>
         <p class="find-miss" id="findMiss" role="status"></p>
@@ -816,6 +847,124 @@
     renderPanel({ fresh: true });
     if (!dialog.open) dialog.showModal();
     dialog.scrollTop = 0;
+  }
+
+  // The Players box suggests names as they're typed, like a search box: names that start with what's
+  // typed first, then names with it inside, then names they had before; the most recent players first
+  // in each. Every player's name comes once when the box is used (again after a minute), and the
+  // matching happens here, so it keeps up with every key.
+  const FIND_MAX = 8;
+  const roster = { list: null, at: 0, loading: null };
+  const find = { options: [], active: -1, typed: '' };
+
+  function loadRoster() {
+    if (roster.list && Date.now() - roster.at < 60000) return Promise.resolve(roster.list);
+    if (!roster.loading) {
+      roster.loading = call('/admin/names')
+        .then(({ status, body }) => {
+          if (status === 200 && Array.isArray(body.players)) Object.assign(roster, { list: body.players, at: Date.now() });
+        })
+        .catch(() => {})
+        .finally(() => { roster.loading = null; });
+    }
+    return roster.loading.then(() => roster.list);
+  }
+
+  function matchNames(typed) {
+    const q = typed.toLowerCase();
+    const found = [];
+    for (const player of roster.list || []) {
+      const at = player.name.toLowerCase().indexOf(q);
+      const was = player.before ? player.before.toLowerCase().indexOf(q) : -1;
+      const rank = at === 0 ? 0 : at > 0 ? 1 : was === 0 ? 2 : was > 0 ? 3 : -1;
+      if (rank >= 0) found.push({ player, rank, at, was });
+    }
+    found.sort((a, b) => a.rank - b.rank || (b.player.last ?? 0) - (a.player.last ?? 0)
+      || a.player.name.length - b.player.name.length || a.player.name.localeCompare(b.player.name));
+    return found.slice(0, FIND_MAX);
+  }
+
+  // What was typed stays as it is and the rest is lit, the part the list is suggesting.
+  const suggested = (text, at, length) => (at < 0 ? `<b>${esc(text)}</b>`
+    : `<b>${esc(text.slice(0, at))}</b>${esc(text.slice(at, at + length))}<b>${esc(text.slice(at + length))}</b>`);
+  const lastPlayed = (day) => (day == null ? 'no ranked runs' : day === data.today ? 'played today'
+    : day === data.today - 1 ? 'played yesterday' : `played ${dayLabel(day)}`);
+
+  function showFind() {
+    const input = $('findName');
+    const list = $('findList');
+    if (!input || !list) return;
+    const typed = input.value.trim();
+    if (!typed || document.activeElement !== input) return closeFind();
+    if (typed !== find.typed) find.active = -1;
+    find.typed = typed;
+    if (!roster.list) {
+      list.innerHTML = '<li class="find-none">Getting everyone’s names…</li>';
+      openFind();
+      loadRoster().then((players) => {
+        if (players) showFind();
+        else if ($('findList')) $('findList').innerHTML = '<li class="find-none">Couldn’t get the names. Press Open to look this one up.</li>';
+      });
+      return;
+    }
+    find.options = matchNames(typed);
+    list.innerHTML = find.options.length ? find.options.map(({ player, rank, at, was }, i) => `<li role="option" id="findOpt${i}" class="find-opt" data-pick="${player.id}" aria-selected="${i === find.active}">
+        <span class="find-name">${suggested(player.name, rank < 2 ? at : -1, typed.length)}${rank >= 2 ? `<small>was ${suggested(player.before, was, typed.length)}</small>` : ''}</span>
+        <span class="find-meta">${player.banned ? '<span class="tag bad">banned</span>' : player.paused ? '<span class="tag">paused</span>' : ''}${esc(lastPlayed(player.last))}</span></li>`).join('')
+      : `<li class="find-none">No player has “${esc(typed)}” in their name.</li>`;
+    openFind();
+  }
+
+  function openFind() {
+    $('findList').hidden = false;
+    $('findName').setAttribute('aria-expanded', 'true');
+    markFind();
+  }
+
+  function closeFind() {
+    find.options = [];
+    find.active = -1;
+    find.typed = '';
+    if (!$('findList')) return;
+    $('findList').hidden = true;
+    $('findList').innerHTML = '';
+    $('findName').setAttribute('aria-expanded', 'false');
+    $('findName').removeAttribute('aria-activedescendant');
+  }
+
+  function markFind() {
+    document.querySelectorAll('#findList .find-opt').forEach((option, i) => option.setAttribute('aria-selected', String(i === find.active)));
+    if (find.active >= 0) $('findName').setAttribute('aria-activedescendant', `findOpt${find.active}`);
+    else $('findName').removeAttribute('aria-activedescendant');
+  }
+
+  function pickFind(id) {
+    const player = (roster.list || []).find((each) => each.id === id);
+    closeFind();
+    $('findName').value = '';
+    $('findMiss').textContent = '';
+    $('findName').blur();
+    openPlayer({ id, label: player?.name || '' });
+  }
+
+  // Up and down move through the list, Enter opens the one lit (or looks up what's typed, with none
+  // lit), Escape closes it.
+  function findKey(event) {
+    const list = $('findList');
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if (list.hidden) showFind();
+      if (!find.options.length) return;
+      event.preventDefault();
+      const count = find.options.length;
+      find.active = event.key === 'ArrowDown' ? (find.active + 1) % count : find.active <= 0 ? count - 1 : find.active - 1;
+      markFind();
+    } else if (event.key === 'Enter' && !list.hidden && find.active >= 0) {
+      event.preventDefault();
+      pickFind(find.options[find.active].player.id);
+    } else if (event.key === 'Escape' && !list.hidden) {
+      event.preventDefault();
+      closeFind();
+    }
   }
 
   function showMiss(message, close) {
@@ -1088,6 +1237,8 @@
     if (who) openPlayer({ id: Number(who.dataset.player), label: who.textContent });
     const near = event.target.closest('[data-find-name]');
     if (near) openPlayer({ name: near.dataset.findName });
+    const option = event.target.closest('[data-pick]');
+    if (option) pickFind(Number(option.dataset.pick));
     const anon = event.target.closest('[data-anon]');
     if (anon) makeAnonymous(anon);
     const decision = event.target.closest('[data-decide]');
@@ -1107,8 +1258,32 @@
     if (event.target.id === 'findForm') {
       event.preventDefault();
       const name = $('findName').value.trim();
+      closeFind();
       if (name) openPlayer({ name });
     }
+  });
+  $('content').addEventListener('input', (event) => {
+    if (event.target.id !== 'findName') return;
+    $('findMiss').textContent = '';
+    loadRoster();
+    showFind();
+  });
+  $('content').addEventListener('keydown', (event) => {
+    if (event.target.id === 'findName') findKey(event);
+  });
+  $('content').addEventListener('focusin', (event) => {
+    if (event.target.id !== 'findName') return;
+    loadRoster();
+    showFind();
+  });
+  // Pressing on the list keeps the box focused, so the press lands. A touch can still take the focus
+  // first, so the list waits a moment before closing.
+  $('content').addEventListener('mousedown', (event) => {
+    if (event.target.closest('#findList')) event.preventDefault();
+  });
+  $('content').addEventListener('focusout', (event) => {
+    if (event.target.id !== 'findName') return;
+    setTimeout(() => { if (document.activeElement !== $('findName')) closeFind(); }, 200);
   });
 
   const dialog = $('panel');
