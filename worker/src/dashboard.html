@@ -175,7 +175,7 @@
   /* Bans: a name and how long, then everyone who's banned, appeals first. */
   .ban-form label, .find-form label { display: block; font: 11px/1.2 var(--label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
   .ban-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-  .ban-fields input { grid-column: 1 / -1; }
+  .ban-box { grid-column: 1 / -1; position: relative; }
   .ban-fields input, .ban-fields select, .find-fields input, .act select {
     min-width: 0;
     min-height: 44px;
@@ -615,24 +615,26 @@
     // Bans: ban someone by name, then everyone who's banned. A waiting appeal shows what they wrote,
     // with Lift the ban and Keep the ban (only the appeal shown here is decided); anyone else has Unban.
     const waiting = d.banned.filter((row) => row.appeal_state === 'waiting');
-    const suggest = [...new Set([...d.board.map((row) => row.name), ...d.recent.map((row) => row.name), ...d.banned.map((row) => row.name)])];
     const find = `<form id="findForm" class="find-form" autocomplete="off">
         <label for="findName">Look up a player</label>
         <div class="find-fields">
           <div class="find-box">
             <input id="findName" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="findList"
               placeholder="Start typing a name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
-            <ul id="findList" class="find-list" role="listbox" aria-label="Players whose name fits" hidden></ul>
+            <ul id="findList" class="find-list" role="listbox" aria-label="Players whose name fits" data-box="findName" hidden></ul>
           </div>
           <button type="submit" class="small-btn find-go">Open</button>
         </div>
         <p class="find-miss" id="findMiss" role="status"></p>
-        <datalist id="playerNames">${suggest.map((name) => `<option value="${esc(name)}">`).join('')}</datalist>
       </form>`;
     const banForm = `<form id="banForm" class="ban-form" autocomplete="off">
         <label for="banName">Ban a player</label>
         <div class="ban-fields">
-          <input id="banName" type="text" list="playerNames" placeholder="Their name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+          <div class="find-box ban-box">
+            <input id="banName" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="banList"
+              placeholder="Start typing a name" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="40" required>
+            <ul id="banList" class="find-list" role="listbox" aria-label="Players whose name fits" data-box="banName" hidden></ul>
+          </div>
           <select id="banLength" aria-label="How long">${BAN_LENGTHS.map(([hours, label]) => `<option value="${hours}">${label}</option>`).join('')}</select>
           <button type="submit" class="small-btn ban-go">Ban</button>
         </div>
@@ -849,13 +851,34 @@
     dialog.scrollTop = 0;
   }
 
-  // The Players box suggests names as they're typed, like a search box: names that start with what's
-  // typed first, then names with it inside, then names they had before; the most recent players first
-  // in each. Every player's name comes once when the box is used (again after a minute), and the
-  // matching happens here, so it keeps up with every key.
+  // The Players box and the ban box suggest names as they're typed, like a search box: names that
+  // start with what's typed first, then names with it inside, then names they had before; the most
+  // recent players first in each. Every player's name comes once when a box is used (again after a
+  // minute), and the matching happens here, so it keeps up with every key. Picking a name in the
+  // Players box opens their panel; in the ban box it fills the name in, ready to choose how long.
   const FIND_MAX = 8;
   const roster = { list: null, at: 0, loading: null };
-  const find = { options: [], active: -1, typed: '' };
+  const combos = new Map([
+    ['findName', {
+      list: 'findList',
+      failed: 'Couldn’t get the names. Press Open to look this one up.',
+      pick(id, player) {
+        $('findName').value = '';
+        $('findMiss').textContent = '';
+        $('findName').blur();
+        openPlayer({ id, label: player?.name || '' });
+      },
+    }],
+    ['banName', {
+      list: 'banList',
+      failed: 'Couldn’t get the names. Type the whole name and press Ban.',
+      pick(id, player) {
+        if (!player) return;
+        $('banName').value = player.name;
+        $('banLength').focus();
+      },
+    }],
+  ].map(([box, setup]) => [box, { ...setup, options: [], active: -1, typed: '' }]));
 
   function loadRoster() {
     if (roster.list && Date.now() - roster.at < 60000) return Promise.resolve(roster.list);
@@ -890,80 +913,79 @@
   const lastPlayed = (day) => (day == null ? 'no ranked runs' : day === data.today ? 'played today'
     : day === data.today - 1 ? 'played yesterday' : `played ${dayLabel(day)}`);
 
-  function showFind() {
-    const input = $('findName');
-    const list = $('findList');
+  function showFind(box) {
+    const combo = combos.get(box);
+    const input = $(box);
+    const list = $(combo.list);
     if (!input || !list) return;
     const typed = input.value.trim();
-    if (!typed || document.activeElement !== input) return closeFind();
-    if (typed !== find.typed) find.active = -1;
-    find.typed = typed;
+    if (!typed || document.activeElement !== input) return closeFind(box);
+    if (typed !== combo.typed) combo.active = -1;
+    combo.typed = typed;
     if (!roster.list) {
       list.innerHTML = '<li class="find-none">Getting everyone’s names…</li>';
-      openFind();
+      openFind(box);
       loadRoster().then((players) => {
-        if (players) showFind();
-        else if ($('findList')) $('findList').innerHTML = '<li class="find-none">Couldn’t get the names. Press Open to look this one up.</li>';
+        if (players) showFind(box);
+        else if ($(combo.list)) $(combo.list).innerHTML = `<li class="find-none">${combo.failed}</li>`;
       });
       return;
     }
-    find.options = matchNames(typed);
-    list.innerHTML = find.options.length ? find.options.map(({ player, rank, at, was }, i) => `<li role="option" id="findOpt${i}" class="find-opt" data-pick="${player.id}" aria-selected="${i === find.active}">
+    combo.options = matchNames(typed);
+    list.innerHTML = combo.options.length ? combo.options.map(({ player, rank, at, was }, i) => `<li role="option" id="${combo.list}-${i}" class="find-opt" data-pick="${player.id}" aria-selected="${i === combo.active}">
         <span class="find-name">${suggested(player.name, rank < 2 ? at : -1, typed.length)}${rank >= 2 ? `<small>was ${suggested(player.before, was, typed.length)}</small>` : ''}</span>
         <span class="find-meta">${player.banned ? '<span class="tag bad">banned</span>' : player.paused ? '<span class="tag">paused</span>' : ''}${esc(lastPlayed(player.last))}</span></li>`).join('')
       : `<li class="find-none">No player has “${esc(typed)}” in their name.</li>`;
-    openFind();
+    openFind(box);
   }
 
-  function openFind() {
-    $('findList').hidden = false;
-    $('findName').setAttribute('aria-expanded', 'true');
-    markFind();
+  function openFind(box) {
+    $(combos.get(box).list).hidden = false;
+    $(box).setAttribute('aria-expanded', 'true');
+    markFind(box);
   }
 
-  function closeFind() {
-    find.options = [];
-    find.active = -1;
-    find.typed = '';
-    if (!$('findList')) return;
-    $('findList').hidden = true;
-    $('findList').innerHTML = '';
-    $('findName').setAttribute('aria-expanded', 'false');
-    $('findName').removeAttribute('aria-activedescendant');
+  function closeFind(box) {
+    const combo = combos.get(box);
+    Object.assign(combo, { options: [], active: -1, typed: '' });
+    if (!$(combo.list)) return;
+    $(combo.list).hidden = true;
+    $(combo.list).innerHTML = '';
+    $(box).setAttribute('aria-expanded', 'false');
+    $(box).removeAttribute('aria-activedescendant');
   }
 
-  function markFind() {
-    document.querySelectorAll('#findList .find-opt').forEach((option, i) => option.setAttribute('aria-selected', String(i === find.active)));
-    if (find.active >= 0) $('findName').setAttribute('aria-activedescendant', `findOpt${find.active}`);
-    else $('findName').removeAttribute('aria-activedescendant');
+  function markFind(box) {
+    const { list, active } = combos.get(box);
+    document.querySelectorAll(`#${list} .find-opt`).forEach((option, i) => option.setAttribute('aria-selected', String(i === active)));
+    if (active >= 0) $(box).setAttribute('aria-activedescendant', `${list}-${active}`);
+    else $(box).removeAttribute('aria-activedescendant');
   }
 
-  function pickFind(id) {
+  function pickFind(box, id) {
     const player = (roster.list || []).find((each) => each.id === id);
-    closeFind();
-    $('findName').value = '';
-    $('findMiss').textContent = '';
-    $('findName').blur();
-    openPlayer({ id, label: player?.name || '' });
+    closeFind(box);
+    combos.get(box).pick(id, player);
   }
 
-  // Up and down move through the list, Enter opens the one lit (or looks up what's typed, with none
+  // Up and down move through the list, Enter picks the one lit (or sends the box as typed, with none
   // lit), Escape closes it.
-  function findKey(event) {
-    const list = $('findList');
+  function findKey(event, box) {
+    const combo = combos.get(box);
+    const list = $(combo.list);
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      if (list.hidden) showFind();
-      if (!find.options.length) return;
+      if (list.hidden) showFind(box);
+      if (!combo.options.length) return;
       event.preventDefault();
-      const count = find.options.length;
-      find.active = event.key === 'ArrowDown' ? (find.active + 1) % count : find.active <= 0 ? count - 1 : find.active - 1;
-      markFind();
-    } else if (event.key === 'Enter' && !list.hidden && find.active >= 0) {
+      const count = combo.options.length;
+      combo.active = event.key === 'ArrowDown' ? (combo.active + 1) % count : combo.active <= 0 ? count - 1 : combo.active - 1;
+      markFind(box);
+    } else if (event.key === 'Enter' && !list.hidden && combo.active >= 0) {
       event.preventDefault();
-      pickFind(find.options[find.active].player.id);
+      pickFind(box, combo.options[combo.active].player.id);
     } else if (event.key === 'Escape' && !list.hidden) {
       event.preventDefault();
-      closeFind();
+      closeFind(box);
     }
   }
 
@@ -1238,7 +1260,7 @@
     const near = event.target.closest('[data-find-name]');
     if (near) openPlayer({ name: near.dataset.findName });
     const option = event.target.closest('[data-pick]');
-    if (option) pickFind(Number(option.dataset.pick));
+    if (option) pickFind(option.closest('.find-list').dataset.box, Number(option.dataset.pick));
     const anon = event.target.closest('[data-anon]');
     if (anon) makeAnonymous(anon);
     const decision = event.target.closest('[data-decide]');
@@ -1253,37 +1275,41 @@
   $('content').addEventListener('submit', (event) => {
     if (event.target.id === 'banForm') {
       event.preventDefault();
+      closeFind('banName');
       ban(event.target);
     }
     if (event.target.id === 'findForm') {
       event.preventDefault();
       const name = $('findName').value.trim();
-      closeFind();
+      closeFind('findName');
       if (name) openPlayer({ name });
     }
   });
   $('content').addEventListener('input', (event) => {
-    if (event.target.id !== 'findName') return;
-    $('findMiss').textContent = '';
+    const box = event.target.id;
+    if (!combos.has(box)) return;
+    if (box === 'findName') $('findMiss').textContent = '';
     loadRoster();
-    showFind();
+    showFind(box);
   });
   $('content').addEventListener('keydown', (event) => {
-    if (event.target.id === 'findName') findKey(event);
+    if (combos.has(event.target.id)) findKey(event, event.target.id);
   });
   $('content').addEventListener('focusin', (event) => {
-    if (event.target.id !== 'findName') return;
+    const box = event.target.id;
+    if (!combos.has(box)) return;
     loadRoster();
-    showFind();
+    showFind(box);
   });
-  // Pressing on the list keeps the box focused, so the press lands. A touch can still take the focus
+  // Pressing on a list keeps its box focused, so the press lands. A touch can still take the focus
   // first, so the list waits a moment before closing.
   $('content').addEventListener('mousedown', (event) => {
-    if (event.target.closest('#findList')) event.preventDefault();
+    if (event.target.closest('.find-list')) event.preventDefault();
   });
   $('content').addEventListener('focusout', (event) => {
-    if (event.target.id !== 'findName') return;
-    setTimeout(() => { if (document.activeElement !== $('findName')) closeFind(); }, 200);
+    const box = event.target.id;
+    if (!combos.has(box)) return;
+    setTimeout(() => { if (document.activeElement !== $(box)) closeFind(box); }, 200);
   });
 
   const dialog = $('panel');
