@@ -20,7 +20,7 @@
 10: Though, Through, Tough, Rough, Enough, Cough, Dough
 15: Hiccough
 30: Although, Thorough, Bough, Plough, Trough, Borough
-60: Slough, Breakthrough, Furlough, Sourdough, Walkthrough, Drive-through|Drivethrough, Playdough|Play-Doh, Cookie dough, Pizza dough, Pass-through, See-through, Follow-through, Run-through, Whooping cough
+60: Slough, Breakthrough, Furlough, Sourdough, Walkthrough, Drive-through|Drivethrough, Playdough, Cookie dough, Pizza dough, Pass-through, See-through, Follow-through, Run-through, Whooping cough
 85: Chough, Lough, Clough, Hough, Brough, Scarborough, Loughborough, Peterborough, Marlborough, Attenborough, Gainsborough, Roxborough, Knaresborough, Greenough, McCullough, Yarborough, Cut-through, Rough-and-tough
 100: Sough :: It means a soft rustling sound, like wind in trees. Even the dictionary can't settle how to say it.
 
@@ -115,8 +115,8 @@
 ? Name a palindrome
 ~exact
 10: Racecar|Race car, Level, Mom, Dad, Kayak, Bob, Anna, Noon, Wow, Madam
-15: Taco cat|Tacocat, A man a plan a canal Panama|A man, a plan, a canal: Panama, Hannah
+15: Taco cat|Tacocat, A man a plan a canal Panama|A man\, a plan\, a canal: Panama, Hannah
 30: Civic, Radar, Refer, Rotor, Peep, Eye, Pop, Deed, Sis, Tot, Nun, Pup, Did, Ewe, Otto, Eve, Ada, Elle, Stats, Solos, Minim, Tenet, Redder, Rotator, Reviver, Sagas, Toot, Poop, Gag, Bib, Tut, Aha, Ava, Nan, Pip, Dud, Mum, Pap, Sees, Kook, Boob, Abba, Repaper
-60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Shh, Hmm, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
-85: Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo, Tattarrattat
+60: Aibohphobia, Redivider, Deified, Malayalam, Rats live on no evil star, Never odd or even, Was it a car or a cat I saw, Do geese see God, Madam I'm Adam|Madam in Eden I'm Adam, Step on no pets, Nurses run, Yo banana boy, No lemon no melon, Dammit I'm mad, Mr. Owl ate my metal worm, Aviva, Lil, Viv, Asa, Oxo, Ono, Waw, Hah, Huh, Heh, Ere, Aga, Oho, Aka, Alula, Ma'am, Salas, Sexes, Shahs, Semes, Put up, Tut-tut, Terret, Pull up, Top spot, Too hot to hoot
+85: Detartrated, Saippuakivikauppias, Rotavator, Reifier, Sememes, Hallah, Evitative, Oozy rat in a sanitary zoo, Go hang a salami I'm a lasagna hog|Go hang a salami\, I'm a lasagna hog, Dogma I am God, Rise to vote sir, Not a ton, Borrow or rob, Was it a rat I saw, A Toyota's a Toyota|A Toyota, Ma has a ham, Murder for a jar of red rum, Red rum sir is murder, Able was I ere I saw Elba, Ogopogo, Tattarrattat
 100: Kinnikinnik :: A smoking mix of leaves and bark used by many Native American peoples. It reads the same backwards.

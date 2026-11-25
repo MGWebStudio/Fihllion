@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PROMPTS_PER_DIVE } from '../js/content.js';
 import { buildIndex, findAnswer, normalize } from '../js/match.js';
+import { breaksRule, ruleIds } from '../js/rules.js';
 import { indexJSON, readPrompts } from './prompt-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -52,9 +53,12 @@ for (const prompt of prompts) {
     for (const form of [answer.name, ...answer.aliases]) {
       const hit = findAnswer(form, index);
       if (hit !== answer) warnings.push(`${prompt.id}: typing "${form}" gives "${hit?.name}" instead of "${answer.name}"`);
+      // A spelling rule (js/rules.js) holds for every listed spelling, or the list contradicts the prompt.
+      if (breaksRule(prompt, form)) problems.push(`${prompt.id}: "${form}" breaks the prompt's spelling rule`);
     }
   }
 }
+for (const id of ruleIds()) if (!seenIds.has(id)) problems.push(`js/rules.js has a rule for ${id}, which isn't a prompt`);
 
 const schedulePath = join(root, 'data', 'schedule.json');
 let days = 0;

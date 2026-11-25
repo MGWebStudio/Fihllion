@@ -1,6 +1,7 @@
 // Pieces the counter, the referee and ranked mode share: the game's data files and the referee itself.
 import { parsePrompts, makeCalendar, mountainToday } from '../../js/content.js';
 import { buildIndex, findAnswer } from '../../js/match.js';
+import { breaksRule, ruleFor } from '../../js/rules.js';
 import { FIRST_NAMES, SURNAMES } from './names.js';
 
 export const EPOCH = Date.UTC(2026, 10, 3); // Day 1, the same epoch as data/schedule.json
@@ -102,6 +103,9 @@ export async function judge(env, prompt, typed, options = {}) {
   if (listed) return { valid: true, name: listed.name, tier: listed.tier };
   const described = !options.nobank && describedAnswer(prompt, typed, index);
   if (described) return { valid: true, name: described.name, tier: described.tier };
+  // A spelling rule is checked here, never by the referee, and before saved rulings, so the wrong
+  // yeses it gave before the rules (like "logo" for a double O) stop counting.
+  if (breaksRule(prompt, typed)) return { valid: false, reason: 'rule' };
   const vague = tooVague(prompt, typed);
   if (vague) return { valid: false, reason: vague };
 
@@ -134,6 +138,10 @@ export async function judge(env, prompt, typed, options = {}) {
     verdict = asked;
   }
 
+  // The referee can fix a misspelling into a word that breaks the rule ("frys" as Fries for no
+  // vowels), and that doesn't count either.
+  if (verdict.valid && verdict.name && breaksRule(prompt, verdict.name)) verdict = { ...verdict, valid: false };
+
   let name = null;
   let tier = null;
   let hit = null;
@@ -163,6 +171,7 @@ async function learnedIndex(env, prompt) {
     .bind(prompt.id).all();
   const answers = new Map();
   for (const row of results) {
+    if (breaksRule(prompt, row.typed) || breaksRule(prompt, row.name)) continue;
     const key = row.name.toLowerCase();
     if (!answers.has(key)) answers.set(key, { name: row.name, aliases: [], tier: row.tier ?? 4 });
     answers.get(key).aliases.push(row.typed);
@@ -347,15 +356,21 @@ async function askReferee(env, prompt, typed, options) {
 }
 
 // The instructions plus what the model needs to know about this answer, Wikipedia's results included.
-async function refereeMessages(prompt, typed) {
+// For a word prompt with a spelling rule, the code has already checked the spelling, so the referee
+// is only asked whether the word is real (it kept judging the letters wrong otherwise).
+export async function refereeMessages(prompt, typed) {
   const examples = prompt.answers.filter((answer) => answer.tier === 0).slice(0, 4).map((answer) => answer.name);
-  const evidence = prompt.exact ? [] : await wikipedia(prompt, typed);
+  // A word prompt isn't searched on Wikipedia, and saying it found nothing made the referee turn
+  // down real words ("analyze", "mirror"), so it's told to go on what it knows.
+  const asked = ruleFor(prompt)?.ask;
+  const evidence = prompt.exact || asked ? [] : await wikipedia(prompt, typed);
   const user = [
-    `Prompt: ${JSON.stringify(prompt.text)}`,
+    `Prompt: ${JSON.stringify(asked || prompt.text)}`,
     `Some accepted answers: ${examples.join(', ')}`,
     prompt.drop.length ? `Players may leave out these words: ${prompt.drop.join(', ')}` : '',
     `Player's answer: ${JSON.stringify(typed)}`,
-    evidence === null ? 'Wikipedia search results: unavailable right now, so rely on your own knowledge'
+    asked ? 'Wikipedia was not searched, so rely on your own knowledge'
+      : evidence === null ? 'Wikipedia search results: unavailable right now, so rely on your own knowledge'
       : evidence.length ? `Wikipedia search results:\n${evidence.map((line, i) => `${i + 1}. ${line}`).join('\n')}` : 'Wikipedia search results: none',
     '/no_think',
   ].filter(Boolean).join('\n');

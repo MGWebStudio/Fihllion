@@ -36,7 +36,7 @@ export function buildIndex(prompt) {
   const add = (key, answer, sound = null) => {
     if (!key) return;
     if (!exact.has(key)) exact.set(key, answer);
-    forms.push({ key, answer, sound });
+    forms.push({ key, answer, sound, digits: digits(key) });
   };
   // Answers are sorted common-first, so a shared spelling resolves to the commoner answer.
   for (const answer of prompt.answers) {
@@ -82,6 +82,8 @@ function editDistance(a, b, limit) {
 // First letters that sound alike count as the same start, so "crave" is one letter off Krave.
 const START = { c: 'k', k: 'k', q: 'k', s: 's', z: 's', f: 'f', v: 'f', i: 'i', y: 'i' };
 const sameStart = (a, b) => a[0] === b[0] || (START[a[0]] && START[a[0]] === START[b[0]]);
+
+const digits = (key) => key.replace(/\D/g, '');
 
 function allowedEdits(a, b) {
   const longest = Math.max(a.length, b.length);
@@ -131,9 +133,14 @@ export function findAnswer(input, index) {
   if (index.strict) return index.exact.get(key) || null;
   const direct = index.exact.get(key) || index.exact.get(singular(key));
   if (direct) return direct;
+  // An answer with a number in it needs that exact number: "terrifier" and "terrifier 2" are other
+  // movies, not typos of Terrifier 3. A guess can still add one, so "algebra 2" counts as Algebra.
+  const number = digits(key);
+  const numberFits = (form) => !form.digits || form.digits === number;
   let best = null;
   let bestDistance = Infinity;
   for (const form of index.forms) {
+    if (!numberFits(form)) continue;
     const limit = allowedEdits(key, form.key);
     if (limit === 0) continue;
     const distance = editDistance(key, form.key, limit);
@@ -149,7 +156,7 @@ export function findAnswer(input, index) {
   const sound = sounds(input, index.drop);
   const limit = key.length >= 11 ? 3 : 2;
   for (const form of index.forms) {
-    if (form.sound !== sound || !sameStart(key, form.key)) continue;
+    if (form.sound !== sound || !sameStart(key, form.key) || !numberFits(form)) continue;
     if (editDistance(key, form.key, limit) <= limit) return form.answer;
   }
   return null;

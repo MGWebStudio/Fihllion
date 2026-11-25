@@ -13,6 +13,7 @@ import { findServer, post } from './server.js';
 import { activeTheme } from './theme.js';
 import { CHANGELOG } from './changelog.js';
 import { POLL, pollOpen } from './poll.js';
+import { ruleFor } from './rules.js';
 import { NOTE } from './note.js';
 import { voiceSupported, listen, stopListening, isListening } from './voice.js';
 import { drawLogo, paintIcon, iconURL, champion, goldfish } from './sprites.js';
@@ -716,7 +717,9 @@ const TOO_VAGUE = {
 };
 
 function noBites(raw, reason = null) {
-  el.feedback.textContent = TOO_VAGUE[reason] || `No bites on “${raw}”. Try again.`;
+  // A guess that breaks a spelling rule says which rule ("It needs a Z.").
+  const rule = reason === 'rule' && G.prompt ? ruleFor(G.prompt) : null;
+  el.feedback.textContent = rule ? `No bites on “${raw}”. ${rule.says}` : TOO_VAGUE[reason] || `No bites on “${raw}”. Try again.`;
   el.feedback.classList.add('is-bad');
   el.answerForm.classList.remove('is-shaking');
   void el.answerForm.offsetWidth;

@@ -108,6 +108,8 @@ npx wrangler d1 execute fihllion --remote --command "SELECT prompt, typed, valid
 npx wrangler d1 execute fihllion --remote --command "DELETE FROM verdicts WHERE prompt = 'game-show' AND typed = 'the cube'"
 ```
 
+Spelling rules are checked in code, not by the referee (`js/rules.js`, Nov 24, 2026). For prompts like a word with a Z, the top row of a keyboard or a palindrome, a guess that breaks the rule is a no without asking the model, and the game says which rule ("It needs a Z."). The model couldn't count letters: it had said no to "mirror" and "espresso" for the same letter three times and yes to "logo" for a double O. For the word prompts, the model is only asked whether the word is real (in any form, and names count, as on the lists), and it's told Wikipedia wasn't searched instead of "none", which had made it turn down real words. A ruling whose word breaks the rule never counts, even a saved yes. `check-prompts` fails if a listed spelling breaks its prompt's rule, so a new prompt with a spelling rule needs that rule added to `js/rules.js`.
+
 Answers the referee accepts often belong on the prompt's list. Add them to the `.txt` file like any other answer.
 
 ## PC referee (pc-referee/)
